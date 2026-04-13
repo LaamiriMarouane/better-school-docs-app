@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "index",
+    "getting-started",
+    "admin",
+    "teacher",
+    "parent",
+    "finance",
+    "transport",
+    "faq"
+  ]
+}
