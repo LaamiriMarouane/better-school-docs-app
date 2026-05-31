@@ -1,0 +1,137 @@
+---
+title: Clone an academic year
+description: Copy a previous year's setup — terms, curriculum, fees, classes, and more — into a new academic year instead of rebuilding it by hand.
+---
+
+When you start a new school year, you don't have to rebuild everything. **Cloning** copies a
+previous year's setup into the new one — terms, levels and subjects, the curriculum, fees, classes,
+and more — so you only adjust what changed.
+
+<Callout title="Who this is for">
+Administrators setting up a new academic year.
+</Callout>
+
+## Year statuses
+
+An academic year moves through three statuses:
+
+| Status | What it means |
+| --- | --- |
+| **Draft** | You're still building the year. It can be edited freely, and students aren't enrolled yet. New years start here. |
+| **Active** | The year in use. Enrollments and billing happen in the active year, and only **one** year is active at a time. |
+| **Closed** | Archived and read-only — kept for history. |
+
+You **activate** a draft year when it's ready, **close** an active year at the end of the cycle, and
+can **reopen** a closed year or send an active year **back to draft** if you need to keep editing.
+
+<Callout title="Switching the active year">
+The year shown in the **switcher** at the top of the screen is the one you're working in. After
+cloning, switch to the new year to keep building it.
+</Callout>
+
+## Clone a previous year
+
+Cloning happens when you **create** the new year:
+
+<Steps>
+
+<Step>
+### Start a new academic year
+
+Go to **Settings → Academic Years → Add**, and fill in the new year's label and dates.
+</Step>
+
+<Step>
+### Turn on cloning and pick the source
+
+Enable **cloning**, then choose the **previous year** to copy from.
+</Step>
+
+<Step>
+### Choose what to copy
+
+Tick the categories you want. Everything is selected by default — untick anything you don't need
+(see below).
+</Step>
+
+<Step>
+### Map the term dates
+
+If you copy terms, set each term's **new dates** in the new year. Dates don't shift automatically,
+so you tell the system where each term lands.
+</Step>
+
+<Step>
+### Submit
+
+The new year is created and the copy runs in the background.
+</Step>
+
+</Steps>
+
+## What you can copy
+
+Everything is selected by default; untick what you don't want. The options group like this:
+
+| Group | What it copies |
+| --- | --- |
+| **Foundation** | Terms, levels, and subjects. |
+| **Curriculum** | Which subjects each level studies (and per term), course templates, and exam templates. |
+| **Finance** | Services, fees per level, payment plans, and expense categories. |
+| **Operations** | Attendance settings, timetable configs, and behaviour categories & levels. |
+| **Classes** | The class sections themselves (e.g. *Grade 9A*, *9B*). |
+
+<Callout title="Some options depend on others">
+A few options need their building blocks. For example, *subjects per level* needs both **levels**
+and **subjects**; *fees* need **levels** and **services**; *classes* need **levels**. The form keeps
+these in sync, so you can't copy something without what it relies on.
+</Callout>
+
+<Callout title="Module-specific options">
+**Expense categories** and **behaviour categories** can only be copied if your school has the
+**Expenses** and **Behaviour** modules turned on.
+</Callout>
+
+<Callout title="Transport comes across automatically">
+If your school uses the **Transport** module, your **routes and their stops** are copied into the new
+year as part of the clone — there's no separate checkbox for them. **Vehicles and drivers** aren't
+tied to a year, so cloned routes simply reuse the same ones rather than duplicating them. The stops
+arrive **empty**, though — without **zones** or **assigned riders** — see below.
+</Callout>
+
+## What's not copied
+
+Cloning copies the **setup**, not the **people or records**:
+
+- **Student enrollments** — students are enrolled fresh each year; cloning never carries them over.
+- **Records** — behaviour incidents, grades, attendance, and payments stay with their own year. Only
+  the *settings* come across, not last year's records.
+- **Transport zones** — zones belong to a specific year, so they aren't copied. Your **routes and
+  stops do** come across, but each cloned stop starts **without a zone** and falls back to the
+  level's default transport fee until you assign a new-year zone to it. Set the zones up again and
+  reassign them — see [Transport map & zones](../../settings/transport-map).
+- **Student stop assignments** — which students ride which stop isn't copied. A rider is tied to that
+  year's **enrollment** and to the subscription that pays for the seat, and enrollments are created
+  fresh — so once students are enrolled in the new year, you assign them to their stops again.
+
+## The copy runs in the background
+
+Cloning can move a lot of data, so it runs as a **background job**:
+
+- A **progress** indicator shows each stage as it copies.
+- Only **one clone** can run for a year at a time, and you can **cancel** one in progress.
+- When it finishes, a **summary** shows how much was copied — and flags anything skipped or worth a
+  second look.
+
+You can keep working while it runs, and switch to the new year once it's done.
+
+## Common use cases
+
+- **New school year** — clone last year and adjust the few things that changed.
+- **Same curriculum, new dates** — copy everything and just remap the term dates.
+- **Fresh pricing** — copy the academic setup but untick fees and plans to rebuild them.
+
+## Related articles
+
+- [Create an academic year](./create-an-academic-year)
+- [Academic years, terms, and statuses](../common-concepts/academic-years-terms-and-statuses)

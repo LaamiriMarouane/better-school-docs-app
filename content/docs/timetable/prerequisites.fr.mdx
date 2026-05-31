@@ -1,0 +1,81 @@
+---
+title: Prérequis
+description: La liste de tout ce qui doit exister avant de pouvoir configurer et générer un emploi du temps.
+---
+
+Le générateur d'emploi du temps ne peut construire un horaire qu'à partir d'éléments déjà
+existants. Avant de commencer, assurez-vous que chaque élément ci-dessous est en place. L'essentiel
+relève de votre configuration pédagogique habituelle — si votre école fonctionne déjà, une grande
+partie est faite.
+
+<Callout title="Pour qui">
+Les administrateurs qui préparent l'école à la génération de l'emploi du temps.
+</Callout>
+
+## La liste de contrôle
+
+| # | Prérequis | Pourquoi l'emploi du temps en a besoin | Où le configurer |
+| --- | --- | --- | --- |
+| 1 | **Année scolaire** | Tout est rattaché à une année. | Sélectionnée dans le sélecteur d'année. Voir [Créer une année scolaire](../getting-started/build-the-academic-foundation/create-an-academic-year). |
+| 2 | **Périodes (trimestres)** | Un emploi du temps est construit pour une période, l'année doit donc être divisée en périodes. | [Créer des périodes](../getting-started/build-the-academic-foundation/create-terms). |
+| 3 | **Niveaux** | Les matières et les classes sont organisées par niveau. | [Créer des niveaux](../getting-started/build-the-academic-foundation/create-levels). |
+| 4 | **Classes** | Les classes sont les groupes qui reçoivent un horaire. | [Créer des classes](../getting-started/build-the-academic-foundation/create-classes). |
+| 5 | **Matières** | Les matières à placer. Une matière peut exiger un type de salle (ex. un labo). | [Créer des matières](../getting-started/build-the-academic-foundation/create-subjects). |
+| 6 | **Matières par niveau (avec séances hebdomadaires)** | Indique au générateur *quelles* matières chaque niveau étudie et *combien de séances par semaine* chacune comporte. | Configuration du programme (matières de niveau). Voir [Séances et affectations](./lessons-and-assignments). |
+| 7 | **Salles** | Les séances ont besoin d'un lieu. Les salles ont une capacité et un type. | [Créer des salles](../getting-started/build-the-academic-foundation/create-rooms). |
+| 8 | **Enseignants** | Les personnes qui donnent les séances. | [Ajouter des enseignants](../getting-started/onboard-people/add-teachers). |
+| 9 | **Affectations enseignant–classe** | L'entrée la plus importante : qui enseigne chaque couple classe–matière. Le générateur place ces affectations. | [Séances et affectations](./lessons-and-assignments). |
+
+<Callout title="Le blocage le plus fréquent">
+Un emploi du temps ne peut pas être généré si un couple classe–matière n'a **aucun enseignant
+affecté**. Le générateur le vérifie avant de s'exécuter et vous indique précisément quelles
+affectations manquent. Compléter chaque affectation enseignant–classe est généralement l'étape qui
+demande le plus d'attention.
+</Callout>
+
+<Callout title="Assurez-vous d'avoir assez de ressources">
+Tout ce qui figure dans la liste doit simplement **exister** — mais pour qu'un emploi du temps soit
+possible, vos ressources doivent aussi être **suffisantes**. Avant de générer, vérifiez que vous
+avez :
+
+- assez de **salles** pour toutes les séances qui ont lieu en même temps, et assez du bon **type**
+  (par exemple des labos pour les matières de labo),
+- assez de **temps enseignant** — l'indisponibilité et les limites d'heures de chaque enseignant
+  doivent laisser de la place à toutes les séances qui lui sont affectées,
+- des **nombres de séances hebdomadaires** qui tiennent réellement dans les jours et créneaux de
+  votre configuration.
+
+Le générateur effectue une **vérification de faisabilité** avant de démarrer et vous indique
+exactement ce qui manque, mais vérifier en amont évite une exécution ratée. Voir
+[Générer et publier](./generate-and-publish).
+</Callout>
+
+## Facultatif, selon votre école
+
+| Prérequis | Quand en avez-vous besoin | Où |
+| --- | --- | --- |
+| **Groupes de classe** | Quand une classe se divise en sous-groupes pour certaines séances (ex. la moitié fait le labo pendant que l'autre fait la théorie). | Configuration des classes → Groupes. Voir [Séances et affectations](./lessons-and-assignments). |
+| **Matières de l'enseignant** | Quand vous voulez enregistrer les matières que chaque enseignant peut donner, pour guider l'affectation. | Profil de l'enseignant. |
+
+## Ce qui vient après les prérequis
+
+Une fois tout ce qui précède en place, vous passez à la configuration propre à l'emploi du temps :
+
+1. **[Configuration de l'emploi du temps](./timetable-config)** — la grille hebdomadaire des
+   jours, créneaux et pauses.
+2. **[Réglages de planification](./scheduling-setup)** — disponibilité des enseignants et des
+   salles, limites de charge et règles de salles.
+3. **[Contraintes](./constraints)** — les préférences que le générateur doit chercher à satisfaire.
+4. **[Générer et publier](./generate-and-publish)** — lancez, vérifiez et publiez.
+
+<Callout title="Astuce">
+Travaillez de haut en bas. Chaque étape suppose les précédentes faites — par exemple, vous ne
+pouvez pas régler la disponibilité d'un enseignant tant qu'il n'existe pas, ni générer tant que les
+affectations ne sont pas complètes.
+</Callout>
+
+## Articles liés
+
+- [Séances et affectations](./lessons-and-assignments)
+- [Configuration de l'emploi du temps](./timetable-config)
+- [Construire la base pédagogique](../getting-started/build-the-academic-foundation)

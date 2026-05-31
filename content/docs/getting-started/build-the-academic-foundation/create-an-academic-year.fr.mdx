@@ -1,0 +1,88 @@
+---
+title: Créer une année scolaire
+description: Créez l'année scolaire à laquelle appartiennent tous les niveaux, classes, périodes, inscriptions et plannings.
+---
+
+Une **année scolaire** est le conteneur de plus haut niveau d'un cycle scolaire — par
+exemple *2025–2026*. Presque tout le reste (périodes, niveaux, classes, matières,
+salles, inscriptions, emplois du temps) est créé **à l'intérieur** d'une année
+scolaire ; c'est donc la toute première chose à mettre en place.
+
+<Callout title="Pour qui">
+Les administrateurs qui démarrent un nouveau cycle scolaire.
+</Callout>
+
+## Avant de commencer
+
+- Décidez des **dates de début et de fin** du cycle.
+- Si une année scolaire précédente existe déjà, vous pouvez **cloner** sa structure
+  dans la nouvelle au lieu de tout reconstruire à la main.
+
+<Screenshot
+  label="Page des années scolaires avec le bouton Ajouter"
+  caption="Les années scolaires se gèrent dans les Paramètres."
+/>
+
+## Étapes
+
+<Steps>
+
+<Step>
+### Ouvrir la page Années scolaires
+
+Allez dans **Paramètres → Années scolaires**, puis cliquez sur **Ajouter**.
+
+<Screenshot
+  label="Formulaire de création d'une année scolaire"
+  caption="Étape 1 du formulaire : libellé, dates, description et statut."
+/>
+</Step>
+
+<Step>
+### Renseigner les détails de l'année
+
+Complétez les champs ci-dessous.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Libellé** | Oui | Le nom affiché, au moins 3 caractères, ex. *2025–2026*. |
+| **Date de début** | Oui | Le premier jour du cycle. |
+| **Date de fin** | Oui | Le dernier jour du cycle. Doit être postérieure à la date de début. |
+| **Description** | Non | Notes facultatives sur l'année. |
+| **Statut** | Non | *Brouillon* pendant la construction, *Active* une fois en service. Brouillon par défaut. |
+</Step>
+
+<Step>
+### Cloner depuis une année précédente (facultatif)
+
+Si d'autres années scolaires existent, le formulaire propose une étape de **clonage**.
+Activez **Activer le clonage**, choisissez une **année source**, et sélectionnez ce qui
+doit être copié — périodes, niveaux, matières, classes, frais, etc. Certaines options
+dépendent d'autres (par exemple, les matières par niveau nécessitent les niveaux et les
+matières), et le formulaire maintient cette cohérence.
+
+Si vous avez cloné des périodes, une dernière étape permet de **décaler les dates de
+chaque période** dans la nouvelle année. Cliquez sur **Ignorer** pour créer l'année
+sans clonage.
+</Step>
+
+<Step>
+### Valider
+
+Cliquez sur **Valider**. La nouvelle année scolaire est créée. Si vous avez activé le
+clonage, la copie s'exécute en tâche de fond et vous pouvez en suivre la progression.
+</Step>
+
+</Steps>
+
+<Callout title="Changer d'année active">
+L'année scolaire affichée dans le sélecteur en haut de l'écran détermine l'année que
+vous modifiez. Sélectionnez-y la nouvelle année avant de construire ses niveaux et ses
+classes.
+</Callout>
+
+## Articles liés
+
+- [Créer des périodes](./create-terms)
+- [Créer des niveaux](./create-levels)
+- [Années scolaires, périodes et statuts](../common-concepts/academic-years-terms-and-statuses)

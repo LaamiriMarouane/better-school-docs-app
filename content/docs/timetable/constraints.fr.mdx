@@ -1,0 +1,110 @@
+---
+title: Contraintes
+description: Comprenez les règles que le générateur respecte toujours, et ajustez les préférences qui rendent un emploi du temps bon — trous, stabilité des salles, espacement des matières, et plus.
+---
+
+Une **contrainte** est une règle que le générateur prend en compte lorsqu'il construit l'emploi du
+temps. Il en existe deux types, et comprendre la différence est la clé pour obtenir l'horaire que
+vous souhaitez.
+
+<Callout title="Pour qui">
+Les administrateurs qui ajustent le comportement du générateur d'emploi du temps.
+</Callout>
+
+## Règles fermes et préférences souples
+
+- Les **règles fermes** sont ce que l'emploi du temps ne doit *jamais* enfreindre. Le générateur
+  ne produira pas d'horaire qui en viole une. La plupart viennent de la réalité (voir
+  [Réglages de planification](./scheduling-setup)) et de la structure (pas de double réservation).
+- Les **préférences souples** rendent un emploi du temps *bon* plutôt que seulement valide — éviter
+  les trous, garder une classe dans une salle, espacer les matières exigeantes. Le générateur en
+  satisfait autant qu'il peut, et vous décidez de **l'importance de chacune**.
+
+Le générateur satisfait toujours d'abord chaque règle ferme, puis rend les préférences souples
+aussi satisfaites que possible.
+
+## Les règles toujours respectées
+
+Vous ne les configurez pas — elles sont toujours actives, de sorte qu'un emploi du temps publié est
+toujours cohérent :
+
+- Aucune **classe**, aucun **enseignant**, aucune **salle** n'est jamais à deux endroits à la fois.
+- Aucune séance n'est placée à un moment où vous avez marqué un **enseignant ou une salle indisponible**.
+- Une salle n'est jamais utilisée **au-delà de sa capacité**, et une matière n'utilise que des
+  salles du **bon type**.
+- Aucune séance n'est placée par-dessus une **pause**.
+- Les restrictions de **salles autorisées** (salles d'enseignant, salles de matière) sont
+  respectées.
+- Les séances **épinglées** restent exactement là où vous les avez placées.
+
+## Préférences ajustables
+
+Ouvrez **Emploi du temps → Politique du solveur**. Les préférences sont regroupées en onglets. Pour
+chacune, vous pouvez :
+
+- **L'activer ou la désactiver.**
+- **Régler son importance** (son poids) — plus elle est élevée, plus le générateur s'efforce de la
+  satisfaire, même au détriment de préférences moins prioritaires.
+
+### Enseignants
+
+| Préférence | Ce qu'elle fait |
+| --- | --- |
+| **Trous des enseignants** | Évite les créneaux libres entre les séances d'un enseignant le même jour. Vous pouvez régler le nombre de trous tolérés, globalement ou par enseignant. |
+| **Limite quotidienne / hebdomadaire** | Maintient chaque enseignant dans ses heures max. par jour et par semaine. |
+| **Séances min. par jour** | Si un enseignant est présent un jour, garantit un nombre minimal de séances. |
+| **Séances min. par demi-journée** | La même chose, par matin ou après-midi (nécessite le séparateur de demi-journée). |
+| **Stabilité de salle (enseignant)** | Tente de garder un enseignant dans la même salle au fil de la journée. |
+
+### Classes
+
+| Préférence | Ce qu'elle fait |
+| --- | --- |
+| **Trous des classes** | Garde la journée d'une classe compacte, en évitant les créneaux libres entre les séances. |
+| **Stabilité de salle (classe)** | Tente de garder une classe dans sa propre salle pour la plupart des séances, pour que les élèves ne se déplacent pas sans cesse. |
+| **Séances min. par jour / demi-journée** | Évite qu'une classe ait une journée ou demi-journée presque vide. |
+
+### Matières
+
+| Préférence | Ce qu'elle fait |
+| --- | --- |
+| **Incompatibilité de matières** | Éloigne deux matières — par exemple, pas le même jour ou la même demi-journée. |
+| **Ordre des matières (chaînes)** | Encourage une relation entre deux matières, comme l'une juste après l'autre, ou les deux le même jour. |
+| **Horaires interdits par matière** | Empêche une matière d'être placée sur certains créneaux — par exemple, pas d'EPS en première heure. |
+
+### Séances
+
+| Préférence | Ce qu'elle fait |
+| --- | --- |
+| **Liens de séances** | Respecte les liens que vous avez définis entre des séances précises — même créneau, à la suite, même jour ou même demi-journée. Voir [Séances et affectations](./lessons-and-assignments). |
+
+## Bien régler l'importance
+
+- **Partez des valeurs par défaut.** Elles produisent un emploi du temps sensé pour la plupart des
+  écoles. Ne changez que ce qui vous importe précisément.
+- **Ne mettez pas tout au maximum.** Les préférences se concurrencent — si tout est « le plus
+  important », rien ne l'est. N'augmentez que les quelques préférences essentielles pour votre
+  école.
+- **Soyez prudent en rendant une préférence stricte.** Certaines peuvent devenir des règles fermes.
+  Si une préférence stricte entre en conflit avec la réalité (disponibilité, salles), le générateur
+  peut être incapable de construire un emploi du temps — il vous le signalera.
+
+<Callout title="Réglages par enseignant">
+Quelques préférences peuvent être réglées par enseignant en plus du global — par exemple un
+enseignant qui ne peut vraiment pas avoir de trous. Le réglage par enseignant l'emporte pour lui.
+Définissez-les dans [Réglages de planification](./scheduling-setup).
+</Callout>
+
+## Cas d'usage courants
+
+- **Journées compactes** — augmentez *Trous des classes* pour que les élèves n'aient pas de
+  créneaux vides.
+- **Espacer les matières exigeantes** — utilisez *Incompatibilité de matières* pour éviter deux
+  matières difficiles le même jour.
+- **Labo après le cours** — liez les deux séances et gardez le lien comme préférence forte.
+
+## Articles liés
+
+- [Réglages de planification](./scheduling-setup)
+- [Séances et affectations](./lessons-and-assignments)
+- [Générer et publier](./generate-and-publish)

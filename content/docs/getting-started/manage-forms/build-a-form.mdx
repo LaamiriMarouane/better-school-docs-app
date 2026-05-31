@@ -1,0 +1,96 @@
+---
+title: Build a form
+description: Design the form's sections and fields in the drag-and-drop builder.
+---
+
+The **builder** is where you design what applicants see. You drag fields onto a
+canvas, arrange them into sections, and set each field's behaviour.
+
+## The builder layout
+
+| Area | What it holds |
+| --- | --- |
+| **Left sidebar** | The field components you can drag onto the form. |
+| **Canvas** | The form itself — **sections**, each holding **rows** and **columns** of fields. |
+| **Right panel** | The properties of the field you select, or the **Admission Fields** panel. |
+| **Header** | Undo / redo, preview, settings, and save. |
+
+<Screenshot
+  label="Form builder with the field sidebar, canvas, and properties panel"
+  caption="Drag a field from the left onto a section to add it."
+/>
+
+## Add and arrange fields
+
+<Steps>
+
+<Step>
+### Drag fields onto the canvas
+
+Drag a field component from the left sidebar onto a section. Drop it on a section
+header to start a new row, or next to an existing field to share its row.
+</Step>
+
+<Step>
+### Set field properties
+
+Select a field to open the properties panel on the right. There you set the
+**label**, mark it **required**, add **validation**, define **options** for choice
+fields, and control its **visibility**.
+</Step>
+
+<Step>
+### Organise into sections
+
+Group related fields into sections and reorder rows and sections by dragging.
+A section can be made **repeatable** so applicants add more than one entry — for
+example several children on one application.
+</Step>
+
+</Steps>
+
+## Admission fields
+
+Admission forms come with **Student** and **Guardian** sections already built in.
+To add more recognised fields, open the **Admission Fields** panel from the right.
+
+It has two tabs — **Student** and **Guardian** — each listing:
+
+- **System fields** — recognised fields such as date of birth or address. Adding
+  them lets a submission be matched to a real person.
+- **Custom fields** — extra fields your school defined. See
+  [Custom fields](../../settings/custom-fields).
+
+Drag a field from the panel into the matching section, or use its **+** button.
+A field that is already on the form is marked **Added**.
+
+<Callout title="Why system fields matter">
+System fields carry a hidden mapping (for example `student.firstName`). That
+mapping is what lets the platform turn an accepted submission into a student
+record without re-typing anything.
+</Callout>
+
+## Preview and settings
+
+- **Preview** — switch the header to preview to see the form as an applicant
+  would, at desktop, tablet, or mobile width.
+- **Settings** — open the settings dialog to set the **presentation mode**
+  (a single page or a step-by-step wizard), the **languages**, the **theme**, the
+  **branding** (introduction and thank-you messages, logo, terms and privacy
+  policy), and the form's **schedule**.
+
+## Save your work
+
+The header shows an **Unsaved changes** marker while you edit. Use **Save** to
+keep your changes. Undo and redo are available, along with keyboard shortcuts —
+copy, paste, and duplicate a selected field.
+
+<Callout title="Saving is not publishing">
+Saving keeps your design. The form stays a **draft** and is not yet open to
+applicants — see [Publish and share a form](./publish-and-share-a-form).
+</Callout>
+
+## Related articles
+
+- [Publish and share a form](./publish-and-share-a-form)
+- [Custom fields](../../settings/custom-fields)

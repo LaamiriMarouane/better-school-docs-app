@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "index",
+    "log-in-to-your-account",
+    "reset-your-password",
+    "change-a-temporary-password",
+    "switch-between-available-roles"
+  ]
+}

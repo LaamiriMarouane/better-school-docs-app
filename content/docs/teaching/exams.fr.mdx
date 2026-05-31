@@ -1,0 +1,100 @@
+---
+title: Examens
+description: Créez des modèles d'examens, planifiez des examens pour les classes, notez-les, publiez les résultats et enregistrez la présence aux examens.
+---
+
+Les examens fonctionnent en deux parties. Un **modèle d'examen** est le plan — son nom, sa durée,
+sa note maximale et son poids. Un **examen planifié** est une passation réelle de ce modèle pour une
+classe, à une date, dans une salle. Vous construisez le modèle une fois, puis le planifiez pour
+chaque classe.
+
+<Callout title="Pour qui">
+Les administrateurs et enseignants qui conçoivent, planifient et notent les examens.
+</Callout>
+
+## Étape 1 — Créer un modèle d'examen
+
+<Steps>
+
+<Step>
+### Ouvrir les modèles d'examens
+
+Allez dans **Examens → Modèles** et ajoutez un modèle pour une matière (à un niveau, pour une
+période).
+</Step>
+
+<Step>
+### Renseigner le modèle
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom** | Oui | Le nom de l'examen, ex. *Partiel*. |
+| **Description** | Non | Notes facultatives. |
+| **Durée** | Oui | La durée de l'examen — 30 min, 45 min, 1 h, 1 h 30, 2 h, 2 h 30 ou 3 h. |
+| **Note maximale** | Non | La note sur laquelle l'examen est évalué. |
+| **Poids (%)** | Non | Combien cet examen compte dans la note de période. Les poids des examens d'une matière devraient totaliser 100 %. |
+| **Catégorie** | Non | Une catégorie de note pour regrouper l'examen. |
+</Step>
+
+</Steps>
+
+## Étape 2 — Planifier l'examen
+
+Allez dans **Examens → Planifiés** et planifiez le modèle pour une classe.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Modèle** | Oui | Quel examen passer. |
+| **Classe** *(et groupe)* | Oui | Qui le passe. Choisissez un groupe si seule une partie d'une classe divisée le passe. |
+| **Date et heure** | Oui | Quand l'examen a lieu. |
+| **Salle** | Non | Où il se déroule. |
+| **Surveillants** | Non | Les enseignants qui surveillent l'examen. |
+
+## Étape 3 — Noter et publier les résultats
+
+Une fois l'examen terminé, saisissez les résultats dans une grille — la **note** de chaque élève et
+des **remarques** facultatives — puis **publiez** les résultats pour les rendre visibles aux élèves
+et aux familles.
+
+<Callout title="Les résultats restent privés jusqu'à publication">
+Les notes que vous saisissez ne sont pas visibles par les élèves ou les familles tant que vous n'avez
+pas **publié** les résultats. Cela vous laisse finir la correction avant que quiconque voie une note.
+</Callout>
+
+## Étape 4 — Enregistrer la présence à l'examen
+
+La présence à l'examen est enregistrée séparément des notes. Pour chaque élève, marquez :
+
+| Statut | Signification |
+| --- | --- |
+| **Présent** | L'élève a passé l'examen. |
+| **Absent** | L'élève n'est pas venu. |
+| **Excusé** | Une absence justifiée — ajoutez le motif. |
+| **En retard** | L'élève est arrivé en retard. |
+
+## Statuts d'examen
+
+| Statut | Signification |
+| --- | --- |
+| **Planifié** | Préparé, pas encore passé. |
+| **Terminé** | L'examen a eu lieu. |
+| **Noté** | Les résultats ont été saisis. |
+| **Annulé** | L'examen n'aura pas lieu. |
+
+## Examens de rattrapage
+
+Si un élève ou une classe doit repasser ou passer un examen plus tard, planifiez un examen de
+**rattrapage** lié à l'original. Il est marqué comme rattrapage pour rester clair dans les
+enregistrements.
+
+## Cas d'usage courants
+
+- **Examens de période** — créez un modèle par examen avec des poids totalisant 100 %, puis
+  planifiez chacun par classe.
+- **Classe divisée** — planifiez le même modèle séparément pour chaque groupe.
+- **Élève absent** — marquez-le absent (ou excusé), puis planifiez un rattrapage.
+
+## Articles liés
+
+- [Séances de classe et présence](./sessions-and-attendance)
+- [Cours](./courses)

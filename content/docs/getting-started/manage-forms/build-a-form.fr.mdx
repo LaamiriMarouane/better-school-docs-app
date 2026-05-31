@@ -1,0 +1,104 @@
+---
+title: Construire un formulaire
+description: Concevoir les sections et les champs du formulaire dans le constructeur par glisser-déposer.
+---
+
+Le **constructeur** est l'endroit où vous concevez ce que voient les candidats.
+Vous glissez des champs sur un canevas, vous les organisez en sections et vous
+réglez le comportement de chaque champ.
+
+## La disposition du constructeur
+
+| Zone | Contenu |
+| --- | --- |
+| **Barre latérale gauche** | Les composants de champ que vous pouvez glisser sur le formulaire. |
+| **Canevas** | Le formulaire lui-même — des **sections**, chacune contenant des **lignes** et des **colonnes** de champs. |
+| **Panneau de droite** | Les propriétés du champ sélectionné, ou le panneau **Champs d'admission**. |
+| **En-tête** | Annuler / rétablir, aperçu, paramètres et enregistrement. |
+
+<Screenshot
+  label="Constructeur de formulaire avec la barre latérale de champs, le canevas et le panneau de propriétés"
+  caption="Glissez un champ depuis la gauche sur une section pour l'ajouter."
+/>
+
+## Ajouter et organiser les champs
+
+<Steps>
+
+<Step>
+### Glisser les champs sur le canevas
+
+Glissez un composant de champ depuis la barre latérale gauche sur une section.
+Déposez-le sur un en-tête de section pour démarrer une nouvelle ligne, ou à côté
+d'un champ existant pour partager sa ligne.
+</Step>
+
+<Step>
+### Régler les propriétés du champ
+
+Sélectionnez un champ pour ouvrir le panneau de propriétés à droite. Vous y
+définissez le **libellé**, vous le marquez **obligatoire**, vous ajoutez une
+**validation**, vous définissez les **options** des champs à choix et vous
+contrôlez sa **visibilité**.
+</Step>
+
+<Step>
+### Organiser en sections
+
+Regroupez les champs liés en sections et réorganisez les lignes et les sections par
+glisser-déposer. Une section peut être rendue **répétable** pour que les candidats
+ajoutent plusieurs entrées — par exemple plusieurs enfants sur une même
+candidature.
+</Step>
+
+</Steps>
+
+## Champs d'admission
+
+Les formulaires d'admission sont livrés avec les sections **Élève** et
+**Responsable** déjà construites. Pour ajouter d'autres champs reconnus, ouvrez le
+panneau **Champs d'admission** à droite.
+
+Il comporte deux onglets — **Élève** et **Responsable** — chacun listant :
+
+- **Champs système** — des champs reconnus tels que la date de naissance ou
+  l'adresse. Les ajouter permet de rattacher une soumission à une vraie personne.
+- **Champs personnalisés** — des champs supplémentaires définis par votre école.
+  Voir [Champs personnalisés](../../settings/custom-fields).
+
+Glissez un champ du panneau dans la section correspondante, ou utilisez son bouton
+**+**. Un champ déjà présent sur le formulaire est marqué **Ajouté**.
+
+<Callout title="Pourquoi les champs système comptent">
+Les champs système portent une correspondance cachée (par exemple
+`student.firstName`). C'est cette correspondance qui permet à la plateforme de
+transformer une soumission acceptée en fiche élève sans rien ressaisir.
+</Callout>
+
+## Aperçu et paramètres
+
+- **Aperçu** — basculez l'en-tête en mode aperçu pour voir le formulaire tel qu'un
+  candidat le verrait, en largeur ordinateur, tablette ou mobile.
+- **Paramètres** — ouvrez la boîte de dialogue des paramètres pour définir le
+  **mode de présentation** (une seule page ou un assistant étape par étape), les
+  **langues**, le **thème**, l'**image de marque** (messages d'introduction et de
+  remerciement, logo, conditions et politique de confidentialité) et le
+  **calendrier** du formulaire.
+
+## Enregistrer votre travail
+
+L'en-tête affiche un indicateur **Modifications non enregistrées** pendant que vous
+travaillez. Utilisez **Enregistrer** pour conserver vos changements. Annuler et
+rétablir sont disponibles, ainsi que des raccourcis clavier — copier, coller et
+dupliquer un champ sélectionné.
+
+<Callout title="Enregistrer n'est pas publier">
+Enregistrer conserve votre conception. Le formulaire reste un **brouillon** et
+n'est pas encore ouvert aux candidats — voir
+[Publier et partager un formulaire](./publish-and-share-a-form).
+</Callout>
+
+## Articles connexes
+
+- [Publier et partager un formulaire](./publish-and-share-a-form)
+- [Champs personnalisés](../../settings/custom-fields)

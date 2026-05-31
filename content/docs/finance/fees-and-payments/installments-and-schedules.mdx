@@ -1,0 +1,62 @@
+---
+title: Installments and schedules
+description: Understand how a student's installments are generated from their payment plan.
+---
+
+An **installment** is one scheduled portion of what a student owes — an amount with a
+**due date**. Installments are not created by hand: they are **generated** when a
+payment plan is attached to an enrollment.
+
+<Callout title="Who this is for">
+Administrators who want to understand where a student's balance comes from.
+</Callout>
+
+## How installments are generated
+
+<Steps>
+
+<Step>
+### A plan is attached to an enrollment
+
+When a student is enrolled with a payment plan — or a plan is set on an existing
+enrollment — the plan's fees become the basis of the schedule.
+</Step>
+
+<Step>
+### Each fee expands by its periodicity
+
+Every fee in the plan produces installments according to its **periodicity**. A
+monthly fee produces a monthly series across the year; a one-time fee produces a
+single installment.
+</Step>
+
+<Step>
+### The schedule appears on the student
+
+The generated installments — each with an amount due and a due date — show on the
+student's payment view, grouped by fee.
+</Step>
+
+</Steps>
+
+## Reading an installment
+
+Each installment tracks three figures:
+
+| Figure | Meaning |
+| --- | --- |
+| **Amount due** | The scheduled amount for that installment. |
+| **Amount paid** | How much has been collected against it so far. |
+| **Remaining** | Amount due minus amount paid — what is still owed. |
+
+An installment is fully settled when the remaining amount reaches zero.
+
+<Callout title="Changing a plan">
+If a student's payment plan changes, the schedule is based on the new plan. Always
+review the resulting installments after a plan change.
+</Callout>
+
+## Related articles
+
+- [Create payment plans](./create-payment-plans)
+- [Record a payment](./record-a-payment)

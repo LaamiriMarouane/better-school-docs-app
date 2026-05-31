@@ -1,0 +1,116 @@
+---
+title: Cours
+description: Construisez le programme d'une matière — chapitres et leçons — et réutilisez-le entre classes et d'une année à l'autre.
+---
+
+Un **cours** est le programme d'une **matière à un niveau**, pour une période. Il est organisé en
+**chapitres**, et chaque chapitre contient des **leçons**. Vous construisez un cours une fois, et
+chaque classe de ce niveau le suit — la structure reste cohérente, et vous pouvez le réutiliser
+l'année suivante.
+
+<Callout title="Pour qui">
+Les administrateurs et enseignants qui planifient ce qui est enseigné dans chaque matière.
+</Callout>
+
+## Comment un cours est organisé
+
+```
+Cours  (une matière, à un niveau, pour une période)
+└─ Chapitre
+   └─ Leçon
+      └─ Contenu de la leçon  (rédigé par l'enseignant — voir Leçons)
+```
+
+Un cours appartient à un **matière + niveau + période** précis, et il y a un seul cours par
+combinaison. Les chapitres et leçons donnent à chaque classe la même ossature ; les enseignants
+ajoutent ensuite leur propre [contenu de leçon](./lessons) par-dessus.
+
+## Avant de commencer
+
+- La matière doit être **affectée au niveau** (une matière de niveau), et les **périodes** doivent
+  exister. Voir [Construire la base pédagogique](../getting-started/build-the-academic-foundation).
+
+## Créer un cours
+
+<Steps>
+
+<Step>
+### Ouvrir le programme
+
+Allez dans **Cours** (ou **Programme**) et créez un nouveau cours.
+
+<Screenshot
+  label="Liste des cours"
+  caption="Chaque cours est une matière à un niveau, organisée en chapitres et leçons."
+/>
+</Step>
+
+<Step>
+### Renseigner les détails du cours
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Titre** | Oui | Le nom du cours. |
+| **Description** | Non | Un bref résumé de ce que couvre le cours. |
+| **Matière, niveau et période** | Oui | Quelle matière, à quel niveau, pour quelle période ce cours appartient. |
+</Step>
+
+<Step>
+### Ajouter chapitres et leçons
+
+Ajoutez les **chapitres** dans l'ordre d'enseignement, puis ajoutez les **leçons** dans chaque
+chapitre. Vous pouvez réordonner les deux à tout moment. Chaque leçon a ses propres détails — type,
+durée, objectifs — traités dans [Leçons](./lessons).
+</Step>
+
+<Step>
+### Publier le cours
+
+Un cours commence en **brouillon**. **Publiez-le** quand la structure est prête, pour qu'il devienne
+disponible aux classes de ce niveau.
+</Step>
+
+</Steps>
+
+## Qui gère le programme d'un cours
+
+Le **programme** — les chapitres et leçons du cours, et sa publication — est géré par les enseignants
+à qui est accordée la **propriété du programme** de cette matière, ce niveau et cette période. Un
+administrateur accorde la propriété, et peut **affecter plusieurs enseignants à plusieurs matières en
+une fois**. Il existe deux rôles :
+
+| Rôle | Ce qu'il peut faire sur le programme |
+| --- | --- |
+| **Principal** | Contrôle total — façonner les chapitres et leçons, **publier** et supprimer le cours. |
+| **Contributeur** | Façonner les chapitres et leçons, mais **pas** publier ni supprimer. |
+
+<Callout title="La propriété du programme n'est pas le contenu des leçons">
+Ces rôles contrôlent la **structure du programme** et sa publication. Ils sont **distincts** du
+**contenu des leçons** qu'un enseignant rédige pour sa propre classe — lequel dépend du fait
+d'*enseigner* la matière, et non de posséder le programme. Voir [Leçons](./lessons).
+</Callout>
+
+## Partager un cours entre classes
+
+Un cours est partagé par **toutes les classes de son niveau**. Une fois publié, ses leçons sont
+disponibles à ces classes. L'enseignant de chaque classe rédige ensuite le [contenu des
+leçons](./lessons) et décide ce que ses élèves peuvent voir — ainsi deux classes peuvent suivre le
+même cours tout en gardant chacune ses propres supports.
+
+## Réutiliser d'une année à l'autre
+
+Au début d'une nouvelle année scolaire, un cours peut être **reporté** pour ne pas reconstruire le
+programme de zéro — les chapitres et leçons sont repris, prêts à ajuster. Cela fait partie de la
+copie d'une année scolaire vers la suivante.
+
+## Cas d'usage courants
+
+- **Programme d'une nouvelle matière** — créez le cours, disposez chapitres et leçons, et publiez.
+- **Même cours, plusieurs classes** — construisez-le une fois au niveau ; chaque classe le suit.
+- **L'année suivante** — reportez le cours et ajustez plutôt que de tout recommencer.
+
+## Articles liés
+
+- [Leçons](./lessons)
+- [Séances de classe et présence](./sessions-and-attendance)
+- [Créer des matières](../getting-started/build-the-academic-foundation/create-subjects)

@@ -1,0 +1,99 @@
+---
+title: Trip attendance
+description: Mark who boarded and who was dropped off on each trip, handle absences, and keep an accurate record of every journey.
+---
+
+**Trip attendance** is the record of which students actually travelled on a trip. Every student
+assigned to the route starts on the trip as **Expected**, and the crew updates each one as the
+bus visits their stop. This gives the school an accurate record of who travelled, who was
+absent, and at what time.
+
+<Callout title="Who this is for">
+Drivers, assistants, and bus monitors marking attendance, and administrators reviewing it.
+</Callout>
+
+## How attendance works
+
+- When a trip is created, every assigned student is added to it with the status **Expected**.
+- The crew marks each student as the bus reaches their stop.
+- What you mark depends on the route's direction:
+  - On a **pickup** trip (home → school), you mark students **Boarded** as they get on.
+  - On a **dropoff** trip (school → home), you mark students **Dropped off** as they leave the bus.
+- When everyone has been accounted for and every stop has been visited, the trip **completes
+  automatically**.
+
+## Attendance statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Expected** | The student is on the trip but hasn't been marked yet. This is the starting point. |
+| **Boarded** | The student got on the bus (pickup trips). |
+| **Dropped off** | The student left the bus at their stop (dropoff trips). |
+| **Absent** | The student is known in advance not to be riding — a planned absence. You can mark it before the bus reaches the stop (for example, the family told you the child won't take the bus that day). |
+| **No-show** | The student was expected but didn't show up at their stop. The crew can mark this at the stop, and it's also applied automatically to anyone left unmarked when the trip finishes. |
+
+## Mark attendance
+
+<Steps>
+
+<Step>
+### Open the trip
+
+Go to **Transport → Trips** and open today's trip. You'll see the list of stops and the
+students expected at each one.
+</Step>
+
+<Step>
+### Mark each student
+
+As the bus reaches a stop, mark each student **Boarded**, **Dropped off**, or **Absent**. To
+move quickly, use **Mark all boarded** at a stop to mark everyone waiting there at once, then
+adjust any exceptions.
+
+<Screenshot
+  label="Trip attendance list with status buttons per student"
+  caption="Mark each student as the bus reaches their stop."
+/>
+</Step>
+
+<Step>
+### Mark the stop visited
+
+When the bus has finished at a stop, mark the stop as **arrived** (or **skipped** if it was
+passed). This records the actual time the bus was there.
+</Step>
+
+</Steps>
+
+<Callout title="The trip finishes itself">
+Once every student has a final status and every stop has been visited, the trip completes on its
+own — no need to tap complete. Any student still unmarked at that point is recorded as a
+**no-show**.
+</Callout>
+
+## Add a note
+
+You can add a short **note** to a student's attendance — for example "picked up by parent
+instead" or "left early". Notes stay on the trip's record.
+
+## Who can mark attendance
+
+The **driver** and the **assistant** on a trip can both mark attendance — they have the same
+abilities. Administrators can also mark or correct attendance from the trip's page.
+
+## Review past trips
+
+Open any past trip to see exactly who travelled, who was absent, and the times recorded. Because
+each trip keeps its own snapshot, this record stays accurate even if the route or roster changes
+later.
+
+## Common use cases
+
+- **Normal run** — mark students boarded/dropped off stop by stop; the trip completes itself.
+- **Child won't be riding** — when the family tells you in advance, mark them absent.
+- **Follow up on a no-show** — review the trip and contact the family.
+
+## Related articles
+
+- [Create trips](./create-trips)
+- [Assign students](./assign-students)

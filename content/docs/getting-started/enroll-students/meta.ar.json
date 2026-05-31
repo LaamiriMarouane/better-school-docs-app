@@ -1,0 +1,10 @@
+{
+  "title": "تسجيل الطلاب",
+  "pages": [
+    "index",
+    "create-an-enrollment",
+    "bulk-enroll-students",
+    "transfer-a-student-between-classes",
+    "suspend-or-withdraw-an-enrollment"
+  ]
+}

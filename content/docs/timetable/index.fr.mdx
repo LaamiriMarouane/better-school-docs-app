@@ -1,0 +1,110 @@
+---
+title: Emploi du temps
+description: Construisez automatiquement des emplois du temps sans conflit — préparez les entrées, décrivez la réalité, fixez les règles, puis générez, vérifiez et publiez.
+---
+
+Les outils d'**emploi du temps** construisent l'horaire hebdomadaire de votre école à votre
+place. Vous décrivez ce qui est vrai dans votre école — qui enseigne quoi, quand les enseignants
+et les salles sont disponibles, et combien de séances chaque classe a besoin — et le
+**générateur** trouve un emploi du temps complet et sans conflit qui respecte vos règles. Vous le
+vérifiez ensuite, ajustez ce que vous voulez à la main, et le **publiez** aux enseignants, élèves
+et parents.
+
+<Callout title="Pour qui">
+Les planificateurs pédagogiques et les administrateurs qui construisent l'horaire de l'école.
+</Callout>
+
+## Vue d'ensemble
+
+Construire un emploi du temps comporte trois types de travail :
+
+1. **Préparer les entrées** — les matières, classes, enseignants et salles à partir desquels
+   l'horaire est construit, ainsi que la grille hebdomadaire des jours et des créneaux.
+2. **Décrire la réalité et fixer les règles** — quand les enseignants et les salles sont
+   disponibles, combien d'heures un enseignant peut travailler, et les préférences que le
+   générateur doit chercher à satisfaire.
+3. **Générer, vérifier et publier** — lancez le générateur, vérifiez le résultat, corrigez ce
+   qu'il faut à la main, et publiez.
+
+## Deux types de réglages : la réalité et les règles
+
+Il est utile de distinguer deux idées, car elles se trouvent à deux endroits différents :
+
+- **Réalité (Réglages de planification)** — les faits incontournables que l'horaire *doit*
+  respecter : un enseignant n'est disponible que le matin, le laboratoire de sciences ne peut
+  accueillir que des sciences, un enseignant travaille au plus six heures par jour. Enfreindre
+  l'un d'eux rend l'horaire tout simplement erroné.
+- **Règles (Politique du solveur)** — les préférences qui rendent un horaire *bon* plutôt que
+  seulement valide : éviter les trous dans la journée d'un enseignant, garder une classe dans la
+  même salle, ne pas enchaîner deux matières exigeantes. Vous décidez de l'importance de chacune.
+
+## L'ordre à suivre
+
+<Steps>
+
+<Step>
+### Vérifier les prérequis
+
+Assurez-vous que matières, classes, périodes, enseignants, salles et affectations existent toutes.
+Voir [Prérequis](./prerequisites).
+</Step>
+
+<Step>
+### Régler la configuration
+
+Définissez la semaine d'école : jours ouvrés, heures quotidiennes, durée des créneaux et pauses.
+Voir [Configuration de l'emploi du temps](./timetable-config).
+</Step>
+
+<Step>
+### Confirmer les séances à placer
+
+Assurez-vous que chaque couple classe–matière est affecté à un enseignant pour que le générateur
+sache quoi placer. Voir [Séances et affectations](./lessons-and-assignments).
+</Step>
+
+<Step>
+### Décrire la réalité
+
+Réglez l'indisponibilité des enseignants et des salles, les limites de charge des enseignants, et
+les salles utilisables par chaque matière. Voir [Réglages de planification](./scheduling-setup).
+</Step>
+
+<Step>
+### Choisir vos règles
+
+Activez ou désactivez les préférences (contraintes) et décidez de l'importance de chacune. Voir
+[Contraintes](./constraints).
+</Step>
+
+<Step>
+### Générer et publier
+
+Lancez le générateur, vérifiez le résultat, faites des ajustements manuels, et publiez. Voir
+[Générer et publier](./generate-and-publish).
+</Step>
+
+</Steps>
+
+## Dans cette section
+
+| Article | Ce que vous ferez |
+| --- | --- |
+| [Prérequis](./prerequisites) | La liste de ce qui doit exister avant de générer. |
+| [Configuration de l'emploi du temps](./timetable-config) | Définir la grille hebdomadaire des jours, créneaux et pauses. |
+| [Séances et affectations](./lessons-and-assignments) | Comprendre ce qui est placé et affecter les enseignants aux classes. |
+| [Réglages de planification](./scheduling-setup) | Régler l'indisponibilité, les limites et les règles de salles. |
+| [Contraintes](./constraints) | Ajuster les préférences que le générateur cherche à satisfaire. |
+| [Générer et publier](./generate-and-publish) | Lancer le générateur, vérifier, modifier et publier. |
+
+## Avant de commencer
+
+- Une **année scolaire** doit être créée et sélectionnée.
+- La **base pédagogique** doit déjà être en place — niveaux, classes, matières, périodes, salles
+  et enseignants. Voir
+  [Construire la base pédagogique](../getting-started/build-the-academic-foundation).
+
+<Callout title="Un emploi du temps appartient à une année scolaire">
+Tout ici — la configuration, les affectations, les règles et l'horaire généré — est rattaché à
+l'année scolaire sélectionnée. Choisissez la bonne année avant de commencer.
+</Callout>

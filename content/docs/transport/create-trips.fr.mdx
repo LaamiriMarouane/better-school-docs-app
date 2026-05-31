@@ -1,0 +1,148 @@
+---
+title: Créer des trajets
+description: Comprenez comment les trajets quotidiens sont générés automatiquement, comment en ajouter un à la main, et comment un trajet passe de planifié à terminé.
+---
+
+Un **trajet** est une exécution d'un itinéraire un jour précis — par exemple *Ligne Nord —
+Matin, le lundi*. La plupart des trajets sont créés **automatiquement**. Vous n'en créez un à la
+main que pour des exceptions, comme une journée de rattrapage.
+
+<Callout title="Pour qui">
+Les administrateurs et coordinateurs de transport qui supervisent les opérations quotidiennes
+des bus.
+</Callout>
+
+## Comment les trajets quotidiens sont générés automatiquement
+
+Vous n'ajoutez pas les trajets un par un. Le système les crée pour vous :
+
+- **Chaque jour d'école**, un trajet est créé pour chaque **itinéraire actif**, prêt à partir.
+- Les trajets ne sont créés que pour les **jours ouvrés** de l'école, et les **jours fériés et
+  fermetures sont ignorés** automatiquement.
+- Chaque trajet démarre déjà renseigné avec le **véhicule et l'équipage par défaut** de
+  l'itinéraire, ses **arrêts** et les **élèves** qui lui sont affectés. Ces détails sont
+  enregistrés sous forme d'instantané, de sorte que le trajet reste exact même si vous modifiez
+  l'itinéraire plus tard.
+- Un trajet n'est créé qu'**une seule fois par itinéraire et par jour** — jamais de doublons.
+
+<Callout title="Ce qu'il faut pour que les trajets apparaissent">
+Un itinéraire ne produit des trajets que s'il est **actif** et qu'il a des **arrêts** (et
+généralement des élèves). Assurez-vous que l'itinéraire est configuré avant d'attendre ses
+trajets.
+</Callout>
+
+## Statuts d'un trajet
+
+| Statut | Signification |
+| --- | --- |
+| **Planifié** | Le trajet a été créé et attend de démarrer. |
+| **En cours** | L'équipage a démarré le trajet ; il est en cours. |
+| **Terminé** | Le trajet est terminé — marqué comme terminé, ou terminé automatiquement une fois tous les élèves comptabilisés. |
+| **Annulé** | Le trajet ne partira pas (par exemple une fermeture imprévue). |
+
+## Créer un trajet manuellement
+
+À utiliser pour une journée qui n'aurait normalement pas de trajet — un cours de rattrapage le
+samedi, un jour d'examen ou une sortie spéciale.
+
+<Steps>
+
+<Step>
+### Ouvrir Trajets
+
+Allez dans **Transport → Trajets**, puis cliquez sur **Ajouter un trajet**.
+
+<Screenshot
+  label="Page des trajets avec le bouton Ajouter un trajet"
+  caption="Les trajets sont affichés sur un calendrier et une liste. Filtrez par itinéraire, chauffeur ou statut."
+/>
+</Step>
+
+<Step>
+### Renseigner les détails du trajet
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Itinéraire** | Oui | L'itinéraire à exécuter. Ses arrêts et élèves sont copiés sur le trajet. |
+| **Date du service** | Oui | Le jour où le trajet a lieu. |
+| **Véhicule** | Non | Remplace le véhicule par défaut de l'itinéraire pour ce trajet uniquement. |
+| **Chauffeur** | Non | Remplace le chauffeur par défaut pour ce trajet uniquement. |
+| **Accompagnateur** | Non | Remplace l'accompagnateur par défaut pour ce trajet uniquement. |
+
+Si le véhicule ou l'équipage choisi est déjà occupé sur un autre trajet à cette heure-là, un
+avertissement s'affiche pour que vous puissiez en choisir un autre.
+</Step>
+
+<Step>
+### Enregistrer
+
+Le trajet est créé avec le statut **Planifié**, prêt à être démarré par l'équipage.
+</Step>
+
+</Steps>
+
+<Callout title="Un trajet par itinéraire et par jour">
+Vous ne pouvez pas créer un second trajet pour le même itinéraire le même jour. Si un trajet
+existe déjà, ouvrez celui-ci.
+</Callout>
+
+## Exécuter un trajet
+
+Un trajet se déroule ainsi :
+
+<Steps>
+
+<Step>
+### Démarrer le trajet
+
+Au départ du bus, le chauffeur ou l'accompagnateur **démarre** le trajet. Son statut passe à
+**En cours** et l'heure de départ est enregistrée.
+</Step>
+
+<Step>
+### Marquer la présence en chemin
+
+À chaque arrêt atteint, l'équipage marque qui est monté ou a été déposé. Voir
+[Présence aux trajets](./trip-attendance) pour le flux complet.
+</Step>
+
+<Step>
+### Terminer le trajet
+
+Le trajet est **terminé** — automatiquement une fois tous les élèves comptabilisés, ou par
+l'équipage en appuyant sur terminer. L'heure de fin et tout retard éventuel sont enregistrés.
+</Step>
+
+</Steps>
+
+## Changer l'équipage d'un trajet
+
+Si le chauffeur, l'accompagnateur ou le véhicule habituel n'est pas disponible pour une seule
+journée, changez l'équipage de ce trajet sans toucher à l'itinéraire :
+
+1. Ouvrez le trajet depuis **Transport → Trajets**.
+2. Choisissez **Changer l'équipage**.
+3. Sélectionnez un autre chauffeur, accompagnateur ou véhicule. Les personnes ou véhicules déjà
+   occupés à cette heure sont signalés.
+
+Les valeurs par défaut de l'itinéraire restent inchangées ; le trajet de demain reprend donc
+l'équipage habituel.
+
+## Annuler un trajet
+
+Si un trajet ne partira pas — par exemple une fermeture imprévue — ouvrez-le et **annulez-le** en
+ajoutant un bref motif. Un trajet annulé ne peut pas être redémarré ; créez un nouveau trajet si
+nécessaire.
+
+## Cas d'usage courants
+
+- **Journée normale** — ne faites rien ; les trajets apparaissent automatiquement.
+- **Rattrapage le samedi** — créez un trajet manuellement pour cette date.
+- **Chauffeur malade** — changez l'équipage sur les trajets concernés.
+- **Jour de neige** — annulez les trajets de la journée avec un motif.
+
+## Articles liés
+
+- [Présence aux trajets](./trip-attendance)
+- [Construire itinéraires et arrêts](./build-routes-and-stops)
+- [Gérer les chauffeurs](./manage-drivers)

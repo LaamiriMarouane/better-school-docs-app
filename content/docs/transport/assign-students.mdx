@@ -1,0 +1,100 @@
+---
+title: Assign students
+description: Put each student on a route and the stop where they board, so they appear on daily trips and are billed correctly.
+---
+
+Assigning a student to a route tells the system **which stop the student uses** and **which
+route carries them**. Once assigned, the student appears automatically on every trip for that
+route, and their transport fee is added to their payment schedule.
+
+<Callout title="Who this is for">
+Administrators and transport coordinators building bus rosters.
+</Callout>
+
+## How rosters work
+
+- A student can ride **one pickup route** (home → school) and **one dropoff route**
+  (school → home) per academic year.
+- You assign the student to the **stop** they board at; the route is the one that stop belongs to.
+- Assignments can have a **start** and **end date** if a student only rides for part of the year.
+
+## Before you start
+
+- The **route and its stops** must already exist. See
+  [Build routes and stops](./build-routes-and-stops).
+- The student must be **enrolled** for the selected academic year.
+- The student must have an **active transport fee** — that is, a payment plan that includes the
+  Transport service. Only students who are eligible for transport appear in the picker. See
+  [Set up fees](../finance/fees-and-payments/set-up-fees) and
+  [Create payment plans](../finance/fees-and-payments/create-payment-plans).
+
+<Callout title="Why a student might not appear">
+If a student is missing from the list of students you can assign, it's almost always because
+they don't yet have a transport fee on an active payment plan. Add the transport fee first, then
+they'll appear.
+</Callout>
+
+## Assign students to a stop
+
+<Steps>
+
+<Step>
+### Open the route roster
+
+Go to **Transport → Routes**, open a route, and switch to the **Roster** view. You'll see the
+route's stops with the students currently assigned to each one.
+
+<Screenshot
+  label="Route roster with stops and assigned students"
+  caption="The roster lists each stop and the students who board there."
+/>
+</Step>
+
+<Step>
+### Add students to a stop
+
+Click **Assign students**, search for the students you want, and add them to the chosen stop.
+Only eligible (transport-billed) students are shown.
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| **Student** | Yes | The student to add. The picker shows only eligible students. |
+| **Stop** | Yes | The stop the student boards at (or is dropped off at). |
+| **Start date** | No | When the student begins riding. Leave empty to start now. |
+| **End date** | No | When the student stops riding. Leave empty if open-ended. |
+</Step>
+
+<Step>
+### Save
+
+The student now appears on the route and will be included on every trip generated for it.
+</Step>
+
+</Steps>
+
+## Move or remove a student
+
+- **Move to a different stop** — open the roster, find the student, and change their stop. This
+  is useful when a family moves house.
+- **Stop riding** — set an **end date**, or remove the student from the route. Their transport
+  fee is adjusted on their future installments accordingly.
+
+<Callout title="Billing follows the roster">
+When you add, move, or remove a student, their future transport installments are updated to
+match the stop's pricing zone (or the level's default fee). You don't need to edit invoices by
+hand.
+</Callout>
+
+## Common use cases
+
+- **New rider** — add the student to the stop nearest their home on both the pickup and dropoff
+  routes.
+- **Family moves** — change the student's stop; billing updates automatically.
+- **Mid-year start or stop** — use the start and end dates so the student is only on trips for
+  the right period.
+
+## Related articles
+
+- [Build routes and stops](./build-routes-and-stops)
+- [Create trips](./create-trips)
+- [Trip attendance](./trip-attendance)

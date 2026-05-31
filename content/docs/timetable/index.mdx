@@ -1,0 +1,107 @@
+---
+title: Timetable
+description: Build conflict-free class schedules automatically — set up the inputs, describe reality, set the rules, then generate, review, and publish.
+---
+
+The **Timetable** tools build your school's weekly class schedule for you. You describe what's
+true about your school — who teaches what, when teachers and rooms are available, and how many
+lessons each class needs — and the **generator** finds a complete, conflict-free timetable that
+respects your rules. You then review it, adjust anything by hand, and **publish** it to teachers,
+students, and parents.
+
+<Callout title="Who this is for">
+Academic planners and school administrators who build the school schedule.
+</Callout>
+
+## The big picture
+
+Building a timetable has three kinds of work:
+
+1. **Set up the inputs** — the subjects, classes, teachers, and rooms the schedule is built
+   from, plus the weekly grid of days and periods.
+2. **Describe reality and set the rules** — when teachers and rooms are available, how many hours
+   a teacher can work, and the preferences the generator should try to satisfy.
+3. **Generate, review, and publish** — run the generator, check the result, fix anything by hand,
+   and publish it.
+
+## Two kinds of setup: reality vs. rules
+
+It helps to keep two ideas apart, because they live in two different places:
+
+- **Reality (Scheduling setup)** — hard facts the timetable *must* respect: a teacher is only
+  available in the mornings, the science lab can only host science, a teacher works at most six
+  hours a day. Break one of these and the timetable is simply wrong.
+- **Rules (Solver policy)** — preferences that make a timetable *good* rather than just valid:
+  avoid gaps in a teacher's day, keep a class in the same room, don't put two demanding subjects
+  back to back. You decide how strongly each one matters.
+
+## The order to work in
+
+<Steps>
+
+<Step>
+### Check the prerequisites
+
+Make sure subjects, classes, terms, teachers, rooms, and teacher assignments all exist. See
+[Prerequisites](./prerequisites).
+</Step>
+
+<Step>
+### Set the timetable config
+
+Define the school week: working days, daily hours, period length, and breaks. See
+[Timetable config](./timetable-config).
+</Step>
+
+<Step>
+### Confirm the lessons to schedule
+
+Make sure each class–subject is assigned to a teacher so the generator knows what to place. See
+[Lessons and assignments](./lessons-and-assignments).
+</Step>
+
+<Step>
+### Describe reality
+
+Set when teachers and rooms are unavailable, teacher workload limits, and which rooms each subject
+can use. See [Scheduling setup](./scheduling-setup).
+</Step>
+
+<Step>
+### Choose your rules
+
+Turn the soft preferences (constraints) on or off and decide how much each one matters. See
+[Constraints](./constraints).
+</Step>
+
+<Step>
+### Generate and publish
+
+Run the generator, review the result, make manual edits, and publish. See
+[Generate and publish](./generate-and-publish).
+</Step>
+
+</Steps>
+
+## In this section
+
+| Article | What you'll do |
+| --- | --- |
+| [Prerequisites](./prerequisites) | The checklist of what must exist before you generate. |
+| [Timetable config](./timetable-config) | Define the weekly grid of days, periods, and breaks. |
+| [Lessons and assignments](./lessons-and-assignments) | Understand what gets scheduled and assign teachers to classes. |
+| [Scheduling setup](./scheduling-setup) | Set teacher and room unavailability, limits, and room rules. |
+| [Constraints](./constraints) | Tune the preferences the generator tries to satisfy. |
+| [Generate and publish](./generate-and-publish) | Run the generator, review, edit, and publish. |
+
+## Before you start
+
+- An **academic year** must be created and selected.
+- The **academic foundation** should already be in place — levels, classes, subjects, terms,
+  rooms, and teachers. See
+  [Build the academic foundation](../getting-started/build-the-academic-foundation).
+
+<Callout title="A timetable belongs to an academic year">
+Everything here — the config, the assignments, the rules, and the generated schedule — is scoped
+to the selected academic year. Pick the right year before you begin.
+</Callout>

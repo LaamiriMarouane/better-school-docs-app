@@ -1,0 +1,13 @@
+{
+  "title": "Enseignement et apprentissage",
+  "pages": [
+    "index",
+    "courses",
+    "lessons",
+    "assignments",
+    "quizzes",
+    "exams",
+    "gradebook",
+    "sessions-and-attendance"
+  ]
+}

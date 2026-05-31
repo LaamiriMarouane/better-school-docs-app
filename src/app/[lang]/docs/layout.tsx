@@ -3,7 +3,6 @@ import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { baseOptions } from '@/lib/layout.shared';
 import { getCachedClientManifest } from '@/lib/clientManifest';
 import { DocsNavBrand } from '@/components/DocsNavBrand';
-import { DocsFooterStrip } from '@/components/DocsFooterStrip';
 import { appName } from '@/lib/shared';
 
 import { ReactNode } from 'react';
@@ -28,7 +27,6 @@ export default async function Layout(props: {
       )}
     >
       {props.children}
-      <DocsFooterStrip manifest={manifest} lang={params.lang} />
     </DocsLayout>
   );
 }

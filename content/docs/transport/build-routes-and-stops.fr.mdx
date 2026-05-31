@@ -1,0 +1,171 @@
+---
+title: Construire itinéraires et arrêts
+description: Tracez les trajets suivis par vos bus, placez les arrêts sur la carte et regroupez-les en zones tarifaires.
+---
+
+Un **itinéraire** est le trajet suivi par un bus, composé d'une liste ordonnée d'**arrêts**. Un
+**arrêt** est un lieu où le bus prend en charge ou dépose des élèves. Vous pouvez aussi
+regrouper les arrêts en **zones tarifaires** pour que les familles d'un même secteur paient les
+mêmes frais de transport.
+
+<Callout title="Pour qui">
+Les administrateurs et coordinateurs de transport qui planifient les itinéraires de bus.
+</Callout>
+
+## Comment fonctionnent les itinéraires
+
+- Un itinéraire a une seule **direction** : **Aller** (domicile → école, le matin) ou **Retour**
+  (école → domicile, en fin de journée).
+- La plupart des écoles créent un itinéraire **aller** et un itinéraire **retour** pour chaque
+  secteur.
+- L'**école est ajoutée comme arrêt automatiquement** — à la *fin* d'un itinéraire aller (le bus
+  termine à l'école) et au *début* d'un itinéraire retour (le bus part de l'école).
+- Les arrêts sont classés selon leur **heure prévue**, afin que l'itinéraire se lise toujours
+  dans l'ordre.
+
+## Avant de commencer
+
+- Vos **véhicules** et **chauffeurs** doivent déjà exister si vous voulez définir un équipage
+  par défaut pour l'itinéraire. Voir [Gérer les véhicules](./manage-vehicles) et
+  [Gérer les chauffeurs](./manage-drivers).
+
+## Étape 1 — Créer un itinéraire
+
+<Steps>
+
+<Step>
+### Ouvrir Itinéraires
+
+Allez dans **Transport → Itinéraires**, puis cliquez sur **Ajouter un itinéraire**.
+
+<Screenshot
+  label="Liste des itinéraires avec le bouton Ajouter un itinéraire"
+  caption="Les itinéraires de l'année scolaire sélectionnée sont listés ici."
+/>
+</Step>
+
+<Step>
+### Renseigner les détails de l'itinéraire
+
+Complétez les champs ci-dessous, puis enregistrez.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom** | Oui | Un nom clair, ex. *Ligne Nord — Matin*. |
+| **Direction** | Oui | **Aller** (domicile → école) ou **Retour** (école → domicile). |
+| **Code** | Non | Un code court affiché sur les listes, ex. *RT-A*. |
+| **Description** | Non | Notes facultatives sur l'itinéraire. |
+| **Couleur** | Non | Une couleur pour afficher l'itinéraire sur la carte et les badges. |
+| **Véhicule par défaut** | Non | Le bus habituellement utilisé. Il pré-remplit chaque trajet créé pour cet itinéraire. |
+| **Chauffeur par défaut** | Non | Le chauffeur habituellement affecté. Il pré-remplit chaque trajet. |
+| **Accompagnateur par défaut** | Non | L'accompagnateur habituellement affecté. Il pré-remplit chaque trajet. |
+| **Actif** | — | Laissez activé pour les itinéraires en service. Désactivez pour en retirer un. |
+</Step>
+
+</Steps>
+
+## Étape 2 — Ajouter des arrêts
+
+<Steps>
+
+<Step>
+### Ouvrir l'itinéraire et ajouter un arrêt
+
+Ouvrez l'itinéraire que vous venez de créer et cliquez sur **Ajouter un arrêt**.
+</Step>
+
+<Step>
+### Placer l'arrêt et renseigner ses détails
+
+Cliquez sur la carte pour déposer un repère à l'emplacement de l'arrêt, puis complétez les
+champs.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom** | Oui | Le nom de l'arrêt, ex. *Place centrale*. |
+| **Adresse** | Oui | L'adresse de l'arrêt. |
+| **Emplacement sur la carte** | Oui | Cliquez sur la carte pour placer le repère. L'emplacement sert à afficher l'arrêt et à détecter sa zone tarifaire. |
+| **Heure prévue** | Non | L'heure de passage du bus à cet arrêt. Elle définit aussi l'ordre de l'arrêt. |
+| **Zone** | Non | La zone tarifaire à laquelle appartient l'arrêt (voir l'étape 3). |
+
+<Screenshot
+  label="Boîte de dialogue d'ajout d'arrêt avec le sélecteur de carte"
+  caption="Déposez un repère sur la carte et donnez à l'arrêt un nom et une heure prévue."
+/>
+</Step>
+
+<Step>
+### Répéter pour chaque arrêt
+
+Ajoutez chaque arrêt dans l'ordre de passage du bus. L'arrêt de l'école est ajouté
+automatiquement.
+</Step>
+
+</Steps>
+
+<Callout title="L'ordre des arrêts suit l'heure prévue">
+Vous ne faites pas glisser les arrêts pour les réordonner. Définissez l'**heure prévue** de
+chaque arrêt et l'itinéraire les classe automatiquement dans l'ordre horaire. Les arrêts sans
+heure prévue sont placés à la fin.
+</Callout>
+
+## Étape 3 (facultatif) — Configurer les zones tarifaires
+
+Une **zone** est un secteur avec ses propres frais de transport. Regroupez vos arrêts en zones
+pour que tous ceux qui montent dans le même secteur paient le même montant.
+
+<Steps>
+
+<Step>
+### Créer une zone
+
+Allez dans **Transport → Zones**, puis cliquez sur **Ajouter une zone** et complétez les champs.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom** | Oui | Le nom de la zone, ex. *Centre-ville*. |
+| **Code** | Non | Un code court, unique dans l'année, ex. *Z1*. |
+| **Couleur** | Non | Une couleur pour les repères des arrêts de la zone et les badges. |
+| **Montant des frais** | Oui | Les frais de transport mensuels facturés aux élèves dont l'arrêt est dans cette zone. |
+</Step>
+
+<Step>
+### Affecter des arrêts à la zone
+
+Ouvrez un arrêt et choisissez sa **Zone**, ou utilisez la vue **Arrêts par zone** pour en
+affecter plusieurs à la fois. Lorsque vous placez un repère sur la carte, la zone correspondante
+peut aussi être détectée automatiquement.
+</Step>
+
+</Steps>
+
+<Callout title="Comment fonctionne la tarification du transport">
+- Un élève dont l'arrêt est **dans une zone** est facturé selon les **frais de cette zone**.
+- Un élève à un arrêt **sans zone** est facturé selon les **frais de transport par défaut du
+  niveau** (configurés dans [Finance](../finance/fees-and-payments/set-up-fees)).
+- Les frais d'une zone sont un **montant mensuel unique** — tout élève dont l'arrêt est dans cette
+  zone le paie, quel que soit son niveau.
+</Callout>
+
+## Conseils et bonnes pratiques
+
+- Créez un itinéraire **aller** et un itinéraire **retour** par secteur, et donnez à la paire la
+  même couleur pour les reconnaître facilement.
+- Renseignez les **heures prévues**, même approximatives — elles déterminent l'ordre des arrêts
+  et aident les chauffeurs à rester à l'heure.
+- Définissez un **véhicule et un équipage par défaut** sur l'itinéraire pour que les trajets
+  quotidiens ne nécessitent aucune configuration supplémentaire.
+
+## Cas d'usage courants
+
+- **Nouveau quartier desservi** — ajoutez un itinéraire, placez ses arrêts sur la carte et
+  affectez les élèves.
+- **Tarif identique pour un même secteur** — créez une zone et placez-y les arrêts du secteur.
+- **Changement saisonnier** — désactivez un itinéraire au lieu de le supprimer pour conserver
+  son historique.
+
+## Articles liés
+
+- [Affecter les élèves](./assign-students)
+- [Créer des trajets](./create-trips)
+- [Configurer les frais](../finance/fees-and-payments/set-up-fees)

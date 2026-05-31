@@ -1,0 +1,61 @@
+---
+title: Bulk create portal accounts
+description: Create logins for everyone in a role in one background job.
+---
+
+When a school is first set up, dozens or hundreds of people need a login at once.
+**Bulk create** makes portal accounts for an entire role in a single action — it runs
+as a background job so you can keep working while it processes.
+
+<Callout title="Who this is for">
+Administrators creating logins in bulk during onboarding.
+</Callout>
+
+## Steps
+
+<Steps>
+
+<Step>
+### Open the Pending portal accounts list
+
+Go to **Management → Users**, then the **Pending portal** tab, and pick the **role**
+to process — teacher, student, parent, or staff.
+</Step>
+
+<Step>
+### Start "Create all pending portal accounts"
+
+Choose **Create all pending portal accounts**. A dialog lets you set two options:
+
+| Option | Notes |
+| --- | --- |
+| **Only eligible** | When on, people who cannot receive an account yet are skipped instead of failing. Recommended. |
+| **Max items** | Optional cap on how many accounts to create in this run. Leave empty for no limit. |
+</Step>
+
+<Step>
+### Let the job run
+
+The job processes in the background. A progress card shows how many of the total have
+been handled, with a status of *Queued*, *Running*, *Completed*, *Failed*, or
+*Cancelled*.
+</Step>
+
+<Step>
+### Review the result
+
+When the job finishes, a banner reports how many accounts **succeeded**, **failed**,
+and were **skipped**. If any failed, use **Retry failed** to attempt those again.
+</Step>
+
+</Steps>
+
+<Callout title="Skipped vs failed">
+**Skipped** usually means the person already has an account — that is expected and
+safe. **Failed** means something went wrong for that person; retry or create their
+account individually.
+</Callout>
+
+## Related articles
+
+- [Create portal accounts](./create-portal-accounts)

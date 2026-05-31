@@ -1,0 +1,114 @@
+---
+title: Courses
+description: Build the curriculum for a subject — chapters and lessons — and reuse it across classes and from year to year.
+---
+
+A **course** is the curriculum for one **subject at one level**, for a term. It's organised into
+**chapters**, and each chapter holds **lessons**. You build a course once, and every class at that
+level follows it — so the structure stays consistent, and you can reuse it next year.
+
+<Callout title="Who this is for">
+Administrators and teachers who plan what's taught in each subject.
+</Callout>
+
+## How a course is organised
+
+```
+Course  (a subject, at a level, for a term)
+└─ Chapter
+   └─ Lesson
+      └─ Lesson content  (written by the teacher — see Lessons)
+```
+
+A course belongs to a specific **subject + level + term**, and there's one course per that
+combination. The chapters and lessons give every class the same backbone; teachers then add their
+own [lesson content](./lessons) on top.
+
+## Before you start
+
+- The subject must be **assigned to the level** (a level subject), and **terms** must exist. See
+  [Build the academic foundation](../getting-started/build-the-academic-foundation).
+
+## Create a course
+
+<Steps>
+
+<Step>
+### Open the curriculum
+
+Go to **Courses** (or **Curriculum**) and create a new course.
+
+<Screenshot
+  label="Courses list"
+  caption="Each course is a subject at a level, organised into chapters and lessons."
+/>
+</Step>
+
+<Step>
+### Fill in the course details
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| **Title** | Yes | The course name. |
+| **Description** | No | A short summary of what the course covers. |
+| **Subject, level, and term** | Yes | Which subject, at which level, for which term this course belongs to. |
+</Step>
+
+<Step>
+### Add chapters and lessons
+
+Add **chapters** in the order they're taught, then add **lessons** within each chapter. You can
+reorder both at any time. Each lesson has its own details — type, duration, objectives — covered in
+[Lessons](./lessons).
+</Step>
+
+<Step>
+### Publish the course
+
+A course starts as a **draft**. **Publish** it when the structure is ready, so it becomes available
+to the classes at that level.
+</Step>
+
+</Steps>
+
+## Who manages a course's curriculum
+
+The **curriculum** — the course's chapters and lessons, and publishing it — is managed by teachers
+given **curriculum ownership** of that subject, level, and term. An administrator grants ownership,
+and can **assign many teachers across many subjects at once**. There are two roles:
+
+| Role | What they can do with the curriculum |
+| --- | --- |
+| **Primary** | Full control — shape the chapters and lessons, **publish**, and delete the course. |
+| **Contributor** | Shape the chapters and lessons, but **can't** publish or delete. |
+
+<Callout title="Curriculum ownership is not the same as lesson content">
+These roles control the **curriculum structure** and publishing. They're **separate** from the
+**lesson content** a teacher writes for their own class — which is governed by *teaching* the
+subject, not by owning the curriculum. See [Lessons](./lessons).
+</Callout>
+
+## Sharing a course across classes
+
+A course is shared by **all the classes at its level**. Once published, its lessons are available to
+those classes. Each class's teacher then writes the [lesson content](./lessons) and decides what
+their students can see — so two classes can follow the same course while each teacher keeps their
+own materials.
+
+## Reuse from year to year
+
+When you start a new academic year, a course can be **carried over** so you don't rebuild the
+curriculum from scratch — the chapters and lessons come across, ready to adjust. This is part of
+copying an academic year forward.
+
+## Common use cases
+
+- **New subject curriculum** — create the course, lay out chapters and lessons, and publish.
+- **Same course, several classes** — build it once at the level; every class follows it.
+- **Next year** — carry the course forward and tweak rather than starting over.
+
+## Related articles
+
+- [Lessons](./lessons)
+- [Class sessions & attendance](./sessions-and-attendance)
+- [Create subjects](../getting-started/build-the-academic-foundation/create-subjects)

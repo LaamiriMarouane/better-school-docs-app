@@ -1,0 +1,12 @@
+{
+  "title": "النقل",
+  "pages": [
+    "index",
+    "manage-vehicles",
+    "manage-drivers",
+    "build-routes-and-stops",
+    "assign-students",
+    "create-trips",
+    "trip-attendance"
+  ]
+}

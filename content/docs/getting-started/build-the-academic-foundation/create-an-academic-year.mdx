@@ -1,0 +1,86 @@
+---
+title: Create an academic year
+description: Create the academic year that all levels, classes, terms, enrollments, and scheduling belong to.
+---
+
+An **academic year** is the top-level container for a school cycle — for example
+*2025–2026*. Almost everything else (terms, levels, classes, subjects, rooms,
+enrollments, timetables) is created **inside** an academic year, so this is the very
+first thing to set up.
+
+<Callout title="Who this is for">
+Administrators starting a new school cycle.
+</Callout>
+
+## Before you start
+
+- Decide the **start and end dates** of the cycle.
+- If a previous academic year already exists, you can **clone** its structure into the
+  new one instead of rebuilding it by hand.
+
+<Screenshot
+  label="Academic years page with the Add button"
+  caption="Academic years are managed under Settings."
+/>
+
+## Steps
+
+<Steps>
+
+<Step>
+### Open the Academic Years page
+
+Go to **Settings → Academic Years**, then click **Add**.
+
+<Screenshot
+  label="Create academic year form"
+  caption="Step 1 of the form: label, dates, description and status."
+/>
+</Step>
+
+<Step>
+### Fill in the year details
+
+Complete the fields below.
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| **Label** | Yes | The display name, at least 3 characters, e.g. *2025–2026*. |
+| **Start date** | Yes | The first day of the cycle. |
+| **End date** | Yes | The last day of the cycle. Must be after the start date. |
+| **Description** | No | Optional notes about the year. |
+| **Status** | No | *Draft* while you build it, *Active* once it is in use. Defaults to Draft. |
+</Step>
+
+<Step>
+### Clone from a previous year (optional)
+
+If other academic years exist, the form offers a **cloning** step. Turn on
+**Enable cloning**, choose a **source year**, and pick what to copy — terms, levels,
+subjects, classes, fees, and more. Some options depend on others (for example, level
+subjects need levels and subjects), and the form keeps those in sync.
+
+If you cloned terms, a final step lets you **shift each term's dates** into the new
+year. Click **Skip** to create the year without cloning.
+</Step>
+
+<Step>
+### Submit
+
+Click **Submit**. The new academic year is created. If you enabled cloning, the copy
+runs as a background job and you can track its progress.
+</Step>
+
+</Steps>
+
+<Callout title="Switching the active year">
+The academic year shown in the switcher at the top of the screen determines which
+year you are editing. Select the new year there before building its levels and
+classes.
+</Callout>
+
+## Related articles
+
+- [Create terms](./create-terms)
+- [Create levels](./create-levels)
+- [Academic years, terms, and statuses](../common-concepts/academic-years-terms-and-statuses)

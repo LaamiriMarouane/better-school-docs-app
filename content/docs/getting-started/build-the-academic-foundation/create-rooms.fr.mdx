@@ -1,0 +1,85 @@
+---
+title: Créer des salles
+description: Enregistrez les salles physiques où se déroulent les cours afin de les utiliser dans la planification.
+---
+
+Une **salle** est un espace physique où l'enseignement a lieu — une salle de classe, un
+laboratoire, un gymnase ou une salle informatique. Les salles sont utilisées lors de la
+construction de l'emploi du temps, et une matière peut être restreinte à certains
+**types de salles**.
+
+<Callout title="Pour qui">
+Les administrateurs qui préparent la fondation académique avant la planification.
+</Callout>
+
+## Avant de commencer
+
+- Une **année scolaire** doit exister et être sélectionnée — chaque salle appartient à
+  l'année sélectionnée.
+- Si le module **Équipement** est activé, vous pouvez rattacher des équipements à une
+  salle. Créez ces équipements d'abord si vous souhaitez les lier.
+
+<Screenshot
+  label="Page des salles avec le bouton Ajouter une salle"
+  caption="La page Salles liste toutes les salles de l'année scolaire sélectionnée."
+/>
+
+## Étapes
+
+<Steps>
+
+<Step>
+### Ouvrir la page Salles
+
+Dans la barre latérale d'administration, allez dans **Académique → Salles**.
+</Step>
+
+<Step>
+### Démarrer une nouvelle salle
+
+Cliquez sur **Ajouter une salle** pour ouvrir le formulaire de création.
+
+<Screenshot
+  label="Formulaire de création d'une salle"
+  caption="Le formulaire : nom, code, numéro, capacité, emplacement et types de salles."
+/>
+</Step>
+
+<Step>
+### Renseigner les détails de la salle
+
+Complétez les champs ci-dessous, puis cliquez sur **Valider**.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom de la salle** | Oui | Le nom affiché, ex. *Laboratoire de sciences A*. |
+| **Code** | Oui | Un identifiant court, 15 caractères maximum, ex. `LAB-A`. |
+| **Numéro de salle** | Oui | Le numéro de salle utilisé par votre école, ex. `204`. |
+| **Capacité** | Oui | Nombre maximal d'élèves que la salle peut accueillir. Au moins 1. |
+| **Bâtiment** | Non | Le bâtiment où se trouve la salle. |
+| **Étage** | Non | L'étage où se trouve la salle. |
+| **Adresse du bâtiment** | Non | Adresse facultative du bâtiment. |
+| **Équipement** | Non | Équipement disponible dans la salle. Affiché uniquement si le module Équipement est activé. |
+| **Types de salles** | Non | Un ou plusieurs types (ex. *Laboratoire*, *Salle de classe*). Les matières peuvent être restreintes à ces types. |
+</Step>
+
+<Step>
+### Vérifier que la salle apparaît
+
+La nouvelle salle est ajoutée immédiatement à la liste des salles. Répétez pour chaque
+espace d'enseignement.
+</Step>
+
+</Steps>
+
+<Callout title="Astuce">
+Définissez les **types de salles** avec précision. Ils permettent à l'emploi du temps
+de placer une matière uniquement dans des salles adaptées — par exemple garder la
+chimie dans un *Laboratoire*.
+</Callout>
+
+## Articles liés
+
+- [Créer des matières](./create-subjects)
+- [Créer des classes](./create-classes)
+- [Configurer l'emploi du temps](../configure-core-operations/configure-the-timetable)

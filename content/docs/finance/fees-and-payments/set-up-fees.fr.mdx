@@ -1,0 +1,70 @@
+---
+title: Configurer les frais
+description: Donnez à un service un prix pour un niveau, avec une périodicité qui détermine le calendrier des échéances.
+---
+
+Un **frais** est une règle tarifée. Il indique : *ce service*, à *ce niveau*, coûte
+*ce montant*, facturé selon *cette périodicité*. Les frais sont la base des
+échéanciers de paiement.
+
+<Callout title="Pour qui">
+Les administrateurs qui tarifient les services de l'école.
+</Callout>
+
+## Avant de commencer
+
+- Le **service** doit déjà exister — voir [Créer des services](./create-services).
+- Les **niveaux** doivent exister — un frais est tarifé par niveau.
+
+<Screenshot
+  label="Page des frais avec le bouton Ajouter un frais"
+  caption="Les frais relient un service et un niveau à un montant."
+/>
+
+## Étapes
+
+<Steps>
+
+<Step>
+### Ouvrir la page Frais
+
+Allez dans **Finance → Frais**, puis démarrez un nouveau frais.
+
+<Screenshot
+  label="Formulaire de création d'un frais"
+  caption="Le formulaire : nom, service, niveau, périodicité et montant."
+/>
+</Step>
+
+<Step>
+### Renseigner les détails du frais
+
+Complétez les champs ci-dessous, puis enregistrez.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom** | Oui | Le nom affiché, ex. *Scolarité 1re année*. |
+| **Service** | Oui | Le service que ce frais tarifie. |
+| **Niveau** | Oui | Le niveau auquel le frais s'applique. |
+| **Périodicité** | Oui | À quelle fréquence il est facturé — par exemple mensuelle ou unique. Elle façonne le calendrier des échéances. |
+| **Montant** | Oui | Le prix. Doit être supérieur à zéro. |
+</Step>
+
+<Step>
+### Répéter par niveau
+
+Créez un frais pour chaque combinaison service-niveau que votre école facture.
+</Step>
+
+</Steps>
+
+<Callout title="La périodicité détermine les échéances">
+La **périodicité** détermine le nombre d'échéances qu'un élève obtient pour ce frais —
+un frais mensuel produit un calendrier mensuel, un frais unique une seule échéance.
+</Callout>
+
+## Articles liés
+
+- [Créer des services](./create-services)
+- [Créer des échéanciers](./create-payment-plans)
+- [Échéances et calendriers](./installments-and-schedules)

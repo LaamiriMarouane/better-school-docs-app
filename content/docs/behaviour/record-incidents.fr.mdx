@@ -1,0 +1,88 @@
+---
+title: Enregistrer des incidents
+description: Consignez un événement de comportement pour un élève, fixez ses points, et ajoutez des actions de suivi comme un appel aux parents ou une retenue.
+---
+
+Un **incident** consigne un événement de comportement pour un élève — ce qui s'est passé, sous quelle
+catégorie et quel niveau, quand, et combien de points il vaut. Vous pouvez aussi y attacher des
+**actions de suivi**.
+
+<Callout title="Pour qui">
+Les enseignants et administrateurs qui enregistrent le comportement des élèves.
+</Callout>
+
+## Qui peut enregistrer
+
+- Les **administrateurs** peuvent enregistrer un incident pour n'importe quel élève.
+- Les **enseignants** peuvent enregistrer des incidents pour les élèves des **classes qu'ils
+  enseignent**.
+
+Les élèves et parents peuvent uniquement consulter — voir [Points & classement](./leaderboard).
+
+## Enregistrer un incident
+
+<Steps>
+
+<Step>
+### Ouvrir les incidents
+
+Allez dans **Comportement → Incidents**, puis choisissez **Ajouter un incident**.
+</Step>
+
+<Step>
+### Renseigner l'incident
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Élève** | Oui | L'élève concerné. Les enseignants ne voient que les élèves de leurs classes. |
+| **Catégorie** | Oui | Le type de comportement (positif ou négatif). |
+| **Sous-catégorie** | Non | Un libellé plus fin, si la catégorie en a. |
+| **Niveau** | Oui | Le niveau d'importance — il fixe les points. |
+| **Points** | Oui | Pré-remplis depuis le niveau ; ajustez si besoin. Les niveaux positifs ajoutent, les négatifs retranchent. |
+| **Description** | Oui | Ce qui s'est passé. |
+| **Date** | Oui | Quand cela s'est produit. |
+| **Lieu** | Non | Où cela s'est produit, le cas échéant. |
+</Step>
+
+<Step>
+### Enregistrer
+
+L'incident est consigné, et ses points comptent dans le total de l'élève.
+</Step>
+
+</Steps>
+
+<Callout title="Les points viennent du niveau">
+Lorsque vous choisissez un **niveau**, ses points par défaut se remplissent automatiquement. Vous
+pouvez changer la valeur pour un incident précis — mais le fait qu'il **ajoute ou retranche** vient
+du côté positif/négatif du niveau.
+</Callout>
+
+## Ajouter une action de suivi
+
+Un incident peut avoir une ou plusieurs **actions** — les mesures prises en réponse, comme un appel
+aux parents, une retenue, ou un entretien. Ouvrez un incident et ajoutez une action :
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Action** | Oui | Ce qui a été fait — ex. *Appel aux parents*, *Retenue*. |
+| **Notes** | Non | Tout détail ou contexte. |
+| **Date** | Oui | Quand l'action a eu lieu. |
+
+## Modifier ou supprimer
+
+Ouvrez un incident pour modifier ses détails, ajouter ou retirer des actions, ou le supprimer. Les
+points de l'élève se mettent à jour en conséquence.
+
+## Cas d'usage courants
+
+- **Récompenser le bon comportement** — enregistrez un incident positif pour qu'il s'ajoute aux
+  points de l'élève.
+- **Consigner un problème et faire un suivi** — enregistrez un incident négatif, puis ajoutez une
+  action *Appel aux parents* une fois la famille contactée.
+- **Corriger une erreur** — ouvrez l'incident et corrigez le niveau, les points ou la description.
+
+## Articles liés
+
+- [Configurer catégories & niveaux](./setup)
+- [Points & classement](./leaderboard)

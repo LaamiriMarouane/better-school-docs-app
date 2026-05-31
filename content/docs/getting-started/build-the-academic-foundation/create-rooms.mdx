@@ -1,0 +1,82 @@
+---
+title: Create rooms
+description: Register the physical rooms where classes are held so they can be used in scheduling.
+---
+
+A **room** is a physical space where teaching happens — a classroom, a lab, a gym, or
+a computer room. Rooms are used when building the timetable, and a subject can be
+restricted to specific **room types**.
+
+<Callout title="Who this is for">
+Administrators preparing the academic foundation before scheduling.
+</Callout>
+
+## Before you start
+
+- An **academic year** must exist and be selected — each room belongs to the selected
+  year.
+- If the **Equipment** module is enabled, you can attach equipment items to a room.
+  Create those items first if you want to link them.
+
+<Screenshot
+  label="Rooms page with the Add Room button"
+  caption="The Rooms page lists every room in the selected academic year."
+/>
+
+## Steps
+
+<Steps>
+
+<Step>
+### Open the Rooms page
+
+From the admin sidebar, go to **Academic → Rooms**.
+</Step>
+
+<Step>
+### Start a new room
+
+Click **Add Room** to open the create form.
+
+<Screenshot
+  label="Create room form"
+  caption="The create room form: name, code, number, capacity, location and room types."
+/>
+</Step>
+
+<Step>
+### Fill in the room details
+
+Complete the fields below, then click **Submit**.
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| **Room name** | Yes | The display name, e.g. *Science Lab A*. |
+| **Code** | Yes | A short identifier, max 15 characters, e.g. `LAB-A`. |
+| **Room number** | Yes | The room number used by your school, e.g. `204`. |
+| **Capacity** | Yes | Maximum number of students the room holds. Must be at least 1. |
+| **Building** | No | The building the room is in. |
+| **Floor** | No | The floor the room is on. |
+| **Building address** | No | Optional address of the building. |
+| **Equipment** | No | Equipment available in the room. Only shown when the Equipment module is enabled. |
+| **Room types** | No | One or more types (e.g. *Lab*, *Classroom*). Subjects can be restricted to these types. |
+</Step>
+
+<Step>
+### Confirm the room appears
+
+The new room is added to the Rooms list immediately. Repeat for every teaching space.
+</Step>
+
+</Steps>
+
+<Callout title="Tip">
+Set **room types** accurately. They let the timetable place a subject only in suitable
+rooms — for example keeping Chemistry in a *Lab*.
+</Callout>
+
+## Related articles
+
+- [Create subjects](./create-subjects)
+- [Create classes](./create-classes)
+- [Configure the timetable](../configure-core-operations/configure-the-timetable)

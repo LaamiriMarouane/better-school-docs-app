@@ -1,0 +1,160 @@
+---
+title: Generate and publish
+description: Run the timetable generator, review the result, adjust it by hand, and publish it to teachers, students, and parents.
+---
+
+When your setup is complete, you're ready to build the schedule. You create a **timetable**,
+run the **generator**, review and fine-tune the result, and **publish** it so everyone can see it.
+
+<Callout title="Who this is for">
+Administrators and academic planners producing and releasing the school schedule.
+</Callout>
+
+## Before you start
+
+Make sure the earlier steps are done:
+
+- [Prerequisites](./prerequisites) — subjects, classes, terms, teachers, rooms, and teacher
+  assignments all exist.
+- [Timetable config](./timetable-config) — the weekly grid is set.
+- [Scheduling setup](./scheduling-setup) — availability and limits are in.
+- [Constraints](./constraints) — preferences are tuned (or left at defaults).
+
+## Step 1 — Create a timetable
+
+A **timetable** is built for a **term** and a chosen set of **levels**, using one config.
+
+<Steps>
+
+<Step>
+### Start a new timetable
+
+Go to **Timetable**, then create a new timetable. Give it a name, choose the **term** and the
+**levels** it covers, and pick the **config** to use.
+</Step>
+
+<Step>
+### Reuse last year's rules (optional)
+
+If you've run timetables before, you can start from your previous **constraint settings** instead
+of the defaults, then adjust.
+</Step>
+
+</Steps>
+
+## Step 2 — Generate
+
+<Steps>
+
+<Step>
+### Run the generator
+
+Open the timetable and click **Generate**. The generator first runs a quick **feasibility check**,
+then starts solving.
+</Step>
+
+<Step>
+### Fix anything the check flags
+
+The feasibility check looks for problems that would make a timetable impossible — most often a
+class–subject with **no teacher assigned**, or far more lessons than the available hours and rooms
+can hold. It lists these as **blocking errors** (you must fix them) and **warnings** (worth a look).
+Fix the blocking errors and run again.
+</Step>
+
+<Step>
+### Watch the progress
+
+Generating runs in the background and shows live progress. You can leave the page and come back.
+If you need to, you can **stop** a run that's taking too long.
+
+| Status | Meaning |
+| --- | --- |
+| **Pending** | Queued, about to start. |
+| **Running** | The generator is building the timetable. |
+| **Completed** | Finished — ready to review. |
+| **Failed** | No timetable could satisfy every hard rule (see below). |
+| **Cancelled** | You stopped the run. |
+</Step>
+
+</Steps>
+
+<Callout title="If it can't find a timetable">
+The generator only produces a schedule that breaks **no hard rule**. If that's impossible, it
+reports the conflicts instead of guessing. The fix is almost always to loosen reality or a strict
+preference — remove some teacher unavailability, raise an over-tight hour limit, free up a room, or
+relax a preference you made strict. Then generate again.
+</Callout>
+
+## Step 3 — Review the result
+
+Once it completes, look over the timetable in whichever view suits you:
+
+- **By class** — what each class's week looks like.
+- **By teacher** — each teacher's personal schedule.
+- **By room** — how each room is used through the week.
+
+Each view comes in two layouts: a **grid** that shows everything at once, and a **master view** that
+lets you step through one class, teacher, or room at a time — or show them all. Use the **search**
+box to highlight a class, teacher, subject, or room wherever it appears.
+
+An **issues** view highlights anything worth attention, such as soft preferences that couldn't be
+fully met.
+
+## Step 4 — Adjust by hand
+
+You can fine-tune the result directly:
+
+- **Move a lesson** — drag it to a different day or time. The editor warns you if the move would
+  clash with a hard rule.
+- **Change a room** — pick a different suitable room for a lesson.
+- **Pin a lesson** — lock a lesson in place. Pinned lessons stay exactly where they are if you
+  generate again, so you can fix the parts you like and let the generator redo the rest.
+
+## Step 5 — Publish
+
+A timetable starts as a **draft** — only you and other planners can see it. When you're happy,
+**publish** it.
+
+<Steps>
+
+<Step>
+### Publish the timetable
+
+Open the finished timetable and click **Publish**.
+</Step>
+
+<Step>
+### What happens
+
+- The timetable becomes **active** and visible to teachers, students, and parents.
+- Any previously published timetable for the same term is **archived** (kept for reference, no
+  longer the live one).
+</Step>
+
+</Steps>
+
+| State | Who can see it |
+| --- | --- |
+| **Draft** | Planners and administrators only. |
+| **Published** | Teachers, students, and parents. |
+| **Archived** | Kept as a historical record; no longer live. |
+
+## Re-publishing changes
+
+If you need to change a published timetable, make your edits and publish again. The updated
+version becomes the live one and the previous version is archived, so there's always a clear
+history.
+
+## Tips and best practices
+
+- **Generate early, even if setup isn't perfect.** The feasibility check is the fastest way to
+  find missing assignments and tight limits.
+- **Pin the parts you're sure about** before re-generating, so improvements don't disturb them.
+- **Review by teacher** before publishing — it's the quickest way to spot an unbalanced workload.
+
+## Related articles
+
+- [Prerequisites](./prerequisites)
+- [Scheduling setup](./scheduling-setup)
+- [Constraints](./constraints)

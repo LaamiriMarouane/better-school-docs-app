@@ -6,6 +6,14 @@ html {
   scrollbar-gutter: stable;
 }
 
+/* Fumadocs caps the docs layout at --fd-layout-width (1400px) and centers it
+   with flexible gutter columns, so on wide screens the sidebar is pushed off
+   the left edge. Setting it to 100% collapses the gutters: the sidebar sits
+   flush left and the layout spans the full window width. */
+#nd-docs-layout {
+  --fd-layout-width: 100% !important;
+}
+
 html > body[data-scroll-locked] {
   margin-right: 0px !important;
   --removed-body-scroll-bar-size: 0px !important;
@@ -28,19 +36,19 @@ html > body[data-scroll-locked] {
   text-align: right !important;
 }
 
-[dir='rtl'] #nd-sidebar a,
-[dir='rtl'] #nd-sidebar button {
-  direction: rtl !important;
-  text-align: right !important;
-  justify-content: flex-start !important;
-
+/* Right-align the nav tree links/folders only. The search box and the
+   language / theme controls are also buttons inside #nd-sidebar, but Fumadocs
+   lays them out with logical properties (ms-auto, ps-2, gap, text-start) that
+   already flip in RTL — so we exclude them here. The previous rules forced
+   `justify-content: flex-start` and `margin-right: auto` on every sidebar icon,
+   which shoved the search icon and the language-select icon out of place. */
+[dir='rtl'] #nd-sidebar [data-radix-scroll-area-viewport] a,
+[dir='rtl'] #nd-sidebar [data-radix-scroll-area-viewport] button {
+  text-align: right;
 }
 
-/* Ensure icons/svgs also respect the flip if needed */
-[dir='rtl'] #nd-sidebar a svg,
-[dir='rtl'] #nd-sidebar button svg {
-  margin-right: auto;
-  margin-left: 0;
-}
+/* The folder collapse chevron uses `ms-auto`, which already flips in RTL.
+   No icon-margin overrides needed — adding them breaks the search box and the
+   language selector, which Fumadocs positions correctly on its own. */
 
 

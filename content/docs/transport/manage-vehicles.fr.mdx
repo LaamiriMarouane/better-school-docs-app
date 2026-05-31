@@ -1,0 +1,100 @@
+---
+title: Gérer les véhicules
+description: Ajoutez les bus, minibus et voitures de votre flotte, et suivez leurs coûts d'exploitation.
+---
+
+Un **véhicule** est un bus, un minibus ou une voiture que votre école utilise pour le
+transport. Vous enregistrez chaque véhicule une seule fois ; il devient alors disponible pour
+être affecté aux itinéraires et aux trajets. La flotte est aussi l'endroit où vous tenez le
+relevé des coûts de chaque véhicule — carburant, entretien, assurance et contrôles.
+
+<Callout title="Pour qui">
+Les administrateurs et coordinateurs de transport qui gèrent la flotte de l'école.
+</Callout>
+
+## Avant de commencer
+
+- Le **module Transport** doit être activé.
+- Ayez sous la main les détails de chaque véhicule : numéro d'immatriculation, marque et
+  modèle, et nombre de places.
+
+## Ajouter un véhicule
+
+<Steps>
+
+<Step>
+### Ouvrir la flotte
+
+Allez dans **Transport** et ouvrez la liste des **Véhicules** (Flotte), puis cliquez sur
+**Ajouter un véhicule**.
+
+<Screenshot
+  label="Liste des véhicules avec le bouton Ajouter un véhicule"
+  caption="Tous les véhicules de votre flotte sont listés ici."
+/>
+</Step>
+
+<Step>
+### Renseigner les détails du véhicule
+
+Complétez les champs ci-dessous, puis enregistrez.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Type** | Oui | Le genre de véhicule, ex. *Bus*, *Minibus* ou *Voiture*. |
+| **Marque** | Non | Le constructeur, ex. *Mercedes*, *Toyota*. |
+| **Modèle** | Non | Le nom du modèle. |
+| **Numéro d'immatriculation** | Oui | La plaque qui identifie le véhicule. |
+| **Type de carburant** | Non | Le carburant utilisé par le véhicule. |
+| **Places** | Oui | Le nombre de passagers que le véhicule peut transporter. Sert de référence de capacité. |
+| **Kilométrage initial** | Non | Le relevé du compteur au moment où vous commencez le suivi. |
+| **Kilométrage actuel** | Non | Le dernier relevé du compteur. |
+| **Actif** | — | Laissez activé pour les véhicules en service. Désactivez pour retirer un véhicule sans le supprimer. |
+</Step>
+
+<Step>
+### Répéter pour chaque véhicule
+
+Ajoutez chaque bus et voiture de votre flotte. Ils deviennent disponibles lors de la
+construction des itinéraires et de la création des trajets.
+</Step>
+
+</Steps>
+
+## Suivre les coûts d'un véhicule
+
+Ouvrez un véhicule pour voir les onglets des coûts que vous pouvez y enregistrer :
+
+| Relevé de coût | Ce qu'il suit |
+| --- | --- |
+| **Carburant** | Chaque plein et son coût. |
+| **Entretien** | Les enregistrements d'entretien et de réparation. |
+| **Assurance** | Les polices d'assurance et leurs dates d'échéance. |
+| **Vignette** | La taxe routière / vignette et son renouvellement. |
+| **Contrôle technique** | Les contrôles de conformité et leurs dates d'expiration. |
+
+<Callout title="Astuce">
+Enregistrer les dates d'assurance, de vignette et de contrôle permet à l'école d'être prévenue
+avant l'expiration des documents d'un véhicule, afin qu'un bus ne circule jamais sans papiers
+valides.
+</Callout>
+
+## Retirer un véhicule
+
+Pour retirer un véhicule du service, modifiez-le et désactivez **Actif**. Le véhicule reste
+dans vos enregistrements et sur les trajets passés, mais n'apparaît plus lorsque vous affectez
+des véhicules à de nouveaux itinéraires ou trajets. C'est plus sûr que la suppression, qui
+effacerait son historique de coûts.
+
+## Cas d'usage courants
+
+- **Arrivée d'un nouveau bus** — ajoutez-le à la flotte pour pouvoir l'affecter à un itinéraire.
+- **Bus vendu ou mis au rebut** — désactivez-le pour conserver son historique tout en le
+  masquant des nouvelles affectations.
+- **Suivi des coûts** — enregistrez chaque plein et chaque entretien pour voir ce que coûte
+  chaque véhicule.
+
+## Articles liés
+
+- [Gérer les chauffeurs](./manage-drivers)
+- [Construire itinéraires et arrêts](./build-routes-and-stops)

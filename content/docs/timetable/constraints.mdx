@@ -1,0 +1,103 @@
+---
+title: Constraints
+description: Understand the rules the generator always keeps, and tune the preferences that make a timetable good — gaps, room stability, subject spacing, and more.
+---
+
+A **constraint** is a rule the generator weighs when it builds the timetable. There are two kinds,
+and understanding the difference is the key to getting the schedule you want.
+
+<Callout title="Who this is for">
+Administrators tuning how the timetable generator behaves.
+</Callout>
+
+## Hard rules vs. soft preferences
+
+- **Hard rules** are things the timetable must *never* break. The generator will not produce a
+  schedule that violates one. Most hard rules come from reality (see
+  [Scheduling setup](./scheduling-setup)) and structure (no double-booking).
+- **Soft preferences** are things that make a timetable *good* rather than just valid — avoiding
+  gaps, keeping a class in one room, spacing out hard subjects. The generator satisfies as many as
+  it can, and you decide **how much each one matters**.
+
+The generator always satisfies every hard rule first, then makes the soft preferences as happy as
+possible.
+
+## Rules the timetable always keeps
+
+You don't configure these — they're always on, so a published timetable is always sound:
+
+- No **class**, **teacher**, or **room** is ever in two places at once.
+- Lessons are never placed in a time you've marked a **teacher or room unavailable**.
+- A room is never used **beyond its capacity**, and a subject only uses rooms of the **right type**.
+- No lesson is placed over a **break**.
+- **Allowed-room** restrictions (teacher rooms, subject rooms) are respected.
+- **Pinned** lessons stay exactly where you placed them.
+
+## Preferences you can tune
+
+Open **Timetable → Solver policy**. Preferences are grouped into tabs. For each one you can:
+
+- **Turn it on or off.**
+- **Set how much it matters** (its importance, or weight) — higher means the generator tries
+  harder to satisfy it, even at the cost of lower-priority preferences.
+
+### Teachers
+
+| Preference | What it does |
+| --- | --- |
+| **Teacher gaps** | Avoids free periods between a teacher's lessons on the same day. You can set how many gaps are tolerated, school-wide or per teacher. |
+| **Teacher daily / weekly limit** | Keeps each teacher within their maximum hours per day and per week. |
+| **Minimum lessons per day** | If a teacher is in on a day, ensures they have at least a set number of lessons. |
+| **Minimum lessons per half-day** | The same, per morning or afternoon (needs the half-day divider). |
+| **Teacher room stability** | Tries to keep a teacher in the same room across the day. |
+
+### Classes
+
+| Preference | What it does |
+| --- | --- |
+| **Class gaps** | Keeps a class's day compact, avoiding free periods between lessons. |
+| **Class room stability** | Tries to keep a class in its own room for most lessons, so students don't move around constantly. |
+| **Minimum lessons per day / half-day** | Avoids a class having a near-empty day or half-day. |
+
+### Subjects
+
+| Preference | What it does |
+| --- | --- |
+| **Subject incompatibility** | Keeps two subjects apart — for example, not on the same day or in the same half-day. |
+| **Subject order (chains)** | Encourages a relationship between two subjects, such as one running right after the other, or both on the same day. |
+| **Subject forbidden times** | Keeps a subject out of chosen time slots — for example, no PE in the first period of the day. |
+
+### Lessons
+
+| Preference | What it does |
+| --- | --- |
+| **Lesson links** | Honours the links you set between specific lessons — same slot, back to back, same day, or same half-day. See [Lessons and assignments](./lessons-and-assignments). |
+
+## Setting importance well
+
+- **Start from the defaults.** They produce a sensible timetable for most schools. Only change
+  what you specifically care about.
+- **Don't set everything to maximum.** Preferences compete — if everything is "most important",
+  nothing is. Raise only the few that matter most to your school.
+- **Be careful making a preference strict.** Some preferences can be made into firm rules. If a
+  strict preference conflicts with reality (availability, rooms), the generator may be unable to
+  build any timetable — it will tell you when that happens.
+
+<Callout title="Per-teacher overrides">
+A few preferences can be set per teacher as well as school-wide — for example one teacher who
+truly can't have gaps. The per-teacher setting wins for that teacher. Set these in
+[Scheduling setup](./scheduling-setup).
+</Callout>
+
+## Common use cases
+
+- **Compact days** — raise *Class gaps* so students don't have idle periods.
+- **Spread hard subjects** — use *Subject incompatibility* to avoid two demanding subjects on the
+  same day.
+- **Lab after lecture** — link the two lessons and keep the link as a strong preference.
+
+## Related articles
+
+- [Scheduling setup](./scheduling-setup)
+- [Lessons and assignments](./lessons-and-assignments)
+- [Generate and publish](./generate-and-publish)

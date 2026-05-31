@@ -1,0 +1,81 @@
+---
+title: Créer des niveaux
+description: Définissez les niveaux ou années d'études qui organisent la hiérarchie académique de votre école.
+---
+
+Un **niveau** représente une classe ou une année d'études — par exemple *1re année*,
+*6e* ou *Grade 1*. Les niveaux constituent l'ossature de votre structure académique :
+les classes sont rattachées à des niveaux, et les élèves sont inscrits dans une classe
+à un niveau donné.
+
+<Callout title="Pour qui">
+Les administrateurs qui construisent la hiérarchie académique d'une année scolaire.
+</Callout>
+
+## Avant de commencer
+
+- Une **année scolaire** doit déjà exister et être sélectionnée dans le sélecteur
+  d'année en haut de l'écran. Chaque niveau créé appartient à cette année.
+- Préparez d'abord la liste complète de vos niveaux (par exemple *1re année* à
+  *6e année*) afin de garder un ordre et des codes cohérents.
+
+<Screenshot
+  label="Page des niveaux avec le bouton Ajouter un niveau"
+  caption="La page Niveaux liste tous les niveaux de l'année scolaire sélectionnée."
+/>
+
+## Étapes
+
+<Steps>
+
+<Step>
+### Ouvrir la page Niveaux
+
+Dans la barre latérale d'administration, allez dans **Académique → Niveaux**. Vérifiez
+que l'année scolaire affichée dans le sélecteur du haut est bien celle à construire.
+</Step>
+
+<Step>
+### Démarrer un nouveau niveau
+
+Cliquez sur **Ajouter un niveau**. Un formulaire s'ouvre pour saisir les détails du
+niveau.
+
+<Screenshot
+  label="Formulaire de création d'un niveau"
+  caption="Le formulaire de création : Libellé du niveau, Code, Description et Mode de présence."
+/>
+</Step>
+
+<Step>
+### Renseigner les détails du niveau
+
+Complétez les champs ci-dessous, puis cliquez sur **Créer le niveau**.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Libellé du niveau** | Oui | Le nom affiché dans toute l'application, ex. *1re année*. |
+| **Code** | Oui | Un identifiant court, 15 caractères maximum, ex. `1A`. Utilisé dans les rapports et les emplois du temps. |
+| **Description** | Non | Notes facultatives sur le niveau. |
+| **Mode de présence des élèves** | Non | Comment la présence est relevée pour ce niveau (par jour ou par séance). Il peut être verrouillé une fois la présence utilisée. |
+</Step>
+
+<Step>
+### Vérifier que le niveau apparaît
+
+Le nouveau niveau est ajouté immédiatement à la liste des niveaux. Répétez l'opération
+pour chaque niveau proposé par votre école.
+</Step>
+
+</Steps>
+
+<Callout type="warn" title="Mode de présence">
+Une fois la présence enregistrée pour un niveau, son **mode de présence** est verrouillé
+et ne peut plus être modifié. Choisissez-le avec soin lors de la création du niveau.
+</Callout>
+
+## Articles liés
+
+- [Créer des classes](./create-classes)
+- [Créer des matières](./create-subjects)
+- [Cours, matières et classes](../common-concepts/courses-subjects-and-classes)

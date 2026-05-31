@@ -1,0 +1,143 @@
+---
+title: Create trips
+description: Understand how daily trips are generated automatically, how to add a trip by hand, and how a trip moves from scheduled to completed.
+---
+
+A **trip** is one run of a route on a specific day — for example *North Line — Morning, on
+Monday*. Most trips are created **automatically** for you. You only create a trip by hand for
+exceptions, such as a make-up day.
+
+<Callout title="Who this is for">
+Administrators and transport coordinators who oversee daily bus operations.
+</Callout>
+
+## How daily trips are generated automatically
+
+You don't add trips one by one. The system creates them for you:
+
+- **Every school day**, a trip is created for each **active route**, ready to run.
+- Trips are created for the school's **working days** only, and **holidays and closures are
+  skipped** automatically.
+- Each trip starts already filled in with the route's **default vehicle and crew**, its **stops**,
+  and the **students** assigned to it. These details are captured as a snapshot, so the trip's
+  record stays accurate even if you change the route later.
+- A trip is created only **once per route per day** — you'll never get duplicates.
+
+<Callout title="What you need for trips to appear">
+A route only produces trips when it is **active** and has **stops** (and usually students). Make
+sure the route is set up before you expect its trips to show up.
+</Callout>
+
+## Trip statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Scheduled** | The trip has been created and is waiting to start. |
+| **In progress** | The crew has started the trip; it's running now. |
+| **Completed** | The trip has finished — either marked complete, or completed automatically once every student has been accounted for. |
+| **Cancelled** | The trip will not run (for example, an unplanned closure). |
+
+## Create a trip manually
+
+Use this for a day that wouldn't normally have a trip — a Saturday make-up class, an exam day,
+or a special outing.
+
+<Steps>
+
+<Step>
+### Open Trips
+
+Go to **Transport → Trips**, then click **Add trip**.
+
+<Screenshot
+  label="Trips page with the Add trip button"
+  caption="Trips are shown on a calendar and a list. Filter by route, driver, or status."
+/>
+</Step>
+
+<Step>
+### Fill in the trip details
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| **Route** | Yes | The route to run. Its stops and students are copied onto the trip. |
+| **Service date** | Yes | The day the trip runs. |
+| **Vehicle** | No | Overrides the route's default vehicle for this trip only. |
+| **Driver** | No | Overrides the route's default driver for this trip only. |
+| **Assistant** | No | Overrides the route's default assistant for this trip only. |
+
+If the vehicle or crew you pick is already busy on another trip at that time, you'll see a
+warning so you can choose someone else.
+</Step>
+
+<Step>
+### Save
+
+The trip is created with the status **Scheduled**, ready for the crew to start.
+</Step>
+
+</Steps>
+
+<Callout title="One trip per route per day">
+You can't create a second trip for the same route on the same day. If a trip already exists,
+open that one instead.
+</Callout>
+
+## Run a trip
+
+A trip moves through its life like this:
+
+<Steps>
+
+<Step>
+### Start the trip
+
+When the bus sets off, the driver or assistant **starts** the trip. Its status changes to
+**In progress** and the start time is recorded.
+</Step>
+
+<Step>
+### Mark attendance along the way
+
+As the bus reaches each stop, the crew marks who boarded or was dropped off. See
+[Trip attendance](./trip-attendance) for the full flow.
+</Step>
+
+<Step>
+### Finish the trip
+
+The trip is **completed** — either automatically once every student has been accounted for, or
+by the crew tapping complete. The end time and any delay are recorded.
+</Step>
+
+</Steps>
+
+## Change the crew on a trip
+
+If the usual driver, assistant, or vehicle isn't available for a single day, change the crew on
+that one trip without touching the route:
+
+1. Open the trip from **Transport → Trips**.
+2. Choose **Change crew**.
+3. Pick a different driver, assistant, or vehicle. People or vehicles already busy at that time
+   are flagged.
+
+The route's defaults are unchanged, so tomorrow's trip goes back to the usual crew.
+
+## Cancel a trip
+
+If a trip won't run — for example an unexpected closure — open it and **cancel** it, adding a
+short reason. A cancelled trip can't be restarted; create a new trip if needed.
+
+## Common use cases
+
+- **Normal day** — do nothing; trips appear automatically.
+- **Saturday make-up day** — create a trip manually for that date.
+- **Driver off sick** — change the crew on the affected trips.
+- **Snow day** — cancel the day's trips with a reason.
+
+## Related articles
+
+- [Trip attendance](./trip-attendance)
+- [Build routes and stops](./build-routes-and-stops)
+- [Manage drivers](./manage-drivers)

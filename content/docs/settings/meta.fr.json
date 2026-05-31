@@ -1,0 +1,10 @@
+{
+  "title": "Paramètres",
+  "pages": [
+    "index",
+    "fiscal-year",
+    "billing-configuration",
+    "custom-fields",
+    "transport-map"
+  ]
+}

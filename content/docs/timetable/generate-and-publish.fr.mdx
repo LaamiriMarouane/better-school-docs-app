@@ -1,0 +1,167 @@
+---
+title: Générer et publier
+description: Lancez le générateur d'emploi du temps, vérifiez le résultat, ajustez-le à la main, et publiez-le aux enseignants, élèves et parents.
+---
+
+Une fois la configuration terminée, vous êtes prêt à construire l'horaire. Vous créez un **emploi
+du temps**, lancez le **générateur**, vérifiez et affinez le résultat, puis le **publiez** pour que
+chacun puisse le voir.
+
+<Callout title="Pour qui">
+Les administrateurs et planificateurs pédagogiques qui produisent et diffusent l'horaire de
+l'école.
+</Callout>
+
+## Avant de commencer
+
+Assurez-vous que les étapes précédentes sont faites :
+
+- [Prérequis](./prerequisites) — matières, classes, périodes, enseignants, salles et affectations
+  existent tous.
+- [Configuration de l'emploi du temps](./timetable-config) — la grille hebdomadaire est réglée.
+- [Réglages de planification](./scheduling-setup) — disponibilité et limites sont saisies.
+- [Contraintes](./constraints) — les préférences sont ajustées (ou laissées par défaut).
+
+## Étape 1 — Créer un emploi du temps
+
+Un **emploi du temps** est construit pour une **période** et un ensemble choisi de **niveaux**, à
+l'aide d'une configuration.
+
+<Steps>
+
+<Step>
+### Démarrer un nouvel emploi du temps
+
+Allez dans **Emploi du temps**, puis créez-en un nouveau. Donnez-lui un nom, choisissez la
+**période** et les **niveaux** qu'il couvre, et sélectionnez la **configuration** à utiliser.
+</Step>
+
+<Step>
+### Réutiliser les règles de l'an dernier (facultatif)
+
+Si vous avez déjà généré des emplois du temps, vous pouvez partir de vos **réglages de contraintes**
+précédents plutôt que des valeurs par défaut, puis ajuster.
+</Step>
+
+</Steps>
+
+## Étape 2 — Générer
+
+<Steps>
+
+<Step>
+### Lancer le générateur
+
+Ouvrez l'emploi du temps et cliquez sur **Générer**. Le générateur exécute d'abord une rapide
+**vérification de faisabilité**, puis commence à résoudre.
+</Step>
+
+<Step>
+### Corriger ce que la vérification signale
+
+La vérification de faisabilité recherche les problèmes qui rendraient un emploi du temps impossible
+— le plus souvent un couple classe–matière **sans enseignant affecté**, ou bien plus de séances que
+les heures et salles disponibles ne peuvent contenir. Elle les liste en **erreurs bloquantes** (à
+corriger) et **avertissements** (à examiner). Corrigez les erreurs bloquantes et relancez.
+</Step>
+
+<Step>
+### Suivre la progression
+
+La génération s'exécute en arrière-plan et affiche la progression en direct. Vous pouvez quitter la
+page et revenir. Au besoin, vous pouvez **arrêter** une exécution trop longue.
+
+| Statut | Signification |
+| --- | --- |
+| **En attente** | En file, sur le point de démarrer. |
+| **En cours** | Le générateur construit l'emploi du temps. |
+| **Terminé** | Achevé — prêt à vérifier. |
+| **Échoué** | Aucun emploi du temps ne pouvait respecter toutes les règles fermes (voir ci-dessous). |
+| **Annulé** | Vous avez arrêté l'exécution. |
+</Step>
+
+</Steps>
+
+<Callout title="S'il ne trouve pas d'emploi du temps">
+Le générateur ne produit qu'un horaire ne brisant **aucune règle ferme**. Si c'est impossible, il
+signale les conflits au lieu de deviner. La solution consiste presque toujours à assouplir la
+réalité ou une préférence stricte — retirer de l'indisponibilité, relever une limite d'heures trop
+serrée, libérer une salle, ou détendre une préférence rendue stricte. Puis générez de nouveau.
+</Callout>
+
+## Étape 3 — Vérifier le résultat
+
+Une fois terminé, parcourez l'emploi du temps dans la vue qui vous convient :
+
+- **Par classe** — à quoi ressemble la semaine de chaque classe.
+- **Par enseignant** — l'horaire personnel de chaque enseignant.
+- **Par salle** — comment chaque salle est utilisée durant la semaine.
+
+Chaque vue propose deux dispositions : une **grille** qui montre tout en même temps, et une **vue
+détaillée** qui permet de parcourir une classe, un enseignant ou une salle à la fois — ou de tout
+afficher. Utilisez la **recherche** pour mettre en évidence une classe, un enseignant, une matière ou
+une salle partout où elle apparaît.
+
+Une vue **problèmes** met en évidence ce qui mérite attention, comme des préférences souples non
+pleinement satisfaites.
+
+## Étape 4 — Ajuster à la main
+
+Vous pouvez affiner le résultat directement :
+
+- **Déplacer une séance** — faites-la glisser vers un autre jour ou créneau. L'éditeur vous
+  avertit si le déplacement entre en conflit avec une règle ferme.
+- **Changer une salle** — choisissez une autre salle adaptée pour une séance.
+- **Épingler une séance** — verrouillez une séance en place. Les séances épinglées restent
+  exactement où elles sont si vous générez de nouveau, ce qui permet de figer ce qui vous plaît et
+  de laisser le générateur refaire le reste.
+
+## Étape 5 — Publier
+
+Un emploi du temps commence en **brouillon** — seuls vous et les autres planificateurs le voient.
+Lorsqu'il vous convient, **publiez-le**.
+
+<Steps>
+
+<Step>
+### Publier l'emploi du temps
+
+Ouvrez l'emploi du temps terminé et cliquez sur **Publier**.
+</Step>
+
+<Step>
+### Ce qui se passe
+
+- L'emploi du temps devient **actif** et visible pour les enseignants, élèves et parents.
+- Tout emploi du temps précédemment publié pour la même période est **archivé** (conservé pour
+  référence, mais n'est plus celui en vigueur).
+</Step>
+
+</Steps>
+
+| État | Qui peut le voir |
+| --- | --- |
+| **Brouillon** | Planificateurs et administrateurs uniquement. |
+| **Publié** | Enseignants, élèves et parents. |
+| **Archivé** | Conservé comme historique ; n'est plus en vigueur. |
+
+## Republier des modifications
+
+Si vous devez modifier un emploi du temps publié, faites vos changements et publiez de nouveau. La
+version mise à jour devient celle en vigueur et la précédente est archivée, de sorte qu'il y a
+toujours un historique clair.
+
+## Conseils et bonnes pratiques
+
+- **Générez tôt, même si la configuration n'est pas parfaite.** La vérification de faisabilité est
+  le moyen le plus rapide de repérer les affectations manquantes et les limites trop serrées.
+- **Épinglez ce dont vous êtes sûr** avant de regénérer, pour que les améliorations ne le
+  perturbent pas.
+- **Vérifiez par enseignant** avant de publier — c'est le moyen le plus rapide de repérer une
+  charge déséquilibrée.
+
+## Articles liés
+
+- [Prérequis](./prerequisites)
+- [Réglages de planification](./scheduling-setup)
+- [Contraintes](./constraints)

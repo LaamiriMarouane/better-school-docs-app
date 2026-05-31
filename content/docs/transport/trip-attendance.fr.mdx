@@ -1,0 +1,102 @@
+---
+title: Présence aux trajets
+description: Marquez qui est monté et qui a été déposé à chaque trajet, gérez les absences, et gardez un relevé exact de chaque voyage.
+---
+
+La **présence aux trajets** est le relevé des élèves ayant réellement voyagé sur un trajet.
+Chaque élève affecté à l'itinéraire commence le trajet avec le statut **Attendu**, et l'équipage
+met à jour chacun à mesure que le bus passe à son arrêt. L'école dispose ainsi d'un relevé exact
+de qui a voyagé, qui était absent, et à quelle heure.
+
+<Callout title="Pour qui">
+Les chauffeurs, accompagnateurs et surveillants de bus qui marquent la présence, et les
+administrateurs qui la consultent.
+</Callout>
+
+## Comment fonctionne la présence
+
+- À la création d'un trajet, chaque élève affecté y est ajouté avec le statut **Attendu**.
+- L'équipage marque chaque élève à mesure que le bus atteint son arrêt.
+- Ce que vous marquez dépend de la direction de l'itinéraire :
+  - Sur un trajet **aller** (domicile → école), vous marquez les élèves **Monté** à la montée.
+  - Sur un trajet **retour** (école → domicile), vous marquez les élèves **Déposé** à la descente.
+- Lorsque tout le monde est comptabilisé et que tous les arrêts ont été visités, le trajet se
+  **termine automatiquement**.
+
+## Statuts de présence
+
+| Statut | Signification |
+| --- | --- |
+| **Attendu** | L'élève est sur le trajet mais n'a pas encore été marqué. C'est le point de départ. |
+| **Monté** | L'élève est monté dans le bus (trajets aller). |
+| **Déposé** | L'élève est descendu du bus à son arrêt (trajets retour). |
+| **Absent** | L'élève est connu à l'avance comme ne devant pas voyager — une absence planifiée. Vous pouvez le marquer avant que le bus n'atteigne l'arrêt (par exemple, la famille vous a prévenu que l'enfant ne prendra pas le bus ce jour-là). |
+| **Non présenté** | L'élève était attendu mais ne s'est pas présenté à son arrêt. L'équipage peut le marquer à l'arrêt, et c'est aussi appliqué automatiquement à toute personne non marquée à la fin du trajet. |
+
+## Marquer la présence
+
+<Steps>
+
+<Step>
+### Ouvrir le trajet
+
+Allez dans **Transport → Trajets** et ouvrez le trajet du jour. Vous verrez la liste des arrêts
+et les élèves attendus à chacun.
+</Step>
+
+<Step>
+### Marquer chaque élève
+
+À chaque arrêt atteint par le bus, marquez chaque élève **Monté**, **Déposé** ou **Absent**.
+Pour aller vite, utilisez **Tout marquer monté** à un arrêt pour marquer en une fois tous ceux
+qui y attendent, puis ajustez les exceptions.
+
+<Screenshot
+  label="Liste de présence avec des boutons de statut par élève"
+  caption="Marquez chaque élève à mesure que le bus atteint son arrêt."
+/>
+</Step>
+
+<Step>
+### Marquer l'arrêt visité
+
+Lorsque le bus a terminé à un arrêt, marquez l'arrêt comme **passé** (ou **ignoré** s'il n'a pas
+été desservi). Cela enregistre l'heure réelle de passage du bus.
+</Step>
+
+</Steps>
+
+<Callout title="Le trajet se termine tout seul">
+Une fois que chaque élève a un statut final et que tous les arrêts ont été visités, le trajet se
+termine de lui-même — inutile d'appuyer sur terminer. Tout élève encore non marqué à ce moment-là
+est enregistré comme **non présenté**.
+</Callout>
+
+## Ajouter une note
+
+Vous pouvez ajouter une courte **note** à la présence d'un élève — par exemple « récupéré par un
+parent » ou « parti plus tôt ». Les notes restent dans le relevé du trajet.
+
+## Qui peut marquer la présence
+
+Le **chauffeur** et l'**accompagnateur** d'un trajet peuvent tous deux marquer la présence — ils
+ont les mêmes capacités. Les administrateurs peuvent aussi marquer ou corriger la présence depuis
+la page du trajet.
+
+## Consulter les trajets passés
+
+Ouvrez n'importe quel trajet passé pour voir exactement qui a voyagé, qui était absent et les
+heures enregistrées. Comme chaque trajet conserve son propre instantané, ce relevé reste exact
+même si l'itinéraire ou la liste change par la suite.
+
+## Cas d'usage courants
+
+- **Trajet normal** — marquez les élèves montés/déposés arrêt par arrêt ; le trajet se termine
+  seul.
+- **Enfant qui ne prend pas le bus** — lorsque la famille vous prévient à l'avance, marquez-le absent.
+- **Suivi d'un non présenté** — consultez le trajet et contactez la famille.
+
+## Articles liés
+
+- [Créer des trajets](./create-trips)
+- [Affecter les élèves](./assign-students)

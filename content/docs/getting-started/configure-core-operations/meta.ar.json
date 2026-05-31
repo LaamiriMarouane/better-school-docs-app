@@ -1,0 +1,11 @@
+{
+  "title": "إعداد العمليات الأساسية",
+  "pages": [
+    "index",
+    "configure-the-timetable",
+    "configure-fees-and-payment-plans",
+    "configure-attendance-modes",
+    "configure-behaviour-tracking",
+    "configure-communication-channels"
+  ]
+}

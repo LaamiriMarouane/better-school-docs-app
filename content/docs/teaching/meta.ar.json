@@ -1,0 +1,13 @@
+{
+  "title": "التدريس والتعلّم",
+  "pages": [
+    "index",
+    "courses",
+    "lessons",
+    "assignments",
+    "quizzes",
+    "exams",
+    "gradebook",
+    "sessions-and-attendance"
+  ]
+}

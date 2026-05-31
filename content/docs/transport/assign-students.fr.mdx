@@ -1,0 +1,104 @@
+---
+title: Affecter les élèves
+description: Placez chaque élève sur un itinéraire et l'arrêt où il monte, pour qu'il apparaisse sur les trajets quotidiens et soit facturé correctement.
+---
+
+Affecter un élève à un itinéraire indique au système **quel arrêt l'élève utilise** et **quel
+itinéraire le transporte**. Une fois affecté, l'élève apparaît automatiquement sur chaque trajet
+de cet itinéraire, et ses frais de transport sont ajoutés à son échéancier.
+
+<Callout title="Pour qui">
+Les administrateurs et coordinateurs de transport qui constituent les listes de bus.
+</Callout>
+
+## Comment fonctionnent les listes
+
+- Un élève peut prendre **un itinéraire aller** (domicile → école) et **un itinéraire retour**
+  (école → domicile) par année scolaire.
+- Vous affectez l'élève à l'**arrêt** où il monte ; l'itinéraire est celui auquel cet arrêt
+  appartient.
+- Les affectations peuvent avoir une **date de début** et une **date de fin** si l'élève ne
+  voyage qu'une partie de l'année.
+
+## Avant de commencer
+
+- L'**itinéraire et ses arrêts** doivent déjà exister. Voir
+  [Construire itinéraires et arrêts](./build-routes-and-stops).
+- L'élève doit être **inscrit** pour l'année scolaire sélectionnée.
+- L'élève doit avoir des **frais de transport actifs** — c'est-à-dire un échéancier incluant le
+  service Transport. Seuls les élèves éligibles au transport apparaissent dans le sélecteur. Voir
+  [Configurer les frais](../finance/fees-and-payments/set-up-fees) et
+  [Créer des échéanciers](../finance/fees-and-payments/create-payment-plans).
+
+<Callout title="Pourquoi un élève peut être absent de la liste">
+Si un élève manque dans la liste des élèves que vous pouvez affecter, c'est presque toujours
+parce qu'il n'a pas encore de frais de transport sur un échéancier actif. Ajoutez d'abord les
+frais de transport, et il apparaîtra.
+</Callout>
+
+## Affecter des élèves à un arrêt
+
+<Steps>
+
+<Step>
+### Ouvrir la liste de l'itinéraire
+
+Allez dans **Transport → Itinéraires**, ouvrez un itinéraire et passez à la vue **Liste**. Vous
+verrez les arrêts de l'itinéraire avec les élèves actuellement affectés à chacun.
+
+<Screenshot
+  label="Liste de l'itinéraire avec arrêts et élèves affectés"
+  caption="La liste indique chaque arrêt et les élèves qui y montent."
+/>
+</Step>
+
+<Step>
+### Ajouter des élèves à un arrêt
+
+Cliquez sur **Affecter des élèves**, recherchez les élèves souhaités et ajoutez-les à l'arrêt
+choisi. Seuls les élèves éligibles (facturés pour le transport) sont affichés.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Élève** | Oui | L'élève à ajouter. Le sélecteur n'affiche que les élèves éligibles. |
+| **Arrêt** | Oui | L'arrêt où l'élève monte (ou est déposé). |
+| **Date de début** | Non | Quand l'élève commence à voyager. Laissez vide pour commencer maintenant. |
+| **Date de fin** | Non | Quand l'élève cesse de voyager. Laissez vide si indéterminé. |
+</Step>
+
+<Step>
+### Enregistrer
+
+L'élève apparaît désormais sur l'itinéraire et sera inclus dans chaque trajet généré pour
+celui-ci.
+</Step>
+
+</Steps>
+
+## Déplacer ou retirer un élève
+
+- **Déplacer vers un autre arrêt** — ouvrez la liste, trouvez l'élève et changez son arrêt.
+  Utile lorsqu'une famille déménage.
+- **Arrêter de voyager** — définissez une **date de fin** ou retirez l'élève de l'itinéraire.
+  Ses frais de transport sont ajustés en conséquence sur ses futures échéances.
+
+<Callout title="La facturation suit la liste">
+Lorsque vous ajoutez, déplacez ou retirez un élève, ses futures échéances de transport sont
+mises à jour selon la zone tarifaire de l'arrêt (ou les frais par défaut du niveau). Vous n'avez
+pas à modifier les factures à la main.
+</Callout>
+
+## Cas d'usage courants
+
+- **Nouveau passager** — ajoutez l'élève à l'arrêt le plus proche de son domicile sur les
+  itinéraires aller et retour.
+- **Famille qui déménage** — changez l'arrêt de l'élève ; la facturation se met à jour
+  automatiquement.
+- **Début ou arrêt en cours d'année** — utilisez les dates de début et de fin pour que l'élève
+  ne figure sur les trajets que pour la bonne période.
+
+## Articles liés
+
+- [Construire itinéraires et arrêts](./build-routes-and-stops)
+- [Créer des trajets](./create-trips)
+- [Présence aux trajets](./trip-attendance)

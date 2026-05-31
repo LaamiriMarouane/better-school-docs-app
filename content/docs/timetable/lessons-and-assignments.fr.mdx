@@ -1,0 +1,118 @@
+---
+title: Séances et affectations
+description: "Comprenez ce que le générateur place — des séances — et réglez les entrées qui les définissent : séances hebdomadaires, affectations, groupes et liens."
+---
+
+Le générateur place des **séances**. Cet article explique ce qu'est une séance, d'où vient le
+nombre de séances, et comment vous indiquez au système qui enseigne chacune. Bien régler cela est
+ce qui rend un emploi du temps généré correct.
+
+<Callout title="Pour qui">
+Les administrateurs et planificateurs pédagogiques qui préparent ce que l'emploi du temps placera.
+</Callout>
+
+## Ce qui est placé
+
+Une **séance** est une session hebdomadaire d'une matière pour une classe — par exemple *Classe
+6A, Mathématiques*. Lors de la génération, le générateur donne à chaque séance :
+
+- un **jour** et un **créneau horaire**,
+- une **salle**, et
+- l'**enseignant** qui lui est affecté.
+
+Une classe a généralement plusieurs séances de chaque matière par semaine, et le générateur les
+place toutes sans conflit.
+
+## Combien de séances par matière
+
+Le nombre de séances hebdomadaires vient des **séances hebdomadaires** de la matière définies pour
+chaque niveau (parfois appelées répartition des séances). Pour chaque matière d'un niveau, vous
+indiquez combien de séances par semaine, et si certaines sont des **séances doubles** nécessitant
+deux créneaux d'affilée (fréquent pour les labos ou les ateliers).
+
+Par exemple, la *Physique* d'un niveau peut être **3 séances par semaine**, dont une **double**
+(deux créneaux ensemble pour le labo). Le générateur place alors trois séances de physique pour
+chaque classe du niveau, en gardant la double sur deux créneaux consécutifs.
+
+<Callout title="Où régler cela">
+Les séances hebdomadaires font partie de votre configuration du programme, sur les matières de
+chaque niveau. Réglez-les avant de générer pour que le générateur sache combien placer de chaque
+matière.
+</Callout>
+
+## Affecter les enseignants aux classes
+
+C'est l'entrée clé. Pour chaque classe et chaque matière, vous affectez l'**enseignant
+responsable**. Le générateur place exactement ces affectations — une matière de classe non affectée
+ne peut donc tout simplement pas être placée.
+
+<Steps>
+
+<Step>
+### Ouvrir les affectations
+
+Ouvrez un **enseignant** et allez dans ses **Classes** (affectations), ou partez d'une classe.
+Puis ajoutez une affectation.
+</Step>
+
+<Step>
+### Choisir ce que l'enseignant donne
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Enseignant** | Oui | L'enseignant responsable des séances. |
+| **Classe** | Oui | La classe qu'il enseigne. |
+| **Matière** | Oui | La matière qu'il enseigne à cette classe. |
+| **Groupe** | Non | Uniquement quand la classe est divisée — affectez un enseignant par groupe (voir ci-dessous). |
+</Step>
+
+<Step>
+### Répéter jusqu'à couvrir chaque matière de classe
+
+Le moyen le plus rapide de repérer les manques est de lancer le générateur : il liste chaque
+matière de classe sans enseignant. Voir [Générer et publier](./generate-and-publish).
+</Step>
+
+</Steps>
+
+## Diviser une classe en groupes (facultatif)
+
+Certaines matières sont enseignées à **une partie de la classe à la fois** — par exemple la moitié
+fait le labo de sciences pendant que l'autre fait autre chose, ou une langue est répartie par
+niveau. Pour gérer cela :
+
+1. Créez les **groupes** dans la classe (ex. *Groupe A*, *Groupe B*).
+2. Affectez un **enseignant par groupe** pour la matière divisée.
+
+Le générateur place alors la séance de chaque groupe séparément, et peut faire tourner les séances
+de deux groupes en même temps lorsque vous le souhaitez (voir les liens ci-dessous).
+
+## Lier des séances (associations de séances)
+
+Parfois deux séances doivent être placées l'une par rapport à l'autre. Vous pouvez **lier** des
+séances pour que le générateur les garde ensemble ou en séquence :
+
+| Lien | Signification | Usage typique |
+| --- | --- | --- |
+| **Même créneau** | Deux séances tournent exactement en même temps, pour des groupes différents d'une classe. | Les deux moitiés d'une classe divisée ont leurs séances parallèles ensemble. |
+| **À la suite** | Deux séances tournent sur des créneaux consécutifs. | Un labo juste après le cours, ou une séance double. |
+| **Même jour** | Deux séances tombent le même jour. | Garder une théorie et une pratique appariées le même jour. |
+| **Même demi-journée** | Deux séances tombent dans le même matin ou après-midi. | Regrouper des séances liées. |
+
+Vous décidez de la fermeté avec laquelle le générateur respecte chaque lien sur la page
+[Contraintes](./constraints) — un lien peut être une exigence stricte ou une simple préférence.
+
+## Cas d'usage courants
+
+- **Classe standard** — affectez un enseignant par matière ; le générateur fait le reste.
+- **Matière de labo** — réglez la séance de labo comme double pour qu'elle obtienne deux créneaux
+  ensemble.
+- **Groupes de langue divisés** — créez les groupes, affectez un enseignant à chacun, et liez-les
+  pour qu'ils tournent en même temps.
+
+## Articles liés
+
+- [Prérequis](./prerequisites)
+- [Réglages de planification](./scheduling-setup)
+- [Contraintes](./constraints)
+- [Générer et publier](./generate-and-publish)

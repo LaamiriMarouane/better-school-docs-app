@@ -1,0 +1,99 @@
+---
+title: Gérer les chauffeurs
+description: Enregistrez les chauffeurs et accompagnateurs qui assurent vos trajets, et tenez à jour leurs permis.
+---
+
+Un **chauffeur** est un membre du personnel qui conduit un véhicule. Un **accompagnateur**
+(parfois appelé surveillant de bus) est un second membre d'équipage qui monte à bord pour
+aider — par exemple pour surveiller les plus jeunes ou marquer la présence. Vous enregistrez
+les chauffeurs et accompagnateurs une seule fois, puis vous les affectez aux itinéraires et
+aux trajets.
+
+<Callout title="Pour qui">
+Les administrateurs et coordinateurs de transport qui gèrent le personnel de transport.
+</Callout>
+
+## Avant de commencer
+
+- Le **module Transport** doit être activé.
+- Un chauffeur est un type de **membre du personnel**. Si la personne n'est pas encore dans le
+  système, ajoutez-la d'abord comme personnel. Voir
+  [Ajouter du personnel](../getting-started/onboard-people/add-staff).
+
+## Ajouter un chauffeur
+
+<Steps>
+
+<Step>
+### Ajouter la personne en tant que chauffeur
+
+Ajoutez un nouveau membre du personnel et définissez son type sur **Chauffeur**, ou ouvrez un
+membre existant et changez son type en **Chauffeur**.
+
+<Screenshot
+  label="Formulaire d'ajout de personnel avec le type Chauffeur sélectionné"
+  caption="Un chauffeur est un membre du personnel dont le type est Chauffeur."
+/>
+</Step>
+
+<Step>
+### Renseigner les détails du chauffeur
+
+Complétez les champs ci-dessous, puis enregistrez.
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom** | Oui | Le nom complet du chauffeur. |
+| **Téléphone** | Non | Un numéro de contact pour le chauffeur. |
+| **E-mail** | Non | Utilisé si le chauffeur a besoin d'un compte portail. |
+| **Numéro de permis de conduire** | Non | L'identifiant du permis du chauffeur. |
+| **Date d'expiration du permis** | Non | La date d'expiration du permis de conduire. |
+| **Actif** | — | Laissez activé pour les chauffeurs en activité. Désactivez au départ d'un chauffeur. |
+</Step>
+
+</Steps>
+
+<Callout title="Astuce">
+Enregistrez la **date d'expiration du permis** afin que l'école puisse être prévenue avant son
+expiration.
+</Callout>
+
+## Accompagnateurs et surveillants de bus
+
+Un accompagnateur est tout membre du personnel qui monte à bord avec le chauffeur. Les
+accompagnateurs n'ont pas besoin d'être enregistrés comme chauffeurs — n'importe quel membre du
+personnel peut être affecté comme accompagnateur sur un itinéraire ou un trajet. Sur un trajet,
+le **chauffeur et l'accompagnateur ont les mêmes capacités** : l'un comme l'autre peut démarrer
+le trajet, marquer la présence et le terminer.
+
+## Affecter l'équipage aux itinéraires et trajets
+
+Vous ne choisissez pas l'équipage manuellement sur chaque trajet. À la place :
+
+- **Équipage par défaut de l'itinéraire** — lorsque vous construisez un itinéraire, vous pouvez
+  définir un **chauffeur par défaut**, un **accompagnateur par défaut** et un **véhicule par
+  défaut**. Chaque trajet créé pour cet itinéraire démarre avec cet équipage déjà renseigné.
+- **Modifications par trajet** — si quelqu'un est absent pour une journée, vous pouvez changer
+  l'équipage de ce seul trajet sans toucher à l'itinéraire. Voir
+  [Créer des trajets](./create-trips).
+
+## Permettre à un chauffeur de se connecter
+
+Si un chauffeur doit se connecter pour marquer lui-même la présence, il lui faut un **compte
+portail** doté d'un rôle accordant les permissions de transport. Créez le compte depuis le
+profil du membre du personnel. Voir
+[Créer des comptes portail](../getting-started/onboard-people/create-portal-accounts).
+
+## Cas d'usage courants
+
+- **Nouveau chauffeur recruté** — ajoutez-le comme personnel de type Chauffeur et enregistrez
+  son permis.
+- **Départ d'un chauffeur** — désactivez-le pour qu'il n'apparaisse plus dans les sélecteurs
+  d'équipage.
+- **Remplacement pour une journée** — changez l'équipage uniquement sur les trajets concernés.
+
+## Articles liés
+
+- [Gérer les véhicules](./manage-vehicles)
+- [Construire itinéraires et arrêts](./build-routes-and-stops)
+- [Créer des trajets](./create-trips)

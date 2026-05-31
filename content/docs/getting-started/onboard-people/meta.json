@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "index",
+    "add-students",
+    "add-teachers",
+    "add-guardians",
+    "add-staff",
+    "create-portal-accounts",
+    "bulk-create-portal-accounts"
+  ]
+}

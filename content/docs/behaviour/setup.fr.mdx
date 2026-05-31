@@ -1,0 +1,74 @@
+---
+title: Configurer catégories & niveaux
+description: Définissez les catégories, sous-catégories et niveaux selon lesquels les incidents de comportement sont enregistrés.
+---
+
+Avant d'enregistrer un comportement, vous configurez le **vocabulaire** de votre école : les
+**catégories** de comportement, des **sous-catégories** facultatives, et les **niveaux**
+d'importance. Chacun est marqué **positif** ou **négatif**, pour que le système sache s'il ajoute ou
+retire des points.
+
+<Callout title="Pour qui">
+Les administrateurs qui configurent le système de comportement pour l'année.
+</Callout>
+
+## Les éléments
+
+| Élément | Ce que c'est |
+| --- | --- |
+| **Catégorie** | Le type de comportement — ex. *Respect*, *Entraide*, *Perturbation*, *Retard*. Marqué positif ou négatif, avec une couleur. |
+| **Sous-catégorie** | Un libellé plus fin, facultatif, sous une catégorie (par exemple, sous *Perturbation* : *Bavardage*, *Téléphone*). |
+| **Niveau** | Un palier d'importance avec des **points par défaut** — ex. *Mineur* / *Majeur*, ou *Bronze / Argent / Or* pour les positifs. Son côté positif ou négatif décide si les points s'ajoutent ou se retranchent. |
+
+Lorsque vous enregistrez un incident, vous choisissez une **catégorie**, éventuellement une
+**sous-catégorie**, et un **niveau** — ensemble, ils décrivent ce qui s'est passé et sa valeur.
+
+## Créer une catégorie
+
+<Steps>
+
+<Step>
+### Ouvrir la configuration du comportement
+
+Allez dans **Comportement → Configuration**, où sont gérés les catégories et les niveaux.
+</Step>
+
+<Step>
+### Ajouter une catégorie
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom** | Oui | ex. *Respect* ou *Perturbation*. |
+| **Type** | Oui | **Positif** ou **Négatif**. |
+| **Couleur** | Non | Une couleur pour la reconnaître d'un coup d'œil. |
+</Step>
+
+<Step>
+### Ajouter des sous-catégories (facultatif)
+
+Sous une catégorie, ajoutez des libellés plus fins si vous le souhaitez — par exemple *Bavardage* et
+*Téléphone* sous *Perturbation*.
+</Step>
+
+</Steps>
+
+## Créer un niveau
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom** | Oui | ex. *Mineur*, *Majeur*, *Or*. |
+| **Type** | Oui | **Positif** ou **Négatif**. |
+| **Points par défaut** | Oui | Les points que vaut un incident à ce niveau. Ils se pré-remplissent à l'enregistrement et sont ajustables. |
+| **Ordre** | Oui | La place du niveau parmi les niveaux du même type. |
+| **Couleur** | Non | Une couleur pour le niveau. |
+
+<Callout title="Positif ou négatif détermine les points">
+Un niveau marqué **positif** ajoute aux points d'un élève ; un niveau **négatif** en retranche.
+Prévoyez des positifs généreux pour récompenser le bon comportement, et des négatifs proportionnés
+pour les problèmes.
+</Callout>
+
+## Articles liés
+
+- [Enregistrer des incidents](./record-incidents)
+- [Points & classement](./leaderboard)

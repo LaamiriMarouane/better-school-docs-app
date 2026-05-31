@@ -1,5 +1,68 @@
 ---
 title: Transport
+description: Gérez le service de bus de votre école de bout en bout — véhicules, chauffeurs, itinéraires, arrêts, listes d'élèves, trajets quotidiens et présence.
 ---
 
-Bienvenue dans Transport. La documentation sera bientôt disponible.
+Le module **Transport** vous aide à gérer le service de bus de votre école du début à la fin.
+Vous enregistrez vos **véhicules** et vos **chauffeurs**, vous tracez des **itinéraires**
+composés d'**arrêts**, vous affectez les **élèves** à l'arrêt où ils montent, puis vous
+suivez chaque jour les **trajets** et la **présence**.
+
+<Callout title="Pour qui">
+Les administrateurs et les coordinateurs de transport qui configurent et exploitent le
+service de bus de l'école.
+</Callout>
+
+## Comment les éléments s'articulent
+
+Le transport se construit par couches. Chaque couche dépend de la précédente ; il est donc
+préférable de procéder dans cet ordre :
+
+1. **Véhicules** — les bus, minibus et voitures de votre flotte.
+2. **Chauffeurs** — le personnel qui conduit, ainsi que les accompagnateurs ou surveillants.
+3. **Itinéraires et arrêts** — le trajet suivi par le bus et les lieux de prise en charge ou
+   de dépose.
+4. **Zones tarifaires** *(facultatif)* — regroupez les arrêts en zones afin que les familles
+   d'un même secteur paient les mêmes frais de transport mensuels.
+5. **Liste des élèves** — quel élève monte à quel arrêt, sur quel itinéraire.
+6. **Trajets** — l'exécution réelle d'un itinéraire un jour donné. La plupart des trajets sont
+   créés **automatiquement** pour chaque jour d'école ; vous pouvez aussi en ajouter un
+   **manuellement**.
+7. **Présence** — qui est monté, qui a été déposé et qui était absent à chaque trajet.
+
+<Callout title="Tout appartient à une année scolaire">
+Les itinéraires, les zones, les listes d'élèves et les trajets sont rattachés à l'année
+scolaire sélectionnée. Choisissez la bonne année dans le sélecteur avant toute configuration.
+</Callout>
+
+## Avant de commencer
+
+- Une **année scolaire** doit être créée et sélectionnée.
+- Le **module Transport** doit être activé pour votre école.
+- *(Facultatif, pour la facturation)* Si vous facturez le bus aux familles, créez d'abord un
+  service **Transport** et ses frais dans **Finance**. Voir
+  [Créer des services](../finance/fees-and-payments/create-services) et
+  [Configurer les frais](../finance/fees-and-payments/set-up-fees).
+
+## Dans cette section
+
+| Article | Ce que vous ferez |
+| --- | --- |
+| [Gérer les véhicules](./manage-vehicles) | Ajoutez les bus de votre flotte et suivez leurs coûts. |
+| [Gérer les chauffeurs](./manage-drivers) | Enregistrez les chauffeurs, les accompagnateurs et leurs permis. |
+| [Construire itinéraires et arrêts](./build-routes-and-stops) | Tracez les itinéraires, placez les arrêts sur la carte et définissez les zones tarifaires. |
+| [Affecter les élèves](./assign-students) | Placez chaque élève sur un itinéraire et un arrêt. |
+| [Créer des trajets](./create-trips) | Comment les trajets quotidiens sont générés automatiquement et comment en ajouter un à la main. |
+| [Présence aux trajets](./trip-attendance) | Marquez la montée et la dépose, et suivez un trajet du début à la fin. |
+
+## Bon à savoir
+
+- **Les trajets se créent tout seuls.** Dès qu'un itinéraire a des arrêts et des élèves, un
+  trajet est créé automatiquement chaque jour d'école — vous ne les ajoutez pas un par un. Les
+  jours fériés et les fermetures de l'école sont ignorés.
+- **L'historique est conservé.** Chaque trajet conserve son propre instantané des arrêts et des
+  passagers tels qu'ils étaient ce jour-là ; les enregistrements passés restent donc exacts
+  même si vous modifiez l'itinéraire par la suite.
+- **La facturation est automatique.** Lorsque vous affectez un élève à un arrêt, ses frais de
+  transport sont ajoutés à son échéancier selon la zone tarifaire de l'arrêt (ou les frais par
+  défaut du niveau).

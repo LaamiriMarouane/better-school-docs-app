@@ -1,0 +1,62 @@
+---
+title: Échéances et calendriers
+description: Comprenez comment les échéances d'un élève sont générées à partir de son échéancier de paiement.
+---
+
+Une **échéance** est une portion planifiée de ce qu'un élève doit — un montant assorti
+d'une **date d'exigibilité**. Les échéances ne se créent pas à la main : elles sont
+**générées** lorsqu'un échéancier de paiement est associé à une inscription.
+
+<Callout title="Pour qui">
+Les administrateurs qui veulent comprendre d'où vient le solde d'un élève.
+</Callout>
+
+## Comment les échéances sont générées
+
+<Steps>
+
+<Step>
+### Un échéancier est associé à une inscription
+
+Lorsqu'un élève est inscrit avec un échéancier — ou qu'un échéancier est défini sur une
+inscription existante — les frais de l'échéancier deviennent la base du calendrier.
+</Step>
+
+<Step>
+### Chaque frais se développe selon sa périodicité
+
+Chaque frais de l'échéancier produit des échéances selon sa **périodicité**. Un frais
+mensuel produit une série mensuelle sur l'année ; un frais unique produit une seule
+échéance.
+</Step>
+
+<Step>
+### Le calendrier apparaît sur l'élève
+
+Les échéances générées — chacune avec un montant dû et une date d'exigibilité —
+s'affichent sur la vue des paiements de l'élève, regroupées par frais.
+</Step>
+
+</Steps>
+
+## Lire une échéance
+
+Chaque échéance suit trois chiffres :
+
+| Chiffre | Signification |
+| --- | --- |
+| **Montant dû** | Le montant planifié pour cette échéance. |
+| **Montant payé** | Ce qui a été encaissé jusqu'à présent. |
+| **Restant** | Montant dû moins montant payé — ce qui reste à devoir. |
+
+Une échéance est entièrement réglée lorsque le montant restant atteint zéro.
+
+<Callout title="Changer d'échéancier">
+Si l'échéancier d'un élève change, le calendrier se base sur le nouvel échéancier.
+Vérifiez toujours les échéances obtenues après un changement d'échéancier.
+</Callout>
+
+## Articles liés
+
+- [Créer des échéanciers](./create-payment-plans)
+- [Enregistrer un paiement](./record-a-payment)

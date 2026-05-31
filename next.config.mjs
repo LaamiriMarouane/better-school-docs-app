@@ -1,6 +1,13 @@
 import { createMDX } from 'fumadocs-mdx/next';
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
 
 const withMDX = createMDX();
+
+// This app lives in a monorepo with several sibling lockfiles, so Next/Turbopack
+// mis-detects the workspace root. Pin it to this directory so module resolution
+// (e.g. the `@import 'tailwindcss'` in global.css) works in dev and build.
+const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 function imageRemotePatterns() {
   const patterns = [
@@ -30,6 +37,10 @@ function imageRemotePatterns() {
 const config = {
   reactStrictMode: true,
   output: 'standalone',
+  outputFileTracingRoot: projectRoot,
+  turbopack: {
+    root: projectRoot,
+  },
   images: {
     remotePatterns: imageRemotePatterns(),
   },

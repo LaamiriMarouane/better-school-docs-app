@@ -1,0 +1,12 @@
+{
+  "title": "الجدول الزمني",
+  "pages": [
+    "index",
+    "prerequisites",
+    "timetable-config",
+    "lessons-and-assignments",
+    "scheduling-setup",
+    "constraints",
+    "generate-and-publish"
+  ]
+}

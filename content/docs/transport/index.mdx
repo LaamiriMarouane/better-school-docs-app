@@ -1,5 +1,63 @@
 ---
 title: Transport
+description: Run your school's bus service end to end — vehicles, drivers, routes, stops, student rosters, daily trips, and attendance.
 ---
 
-Welcome to Transport. Docs coming soon.
+The **Transport** module helps you run your school bus service from start to finish.
+You register your **vehicles** and **drivers**, draw **routes** made up of **stops**,
+assign **students** to the stop they board at, and then follow each day's **trips** and
+**attendance**.
+
+<Callout title="Who this is for">
+Administrators and transport coordinators who set up and run the school's bus service.
+</Callout>
+
+## How the pieces fit together
+
+Transport is built in layers. Each layer depends on the one before it, so it helps to set
+things up in this order:
+
+1. **Vehicles** — the buses, minibuses, and cars in your fleet.
+2. **Drivers** — the staff who drive, plus any assistants or monitors who ride along.
+3. **Routes and stops** — the path a bus follows and the places it picks up or drops off.
+4. **Pricing zones** *(optional)* — group stops into zones so families in the same area pay
+   the same monthly transport fee.
+5. **Student roster** — which student boards at which stop, on which route.
+6. **Trips** — the actual run of a route on a given day. Most trips are created
+   **automatically** for every school day; you can also add one **manually**.
+7. **Attendance** — who boarded, who was dropped off, and who was absent on each trip.
+
+<Callout title="Everything belongs to an academic year">
+Routes, zones, rosters, and trips are all scoped to the selected academic year. Pick the
+right year in the switcher before you set anything up.
+</Callout>
+
+## Before you start
+
+- An **academic year** must be created and selected.
+- The **Transport module** must be enabled for your school.
+- *(Optional, for billing)* If you charge families for the bus, create a **Transport**
+  service and its fee in **Finance** first. See
+  [Create services](../finance/fees-and-payments/create-services) and
+  [Set up fees](../finance/fees-and-payments/set-up-fees).
+
+## In this section
+
+| Article | What you'll do |
+| --- | --- |
+| [Manage vehicles](./manage-vehicles) | Add the buses in your fleet and track their costs. |
+| [Manage drivers](./manage-drivers) | Register drivers and assistants and their licenses. |
+| [Build routes and stops](./build-routes-and-stops) | Draw routes, place stops on the map, and set pricing zones. |
+| [Assign students](./assign-students) | Put each student on a route and stop. |
+| [Create trips](./create-trips) | How daily trips are generated automatically and how to add one by hand. |
+| [Trip attendance](./trip-attendance) | Mark boarding and drop-off, and follow a trip from start to finish. |
+
+## Good to know
+
+- **Trips run themselves.** Once a route has stops and students, a trip is created for it
+  automatically on every school day — you don't add them one by one. Holidays and school
+  closures are skipped.
+- **History is kept.** Each trip keeps its own snapshot of the stops and riders as they were
+  that day, so past records stay accurate even if you later change a route.
+- **Billing is automatic.** When you assign a student to a stop, their transport fee is added
+  to their payment schedule based on the stop's pricing zone (or the level's default fee).

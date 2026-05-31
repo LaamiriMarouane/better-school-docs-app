@@ -1,0 +1,64 @@
+---
+title: Créer des comptes portail en masse
+description: Créez des identifiants pour tout le monde dans un rôle via une tâche en arrière-plan.
+---
+
+Lors de la première configuration d'une école, des dizaines ou des centaines de
+personnes ont besoin d'un identifiant en même temps. La **création en masse** crée des
+comptes portail pour un rôle entier en une seule action — elle s'exécute en tâche de
+fond pour que vous puissiez continuer à travailler pendant le traitement.
+
+<Callout title="Pour qui">
+Les administrateurs qui créent des identifiants en masse pendant l'intégration.
+</Callout>
+
+## Étapes
+
+<Steps>
+
+<Step>
+### Ouvrir la liste des comptes portail en attente
+
+Allez dans **Gestion → Utilisateurs**, puis l'onglet **Portail en attente**, et
+choisissez le **rôle** à traiter — enseignant, élève, parent ou personnel.
+</Step>
+
+<Step>
+### Lancer « Créer tous les comptes portail en attente »
+
+Choisissez **Créer tous les comptes portail en attente**. Une boîte de dialogue permet
+de régler deux options :
+
+| Option | Remarques |
+| --- | --- |
+| **Uniquement les éligibles** | Si activée, les personnes qui ne peuvent pas encore recevoir un compte sont ignorées au lieu d'échouer. Recommandé. |
+| **Nombre maximum** | Limite facultative du nombre de comptes à créer lors de cette exécution. Laissez vide pour aucune limite. |
+</Step>
+
+<Step>
+### Laisser la tâche s'exécuter
+
+La tâche s'exécute en arrière-plan. Une carte de progression indique combien d'éléments
+sur le total ont été traités, avec un statut *En file*, *En cours*, *Terminé*, *Échoué*
+ou *Annulé*.
+</Step>
+
+<Step>
+### Vérifier le résultat
+
+Lorsque la tâche se termine, une bannière indique combien de comptes ont **réussi**,
+**échoué** et ont été **ignorés**. En cas d'échecs, utilisez **Réessayer les échecs**
+pour les retenter.
+</Step>
+
+</Steps>
+
+<Callout title="Ignoré ou échoué">
+**Ignoré** signifie généralement que la personne a déjà un compte — c'est attendu et
+sans risque. **Échoué** signifie qu'un problème est survenu pour cette personne ;
+réessayez ou créez son compte individuellement.
+</Callout>
+
+## Articles liés
+
+- [Créer des comptes portail](./create-portal-accounts)

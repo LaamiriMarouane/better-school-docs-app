@@ -1,0 +1,94 @@
+---
+title: Timetable config
+description: Define the weekly grid your schedule is built on — working days, daily hours, period length, and breaks.
+---
+
+The **timetable config** describes the shape of your school week: which days you teach, the hours
+of the day, how long a period lasts, and when breaks fall. The generator divides this into a grid
+of time slots and places every lesson into it. Getting the config right is the foundation of a
+good timetable.
+
+<Callout title="Who this is for">
+Administrators defining the school's weekly schedule structure.
+</Callout>
+
+## Before you start
+
+- An **academic year** must be selected, and its **working days** set, because the config's days
+  must be among them.
+
+## Create a timetable config
+
+<Steps>
+
+<Step>
+### Open the timetable config
+
+Go to **Timetable → Config** and click **Add config** (or open the existing one to edit it).
+
+<Screenshot
+  label="Timetable config form"
+  caption="Define the days, hours, period length, and breaks for the school week."
+/>
+</Step>
+
+<Step>
+### Fill in the details
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| **Name** | Yes | A label for this config, e.g. *Primary 2025–26*. |
+| **Working days** | Yes | The days school runs (e.g. Monday–Friday). They must be among the academic year's working days. |
+| **Daily hours** | Yes | The start and end of the teaching day, e.g. *08:00–17:00*. The same window applies to every day. |
+| **Period length** | Yes | How many minutes a period lasts, e.g. *45*. The day is divided into periods of this length. |
+| **Max periods per day** | Yes | The most periods a class can have in a single day. Keeps days from running too long. |
+| **Half-day divider** | No | The time that splits morning from afternoon, e.g. *12:00*. Setting it lets you use half-day rules (see below). |
+| **Breaks** | No | Times each day when no lessons are placed — lunch, recess, assembly. The generator keeps these clear. |
+</Step>
+
+<Step>
+### Save
+
+The config is saved for the selected academic year and used the next time you generate.
+</Step>
+
+</Steps>
+
+## How the grid is built
+
+From the config, the system works out the **time slots** a lesson can occupy. For example, an
+08:00–17:00 day with 45-minute periods and a 12:00–13:00 lunch break produces a row of morning
+slots, a protected lunch, and a row of afternoon slots. Every lesson the generator places lands
+in one of these slots.
+
+<Callout title="Breaks are protected">
+No lesson is ever placed over a break. Use breaks for lunch, recess, prayer, or any time the
+whole school should be free.
+</Callout>
+
+## The half-day divider
+
+The **half-day divider** is the moment your day splits into a morning and an afternoon (often
+midday). Setting it unlocks rules that work per half-day rather than per whole day — for example
+"a teacher who is in for the morning should have at least two lessons that morning". If you leave
+it empty, those half-day rules simply don't apply.
+
+## Using more than one config
+
+You can create **several configs** for the same year — for example one grid for the primary
+school and a different one for the secondary school, if they run different hours or period
+lengths. Each timetable you generate uses one config.
+
+## Tips and best practices
+
+- Match the **period length** to how your school actually teaches; it's hard to change once
+  timetables are built on it.
+- Add **every break** the whole school shares, so the generator never schedules over them.
+- Set the **half-day divider** if you want morning/afternoon balance rules; otherwise leave it
+  empty.
+
+## Related articles
+
+- [Prerequisites](./prerequisites)
+- [Lessons and assignments](./lessons-and-assignments)
+- [Generate and publish](./generate-and-publish)
