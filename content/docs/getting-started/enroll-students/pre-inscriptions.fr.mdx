@@ -1,0 +1,91 @@
+---
+title: Pré-inscriptions
+description: "Enregistrez le niveau visé d'un futur élève pour une année, puis transformez-le en inscription."
+---
+
+Une **pré-inscription** enregistre qu'un élève est attendu dans un **niveau** donné pour une année
+scolaire, avant qu'une inscription formelle n'existe. C'est un moyen interne d'organiser l'admission de
+l'année à venir et de suivre qui reste à inscrire — pas un formulaire de candidature public. Vous les
+gérez depuis **Élèves**, sur l'onglet **Pré-inscriptions**.
+
+<Callout title="Pré-inscription et inscription">
+Une pré-inscription désigne un **niveau** (ex. *4e*) ; une [inscription](./create-an-enrollment) place
+l'élève dans une **classe** précise (ex. *4e A*) et démarre la facturation. Les pré-inscriptions ne
+collectent ni frais ni documents — cela relève de l'inscription.
+</Callout>
+
+## Statuts
+
+| Statut | Ce qu'il signifie |
+| --- | --- |
+| **En attente** | Enregistrée et en attente — l'élève n'est pas encore inscrit. |
+| **Inscrit** | L'élève a été inscrit pour l'année ; la pré-inscription est aboutie. |
+| **Refusée** | Rejetée, avec un motif obligatoire. |
+| **Annulée** | Annulée, avec un motif facultatif. |
+
+## Enregistrer une pré-inscription
+
+<Steps>
+
+<Step>
+### Ouvrez l'onglet Pré-inscriptions
+
+Dans **Élèves**, ouvrez **Pré-inscriptions**, puis choisissez **Ajouter**.
+</Step>
+
+<Step>
+### Choisissez l'élève et le niveau
+
+Recherchez l'**élève** et choisissez le **niveau** qu'il est censé rejoindre.
+</Step>
+
+<Step>
+### Enregistrez
+
+La pré-inscription est créée comme **En attente**.
+</Step>
+
+</Steps>
+
+<Callout title="Quelques règles">
+L'année scolaire ne peut pas être **clôturée**. Un élève qui a déjà une inscription active pour
+l'année ne peut pas être pré-inscrit, vous ne pouvez pas enregistrer le **même élève + niveau** deux
+fois pour une année, et un élève ne peut avoir qu'**une** pré-inscription **En attente** par année.
+</Callout>
+
+## Traiter la liste
+
+Tant qu'une pré-inscription est **En attente**, vous pouvez :
+
+- La **modifier** — changer l'élève ou le niveau.
+- La **refuser** — avec un motif que l'enregistrement conserve.
+- L'**annuler** — avec un motif facultatif.
+
+Vous pourrez voir le motif plus tard sur un enregistrement refusé ou annulé, et supprimer ceux qui
+sont en attente ou refusés.
+
+## La transformer en inscription
+
+Une pré-inscription en attente devient **Inscrit** de deux façons :
+
+- **Inscrire l'élève normalement** — quand vous [créez une inscription](./create-an-enrollment) pour
+  cet élève la même année, sa pré-inscription en attente passe à **Inscrit** automatiquement.
+- **Inscription en masse depuis la liste** — sélectionnez plusieurs pré-inscriptions du **même
+  niveau**, choisissez une **classe** et un **échéancier**, et inscrivez-les en une fois.
+
+<Callout title="La classe doit correspondre au niveau">
+À l'inscription, le **niveau** de la classe doit correspondre au niveau de la pré-inscription — c'est
+ainsi que les deux s'alignent. Une fois **Inscrit**, une pré-inscription est définitive : elle ne peut
+être ni modifiée, ni annulée, ni supprimée.
+</Callout>
+
+## Voir les chiffres
+
+Les totaux de pré-inscriptions apparaissent sur le [tableau de bord](../../dashboards/reports-and-statistics)
+— décomptes par **statut** et **genre**, nouvelles dans le temps, et répartition **par niveau** — pour
+voir comment se remplit l'admission de l'année à venir.
+
+## Articles liés
+
+- [Créer une inscription](./create-an-enrollment)
+- [Inscrire des élèves en masse](./bulk-enroll-students)

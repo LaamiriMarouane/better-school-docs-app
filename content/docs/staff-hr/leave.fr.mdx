@@ -1,0 +1,104 @@
+---
+title: Congés
+description: "Enregistrez les absences du personnel, et approuvez, refusez ou annulez les demandes de congé."
+---
+
+Un **congé** enregistre l'absence d'un membre du personnel sur une plage de dates. Un administrateur
+peut enregistrer un congé directement, ou un membre du personnel peut le demander et un administrateur
+décide.
+
+<Callout title="Module requis">
+Les congés nécessitent le module **Gestion des congés**. Si vous ne le voyez pas, demandez à la
+personne qui gère les modules de votre école de l'activer.
+</Callout>
+
+## Types de congé
+
+| Type | Pour… |
+| --- | --- |
+| **Maladie** | Une maladie. |
+| **Maternité** | Un congé de maternité. |
+| **Sans solde** | Une absence sans rémunération. |
+| **Autre** | Tout ce qui ne correspond pas aux types ci-dessus. |
+
+<Callout title="Pas de soldes ni de quotas">
+Un congé est enregistré comme des **dates avec un type** — le système ne suit ni droit acquis, ni
+cumul, ni décompte des jours payés ou non. *Sans solde* est simplement un type que vous choisissez,
+pas un solde courant.
+</Callout>
+
+## Statuts
+
+| Statut | Ce qu'il signifie |
+| --- | --- |
+| **En attente** | Demandé par un membre du personnel, en attente d'une décision. |
+| **Approuvé** | Accordé. Un congé qu'un administrateur enregistre directement est approuvé immédiatement. |
+| **Refusé** | Rejeté, avec un motif facultatif. |
+| **Annulé** | Annulé avant son début. |
+
+## Enregistrer un congé en tant qu'administrateur
+
+<Steps>
+
+<Step>
+### Ouvrez Congés et ajoutez-en un
+
+Dans l'espace **Personnel et RH → Congés**, choisissez **Ajouter**, puis sélectionnez le membre du
+personnel.
+</Step>
+
+<Step>
+### Définissez le type et les dates
+
+Choisissez le **type** ainsi que les dates de **début** et de **fin**.
+</Step>
+
+<Step>
+### Enregistrez
+
+Le congé est enregistré comme **Approuvé** immédiatement — pas d'étape d'approbation distincte quand
+un administrateur l'enregistre.
+</Step>
+
+</Steps>
+
+## Demander un congé en tant que membre du personnel
+
+Les enseignants et le personnel demandent leurs propres congés depuis leur page de congés. Une
+demande est créée comme **En attente** et attend un administrateur. Vous pouvez modifier ou
+**annuler** votre propre demande tant qu'elle est en attente.
+
+## Approuver ou refuser les demandes
+
+Depuis la liste des congés, un administrateur traite les demandes en attente :
+
+- **Approuver** — accorde le congé.
+- **Refuser** — le rejette ; vous pouvez ajouter un motif que le demandeur verra.
+- **Approbation / refus en masse** — sélectionnez plusieurs demandes en attente et agissez en une
+  fois.
+
+## Annuler un congé
+
+Un congé peut être **annulé** tant qu'il est **En attente** ou **Approuvé**, mais uniquement **avant
+sa date de début** — vous ne pouvez pas annuler un congé déjà commencé. Une fois refusé ou annulé, un
+congé le reste.
+
+<Callout title="Les chevauchements sont bloqués">
+Un membre du personnel ne peut pas avoir deux congés qui se chevauchent sur les mêmes dates. Si vous
+essayez d'en ajouter ou d'en modifier un dans la plage d'un congé existant, le système vous en
+empêche.
+</Callout>
+
+## Qui peut faire quoi
+
+| Action | Administrateur | Personnel / enseignant |
+| --- | --- | --- |
+| Enregistrer un congé directement (approuvé) | ✅ | — |
+| Demander un congé (en attente) | — | ✅ (le sien) |
+| Approuver / refuser | ✅ | — |
+| Annuler avant la date de début | ✅ | ✅ (le sien) |
+| Voir les congés de tout le personnel | ✅ | Les siens uniquement |
+
+## Articles liés
+
+- [Présence du personnel](./staff-attendance)

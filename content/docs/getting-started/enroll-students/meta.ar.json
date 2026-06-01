@@ -2,6 +2,7 @@
   "title": "تسجيل الطلاب",
   "pages": [
     "index",
+    "pre-inscriptions",
     "create-an-enrollment",
     "bulk-enroll-students",
     "transfer-a-student-between-classes",

@@ -1,12 +1,12 @@
 {
   "pages": [
     "getting-started",
-    "admin",
-    "teacher",
-    "parent",
+    "dashboards",
     "finance",
+    "staff-hr",
     "settings",
     "transport",
+    "equipment",
     "timetable",
     "teaching",
     "behaviour",
