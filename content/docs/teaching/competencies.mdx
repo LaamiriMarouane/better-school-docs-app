@@ -1,0 +1,128 @@
+---
+title: Competency-based grading
+description: Run a competency grading track alongside numeric grades — build a subject competency library, attach competencies to assessments, and let teachers set proficiency levels per student per term.
+---
+
+**Competency grading** is a parallel track that records a student's proficiency against named
+learning outcomes alongside their numeric grades. Numeric grades and competency levels coexist
+— neither replaces the other. Teachers can record competency evidence on assessments and set
+a term-level proficiency for each competency; both appear on the report card.
+
+<Callout title="Who this is for">
+Administrators setting up competency frameworks, and teachers recording student competency
+progress.
+</Callout>
+
+<Callout title="Subject-gated">
+Competencies only appear for subjects that have a competency library defined. Subjects
+configured as Numeric only do not show the competency track.
+</Callout>
+
+## The two competency layers
+
+| Layer | What it is | Who sets it |
+| --- | --- | --- |
+| **Assessment evidence** | A proficiency level recorded against a specific piece of work (exam, quiz, free assessment). | Teacher, when grading the assessment. |
+| **Term competency grade** | A teacher-set overall proficiency for the student on that competency for the term. | Teacher, in the gradebook term view. |
+
+Both layers are independent. A teacher can record evidence on individual assessments and also
+set the term-level grade — or set the term grade directly without assessment-level evidence.
+
+## Set up competencies for a subject
+
+### 1 — Define the competency scale
+
+Before adding competencies, define the **proficiency levels** students can be awarded. Go to
+**Academic → [Level] → Grading → Competency scale** and add levels:
+
+| Field | Notes |
+| --- | --- |
+| **Name** | e.g. *Beginning*, *Developing*, *Proficient*, *Exemplary*. |
+| **Points** | A numeric value used to order and aggregate levels (e.g. 1, 2, 3, 4). |
+| **Color** | An optional colour shown on the gradebook chip. |
+
+### 2 — Build the competency library for a subject
+
+Open **Teaching → Subjects → [Subject at Level] → Competencies** and add the competencies
+students will be assessed on:
+
+| Field | Notes |
+| --- | --- |
+| **Name** | The learning outcome, e.g. *Can apply the Pythagorean theorem*. |
+| **Code** | Optional short code, e.g. *M-G-1*. |
+| **Description** | Optional detail or success criteria. |
+
+Competencies are defined per subject at a level — the same subject at different levels has its
+own separate library.
+
+## Attach competencies to an assessment
+
+When creating or editing an **exam template**, **quiz**, or **free assessment**, open the
+**Competencies** tab and select which competencies that assessment covers. For exam templates,
+the competency list is set once on the template and is shared across all class sittings of
+that exam.
+
+When grading the assessment, the teacher can set a proficiency level against each attached
+competency for each student — in addition to (or instead of) recording a numeric score.
+
+## Set the term competency grade
+
+In the gradebook, open a subject's term view and select the **Competencies** panel. For each
+competency and each student, the teacher sets a single **term proficiency level**. This is the
+definitive term-level judgement — it is what appears on the report card.
+
+The system can suggest the most recent assessment evidence level as a starting point, but the
+teacher always sets the final term grade.
+
+## How competencies appear on the report card
+
+When a level has competencies enabled for a subject, the report card shows a competency section
+below the numeric grades for that subject. Each competency is listed with its term-level
+proficiency, shown as the band name and optional colour chip.
+
+The overall numeric grade (*moyenne générale*) is not affected by competency levels — they
+are displayed as a separate, additive section.
+
+## Frequently asked questions
+
+### Do competency grades affect the student's average?
+
+No. Competency levels are a parallel display track. The numeric average (*moyenne générale*) is
+always computed from numeric grades only. Competency levels do not add to or subtract from the
+numeric average.
+
+### Can I use competencies without numeric grades?
+
+The gradebook always stores numeric grades. If a subject only uses competencies, you can enter
+numeric grades as 0 or exempt students — but a fully competency-only mode without any numeric
+column is not available in the current version.
+
+### Can multiple assessments cover the same competency?
+
+Yes. Multiple assessments can be linked to the same competency. The assessment-evidence layer
+records one proficiency per (student, assessment, competency). The teacher reviews all evidence
+when setting the term-level grade.
+
+### What is the difference between assessment evidence and the term grade?
+
+Assessment evidence is recorded for a specific piece of work — it shows how the student
+performed on that task. The term competency grade is the teacher's overall judgement for the
+whole term — it takes all evidence into account but is set by the teacher, not automatically
+derived.
+
+### Can parents see competency results?
+
+Yes. Competency levels appear in the student view and on the report card, using the same
+proficiency level names the school defined.
+
+### Are competencies available for all subjects?
+
+Only for subjects where the administrator has built a competency library. Subjects with no
+competencies defined show only numeric grades.
+
+## Related articles
+
+- [Gradebook](./gradebook)
+- [Marking periods and grading scheme](./marking-periods)
+- [Report cards](./report-cards)
+- [Exams](./exams)

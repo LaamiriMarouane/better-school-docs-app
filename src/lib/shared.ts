@@ -1,5 +1,5 @@
 /** Static fallback only; docs shell uses `ClientManifest` brand names when loaded. */
-export const appName = 'BetterSchool Docs';
+export const appName = 'HikmaEdu Docs';
 export const docsRoute = '/docs';
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';

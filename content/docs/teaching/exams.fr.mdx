@@ -26,6 +26,12 @@ période).
 <Step>
 ### Renseigner le modèle
 
+<Callout title="Les catégories de notes doivent exister au préalable">
+Un modèle ne peut pas être créé tant qu'au moins une catégorie de notes d'examen n'a pas été
+configurée pour la matière à ce niveau. Configurez les catégories dans
+**Académique → Niveaux → [Niveau] → Notes → Catégories de notes** avant de continuer.
+</Callout>
+
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
 | **Nom** | Oui | Le nom de l'examen, ex. *Partiel*. |
@@ -33,7 +39,7 @@ période).
 | **Durée** | Oui | La durée de l'examen — 30 min, 45 min, 1 h, 1 h 30, 2 h, 2 h 30 ou 3 h. |
 | **Note maximale** | Non | La note sur laquelle l'examen est évalué. |
 | **Poids (%)** | Non | Combien cet examen compte dans la note de période. Les poids des examens d'une matière devraient totaliser 100 %. |
-| **Catégorie** | Non | Une catégorie de note pour regrouper l'examen. |
+| **Catégorie** | Oui | La catégorie de note à laquelle appartient cet examen. Doit être configurée au préalable. |
 </Step>
 
 </Steps>
@@ -94,7 +100,47 @@ enregistrements.
 - **Classe divisée** — planifiez le même modèle séparément pour chaque groupe.
 - **Élève absent** — marquez-le absent (ou excusé), puis planifiez un rattrapage.
 
+## Questions fréquentes
+
+### Quelle est la différence entre un modèle d'examen et un examen planifié ?
+
+Un **modèle d'examen** est le plan — son nom, sa durée, sa note maximale, son poids et sa
+catégorie. Un **examen planifié** est une passation réelle de ce modèle : une classe spécifique,
+une date, une heure et une salle. Vous créez le modèle une fois et pouvez le planifier pour
+plusieurs classes sans avoir à le redéfinir à chaque fois.
+
+### Le même modèle peut-il être utilisé pour plusieurs classes ?
+
+Oui. Planifiez le modèle une fois par classe. Chaque examen planifié a sa propre grille de notes,
+son propre suivi de présence et son propre état de publication, indépendamment des autres.
+
+### Comment gérer un élève absent ?
+
+Marquez l'élève **Absent** (ou **Excusé** avec un motif) dans le suivi de présence à l'examen.
+Sa cellule de note affiche le statut Absent. S'il doit passer l'examen plus tard, planifiez un
+[examen de rattrapage](#examens-de-rattrapage) lié à l'original.
+
+### Quand dois-je publier les résultats ?
+
+Publiez une fois que vous avez terminé la notation et que vous êtes sûr des notes. Les scores
+saisis ne sont pas visibles par les élèves ou les parents avant la publication. Il n'y a pas de
+délai — vous pouvez publier immédiatement après la correction ou attendre que les résultats de
+toutes les classes soient prêts.
+
+### Les notes d'examen sont-elles automatiquement intégrées au carnet de notes ?
+
+Oui. Une fois une note saisie (et les résultats de l'examen publiés), elle s'intègre directement
+dans le carnet de notes sous la période de notation, la catégorie et le poids définis dans le
+modèle. Aucun transfert manuel n'est nécessaire.
+
+### Puis-je planifier un rattrapage pour un seul élève ?
+
+Oui. Lors de la planification d'un rattrapage, vous pouvez cibler un élève individuel plutôt que
+toute la classe. Le rattrapage est lié à l'examen original et apparaît comme une entrée distincte
+dans les enregistrements.
+
 ## Articles liés
 
 - [Séances de classe et présence](./sessions-and-attendance)
+- [Carnet de notes](./gradebook)
 - [Cours](./courses)

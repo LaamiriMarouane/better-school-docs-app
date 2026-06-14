@@ -1,11 +1,13 @@
 ---
 title: Carnet de notes
-description: Voyez comment les résultats d'examens, de devoirs et de quiz se combinent dans la note de matière de chaque élève, et consultez-les ou ajustez-les.
+description: Découvrez comment les résultats d'évaluation se combinent à travers les périodes de notation, les pondérations des semestres et le schéma de notation pour former la note de matière, la moyenne générale et le bulletin.
 ---
 
-Le **carnet de notes** est l'endroit où toutes les notes d'un élève se rejoignent. Les résultats des
-[examens](./exams), des [devoirs](./assignments) et des [quiz](./quizzes) sont regroupés en
-**catégories**, pondérés, et combinés dans la note de chaque élève pour une matière.
+Le **carnet de notes** est l'endroit où toutes les notes d'un élève se rejoignent. Les résultats
+de tous les types d'évaluation — [examens](./exams) programmés, [devoirs](./assignments),
+[quiz](./quizzes) et notes saisies manuellement — sont placés dans des **catégories de note**,
+moyennés au sein de **périodes de notation**, puis combinés — selon le **schéma de notation** du
+niveau — dans la note de matière et la moyenne générale annuelle de chaque élève.
 
 <Callout title="Pour qui">
 Les enseignants et administrateurs qui gèrent les notes, et les élèves et parents qui les consultent.
@@ -13,32 +15,175 @@ Les enseignants et administrateurs qui gèrent les notes, et les élèves et par
 
 ## D'où viennent les notes
 
-La note de matière d'un élève est construite à partir du travail noté sur la période :
+La note de matière d'un élève est construite à partir de tout le travail évalué sur l'année. Il
+existe trois types d'évaluation, chacun avec son propre circuit :
 
-- les résultats d'**examens**,
-- les notes de **devoirs**,
-- les scores de **quiz**.
+**Examens** — séances programmées qui passent par un modèle, un créneau horaire, une salle, des
+surveillants et une présence aux examens distincte. Les résultats restent privés jusqu'à leur
+publication. Voir [Examens](./exams).
 
-Chacun de ces éléments est placé dans une **catégorie de note**.
+**Devoirs et quiz** — travaux donnés aux élèves à réaliser. Les devoirs basés sur des fichiers
+(devoirs maison, projets) collectent des soumissions ; les quiz sont corrigés automatiquement.
+Voir [Devoirs](./assignments) et [Quiz](./quizzes).
+
+**Évaluations libres** — colonnes de notes saisies manuellement sans circuit de soumission.
+Utilisées pour des choses comme les exposés oraux, la participation en classe, le comportement,
+la vérification des cahiers ou les points bonus. Les enseignants ouvrent le carnet de notes de la
+matière et saisissent les scores directement.
+
+Chaque évaluation appartient à une **catégorie de note** et est enregistrée dans une **période de
+notation**.
+
+## Périodes de notation
+
+Une **période de notation** est l'unité de notation au sein d'un semestre. Chaque semestre reçoit
+automatiquement au moins une période — quand il n'y en a qu'une, elle couvre tout le semestre à
+100% du poids. Vous pouvez diviser un semestre en plusieurs périodes selon la structure de votre
+école, par exemple Mi-semestre et Fin de semestre, ou quatre périodes trimestrielles sur deux
+semestres.
+
+<Callout title="Une période par défaut">
+La plupart des écoles démarrent avec une période par semestre. Il n'est nécessaire d'en ajouter
+que si vous souhaitez des divisions de notation infra-semestrielles comme des notes de mi-parcours.
+</Callout>
+
+Les évaluations sont toujours enregistrées dans une période de notation, jamais directement au
+niveau du semestre. Avec une seule période, l'expérience est identique à un carnet classique par
+semestre.
 
 ## Catégories de note
 
-Une **catégorie de note** regroupe des évaluations d'un même type — par exemple *Examens*, *Devoirs*,
-*Quiz* — et donne à chaque groupe un **poids**. Vous pouvez :
+Une **catégorie de note** regroupe des évaluations d'un même type — par exemple *Examens*,
+*Devoirs*, *Quiz* — et donne à chaque groupe un **poids**. Dans une période de notation, les poids
+de toutes les catégories pour une matière doivent totaliser 100%. Vous pouvez :
 
-- définir combien chaque catégorie **compte** dans la note finale (son poids),
+- définir combien chaque catégorie **compte** dans la note de période (son poids),
 - marquer une catégorie comme **ne comptant pas**, quand elle est informative,
 - définir des catégories pour toute l'école ou par **niveau**.
 
+## Schéma de notation
+
+Chaque niveau possède un **schéma de notation** : une liste ordonnée d'entrées dont les poids
+totalisent 100% et qui forment ensemble la note annuelle de matière. Une entrée est soit :
+
+- un **semestre interne** — la contribution du semestre, elle-même moyenne pondérée de ses
+  périodes,
+- un **examen externe** — un examen national ou régional couvrant un sous-ensemble de matières
+  avec sa propre notation et ses coefficients.
+
+| Exemple — deux semestres égaux | Poids |
+| --- | --- |
+| Semestre 1 | 50% |
+| Semestre 2 | 50% |
+
+| Exemple — semestres + examen régional (6e année) | Poids |
+| --- | --- |
+| Semestre 1 | 25% |
+| Semestre 2 | 25% |
+| Examen régional | 50% |
+
+Vous pouvez charger un **modèle** (deux semestres standard, 6e année, 9e année, BAC) ou créer le
+schéma de zéro. Modifier le schéma n'affecte jamais les années passées — les poids de chaque
+année sont archivés indépendamment.
+
 ## Comment une note est calculée
 
-1. Chaque travail est noté sur son propre maximum.
-2. Les notes sont regroupées et moyennées **dans chaque catégorie**.
-3. Les moyennes de catégories sont combinées par **poids** en la **note de matière** de la période.
-4. Les notes de période se combinent en la **note de l'année**.
+Le calcul se déroule en trois étapes imbriquées.
 
-Les notes utilisent le **barème** et l'**arrondi** de votre école, définis dans les réglages du
-carnet de notes de l'année scolaire — par exemple, des notes sur 20, arrondies à une décimale.
+**Étape 1 — Note de période (la feuille)**
+
+Dans chaque période de notation : les évaluations sont moyennées dans leur catégorie, puis les
+moyennes de catégories sont combinées par leurs poids → **note de période**. Elle utilise le
+barème, la méthode de calcul et l'arrondi du niveau.
+
+**Étape 2 — Note de semestre**
+
+Si un semestre comporte plusieurs périodes, leurs notes sont combinées par le poids intra-semestre
+de chaque période → **note de semestre**. Avec une seule période, la note de semestre est égale à
+la note de période.
+
+**Étape 3 — Note annuelle de matière**
+
+Les entrées du schéma (semestres internes et tout examen externe) sont combinées par leurs poids
+→ **note annuelle de matière**.
+
+**Moyenne générale**
+
+La note annuelle de chaque matière est multipliée par son **coefficient** (la pondération de
+l'école pour cette matière à ce niveau), additionnée sur toutes les matières, puis divisée par le
+total des coefficients → la moyenne générale annuelle de l'élève.
+
+Les notes utilisent le **barème** et l'**arrondi** de votre école, configurés par niveau dans les
+réglages du carnet.
+
+## Examens externes
+
+Un **examen externe** (régional ou national) est une entrée distincte du schéma de notation. Il
+couvre un sous-ensemble de matières avec ses propres coefficients et note maximale. Ces coefficients
+servent uniquement à calculer la **moyenne de l'examen**, qui figure sur le bulletin comme ligne
+séparée.
+
+**La moyenne de l'examen est indépendante de la moyenne générale.** La moyenne générale de l'élève
+utilise toujours les coefficients de l'école sur toutes les matières — les coefficients de l'examen
+n'y contribuent jamais.
+
+Quand une matière n'est pas couverte par l'examen externe, le poids de l'examen est supprimé pour
+cette matière et les entrées restantes sont renormalisées pour totaliser 100%.
+
+## Scénarios de calcul
+
+### Scénario 1 — Deux semestres égaux, sans examen externe
+
+Configuration standard pour les niveaux primaires : deux semestres égaux, une période chacun.
+
+**Schéma :** S1 = 50%, S2 = 50%
+
+Élève, Maths : S1 = 14, S2 = 12.
+
+| Composante | Note | Poids | Contribution |
+| --- | --- | --- | --- |
+| Semestre 1 | 14 | 50% | 7,0 |
+| Semestre 2 | 12 | 50% | 6,0 |
+| **Note annuelle** | | | **13,0** |
+
+### Scénario 2 — Deux semestres + examen régional (6e année)
+
+**Schéma :** S1 = 25%, S2 = 25%, Régional = 50%
+
+**Maths** — matière couverte par le régional :
+
+| Composante | Note | Poids | Contribution |
+| --- | --- | --- | --- |
+| Semestre 1 | 14 | 25% | 3,5 |
+| Semestre 2 | 12 | 25% | 3,0 |
+| Régional | 16 | 50% | 8,0 |
+| **Note annuelle** | | | **14,5** |
+
+**EPS** — non couverte par le régional. Le poids de l'examen est supprimé et S1/S2 sont
+renormalisés à 50% chacun :
+
+| Composante | Note | Poids (renormalisé) | Contribution |
+| --- | --- | --- | --- |
+| Semestre 1 | 15 | 50% | 7,5 |
+| Semestre 2 | 13 | 50% | 6,5 |
+| **Note annuelle** | | | **14,0** |
+
+### Scénario 3 — Plusieurs périodes par semestre (système trimestriel)
+
+**Schéma :** S1 = 45%, S2 = 45%, Examen final = 10%
+**Dans S1 :** T1 = 50%, T2 = 50%
+**Dans S2 :** T3 = 50%, T4 = 50%
+
+Élève, Maths :
+
+| Période | Note | Poids intra-semestre | Note semestre |
+| --- | --- | --- | --- |
+| T1 | 15 | 50% | — |
+| T2 | 13 | 50% | **14,0** (S1) |
+| T3 | 16 | 50% | — |
+| T4 | 14 | 50% | **15,0** (S2) |
+
+Note annuelle = 14,0 × 45% + 15,0 × 45% + Final (12) × 10% = 6,3 + 6,75 + 1,2 = **14,25**
 
 ## Statuts de note
 
@@ -53,22 +198,72 @@ Dans la grille du carnet, chaque cellule montre où en est un élève :
 
 ## Les vues du carnet
 
-- **Carnet de classe** — une grille élèves × matières, montrant chaque note de matière.
-- **Carnet des devoirs** — une grille élèves × devoirs et quiz, où vous saisissez les notes
-  rapidement.
-- **Vue élève** — ce que voient un élève (et ses parents) : sa note par matière, le détail par
-  catégorie, et son rang de classe.
+- **Par semestre** — semestre → périodes de notation → évaluations ; modifier une note recalcule
+  en direct toute la chaîne.
+- **Par classe** — note finale de chaque matière, moyenne générale, rang, mention.
+- **Toutes les périodes** — chaque valeur de période et note finale par matière ; ouvrez un final
+  pour voir le détail complet : entrées comptées, entrées supprimées et renormalisées, signalements
+  de seuil de passage.
+- **Vue élève** — ce que voient l'élève (et ses parents) : note par matière, détail par catégorie
+  et par période, rang de classe.
 
 ## Ajuster une note
 
-- **Forcer** — fixer la note de matière d'un élève à la main, avec un motif, quand la note calculée
-  ne doit pas s'appliquer.
+- **Forcer** — fixer la note de période d'un élève à la main, avec un motif, quand la note
+  calculée ne s'applique pas. Les notes de semestre et annuelles sont toujours calculées à partir
+  des valeurs de période et ne peuvent pas être forcées directement.
 - **Remarque** — ajouter une note sur la performance d'un élève sans changer la note.
 
 ## Bulletins
 
-Vous pouvez produire le **bulletin** d'un élève — ses notes par matière pour la période ou l'année —
-prêt à partager avec les familles.
+Vous pouvez produire le **bulletin** d'un élève — notes de période, de semestre, annuelle,
+moyenne générale, rang et mention — prêt à partager avec les familles. Quand le niveau comporte un
+examen externe, le bulletin affiche également la **moyenne de l'examen** sur une ligne séparée.
+
+Les notes figurant sur un bulletin sont archivées au moment de la génération, elles restent donc
+fixes même si des notes d'évaluation sont modifiées par la suite.
+
+## Questions fréquentes
+
+### Qu'est-ce qu'une période de notation ?
+
+Une période de notation est l'unité de notation au sein d'un semestre. Chaque semestre démarre
+avec une période à 100% du poids du semestre — elle est visible même si vous ne la divisez jamais.
+Les évaluations sont enregistrées et moyennées dans une période de notation, pas directement au
+niveau du semestre.
+
+### Comment la note annuelle d'un élève est-elle calculée ?
+
+La note annuelle d'une matière est une somme pondérée des entrées du schéma de notation du niveau.
+Chaque semestre interne contribue sa note de semestre (elle-même moyenne pondérée de ses périodes),
+et tout examen externe contribue son score pour cette matière. Les poids sont définis dans le schéma
+et doivent totaliser 100%.
+
+### Que se passe-t-il si une matière n'est pas couverte par un examen externe ?
+
+Le poids de l'entrée examen est supprimé pour cette matière et les entrées restantes sont
+renormalisées pour totaliser 100%. La note annuelle est calculée à partir des semestres uniquement,
+avec une mention visible indiquant que l'examen ne s'appliquait pas à la matière.
+
+### Des niveaux différents peuvent-ils avoir des pondérations différentes ?
+
+Oui. Chaque niveau possède son propre schéma de notation. Un niveau primaire peut utiliser deux
+semestres égaux (50%/50%), tandis qu'une 6e peut utiliser S1 (25%), S2 (25%) et un régional (50%).
+Modifier le schéma d'un niveau n'affecte pas les autres niveaux.
+
+### Qu'est-ce que la moyenne générale ?
+
+La **moyenne générale** est la moyenne pondérée de l'élève sur toutes les matières, en utilisant
+le coefficient de chaque matière défini par l'école. Elle utilise toujours les coefficients de
+l'école sur toutes les matières. Les coefficients propres à l'examen externe servent uniquement à
+calculer la moyenne de l'examen, qui ne contribue jamais à la moyenne générale.
+
+### Peut-on diviser un semestre en plusieurs périodes de notation ?
+
+Oui. Dans les réglages de notation du niveau, ouvrez le semestre et ajoutez des périodes — par
+exemple Mi-semestre et Fin de semestre, ou quatre périodes trimestrielles. Définissez le poids
+intra-semestre de chaque période pour qu'ils totalisent 100%. Les enseignants enregistrent ensuite
+les évaluations dans la période spécifique.
 
 ## Articles liés
 

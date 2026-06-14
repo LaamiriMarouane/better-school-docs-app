@@ -1,0 +1,135 @@
+---
+title: Report Cards
+description: Generate, publish, and reissue student report cards — per student or in bulk for a whole class — showing period grades, term grades, overall average, rank, and mention.
+---
+
+A **report card** is a snapshot of a student's grades at a point in time. It captures the period
+grades, term grades, subject year grade, overall average, class rank, mention, and pass/fail
+status — and, when the level has an external exam, a separate exam average line.
+
+<Callout title="Who this is for">
+Administrators and teachers who generate and publish student grade reports.
+</Callout>
+
+<Callout title="Grades are live in the gradebook, frozen on the card">
+The [gradebook](./gradebook) always shows live, recalculated grades. A report card takes a
+snapshot of those grades at the moment it is generated — they do not change afterwards, even if
+assessment marks are edited later. See [Staleness and reissue](#staleness-and-reissue).
+</Callout>
+
+## What a report card shows
+
+| Section | Content |
+| --- | --- |
+| **Subject rows** | Each subject: period grade(s), term grade, year grade, and subject coefficient |
+| **Overall average** | Weighted average across all subjects using school coefficients (*moyenne générale*) |
+| **Class rank** | Student's position in the class by overall average (when ranking is enabled) |
+| **Mention** | Letter grade or label derived from the grading scale (e.g. Bien, Très bien) |
+| **Pass / fail** | Whether the student met the minimum pass threshold for each subject |
+| **Exam average** | Shown only when the level has an external exam — computed from the exam's own coefficients over its covered subjects, independent of the overall average |
+
+## Generate a report card
+
+### Single student
+
+<Steps>
+
+<Step>
+### Open the student's profile or the class gradebook
+
+Navigate to the student directly, or open the class gradebook and select the student's row.
+</Step>
+
+<Step>
+### Choose the period
+
+Select whether to generate the card for a **term** (mid-year progress) or the **full year**.
+</Step>
+
+<Step>
+### Generate
+
+Click **Generate report card**. The system computes and snapshots all grade values. The card is
+ready to download as a PDF.
+</Step>
+
+</Steps>
+
+### Whole class — bulk generation
+
+Go to the class gradebook and use **Generate all report cards**. The system creates one card per
+student and packages them into a **ZIP file** you can download in one click. Generation runs in
+the background — you will be notified when the file is ready.
+
+<Callout title="Tip — generate after grading is complete">
+Generate report cards once all assessment marks have been entered and any overrides or remarks
+are in place. Cards are a snapshot; anything entered after generation will not appear unless you
+reissue.
+</Callout>
+
+## Publish to families
+
+Generating a card makes it available to **you** (admin and teacher view). Students and parents
+cannot see it until you **publish** it.
+
+| State | Who can see it |
+| --- | --- |
+| **Generated** | Administrators and teachers only |
+| **Published** | Students and parents can view and download |
+
+You can publish a single card or publish the whole class at once. Published cards can be
+unpublished if you need to correct and reissue them first.
+
+## Staleness and reissue
+
+If assessment marks change **after** a card was generated, the card is flagged as **stale** —
+the live gradebook no longer matches the snapshot. A stale badge appears on the card so you know
+it is out of date.
+
+To update it, **reissue** the card: the system generates a fresh snapshot from the current
+gradebook values and replaces the old one. You can reissue a single card or the whole class.
+
+<Callout title="Published cards">
+Reissuing a published card automatically unpublishes it. Republish it once you are happy with
+the new version so families see the corrected grades.
+</Callout>
+
+## Frequently asked questions
+
+### What is the difference between a term card and a year card?
+
+A **term card** snapshots grades for a single term: the period grades within that term, the term
+average, and the student's rank at that point. A **year card** covers the full year: all terms
+and any external exam, the subject year grade, overall average, final rank, and mention.
+
+### Can I generate report cards before all marks are entered?
+
+Yes, but any assessment not yet marked will show as Pending on the card, and averages will
+reflect only what has been entered. It is best to generate after all marking is complete. You can
+reissue the card once the remaining marks are in.
+
+### What happens if I edit a grade after generating a card?
+
+The card is flagged as **stale**. The live gradebook reflects the new mark immediately; the card
+stays on the old snapshot until you reissue it.
+
+### Are report cards visible to students and parents automatically?
+
+No. Generating a card makes it visible to administrators and teachers only. You must explicitly
+**publish** it for students and parents to see it.
+
+### Does the report card include the external exam average?
+
+Yes, when the level has an external exam configured in its grading scheme. The exam average
+appears as a separate line, computed from the exam's own coefficients over its covered subjects.
+It is independent of the overall average (*moyenne générale*).
+
+### Can I download report cards for the whole class at once?
+
+Yes. Use **Generate all report cards** from the class gradebook. The cards are packaged into a
+ZIP file that you can download once generation is complete.
+
+## Related articles
+
+- [Gradebook](./gradebook)
+- [Exams](./exams)

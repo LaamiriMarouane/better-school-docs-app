@@ -1,0 +1,112 @@
+---
+title: Suivi en direct
+description: Découvrez comment les parents suivent le bus scolaire de leur enfant en temps réel, comment les administrateurs surveillent tous les trajets actifs, et comment la progression arrêt par arrêt est enregistrée.
+---
+
+Quand un trajet passe à **En cours**, la position du bus et la progression arrêt par arrêt sont
+diffusées en direct aux parents et visibles par les administrateurs. Aucune configuration
+supplémentaire n'est nécessaire au-delà de la création des routes, arrêts et trajets — le suivi
+en direct s'active automatiquement au démarrage du trajet.
+
+<Callout title="Pour qui">
+Les parents qui suivent le bus de leur enfant, et les administrateurs qui surveillent la flotte.
+</Callout>
+
+## Ce que voient les parents
+
+Les parents ouvrent la section **Bus scolaire** dans l'application mobile et voient tous les
+trajets actifs de leurs enfants — une carte par enfant, par trajet.
+
+Chaque carte affiche :
+
+| Élément | Détail |
+| --- | --- |
+| **Position du bus** | La position actuelle du bus sur la carte, mise à jour en temps réel. |
+| **Étape en cours** | De quel arrêt le bus vient de partir et vers lequel il se dirige. |
+| **Route sur la carte** | Le tracé de la route avec la position en direct du bus. Seul l'arrêt propre à l'enfant du parent est affiché — les arrêts des autres élèves ne sont pas visibles. |
+| **Statut de l'élève** | Si l'élève est monté (trajet aller) ou a été déposé. |
+
+Les parents n'ont pas besoin de rafraîchir la vue — la carte et le statut se mettent à jour
+automatiquement tant que le trajet est en cours.
+
+<Callout title="Plusieurs enfants">
+Si un parent a plus d'un enfant dans le bus, tous les trajets actifs apparaissent sur le même
+écran, sans avoir à changer d'enfant.
+</Callout>
+
+## Ce que voient les administrateurs
+
+Dans **Transport → Trajets**, les administrateurs voient tous les trajets du jour. Tout trajet
+démarré affiche un indicateur de progression en direct — à quel arrêt il se trouve et combien
+d'élèves ont embarqué ou ont été déposés jusqu'ici.
+
+En ouvrant un trajet actif, on voit :
+
+- la route sur la carte avec la position actuelle du bus,
+- chaque arrêt avec son statut (Arrivé, Parti, À venir),
+- le statut d'embarquement ou de dépose de chaque élève aux arrêts complétés.
+
+## Comment un trajet devient actif
+
+Un trajet commence à diffuser quand son statut passe à **En cours**.
+
+<Steps>
+
+<Step>
+### Démarrer le trajet
+
+Allez dans **Transport → Trajets**, ouvrez le trajet planifié et cliquez sur **Démarrer le trajet**.
+Le statut passe de Planifié à En cours et les mises à jour en direct commencent.
+</Step>
+
+<Step>
+### Enregistrer les arrêts au fil du parcours
+
+À chaque arrêt, enregistrez ce qui s'est passé :
+
+| Statut | Signification |
+| --- | --- |
+| **Embarqué** | L'élève est monté dans le bus (trajet aller). |
+| **Déposé** | L'élève est descendu à son arrêt (trajet retour). |
+| **Absent** | L'élève n'était pas à l'arrêt. |
+| **Non-présentation** | L'élève n'est pas monté alors qu'il était attendu. |
+</Step>
+
+<Step>
+### Terminer le trajet
+
+Quand tous les arrêts sont faits, marquez le trajet comme **Terminé**. Le suivi en direct
+s'arrête et le relevé du trajet est finalisé avec le journal de présence complet.
+</Step>
+
+</Steps>
+
+## Questions fréquentes
+
+### Les parents doivent-ils faire quelque chose pour voir le suivi en direct ?
+
+Non. Les parents ouvrent la section Bus scolaire de l'application et la vue en direct apparaît
+automatiquement pour tout trajet en cours concernant l'itinéraire de leur enfant.
+
+### Comment la position du bus est-elle mise à jour ?
+
+Les mises à jour de position sont envoyées via une connexion en temps réel au fur et à mesure que
+le chauffeur enregistre les arrivées et départs aux arrêts. Les parents voient le mouvement du
+bus entre les arrêts.
+
+### Que se passe-t-il si un élève est marqué Absent ?
+
+Le parent voit le statut Absent sur la carte de son enfant. L'arrêt de l'élève est toujours
+affiché sur la carte, mais la confirmation d'embarquement est remplacée par la note d'absence.
+
+### Les parents peuvent-ils suivre le bus avant qu'il n'atteigne leur arrêt ?
+
+Oui. Les parents voient la position en direct du bus sur la carte de la route et l'étape en
+cours, ce qui leur permet d'estimer l'heure d'arrivée à l'arrêt de leur enfant. Seul l'arrêt
+propre à leur enfant est affiché — les arrêts des autres élèves ne sont pas visibles.
+
+## Articles liés
+
+- [Créer des trajets](./create-trips)
+- [Présence aux trajets](./trip-attendance)
+- [Construire des routes et des arrêts](./build-routes-and-stops)

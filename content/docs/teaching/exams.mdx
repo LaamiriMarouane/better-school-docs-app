@@ -24,6 +24,12 @@ Go to **Exams → Templates** and add a template for a subject (at a level, for 
 <Step>
 ### Fill in the template
 
+<Callout title="Grade categories must exist first">
+A template cannot be created until at least one exam grade category has been configured for the
+subject at this level. Set up categories in **Academic → Levels → [Level] → Grading →
+Grade categories** before continuing.
+</Callout>
+
 | Field | Required | Notes |
 | --- | --- | --- |
 | **Name** | Yes | The exam's name, e.g. *Mid-term*. |
@@ -31,7 +37,7 @@ Go to **Exams → Templates** and add a template for a subject (at a level, for 
 | **Duration** | Yes | How long the exam lasts — 30 min, 45 min, 1 h, 1 h 30, 2 h, 2 h 30, or 3 h. |
 | **Max score** | No | The score the exam is marked out of. |
 | **Weight (%)** | No | How much this exam counts toward the term grade. A subject's exam weights should add up to 100%. |
-| **Category** | No | A grade category to group the exam under. |
+| **Category** | Yes | The grade category this exam belongs to. Must be configured in advance. |
 </Step>
 
 </Steps>
@@ -90,7 +96,45 @@ the original. It's marked as a make-up so it's clear in the records.
 - **Split class** — schedule the same template separately for each group.
 - **Absent student** — mark them absent (or excused), then schedule a make-up.
 
+## Frequently asked questions
+
+### What is the difference between an exam template and a scheduled exam?
+
+An **exam template** is the blueprint — its name, duration, maximum score, weight, and category.
+A **scheduled exam** is one actual sitting of that template: a specific class, date, time, and
+room. You create the template once and can schedule it for multiple classes without redefining it
+each time.
+
+### Can the same template be used for multiple classes?
+
+Yes. Schedule the template once per class. Each scheduled exam has its own grade grid, attendance
+record, and publication state, independently of the others.
+
+### How do I handle a student who was absent?
+
+Mark the student **Absent** (or **Excused** with a reason) in the exam attendance record. Their
+grade cell shows the Absent status. If they need to sit the exam later, schedule a [make-up
+exam](#make-up-exams) linked to the original.
+
+### When should I publish results?
+
+Publish once you have finished marking and are confident in the grades. Scores you enter are not
+visible to students or parents until you publish. There is no time limit — you can publish
+immediately after marking or wait until results for all classes are ready.
+
+### Do exam scores feed into the gradebook automatically?
+
+Yes. Once a score is entered (and the exam's results are published), it feeds directly into the
+gradebook under the subject's marking period, category, and weight you set on the template. No
+manual transfer is needed.
+
+### Can I schedule a make-up for just one student?
+
+Yes. When scheduling a make-up, you can target an individual student rather than the whole class.
+The make-up is linked to the original exam and shows as a separate entry in the records.
+
 ## Related articles
 
 - [Class sessions & attendance](./sessions-and-attendance)
+- [Gradebook](./gradebook)
 - [Courses](./courses)

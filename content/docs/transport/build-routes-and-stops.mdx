@@ -1,6 +1,6 @@
 ---
 title: Build routes and stops
-description: Draw the paths your buses follow, place stops on the map, and group stops into pricing zones.
+description: Set up school bus routes — draw the pickup and dropoff paths, place stops on the map with planned times, and optionally group stops into pricing zones for distance-based fees.
 ---
 
 A **route** is the path a bus follows, made up of an ordered list of **stops**. A **stop** is a
@@ -154,8 +154,50 @@ once. When you place a pin on the map, the matching zone can also be detected au
   fee.
 - **Seasonal change** — turn a route inactive instead of deleting it to keep its history.
 
+## Frequently asked questions
+
+### How do I set up a school bus route for the first time?
+
+Create a route (Transport → Routes → Add route), choose its direction (Pickup or Dropoff), then
+add stops one by one by dropping a pin on the map for each location. Set a planned time for each
+stop — this sets the stop order and gives drivers a schedule to follow. Once stops are in place,
+assign students to their stops and create trips to run the route.
+
+### Do I need separate routes for morning pickup and afternoon dropoff?
+
+Yes. A route has a single direction — Pickup (home → school) or Dropoff (school → home). Create
+one Pickup route and one matching Dropoff route per area. Giving them the same colour makes the
+pair easy to recognise on the map.
+
+### How many stops can I add to a route?
+
+There is no fixed limit. Add as many stops as your route needs. The school stop is always added
+automatically — at the end of a Pickup route and at the start of a Dropoff route.
+
+### How do I reorder stops?
+
+Set each stop's **planned time**. The route lists stops in time order automatically. You don't
+drag stops to reorder them — update the planned times instead.
+
+### What is a pricing zone and do I need one?
+
+A pricing zone is optional. It groups stops in an area so that every student boarding at a stop
+in that zone is charged the same monthly transport fee. If all students pay the same fee
+regardless of distance, you don't need zones — use the level's default transport fee instead.
+
+### Can the same route be used across multiple academic years?
+
+Routes are scoped to an academic year. When you set up a new year, carry over routes by
+duplicating or recreating them. Trip history from previous years is preserved under the old year.
+
+### How do parents know which stop to use?
+
+When a student is assigned to a stop on a route, parents can see the stop name and location in
+the School Bus section of the app. The stop also appears on the live tracking view during a trip.
+
 ## Related articles
 
 - [Assign students](./assign-students)
 - [Create trips](./create-trips)
+- [Live tracking](./live-tracking)
 - [Set up fees](../finance/fees-and-payments/set-up-fees)

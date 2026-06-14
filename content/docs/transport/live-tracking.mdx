@@ -1,0 +1,124 @@
+---
+title: Live tracking
+description: See how parents follow their child's school bus in real time, how admins monitor all active trips at once, and how stop-by-stop progress is recorded as a trip runs.
+---
+
+When a trip moves to **In Progress**, the bus position and stop-by-stop progress are broadcast
+live to parents and visible to administrators. No extra setup is needed beyond creating routes,
+stops, and trips — live tracking activates automatically when a trip starts.
+
+<Callout title="Who this is for">
+Parents following their child's bus, and administrators monitoring the fleet.
+</Callout>
+
+## What parents see
+
+Parents open the **School Bus** section in the mobile app and see all their children's active
+trips at once — one card per child, per trip.
+
+Each card shows:
+
+| Item | Detail |
+| --- | --- |
+| **Bus position** | The bus's current location on the map, updated in real time. |
+| **Current leg** | Which stop the bus just departed from and which it is heading to next. |
+| **Route on map** | The route path with the bus's live position. Only the parent's child's own stop is shown — other students' stops are not visible. |
+| **Student status** | Whether the student has boarded (on a pickup) or been dropped off. |
+
+Parents do not need to refresh the view — the map and status update automatically as long as
+the trip is in progress.
+
+<Callout title="Multiple children">
+If a parent has more than one child using the bus, all active trips appear on the same screen.
+They don't need to switch between children.
+</Callout>
+
+## What administrators see
+
+In **Transport → Trips**, administrators see all trips for the current day. Any trip that has
+started shows a live progress indicator — which stop it is at and how many students have
+boarded or been dropped off so far.
+
+Opening an active trip shows:
+
+- the route on the map with the bus's current position,
+- each stop with its current status (Arrived, Departed, Upcoming),
+- each student's boarding or drop-off status at completed stops.
+
+## How a trip goes live
+
+A trip starts broadcasting when its status changes to **In Progress**.
+
+<Steps>
+
+<Step>
+### Start the trip
+
+Go to **Transport → Trips**, open the scheduled trip, and click **Start trip**. The status changes
+from Scheduled to In Progress and live updates begin.
+
+The trip can also start automatically at its scheduled time if your configuration enables it.
+</Step>
+
+<Step>
+### Record stops as the bus moves
+
+At each stop, record what happened:
+
+| Status | Meaning |
+| --- | --- |
+| **Boarded** | The student got on the bus (pickup trip). |
+| **Dropped off** | The student was let off at their stop (dropoff trip). |
+| **Absent** | The student was not at the stop. |
+| **No-show** | The student did not board when expected. |
+
+The stop status (Arrived, Departed) updates automatically as student statuses are recorded.
+</Step>
+
+<Step>
+### Complete the trip
+
+When all stops are done, mark the trip as **Completed**. Live tracking ends and the trip record
+is finalised with the full attendance log.
+</Step>
+
+</Steps>
+
+## Frequently asked questions
+
+### Do parents need to do anything to see live tracking?
+
+No. Parents open the School Bus section of the app and the live view appears automatically for
+any trip that is currently in progress for their child's route.
+
+### How does the bus position update?
+
+Position updates are pushed via real-time connection as the driver records stop arrivals and
+departures. Parents see the bus's movement between stops as stops are marked.
+
+### What happens if a student is marked Absent?
+
+The parent sees the Absent status on their child's card. The student's stop is still shown on the
+map, but the boarding or drop-off confirmation is replaced by the absence note.
+
+### Can parents track the bus before it reaches their stop?
+
+Yes. Parents can see the bus's live position on the route map and the current leg, so they can
+estimate when it will arrive at their child's stop. Only their child's own stop is shown — other
+students' stops along the route are not visible.
+
+### Is there a separate driver app?
+
+The driver uses the trip detail screen on the same app to record stop-by-stop progress. Each stop
+is marked as students board or alight, which triggers the parent-visible updates.
+
+### What if the trip is cancelled?
+
+If a trip is cancelled, its card disappears from the parent's view and an updated status is shown
+in the trip record. Parents are not left watching a trip that will not run.
+
+## Related articles
+
+- [Create trips](./create-trips)
+- [Trip attendance](./trip-attendance)
+- [Build routes and stops](./build-routes-and-stops)

@@ -1,0 +1,139 @@
+---
+title: Bulletins
+description: Générez, publiez et rééditez les bulletins des élèves — individuellement ou en masse pour toute une classe — avec notes de période, moyennes, rang et mention.
+---
+
+Un **bulletin** est un instantané des notes d'un élève à un moment donné. Il capture les notes
+de période, les notes de semestre, la note annuelle de matière, la moyenne générale, le rang de
+classe, la mention et le statut de réussite — et, quand le niveau comporte un examen externe, une
+ligne de moyenne d'examen distincte.
+
+<Callout title="Pour qui">
+Les administrateurs et enseignants qui génèrent et publient les bulletins de notes.
+</Callout>
+
+<Callout title="Notes vivantes dans le carnet, figées sur le bulletin">
+Le [carnet de notes](./gradebook) affiche toujours des notes recalculées en direct. Un bulletin
+prend un instantané de ces notes au moment où il est généré — elles ne changent pas ensuite, même
+si des notes d'évaluation sont modifiées ultérieurement. Voir [Obsolescence et réédition](#obsolescence-et-réédition).
+</Callout>
+
+## Ce que contient un bulletin
+
+| Section | Contenu |
+| --- | --- |
+| **Lignes de matière** | Chaque matière : note(s) de période, note de semestre, note annuelle et coefficient |
+| **Moyenne générale** | Moyenne pondérée sur toutes les matières avec les coefficients de l'école |
+| **Rang de classe** | Position de l'élève dans la classe par moyenne générale (quand le classement est activé) |
+| **Mention** | Niveau dérivé du barème (ex. Bien, Très bien) |
+| **Réussite / échec** | Si l'élève a atteint le seuil minimum de passage pour chaque matière |
+| **Moyenne de l'examen** | Uniquement quand le niveau a un examen externe — calculée avec les coefficients propres de l'examen sur ses matières couvertes, indépendante de la moyenne générale |
+
+## Générer un bulletin
+
+### Élève individuel
+
+<Steps>
+
+<Step>
+### Ouvrir le profil de l'élève ou le carnet de classe
+
+Accédez directement à l'élève, ou ouvrez le carnet de la classe et sélectionnez la ligne de l'élève.
+</Step>
+
+<Step>
+### Choisir la période
+
+Sélectionnez si vous souhaitez générer le bulletin pour un **semestre** (bilan intermédiaire) ou
+pour l'**année complète**.
+</Step>
+
+<Step>
+### Générer
+
+Cliquez sur **Générer le bulletin**. Le système calcule et archive toutes les valeurs de notes.
+Le bulletin est prêt à télécharger en PDF.
+</Step>
+
+</Steps>
+
+### Toute la classe — génération en masse
+
+Allez dans le carnet de classe et utilisez **Générer tous les bulletins**. Le système crée un
+bulletin par élève et les regroupe dans un **fichier ZIP** téléchargeable en un clic. La
+génération s'effectue en arrière-plan — vous serez notifié quand le fichier est prêt.
+
+<Callout title="Conseil — générez après la fin de la notation">
+Générez les bulletins une fois que toutes les notes d'évaluation ont été saisies et que les
+éventuels ajustements ou remarques sont en place. Les bulletins sont des instantanés ; tout ce
+qui est saisi après la génération n'y figurera pas sauf si vous les rééditez.
+</Callout>
+
+## Publier auprès des familles
+
+Générer un bulletin le rend accessible à **vous** (vue administrateur et enseignant). Les élèves
+et les parents ne peuvent pas le voir tant que vous ne l'avez pas **publié**.
+
+| État | Qui peut le voir |
+| --- | --- |
+| **Généré** | Administrateurs et enseignants uniquement |
+| **Publié** | Les élèves et parents peuvent le consulter et le télécharger |
+
+Vous pouvez publier un seul bulletin ou publier toute la classe d'un coup. Les bulletins publiés
+peuvent être dépubliés si vous devez d'abord les corriger et les réémettre.
+
+## Obsolescence et réédition
+
+Si des notes d'évaluation changent **après** la génération d'un bulletin, celui-ci est signalé
+comme **obsolète** — le carnet de notes en direct ne correspond plus à l'instantané. Un badge
+d'obsolescence apparaît sur le bulletin pour vous indiquer qu'il n'est plus à jour.
+
+Pour le mettre à jour, **rééditez** le bulletin : le système génère un nouvel instantané à partir
+des valeurs actuelles du carnet et remplace l'ancien. Vous pouvez réémettre un seul bulletin ou
+toute la classe.
+
+<Callout title="Bulletins publiés">
+Réémettre un bulletin publié le dépublie automatiquement. Republiez-le une fois satisfait de la
+nouvelle version pour que les familles voient les notes corrigées.
+</Callout>
+
+## Questions fréquentes
+
+### Quelle est la différence entre un bulletin de semestre et un bulletin annuel ?
+
+Un **bulletin de semestre** archive les notes d'un seul semestre : les notes de période de ce
+semestre, la moyenne du semestre, et le rang de l'élève à ce stade. Un **bulletin annuel** couvre
+l'année complète : tous les semestres et tout examen externe, la note annuelle de matière, la
+moyenne générale, le rang final et la mention.
+
+### Puis-je générer des bulletins avant que toutes les notes soient saisies ?
+
+Oui, mais les évaluations non encore notées apparaîtront comme En attente sur le bulletin, et
+les moyennes ne refléteront que ce qui a été saisi. Il est préférable de générer après la fin de
+la notation. Vous pouvez réémettre le bulletin une fois les notes restantes saisies.
+
+### Que se passe-t-il si je modifie une note après avoir généré un bulletin ?
+
+Le bulletin est signalé comme **obsolète**. Le carnet de notes en direct reflète immédiatement la
+nouvelle note ; le bulletin reste sur l'ancien instantané jusqu'à ce que vous le réémettiez.
+
+### Les bulletins sont-ils visibles automatiquement pour les élèves et les parents ?
+
+Non. Générer un bulletin le rend visible uniquement aux administrateurs et enseignants. Vous devez
+explicitement le **publier** pour que les élèves et les parents puissent le voir.
+
+### Le bulletin inclut-il la moyenne de l'examen externe ?
+
+Oui, quand le niveau a un examen externe configuré dans son schéma de notation. La moyenne de
+l'examen apparaît sur une ligne séparée, calculée avec les coefficients propres de l'examen sur
+ses matières couvertes. Elle est indépendante de la moyenne générale.
+
+### Puis-je télécharger les bulletins de toute la classe en une fois ?
+
+Oui. Utilisez **Générer tous les bulletins** depuis le carnet de classe. Les bulletins sont
+regroupés dans un fichier ZIP téléchargeable une fois la génération terminée.
+
+## Articles liés
+
+- [Carnet de notes](./gradebook)
+- [Examens](./exams)

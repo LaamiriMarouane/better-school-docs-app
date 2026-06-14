@@ -1,0 +1,145 @@
+---
+title: Périodes de notation et schéma de notation
+description: Configurez les périodes de notation et le schéma de notation d'un niveau — pondérations des semestres, divisions infra-semestrielles, examens externes et substitutions de barème par période.
+---
+
+Le **schéma de notation** et les **périodes de notation** définissent ensemble comment la note
+annuelle d'un élève est construite pour un niveau. Le schéma fixe les pondérations au niveau de
+l'année (quels semestres et examens externes contribuent et dans quelle mesure). Les périodes de
+notation sont les unités de notation à l'intérieur de chaque semestre où les enseignants
+enregistrent les évaluations.
+
+<Callout title="Pour qui">
+Les administrateurs qui configurent la structure de notation d'un niveau avant que les enseignants
+ne commencent à saisir des notes.
+</Callout>
+
+## Les trois anneaux de pondération
+
+Tout calcul de note passe par trois anneaux imbriqués :
+
+| Anneau | Ce qu'il contrôle |
+| --- | --- |
+| **Anneau annuel** (schéma) | Combien chaque semestre et examen externe contribue à la note annuelle. Les poids doivent totaliser 100%. |
+| **Anneau semestriel** (périodes) | Combien chaque période contribue au sein de son semestre. Les poids doivent totaliser 100%. |
+| **Anneau feuille** (catégories) | Combien chaque catégorie compte au sein d'une période. Voir [Carnet de notes](./gradebook). |
+
+Si un semestre n'a qu'une seule période de notation (la valeur par défaut), l'anneau semestriel
+est trivialement à 100% et la note de semestre égale la note de période.
+
+## Configurer le schéma de notation
+
+Le schéma de notation se trouve dans les réglages de notation du niveau. Ouvrez
+**Académique → Niveaux → [Niveau] → Notes → Schéma**.
+
+### Charger un modèle
+
+Utilisez un modèle comme point de départ :
+
+| Modèle | Anneau annuel |
+| --- | --- |
+| **Deux semestres (standard)** | S1 50%, S2 50% |
+| **6e / 9e année** | S1 25%, S2 25%, Examen régional 50% |
+| **BAC** | S1 12,5%, S2 12,5%, Régional 25%, National 50% |
+
+Vous pouvez ajuster n'importe quel modèle après l'avoir chargé.
+
+### Ajouter ou modifier des entrées manuellement
+
+Chaque entrée est soit un **semestre interne** (lié à une définition de semestre), soit un
+**examen externe** (lié à un examen externe que vous avez défini). Définissez un poids pour
+chaque entrée. Le total en cours est affiché — il doit atteindre 100% pour que le schéma soit valide.
+
+## Gérer les périodes de notation
+
+Les périodes de notation se trouvent à l'intérieur de chaque semestre. Ouvrez
+**Académique → Niveaux → [Niveau] → Notes → Périodes de notation**.
+
+### État par défaut
+
+Quand un semestre est créé, **une période de notation à 100%** est ajoutée automatiquement. Vous
+la voyez listée même si vous ne divisez jamais le semestre.
+
+### Diviser un semestre
+
+Pour diviser un semestre (par exemple en Mi-semestre et Fin de semestre) :
+
+<Steps>
+
+<Step>
+### Ouvrir le semestre
+
+Sélectionnez le semestre dans la vue des périodes de notation.
+</Step>
+
+<Step>
+### Ajouter une période
+
+Cliquez sur **Ajouter une période** et donnez-lui un nom (ex. *Mi-semestre*) et un poids
+intra-semestriel.
+</Step>
+
+<Step>
+### Régler les poids pour qu'ils totalisent 100%
+
+Le total de toutes les périodes d'un semestre doit atteindre 100%. Un total en cours est affiché
+en vert quand la somme est correcte.
+</Step>
+
+</Steps>
+
+### Score minimum de passage
+
+Chaque période de notation peut avoir un **score minimum de passage** optionnel (ex. 10/20). Si
+la note de période d'un élève passe en dessous, un indicateur d'échec apparaît dans le carnet
+et sur le bulletin.
+
+## Examens externes
+
+Un **examen externe** (régional ou national) est une entrée du schéma de notation de type
+Externe plutôt qu'un semestre. Définissez l'examen d'abord, puis ajoutez-le au schéma.
+
+### Définir un examen externe
+
+Allez dans **Académique → Examens externes** et ajoutez l'examen.
+
+| Champ | Remarques |
+| --- | --- |
+| **Nom** | ex. *Examen régional 2024*. |
+| **Code** | Code court optionnel. |
+| **Note maximale par défaut** | La note sur laquelle l'examen est évalué (ex. 20). |
+| **Matières couvertes** | Sélectionnez les matières que l'examen couvre. Chacune reçoit un coefficient et une note maximale optionnelle. |
+
+### Ajouter l'examen au schéma
+
+Ouvrez le schéma du niveau, ajoutez une entrée Externe et liez-la à l'examen. Définissez son
+poids dans l'anneau annuel.
+
+### Saisir les notes
+
+Allez dans **Académique → Examens externes → [Examen] → Notes** pour saisir la note de chaque
+élève par matière couverte.
+
+## Questions fréquentes
+
+### Comment configurer S1 = 25%, S2 = 25%, Régional = 50% ?
+
+Ouvrez le schéma du niveau, ajoutez deux entrées de semestre interne (S1 et S2 à 25% chacun)
+et une entrée externe liée à l'examen régional à 50%. Assurez-vous que l'examen régional est
+défini au préalable avec ses matières couvertes et ses coefficients.
+
+### Que se passe-t-il si je ne divise pas un semestre ?
+
+Rien ne change. La période unique à 100% couvre tout le semestre, la note de semestre est donc
+égale à la note de période.
+
+### Si j'ajoute un examen externe, toutes les matières reçoivent-elles une note ?
+
+Non. Vous choisissez les matières couvertes par l'examen lors de sa définition. Pour les matières
+non couvertes, le poids de l'examen est supprimé et les entrées restantes sont renormalisées.
+
+## Articles liés
+
+- [Carnet de notes](./gradebook)
+- [Bulletins](./report-cards)
+- [Barème de notation](./grading-scale)

@@ -1,0 +1,144 @@
+---
+title: Grading scale
+description: Set up grading scales and grade bands so numeric scores are converted to letter grades, mentions, and GPA values on the gradebook and report cards.
+---
+
+A **grading scale** is a set of **grade bands** that convert a numeric score into a letter grade,
+mention (e.g. *Bien*, *Très bien*), or GPA value. Scales are used everywhere a numeric grade is
+displayed — the gradebook, the student view, and the report card.
+
+<Callout title="Who this is for">
+Administrators configuring how grades are displayed for a school year or level.
+</Callout>
+
+## How grading scales work
+
+The scale is applied after a numeric grade is computed. The grade falls into a band based on its
+value, and the band's letter, mention, and GPA are shown alongside (or instead of) the number,
+depending on the display format you choose.
+
+**Example — a /20 scale:**
+
+| Band | Min | Max | Letter | Mention | GPA |
+| --- | --- | --- | --- | --- | --- |
+| Excellent | 18 | 20 | A+ | Excellent | 4.0 |
+| Very good | 16 | 17.99 | A | Très bien | 4.0 |
+| Good | 14 | 15.99 | B | Bien | 3.0 |
+| Average | 12 | 13.99 | C | Assez bien | 2.0 |
+| Satisfactory | 10 | 11.99 | D | Passable | 1.0 |
+| Fail | 0 | 9.99 | F | Insuffisant | 0.0 |
+
+You do not need to fill in every column — for example, you can use mentions without GPA values,
+or letter grades without mentions.
+
+## Scale levels
+
+Scales can be set at two levels:
+
+| Level | Where it applies |
+| --- | --- |
+| **School year default** | All levels and periods, unless overridden below. |
+| **Level override** | Overrides the year default for a specific level. |
+| **Period override** | Overrides the level default for a specific marking period (e.g. a national exam scored /100). See [Marking periods](./marking-periods). |
+
+## Set up a grading scale
+
+Go to **Academic → [Academic year] → Gradebook settings → Grading scale**.
+
+<Steps>
+
+<Step>
+### Open the scale editor
+
+Click **Edit scale**. If no scale exists yet, the editor opens empty.
+</Step>
+
+<Step>
+### Add grade bands
+
+Click **Add band** for each grade band. Fill in:
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| **Name** | Yes | A descriptive label, e.g. *Very good*. |
+| **Min score** | Yes | The lowest score this band covers (inclusive). |
+| **Max score** | Yes | The highest score this band covers (inclusive). |
+| **Letter** | No | A letter code shown on the gradebook, e.g. *A*. |
+| **Mention** | No | A descriptive label shown on reports, e.g. *Très bien*. |
+| **GPA** | No | The GPA value associated with this band. |
+</Step>
+
+<Step>
+### Cover the full range
+
+Bands must cover the complete possible score range without gaps or overlaps. A warning appears
+if any scores between 0 and the maximum are not covered.
+</Step>
+
+<Step>
+### Save
+
+Save the scale. It takes effect immediately for any grade displayed at that level.
+</Step>
+
+</Steps>
+
+## Display format
+
+The grading scale controls what is *available* to display. The **display format** controls what
+is *actually shown* in each context. Go to **Gradebook settings → Display** to choose:
+
+| Format | Shows |
+| --- | --- |
+| **Numeric only** | The raw score (e.g. 14.5). |
+| **Letter** | The band's letter code (e.g. B). |
+| **Mention** | The band's mention (e.g. Bien). |
+| **Numeric + mention** | Score and mention together (e.g. 14.5 — Bien). |
+
+The primary display format is used in the gradebook grid. Additional formats can be shown in
+expanded views and on report cards.
+
+## Level overrides
+
+To give one level a different scale — for example, if one level uses /20 while another uses
+/100 — open **Academic → Levels → [Level] → Grading → Config** and set a **grading scale
+override** for that level. The level-specific scale applies everywhere that level's grades are
+displayed.
+
+## Frequently asked questions
+
+### Do I need a grading scale to use the gradebook?
+
+No. The gradebook works with raw numeric scores even without a scale. A scale only adds the
+display layer (letter, mention, GPA). You can add or change a scale at any time without
+affecting the stored scores.
+
+### Can I use letter grades only, without numeric scores?
+
+The gradebook stores and calculates grades numerically. A scale that maps every numeric value
+to a letter is the best way to display grades as letters — but the underlying computation still
+uses numbers.
+
+### What if two bands overlap or leave a gap?
+
+The scale editor shows a warning. Overlapping bands are not allowed. Gaps mean some scores
+would not match any band and would show without a letter or mention — fill in the full range
+to avoid this.
+
+### Can students see the grading scale?
+
+Students and parents see the letter or mention applied to their grade in the student view,
+consistent with whatever display format is configured. The full band table is not shown to
+students.
+
+### Can I set a different scale for external exams scored /100?
+
+Yes. Use the per-period config override on the external exam's marking period entry. Set the
+grading scale to one defined for /100, and it applies only to that exam's scores while the
+rest of the level uses its own scale.
+
+## Related articles
+
+- [Marking periods and grading scheme](./marking-periods)
+- [Gradebook](./gradebook)
+- [Report cards](./report-cards)

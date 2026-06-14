@@ -1,0 +1,146 @@
+---
+title: Barème de notation
+description: Configurez les barèmes de notation et les tranches de notes pour convertir les scores numériques en lettres, mentions et valeurs GPA dans le carnet de notes et sur les bulletins.
+---
+
+Un **barème de notation** est un ensemble de **tranches de notes** qui convertissent un score
+numérique en une lettre, une mention (ex. *Bien*, *Très bien*) ou une valeur GPA. Les barèmes
+sont utilisés partout où une note numérique est affichée — le carnet de notes, la vue élève et
+le bulletin.
+
+<Callout title="Pour qui">
+Les administrateurs qui configurent l'affichage des notes pour une année scolaire ou un niveau.
+</Callout>
+
+## Comment fonctionnent les barèmes de notation
+
+Le barème est appliqué une fois que la note numérique est calculée. La note tombe dans une
+tranche selon sa valeur, et la lettre, la mention et le GPA de la tranche sont affichés à côté
+(ou à la place) du nombre, selon le format d'affichage choisi.
+
+**Exemple — un barème sur 20 :**
+
+| Tranche | Min | Max | Lettre | Mention | GPA |
+| --- | --- | --- | --- | --- | --- |
+| Excellent | 18 | 20 | A+ | Excellent | 4.0 |
+| Très bien | 16 | 17,99 | A | Très bien | 4.0 |
+| Bien | 14 | 15,99 | B | Bien | 3.0 |
+| Assez bien | 12 | 13,99 | C | Assez bien | 2.0 |
+| Passable | 10 | 11,99 | D | Passable | 1.0 |
+| Insuffisant | 0 | 9,99 | F | Insuffisant | 0.0 |
+
+Il n'est pas nécessaire de remplir toutes les colonnes — par exemple, vous pouvez utiliser des
+mentions sans valeurs GPA, ou des lettres sans mentions.
+
+## Niveaux du barème
+
+Les barèmes peuvent être définis à deux niveaux :
+
+| Niveau | Où il s'applique |
+| --- | --- |
+| **Valeur par défaut de l'année scolaire** | Tous les niveaux et périodes, sauf substitution en dessous. |
+| **Substitution par niveau** | Remplace le défaut de l'année pour un niveau spécifique. |
+| **Substitution par période** | Remplace le défaut du niveau pour une période de notation spécifique (ex. un examen national sur 100). Voir [Périodes de notation](./marking-periods). |
+
+## Configurer un barème de notation
+
+Allez dans **Académique → [Année scolaire] → Paramètres de notation → Barème de notation**.
+
+<Steps>
+
+<Step>
+### Ouvrir l'éditeur de barème
+
+Cliquez sur **Modifier le barème**. Si aucun barème n'existe encore, l'éditeur s'ouvre vide.
+</Step>
+
+<Step>
+### Ajouter des tranches
+
+Cliquez sur **Ajouter une tranche** pour chaque tranche. Remplissez :
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom** | Oui | Un libellé descriptif, ex. *Très bien*. |
+| **Score min** | Oui | Le score le plus bas couvert par cette tranche (inclus). |
+| **Score max** | Oui | Le score le plus haut couvert par cette tranche (inclus). |
+| **Lettre** | Non | Un code lettre affiché dans le carnet, ex. *A*. |
+| **Mention** | Non | Un libellé descriptif affiché sur les bulletins, ex. *Très bien*. |
+| **GPA** | Non | La valeur GPA associée à cette tranche. |
+</Step>
+
+<Step>
+### Couvrir toute la plage
+
+Les tranches doivent couvrir toute la plage de scores possible sans écarts ni chevauchements.
+Un avertissement s'affiche si des scores entre 0 et le maximum ne sont pas couverts.
+</Step>
+
+<Step>
+### Enregistrer
+
+Sauvegardez le barème. Il prend effet immédiatement pour toute note affichée à ce niveau.
+</Step>
+
+</Steps>
+
+## Format d'affichage
+
+Le barème de notation contrôle ce qui est *disponible* à l'affichage. Le **format d'affichage**
+contrôle ce qui est *réellement affiché* dans chaque contexte. Allez dans
+**Paramètres de notation → Affichage** pour choisir :
+
+| Format | Affiche |
+| --- | --- |
+| **Numérique uniquement** | Le score brut (ex. 14,5). |
+| **Lettre** | Le code lettre de la tranche (ex. B). |
+| **Mention** | La mention de la tranche (ex. Bien). |
+| **Numérique + mention** | Score et mention ensemble (ex. 14,5 — Bien). |
+
+Le format d'affichage principal est utilisé dans la grille du carnet de notes. Des formats
+supplémentaires peuvent être affichés dans les vues détaillées et sur les bulletins.
+
+## Substitutions par niveau
+
+Pour donner un barème différent à un niveau — par exemple si un niveau utilise le /20 et un
+autre le /100 — ouvrez **Académique → Niveaux → [Niveau] → Notes → Config** et définissez une
+**substitution de barème de notation** pour ce niveau. Le barème spécifique au niveau s'applique
+partout où les notes de ce niveau sont affichées.
+
+## Questions fréquentes
+
+### Ai-je besoin d'un barème de notation pour utiliser le carnet de notes ?
+
+Non. Le carnet de notes fonctionne avec des scores numériques bruts même sans barème. Un barème
+ajoute uniquement la couche d'affichage (lettre, mention, GPA). Vous pouvez ajouter ou modifier
+un barème à tout moment sans affecter les scores enregistrés.
+
+### Puis-je utiliser uniquement des lettres, sans scores numériques ?
+
+Le carnet de notes stocke et calcule les notes numériquement. Un barème qui associe chaque
+valeur numérique à une lettre est la meilleure façon d'afficher les notes sous forme de lettres
+— mais le calcul sous-jacent utilise toujours des chiffres.
+
+### Que se passe-t-il si deux tranches se chevauchent ou laissent un écart ?
+
+L'éditeur de barème affiche un avertissement. Les chevauchements ne sont pas autorisés. Les
+écarts signifient que certains scores ne correspondraient à aucune tranche et s'afficheraient
+sans lettre ni mention — couvrez toute la plage pour éviter cela.
+
+### Les élèves peuvent-ils voir le barème de notation ?
+
+Les élèves et les parents voient la lettre ou la mention appliquée à leur note dans la vue
+élève, conformément au format d'affichage configuré. Le tableau complet des tranches n'est pas
+visible par les élèves.
+
+### Puis-je définir un barème différent pour les examens externes notés sur 100 ?
+
+Oui. Utilisez la substitution de configuration par période sur l'entrée de période de notation
+de l'examen externe. Définissez le barème de notation sur celui conçu pour le /100 — il ne
+s'applique qu'aux scores de cet examen tandis que le reste du niveau utilise son propre barème.
+
+## Articles liés
+
+- [Périodes de notation et schéma de notation](./marking-periods)
+- [Carnet de notes](./gradebook)
+- [Bulletins](./report-cards)

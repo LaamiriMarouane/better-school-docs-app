@@ -8,6 +8,10 @@
     "quizzes",
     "exams",
     "gradebook",
+    "report-cards",
+    "marking-periods",
+    "grading-scale",
+    "competencies",
     "sessions-and-attendance"
   ]
 }

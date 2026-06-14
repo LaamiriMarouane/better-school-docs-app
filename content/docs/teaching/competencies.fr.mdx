@@ -1,0 +1,136 @@
+---
+title: Notation par compétences
+description: Exécutez un suivi des compétences en parallèle des notes numériques — créez une bibliothèque de compétences par matière, attachez des compétences aux évaluations et laissez les enseignants définir les niveaux de maîtrise par élève et par semestre.
+---
+
+La **notation par compétences** est un suivi parallèle qui enregistre le niveau de maîtrise d'un
+élève par rapport à des objectifs d'apprentissage nommés, en complément de ses notes numériques.
+Les notes numériques et les niveaux de compétences coexistent — ni l'un ni l'autre ne remplace
+l'autre. Les enseignants peuvent enregistrer des preuves de compétences sur les évaluations et
+définir un niveau de maîtrise semestriel pour chaque compétence ; les deux apparaissent sur le
+bulletin.
+
+<Callout title="Pour qui">
+Les administrateurs qui configurent les référentiels de compétences, et les enseignants qui
+enregistrent les progrès en compétences des élèves.
+</Callout>
+
+<Callout title="Lié à la matière">
+Les compétences n'apparaissent que pour les matières dotées d'une bibliothèque de compétences.
+Les matières configurées en mode Numérique uniquement n'affichent pas le suivi des compétences.
+</Callout>
+
+## Les deux couches de compétences
+
+| Couche | Ce qu'elle représente | Qui la renseigne |
+| --- | --- | --- |
+| **Preuve d'évaluation** | Un niveau de maîtrise enregistré pour un travail spécifique (examen, quiz, évaluation libre). | L'enseignant, lors de la correction de l'évaluation. |
+| **Note semestrielle de compétences** | Un niveau global de maîtrise défini par l'enseignant pour l'élève sur cette compétence pour le semestre. | L'enseignant, dans la vue semestrielle du carnet. |
+
+Les deux couches sont indépendantes. Un enseignant peut enregistrer des preuves sur des évaluations
+individuelles et aussi définir la note semestrielle — ou définir directement la note semestrielle
+sans preuve au niveau des évaluations.
+
+## Configurer les compétences pour une matière
+
+### 1 — Définir le référentiel de compétences
+
+Avant d'ajouter des compétences, définissez les **niveaux de maîtrise** qui peuvent être attribués
+aux élèves. Allez dans **Académique → [Niveau] → Notes → Référentiel de compétences** et ajoutez
+des niveaux :
+
+| Champ | Remarques |
+| --- | --- |
+| **Nom** | ex. *Débutant*, *En développement*, *Maîtrisé*, *Exemplaire*. |
+| **Points** | Une valeur numérique utilisée pour ordonner et agréger les niveaux (ex. 1, 2, 3, 4). |
+| **Couleur** | Une couleur optionnelle affichée sur la puce dans le carnet. |
+
+### 2 — Construire la bibliothèque de compétences pour une matière
+
+Ouvrez **Enseignement → Matières → [Matière au Niveau] → Compétences** et ajoutez les compétences
+sur lesquelles les élèves seront évalués :
+
+| Champ | Remarques |
+| --- | --- |
+| **Nom** | L'objectif d'apprentissage, ex. *Peut appliquer le théorème de Pythagore*. |
+| **Code** | Code court optionnel, ex. *M-G-1*. |
+| **Description** | Détail ou critères de réussite optionnels. |
+
+Les compétences sont définies par matière à un niveau — la même matière à des niveaux différents
+a sa propre bibliothèque distincte.
+
+## Attacher des compétences à une évaluation
+
+Lors de la création ou de la modification d'un **modèle d'examen**, d'un **quiz** ou d'une
+**évaluation libre**, ouvrez l'onglet **Compétences** et sélectionnez les compétences couvertes
+par l'évaluation. Pour les modèles d'examen, la liste des compétences est définie une fois sur
+le modèle et est partagée entre tous les groupes qui passent cet examen.
+
+Lors de la correction de l'évaluation, l'enseignant peut attribuer un niveau de maîtrise pour
+chaque compétence attachée et chaque élève — en plus de (ou à la place de) saisir un score
+numérique.
+
+## Définir la note semestrielle de compétences
+
+Dans le carnet de notes, ouvrez la vue semestrielle d'une matière et sélectionnez le panneau
+**Compétences**. Pour chaque compétence et chaque élève, l'enseignant définit un **niveau de
+maîtrise semestriel**. C'est le jugement définitif pour le semestre — c'est ce qui apparaît sur
+le bulletin.
+
+Le système peut suggérer le niveau de la preuve d'évaluation la plus récente comme point de
+départ, mais l'enseignant définit toujours la note semestrielle finale.
+
+## Comment les compétences apparaissent sur le bulletin
+
+Quand un niveau a des compétences activées pour une matière, le bulletin affiche une section de
+compétences sous les notes numériques de cette matière. Chaque compétence est listée avec son
+niveau de maîtrise semestriel, affiché sous forme du nom de la tranche et d'une puce de couleur
+optionnelle.
+
+La note globale (*moyenne générale*) n'est pas affectée par les niveaux de compétences — ils
+sont affichés comme une section distincte et additive.
+
+## Questions fréquentes
+
+### Les notes de compétences affectent-elles la moyenne de l'élève ?
+
+Non. Les niveaux de compétences sont un suivi d'affichage parallèle. La moyenne numérique
+(*moyenne générale*) est toujours calculée à partir des notes numériques uniquement. Les niveaux
+de compétences n'ajoutent ni ne retirent rien à la moyenne numérique.
+
+### Puis-je utiliser les compétences sans notes numériques ?
+
+Le carnet de notes stocke toujours des notes numériques. Si une matière n'utilise que les
+compétences, vous pouvez saisir des notes numériques à 0 ou exempter les élèves — mais un mode
+entièrement basé sur les compétences, sans colonne numérique, n'est pas disponible dans la
+version actuelle.
+
+### Plusieurs évaluations peuvent-elles couvrir la même compétence ?
+
+Oui. Plusieurs évaluations peuvent être liées à la même compétence. La couche de preuves
+enregistre un niveau de maîtrise par (élève, évaluation, compétence). L'enseignant examine
+toutes les preuves lors de la définition de la note semestrielle.
+
+### Quelle est la différence entre une preuve d'évaluation et la note semestrielle ?
+
+La preuve d'évaluation est enregistrée pour un travail spécifique — elle montre comment l'élève
+a réalisé cette tâche. La note semestrielle de compétences est le jugement global de l'enseignant
+pour l'ensemble du semestre — elle prend en compte toutes les preuves mais est définie par
+l'enseignant, pas dérivée automatiquement.
+
+### Les parents peuvent-ils voir les résultats des compétences ?
+
+Oui. Les niveaux de compétences apparaissent dans la vue élève et sur le bulletin, en utilisant
+les mêmes noms de niveaux de maîtrise définis par l'école.
+
+### Les compétences sont-elles disponibles pour toutes les matières ?
+
+Seulement pour les matières pour lesquelles l'administrateur a construit une bibliothèque de
+compétences. Les matières sans compétences définies n'affichent que des notes numériques.
+
+## Articles liés
+
+- [Carnet de notes](./gradebook)
+- [Périodes de notation et schéma de notation](./marking-periods)
+- [Bulletins](./report-cards)
+- [Examens](./exams)

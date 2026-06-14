@@ -1,0 +1,190 @@
+---
+title: Marking periods and grading scheme
+description: Set up a level's marking periods and grading scheme — term weights, sub-term period splits, external exam entries, and period-level scale overrides — so the gradebook calculates correctly.
+---
+
+The **grading scheme** and **marking periods** together define how a student's year grade is
+assembled for a level. The grading scheme sets the year-level weights (which terms and external
+exams contribute and how much). Marking periods are the grading units inside each term where
+teachers record assessments.
+
+<Callout title="Who this is for">
+Administrators configuring the grading structure for a level before teachers start entering marks.
+</Callout>
+
+## The three weight rings
+
+Every grade calculation passes through three nested rings:
+
+| Ring | What it controls |
+| --- | --- |
+| **Year ring** (grading scheme) | How much each term and each external exam contributes to the year grade. Weights must sum to 100%. |
+| **Term ring** (marking periods) | How much each marking period contributes within its term. Weights must sum to 100%. |
+| **Leaf ring** (grade categories) | How much each category (Exams, Assignments…) contributes within a marking period. See [Gradebook](./gradebook). |
+
+If a term has only one marking period (the default), the term ring is trivially 100% and the term
+grade equals that period's grade.
+
+## Set up the grading scheme
+
+The grading scheme lives in the level's grading settings. Open
+**Academic → Levels → [Level] → Grading → Scheme**.
+
+### Load a preset
+
+Use a preset as a starting point:
+
+| Preset | Year ring |
+| --- | --- |
+| **Two terms (standard)** | T1 50%, T2 50% |
+| **Grade 6 / Grade 9** | T1 25%, T2 25%, Regional exam 50% |
+| **BAC** | T1 12.5%, T2 12.5%, Regional 25%, National 50% |
+
+You can adjust any preset after loading it.
+
+### Add or edit entries manually
+
+Each entry is either an **internal term** (links to a term definition) or an **external exam**
+(links to an external exam you have defined). Set a weight for each entry. The running total is
+shown — it must reach 100% for the scheme to be valid.
+
+<Callout title="Weights below 100% warn but don't hard-block">
+If the year ring does not sum to 100%, a warning appears and averages are renormalised
+automatically. Close the gap when you are ready, but it will not prevent teachers from entering
+grades.
+</Callout>
+
+## Manage marking periods
+
+Marking periods live inside each term. Open
+**Academic → Levels → [Level] → Grading → Marking periods**.
+
+### Default state
+
+When a term is created, **one marking period at 100%** is added automatically. You see it listed
+even if you never split the term. Teachers record assessments inside that single period.
+
+### Split a term
+
+To divide a term (for example into Midterm and End-of-term):
+
+<Steps>
+
+<Step>
+### Open the term
+
+Select the term in the marking periods view.
+</Step>
+
+<Step>
+### Add a period
+
+Click **Add period** and give it a name (e.g. *Midterm*) and a within-term weight.
+</Step>
+
+<Step>
+### Set weights so they sum to 100%
+
+The total for all periods in the term must reach 100%. A running total is shown in green when
+the sum is correct.
+</Step>
+
+<Step>
+### Repeat for all terms that need splitting
+
+Each term's periods are independent — you can split Term 1 into two periods while Term 2 stays
+as one.
+</Step>
+
+</Steps>
+
+<Callout title="You cannot delete the last period in a term">
+Every term must keep at least one marking period. Deleting a period that still has assessments
+or grades recorded against it will be blocked.
+</Callout>
+
+### Minimum pass score
+
+Each marking period can have an optional **minimum pass score** (e.g. 10/20). If a student's
+period grade falls below it, a fail flag is shown on the gradebook and report card even if their
+overall average is above the pass threshold.
+
+## External exams
+
+An **external exam** (regional or national) is an entry in the grading scheme of kind External
+rather than a term. Define the exam first, then add it to the scheme.
+
+### Define an external exam
+
+Go to **Academic → External Exams** and add the exam.
+
+| Field | Notes |
+| --- | --- |
+| **Name** | e.g. *Regional Exam 2024*. |
+| **Code** | Optional short code. |
+| **Default max score** | The score the exam is marked out of (e.g. 20). |
+| **Covered subjects** | Select which subjects the exam covers. Each gets a coefficient and optional max score. The coefficient defaults from the subject's school coefficient but can be adjusted — it is used only for the exam's own average, never for the overall average. |
+
+### Add the exam to the scheme
+
+Open the level's grading scheme, add an External entry, and link it to the exam. Set its year-ring
+weight. The year ring must still sum to 100% across all internal terms and external entries.
+
+### Enter scores
+
+During the exam period, go to **Academic → External Exams → [Exam] → Scores** to enter each
+student's score per covered subject. Students can be marked Absent for individual subjects.
+
+## Period grading config override
+
+Each marking period can override the level's grading settings for that period only — useful when
+an external exam is scored on a different scale from internal assessments.
+
+Open a marking period and choose **Config override** to set:
+
+- a different **grading scale** (e.g. /100 instead of /20),
+- a different **calculation method** or **rounding**,
+- a different **pass threshold**.
+
+Fields left blank inherit from the level (or school-year) defaults.
+
+## Frequently asked questions
+
+### How do I set up Term 1 = 25%, Term 2 = 25%, Regional = 50%?
+
+Open the level's grading scheme, add two internal term entries (T1 and T2 at 25% each) and one
+external entry linked to the regional exam at 50%. Make sure the regional exam has been defined
+first with its covered subjects and coefficients.
+
+### What happens if I don't split a term?
+
+Nothing changes. The single auto-period covers 100% of the term, so the term grade equals the
+period grade. The system always works with marking periods, but with one period per term the
+result is identical to a simple term-based gradebook.
+
+### Can I rename a marking period?
+
+Yes. Open the period and edit its name. The name appears on the gradebook column header and on
+the report card.
+
+### If I add an external exam, do all subjects get a score?
+
+No. You choose which subjects the exam covers when you define it. Subjects not covered by the
+exam have the exam's weight dropped for them — their year grade is computed from terms only,
+and the remaining weights are renormalised to sum to 100%.
+
+### Can two levels share the same grading scheme?
+
+No — each level has its own scheme. But you can load the same preset for multiple levels
+and then adjust each one independently.
+
+### Do marking periods carry over to next year?
+
+Yes. Marking period **definitions** are per level and reused every year. The per-year instance
+(its weight snapshot and assessments) is created fresh each year during academic year setup.
+
+## Related articles
+
+- [Gradebook](./gradebook)
+- [Report cards](./report-cards)
+- [Grading scale](./grading-scale)

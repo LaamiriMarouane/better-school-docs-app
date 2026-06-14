@@ -1,11 +1,13 @@
 ---
 title: Gradebook
-description: See how exam, assignment, and quiz results come together into each student's subject grade, and review or adjust them.
+description: See how assessment results combine through marking periods, term weights, and grading schemes into each student's subject grade, overall average, and report card.
 ---
 
-The **gradebook** is where every mark a student earns comes together. Results from
-[exams](./exams), [assignments](./assignments), and [quizzes](./quizzes) are grouped into
-**categories**, weighted, and combined into each student's grade for a subject.
+The **gradebook** is where every mark a student earns comes together. Results from all assessment
+types — scheduled [exams](./exams), [assignments](./assignments), [quizzes](./quizzes), and
+manually entered grades — are placed in **grade categories**, averaged within **marking periods**,
+and combined — according to the level's **grading scheme** — into each student's subject grade
+and overall year average.
 
 <Callout title="Who this is for">
 Teachers and administrators managing grades, and students and parents viewing them.
@@ -13,32 +15,168 @@ Teachers and administrators managing grades, and students and parents viewing th
 
 ## Where grades come from
 
-A student's subject grade is built from the marked work across the term:
+A student's subject grade is built from every piece of assessed work recorded during the year.
+There are three kinds of assessment, each with its own workflow:
 
-- **Exam** results,
-- **Assignment** grades,
-- **Quiz** scores.
+**Exams** — scheduled sittings that go through a template, timetable slot, room, supervisors, and
+separate exam attendance. Results stay private until published. See [Exams](./exams).
 
-Each of these is placed in a **grade category**.
+**Assignments and quizzes** — work given to students to complete. File-based assignments
+(homework, projects) collect submissions; quizzes are auto-graded. See
+[Assignments](./assignments) and [Quizzes](./quizzes).
+
+**Free assessments** — manually entered grade columns with no submission workflow. Used for
+things like oral presentations, class participation, behavior, notebook checks, or bonus points.
+Teachers open the subject's gradebook and enter scores directly.
+
+Every assessment belongs to a **grade category** and is recorded inside a **marking period**.
+
+## Marking periods
+
+A **marking period** is the grading unit within a term. Every term gets at least one marking
+period automatically — when there is only one, it covers the whole term at 100% weight. You can
+split a term into more periods when your school structure requires it, for example Midterm and
+End-of-term, or four quarterly periods across two semesters.
+
+<Callout title="One period per term is the default">
+Most schools start with one marking period per term. You only need to add more when you want
+sub-term grading divisions such as quarterly assessments or midterm grades.
+</Callout>
+
+Assessments are always recorded inside a marking period — never directly at the term level. When
+there is only one period, the experience is identical to a term-based gradebook.
 
 ## Grade categories
 
-A **grade category** groups assessments of a kind — for example *Exams*, *Assignments*, *Quizzes* —
-and gives each group a **weight**. You can:
+A **grade category** groups assessments of a kind — for example *Exams*, *Assignments*, *Quizzes*
+— and gives each group a **weight**. Within a marking period, all category weights for a subject
+must add up to 100%. You can:
 
-- set how much each category **counts** toward the final grade (its weight),
-- mark a category as **not counting**, when it's for information only,
+- set how much each category **counts** toward the period grade (its weight),
+- mark a category as **not counting**, when it is for information only,
 - define categories for the whole school or per **level**.
+
+## Grading scheme
+
+Each level has a **grading scheme**: an ordered list of entries whose weights sum to 100% and
+that together make up the subject year grade. An entry is either:
+
+- an **internal term** — the term's contribution, itself a weighted sum of its marking periods,
+- an **external exam** — a national or regional exam that covers a subset of subjects with its own
+  scoring and coefficients.
+
+| Example — two equal terms | Weight |
+| --- | --- |
+| Term 1 | 50% |
+| Term 2 | 50% |
+
+| Example — terms + regional exam (Grade 6) | Weight |
+| --- | --- |
+| Term 1 | 25% |
+| Term 2 | 25% |
+| Regional exam | 50% |
+
+You can load a **preset** (standard two-term, Grade 6, Grade 9, BAC) or build the scheme from
+scratch. Editing the scheme never affects past years — each year's weights are snapshotted
+independently.
 
 ## How a grade is worked out
 
-1. Each piece of work is marked out of its own maximum.
-2. Marks are grouped and averaged **within each category**.
-3. The category averages are combined by **weight** into the **subject grade** for the term.
-4. Term grades combine into the **year grade**.
+The calculation runs in three nested steps.
 
-Grades use your school's **grading scale** and **rounding**, set in the academic year's gradebook
-settings — for example, marks out of 20, rounded to one decimal place.
+**Step 1 — Period grade (the leaf)**
+
+Within a marking period: assessments are averaged inside their category, then the category
+averages are combined by their weights → **period grade**. This uses the level's grading scale,
+calculation method, and rounding.
+
+**Step 2 — Term grade**
+
+If a term has multiple marking periods, their period grades are combined by each period's
+within-term weight → **term grade**. When there is only one period, the term grade equals the
+period grade.
+
+**Step 3 — Subject year grade**
+
+The scheme entries (internal terms and any external exam) are combined by their year-ring weights
+→ **subject year grade**.
+
+**Moyenne générale (overall average)**
+
+Each subject's year grade is multiplied by its **coefficient** (the school-wide weighting for
+that subject at that level), summed across all subjects, then divided by the total coefficients →
+the student's overall average.
+
+Grades use your school's **grading scale** and **rounding** — for example marks out of 20,
+rounded to one decimal place — configured per level in the gradebook settings.
+
+## External exams
+
+An **external exam** (regional or national) is a separate grading scheme entry. It covers a
+specific subset of subjects with its own coefficients and maximum score. Those coefficients are
+used only to compute the **exam average**, which appears on the report card as a separate line.
+
+**The exam average is independent of the overall average.** The student's overall average always
+uses the school's own coefficients across all subjects — the exam's coefficients never feed into
+it.
+
+When a subject is not covered by the external exam, the exam's weight is dropped for that subject
+and the remaining entries are renormalised so they still sum to 100%.
+
+## Calculation scenarios
+
+### Scenario 1 — Two equal terms, no external exam
+
+A standard primary-level setup: two equal terms, one marking period each.
+
+**Scheme:** Term 1 = 50%, Term 2 = 50%
+
+Student, Maths: T1 = 14, T2 = 12.
+
+| Part | Grade | Weight | Contribution |
+| --- | --- | --- | --- |
+| Term 1 | 14 | 50% | 7.0 |
+| Term 2 | 12 | 50% | 6.0 |
+| **Year grade** | | | **13.0** |
+
+### Scenario 2 — Two terms + regional exam (Grade 6)
+
+**Scheme:** Term 1 = 25%, Term 2 = 25%, Regional = 50%
+
+**Maths** — covered by the regional exam:
+
+| Part | Grade | Weight | Contribution |
+| --- | --- | --- | --- |
+| Term 1 | 14 | 25% | 3.5 |
+| Term 2 | 12 | 25% | 3.0 |
+| Regional | 16 | 50% | 8.0 |
+| **Year grade** | | | **14.5** |
+
+**Physical Education** — not covered by the regional exam. The exam weight is dropped and Term 1 /
+Term 2 are renormalised to 50% each:
+
+| Part | Grade | Weight (renormalised) | Contribution |
+| --- | --- | --- | --- |
+| Term 1 | 15 | 50% | 7.5 |
+| Term 2 | 13 | 50% | 6.5 |
+| **Year grade** | | | **14.0** |
+
+### Scenario 3 — Multiple marking periods per term (quarter system)
+
+**Scheme:** Semester 1 = 45%, Semester 2 = 45%, Final exam = 10%
+**Within Semester 1:** Quarter 1 = 50%, Quarter 2 = 50%
+**Within Semester 2:** Quarter 3 = 50%, Quarter 4 = 50%
+
+Student, Maths:
+
+| Marking period | Grade | Within-term weight | Term grade |
+| --- | --- | --- | --- |
+| Q1 | 15 | 50% | — |
+| Q2 | 13 | 50% | **14.0** (S1) |
+| Q3 | 16 | 50% | — |
+| Q4 | 14 | 50% | **15.0** (S2) |
+
+Year grade = 14.0 × 45% + 15.0 × 45% + Final (12) × 10% = 6.3 + 6.75 + 1.2 = **14.25**
 
 ## Grade statuses
 
@@ -53,22 +191,69 @@ In the gradebook grid, each cell shows where a student stands:
 
 ## The gradebook views
 
-- **Class gradebook** — a grid of students against subjects, showing each subject grade.
-- **Assignment gradebook** — a grid of students against assignments and quizzes, where you enter
-  grades quickly.
-- **Student view** — what a student (and their parents) see: their grade per subject, the breakdown
-  by category, and their class rank.
+- **By term** — term → marking periods → assessments; edit a score and the grades recalculate
+  live up the chain.
+- **By class** — each subject's final year grade, overall average, class rank, and mention.
+- **All periods** — every period value and final grade per subject; open a final to see the full
+  breakdown: which entries counted, which were dropped and renormalised, any pass-fail gate flags.
+- **Student view** — what a student (and their parents) see: grade per subject, breakdown by
+  category and period, class rank.
 
 ## Adjust a grade
 
-- **Override** — set a student's subject grade by hand, with a reason, when the calculated grade
-  shouldn't apply.
+- **Override** — set a student's period grade by hand, with a reason, when the calculated grade
+  shouldn't apply. Term and year grades are always computed from period values and cannot be
+  overridden directly.
 - **Remark** — add a note about a student's performance without changing the grade.
 
 ## Report cards
 
-You can produce a student's **report card** — their grades per subject for the term or year — ready
-to share with families.
+You can produce a student's **report card** — period grades, term grades, year grade, overall
+average, rank, and mention — ready to share with families. When the level has an external exam,
+the report card also shows the **exam average** as a separate line.
+
+Grades on a report card are snapshotted at generation, so they stay fixed even if assessment
+marks are edited afterwards.
+
+## Frequently asked questions
+
+### What is a marking period?
+
+A marking period is the grading unit within a term. Every term starts with one marking period at
+100% of the term weight — you see it listed even if you never split it. Assessments are recorded
+and averaged inside a marking period, not directly at the term level.
+
+### How is a student's year grade calculated?
+
+The year grade for a subject is a weighted sum of the level's grading scheme entries. Each
+internal term contributes its term grade (itself a weighted average of its marking periods), and
+any external exam contributes its score for that subject. Weights are set in the scheme and must
+sum to 100%.
+
+### What happens when a subject isn't covered by an external exam?
+
+The exam entry's weight is dropped for that subject and the remaining entries are renormalised so
+they still sum to 100%. The year grade is computed from terms only, with a visible note that the
+exam didn't apply to the subject.
+
+### Can different levels have different term weights?
+
+Yes. Each level has its own grading scheme. A primary level might use two equal terms (50%/50%),
+while Grade 6 might use Term 1 (25%), Term 2 (25%), and a regional exam (50%). Changes to one
+level's scheme never affect other levels.
+
+### What is the moyenne générale?
+
+The **moyenne générale** (overall average) is the student's weighted average across all subjects,
+using each subject's school coefficient. It is always computed from school coefficients over all
+subjects. The external exam's own coefficients are only used for the separate exam average line —
+they never feed into the overall average.
+
+### Can I split a term into multiple marking periods?
+
+Yes. In the level's grading setup, open the term and add marking periods — for example Midterm
+and End-of-term, or four quarterly periods. Set each period's within-term weight so they sum to
+100%. Teachers then record assessments inside a specific period, not at the term level.
 
 ## Related articles
 
