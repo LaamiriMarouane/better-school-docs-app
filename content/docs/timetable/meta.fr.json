@@ -4,7 +4,9 @@
     "index",
     "prerequisites",
     "timetable-config",
+    "teaching-load",
     "lessons-and-assignments",
+    "teacher-assignments",
     "scheduling-setup",
     "constraints",
     "generate-and-publish"

@@ -1,79 +1,64 @@
 ---
 title: Inscrire des élèves en masse
-description: Inscrivez plusieurs élèves dans la même classe en une seule fois, avec un échéancier de paiement commun.
+description: Inscrivez plusieurs pré-inscriptions en attente du même niveau en une seule action.
 ---
 
-L'**inscription en masse** enregistre plusieurs élèves dans la **même classe** en une
-seule action. C'est le moyen le plus rapide de remplir une classe en début d'année.
+L'**inscription en masse** transforme plusieurs **pré-inscriptions en attente** du **même
+niveau** en inscriptions en une seule action. La classe et le plan de paiement sont facultatifs —
+vous pouvez les affecter plus tard depuis le hub Inscriptions.
 
 <Callout title="Pour qui">
-Les administrateurs qui inscrivent tout un groupe-classe en une fois.
+Les administrateurs qui convertissent un lot de préinscriptions en inscriptions.
 </Callout>
 
 ## Avant de commencer
 
-- Les **élèves** et la **classe** cible doivent déjà exister.
-- Un **échéancier de paiement** est obligatoire pour l'inscription en masse — il est
-  appliqué à chaque élève du lot.
+- Des **pré-inscriptions** en attente existent pour le même niveau — voir
+  [Pré-inscriptions](./pre-inscriptions).
+- Facultatif : une **classe** et/ou un **plan de paiement** pour ce niveau.
 
 ## Étapes
 
 <Steps>
 
 <Step>
-### Ouvrir le formulaire d'inscription en masse
+### Ouvrir Préinscriptions et sélectionner les lignes
 
-Depuis la zone Inscriptions, choisissez **Inscrire des élèves en masse**.
-
-<Screenshot
-  label="Formulaire d'inscription en masse"
-  caption="Choisissez un niveau et une classe, sélectionnez les élèves, puis un échéancier."
-/>
+Allez dans **Admissions et inscriptions → Préinscriptions** (Direct / Admin). Sélectionnez des
+pré-inscriptions en attente qui partagent le **même niveau**, puis choisissez **Inscrire**.
 </Step>
 
 <Step>
-### Choisir le niveau et la classe
-
-Sélectionnez d'abord un **niveau**, puis la **classe** qu'il contient. La classe
-détermine où chaque élève sélectionné est inscrit.
-</Step>
-
-<Step>
-### Sélectionner les élèves
-
-Ajoutez chaque élève à la liste des **élèves sélectionnés**. Ils seront tous inscrits
-dans la classe choisie.
-</Step>
-
-<Step>
-### Définir l'échéancier et la date
-
-Complétez les champs restants, puis validez.
+### Confirmer les champs du lot
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Classe** | Oui | La classe dans laquelle tous les élèves sélectionnés sont inscrits. |
-| **Échéancier de paiement** | Oui | Appliqué à chaque élève du lot. |
-| **Date d'inscription** | Non | Par défaut aujourd'hui si laissée vide. |
-| **Notes** | Non | Notes facultatives appliquées au lot. |
+| **Niveau** | Oui | Verrouillé sur le niveau de la sélection. |
+| **Filière** | Lorsque le niveau propose des filières | Obligatoire si des filières sont proposées ; doit rester cohérente avec chaque pré-inscription. |
+| **Classe** | Non | Même classe pour tout le lot, ou laissez vide et affectez plus tard. |
+| **Plan de paiement** | Non | Plan partagé pour le lot, ou laissez vide et affectez plus tard. |
+| **Date d'inscription** | Non | Aujourd'hui par défaut si laissé vide. |
+| **Notes** | Non | Notes facultatives pour le lot. |
 </Step>
 
 <Step>
-### Vérifier le résultat
+### Examiner le résultat
 
-Le formulaire indique combien d'inscriptions ont réussi. Tout élève qui n'a pas pu être
-inscrit est listé avec le motif — corrigez ces cas et relancez si nécessaire.
+Le formulaire indique combien d'inscriptions ont réussi. Celles qui ont échoué sont listées avec
+un motif — corrigez-les et réessayez si besoin.
 </Step>
 
 </Steps>
 
-<Callout title="Besoin d'échéanciers différents ?">
-L'inscription en masse applique un seul échéancier commun. Si les élèves ont besoin
-d'échéanciers différents, inscrivez-les individuellement ou changez l'échéancier
-ensuite depuis l'inscription.
+<Callout title="Besoin de plans ou classes différents ?">
+L'inscription en masse peut appliquer une classe et un plan partagés. Si les élèves en ont besoin
+de différents, laissez ces champs vides et utilisez **Affecter une classe** / **Affecter un plan**
+sur **Admissions et inscriptions → Inscriptions**, ou modifiez une inscription individuelle
+ensuite.
 </Callout>
 
 ## Articles liés
 
+- [Pré-inscriptions](./pre-inscriptions)
 - [Créer une inscription](./create-an-enrollment)
 - [Transférer un élève entre classes](./transfer-a-student-between-classes)

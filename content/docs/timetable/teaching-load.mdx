@@ -1,0 +1,59 @@
+---
+title: Teaching load
+description: Set how many lessons per week each subject is taught per level — the demand the timetable generator must place.
+---
+
+**Teaching load** is how many weekly lessons each **subject at a level** needs in the selected
+academic year, and how those lessons are shaped (single periods, doubles, split groups). The
+generator uses this as **lesson demand** — a subject with no load is simply not scheduled.
+
+<Callout title="Who this is for">
+Administrators preparing subject demand before generating a timetable.
+</Callout>
+
+<Callout title="Teaching load vs. teacher limits">
+**Teaching load** is *how much of each subject* the school needs. **Teacher limits** (on the
+Teachers tab) are *how much each teacher can work*. Set both — they answer different questions.
+See [Scheduling setup](./scheduling-setup).
+</Callout>
+
+## Open teaching load
+
+Go to **Academic → Timetable → Config**, then open the **Teaching load** tab.
+
+Pick a **term** to filter the subject list on the left (defaults to the active term). The load
+you save is still **for the academic year** — the term only controls which subjects you see.
+
+## Set a subject's load
+
+Select a subject (at a level) from the sidebar, then build its weekly lessons as one or more
+configurations:
+
+| Setting | What it does |
+| --- | --- |
+| **Count** | How many lessons of this shape (for example *2 × Double*). |
+| **Span** | How many periods the lesson occupies in a row — Single, Double, Triple, or more. |
+| **Split** | When checked, the lesson is for a **class group** (divided class), not the whole class. |
+| **Room type** | Optional room type for these lessons, or inherit from the subject. |
+
+The total number of weekly lessons is the sum of those configurations. Leave a subject empty
+(no lessons) to leave it **unscheduled** for the year.
+
+<Screenshot
+  label="Teaching load editor"
+  caption="Pick a subject, then set how many lessons per week and how they are shaped."
+/>
+
+## Tips and best practices
+
+- Set teaching load **before** you assign teachers and generate — demand drives what must be
+  placed.
+- Use **Split** only for subjects that run in class groups; otherwise leave it off.
+- Match **span** to how your school actually teaches (labs often need a double).
+
+## Related articles
+
+- [Lessons and assignments](./lessons-and-assignments)
+- [Scheduling setup](./scheduling-setup)
+- [Prerequisites](./prerequisites)
+- [Generate and publish](./generate-and-publish)

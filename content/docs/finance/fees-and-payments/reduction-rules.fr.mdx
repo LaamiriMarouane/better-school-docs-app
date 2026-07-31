@@ -1,0 +1,109 @@
+---
+title: Règles de réduction
+description: Créez des remises de frais réutilisables, attribuez-les aux élèves, et comprenez en quoi elles diffèrent des remises ponctuelles à l'encaissement.
+---
+
+Les **règles de réduction** sont des remises réutilisables — par exemple une réduction fratrie
+ou une réduction enfant du personnel — que vous définissez une fois, puis **attribuez** aux
+élèves. Une fois appliquées, elles abaissent les montants des échéances de l'élève. Elles sont
+distinctes d'une remise ponctuelle saisie au moment du paiement.
+
+<Callout title="Pour qui">
+Les administrateurs qui définissent des règles de remise à l'échelle de l'école et les appliquent
+aux élèves.
+</Callout>
+
+## Ouvrir le catalogue
+
+Allez dans **Finance → Règles de réduction**. Les règles appartiennent à l'année scolaire
+sélectionnée dans le sélecteur d'année.
+
+## Créer une règle de réduction
+
+<Steps>
+
+<Step>
+### Ajouter une règle
+
+Cliquez sur **Ajouter une règle**.
+</Step>
+
+<Step>
+### Remplir la règle
+
+| Champ | Obligatoire | Remarques |
+| --- | --- | --- |
+| **Nom** | Oui | ex. *Réduction fratrie*. |
+| **Portée** | Oui | **Abonnement entier** (tout l'échéancier) ou **Frais spécifiques** (choisir un ou plusieurs frais). |
+| **Description** | Non | Notes facultatives. |
+| **Type de remise** | Oui | **Pourcentage** ou **Montant fixe**. |
+| **Valeur** | Oui | Supérieure à zéro ; les pourcentages ne peuvent pas dépasser 100. |
+| **Frais** | Si la portée est Frais spécifiques | Les frais auxquels s'applique la réduction. |
+| **Niveaux** | Non | Limiter la règle à certains niveaux. |
+| **Priorité** | Non | Les numéros les plus bas s'appliquent en premier lorsque plusieurs réductions se cumulent sur la même échéance. |
+</Step>
+
+<Step>
+### Enregistrer
+
+**Créer** (ou **Enregistrer** en modification). Vous pouvez ensuite **Activer** /
+**Désactiver** ou **Supprimer** une règle depuis la liste.
+</Step>
+
+</Steps>
+
+## Attribuer une réduction à un élève
+
+Les règles du catalogue ne font rien tant qu'elles ne sont pas attribuées.
+
+<Steps>
+
+<Step>
+### Ouvrir les réductions de l'élève
+
+Ouvrez l'élève, allez dans **Paiements**, puis choisissez **Réductions**.
+</Step>
+
+<Step>
+### Attribuer
+
+Cliquez sur **Attribuer la réduction**, choisissez une règle **active**, et confirmez.
+</Step>
+
+</Steps>
+
+### Statuts d'attribution
+
+| Statut | Ce que vous pouvez faire |
+| --- | --- |
+| **Active** | **Suspendre** ou **Retirer**. |
+| **Suspendue** | **Réactiver** ou **Retirer**. |
+| **Expirée** | Affichée pour l'historique — aucune action dans la liste. |
+
+Sur la même page vous pouvez voir un contexte tel que **Enfant du personnel** ou **Fratrie
+inscrite**. Ces cartes sont informatives — elles n'attribuent pas automatiquement une réduction.
+
+## Réductions vs remises à l'encaissement
+
+| Mécanisme | Où | Effet |
+| --- | --- | --- |
+| **Réduction attribuée** | Élève → Paiements → Réductions | Stockée sur l'élève ; les échéances affichent le montant réduit. |
+| **Appliquer une remise** | Lors de l'enregistrement d'un paiement | Ponctuelle sur ce paiement seulement — pas une réduction durable de l'élève. |
+
+Voir [Enregistrer un paiement](./record-a-payment) pour encaisser sur les échéances.
+
+## Conseils et bonnes pratiques
+
+- Créez les règles du catalogue avant la saison d'inscription, puis attribuez au fur et à mesure
+  des inscriptions.
+- Utilisez la **Priorité** lorsqu'un élève peut recevoir plus d'une réduction sur la même
+  échéance.
+- Préférez une règle nommée aux remises ponctuelles répétées lorsque la même remise s'applique
+  chaque mois.
+
+## Articles liés
+
+- [Créer des échéanciers](./create-payment-plans)
+- [Échéances et calendriers](./installments-and-schedules)
+- [Enregistrer un paiement](./record-a-payment)
+- [Configurer les frais](./set-up-fees)

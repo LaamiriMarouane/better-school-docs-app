@@ -1,17 +1,22 @@
 ---
 title: Pre-inscriptions
-description: "Record a prospective student's intended level for a year, then turn it into an enrollment."
+description: "Record a prospective student's intended level (and track) for a year, then turn it into an enrollment."
 ---
 
 A **pre-inscription** records that a student is expected to join a given **level** for an academic
-year, before a formal enrollment exists. It's an internal way to line up next year's intake and track
-who still needs to be enrolled — not a public application form. You manage them from **Students**, on
-the **Pre-inscriptions** tab.
+year — and a **track** when that level offers tracks — before a formal enrollment exists. It's an
+internal way to line up intake. You manage them under **Admissions & Enrollment → Applications**
+(Direct / Admin tab).
 
 <Callout title="Pre-inscription vs. enrollment">
-A pre-inscription names a **level** (e.g. *Grade 9*); an [enrollment](./create-an-enrollment) places
-the student in a specific **class** (e.g. *9A*) and starts billing. Pre-inscriptions don't collect
-fees or documents — those belong to enrollment.
+A pre-inscription names a **level** (e.g. *Grade 9*) and optional **track**. An
+[enrollment](./create-an-enrollment) places the student for the year and can add a **class** and
+**payment plan**. Pre-inscriptions don't collect fees — those belong to enrollment / billing.
+</Callout>
+
+<Callout title="Level vs education level">
+You pick a **Level** on the form. **Education level** (cycle) is part of how levels are structured
+in settings — it is not chosen separately here.
 </Callout>
 
 ## Statuses
@@ -28,15 +33,20 @@ fees or documents — those belong to enrollment.
 <Steps>
 
 <Step>
-### Open the Pre-inscriptions tab
+### Open Applications
 
-In **Students**, open **Pre-inscriptions**, then choose **Add**.
+Go to **Admissions & Enrollment → Applications**, open the Direct / Admin tab, then choose
+**Add**.
 </Step>
 
 <Step>
-### Pick the student and level
+### Pick the student, level, and track
 
-Search for the **student** and choose the **level** they're expected to join.
+| Field | Required | Notes |
+| --- | --- | --- |
+| **Student** | Yes | Search and select. |
+| **Level** | Yes | The level they are expected to join. |
+| **Track** | When the level offers tracks | Required if that level has offered tracks for the year. |
 </Step>
 
 <Step>
@@ -57,35 +67,28 @@ can have only **one Pending** pre-inscription per year.
 
 While a pre-inscription is **Pending**, you can:
 
-- **Edit** it — change the student or level.
+- **Edit** it — change the student, level, or track (when applicable).
 - **Reject** it — with a reason the record keeps.
 - **Cancel** it — with an optional reason.
 
-You can view the reason later on a rejected or cancelled record, and delete ones that are pending or
-rejected.
+You can delete ones that are pending or rejected.
 
 ## Turn it into an enrollment
 
-There are two ways a pending pre-inscription becomes **Enrolled**:
+- **Bulk enroll from the list** — select several pending pre-inscriptions of the **same level**,
+  choose **Enroll**, then set track (if needed), and optionally class and payment plan. See
+  [Bulk enroll students](./bulk-enroll-students) and [Create an enrollment](./create-an-enrollment).
 
-- **Enroll the student normally** — when you [create an enrollment](./create-an-enrollment) for that
-  student in the same year, their pending pre-inscription flips to **Enrolled** automatically.
-- **Bulk enroll from the list** — select several pre-inscriptions of the **same level**, pick a
-  **class** and a **payment plan**, and enroll them in one go.
+When enrollment succeeds for that student and year, the pre-inscription flips to **Enrolled**.
 
-<Callout title="The class must match the level">
-When you enroll, the class's **level** has to match the pre-inscription's level — that's how the two
-line up. Once a pre-inscription is **Enrolled**, it's final: it can't be edited, cancelled, or
-deleted.
+<Callout title="Level and track must match">
+When you enroll, the placement **level** must match the pre-inscription. If the pre-inscription
+has a **track**, the enrollment track must match too. Once **Enrolled**, the pre-inscription can't
+be edited, cancelled, or deleted.
 </Callout>
-
-## See the numbers
-
-Pre-inscription totals appear on the [dashboard](../../dashboards/reports-and-statistics) — counts by
-**status** and **gender**, new ones over time, and a breakdown **per level** — so you can see how next
-year's intake is filling up.
 
 ## Related articles
 
 - [Create an enrollment](./create-an-enrollment)
 - [Bulk enroll students](./bulk-enroll-students)
+- [Academic year setup](../build-the-academic-foundation/academic-year-setup)

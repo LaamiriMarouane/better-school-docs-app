@@ -1,72 +1,82 @@
 ---
 title: Créer une inscription
-description: Inscrivez un élève dans une classe pour une année scolaire, avec un échéancier de paiement.
+description: Placez un élève sur un niveau pour l'année scolaire — affectez facultativement une filière, une classe et un plan de paiement.
 ---
 
-Une **inscription** relie un élève à une **classe** pour une année scolaire donnée.
-C'est elle qui place l'élève sur la liste de classe, la feuille de présence et
-l'emploi du temps — et, lorsqu'un échéancier de paiement y est associé, ce qui génère
-ses frais.
+Une **inscription** place un élève dans une année scolaire à un **niveau** (et une **filière**
+lorsque le niveau en propose). Une **classe** et un **plan de paiement** sont facultatifs à la
+création — vous pouvez les affecter plus tard depuis le hub Inscriptions.
 
 <Callout title="Pour qui">
-Les administrateurs qui inscrivent les élèves dans les classes.
+Les administrateurs qui placent les élèves pour l'année.
+</Callout>
+
+<Callout title="Niveau, filière et niveau d'enseignement">
+L'inscription utilise le **Niveau** (ex. 3ᵉ), et la **Filière** uniquement lorsque ce niveau
+propose des filières. Le **niveau d'enseignement** (le cycle plus large) est défini sur le niveau
+lui-même dans la structure pédagogique — ce n'est **pas** un champ du formulaire d'inscription.
 </Callout>
 
 ## Avant de commencer
 
 - La fiche **élève** doit exister — voir [Ajouter des élèves](../onboard-people/add-students).
-- La **classe** doit exister pour l'année scolaire sélectionnée — voir
-  [Créer des classes](../build-the-academic-foundation/create-classes).
-- Un **échéancier de paiement** à associer — il génère les frais et échéances de l'élève.
+- Le **niveau** (et toute filière) doit être configuré pour l'année.
+- Facultatif : une **classe** et un **plan de paiement** pour ce niveau.
 
-<Screenshot
-  label="Page des inscriptions avec le bouton Ajouter une inscription"
-  caption="Les inscriptions sont listées pour l'année scolaire sélectionnée."
-/>
+## Comment l'inscription est créée aujourd'hui
 
-## Étapes
+Il n'y a pas de bouton séparé **Ajouter une inscription** sur la page Inscriptions. Dans l'UI
+d'administration, les inscriptions sont créées depuis **Préinscriptions**, puis gérées sur
+**Inscriptions**.
 
 <Steps>
 
 <Step>
-### Ouvrir la page Inscriptions
+### Ouvrir Préinscriptions
 
-Dans la barre latérale d'administration, allez dans **Académique → Inscriptions**, puis
-démarrez une nouvelle inscription. Vérifiez que la bonne année scolaire est
-sélectionnée dans le sélecteur d'année.
+Allez dans **Admissions et inscriptions → Préinscriptions**, restez sur l'onglet Direct / Admin
+([pré-inscriptions](./pre-inscriptions)).
 </Step>
 
 <Step>
-### Renseigner les détails de l'inscription
+### Sélectionner les lignes en attente et Inscrire
 
-Complétez les champs ci-dessous.
+Sélectionnez une ou plusieurs pré-inscriptions **En attente** du **même niveau**, puis choisissez
+**Inscrire**.
+</Step>
+
+<Step>
+### Confirmer le placement
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Élève** | Oui | L'élève à inscrire. |
-| **Classe** | Oui | La classe dans laquelle l'inscrire. Filtrez par niveau pour réduire la liste. |
-| **Date d'inscription** | Oui | La date de prise d'effet de l'inscription. |
-| **Échéancier de paiement** | Oui | L'échéancier qui génère les frais et échéances de l'élève. |
-| **Notes** | Non | Notes facultatives sur l'inscription. |
+| **Niveau** | Oui | Verrouillé sur le niveau de la pré-inscription. |
+| **Filière** | Lorsque le niveau propose des filières | Doit correspondre à la filière de la pré-inscription lorsqu'une a été définie. |
+| **Classe** | Non | Affectez maintenant ou plus tard depuis Inscriptions. |
+| **Plan de paiement** | Non | Affectez maintenant ou plus tard ; génère les frais une fois associé. |
+| **Date d'inscription** | Non | Peut être aujourd'hui par défaut. |
+| **Notes** | Non | Facultatif. |
 </Step>
 
 <Step>
-### Enregistrer l'inscription
+### Terminer sur le hub Inscriptions
 
-Validez le formulaire. L'élève apparaît désormais sur la liste de classe et dans la
-liste des inscriptions.
+Allez dans **Admissions et inscriptions → Inscriptions** pour revoir la liste. Utilisez
+**Affecter une classe** ou **Affecter un plan** en masse lorsque des élèves ont été inscrits sans
+classe ni plan.
 </Step>
 
 </Steps>
 
-<Callout title="Une inscription par classe">
-Un élève est inscrit dans une seule classe par année scolaire. Pour le déplacer
-ensuite, utilisez [Transférer un élève entre classes](./transfer-a-student-between-classes)
-plutôt que de créer une deuxième inscription.
+<Callout title="Un placement actif par année">
+Un élève a un seul placement d'inscription actif pour l'année. Pour changer de classe ou de
+niveau plus tard, utilisez [Changer de classe](./transfer-a-student-between-classes) plutôt que
+de créer une deuxième inscription.
 </Callout>
 
 ## Articles liés
 
+- [Pré-inscriptions](./pre-inscriptions)
 - [Inscrire des élèves en masse](./bulk-enroll-students)
 - [Transférer un élève entre classes](./transfer-a-student-between-classes)
-- [Suspendre ou radier une inscription](./suspend-or-withdraw-an-enrollment)
+- [Retirer une inscription](./suspend-or-withdraw-an-enrollment)

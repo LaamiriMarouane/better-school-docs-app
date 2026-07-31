@@ -7,7 +7,12 @@
     "assignments",
     "quizzes",
     "exams",
+    "grading-setup",
     "gradebook",
+    "report-cards",
+    "marking-periods",
+    "grading-scale",
+    "competencies",
     "sessions-and-attendance"
   ]
 }

@@ -1,71 +1,57 @@
 ---
-title: Transfer a student between classes
-description: Move an enrolled student from one class to another within the same academic year.
+title: Change a student's class
+description: Move an enrolled student to another class — and change level or track when needed.
 ---
 
-A **class transfer** moves an active enrollment from its current class to a different
-one — for example when a student changes section. The enrollment history is kept, so
-the move is traceable.
+**Change Class** updates an active enrollment's placement: **level**, **track** (when offered),
+and **class**. The enrollment history keeps the change so the move is traceable.
 
 <Callout title="Who this is for">
-Administrators correcting or changing a student's class placement.
+Administrators correcting or changing a student's placement.
 </Callout>
 
 ## Before you start
 
-- The student must have an **active enrollment** in the current class.
-- The **destination class** must exist for the same academic year.
+- The student must have an **active enrollment**.
+- The destination **level** / **class** must exist for the academic year.
 
 ## Steps
 
 <Steps>
 
 <Step>
-### Open the enrollment
+### Open Change Class
 
-Find the student's enrollment — from the Enrollments page or the student's profile —
-and open its actions.
-
-<Screenshot
-  label="Transfer class action on an enrollment"
-  caption="Transferring keeps the enrollment and records the move."
-/>
+On **Admissions & Enrollment → Enrollments**, open the enrollment's actions and choose
+**Change Class**.
 </Step>
 
 <Step>
-### Choose the new class
-
-Select the **destination class** the student should move to.
-</Step>
-
-<Step>
-### Give a reason
-
-Enter a **reason** for the transfer. You can add optional **notes** with more detail.
-The reason is stored on the enrollment's history.
+### Set the new placement
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **New class** | Yes | The class the student moves to. |
-| **Reason** | Yes | Why the transfer is happening. |
-| **Notes** | No | Optional extra detail. |
+| **Level** | Yes | Can stay the same or move to another level. |
+| **Track** | When the level offers tracks | Required if that level has offered tracks. |
+| **Class** | Yes | The class the student moves to. |
+| **Reason** | Yes | Why the change is happening (stored on history). |
 </Step>
 
 <Step>
 ### Confirm
 
-Confirm the transfer. The student now appears on the new class roster, and the old
-placement is recorded in the enrollment history.
+Confirm the change. The student appears on the new class roster; the previous placement stays in
+history.
 </Step>
 
 </Steps>
 
 <Callout title="Payment plans">
-A class transfer does not change the payment plan. To change fees, update the
-enrollment's payment plan separately.
+Changing class does not change the payment plan. To change fees, use **Change Payment Plan** on
+the enrollment separately.
 </Callout>
 
 ## Related articles
 
 - [Create an enrollment](./create-an-enrollment)
-- [Suspend or withdraw an enrollment](./suspend-or-withdraw-an-enrollment)
+- [Withdraw an enrollment](./suspend-or-withdraw-an-enrollment)

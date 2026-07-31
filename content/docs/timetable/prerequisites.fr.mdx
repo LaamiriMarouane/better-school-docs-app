@@ -21,7 +21,7 @@ Les administrateurs qui préparent l'école à la génération de l'emploi du te
 | 3 | **Niveaux** | Les matières et les classes sont organisées par niveau. | [Créer des niveaux](../getting-started/build-the-academic-foundation/create-levels). |
 | 4 | **Classes** | Les classes sont les groupes qui reçoivent un horaire. | [Créer des classes](../getting-started/build-the-academic-foundation/create-classes). |
 | 5 | **Matières** | Les matières à placer. Une matière peut exiger un type de salle (ex. un labo). | [Créer des matières](../getting-started/build-the-academic-foundation/create-subjects). |
-| 6 | **Matières par niveau (avec séances hebdomadaires)** | Indique au générateur *quelles* matières chaque niveau étudie et *combien de séances par semaine* chacune comporte. | Configuration du programme (matières de niveau). Voir [Séances et affectations](./lessons-and-assignments). |
+| 6 | **Matières par niveau (avec charge d'enseignement)** | Indique au générateur *quelles* matières chaque niveau étudie et *combien de séances par semaine* chacune comporte. | **Académique → Emploi du temps → Configuration → Charge d'enseignement**. Voir [Charge d'enseignement](./teaching-load) et [Séances et affectations](./lessons-and-assignments). |
 | 7 | **Salles** | Les séances ont besoin d'un lieu. Les salles ont une capacité et un type. | [Créer des salles](../getting-started/build-the-academic-foundation/create-rooms). |
 | 8 | **Enseignants** | Les personnes qui donnent les séances. | [Ajouter des enseignants](../getting-started/onboard-people/add-teachers). |
 | 9 | **Affectations enseignant–classe** | L'entrée la plus importante : qui enseigne chaque couple classe–matière. Le générateur place ces affectations. | [Séances et affectations](./lessons-and-assignments). |
@@ -63,10 +63,12 @@ Une fois tout ce qui précède en place, vous passez à la configuration propre 
 
 1. **[Configuration de l'emploi du temps](./timetable-config)** — la grille hebdomadaire des
    jours, créneaux et pauses.
-2. **[Réglages de planification](./scheduling-setup)** — disponibilité des enseignants et des
+2. **[Charge d'enseignement](./teaching-load)** — combien de séances chaque matière nécessite par
+   semaine.
+3. **[Réglages de planification](./scheduling-setup)** — disponibilité des enseignants et des
    salles, limites de charge et règles de salles.
-3. **[Contraintes](./constraints)** — les préférences que le générateur doit chercher à satisfaire.
-4. **[Générer et publier](./generate-and-publish)** — lancez, vérifiez et publiez.
+4. **[Contraintes](./constraints)** — les préférences que le générateur doit chercher à satisfaire.
+5. **[Générer et publier](./generate-and-publish)** — lancez, vérifiez et publiez.
 
 <Callout title="Astuce">
 Travaillez de haut en bas. Chaque étape suppose les précédentes faites — par exemple, vous ne

@@ -1,76 +1,41 @@
 ---
-title: Suspendre ou radier une inscription
-description: Modifiez le statut d'une inscription lorsqu'un élève fait une pause ou quitte l'école.
+title: Retirer une inscription
+description: Retirez un élève de son inscription pour le reste de l'année scolaire.
 ---
 
-Une inscription passe par différents **statuts** au cours de l'année. Deux d'entre eux
-gèrent le départ d'un élève :
-
-- **Suspendre** — une pause temporaire. L'élève est censé revenir, et l'inscription
-  peut être réactivée plus tard.
-- **Radier** — l'élève quitte la classe pour le reste de l'année.
+**Retirer** met fin à une inscription pour le reste de l'année lorsqu'un élève part.
+L'enregistrement de l'inscription et son historique sont conservés.
 
 <Callout title="Pour qui">
-Les administrateurs qui gèrent les élèves qui font une pause ou partent.
+Les administrateurs qui gèrent les élèves qui partent.
 </Callout>
 
-## Suspendre une inscription
+## Retirer une inscription
 
 <Steps>
 
 <Step>
-### Ouvrir l'inscription et choisir Suspendre
+### Ouvrir Retirer
 
-Trouvez l'inscription, ouvrez ses actions, puis choisissez **Suspendre**.
-
-<Screenshot
-  label="Boîte de dialogue de suspension d'inscription"
-  caption="La suspension exige un motif et accepte des notes facultatives."
-/>
+Sur **Admissions et inscriptions → Inscriptions**, ouvrez les actions de l'inscription et
+choisissez **Retirer**.
 </Step>
 
 <Step>
-### Indiquer un motif et confirmer
+### Confirmer
 
-Saisissez un **motif** (obligatoire) et des **notes** facultatives, puis confirmez. Le
-statut de l'inscription devient *Suspendue*.
+Confirmez le retrait. Le statut de l'inscription devient **Retiré**.
 </Step>
 
 </Steps>
 
-Pour faire revenir l'élève, ouvrez l'inscription suspendue et **réactivez-la**.
-
-## Radier une inscription
-
-<Steps>
-
-<Step>
-### Ouvrir l'inscription et choisir Radier
-
-Trouvez l'inscription, ouvrez ses actions, et choisissez **Radier**.
-</Step>
-
-<Step>
-### Indiquer un motif et confirmer
-
-Saisissez un **motif** (obligatoire) et des **notes** facultatives, puis confirmez. Le
-statut de l'inscription devient *Radiée*.
-</Step>
-
-</Steps>
-
-| Champ | Obligatoire | Remarques |
-| --- | --- | --- |
-| **Motif** | Oui | La raison de la suspension ou de la radiation de l'élève. |
-| **Notes** | Non | Détail supplémentaire facultatif, conservé dans l'historique de l'inscription. |
-
-<Callout type="warn" title="Suspendre ou radier">
-Utilisez **Suspendre** lorsque l'élève reviendra — l'inscription peut être réactivée.
-Utilisez **Radier** lorsque l'élève quitte la classe définitivement. Les deux
-conservent la fiche d'inscription et son historique.
+<Callout title="Suspendre">
+L'UI Inscriptions d'administration propose aujourd'hui **Retirer** (et changer de classe / plan
+de paiement). Il n'y a pas d'action **Suspendre** sur cet écran — ne cherchez pas de boîte de
+dialogue de suspension dans le hub actuel.
 </Callout>
 
 ## Articles liés
 
 - [Créer une inscription](./create-an-enrollment)
-- [Transférer un élève entre classes](./transfer-a-student-between-classes)
+- [Changer de classe](./transfer-a-student-between-classes)

@@ -1,78 +1,62 @@
 ---
 title: Bulk enroll students
-description: Enroll many students into the same class at once, with a shared payment plan.
+description: Enroll several pending pre-inscriptions of the same level at once.
 ---
 
-**Bulk enrollment** registers several students into the **same class** in a single
-action. It is the fastest way to populate a class at the start of a year.
+**Bulk enrollment** turns several **pending pre-inscriptions** of the **same level** into
+enrollments in one action. Class and payment plan are optional — you can assign them later from
+the Enrollments hub.
 
 <Callout title="Who this is for">
-Administrators enrolling a whole class group at once.
+Administrators converting a batch of applications into enrollments.
 </Callout>
 
 ## Before you start
 
-- The **students** and the target **class** must already exist.
-- A **payment plan** is required for bulk enrollment — it is applied to every student
-  in the batch.
+- Pending **pre-inscriptions** exist for the same level — see [Pre-inscriptions](./pre-inscriptions).
+- Optional: a **class** and/or **payment plan** for that level.
 
 ## Steps
 
 <Steps>
 
 <Step>
-### Open the bulk enrollment form
+### Open Applications and select rows
 
-From the Enrollments area, choose **Bulk enroll students**.
-
-<Screenshot
-  label="Bulk enrollment form"
-  caption="Pick a level and class, select students, then choose a payment plan."
-/>
+Go to **Admissions & Enrollment → Applications** (Direct / Admin). Select pending
+pre-inscriptions that share the **same level**, then choose **Enroll**.
 </Step>
 
 <Step>
-### Choose the level and class
-
-Select a **level** first, then the **class** within it. The class determines where
-every selected student is enrolled.
-</Step>
-
-<Step>
-### Select the students
-
-Add each student to the **selected students** list. They will all be enrolled into the
-chosen class.
-</Step>
-
-<Step>
-### Set the plan and date
-
-Complete the remaining fields, then submit.
+### Confirm the batch fields
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Class** | Yes | The class all selected students are enrolled into. |
-| **Payment plan** | Yes | Applied to every student in the batch. |
+| **Level** | Yes | Locked to the selection's level. |
+| **Track** | When the level offers tracks | Required if tracks are offered; must stay consistent with each pre-inscription. |
+| **Class** | No | Same class for everyone in the batch, or leave empty and assign later. |
+| **Payment plan** | No | Shared plan for the batch, or leave empty and assign later. |
 | **Enrollment date** | No | Defaults to today if left empty. |
-| **Notes** | No | Optional notes applied to the batch. |
+| **Notes** | No | Optional notes for the batch. |
 </Step>
 
 <Step>
 ### Review the result
 
-The form reports how many enrollments succeeded. Any student that could not be
-enrolled is listed with the reason — fix those and re-run if needed.
+The form reports how many enrollments succeeded. Any that failed are listed with a reason — fix
+those and retry if needed.
 </Step>
 
 </Steps>
 
-<Callout title="Need different plans?">
-Bulk enrollment applies one shared payment plan. If students need different plans,
-enroll them individually or change a plan afterwards from the enrollment.
+<Callout title="Need different plans or classes?">
+Bulk enroll can apply one shared class and plan. If students need different ones, leave those
+fields empty and use **Assign Class** / **Assign Plan** on **Admissions & Enrollment →
+Enrollments**, or change a single enrollment afterwards.
 </Callout>
 
 ## Related articles
 
+- [Pre-inscriptions](./pre-inscriptions)
 - [Create an enrollment](./create-an-enrollment)
 - [Transfer a student between classes](./transfer-a-student-between-classes)

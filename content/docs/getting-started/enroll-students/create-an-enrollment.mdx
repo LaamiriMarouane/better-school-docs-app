@@ -1,69 +1,79 @@
 ---
 title: Create an enrollment
-description: Enroll a student into a class for an academic year, with a payment plan.
+description: Place a student on a level for the academic year — optionally assign a track, class, and payment plan.
 ---
 
-An **enrollment** links a student to a **class** for a given academic year. It is what
-places the student on a class roster, attendance sheet, and timetable — and, when a
-payment plan is attached, what drives their fees.
+An **enrollment** places a student in an academic year at a **level** (and **track** when the
+level offers one). A **class** and **payment plan** are optional at create time — you can assign
+them later from the Enrollments hub.
 
 <Callout title="Who this is for">
-Administrators registering students into classes.
+Administrators placing students for the year.
+</Callout>
+
+<Callout title="Level, track, and education level">
+Enrollment uses **Level** (e.g. Grade 9), and **Track** only when that level offers tracks
+(filières). **Education level** (the broader cycle) is set on the level itself in academic
+structure — it is **not** a field on the enrollment form.
 </Callout>
 
 ## Before you start
 
 - The **student** record must exist — see [Add students](../onboard-people/add-students).
-- The **class** must exist for the selected academic year — see
-  [Create classes](../build-the-academic-foundation/create-classes).
-- A **payment plan** to attach — it generates the student's fees and installments.
+- The **level** (and any tracks) must be set up for the year.
+- Optional: a **class** and a **payment plan** for that level.
 
-<Screenshot
-  label="Enrollments page with the Add Enrollment button"
-  caption="Enrollments are listed for the selected academic year."
-/>
+## How enrollment is created today
 
-## Steps
+There is no separate **Add Enrollment** button on the Enrollments page. In the admin UI,
+enrollments are created from **Applications** (pre-inscriptions), then managed on
+**Enrollments**.
 
 <Steps>
 
 <Step>
-### Open the Enrollments page
+### Open Applications
 
-From the admin sidebar, go to **Academic → Enrollments**, then start a new enrollment.
-Make sure the correct academic year is selected in the year switcher.
+Go to **Admissions & Enrollment → Applications**, stay on the Direct / Admin tab
+([pre-inscriptions](./pre-inscriptions)).
 </Step>
 
 <Step>
-### Fill in the enrollment details
+### Select pending rows and Enroll
 
-Complete the fields below.
+Select one or more **Pending** pre-inscriptions of the **same level**, then choose **Enroll**.
+</Step>
+
+<Step>
+### Confirm placement
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Student** | Yes | The student being enrolled. |
-| **Class** | Yes | The class to enroll them into. Filter by level to narrow the list. |
-| **Enrollment date** | Yes | The date the enrollment takes effect. |
-| **Payment plan** | Yes | The plan that generates the student's fees and installments. |
-| **Notes** | No | Optional notes about the enrollment. |
+| **Level** | Yes | Locked to the pre-inscription's level. |
+| **Track** | When the level offers tracks | Must match the pre-inscription's track when one was set. |
+| **Class** | No | Assign now or later from Enrollments. |
+| **Payment plan** | No | Assign now or later; drives fees when attached. |
+| **Enrollment date** | No | Can default to today. |
+| **Notes** | No | Optional. |
 </Step>
 
 <Step>
-### Save the enrollment
+### Finish on the Enrollments hub
 
-Submit the form. The student now appears on the class roster and the Enrollments list.
+Go to **Admissions & Enrollment → Enrollments** to review the list. Use **Assign Class** or
+**Assign Plan** in bulk when students were enrolled without a class or plan.
 </Step>
 
 </Steps>
 
-<Callout title="One enrollment per class">
-A student is enrolled into one class per academic year. To move them later, use
-[Transfer a student between classes](./transfer-a-student-between-classes) rather than
-creating a second enrollment.
+<Callout title="One active placement per year">
+A student has one active enrollment placement for the year. To change class or level later, use
+[Change class](./transfer-a-student-between-classes) rather than creating a second enrollment.
 </Callout>
 
 ## Related articles
 
+- [Pre-inscriptions](./pre-inscriptions)
 - [Bulk enroll students](./bulk-enroll-students)
 - [Transfer a student between classes](./transfer-a-student-between-classes)
-- [Suspend or withdraw an enrollment](./suspend-or-withdraw-an-enrollment)
+- [Withdraw an enrollment](./suspend-or-withdraw-an-enrollment)

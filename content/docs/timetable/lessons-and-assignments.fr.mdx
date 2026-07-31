@@ -25,19 +25,19 @@ place toutes sans conflit.
 
 ## Combien de séances par matière
 
-Le nombre de séances hebdomadaires vient des **séances hebdomadaires** de la matière définies pour
-chaque niveau (parfois appelées répartition des séances). Pour chaque matière d'un niveau, vous
-indiquez combien de séances par semaine, et si certaines sont des **séances doubles** nécessitant
-deux créneaux d'affilée (fréquent pour les labos ou les ateliers).
+Le nombre de séances hebdomadaires vient de la **charge d'enseignement** définie pour chaque
+matière à un niveau pour l'année scolaire. Pour chaque matière, vous indiquez combien de séances
+par semaine, et si certaines sont des **séances doubles** (ou plus longues) qui nécessitent
+plusieurs créneaux d'affilée (fréquent pour les labos ou les ateliers).
 
 Par exemple, la *Physique* d'un niveau peut être **3 séances par semaine**, dont une **double**
 (deux créneaux ensemble pour le labo). Le générateur place alors trois séances de physique pour
 chaque classe du niveau, en gardant la double sur deux créneaux consécutifs.
 
 <Callout title="Où régler cela">
-Les séances hebdomadaires font partie de votre configuration du programme, sur les matières de
-chaque niveau. Réglez-les avant de générer pour que le générateur sache combien placer de chaque
-matière.
+Réglez la charge d'enseignement sous **Académique → Emploi du temps → Configuration → Charge
+d'enseignement**. Voir [Charge d'enseignement](./teaching-load). Faites-le avant de générer pour
+que le générateur sache combien placer de chaque matière.
 </Callout>
 
 ## Affecter les enseignants aux classes
@@ -51,8 +51,10 @@ ne peut donc tout simplement pas être placée.
 <Step>
 ### Ouvrir les affectations
 
-Ouvrez un **enseignant** et allez dans ses **Classes** (affectations), ou partez d'une classe.
-Puis ajoutez une affectation.
+Ouvrez les **affectations** enseignant–classe. Depuis la barre latérale admin, allez dans
+**Académique → Affectations des enseignants** (voir
+[Affectations des enseignants](./teacher-assignments)), ou ouvrez un **enseignant** et allez
+dans ses **Classes** (affectations). Puis ajoutez une affectation.
 </Step>
 
 <Step>
@@ -112,7 +114,9 @@ Vous décidez de la fermeté avec laquelle le générateur respecte chaque lien 
 
 ## Articles liés
 
+- [Affectations des enseignants](./teacher-assignments)
 - [Prérequis](./prerequisites)
+- [Charge d'enseignement](./teaching-load)
 - [Réglages de planification](./scheduling-setup)
 - [Contraintes](./constraints)
 - [Générer et publier](./generate-and-publish)

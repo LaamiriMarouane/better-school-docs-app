@@ -1,0 +1,65 @@
+---
+title: Charge d'enseignement
+description: Définissez combien de séances par semaine chaque matière est enseignée par niveau — la demande que le générateur d'emploi du temps doit placer.
+---
+
+La **charge d'enseignement** indique combien de séances hebdomadaires chaque **matière à un
+niveau** nécessite pour l'année scolaire sélectionnée, et comment ces séances sont façonnées
+(simples, doubles, groupes scindés). Le générateur s'en sert comme **demande de séances** — une
+matière sans charge n'est simplement pas planifiée.
+
+<Callout title="Pour qui">
+Les administrateurs qui préparent la demande par matière avant de générer un emploi du temps.
+</Callout>
+
+<Callout title="Charge d'enseignement et limites des enseignants">
+La **charge d'enseignement** est *combien de chaque matière* l'école a besoin. Les **limites des
+enseignants** (onglet Enseignants) sont *combien chaque enseignant peut travailler*. Réglez les
+deux — elles répondent à des questions différentes. Voir
+[Réglages de planification](./scheduling-setup).
+</Callout>
+
+## Ouvrir la charge d'enseignement
+
+Allez dans **Académique → Emploi du temps → Configuration**, puis ouvrez l'onglet **Charge
+d'enseignement**.
+
+Choisissez une **période** pour filtrer la liste des matières à gauche (par défaut la période
+active). La charge que vous enregistrez reste **pour l'année scolaire** — la période ne contrôle
+que les matières affichées.
+
+## Régler la charge d'une matière
+
+Sélectionnez une matière (à un niveau) dans la barre latérale, puis construisez ses séances
+hebdomadaires en une ou plusieurs configurations :
+
+| Réglage | Ce qu'il fait |
+| --- | --- |
+| **Nombre** | Combien de séances de cette forme (par exemple *2 × Double*). |
+| **Emprise** | Combien de créneaux la séance occupe d'affilée — Simple, Double, Triple, ou plus. |
+| **Scindé** | Quand coché, la séance est pour un **groupe de classe** (classe divisée), pas la classe entière. |
+| **Type de salle** | Type de salle facultatif pour ces séances, ou héritage de la matière. |
+
+Le nombre total de séances hebdomadaires est la somme de ces configurations. Laissez une matière
+vide (aucune séance) pour la laisser **non planifiée** pour l'année.
+
+<Screenshot
+  label="Éditeur de charge d'enseignement"
+  caption="Choisissez une matière, puis définissez combien de séances par semaine et comment elles sont façonnées."
+/>
+
+## Conseils et bonnes pratiques
+
+- Réglez la charge d'enseignement **avant** d'affecter les enseignants et de générer — la demande
+  détermine ce qui doit être placé.
+- Utilisez **Scindé** uniquement pour les matières qui tournent en groupes de classe ; sinon
+  laissez-le désactivé.
+- Adaptez l'**emprise** à la façon dont votre école enseigne réellement (les labos ont souvent
+  besoin d'une double).
+
+## Articles liés
+
+- [Séances et affectations](./lessons-and-assignments)
+- [Réglages de planification](./scheduling-setup)
+- [Prérequis](./prerequisites)
+- [Générer et publier](./generate-and-publish)

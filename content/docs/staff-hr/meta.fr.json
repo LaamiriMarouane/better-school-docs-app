@@ -2,6 +2,8 @@
   "title": "Personnel et RH",
   "pages": [
     "index",
+    "employment-periods",
+    "payroll",
     "leave",
     "staff-attendance"
   ]

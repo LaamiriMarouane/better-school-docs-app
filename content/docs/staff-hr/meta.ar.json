@@ -2,6 +2,8 @@
   "title": "الموظفون والموارد البشرية",
   "pages": [
     "index",
+    "employment-periods",
+    "payroll",
     "leave",
     "staff-attendance"
   ]

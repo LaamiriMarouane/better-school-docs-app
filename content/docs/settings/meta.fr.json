@@ -4,6 +4,9 @@
     "index",
     "fiscal-year",
     "billing-configuration",
+    "billing-subscription",
+    "support-tickets",
+    "feature-requests",
     "custom-fields",
     "transport-map"
   ]

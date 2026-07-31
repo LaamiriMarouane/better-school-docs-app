@@ -1,0 +1,106 @@
+---
+title: Reduction rules
+description: Create reusable fee discounts, assign them to students, and understand how they differ from one-off payment discounts.
+---
+
+**Reduction rules** are reusable discounts — for example a sibling discount or a staff-child
+reduction — that you define once, then **assign** to students. When applied, they lower the
+amounts on the student's installments. They are separate from a one-off discount you type at
+payment time.
+
+<Callout title="Who this is for">
+Administrators setting school-wide discount rules and applying them to students.
+</Callout>
+
+## Open the catalog
+
+Go to **Finance → Reduction Rules**. Rules belong to the academic year selected in the year
+switcher.
+
+## Create a reduction rule
+
+<Steps>
+
+<Step>
+### Add a rule
+
+Click **Add Reduction Rule**.
+</Step>
+
+<Step>
+### Fill in the rule
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| **Name** | Yes | e.g. *Sibling discount*. |
+| **Scope** | Yes | **Entire subscription** (whole plan) or **Specific fees** (pick one or more fees). |
+| **Description** | No | Optional notes. |
+| **Discount type** | Yes | **Percentage** or **Fixed amount**. |
+| **Value** | Yes | Greater than zero; percentages cannot exceed 100. |
+| **Fees** | If scope is Specific fees | Which fees the reduction applies to. |
+| **Levels** | No | Limit the rule to certain levels. |
+| **Priority** | No | Lower numbers apply first when several reductions stack on the same installment. |
+</Step>
+
+<Step>
+### Save
+
+**Create** (or **Save** when editing). You can later **Activate** / **Deactivate** or **Delete** a
+rule from the list.
+</Step>
+
+</Steps>
+
+## Assign a reduction to a student
+
+Rules in the catalog do nothing until they are assigned.
+
+<Steps>
+
+<Step>
+### Open the student's reductions
+
+Open the student, go to **Payments**, then choose **Reductions**.
+</Step>
+
+<Step>
+### Assign
+
+Click **Assign Reduction**, pick an **active** rule, and confirm.
+</Step>
+
+</Steps>
+
+### Assignment statuses
+
+| Status | What you can do |
+| --- | --- |
+| **Active** | **Suspend** or **Remove**. |
+| **Suspended** | **Reactivate** or **Remove**. |
+| **Expired** | Shown for history — no actions in the list. |
+
+On the same page you may see context such as **Staff Child** or **Enrolled siblings**. Those
+cards are informational — they do not auto-assign a reduction.
+
+## Reductions vs payment-time discounts
+
+| Mechanism | Where | Effect |
+| --- | --- | --- |
+| **Assigned reduction** | Student → Payments → Reductions | Stored on the student; installments show the reduced amount. |
+| **Apply discount** | When recording a payment | One-off on that payment only — not a lasting student reduction. |
+
+See [Record a payment](./record-a-payment) for collecting against installments.
+
+## Tips and best practices
+
+- Create the catalog rules before enrollment season, then assign as you enrol students.
+- Use **Priority** when a student might get more than one reduction on the same installment.
+- Prefer a named rule over repeated one-off payment discounts when the same discount applies
+  every month.
+
+## Related articles
+
+- [Create payment plans](./create-payment-plans)
+- [Installments and schedules](./installments-and-schedules)
+- [Record a payment](./record-a-payment)
+- [Set up fees](./set-up-fees)

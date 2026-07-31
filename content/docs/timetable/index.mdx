@@ -18,7 +18,7 @@ Academic planners and school administrators who build the school schedule.
 Building a timetable has three kinds of work:
 
 1. **Set up the inputs** — the subjects, classes, teachers, and rooms the schedule is built
-   from, plus the weekly grid of days and periods.
+   from, plus the weekly grid of days and periods, and each subject's teaching load.
 2. **Describe reality and set the rules** — when teachers and rooms are available, how many hours
    a teacher can work, and the preferences the generator should try to satisfy.
 3. **Generate, review, and publish** — run the generator, check the result, fix anything by hand,
@@ -28,12 +28,14 @@ Building a timetable has three kinds of work:
 
 It helps to keep two ideas apart, because they live in two different places:
 
-- **Reality (Scheduling setup)** — hard facts the timetable *must* respect: a teacher is only
+- **Reality (Config tabs)** — hard facts the timetable *must* respect: a teacher is only
   available in the mornings, the science lab can only host science, a teacher works at most six
-  hours a day. Break one of these and the timetable is simply wrong.
+  hours a day, Maths needs four lessons a week. Break one of these and the timetable is simply
+  wrong.
 - **Rules (Solver policy)** — preferences that make a timetable *good* rather than just valid:
   avoid gaps in a teacher's day, keep a class in the same room, don't put two demanding subjects
-  back to back. You decide how strongly each one matters.
+  back to back. You decide how strongly each one matters. Solver policy is opened from a
+  **timetable group**, not from Config.
 
 ## The order to work in
 
@@ -54,6 +56,13 @@ Define the school week: working days, daily hours, period length, and breaks. Se
 </Step>
 
 <Step>
+### Set the teaching load
+
+For each subject at a level, say how many lessons per week it needs and how they are shaped. See
+[Teaching load](./teaching-load).
+</Step>
+
+<Step>
 ### Confirm the lessons to schedule
 
 Make sure each class–subject is assigned to a teacher so the generator knows what to place. See
@@ -63,21 +72,21 @@ Make sure each class–subject is assigned to a teacher so the generator knows w
 <Step>
 ### Describe reality
 
-Set when teachers and rooms are unavailable, teacher workload limits, and which rooms each subject
-can use. See [Scheduling setup](./scheduling-setup).
+Set when teachers and rooms are unavailable, teacher workload limits, homerooms, and class hours.
+See [Scheduling setup](./scheduling-setup).
 </Step>
 
 <Step>
 ### Choose your rules
 
-Turn the soft preferences (constraints) on or off and decide how much each one matters. See
+Open a timetable group and tune the soft preferences (constraints). See
 [Constraints](./constraints).
 </Step>
 
 <Step>
 ### Generate and publish
 
-Run the generator, review the result, make manual edits, and publish. See
+Run the generator from the group, review the result, make manual edits, and publish. See
 [Generate and publish](./generate-and-publish).
 </Step>
 
@@ -89,7 +98,9 @@ Run the generator, review the result, make manual edits, and publish. See
 | --- | --- |
 | [Prerequisites](./prerequisites) | The checklist of what must exist before you generate. |
 | [Timetable config](./timetable-config) | Define the weekly grid of days, periods, and breaks. |
+| [Teaching load](./teaching-load) | Set how many lessons each subject needs per week. |
 | [Lessons and assignments](./lessons-and-assignments) | Understand what gets scheduled and assign teachers to classes. |
+| [Teacher Assignments](./teacher-assignments) | Set subject eligibility and assign teachers to each class–subject. |
 | [Scheduling setup](./scheduling-setup) | Set teacher and room unavailability, limits, and room rules. |
 | [Constraints](./constraints) | Tune the preferences the generator tries to satisfy. |
 | [Generate and publish](./generate-and-publish) | Run the generator, review, edit, and publish. |

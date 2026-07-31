@@ -1,71 +1,58 @@
 ---
-title: Transférer un élève entre classes
-description: Déplacez un élève inscrit d'une classe à une autre au sein de la même année scolaire.
+title: Changer de classe
+description: Déplacez un élève inscrit vers une autre classe — et changez de niveau ou de filière si besoin.
 ---
 
-Un **transfert de classe** déplace une inscription active de sa classe actuelle vers
-une autre — par exemple lorsqu'un élève change de section. L'historique de
-l'inscription est conservé, le déplacement est donc traçable.
+**Changer de classe** met à jour le placement d'une inscription active : **niveau**, **filière**
+(lorsque proposée) et **classe**. L'historique de l'inscription conserve le changement pour que le
+déplacement soit traçable.
 
 <Callout title="Pour qui">
-Les administrateurs qui corrigent ou modifient l'affectation de classe d'un élève.
+Les administrateurs qui corrigent ou modifient le placement d'un élève.
 </Callout>
 
 ## Avant de commencer
 
-- L'élève doit avoir une **inscription active** dans la classe actuelle.
-- La **classe de destination** doit exister pour la même année scolaire.
+- L'élève doit avoir une **inscription active**.
+- Le **niveau** / la **classe** de destination doit exister pour l'année scolaire.
 
 ## Étapes
 
 <Steps>
 
 <Step>
-### Ouvrir l'inscription
+### Ouvrir Changer de classe
 
-Trouvez l'inscription de l'élève — depuis la page Inscriptions ou le profil de l'élève
-— et ouvrez ses actions.
-
-<Screenshot
-  label="Action de transfert de classe sur une inscription"
-  caption="Le transfert conserve l'inscription et enregistre le déplacement."
-/>
+Sur **Admissions et inscriptions → Inscriptions**, ouvrez les actions de l'inscription et
+choisissez **Changer de classe**.
 </Step>
 
 <Step>
-### Choisir la nouvelle classe
-
-Sélectionnez la **classe de destination** vers laquelle l'élève doit être déplacé.
-</Step>
-
-<Step>
-### Indiquer un motif
-
-Saisissez un **motif** pour le transfert. Vous pouvez ajouter des **notes**
-facultatives plus détaillées. Le motif est conservé dans l'historique de l'inscription.
+### Définir le nouveau placement
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Nouvelle classe** | Oui | La classe vers laquelle l'élève est déplacé. |
-| **Motif** | Oui | La raison du transfert. |
-| **Notes** | Non | Détail supplémentaire facultatif. |
+| **Niveau** | Oui | Peut rester le même ou passer à un autre niveau. |
+| **Filière** | Lorsque le niveau propose des filières | Obligatoire si ce niveau a des filières proposées. |
+| **Classe** | Oui | La classe vers laquelle l'élève se déplace. |
+| **Motif** | Oui | Pourquoi le changement a lieu (conservé dans l'historique). |
 </Step>
 
 <Step>
 ### Confirmer
 
-Confirmez le transfert. L'élève apparaît désormais sur la liste de la nouvelle classe,
-et l'ancienne affectation est enregistrée dans l'historique de l'inscription.
+Confirmez le changement. L'élève apparaît sur la liste de la nouvelle classe ; l'ancien placement
+reste dans l'historique.
 </Step>
 
 </Steps>
 
-<Callout title="Échéanciers de paiement">
-Un transfert de classe ne modifie pas l'échéancier de paiement. Pour changer les
-frais, mettez à jour l'échéancier de l'inscription séparément.
+<Callout title="Plans de paiement">
+Changer de classe ne modifie pas le plan de paiement. Pour changer les frais, utilisez
+**Changer le plan de paiement** sur l'inscription séparément.
 </Callout>
 
 ## Articles liés
 
 - [Créer une inscription](./create-an-enrollment)
-- [Suspendre ou radier une inscription](./suspend-or-withdraw-an-enrollment)
+- [Retirer une inscription](./suspend-or-withdraw-an-enrollment)

@@ -19,7 +19,8 @@ Les planificateurs pédagogiques et les administrateurs qui construisent l'horai
 Construire un emploi du temps comporte trois types de travail :
 
 1. **Préparer les entrées** — les matières, classes, enseignants et salles à partir desquels
-   l'horaire est construit, ainsi que la grille hebdomadaire des jours et des créneaux.
+   l'horaire est construit, ainsi que la grille hebdomadaire des jours et des créneaux, et la
+   charge d'enseignement de chaque matière.
 2. **Décrire la réalité et fixer les règles** — quand les enseignants et les salles sont
    disponibles, combien d'heures un enseignant peut travailler, et les préférences que le
    générateur doit chercher à satisfaire.
@@ -30,13 +31,14 @@ Construire un emploi du temps comporte trois types de travail :
 
 Il est utile de distinguer deux idées, car elles se trouvent à deux endroits différents :
 
-- **Réalité (Réglages de planification)** — les faits incontournables que l'horaire *doit*
-  respecter : un enseignant n'est disponible que le matin, le laboratoire de sciences ne peut
-  accueillir que des sciences, un enseignant travaille au plus six heures par jour. Enfreindre
-  l'un d'eux rend l'horaire tout simplement erroné.
+- **Réalité (onglets Configuration)** — les faits incontournables que l'horaire *doit* respecter :
+  un enseignant n'est disponible que le matin, le laboratoire de sciences ne peut accueillir que
+  des sciences, un enseignant travaille au plus six heures par jour, les Maths ont besoin de quatre
+  séances par semaine. Enfreindre l'un d'eux rend l'horaire tout simplement erroné.
 - **Règles (Politique du solveur)** — les préférences qui rendent un horaire *bon* plutôt que
   seulement valide : éviter les trous dans la journée d'un enseignant, garder une classe dans la
   même salle, ne pas enchaîner deux matières exigeantes. Vous décidez de l'importance de chacune.
+  La politique du solveur s'ouvre depuis un **groupe d'emploi du temps**, pas depuis Configuration.
 
 ## L'ordre à suivre
 
@@ -57,6 +59,13 @@ Voir [Configuration de l'emploi du temps](./timetable-config).
 </Step>
 
 <Step>
+### Régler la charge d'enseignement
+
+Pour chaque matière à un niveau, indiquez combien de séances par semaine elle nécessite et comment
+elles sont façonnées. Voir [Charge d'enseignement](./teaching-load).
+</Step>
+
+<Step>
 ### Confirmer les séances à placer
 
 Assurez-vous que chaque couple classe–matière est affecté à un enseignant pour que le générateur
@@ -66,22 +75,22 @@ sache quoi placer. Voir [Séances et affectations](./lessons-and-assignments).
 <Step>
 ### Décrire la réalité
 
-Réglez l'indisponibilité des enseignants et des salles, les limites de charge des enseignants, et
-les salles utilisables par chaque matière. Voir [Réglages de planification](./scheduling-setup).
+Réglez l'indisponibilité des enseignants et des salles, les limites de charge des enseignants, les
+salles attitrées et les horaires des classes. Voir [Réglages de planification](./scheduling-setup).
 </Step>
 
 <Step>
 ### Choisir vos règles
 
-Activez ou désactivez les préférences (contraintes) et décidez de l'importance de chacune. Voir
+Ouvrez un groupe d'emploi du temps et ajustez les préférences souples (contraintes). Voir
 [Contraintes](./constraints).
 </Step>
 
 <Step>
 ### Générer et publier
 
-Lancez le générateur, vérifiez le résultat, faites des ajustements manuels, et publiez. Voir
-[Générer et publier](./generate-and-publish).
+Lancez le générateur depuis le groupe, vérifiez le résultat, faites des ajustements manuels, et
+publiez. Voir [Générer et publier](./generate-and-publish).
 </Step>
 
 </Steps>
@@ -92,7 +101,9 @@ Lancez le générateur, vérifiez le résultat, faites des ajustements manuels, 
 | --- | --- |
 | [Prérequis](./prerequisites) | La liste de ce qui doit exister avant de générer. |
 | [Configuration de l'emploi du temps](./timetable-config) | Définir la grille hebdomadaire des jours, créneaux et pauses. |
+| [Charge d'enseignement](./teaching-load) | Définir combien de séances chaque matière nécessite par semaine. |
 | [Séances et affectations](./lessons-and-assignments) | Comprendre ce qui est placé et affecter les enseignants aux classes. |
+| [Affectations des enseignants](./teacher-assignments) | Régler l'éligibilité aux matières et affecter les enseignants à chaque couple classe–matière. |
 | [Réglages de planification](./scheduling-setup) | Régler l'indisponibilité, les limites et les règles de salles. |
 | [Contraintes](./constraints) | Ajuster les préférences que le générateur cherche à satisfaire. |
 | [Générer et publier](./generate-and-publish) | Lancer le générateur, vérifier, modifier et publier. |

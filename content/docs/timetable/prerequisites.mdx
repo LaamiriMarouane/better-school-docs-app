@@ -20,10 +20,10 @@ Administrators preparing the school for timetable generation.
 | 3 | **Levels** | Subjects and classes are organised by level. | [Create levels](../getting-started/build-the-academic-foundation/create-levels). |
 | 4 | **Classes** | Classes are the groups that receive a schedule. | [Create classes](../getting-started/build-the-academic-foundation/create-classes). |
 | 5 | **Subjects** | The subjects to be scheduled. A subject can require a room type (e.g. a lab). | [Create subjects](../getting-started/build-the-academic-foundation/create-subjects). |
-| 6 | **Subjects per level (with weekly lessons)** | Tells the generator *which* subjects each level studies and *how many lessons per week* each one has. | Curriculum setup (level subjects). See [Lessons and assignments](./lessons-and-assignments). |
+| 6 | **Subjects per level (with teaching load)** | Tells the generator *which* subjects each level studies and *how many lessons per week* each one has. | **Academic → Timetable → Config → Teaching load**. See [Teaching load](./teaching-load) and [Lessons and assignments](./lessons-and-assignments). |
 | 7 | **Rooms** | Lessons need somewhere to happen. Rooms have a capacity and a type. | [Create rooms](../getting-started/build-the-academic-foundation/create-rooms). |
 | 8 | **Teachers** | The people who teach the lessons. | [Add teachers](../getting-started/onboard-people/add-teachers). |
-| 9 | **Teacher–class assignments** | The single most important input: who teaches each class–subject. The generator schedules these assignments. | [Lessons and assignments](./lessons-and-assignments). |
+| 9 | **Teacher–class assignments** | The single most important input: who teaches each class–subject. The generator schedules these assignments. | **Academic → Teacher Assignments**. See [Teacher Assignments](./teacher-assignments) and [Lessons and assignments](./lessons-and-assignments). |
 
 <Callout title="The most common blocker">
 A timetable can't be generated if a class–subject has **no teacher assigned**. The generator
@@ -57,10 +57,11 @@ but checking up front saves a failed run. See [Generate and publish](./generate-
 Once everything above exists, you move on to the timetable-specific setup:
 
 1. **[Timetable config](./timetable-config)** — the weekly grid of days, periods, and breaks.
-2. **[Scheduling setup](./scheduling-setup)** — teacher and room availability, workload limits,
+2. **[Teaching load](./teaching-load)** — how many lessons each subject needs per week.
+3. **[Scheduling setup](./scheduling-setup)** — teacher and room availability, limits,
    and room rules.
-3. **[Constraints](./constraints)** — the preferences the generator should try to satisfy.
-4. **[Generate and publish](./generate-and-publish)** — run it, review, and publish.
+4. **[Constraints](./constraints)** — the preferences the generator should try to satisfy.
+5. **[Generate and publish](./generate-and-publish)** — run it, review, and publish.
 
 <Callout title="Tip">
 Work top to bottom. Each later step assumes the earlier ones are done — for example you can't set

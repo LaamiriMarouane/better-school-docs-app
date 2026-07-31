@@ -1,0 +1,119 @@
+---
+title: Affectations des enseignants
+description: Définissez quelles matières chaque enseignant peut enseigner, puis affectez les enseignants à chaque classe et matière pour la période.
+---
+
+Les **Affectations des enseignants** sont l'endroit où vous dites qui enseigne quoi. D'abord
+vous réglez l'**éligibilité aux matières** (quels enseignants peuvent enseigner chaque matière
+à un niveau). Ensuite vous affectez un enseignant à chaque couple **classe–matière** pour la
+période. Le générateur d'emploi du temps planifie ces affectations.
+
+<Callout title="Pour qui">
+Les administrateurs qui préparent les affectations d'enseignement avant de construire l'emploi
+du temps.
+</Callout>
+
+## Ouvrir les Affectations des enseignants
+
+Allez dans **Académique → Affectations des enseignants**. Travaillez dans l'année scolaire
+sélectionnée dans le sélecteur d'année.
+
+La page a deux onglets :
+
+| Onglet | Ce qu'il fait |
+| --- | --- |
+| **Éligibilité aux Matières** | Pour un niveau, indiquez quels enseignants sont éligibles pour chaque matière. |
+| **Affectations de Classes** | Pour une période, affectez un enseignant à chaque couple classe–matière. |
+
+## Éligibilité aux matières
+
+Utilisez cet onglet pour construire une liste blanche par **niveau** : enseignants en lignes,
+matières en colonnes. Basculez une cellule pour marquer un enseignant éligible pour cette
+matière.
+
+<Steps>
+
+<Step>
+### Choisir le niveau
+
+Choisissez le niveau en haut de l'onglet.
+</Step>
+
+<Step>
+### Basculer l'éligibilité
+
+Cliquez sur les cellules pour inclure ou exclure des enseignants pour chaque matière. Vous
+pouvez éventuellement afficher ou masquer les noms complets des matières.
+</Step>
+
+<Step>
+### Enregistrer les modifications
+
+Cliquez sur **Enregistrer les modifications**. Les modifications restent locales jusqu'à
+l'enregistrement — changer de niveau ou quitter la page vous avertit s'il reste des
+modifications non enregistrées.
+</Step>
+
+</Steps>
+
+L'éligibilité façonne le sélecteur d'enseignants dans Affectations de Classes (les enseignants
+éligibles apparaissent en premier). Les enseignants non marqués éligibles peuvent toujours être
+choisis sous **Autres enseignants** — l'éligibilité ne bloque pas une affectation.
+
+## Affectations de Classes
+
+Passez à **Affectations de Classes**. Choisissez la **période** (par défaut la période active).
+La couverture montre combien de cellules classe–matière sont remplies et combien restent non
+affectées.
+
+### Vues
+
+| Vue | Idéale pour |
+| --- | --- |
+| **Grille** | Voir chaque classe et matière dans une matrice, regroupée par niveau. |
+| **Par classe** | Parcourir les matières d'une classe. |
+| **Par matière** | Voir qui enseigne une matière dans toutes les classes. |
+
+### Affecter un enseignant
+
+<Steps>
+
+<Step>
+### Ouvrir une cellule
+
+Cliquez sur une cellule vide (**Non affecté**) ou sur une affectation existante.
+</Step>
+
+<Step>
+### Choisir l'enseignant
+
+Recherchez et choisissez un enseignant. Utilisez **Non affecté** pour vider la cellule.
+</Step>
+
+</Steps>
+
+L'affectation s'enregistre immédiatement — il n'y a pas de bouton Enregistrer séparé sur cet
+onglet. Il n'y a pas de champs supplémentaires (heures, dates ou notes) sur l'affectation
+elle-même.
+
+### Rail de charge des enseignants
+
+Ouvrez le panneau **Enseignants** à droite pour voir la charge de chaque enseignant pour la
+période (créneaux affectés vs capacité). Les barres passent à l'ambre quand la charge est élevée
+et au rouge en cas de dépassement. Ce rail est uniquement pour la revue — vous ne modifiez pas
+la capacité ici.
+
+## Conseils et bonnes pratiques
+
+- Réglez d'abord l'**Éligibilité aux Matières** pour faciliter le sélecteur des Affectations de
+  Classes.
+- Videz chaque cellule **Non affecté** avant de générer un emploi du temps — les affectations
+  manquantes sont un bloqueur fréquent. Voir [Générer et publier](./generate-and-publish).
+- Utilisez le rail de charge pour repérer les enseignants surchargés avant de générer.
+
+## Articles liés
+
+- [Séances et affectations](./lessons-and-assignments)
+- [Charge d'enseignement](./teaching-load)
+- [Prérequis](./prerequisites)
+- [Générer et publier](./generate-and-publish)

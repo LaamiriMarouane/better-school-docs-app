@@ -1,12 +1,12 @@
 ---
 title: Scheduling setup
-description: Describe the reality the timetable must respect — when teachers and rooms are unavailable, teacher workload limits, and which rooms each subject can use.
+description: Describe the reality the timetable must respect — teacher and room unavailability, teacher workload limits, homerooms, and class hours.
 ---
 
 **Scheduling setup** is where you record the hard facts about your school that the timetable must
 respect: when each **teacher** is unavailable, how much they can teach, when each **room** can't be
-used, and which rooms a subject is allowed in. These are the rules the generator will *never*
-break.
+used, which room is each class's homeroom, and when a class itself is unavailable. These are the
+rules the generator will *never* break.
 
 <Callout title="Reality vs. rules">
 This page is about **reality** — facts that must hold. The softer *preferences* (avoid gaps, keep
@@ -17,7 +17,8 @@ a class in one room, and so on) live on the [Constraints](./constraints) page.
 Administrators preparing teacher and room information before generating a timetable.
 </Callout>
 
-Open **Timetable → Scheduling setup**. It has a **Teachers** tab and a **Rooms** tab.
+Open **Academic → Timetable → Config**. These facts live on the **Teachers**, **Rooms**,
+**Homerooms**, and **Class Hours** tabs (alongside **Time Grid** and [Teaching load](./teaching-load)).
 
 ## Teachers
 
@@ -108,26 +109,16 @@ You can restrict a **subject at a level** to specific rooms — for example *Che
 may only use the two science labs. When set, the generator places that subject's lessons only in
 the listed rooms.
 
-<Steps>
+## Homerooms
 
-<Step>
-### Open subject room rules
+On the **Homerooms** tab, set whether classes stay in a **homeroom** or **roam**, and assign each
+class its room. You can also set per-subject room overrides; subjects that need a special room
+type still roam to a suitable room.
 
-On the **Rooms** tab, find the subject-room section and choose the subject (for the level).
-</Step>
+## Class Hours
 
-<Step>
-### Choose the allowed rooms
-
-Pick the rooms that subject may use. Leave it empty to allow any suitable room.
-</Step>
-
-</Steps>
-
-<Callout title="Keeping a subject out of certain times">
-You can also stop a subject from being scheduled at certain times — for example no PE in the first
-period. That's set as a subject rule on the [Constraints](./constraints) page.
-</Callout>
+On the **Class Hours** tab, mark when a **class** itself is unavailable — for example a half-day
+cohort that never has afternoon lessons. You can edit one class or several at once.
 
 ## Tips and best practices
 
@@ -140,5 +131,6 @@ period. That's set as a subject rule on the [Constraints](./constraints) page.
 ## Related articles
 
 - [Timetable config](./timetable-config)
+- [Teaching load](./teaching-load)
 - [Constraints](./constraints)
 - [Generate and publish](./generate-and-publish)

@@ -25,18 +25,19 @@ without clashes.
 
 ## How many lessons each subject has
 
-The number of weekly lessons comes from the **subject's weekly lessons** set for each level
-(sometimes called the lesson distribution). For each subject in a level you say how many lessons
-it has per week, and whether any of them are **double lessons** that need two periods in a row
-(common for labs or workshops).
+The number of weekly lessons comes from the **teaching load** set for each subject at a level
+for the academic year. For each subject you say how many lessons it has per week, and whether
+any of them are **double** (or longer) lessons that need several periods in a row (common for
+labs or workshops).
 
 For example, *Physics* in a level might be **3 lessons a week**, one of which is a **double**
 (two periods together for the lab). The generator then places three Physics lessons for each class
 in that level, keeping the double as two consecutive periods.
 
 <Callout title="Where to set this">
-Weekly lessons are part of your curriculum setup, on each level's subjects. Set them before you
-generate so the generator knows how much of each subject to place.
+Set teaching load under **Academic → Timetable → Config → Teaching load**. See
+[Teaching load](./teaching-load). Do this before you generate so the generator knows how much of
+each subject to place.
 </Callout>
 
 ## Assign teachers to classes
@@ -50,8 +51,9 @@ can't be placed.
 <Step>
 ### Open the assignments
 
-Open a **teacher** and go to their **Classes** (assignments), or work from a class. Then add an
-assignment.
+Open the teacher–class **assignments**. From the admin sidebar go to
+**Academic → Teacher Assignments** (see [Teacher Assignments](./teacher-assignments)), or open a
+**teacher** and go to their **Classes** (assignments). Then add an assignment.
 </Step>
 
 <Step>
@@ -110,7 +112,9 @@ You decide how strongly the generator should honour each link on the
 
 ## Related articles
 
+- [Teacher Assignments](./teacher-assignments)
 - [Prerequisites](./prerequisites)
+- [Teaching load](./teaching-load)
 - [Scheduling setup](./scheduling-setup)
 - [Constraints](./constraints)
 - [Generate and publish](./generate-and-publish)
