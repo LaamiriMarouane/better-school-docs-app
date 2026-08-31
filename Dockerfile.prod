@@ -1,4 +1,10 @@
 # syntax=docker/dockerfile:1
+# From this directory:
+#   docker build -f Dockerfile.prod \
+#     --build-arg NEXT_PUBLIC_API_URL=https://api.hikmaedu.com \
+#     --build-arg NEXT_PUBLIC_BASE_URL=https://doc.hikmaedu.com \
+#     -t betterschool-docs:prod .
+
 FROM node:20-bookworm-slim AS build
 
 WORKDIR /app
@@ -6,6 +12,11 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN --mount=type=cache,target=/root/.npm \
     npm ci --ignore-scripts
+
+ARG NEXT_PUBLIC_API_URL=https://api.hikmaedu.com
+ARG NEXT_PUBLIC_BASE_URL=https://doc.hikmaedu.com
+ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+ENV NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}
 
 COPY . .
 RUN npm run postinstall

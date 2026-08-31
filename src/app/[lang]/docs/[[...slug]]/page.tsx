@@ -10,8 +10,8 @@ import {
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import type { Metadata } from 'next';
-import { createRelativeLink } from 'fumadocs-ui/mdx';
-import { gitConfig } from '@/lib/shared';
+import defaultMdxComponents from 'fumadocs-ui/mdx';
+import { resolveDocHref } from '@/lib/resolve-doc-href';
 
 
 export default async function Page(props: {
@@ -23,6 +23,7 @@ export default async function Page(props: {
 
   const MDX = page.data.body;
   const markdownUrl = getPageMarkdownUrl(page).url;
+  const DocsLink = defaultMdxComponents.a;
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
@@ -31,8 +32,9 @@ export default async function Page(props: {
       <DocsBody>
         <MDX
           components={getMDXComponents({
-            // this allows you to link to other pages with relative file paths
-            a: createRelativeLink(source, page),
+            a: ({ href, ...props }) => (
+              <DocsLink href={resolveDocHref(source, href, page)} {...props} />
+            ),
           })}
         />
       </DocsBody>
