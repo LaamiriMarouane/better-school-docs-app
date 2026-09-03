@@ -16,14 +16,15 @@ Administrators preparing the school for timetable generation.
 | # | Prerequisite | Why the timetable needs it | Where to set it up |
 | --- | --- | --- | --- |
 | 1 | **Academic year** | Everything is scoped to a year. | Selected in the year switcher. See [Create an academic year](../getting-started/build-the-academic-foundation/create-an-academic-year). |
-| 2 | **Terms** | A timetable is built for a term, so the year must be divided into terms. | [Create terms](../getting-started/build-the-academic-foundation/create-terms). |
-| 3 | **Levels** | Subjects and classes are organised by level. | [Create levels](../getting-started/build-the-academic-foundation/create-levels). |
-| 4 | **Classes** | Classes are the groups that receive a schedule. | [Create classes](../getting-started/build-the-academic-foundation/create-classes). |
-| 5 | **Subjects** | The subjects to be scheduled. A subject can require a room type (e.g. a lab). | [Create subjects](../getting-started/build-the-academic-foundation/create-subjects). |
-| 6 | **Subjects per level (with teaching load)** | Tells the generator *which* subjects each level studies and *how many lessons per week* each one has. | **Academic → Timetable → Config → Teaching load**. See [Teaching load](./teaching-load) and [Lessons and assignments](./lessons-and-assignments). |
-| 7 | **Rooms** | Lessons need somewhere to happen. Rooms have a capacity and a type. | [Create rooms](../getting-started/build-the-academic-foundation/create-rooms). |
-| 8 | **Teachers** | The people who teach the lessons. | [Add teachers](../getting-started/onboard-people/add-teachers). |
-| 9 | **Teacher–class assignments** | The single most important input: who teaches each class–subject. The generator schedules these assignments. | **Academic → Teacher Assignments**. See [Teacher Assignments](./teacher-assignments) and [Lessons and assignments](./lessons-and-assignments). |
+| 2 | **School schedule** | The year-wide default week (days, hours, breaks). Timetable configs must fit inside it. | **Settings → Academic → School schedule**. See [School schedule](../settings/school-schedule). |
+| 3 | **Terms** | A timetable group is built for a term, so the year must be divided into terms. | [Create terms](../getting-started/build-the-academic-foundation/create-terms). |
+| 4 | **Levels** | Subjects and classes are organised by level. | [Create levels](../getting-started/build-the-academic-foundation/create-levels). |
+| 5 | **Classes** | Classes are the groups that receive a schedule. | [Create classes](../getting-started/build-the-academic-foundation/create-classes). |
+| 6 | **Subjects** | The subjects to be scheduled. A subject can require a room type (e.g. a lab). | [Create subjects](../getting-started/build-the-academic-foundation/create-subjects). |
+| 7 | **Subjects per level (with teaching load)** | Tells the generator *which* subjects each level studies and *how many lessons per week* each one has. | **Academic → Timetable → Config → Teaching load**. See [Teaching load](./teaching-load) and [Lessons and assignments](./lessons-and-assignments). |
+| 8 | **Rooms** | Lessons need somewhere to happen. Rooms have a capacity and a type. | [Create rooms](../getting-started/build-the-academic-foundation/create-rooms). |
+| 9 | **Teachers** | The people who teach the lessons. | [Add teachers](../getting-started/onboard-people/add-teachers). |
+| 10 | **Teacher–class assignments** | The single most important input: who teaches each class–subject. The generator schedules these assignments. | **Academic → Teacher Assignments**. See [Teacher Assignments](./teacher-assignments) and [Lessons and assignments](./lessons-and-assignments). |
 
 <Callout title="The most common blocker">
 A timetable can't be generated if a class–subject has **no teacher assigned**. The generator
@@ -42,7 +43,7 @@ resources also have to be **enough**. Before you generate, sanity-check that you
 - **weekly lesson counts** that actually fit the working days and periods in your config.
 
 The generator runs a **feasibility check** before it starts and tells you exactly what falls short,
-but checking up front saves a failed run. See [Generate and publish](./generate-and-publish).
+but checking up front saves a failed run. See [Generate and activate](./generate-and-publish).
 </Callout>
 
 ## Optional, depending on your school
@@ -56,12 +57,14 @@ but checking up front saves a failed run. See [Generate and publish](./generate-
 
 Once everything above exists, you move on to the timetable-specific setup:
 
-1. **[Timetable config](./timetable-config)** — the weekly grid of days, periods, and breaks.
-2. **[Teaching load](./teaching-load)** — how many lessons each subject needs per week.
-3. **[Scheduling setup](./scheduling-setup)** — teacher and room availability, limits,
-   and room rules.
-4. **[Constraints](./constraints)** — the preferences the generator should try to satisfy.
-5. **[Generate and publish](./generate-and-publish)** — run it, review, and publish.
+1. **[School schedule](../settings/school-schedule)** — year-wide default week (if not done yet).
+2. **[Timetable config](./timetable-config)** — the weekly grid for your groups (inside the school schedule).
+3. **[Teaching load](./teaching-load)** — how many lessons each subject needs per week.
+4. **[Scheduling setup](./scheduling-setup)** — teacher and room availability, limits, and room rules.
+5. **[Timetable groups](./timetable-groups)** — create the weekly template for a term and levels.
+6. **[Constraints](./constraints)** — the preferences the generator should try to satisfy.
+7. **[Generate and activate](./generate-and-publish)** — run it, review, and activate.
+8. **[Activate and class sessions](./activate-and-sessions)** — how the live week becomes dated meetings.
 
 <Callout title="Tip">
 Work top to bottom. Each later step assumes the earlier ones are done — for example you can't set
@@ -71,6 +74,8 @@ complete.
 
 ## Related articles
 
+- [School schedule](../settings/school-schedule)
 - [Lessons and assignments](./lessons-and-assignments)
 - [Timetable config](./timetable-config)
+- [Timetable groups](./timetable-groups)
 - [Build the academic foundation](../getting-started/build-the-academic-foundation)

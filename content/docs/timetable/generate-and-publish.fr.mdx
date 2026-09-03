@@ -1,15 +1,16 @@
 ---
-title: Générer et publier
-description: Lancez le générateur d'emploi du temps, vérifiez le résultat, ajustez-le à la main, et publiez-le aux enseignants, élèves et parents.
+title: Générer et activer
+description: Lancez le générateur d'emploi du temps, vérifiez le résultat, ajustez-le à la main, puis activez le groupe pour créer de vraies séances de classe.
 ---
 
-Une fois la configuration terminée, vous êtes prêt à construire l'horaire. Vous créez un **emploi
-du temps**, lancez le **générateur**, vérifiez et affinez le résultat, puis le **publiez** pour que
-chacun puisse le voir.
+Une fois la configuration terminée, vous êtes prêt à construire l'horaire. Vous créez un
+**groupe d'emploi du temps**, lancez le **générateur**, vérifiez et affinez le résultat, puis
+**activez** le groupe pour que chacun suive la semaine en vigueur et que des **séances de classe**
+apparaissent avec de vraies dates.
 
 <Callout title="Pour qui">
-Les administrateurs et planificateurs pédagogiques qui produisent et diffusent l'horaire de
-l'école.
+Les administrateurs et planificateurs pédagogiques qui produisent et mettent en service l'horaire
+de l'école.
 </Callout>
 
 ## Avant de commencer
@@ -18,20 +19,23 @@ Assurez-vous que les étapes précédentes sont faites :
 
 - [Prérequis](./prerequisites) — matières, classes, périodes, enseignants, salles et affectations
   existent tous.
-- [Configuration de l'emploi du temps](./timetable-config) — la grille hebdomadaire est réglée.
-- [Charge d'enseignement](./teaching-load) — les séances hebdomadaires de chaque matière sont réglées.
+- [Horaires de l'école](../settings/school-schedule) — la semaine par défaut de l'année est réglée.
+- [Configuration de l'emploi du temps](./timetable-config) — la grille hebdomadaire du groupe est
+  réglée.
+- [Charge d'enseignement](./teaching-load) — les séances hebdomadaires de chaque matière sont
+  réglées.
 - [Réglages de planification](./scheduling-setup) — disponibilité et limites sont saisies.
 - [Contraintes](./constraints) — les préférences sont ajustées (ou laissées par défaut).
 
-## Étape 1 — Créer un emploi du temps
+## Étape 1 — Créer un groupe d'emploi du temps
 
-Un **emploi du temps** est construit pour une **période** et un ensemble choisi de **niveaux**, à
-l'aide d'une configuration.
+Un **[groupe d'emploi du temps](./timetable-groups)** est un modèle hebdomadaire pour une
+**période** et un ensemble choisi de **niveaux**, à l'aide d'une configuration.
 
 <Steps>
 
 <Step>
-### Démarrer un nouvel emploi du temps
+### Démarrer un nouveau groupe
 
 Allez dans **Académique → Emploi du temps → Groupes**, puis créez un nouveau groupe (ou ouvrez-en
 un existant). Donnez-lui un nom, choisissez la **période** et les **niveaux** qu'il couvre, et
@@ -42,7 +46,8 @@ sélectionnez la **configuration** à utiliser.
 ### Réutiliser les règles de l'an dernier (facultatif)
 
 Si vous avez déjà généré des emplois du temps, vous pouvez partir de vos **réglages de contraintes**
-précédents plutôt que des valeurs par défaut, puis ajuster.
+précédents plutôt que des valeurs par défaut, puis ajuster. Vous pouvez aussi **cloner en nouveau
+brouillon** pour essayer une variante avec une grille vide.
 </Step>
 
 </Steps>
@@ -54,7 +59,7 @@ précédents plutôt que des valeurs par défaut, puis ajuster.
 <Step>
 ### Lancer le générateur
 
-Ouvrez l'emploi du temps et cliquez sur **Générer**. Le générateur exécute d'abord une rapide
+Ouvrez le groupe et cliquez sur **Générer**. Le générateur exécute d'abord une rapide
 **vérification de faisabilité**, puis commence à résoudre.
 </Step>
 
@@ -118,40 +123,45 @@ Vous pouvez affiner le résultat directement :
   exactement où elles sont si vous générez de nouveau, ce qui permet de figer ce qui vous plaît et
   de laisser le générateur refaire le reste.
 
-## Étape 5 — Publier
+## Étape 5 — Activer
 
-Un emploi du temps commence en **brouillon** — seuls vous et les autres planificateurs le voient.
-Lorsqu'il vous convient, **publiez-le**.
+Un groupe commence en **brouillon** — seuls vous et les autres planificateurs le voient. Lorsqu'il
+vous convient, **activez**-le. L'activation met la semaine en vigueur et crée des **séances de
+classe** datées. Détail complet : [Activer et séances de classe](./activate-and-sessions).
 
 <Steps>
 
 <Step>
-### Publier l'emploi du temps
+### Activer le groupe
 
-Ouvrez l'emploi du temps terminé et cliquez sur **Publier**.
+Ouvrez le groupe terminé et choisissez **Activer**. Confirmez si un aperçu liste des groupes qui se
+chevauchent et seront retirés.
 </Step>
 
 <Step>
 ### Ce qui se passe
 
-- L'emploi du temps devient **actif** et visible pour les enseignants, élèves et parents.
-- Tout emploi du temps précédemment publié pour la même période est **archivé** (conservé pour
-  référence, mais n'est plus celui en vigueur).
+- Le groupe devient **Actif** et visible comme le plan en vigueur pour ses niveaux.
+- Des **séances de classe** sont créées à partir du modèle hebdomadaire, avec de vraies dates et
+  heures.
+- Tout groupe précédemment actif pour les mêmes niveaux qui se chevauchent est **retiré** (conservé
+  pour référence, mais n'est plus en vigueur).
 </Step>
 
 </Steps>
 
-| État | Qui peut le voir |
+| État | Qui peut le voir / ce qu'il fait |
 | --- | --- |
 | **Brouillon** | Planificateurs et administrateurs uniquement. |
-| **Publié** | Enseignants, élèves et parents. |
-| **Archivé** | Conservé comme historique ; n'est plus en vigueur. |
+| **Actif** | Semaine en vigueur ; séances créées pour enseignants, élèves et parents. |
+| **Inactif / Archivé** | Pas en vigueur ; conservé pour l'historique ou de nouvelles modifications après désactivation. |
 
-## Republier des modifications
+## Modifier un emploi du temps actif
 
-Si vous devez modifier un emploi du temps publié, faites vos changements et publiez de nouveau. La
-version mise à jour devient celle en vigueur et la précédente est archivée, de sorte qu'il y a
-toujours un historique clair.
+Si vous devez changer une semaine en vigueur : **désactivez** (ou déverrouillez selon ce qui est
+autorisé), modifiez ou régénérez, puis **activez** de nouveau pour que les séances suivent le
+modèle mis à jour. Pour de grandes expériences, **clonez en nouveau brouillon**, affinez le clone,
+et activez le gagnant.
 
 ## Conseils et bonnes pratiques
 
@@ -159,11 +169,15 @@ toujours un historique clair.
   le moyen le plus rapide de repérer les affectations manquantes et les limites trop serrées.
 - **Épinglez ce dont vous êtes sûr** avant de regénérer, pour que les améliorations ne le
   perturbent pas.
-- **Vérifiez par enseignant** avant de publier — c'est le moyen le plus rapide de repérer une
-  charge déséquilibrée.
+- **Vérifiez par enseignant** avant d'activer — c'est le moyen le plus rapide de repérer une charge
+  déséquilibrée.
+- Gardez les variantes d'essai en groupes **brouillon** jusqu'à ce que vous soyez prêt à passer en
+  service.
 
 ## Articles liés
 
+- [Groupes d'emploi du temps](./timetable-groups)
+- [Activer et séances de classe](./activate-and-sessions)
 - [Prérequis](./prerequisites)
 - [Réglages de planification](./scheduling-setup)
 - [Contraintes](./constraints)

@@ -1,13 +1,14 @@
 ---
 title: Timetable
-description: Build conflict-free class schedules automatically — set up the inputs, describe reality, set the rules, then generate, review, and publish.
+description: Build conflict-free class schedules — set the school week, describe reality, create groups, generate, then activate so real sessions appear.
 ---
 
 The **Timetable** tools build your school's weekly class schedule for you. You describe what's
 true about your school — who teaches what, when teachers and rooms are available, and how many
 lessons each class needs — and the **generator** finds a complete, conflict-free timetable that
-respects your rules. You then review it, adjust anything by hand, and **publish** it to teachers,
-students, and parents.
+respects your rules. You then review it, adjust anything by hand, and **activate** a
+[timetable group](./timetable-groups) so teachers, students, and parents follow the live week and
+**class sessions** appear with real dates.
 
 <Callout title="Who this is for">
 Academic planners and school administrators who build the school schedule.
@@ -18,11 +19,12 @@ Academic planners and school administrators who build the school schedule.
 Building a timetable has three kinds of work:
 
 1. **Set up the inputs** — the subjects, classes, teachers, and rooms the schedule is built
-   from, plus the weekly grid of days and periods, and each subject's teaching load.
+   from, plus the year-wide [school schedule](../settings/school-schedule), each group's
+   [timetable config](./timetable-config), and each subject's teaching load.
 2. **Describe reality and set the rules** — when teachers and rooms are available, how many hours
    a teacher can work, and the preferences the generator should try to satisfy.
-3. **Generate, review, and publish** — run the generator, check the result, fix anything by hand,
-   and publish it.
+3. **Generate, review, and activate** — run the generator on a group, check the result, fix
+   anything by hand, and activate so dated sessions are created.
 
 ## Two kinds of setup: reality vs. rules
 
@@ -49,10 +51,16 @@ Make sure subjects, classes, terms, teachers, rooms, and teacher assignments all
 </Step>
 
 <Step>
+### Set the school schedule
+
+Define the year-wide default week in Settings. See [School schedule](../settings/school-schedule).
+</Step>
+
+<Step>
 ### Set the timetable config
 
-Define the school week: working days, daily hours, period length, and breaks. See
-[Timetable config](./timetable-config).
+Define (or narrow) the weekly grid of days, hours, and breaks for the levels you will schedule.
+See [Timetable config](./timetable-config).
 </Step>
 
 <Step>
@@ -77,17 +85,18 @@ See [Scheduling setup](./scheduling-setup).
 </Step>
 
 <Step>
-### Choose your rules
+### Create a group and choose your rules
 
-Open a timetable group and tune the soft preferences (constraints). See
+Create a [timetable group](./timetable-groups) and tune the soft preferences (constraints). See
 [Constraints](./constraints).
 </Step>
 
 <Step>
-### Generate and publish
+### Generate and activate
 
-Run the generator from the group, review the result, make manual edits, and publish. See
-[Generate and publish](./generate-and-publish).
+Run the generator from the group, review the result, make manual edits, and activate. See
+[Generate and activate](./generate-and-publish) and
+[Activate and class sessions](./activate-and-sessions).
 </Step>
 
 </Steps>
@@ -97,13 +106,15 @@ Run the generator from the group, review the result, make manual edits, and publ
 | Article | What you'll do |
 | --- | --- |
 | [Prerequisites](./prerequisites) | The checklist of what must exist before you generate. |
-| [Timetable config](./timetable-config) | Define the weekly grid of days, periods, and breaks. |
+| [Timetable config](./timetable-config) | Define a weekly grid inside the school schedule. |
+| [Timetable groups](./timetable-groups) | Create weekly templates for a term and levels; know the actions. |
 | [Teaching load](./teaching-load) | Set how many lessons each subject needs per week. |
 | [Lessons and assignments](./lessons-and-assignments) | Understand what gets scheduled and assign teachers to classes. |
 | [Teacher Assignments](./teacher-assignments) | Set subject eligibility and assign teachers to each class–subject. |
 | [Scheduling setup](./scheduling-setup) | Set teacher and room unavailability, limits, and room rules. |
 | [Constraints](./constraints) | Tune the preferences the generator tries to satisfy. |
-| [Generate and publish](./generate-and-publish) | Run the generator, review, edit, and publish. |
+| [Generate and activate](./generate-and-publish) | Run the generator, review, edit, and activate. |
+| [Activate and class sessions](./activate-and-sessions) | Turn the weekly template into dated class meetings. |
 
 ## Before you start
 
@@ -111,6 +122,7 @@ Run the generator from the group, review the result, make manual edits, and publ
 - The **academic foundation** should already be in place — levels, classes, subjects, terms,
   rooms, and teachers. See
   [Build the academic foundation](../getting-started/build-the-academic-foundation).
+- Set the **[School schedule](../settings/school-schedule)** for the year early.
 
 <Callout title="A timetable belongs to an academic year">
 Everything here — the config, the assignments, the rules, and the generated schedule — is scoped

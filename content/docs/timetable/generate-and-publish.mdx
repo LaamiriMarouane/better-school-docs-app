@@ -1,10 +1,11 @@
 ---
-title: Generate and publish
-description: Run the timetable generator, review the result, adjust it by hand, and publish it to teachers, students, and parents.
+title: Generate and activate
+description: Run the timetable generator, review the result, adjust it by hand, then activate the group so real class sessions are created.
 ---
 
-When your setup is complete, you're ready to build the schedule. You create a **timetable**,
-run the **generator**, review and fine-tune the result, and **publish** it so everyone can see it.
+When your setup is complete, you're ready to build the schedule. You create a **timetable
+group**, run the **generator**, review and fine-tune the result, then **activate** the group so
+everyone follows the live week and **class sessions** appear with real dates.
 
 <Callout title="Who this is for">
 Administrators and academic planners producing and releasing the school schedule.
@@ -16,19 +17,21 @@ Make sure the earlier steps are done:
 
 - [Prerequisites](./prerequisites) — subjects, classes, terms, teachers, rooms, and teacher
   assignments all exist.
-- [Timetable config](./timetable-config) — the weekly grid is set.
+- [School schedule](../settings/school-schedule) — the year-wide default week is set.
+- [Timetable config](./timetable-config) — the group's weekly grid is set.
 - [Teaching load](./teaching-load) — each subject's weekly lessons are set.
 - [Scheduling setup](./scheduling-setup) — availability and limits are in.
 - [Constraints](./constraints) — preferences are tuned (or left at defaults).
 
-## Step 1 — Create a timetable
+## Step 1 — Create a timetable group
 
-A **timetable** is built for a **term** and a chosen set of **levels**, using one config.
+A **[timetable group](./timetable-groups)** is a weekly template for a **term** and a chosen set of
+**levels**, using one config.
 
 <Steps>
 
 <Step>
-### Start a new timetable
+### Start a new group
 
 Go to **Academic → Timetable → Groups**, then create a new group (or open an existing one). Give
 it a name, choose the **term** and the **levels** it covers, and pick the **config** to use.
@@ -38,7 +41,8 @@ it a name, choose the **term** and the **levels** it covers, and pick the **conf
 ### Reuse last year's rules (optional)
 
 If you've run timetables before, you can start from your previous **constraint settings** instead
-of the defaults, then adjust.
+of the defaults, then adjust. You can also **clone as new draft** to try a variant with an empty
+grid.
 </Step>
 
 </Steps>
@@ -50,7 +54,7 @@ of the defaults, then adjust.
 <Step>
 ### Run the generator
 
-Open the timetable and click **Generate**. The generator first runs a quick **feasibility check**,
+Open the group and click **Generate**. The generator first runs a quick **feasibility check**,
 then starts solving.
 </Step>
 
@@ -112,50 +116,56 @@ You can fine-tune the result directly:
 - **Pin a lesson** — lock a lesson in place. Pinned lessons stay exactly where they are if you
   generate again, so you can fix the parts you like and let the generator redo the rest.
 
-## Step 5 — Publish
+## Step 5 — Activate
 
-A timetable starts as a **draft** — only you and other planners can see it. When you're happy,
-**publish** it.
+A group starts as a **draft** — only you and other planners can see it. When you're happy,
+**activate** it. Activating makes the week live and creates dated **class sessions**. Full detail:
+[Activate and class sessions](./activate-and-sessions).
 
 <Steps>
 
 <Step>
-### Publish the timetable
+### Activate the group
 
-Open the finished timetable and click **Publish**.
+Open the finished group and choose **Activate**. Confirm if a preview lists overlapping groups that
+will be retired.
 </Step>
 
 <Step>
 ### What happens
 
-- The timetable becomes **active** and visible to teachers, students, and parents.
-- Any previously published timetable for the same term is **archived** (kept for reference, no
-  longer the live one).
+- The group becomes **Active** and visible as the live plan for its levels.
+- **Class sessions** are created from the weekly template with real dates and times.
+- Any previously active group for the same overlapping levels is **retired** (kept for reference,
+  no longer live).
 </Step>
 
 </Steps>
 
-| State | Who can see it |
+| State | Who can see it / what it does |
 | --- | --- |
 | **Draft** | Planners and administrators only. |
-| **Published** | Teachers, students, and parents. |
-| **Archived** | Kept as a historical record; no longer live. |
+| **Active** | Live week; sessions created for teachers, students, and parents. |
+| **Inactive / Archived** | Not live; kept for history or further edits after deactivate. |
 
-## Re-publishing changes
+## Changing an active timetable
 
-If you need to change a published timetable, make your edits and publish again. The updated
-version becomes the live one and the previous version is archived, so there's always a clear
-history.
+If you need to change a live week: **deactivate** (or unlock as allowed), edit or re-generate,
+then **activate** again so sessions follow the updated template. For big experiments, **clone as
+new draft**, refine the clone, and activate the winner.
 
 ## Tips and best practices
 
 - **Generate early, even if setup isn't perfect.** The feasibility check is the fastest way to
   find missing assignments and tight limits.
 - **Pin the parts you're sure about** before re-generating, so improvements don't disturb them.
-- **Review by teacher** before publishing — it's the quickest way to spot an unbalanced workload.
+- **Review by teacher** before activating — it's the quickest way to spot an unbalanced workload.
+- Keep trial variants as **draft** groups until you are ready to go live.
 
 ## Related articles
 
+- [Timetable groups](./timetable-groups)
+- [Activate and class sessions](./activate-and-sessions)
 - [Prerequisites](./prerequisites)
 - [Scheduling setup](./scheduling-setup)
 - [Constraints](./constraints)

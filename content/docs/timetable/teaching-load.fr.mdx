@@ -1,15 +1,17 @@
 ---
 title: Charge d'enseignement
-description: Définissez combien de séances par semaine chaque matière est enseignée par niveau — la demande que le générateur d'emploi du temps doit placer.
+description: Définissez combien de réunions hebdomadaires chaque matière nécessite par niveau — ce qu'est un créneau et une séance, et comment construire le plan de la semaine.
 ---
 
-La **charge d'enseignement** indique combien de séances hebdomadaires chaque **matière à un
-niveau** nécessite pour l'année scolaire sélectionnée, et comment ces séances sont façonnées
-(simples, doubles, groupes scindés). Le générateur s'en sert comme **demande de séances** — une
-matière sans charge n'est simplement pas planifiée.
+La **charge d'enseignement** répond à une question pour chaque **niveau et matière** : *combien de
+fois cette matière est-elle enseignée dans une semaine normale, et combien dure chaque réunion ?*
+
+Le générateur d'emploi du temps utilise cette réponse pour placer les réunions sur la grille. Une
+matière sans charge d'enseignement n'est simplement **pas planifiée**.
 
 <Callout title="Pour qui">
-Les administrateurs qui préparent la demande par matière avant de générer un emploi du temps.
+Les administrateurs qui préparent la demande par matière avant d'affecter les enseignants et de
+générer un emploi du temps.
 </Callout>
 
 <Callout title="Charge d'enseignement et limites des enseignants">
@@ -24,42 +26,90 @@ deux — elles répondent à des questions différentes. Voir
 Allez dans **Académique → Emploi du temps → Configuration**, puis ouvrez l'onglet **Charge
 d'enseignement**.
 
-Choisissez une **période** pour filtrer la liste des matières à gauche (par défaut la période
-active). La charge que vous enregistrez reste **pour l'année scolaire** — la période ne contrôle
-que les matières affichées.
+1. Choisissez une **période** (par défaut la période en cours). Elle ne fait que **filtrer** les
+   matières de la barre latérale — celles actives dans cette période.
+2. Sélectionnez un **niveau → matière** à gauche.
+3. Construisez le plan hebdomadaire à droite, puis **Enregistrer la charge d'enseignement**.
 
-## Régler la charge d'une matière
+La charge enregistrée vaut pour l'**année scolaire** (ce niveau + cette matière). Changer de
+période ne crée pas une charge séparée ; cela change seulement les matières affichées.
 
-Sélectionnez une matière (à un niveau) dans la barre latérale, puis construisez ses séances
-hebdomadaires en une ou plusieurs configurations :
+## Créneaux et séances — les deux mots importants
 
-| Réglage | Ce qu'il fait |
+| Mot | Signification |
 | --- | --- |
-| **Nombre** | Combien de séances de cette forme (par exemple *2 × Double*). |
-| **Emprise** | Combien de créneaux la séance occupe d'affilée — Simple, Double, Triple, ou plus. |
-| **Scindé** | Quand coché, la séance est pour un **groupe de classe** (classe divisée), pas la classe entière. |
-| **Type de salle** | Type de salle facultatif pour ces séances, ou héritage de la matière. |
+| **Créneau (période)** | Une case de la journée scolaire (par exemple 45 minutes dans votre [configuration](./timetable-config)). Abrégé **P** dans l'éditeur. |
+| **Séance (lesson)** | Une **réunion** hebdomadaire que l'emploi du temps doit placer — par exemple Maths pour la classe 6A le lundi matin. |
+| **Durée de la séance** | Combien de **créneaux d'affilée** cette réunion occupe. **Simple** = 1 créneau, **Double** = 2 à la suite (souvent pour un labo), **Triple** = 3, etc. |
+| **Bloc de séances** | Une ligne de l'éditeur : « autant de séances de cette durée ». Exemple : `4 × Simple`. |
+| **Charge hebdomadaire** | Tous les blocs ensemble — combien de **séances** et combien de **créneaux** par semaine. |
 
-Le nombre total de séances hebdomadaires est la somme de ces configurations. Laissez une matière
-vide (aucune séance) pour la laisser **non planifiée** pour l'année.
+Une journée courte peut avoir six créneaux. Une séance **double** en utilise deux à la suite comme
+une seule réunion.
+
+## Ce que vous construisez
+
+Vous décrivez le **rythme hebdomadaire** de la matière pour ce niveau — pas un calendrier daté.
+
+Exemples :
+
+| Ce que vous réglez | Signification |
+| --- | --- |
+| `4 × Simple` (= 4P) | Quatre réunions d'un créneau → **4 séances · 4 créneaux / semaine**. |
+| `2 × Double` (= 4P) | Deux réunions doubles (ex. deux labos) → **2 séances · 4 créneaux / semaine**. |
+| `2 × Simple` + `1 × Double` | Deux courtes et une longue → **3 séances · 4 créneaux / semaine**. |
+
+L'**aperçu** sous les lignes montre chaque réunion comme une pastille (`1P`, `2P`, …) et résume
+les **séances** et **créneaux** de la semaine. C'est ce que le générateur essaiera de placer pour
+chaque classe du niveau.
+
+## Remplir un bloc de séances
+
+Chaque ligne est un bloc :
+
+| Contrôle | Que faire |
+| --- | --- |
+| **Quantité** (− / +) | Combien de séances de cette forme. |
+| **Durée** (Simple / Double / …) | Combien de créneaux chaque séance dure d'affilée. |
+| **= …P** | Créneaux pour ce bloc seulement (quantité × durée). |
+| **Scindé** | À cocher seulement si la réunion est pour un **groupe de classe** (moitié de classe), pas la classe entière. Nécessite des [groupes de classe](./lessons-and-assignments). |
+| **Type de salle** | Gardez **Hériter de la matière** sauf si ces réunions ont besoin d'une salle spéciale (labo, gym…). Ou choisissez un type pour forcer. |
+
+Utilisez **Ajouter un bloc de séances** quand la semaine mélange les formes (simples et une
+double). Retirez une ligne avec × si cette forme n'est plus utile.
+
+Laissez toutes les lignes vides (ou effacez la charge) si la matière doit rester **non planifiée**
+pour l'année.
 
 <Screenshot
   label="Éditeur de charge d'enseignement"
-  caption="Choisissez une matière, puis définissez combien de séances par semaine et comment elles sont façonnées."
+  caption="Quantité × durée construit chaque réunion hebdomadaire ; l'aperçu montre séances et créneaux de la semaine."
 />
+
+## Après l'enregistrement
+
+- Affectez les enseignants à chaque couple classe–matière. Voir
+  [Affectations enseignants](./teacher-assignments) et
+  [Séances et affectations](./lessons-and-assignments).
+- Générez un [groupe d'emploi du temps](./timetable-groups) — le générateur place un jeu de ces
+  séances hebdomadaires pour chaque classe du niveau.
 
 ## Conseils et bonnes pratiques
 
-- Réglez la charge d'enseignement **avant** d'affecter les enseignants et de générer — la demande
-  détermine ce qui doit être placé.
-- Utilisez **Scindé** uniquement pour les matières qui tournent en groupes de classe ; sinon
-  laissez-le désactivé.
-- Adaptez l'**emprise** à la façon dont votre école enseigne réellement (les labos ont souvent
-  besoin d'une double).
+- Réglez la charge **avant** les affectations et la génération — la demande détermine ce qui doit
+  être placé.
+- Adaptez la **durée** à l'enseignement réel (labos et ateliers ont souvent besoin d'une
+  **Double**).
+- Utilisez **Scindé** seulement pour les matières en groupes ; sinon laissez-le désactivé.
+- Vérifiez l'aperçu : si les créneaux sont bons mais pas les séances (ou l'inverse), changez Simple
+  vs Double plutôt que seulement la quantité.
+- Travaillez niveau par niveau pour que primaire et secondaire puissent avoir des rythmes
+  différents pour le même nom de matière.
 
 ## Articles liés
 
 - [Séances et affectations](./lessons-and-assignments)
+- [Configuration de l'emploi du temps](./timetable-config)
 - [Réglages de planification](./scheduling-setup)
 - [Prérequis](./prerequisites)
-- [Générer et publier](./generate-and-publish)
+- [Générer et activer](./generate-and-publish)

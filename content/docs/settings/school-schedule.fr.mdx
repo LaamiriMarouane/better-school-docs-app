@@ -1,0 +1,70 @@
+---
+title: Horaires de l'école
+description: Définissez la semaine par défaut de l'école pour l'année — jours ouvrés, heures quotidiennes, durée des créneaux et pauses partagées.
+---
+
+Les **horaires de l'école** sont la **semaine par défaut** de l'école pour l'année scolaire
+sélectionnée : les jours d'ouverture, le début et la fin de la journée, la durée par défaut d'un
+créneau, et les pauses partagées par toute l'école. Tout emploi du temps que vous construisez doit
+tenir dans cette fenêtre.
+
+<Callout title="Pour qui">
+Les administrateurs qui fixent les horaires d'ouverture de l'année avant de construire les
+emplois du temps.
+</Callout>
+
+## Où cela se trouve
+
+Allez dans **Paramètres → Académique → Horaires de l'école**.
+
+| Champ | Signification |
+| --- | --- |
+| **Jours ouvrés** | Les jours où l'école est normalement ouverte (ex. lundi–vendredi). |
+| **Heures quotidiennes** | Le début le plus tôt et la fin la plus tard de la journée scolaire. |
+| **Durée des créneaux** | La durée par défaut d'un créneau d'enseignement (ex. 45 minutes). |
+| **Créneaux max. par jour** | Le plafond par défaut du nombre de créneaux dans une journée. |
+| **Séparateur de demi-journée** | Heure optionnelle qui sépare le matin de l'après-midi. |
+| **Pauses** | Temps libres partagés (déjeuner, récréation, rassemblement) à l'échelle de l'école. |
+
+## Horaires de l'école vs configuration d'emploi du temps
+
+Deux niveaux :
+
+| Niveau | Rôle |
+| --- | --- |
+| **Horaires de l'école** | Le défaut global de l'année — l'enveloppe extérieure. |
+| **Configuration d'emploi du temps** | Une grille hebdomadaire pour un [groupe d'emploi du temps](../timetable/timetable-groups) (ex. primaire vs secondaire). Elle peut être identique aux horaires de l'école, ou un **sous-ensemble** plus étroit. |
+
+Exemples :
+
+- L'école ouvre 08:00–17:00 du lundi au vendredi. Le niveau 1 utilise une configuration qui finit
+  à 14:00 avec deux courtes pauses. Les niveaux 2–3 gardent une journée plus longue avec une pause
+  déjeuner.
+- Vous testez un vendredi plus court sur un groupe brouillon sans changer le défaut de l'école.
+
+## À quoi cela sert
+
+| Domaine | Rôle des horaires de l'école |
+| --- | --- |
+| **Nouvelles configurations** | Une nouvelle configuration est **préremplie** depuis les horaires de l'école (jours, heures, durée, pauses partagées). |
+| **Enregistrement d'une configuration** | La configuration doit rester **à l'intérieur** des horaires : jours ⊆ jours de l'école, heures dans la plage scolaire, pauses supplémentaires sans conflit avec les pauses scolaires. |
+| **Disponibilité enseignants / salles / classes** | Les éditeurs d'indisponibilité utilisent la **grille de la semaine scolaire** comme canevas. |
+| **Charge des enseignants** | Les barres de charge sur les affectations mesurent la charge sur la **semaine scolaire**, pas seulement sur un groupe. |
+| **Jours d'ouverture** | Les jours ouvrés (avec jours fériés et fermetures) indiquent quand l'école est ouverte pour le travail daté (trajets, séances de classe). |
+
+<Callout title="À régler tôt">
+Configurez les horaires de l'école **avant** de créer des configurations d'emploi du temps.
+Changer la fenêtre extérieure plus tard peut obliger à revoir des configurations qui ne rentrent
+plus.
+</Callout>
+
+## Avant de commencer
+
+- Sélectionnez la bonne **année scolaire** dans le sélecteur d'année.
+
+## Articles liés
+
+- [Configuration de l'emploi du temps](../timetable/timetable-config)
+- [Groupes d'emploi du temps](../timetable/timetable-groups)
+- [Réglages de planification](../timetable/scheduling-setup)
+- [Créer une année scolaire](../getting-started/build-the-academic-foundation/create-an-academic-year)

@@ -1,14 +1,16 @@
 ---
 title: Teaching load
-description: Set how many lessons per week each subject is taught per level — the demand the timetable generator must place.
+description: Set how many weekly meetings each subject needs per level — what a period and a lesson are, and how to build the weekly plan.
 ---
 
-**Teaching load** is how many weekly lessons each **subject at a level** needs in the selected
-academic year, and how those lessons are shaped (single periods, doubles, split groups). The
-generator uses this as **lesson demand** — a subject with no load is simply not scheduled.
+**Teaching load** answers one question for each **level and subject**: *how often is this subject
+taught in a normal week, and how long is each meeting?*
+
+The timetable generator uses that answer to place meetings on the grid. A subject with no teaching
+load is simply **not scheduled**.
 
 <Callout title="Who this is for">
-Administrators preparing subject demand before generating a timetable.
+Administrators preparing subject demand before assigning teachers and generating a timetable.
 </Callout>
 
 <Callout title="Teaching load vs. teacher limits">
@@ -21,39 +23,87 @@ See [Scheduling setup](./scheduling-setup).
 
 Go to **Academic → Timetable → Config**, then open the **Teaching load** tab.
 
-Pick a **term** to filter the subject list on the left (defaults to the active term). The load
-you save is still **for the academic year** — the term only controls which subjects you see.
+1. Pick a **term** (defaults to the current term). This only **filters** which subjects appear in
+   the sidebar — subjects active in that term.
+2. Select a **level → subject** on the left.
+3. Build the weekly plan on the right, then **Save teaching load**.
 
-## Set a subject's load
+The load you save is for the **academic year** (that level + subject). Changing the term does not
+create a separate load; it only changes which subjects you browse.
 
-Select a subject (at a level) from the sidebar, then build its weekly lessons as one or more
-configurations:
+## Periods and lessons — the two words that matter
 
-| Setting | What it does |
+| Word | Meaning |
 | --- | --- |
-| **Count** | How many lessons of this shape (for example *2 × Double*). |
-| **Span** | How many periods the lesson occupies in a row — Single, Double, Triple, or more. |
-| **Split** | When checked, the lesson is for a **class group** (divided class), not the whole class. |
-| **Room type** | Optional room type for these lessons, or inherit from the subject. |
+| **Period** | One slot on the school day (for example 45 minutes from your [timetable config](./timetable-config)). Abbreviated **P** in the editor. |
+| **Lesson** | One weekly **meeting** the timetable must place — for example Maths for Class 6A on Monday morning. |
+| **Lesson length** | How many **periods in a row** that meeting needs. **Single** = 1 period, **Double** = 2 back-to-back (common for labs), **Triple** = 3, and so on. |
+| **Lesson block** | One row in the editor: “this many lessons of this length.” Example: `4 × Single`. |
+| **Weekly load** | All blocks together — how many **lessons** and how many **periods** per week. |
 
-The total number of weekly lessons is the sum of those configurations. Leave a subject empty
-(no lessons) to leave it **unscheduled** for the year.
+A short day might have six periods. A **double** lesson uses two of those periods one after the
+other as a single meeting.
+
+## What you are building
+
+You are describing the **weekly rhythm** of the subject for that level — not a dated calendar.
+
+Examples:
+
+| What you set | Meaning |
+| --- | --- |
+| `4 × Single` (= 4P) | Four separate one-period meetings → **4 lessons · 4 periods / week**. |
+| `2 × Double` (= 4P) | Two double meetings (e.g. two labs) → **2 lessons · 4 periods / week**. |
+| `2 × Single` + `1 × Double` | Two short meetings and one long one → **3 lessons · 4 periods / week**. |
+
+The **preview** under the rows shows each meeting as a chip (`1P`, `2P`, …) and summarises
+**lessons** and **periods** for the week. That is what the generator will try to place for every
+class in the level.
+
+## Fill in a lesson block
+
+Each row is one block:
+
+| Control | What to do |
+| --- | --- |
+| **Quantity** (− / +) | How many lessons of this shape. |
+| **Length** (Single / Double / …) | How many periods each of those lessons lasts in a row. |
+| **= …P** | Periods for this block only (quantity × length). |
+| **Split** | Turn on only if this meeting is for a **class group** (half the class), not the whole class. Needs [class groups](./lessons-and-assignments). |
+| **Room type** | Keep **Inherit from subject** unless these meetings need a special room (lab, gym…). Or pick a type to override. |
+
+Use **Add lesson block** when the week mixes shapes (singles and a double). Remove a row with the
+× if you no longer need that shape.
+
+Leave every row empty (or clear the load) if the subject should stay **unscheduled** for the year.
 
 <Screenshot
   label="Teaching load editor"
-  caption="Pick a subject, then set how many lessons per week and how they are shaped."
+  caption="Quantity × length builds each weekly meeting; the preview shows lessons and periods for the week."
 />
+
+## After you save
+
+- Assign teachers to each class–subject. See [Teacher Assignments](./teacher-assignments) and
+  [Lessons and assignments](./lessons-and-assignments).
+- Generate a [timetable group](./timetable-groups) — the generator places one set of these weekly
+  lessons for every class in the level.
 
 ## Tips and best practices
 
-- Set teaching load **before** you assign teachers and generate — demand drives what must be
+- Set teaching load **before** teacher assignments and generation — demand drives what must be
   placed.
-- Use **Split** only for subjects that run in class groups; otherwise leave it off.
-- Match **span** to how your school actually teaches (labs often need a double).
+- Match **length** to real teaching (labs and workshops often need a **Double**).
+- Use **Split** only for subjects that run in class groups; leave it off otherwise.
+- Check the preview: if periods look right but lessons look wrong (or the reverse), change Single
+  vs Double rather than only the quantity.
+- Work level by level so primary and secondary can have different weekly rhythms for the same
+  subject name.
 
 ## Related articles
 
 - [Lessons and assignments](./lessons-and-assignments)
+- [Timetable config](./timetable-config)
 - [Scheduling setup](./scheduling-setup)
 - [Prerequisites](./prerequisites)
-- [Generate and publish](./generate-and-publish)
+- [Generate and activate](./generate-and-publish)

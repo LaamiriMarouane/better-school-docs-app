@@ -1,14 +1,15 @@
 ---
 title: Emploi du temps
-description: Construisez automatiquement des emplois du temps sans conflit — préparez les entrées, décrivez la réalité, fixez les règles, puis générez, vérifiez et publiez.
+description: Construisez des emplois du temps sans conflit — réglez la semaine scolaire, décrivez la réalité, créez des groupes, générez, puis activez pour que de vraies séances apparaissent.
 ---
 
 Les outils d'**emploi du temps** construisent l'horaire hebdomadaire de votre école à votre
 place. Vous décrivez ce qui est vrai dans votre école — qui enseigne quoi, quand les enseignants
 et les salles sont disponibles, et combien de séances chaque classe a besoin — et le
 **générateur** trouve un emploi du temps complet et sans conflit qui respecte vos règles. Vous le
-vérifiez ensuite, ajustez ce que vous voulez à la main, et le **publiez** aux enseignants, élèves
-et parents.
+vérifiez ensuite, ajustez ce que vous voulez à la main, et **activez** un
+[groupe d'emploi du temps](./timetable-groups) pour que enseignants, élèves et parents suivent la
+semaine en vigueur et que des **séances de classe** apparaissent avec de vraies dates.
 
 <Callout title="Pour qui">
 Les planificateurs pédagogiques et les administrateurs qui construisent l'horaire de l'école.
@@ -19,13 +20,14 @@ Les planificateurs pédagogiques et les administrateurs qui construisent l'horai
 Construire un emploi du temps comporte trois types de travail :
 
 1. **Préparer les entrées** — les matières, classes, enseignants et salles à partir desquels
-   l'horaire est construit, ainsi que la grille hebdomadaire des jours et des créneaux, et la
+   l'horaire est construit, plus les [horaires de l'école](../settings/school-schedule) pour
+   l'année, la [configuration de l'emploi du temps](./timetable-config) de chaque groupe, et la
    charge d'enseignement de chaque matière.
 2. **Décrire la réalité et fixer les règles** — quand les enseignants et les salles sont
    disponibles, combien d'heures un enseignant peut travailler, et les préférences que le
    générateur doit chercher à satisfaire.
-3. **Générer, vérifier et publier** — lancez le générateur, vérifiez le résultat, corrigez ce
-   qu'il faut à la main, et publiez.
+3. **Générer, vérifier et activer** — lancez le générateur sur un groupe, vérifiez le résultat,
+   corrigez ce qu'il faut à la main, et activez pour créer des séances datées.
 
 ## Deux types de réglages : la réalité et les règles
 
@@ -52,10 +54,17 @@ Voir [Prérequis](./prerequisites).
 </Step>
 
 <Step>
-### Régler la configuration
+### Régler les horaires de l'école
 
-Définissez la semaine d'école : jours ouvrés, heures quotidiennes, durée des créneaux et pauses.
-Voir [Configuration de l'emploi du temps](./timetable-config).
+Définissez la semaine par défaut de l'année dans les Paramètres. Voir
+[Horaires de l'école](../settings/school-schedule).
+</Step>
+
+<Step>
+### Régler la configuration de l'emploi du temps
+
+Définissez (ou resserrez) la grille hebdomadaire des jours, créneaux et pauses pour les niveaux que
+vous allez planifier. Voir [Configuration de l'emploi du temps](./timetable-config).
 </Step>
 
 <Step>
@@ -80,17 +89,18 @@ salles attitrées et les horaires des classes. Voir [Réglages de planification]
 </Step>
 
 <Step>
-### Choisir vos règles
+### Créer un groupe et choisir vos règles
 
-Ouvrez un groupe d'emploi du temps et ajustez les préférences souples (contraintes). Voir
-[Contraintes](./constraints).
+Créez un [groupe d'emploi du temps](./timetable-groups) et ajustez les préférences souples
+(contraintes). Voir [Contraintes](./constraints).
 </Step>
 
 <Step>
-### Générer et publier
+### Générer et activer
 
 Lancez le générateur depuis le groupe, vérifiez le résultat, faites des ajustements manuels, et
-publiez. Voir [Générer et publier](./generate-and-publish).
+activez. Voir [Générer et activer](./generate-and-publish) et
+[Activer et séances de classe](./activate-and-sessions).
 </Step>
 
 </Steps>
@@ -100,13 +110,15 @@ publiez. Voir [Générer et publier](./generate-and-publish).
 | Article | Ce que vous ferez |
 | --- | --- |
 | [Prérequis](./prerequisites) | La liste de ce qui doit exister avant de générer. |
-| [Configuration de l'emploi du temps](./timetable-config) | Définir la grille hebdomadaire des jours, créneaux et pauses. |
+| [Configuration de l'emploi du temps](./timetable-config) | Définir une grille hebdomadaire à l'intérieur des horaires de l'école. |
+| [Groupes d'emploi du temps](./timetable-groups) | Créer des modèles hebdomadaires pour une période et des niveaux ; connaître les actions. |
 | [Charge d'enseignement](./teaching-load) | Définir combien de séances chaque matière nécessite par semaine. |
 | [Séances et affectations](./lessons-and-assignments) | Comprendre ce qui est placé et affecter les enseignants aux classes. |
 | [Affectations des enseignants](./teacher-assignments) | Régler l'éligibilité aux matières et affecter les enseignants à chaque couple classe–matière. |
 | [Réglages de planification](./scheduling-setup) | Régler l'indisponibilité, les limites et les règles de salles. |
 | [Contraintes](./constraints) | Ajuster les préférences que le générateur cherche à satisfaire. |
-| [Générer et publier](./generate-and-publish) | Lancer le générateur, vérifier, modifier et publier. |
+| [Générer et activer](./generate-and-publish) | Lancer le générateur, vérifier, modifier et activer. |
+| [Activer et séances de classe](./activate-and-sessions) | Transformer le modèle hebdomadaire en réunions de classe datées. |
 
 ## Avant de commencer
 
@@ -114,6 +126,7 @@ publiez. Voir [Générer et publier](./generate-and-publish).
 - La **base pédagogique** doit déjà être en place — niveaux, classes, matières, périodes, salles
   et enseignants. Voir
   [Construire la base pédagogique](../getting-started/build-the-academic-foundation).
+- Réglez tôt les **[horaires de l'école](../settings/school-schedule)** pour l'année.
 
 <Callout title="Un emploi du temps appartient à une année scolaire">
 Tout ici — la configuration, les affectations, les règles et l'horaire généré — est rattaché à

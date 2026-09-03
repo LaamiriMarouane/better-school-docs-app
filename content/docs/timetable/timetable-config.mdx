@@ -1,15 +1,36 @@
 ---
 title: Timetable config
-description: Define the weekly grid your schedule is built on — working days, daily hours, period length, and breaks.
+description: Define a weekly grid for a timetable group — working days, daily hours, period length, and breaks — inside the school schedule.
 ---
 
-The **timetable config** describes the shape of your school week: which days you teach, the hours
-of the day, how long a period lasts, and when breaks fall. The generator divides this into a grid
-of time slots and places every lesson into it. Getting the config right is the foundation of a
-good timetable.
+A **timetable config** describes the shape of a school week for one or more [timetable
+groups](./timetable-groups): which days you teach, the hours of the day, how long a period lasts,
+and when breaks fall. The generator divides this into a grid of time slots and places every lesson
+into it.
+
+It sits **inside** the year-wide [School schedule](../settings/school-schedule). The school
+schedule is the outer default; a timetable config may match it or use a **narrower** day (fewer
+days, shorter hours, or different extra breaks).
 
 <Callout title="Who this is for">
-Administrators defining the school's weekly schedule structure.
+Administrators defining the weekly grid used by timetable groups.
+</Callout>
+
+## Two layers: school schedule and timetable config
+
+| Layer | Where | Purpose |
+| --- | --- | --- |
+| **School schedule** | **Settings → Academic → School schedule** | Global default for the year — working days, open hours, default period length, shared breaks. |
+| **Timetable config** | **Academic → Timetable → Config → Time Grid** | Grid attached to a group (e.g. primary vs secondary). Must fit inside the school schedule. |
+
+When you create a **new** timetable config, the form is **pre-filled** from the school schedule.
+You can then tighten it for specific levels — for example Grade 1 finishes earlier and has two
+short breaks, while Grades 2–3 keep a longer day.
+
+<Callout title="Validation">
+A timetable config cannot teach on a weekday the school schedule marks closed, cannot start before
+or end after school hours, and must not clash with school-wide breaks. Fix the school schedule
+first if the outer window is wrong.
 </Callout>
 
 ## Where this lives
@@ -24,8 +45,9 @@ Go to **Academic → Timetable → Config**. The page has several tabs:
 
 ## Before you start
 
-- An **academic year** must be selected, and its **working days** set, because the config's days
-  must be among them.
+- An **academic year** must be selected.
+- The **[School schedule](../settings/school-schedule)** for that year should be set — new configs
+  inherit from it, and saves are checked against it.
 
 ## Create a timetable config
 
@@ -39,7 +61,7 @@ the existing one to edit it).
 
 <Screenshot
   label="Timetable config form"
-  caption="Define the days, hours, period length, and breaks for the school week."
+  caption="Define the days, hours, period length, and breaks for this group's week."
 />
 </Step>
 
@@ -49,18 +71,19 @@ the existing one to edit it).
 | Field | Required | Notes |
 | --- | --- | --- |
 | **Name** | Yes | A label for this config, e.g. *Primary 2025–26*. |
-| **Working days** | Yes | The days school runs (e.g. Monday–Friday). They must be among the academic year's working days. |
-| **Daily hours** | Yes | The start and end of the teaching day, e.g. *08:00–17:00*. The same window applies to every day. |
-| **Period length** | Yes | How many minutes a period lasts, e.g. *45*. The day is divided into periods of this length. |
-| **Max periods per day** | Yes | The most periods a class can have in a single day. Keeps days from running too long. |
-| **Half-day divider** | No | The time that splits morning from afternoon, e.g. *12:00*. Setting it lets you use half-day rules (see below). |
-| **Breaks** | No | Times each day when no lessons are placed — lunch, recess, assembly. The generator keeps these clear. |
+| **Working days** | Yes | The days this config teaches (e.g. Monday–Friday). Must be among the **school schedule** working days. |
+| **Daily hours** | Yes | Start and end of the teaching day for this config, e.g. *08:00–17:00*. Must fit inside school hours. |
+| **Period length** | Yes | How many minutes a period lasts, e.g. *45*. |
+| **Max periods per day** | Yes | The most periods a class can have in a single day. |
+| **Half-day divider** | No | The time that splits morning from afternoon, e.g. *12:00*. |
+| **Breaks** | No | Times when no lessons are placed. School-wide breaks are included as a starting point; you can add more that do not clash with them. |
 </Step>
 
 <Step>
 ### Save
 
-The config is saved for the selected academic year and used the next time you generate.
+The config is saved for the selected academic year. Attach it when you create or edit a
+[timetable group](./timetable-groups).
 </Step>
 
 </Steps>
@@ -73,8 +96,8 @@ slots, a protected lunch, and a row of afternoon slots. Every lesson the generat
 in one of these slots.
 
 <Callout title="Breaks are protected">
-No lesson is ever placed over a break. Use breaks for lunch, recess, prayer, or any time the
-whole school should be free.
+No lesson is ever placed over a break. Use breaks for lunch, recess, prayer, or any time those
+levels should be free.
 </Callout>
 
 ## The half-day divider
@@ -86,21 +109,23 @@ it empty, those half-day rules simply don't apply.
 
 ## Using more than one config
 
-You can create **several configs** for the same year — for example one grid for the primary
-school and a different one for the secondary school, if they run different hours or period
-lengths. Each timetable you generate uses one config.
+You can create **several configs** for the same year — for example one grid for primary and another
+for secondary — as long as each stays inside the [school schedule](../settings/school-schedule).
+Each [timetable group](./timetable-groups) uses one config.
 
 ## Tips and best practices
 
-- Match the **period length** to how your school actually teaches; it's hard to change once
+- Set the **school schedule** first, then create configs that match or narrow it.
+- Match the **period length** to how those levels actually teach; it's hard to change once
   timetables are built on it.
-- Add **every break** the whole school shares, so the generator never schedules over them.
+- Put **shared** breaks on the school schedule; put level-specific extras on the timetable config.
 - Set the **half-day divider** if you want morning/afternoon balance rules; otherwise leave it
   empty.
 
 ## Related articles
 
+- [School schedule](../settings/school-schedule)
+- [Timetable groups](./timetable-groups)
 - [Teaching load](./teaching-load)
 - [Prerequisites](./prerequisites)
-- [Lessons and assignments](./lessons-and-assignments)
-- [Generate and publish](./generate-and-publish)
+- [Generate and activate](./generate-and-publish)

@@ -25,19 +25,21 @@ without clashes.
 
 ## How many lessons each subject has
 
-The number of weekly lessons comes from the **teaching load** set for each subject at a level
-for the academic year. For each subject you say how many lessons it has per week, and whether
-any of them are **double** (or longer) lessons that need several periods in a row (common for
-labs or workshops).
+The number of weekly lessons comes from **[Teaching load](./teaching-load)** for each subject at a
+level (for the academic year). There you say how many **meetings** the subject has per week, and
+whether any are **double** (or longer) — several **periods** in a row.
 
-For example, *Physics* in a level might be **3 lessons a week**, one of which is a **double**
-(two periods together for the lab). The generator then places three Physics lessons for each class
-in that level, keeping the double as two consecutive periods.
+A **period** is one slot on the day grid. A **lesson** is one meeting to place. For example,
+*Physics* might be **two singles and one double**: three lessons, but four periods of teaching
+time. The generator places three Physics meetings for each class in that level and keeps the double
+as two consecutive periods.
+
+See [Teaching load](./teaching-load) for the full glossary (period, lesson, lesson block, Split,
+room type) and how to fill the editor.
 
 <Callout title="Where to set this">
-Set teaching load under **Academic → Timetable → Config → Teaching load**. See
-[Teaching load](./teaching-load). Do this before you generate so the generator knows how much of
-each subject to place.
+Set teaching load under **Academic → Timetable → Config → Teaching load**. Do this before you
+generate so the generator knows how much of each subject to place.
 </Callout>
 
 ## Assign teachers to classes
@@ -71,7 +73,7 @@ Open the teacher–class **assignments**. From the admin sidebar go to
 ### Repeat until every class–subject is covered
 
 The fastest way to find gaps is to start the generator: it lists every class–subject that still
-has no teacher. See [Generate and publish](./generate-and-publish).
+has no teacher. See [Generate and activate](./generate-and-publish).
 </Step>
 
 </Steps>
@@ -117,4 +119,4 @@ You decide how strongly the generator should honour each link on the
 - [Teaching load](./teaching-load)
 - [Scheduling setup](./scheduling-setup)
 - [Constraints](./constraints)
-- [Generate and publish](./generate-and-publish)
+- [Generate and activate](./generate-and-publish)

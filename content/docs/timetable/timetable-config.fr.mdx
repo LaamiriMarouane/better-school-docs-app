@@ -1,15 +1,37 @@
 ---
 title: Configuration de l'emploi du temps
-description: Définissez la grille hebdomadaire sur laquelle repose votre horaire — jours ouvrés, heures quotidiennes, durée des créneaux et pauses.
+description: Définissez une grille hebdomadaire pour un groupe — jours ouvrés, heures quotidiennes, durée des créneaux et pauses — à l'intérieur des horaires de l'école.
 ---
 
-La **configuration de l'emploi du temps** décrit la forme de votre semaine scolaire : les jours
-d'enseignement, les heures de la journée, la durée d'un créneau et le moment des pauses. Le
-générateur la découpe en une grille de créneaux horaires et y place chaque séance. Une bonne
-configuration est le fondement d'un bon emploi du temps.
+Une **configuration d'emploi du temps** décrit la forme d'une semaine scolaire pour un ou plusieurs
+[groupes d'emploi du temps](./timetable-groups) : les jours d'enseignement, les heures de la
+journée, la durée d'un créneau et le moment des pauses. Le générateur la découpe en une grille de
+créneaux et y place chaque séance.
+
+Elle se situe **à l'intérieur** des [horaires de l'école](../settings/school-schedule) de l'année.
+Les horaires de l'école sont le défaut extérieur ; une configuration peut les reprendre ou utiliser
+une journée **plus étroite** (moins de jours, heures plus courtes, ou pauses supplémentaires).
 
 <Callout title="Pour qui">
-Les administrateurs qui définissent la structure hebdomadaire de l'horaire de l'école.
+Les administrateurs qui définissent la grille hebdomadaire utilisée par les groupes.
+</Callout>
+
+## Deux niveaux : horaires de l'école et configuration
+
+| Niveau | Où | Rôle |
+| --- | --- | --- |
+| **Horaires de l'école** | **Paramètres → Académique → Horaires de l'école** | Défaut global de l'année — jours, heures d'ouverture, durée par défaut, pauses partagées. |
+| **Configuration** | **Académique → Emploi du temps → Configuration → Grille horaire** | Grille liée à un groupe (ex. primaire vs secondaire). Doit tenir dans les horaires de l'école. |
+
+Lorsque vous créez une **nouvelle** configuration, le formulaire est **prérempli** depuis les
+horaires de l'école. Vous pouvez ensuite le resserrer pour certains niveaux — par exemple le niveau
+1 finit plus tôt avec deux courtes pauses, tandis que les niveaux 2–3 gardent une journée plus
+longue.
+
+<Callout title="Validation">
+Une configuration ne peut pas enseigner un jour fermé dans les horaires de l'école, ni commencer
+avant / finir après les heures scolaires, ni entrer en conflit avec les pauses scolaires. Corrigez
+d'abord les horaires de l'école si la fenêtre extérieure est fausse.
 </Callout>
 
 ## Où cela se trouve
@@ -24,8 +46,9 @@ Allez dans **Académique → Emploi du temps → Configuration**. La page compor
 
 ## Avant de commencer
 
-- Une **année scolaire** doit être sélectionnée, et ses **jours ouvrés** définis, car les jours de
-  la configuration doivent figurer parmi eux.
+- Une **année scolaire** doit être sélectionnée.
+- Les **[horaires de l'école](../settings/school-schedule)** de cette année doivent être réglés —
+  les nouvelles configurations en héritent, et les enregistrements sont vérifiés par rapport à eux.
 
 ## Créer une configuration
 
@@ -39,7 +62,7 @@ cliquez sur **Ajouter une configuration** (ou ouvrez celle qui existe pour la mo
 
 <Screenshot
   label="Formulaire de configuration de l'emploi du temps"
-  caption="Définissez les jours, les heures, la durée des créneaux et les pauses de la semaine."
+  caption="Définissez les jours, les heures, la durée des créneaux et les pauses de la semaine de ce groupe."
 />
 </Step>
 
@@ -49,18 +72,19 @@ cliquez sur **Ajouter une configuration** (ou ouvrez celle qui existe pour la mo
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
 | **Nom** | Oui | Un libellé pour cette configuration, ex. *Primaire 2025–26*. |
-| **Jours ouvrés** | Oui | Les jours d'école (ex. lundi–vendredi). Ils doivent figurer parmi les jours ouvrés de l'année. |
-| **Heures quotidiennes** | Oui | Le début et la fin de la journée, ex. *08:00–17:00*. La même plage s'applique chaque jour. |
-| **Durée des créneaux** | Oui | Le nombre de minutes par créneau, ex. *45*. La journée est découpée en créneaux de cette durée. |
-| **Créneaux max. par jour** | Oui | Le nombre maximal de créneaux d'une classe en une journée. Évite des journées trop longues. |
-| **Séparateur de demi-journée** | Non | L'heure qui sépare le matin de l'après-midi, ex. *12:00*. La définir permet d'utiliser les règles de demi-journée (voir ci-dessous). |
-| **Pauses** | Non | Les moments où aucune séance n'est placée — déjeuner, récréation, rassemblement. Le générateur les laisse libres. |
+| **Jours ouvrés** | Oui | Les jours d'enseignement de cette configuration. Doivent figurer parmi les jours des **horaires de l'école**. |
+| **Heures quotidiennes** | Oui | Début et fin de la journée pour cette configuration. Doivent tenir dans les heures scolaires. |
+| **Durée des créneaux** | Oui | Minutes par créneau, ex. *45*. |
+| **Créneaux max. par jour** | Oui | Le maximum de créneaux d'une classe en une journée. |
+| **Séparateur de demi-journée** | Non | Heure qui sépare matin et après-midi, ex. *12:00*. |
+| **Pauses** | Non | Moments sans séance. Les pauses scolaires sont incluses au départ ; vous pouvez en ajouter d'autres sans conflit. |
 </Step>
 
 <Step>
 ### Enregistrer
 
-La configuration est enregistrée pour l'année sélectionnée et utilisée à la prochaine génération.
+La configuration est enregistrée pour l'année sélectionnée. Associez-la quand vous créez ou
+modifiez un [groupe d'emploi du temps](./timetable-groups).
 </Step>
 
 </Steps>
@@ -69,39 +93,39 @@ La configuration est enregistrée pour l'année sélectionnée et utilisée à l
 
 À partir de la configuration, le système détermine les **créneaux horaires** qu'une séance peut
 occuper. Par exemple, une journée 08:00–17:00 avec des créneaux de 45 minutes et un déjeuner de
-12:00–13:00 produit une série de créneaux le matin, un déjeuner protégé, et une série de créneaux
-l'après-midi. Chaque séance placée par le générateur tombe dans l'un de ces créneaux.
+12:00–13:00 produit une série de créneaux le matin, un déjeuner protégé, et une série l'après-midi.
 
 <Callout title="Les pauses sont protégées">
 Aucune séance n'est jamais placée par-dessus une pause. Utilisez les pauses pour le déjeuner, la
-récréation, la prière, ou tout moment où toute l'école doit être libre.
+récréation, la prière, ou tout moment où ces niveaux doivent être libres.
 </Callout>
 
 ## Le séparateur de demi-journée
 
 Le **séparateur de demi-journée** est le moment où votre journée se divise en matin et après-midi
-(souvent à midi). Le définir débloque des règles qui fonctionnent par demi-journée plutôt que par
-journée entière — par exemple « un enseignant présent le matin devrait avoir au moins deux séances
-ce matin-là ». Si vous le laissez vide, ces règles de demi-journée ne s'appliquent simplement pas.
+(souvent à midi). Le définir débloque des règles par demi-journée. S'il est vide, ces règles ne
+s'appliquent pas.
 
 ## Utiliser plusieurs configurations
 
 Vous pouvez créer **plusieurs configurations** pour la même année — par exemple une grille pour le
-primaire et une autre pour le secondaire, s'ils ont des horaires ou des durées de créneaux
-différents. Chaque emploi du temps généré utilise une configuration.
+primaire et une autre pour le secondaire — tant que chacune reste dans les
+[horaires de l'école](../settings/school-schedule). Chaque [groupe](./timetable-groups) utilise une
+configuration.
 
 ## Conseils et bonnes pratiques
 
-- Faites correspondre la **durée des créneaux** à la façon dont votre école enseigne réellement ;
-  c'est difficile à changer une fois les emplois du temps construits dessus.
-- Ajoutez **chaque pause** partagée par toute l'école, pour que le générateur n'y place jamais de
-  séance.
-- Définissez le **séparateur de demi-journée** si vous voulez des règles d'équilibre matin/après-midi ;
-  sinon laissez-le vide.
+- Réglez d'abord les **horaires de l'école**, puis créez des configurations qui les reprennent ou
+  les resserrent.
+- Faites correspondre la **durée des créneaux** à l'enseignement réel de ces niveaux.
+- Mettez les pauses **partagées** dans les horaires de l'école ; les extras propres aux niveaux
+  dans la configuration.
+- Définissez le **séparateur de demi-journée** si vous voulez des règles matin/après-midi.
 
 ## Articles liés
 
+- [Horaires de l'école](../settings/school-schedule)
+- [Groupes d'emploi du temps](./timetable-groups)
 - [Charge d'enseignement](./teaching-load)
 - [Prérequis](./prerequisites)
-- [Séances et affectations](./lessons-and-assignments)
-- [Générer et publier](./generate-and-publish)
+- [Générer et activer](./generate-and-publish)

@@ -1,0 +1,66 @@
+---
+title: School schedule
+description: Set the school's default week for the academic year — working days, daily hours, period length, and shared breaks.
+---
+
+The **School schedule** is the school's **default week** for the selected academic year: which days
+you open, when the day starts and ends, how long a period lasts by default, and which breaks the
+whole school shares. Every timetable you build must fit inside this window.
+
+<Callout title="Who this is for">
+Administrators setting the year-wide opening hours before building timetables.
+</Callout>
+
+## Where this lives
+
+Go to **Settings → Academic → School schedule**.
+
+| Field | What it means |
+| --- | --- |
+| **Working days** | The weekdays the school is normally open (e.g. Monday–Friday). |
+| **Daily hours** | The earliest start and latest end of the school day. |
+| **Period length** | The default length of a teaching period (e.g. 45 minutes). |
+| **Max periods per day** | The default ceiling for how many periods fit in a day. |
+| **Half-day divider** | Optional time that splits morning from afternoon. |
+| **Breaks** | Shared free times (lunch, recess, assembly) that apply school-wide. |
+
+## School schedule vs timetable config
+
+Think of two layers:
+
+| Layer | Purpose |
+| --- | --- |
+| **School schedule** | The global default for the year — the outer envelope. |
+| **Timetable config** | A specific weekly grid for a [timetable group](../timetable/timetable-groups) (for example primary vs secondary). It can be the same as the school schedule, or a **narrower** subset. |
+
+Examples:
+
+- The school opens 08:00–17:00 Monday–Friday. Grade 1 uses a timetable config that ends at 14:00
+  with two short breaks. Grades 2–3 use a longer day with one lunch break.
+- You try a shorter Friday on one draft group without changing the school-wide default.
+
+## What it is used for
+
+| Area | How the school schedule helps |
+| --- | --- |
+| **New timetable configs** | A new config is **pre-filled** from the school schedule (days, hours, period length, shared breaks). |
+| **Saving a timetable config** | The config must stay **inside** the school schedule: days must be school days, hours must fit within school hours, and extra breaks must not clash with school-wide breaks. |
+| **Teacher, room, and class availability** | The unavailability editors show the **school week grid** so you mark busy or free times against the same canvas. |
+| **Teacher load** | Capacity bars on teacher assignments measure load against the **school week**, not one group's config alone. |
+| **Open days** | Working days (together with holidays and closures) decide when the school is open for dated work such as trips and class sessions. |
+
+<Callout title="Set this early">
+Configure the school schedule **before** you create timetable configs. Changing the outer window
+later can force you to revisit configs that no longer fit.
+</Callout>
+
+## Before you start
+
+- Select the correct **academic year** in the year switcher.
+
+## Related articles
+
+- [Timetable config](../timetable/timetable-config)
+- [Timetable groups](../timetable/timetable-groups)
+- [Scheduling setup](../timetable/scheduling-setup)
+- [Create an academic year](../getting-started/build-the-academic-foundation/create-an-academic-year)

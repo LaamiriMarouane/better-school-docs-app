@@ -4,11 +4,13 @@
     "index",
     "prerequisites",
     "timetable-config",
+    "timetable-groups",
     "teaching-load",
     "lessons-and-assignments",
     "teacher-assignments",
     "scheduling-setup",
     "constraints",
-    "generate-and-publish"
+    "generate-and-publish",
+    "activate-and-sessions"
   ]
 }

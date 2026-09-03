@@ -25,19 +25,23 @@ place toutes sans conflit.
 
 ## Combien de séances par matière
 
-Le nombre de séances hebdomadaires vient de la **charge d'enseignement** définie pour chaque
-matière à un niveau pour l'année scolaire. Pour chaque matière, vous indiquez combien de séances
-par semaine, et si certaines sont des **séances doubles** (ou plus longues) qui nécessitent
-plusieurs créneaux d'affilée (fréquent pour les labos ou les ateliers).
+Le nombre de séances hebdomadaires vient de la **[Charge d'enseignement](./teaching-load)** pour
+chaque matière à un niveau (pour l'année scolaire). Vous y indiquez combien de **réunions** la
+matière a par semaine, et si certaines sont **doubles** (ou plus longues) — plusieurs **créneaux**
+d'affilée.
 
-Par exemple, la *Physique* d'un niveau peut être **3 séances par semaine**, dont une **double**
-(deux créneaux ensemble pour le labo). Le générateur place alors trois séances de physique pour
-chaque classe du niveau, en gardant la double sur deux créneaux consécutifs.
+Un **créneau** est une case de la grille du jour. Une **séance** est une réunion à placer. Par
+exemple, la *Physique* peut être **deux simples et une double** : trois séances, mais quatre
+créneaux d'enseignement. Le générateur place trois réunions de physique pour chaque classe du
+niveau et garde la double sur deux créneaux consécutifs.
+
+Voir [Charge d'enseignement](./teaching-load) pour le glossaire complet (créneau, séance, bloc,
+Scindé, type de salle) et comment remplir l'éditeur.
 
 <Callout title="Où régler cela">
 Réglez la charge d'enseignement sous **Académique → Emploi du temps → Configuration → Charge
-d'enseignement**. Voir [Charge d'enseignement](./teaching-load). Faites-le avant de générer pour
-que le générateur sache combien placer de chaque matière.
+d'enseignement**. Faites-le avant de générer pour que le générateur sache combien placer de chaque
+matière.
 </Callout>
 
 ## Affecter les enseignants aux classes
@@ -72,7 +76,7 @@ dans ses **Classes** (affectations). Puis ajoutez une affectation.
 ### Répéter jusqu'à couvrir chaque matière de classe
 
 Le moyen le plus rapide de repérer les manques est de lancer le générateur : il liste chaque
-matière de classe sans enseignant. Voir [Générer et publier](./generate-and-publish).
+matière de classe sans enseignant. Voir [Générer et activer](./generate-and-publish).
 </Step>
 
 </Steps>
@@ -119,4 +123,4 @@ Vous décidez de la fermeté avec laquelle le générateur respecte chaque lien 
 - [Charge d'enseignement](./teaching-load)
 - [Réglages de planification](./scheduling-setup)
 - [Contraintes](./constraints)
-- [Générer et publier](./generate-and-publish)
+- [Générer et activer](./generate-and-publish)

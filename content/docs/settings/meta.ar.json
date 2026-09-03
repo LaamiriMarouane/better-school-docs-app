@@ -2,6 +2,7 @@
   "title": "الإعدادات",
   "pages": [
     "index",
+    "school-schedule",
     "fiscal-year",
     "billing-configuration",
     "billing-subscription",
