@@ -20,6 +20,7 @@ export interface ClientManifestContactDTO {
 
 export interface ClientManifestPublicUrlsDTO {
   signupUrl?: string | null;
+  webAppUrl?: string | null;
   helpCenterUrl?: string | null;
   docsUrl?: string | null;
   statusPageUrl?: string | null;
