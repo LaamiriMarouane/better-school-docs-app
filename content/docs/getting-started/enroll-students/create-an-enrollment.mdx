@@ -53,7 +53,7 @@ Select one or more **Pending** pre-inscriptions of the **same level**, then choo
 | **Track** | When the level offers tracks | Must match the pre-inscription's track when one was set. |
 | **Class** | No | Assign now or later from Enrollments. |
 | **Payment plan** | No | Assign now or later; drives fees when attached. |
-| **Enrollment date** | No | Can default to today. |
+| **Enrollment date** | No | Can default to today. This is the first day the student can be billed. |
 | **Notes** | No | Optional. |
 </Step>
 
@@ -71,9 +71,18 @@ A student has one active enrollment placement for the year. To change class or l
 [Change class](./transfer-a-student-between-classes) rather than creating a second enrollment.
 </Callout>
 
+<Callout title="Enrollment date and fees">
+Months before today are not billed. A student who joins on 3 October is not billed for
+September. With the default billing configuration (due on the 1st, in advance), October
+is still due on 1 October, so those rows are already overdue. Later months are due on
+the 1st. See
+[Installments and schedules](../../finance/fees-and-payments/installments-and-schedules).
+</Callout>
+
 ## Related articles
 
 - [Pre-inscriptions](./pre-inscriptions)
 - [Bulk enroll students](./bulk-enroll-students)
 - [Transfer a student between classes](./transfer-a-student-between-classes)
 - [Withdraw an enrollment](./suspend-or-withdraw-an-enrollment)
+- [Installments and schedules](../../finance/fees-and-payments/installments-and-schedules)

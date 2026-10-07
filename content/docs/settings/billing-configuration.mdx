@@ -17,9 +17,9 @@ Go to **Settings → Finance** and open the **Billing** tab to set the options b
 
 | Setting | What it controls |
 | --- | --- |
-| **Cycle anchor** | What each billing cycle is aligned to — for example the start of the month. |
-| **Custom anchor day** | When the cycle anchor is set to a custom day, the specific day of the month it falls on. |
-| **Charge timing** | When a cycle's charge is applied — for example at the start or the end of the cycle. |
+| **Billing cycle anchor** | The day installments fall on. **1st of each month**, **Student enrollment date** (that day every month), or a **custom day** from 1 to 28. |
+| **Custom anchor day** | Used only when the anchor is a custom day. |
+| **Charge timing** | **In advance** charges at the start of the period. **In arrears** charges at the end, and skips a period whose anchor already passed before the student joined. |
 
 Adjust the settings, then click **Save**.
 
@@ -27,6 +27,20 @@ Adjust the settings, then click **Save**.
 Billing configuration shapes how installments are generated. Set it before creating
 payment plans and enrolling students so every schedule follows the same rules.
 </Callout>
+
+## How a due date is chosen
+
+The anchor is the due day, including for the month the student joins.
+
+With **1st of each month** and **in advance**, a student who enrolls on 3 October is
+not billed for September. October is due on **1 October**, and that row is already
+overdue. November through the end of the year are also due on the 1st.
+
+**In arrears** with the same anchor skips October. The first due date is 1 November.
+
+A plan change uses these same rules, but the new schedule starts from **today**. Unpaid
+rows of the old plan, including overdue ones, are removed. The worked examples are in
+[Installments and schedules](../finance/fees-and-payments/installments-and-schedules).
 
 ## Related articles
 

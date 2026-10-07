@@ -54,7 +54,7 @@ Sélectionnez une ou plusieurs pré-inscriptions **En attente** du **même nivea
 | **Filière** | Lorsque le niveau propose des filières | Doit correspondre à la filière de la pré-inscription lorsqu'une a été définie. |
 | **Classe** | Non | Affectez maintenant ou plus tard depuis Inscriptions. |
 | **Plan de paiement** | Non | Affectez maintenant ou plus tard ; génère les frais une fois associé. |
-| **Date d'inscription** | Non | Peut être aujourd'hui par défaut. |
+| **Date d'inscription** | Non | Peut être aujourd'hui par défaut. C'est le premier jour facturable pour l'élève. |
 | **Notes** | Non | Facultatif. |
 </Step>
 
@@ -74,9 +74,18 @@ niveau plus tard, utilisez [Changer de classe](./transfer-a-student-between-clas
 de créer une deuxième inscription.
 </Callout>
 
+<Callout title="Date d'inscription et frais">
+Les mois antérieurs à aujourd'hui ne sont pas facturés. Un élève qui arrive le 3 octobre
+n'est pas facturé pour septembre. Avec la configuration par défaut (exigibilité le 1er, à
+l'avance), octobre reste exigible le 1er octobre, donc ces lignes sont déjà en retard. Les
+mois suivants sont exigibles le 1er. Voir
+[Échéances et calendriers](../../finance/fees-and-payments/installments-and-schedules).
+</Callout>
+
 ## Articles liés
 
 - [Pré-inscriptions](./pre-inscriptions)
 - [Inscrire des élèves en masse](./bulk-enroll-students)
 - [Transférer un élève entre classes](./transfer-a-student-between-classes)
 - [Retirer une inscription](./suspend-or-withdraw-an-enrollment)
+- [Échéances et calendriers](../../finance/fees-and-payments/installments-and-schedules)

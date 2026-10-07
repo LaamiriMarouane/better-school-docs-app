@@ -1,6 +1,6 @@
 ---
 title: Installments and schedules
-description: Understand how a student's installments are generated from their payment plan.
+description: Understand how a student's installments are generated from their payment plan, enrollment date, and billing configuration.
 ---
 
 An **installment** is one scheduled portion of what a student owes — an amount with a
@@ -10,6 +10,12 @@ payment plan is attached to an enrollment.
 <Callout title="Who this is for">
 Administrators who want to understand where a student's balance comes from.
 </Callout>
+
+The examples below use an academic year that runs **1 September through 30 June**, and
+the default billing configuration: due on the **1st** of each month, charged **in advance**.
+Other anchors and timings are covered after the default cases. Billing configuration is
+set under **Settings → Finance → Billing** — see
+[Billing configuration](../../settings/billing-configuration).
 
 ## How installments are generated
 
@@ -23,11 +29,24 @@ enrollment — the plan's fees become the basis of the schedule.
 </Step>
 
 <Step>
+### Months before today are not generated
+
+The schedule starts from **today** in the school timezone, or from the first day of
+the academic year when today is earlier than that. Months before today are not
+generated. Nothing is generated after the year ends.
+
+The enrollment date can default to today. It does not move the first due date off the
+billing anchor.
+</Step>
+
+<Step>
 ### Each fee expands by its periodicity
 
-Every fee in the plan produces installments according to its **periodicity**. A
-monthly fee produces a monthly series across the year; a one-time fee produces a
-single installment.
+| Periodicity | What is generated |
+| --- | --- |
+| **Monthly** | One installment per month, from the first due date through the end of the year. |
+| **Quarterly** | One installment every three months, on the same rule. |
+| **One-time** or **yearly** | A single installment, due on the first due date. |
 </Step>
 
 <Step>
@@ -38,6 +57,84 @@ student's payment view, grouped by fee.
 </Step>
 
 </Steps>
+
+## Due dates
+
+With the default configuration, every month in the schedule is due on the **1st**,
+including the month the student joins.
+
+An unpaid installment whose due date is **before today** in the school timezone shows
+as **Overdue**. Due today is not overdue. The amount stays collectible.
+
+### Student joins after the 1st — in advance
+
+Enrolled on **3 October**. Charge timing **in advance**. Cycle anchor **1st of each month**.
+
+| Fee | Installments |
+| --- | --- |
+| Monthly (canteen, activities, …) | **1 October**, then **1 November** through **1 June**. September is not billed. October is billed on the 1st. |
+| One-time (registration, supplies, …) | One installment due **1 October**. |
+
+On 3 October those 1 October rows are already **Overdue**. November through June stay pending.
+
+### Student joins on the anchor day
+
+Enrollment date **1 October**. The first due date is **1 October**, then the 1st of
+each following month through June. A one-time fee is also due on 1 October.
+
+If the plan is attached on 3 October, those 1 October rows are already overdue: the
+student was enrolled on the due date, and that date has passed.
+
+### In arrears
+
+**In arrears** bills at the end of the period. If the student joins after this month's
+anchor, that period is skipped. Enrollment on **3 October** with the 1st as the anchor
+starts on **1 November**. October is not billed. Later months stay on the 1st.
+
+### Enrollment date as the anchor
+
+When the cycle anchor is **Student enrollment date**, every installment falls on that
+day of the month: enrollment on 3 October gives 3 October, 3 November, 3 December, and
+so on. A short month uses the last day of that month, then the enrollment day returns.
+
+## Changing a plan
+
+A successful change **replaces** the schedule with the new plan. It does not keep the
+old plan's unpaid rows.
+
+| What happened | What the schedule does |
+| --- | --- |
+| **Change succeeds** | Every unpaid installment of the old plan is removed, **including overdue ones**. Paid installments stay. A partly paid installment is closed at the amount already collected and stays. |
+| **New schedule** | Built from **today**, not from the original enrollment date, through the end of the year. The same due-date rules apply. A fee already **paid for that same due date** is not billed again. |
+| **Change is rejected** | Nothing is removed and nothing is added. The plan and the installments stay as they were. |
+| **Same plan chosen again** | No new installments. |
+
+<Callout title="Review the result">
+After a successful change, open the student's installments. Overdue rows from the old
+plan are gone. The new plan's fees are there instead, starting in the current period.
+</Callout>
+
+### Switch with only overdue rows
+
+The old plan has an unpaid canteen due **1 October** (overdue) and nothing paid. The
+switch succeeds. That October row is removed, along with every other unpaid row of the
+old plan. The new plan is generated from today: a one-time fee due on the current
+anchor (1 October, if they were already enrolled then), and a monthly fee from that
+date through June. There is no second copy of the same fee on the same date.
+
+### Switch when something was already paid
+
+A 1 October installment that is already paid stays on the old plan. If the new plan
+contains that same fee, it does not add another installment on 1 October. Later months
+of the new plan are still generated.
+
+### Switch rejected
+
+The change is saved only if the whole replacement succeeds. If it is rejected — the
+plan does not apply to the student's level, the year is closed, or the schedule cannot
+be built — the student keeps the previous plan and the previous installments. Overdue
+rows stay because the change did not happen, not because a successful change preserves
+them.
 
 ## Reading an installment
 
@@ -51,12 +148,9 @@ Each installment tracks three figures:
 
 An installment is fully settled when the remaining amount reaches zero.
 
-<Callout title="Changing a plan">
-If a student's payment plan changes, the schedule is based on the new plan. Always
-review the resulting installments after a plan change.
-</Callout>
-
 ## Related articles
 
+- [Billing configuration](../../settings/billing-configuration)
+- [Create an enrollment](../../getting-started/enroll-students/create-an-enrollment)
 - [Create payment plans](./create-payment-plans)
 - [Record a payment](./record-a-payment)

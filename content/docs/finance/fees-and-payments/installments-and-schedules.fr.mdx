@@ -1,6 +1,6 @@
 ---
 title: Échéances et calendriers
-description: Comprenez comment les échéances d'un élève sont générées à partir de son échéancier de paiement.
+description: Comprenez comment les échéances d'un élève sont générées à partir de son échéancier, de sa date d'inscription et de la configuration de facturation.
 ---
 
 Une **échéance** est une portion planifiée de ce qu'un élève doit — un montant assorti
@@ -10,6 +10,12 @@ d'une **date d'exigibilité**. Les échéances ne se créent pas à la main : el
 <Callout title="Pour qui">
 Les administrateurs qui veulent comprendre d'où vient le solde d'un élève.
 </Callout>
+
+Les exemples ci-dessous prennent une année scolaire du **1er septembre au 30 juin**, et
+la configuration de facturation par défaut : exigibilité le **1er** de chaque mois,
+facturation **à l'avance**. Les autres ancrages et moments sont décrits ensuite. La
+configuration se règle sous **Paramètres → Finance → Facturation** — voir
+[Configuration de la facturation](../../settings/billing-configuration).
 
 ## Comment les échéances sont générées
 
@@ -23,11 +29,24 @@ inscription existante — les frais de l'échéancier deviennent la base du cale
 </Step>
 
 <Step>
+### Les mois antérieurs à aujourd'hui ne sont pas générés
+
+Le calendrier part d'**aujourd'hui** dans le fuseau de l'école, ou du premier jour de
+l'année scolaire lorsque aujourd'hui est antérieur. Les mois antérieurs ne sont pas
+générés. Rien n'est généré après la fin de l'année.
+
+La date d'inscription peut être aujourd'hui par défaut. Elle ne déplace pas la première
+échéance hors de l'ancrage de facturation.
+</Step>
+
+<Step>
 ### Chaque frais se développe selon sa périodicité
 
-Chaque frais de l'échéancier produit des échéances selon sa **périodicité**. Un frais
-mensuel produit une série mensuelle sur l'année ; un frais unique produit une seule
-échéance.
+| Périodicité | Ce qui est généré |
+| --- | --- |
+| **Mensuelle** | Une échéance par mois, de la première date d'exigibilité jusqu'à la fin de l'année. |
+| **Trimestrielle** | Une échéance tous les trois mois, selon la même règle. |
+| **Unique** ou **annuelle** | Une seule échéance, exigible à la première date. |
 </Step>
 
 <Step>
@@ -38,6 +57,89 @@ s'affichent sur la vue des paiements de l'élève, regroupées par frais.
 </Step>
 
 </Steps>
+
+## Dates d'exigibilité
+
+Avec la configuration par défaut, chaque mois du calendrier est exigible le **1er**,
+y compris le mois d'arrivée de l'élève.
+
+Une échéance impayée dont la date est **antérieure à aujourd'hui** dans le fuseau de
+l'école s'affiche **En retard**. Exigible aujourd'hui, elle n'est pas en retard. Le
+montant reste à encaisser.
+
+### L'élève arrive après le 1er — à l'avance
+
+Inscrit le **3 octobre**. Moment : **à l'avance**. Ancrage : **1er de chaque mois**.
+
+| Frais | Échéances |
+| --- | --- |
+| Mensuel (cantine, activités, …) | **1er octobre**, puis du **1er novembre** au **1er juin**. Septembre n'est pas facturé. Octobre est facturé le 1er. |
+| Unique (inscription, fournitures, …) | Une échéance exigible le **1er octobre**. |
+
+Le 3 octobre, ces lignes du 1er octobre sont déjà **en retard**. De novembre à juin, elles restent en attente.
+
+### L'élève arrive le jour d'ancrage
+
+Date d'inscription : **1er octobre**. La première échéance est le **1er octobre**, puis
+le 1er de chaque mois suivant jusqu'en juin. Un frais unique est lui aussi exigible le
+1er octobre.
+
+Si l'échéancier est associé le 3 octobre, ces lignes du 1er octobre sont déjà en
+retard : l'élève était inscrit à la date d'exigibilité, et cette date est passée.
+
+### À terme échu
+
+**À terme échu** facture en fin de période. Si l'élève arrive après l'ancrage du mois,
+cette période est sautée. Une inscription le **3 octobre** avec le 1er pour ancrage
+commence le **1er novembre**. Octobre n'est pas facturé. Les mois suivants restent le 1er.
+
+### La date d'inscription comme ancrage
+
+Lorsque l'ancrage est **Date d'inscription de l'élève**, chaque échéance tombe ce jour
+du mois : une inscription le 3 octobre donne le 3 octobre, le 3 novembre, le 3
+décembre, et ainsi de suite. Un mois court prend le dernier jour, puis le jour
+d'inscription revient.
+
+## Changer d'échéancier
+
+Un changement réussi **remplace** le calendrier par le nouvel échéancier. Il ne
+conserve pas les échéances impayées de l'ancien.
+
+| Ce qui se passe | Effet sur le calendrier |
+| --- | --- |
+| **Le changement réussit** | Chaque échéance impayée de l'ancien échéancier est retirée, **y compris celles en retard**. Les échéances payées restent. Une échéance partiellement payée est close au montant déjà encaissé et reste. |
+| **Nouveau calendrier** | Construit à partir d'**aujourd'hui**, pas de la date d'inscription d'origine, jusqu'à la fin de l'année. Les mêmes règles de date s'appliquent. Un frais déjà **payé pour cette même date** n'est pas facturé une seconde fois. |
+| **Le changement est refusé** | Rien n'est retiré et rien n'est ajouté. L'échéancier et les échéances restent tels quels. |
+| **Le même échéancier est choisi** | Aucune nouvelle échéance. |
+
+<Callout title="Vérifiez le résultat">
+Après un changement réussi, ouvrez les échéances de l'élève. Les lignes en retard de
+l'ancien échéancier ont disparu. Les frais du nouvel échéancier sont à leur place, à
+partir de la période en cours.
+</Callout>
+
+### Changement avec seulement des lignes en retard
+
+L'ancien échéancier a une cantine impayée exigible le **1er octobre** (en retard) et
+rien de payé. Le changement réussit. Cette ligne d'octobre est retirée, avec toutes
+les autres lignes impayées de l'ancien échéancier. Le nouvel échéancier est généré
+depuis aujourd'hui : un frais unique exigible à l'ancrage en cours (le 1er octobre, si
+l'élève était déjà inscrit ce jour-là), et un frais mensuel de cette date jusqu'en
+juin. Il n'y a pas de second exemplaire du même frais à la même date.
+
+### Changement alors qu'un paiement existe déjà
+
+Une échéance du 1er octobre déjà payée reste sur l'ancien échéancier. Si le nouvel
+échéancier contient ce même frais, il n'ajoute pas une autre échéance le 1er octobre.
+Les mois suivants du nouvel échéancier sont quand même générés.
+
+### Changement refusé
+
+Le changement n'est enregistré que si le remplacement entier réussit. S'il est refusé —
+l'échéancier ne s'applique pas au niveau de l'élève, l'année est close, ou le
+calendrier ne peut pas être construit — l'élève garde l'échéancier et les échéances
+précédents. Les lignes en retard restent parce que le changement n'a pas eu lieu, pas
+parce qu'un changement réussi les conserve.
 
 ## Lire une échéance
 
@@ -51,12 +153,9 @@ Chaque échéance suit trois chiffres :
 
 Une échéance est entièrement réglée lorsque le montant restant atteint zéro.
 
-<Callout title="Changer d'échéancier">
-Si l'échéancier d'un élève change, le calendrier se base sur le nouvel échéancier.
-Vérifiez toujours les échéances obtenues après un changement d'échéancier.
-</Callout>
-
 ## Articles liés
 
+- [Configuration de la facturation](../../settings/billing-configuration)
+- [Créer une inscription](../../getting-started/enroll-students/create-an-enrollment)
 - [Créer des échéanciers](./create-payment-plans)
 - [Enregistrer un paiement](./record-a-payment)

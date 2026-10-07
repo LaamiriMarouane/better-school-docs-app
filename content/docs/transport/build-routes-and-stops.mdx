@@ -22,6 +22,12 @@ Administrators and transport coordinators planning bus routes.
 
 ## Before you start
 
+- Drop a **map pin** for the school in **Settings → School → School Info** and save it
+  **before** you create routes. The pin is copied onto the school stop (the end of a pickup
+  route, the start of a dropoff route). Typing the address is not enough. Without the pin,
+  the road line does not run to or from the school, and **Suggest times** and **Optimize
+  order** leave the school out. If a route was created before the pin existed, open that
+  route's school stop and save it so the location is copied onto the route.
 - Your **vehicles** and **drivers** should already exist if you want to set a default crew for
   the route. See [Manage vehicles](./manage-vehicles) and [Manage drivers](./manage-drivers).
 
@@ -173,6 +179,13 @@ pair easy to recognise on the map.
 
 There is no fixed limit. Add as many stops as your route needs. The school stop is always added
 automatically — at the end of a Pickup route and at the start of a Dropoff route.
+
+### Why doesn't the road line include the school?
+
+The school stop uses the **map pin** saved in **Settings → School → School Info**, not the
+written address. Set that pin and save it before you create the route. If the route already
+exists, open the school stop and save it so the pin is copied onto the route. Until then,
+suggested times and optimized order also leave the school out.
 
 ### How do I reorder stops?
 
