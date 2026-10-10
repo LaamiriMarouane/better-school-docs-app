@@ -8,20 +8,23 @@ Un **niveau** représente une classe ou une année d'études — par exemple *1r
 les classes sont rattachées à des niveaux, et les élèves sont inscrits dans une classe
 à un niveau donné.
 
+Les niveaux sont regroupés sous des **niveaux d'éducation** (par exemple *Primaire* ou
+*Collège*), et un niveau peut être divisé en **filières** (par exemple *Sciences* et
+*Lettres*).
+
 <Callout title="Pour qui">
-Les administrateurs qui construisent la hiérarchie académique d'une année scolaire.
+Les administrateurs qui construisent la structure académique de l'école.
 </Callout>
 
 ## Avant de commencer
 
-- Une **année scolaire** doit déjà exister et être sélectionnée dans le sélecteur
-  d'année en haut de l'écran. Chaque niveau créé appartient à cette année.
 - Préparez d'abord la liste complète de vos niveaux (par exemple *1re année* à
-  *6e année*) afin de garder un ordre et des codes cohérents.
+  *6e année*) et les niveaux d'éducation auxquels ils appartiennent, afin de garder des
+  noms et des codes cohérents.
 
 <Screenshot
-  label="Page des niveaux avec le bouton Ajouter un niveau"
-  caption="La page Niveaux liste tous les niveaux de l'année scolaire sélectionnée."
+  label="Page Structure académique"
+  caption="La page Structure académique affiche les niveaux d'éducation, leurs niveaux et leurs éventuelles filières."
 />
 
 ## Étapes
@@ -29,42 +32,48 @@ Les administrateurs qui construisent la hiérarchie académique d'une année sco
 <Steps>
 
 <Step>
-### Ouvrir la page Niveaux
+### Ouvrir la page Structure académique
 
-Dans la barre latérale d'administration, allez dans **Académique → Niveaux**. Vérifiez
-que l'année scolaire affichée dans le sélecteur du haut est bien celle à construire.
+Dans la barre latérale d'administration, allez dans **Académique → Niveaux**. La page
+affiche votre **Structure académique** sous forme d'arborescence : niveaux d'éducation,
+puis niveaux, puis filières.
 </Step>
 
 <Step>
-### Démarrer un nouveau niveau
+### Ajouter un niveau d'éducation
 
-Cliquez sur **Ajouter un niveau**. Un formulaire s'ouvre pour saisir les détails du
-niveau.
-
-<Screenshot
-  label="Formulaire de création d'un niveau"
-  caption="Le formulaire de création : Libellé du niveau, Code, Description et Mode de présence."
-/>
+Cliquez sur **Ajouter un niveau d’éducation** et nommez-le — par exemple *Primaire*. Chaque
+niveau se trouve sous un niveau d'éducation : créez donc ceux-ci en premier.
 </Step>
 
 <Step>
-### Renseigner les détails du niveau
+### Ajouter un niveau
 
-Complétez les champs ci-dessous, puis cliquez sur **Créer le niveau**.
+Cliquez sur **Ajouter un niveau**, complétez les champs ci-dessous, puis cliquez sur
+**Créer un niveau**.
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Libellé du niveau** | Oui | Le nom affiché dans toute l'application, ex. *1re année*. |
-| **Code** | Oui | Un identifiant court, 15 caractères maximum, ex. `1A`. Utilisé dans les rapports et les emplois du temps. |
+| **Niveau d’éducation** | Oui | Le groupe auquel appartient ce niveau. |
+| **Label du niveau** | Oui | Le nom affiché dans toute l'application, ex. *1re année*. |
+| **Code** | Oui | Un identifiant court, ex. `1A`. Utilisé dans les rapports et les emplois du temps. |
+| **Promu vers** | Non | Le niveau vers lequel les élèves passent l'année suivante. Choisissez **Aucun (dernier niveau / fin de cycle)** pour le dernier niveau. |
 | **Description** | Non | Notes facultatives sur le niveau. |
-| **Mode de présence des élèves** | Non | Comment la présence est relevée pour ce niveau (par jour ou par séance). Il peut être verrouillé une fois la présence utilisée. |
+| **Mode de présence des étudiants** | Non | Comment la présence est relevée pour ce niveau — par jour ou par période. |
 </Step>
 
 <Step>
-### Vérifier que le niveau apparaît
+### Ajouter des filières (facultatif)
 
-Le nouveau niveau est ajouté immédiatement à la liste des niveaux. Répétez l'opération
-pour chaque niveau proposé par votre école.
+Si un niveau est divisé en filières, utilisez **Ajouter une filière** sur ce niveau et
+nommez chaque filière.
+</Step>
+
+<Step>
+### Utiliser les niveaux dans votre année scolaire
+
+Dans la [Configuration de l'année scolaire](./academic-year-setup), l'étape **Niveaux**
+vous permet de choisir les niveaux qui fonctionnent dans l'année que vous préparez.
 </Step>
 
 </Steps>
@@ -76,6 +85,7 @@ et ne peut plus être modifié. Choisissez-le avec soin lors de la création du 
 
 ## Articles liés
 
+- [Configuration de l'année scolaire](./academic-year-setup)
 - [Créer des classes](./create-classes)
 - [Créer des matières](./create-subjects)
 - [Cours, matières et classes](../common-concepts/courses-subjects-and-classes)
