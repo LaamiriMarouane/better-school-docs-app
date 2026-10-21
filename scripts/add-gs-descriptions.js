@@ -11,7 +11,7 @@ const descriptions = {
   'getting-started/welcome/index.mdx':
     'An introduction to the platform and a tour of what it can do for your school.',
   'getting-started/welcome/whats-included.mdx':
-    'A tour of every module — academic management, gradebook, timetable, transport, payroll, communication, and more.',
+    'A tour of every module — academic management, gradebook, timetable, transport, communication, and more.',
   'getting-started/access-and-authentication/index.mdx':
     'How to log in, manage user accounts, reset passwords, and control who can access which parts of the platform.',
   'getting-started/common-concepts/index.mdx':
