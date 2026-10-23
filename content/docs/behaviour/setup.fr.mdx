@@ -5,11 +5,11 @@ description: Définissez les catégories, sous-catégories et niveaux selon lesq
 
 Avant d'enregistrer un comportement, vous configurez le **vocabulaire** de votre école : les
 **catégories** de comportement, des **sous-catégories** facultatives, et les **niveaux**
-d'importance. Chacun est marqué **positif** ou **négatif**, pour que le système sache s'il ajoute ou
-retire des points.
+d'importance. Chaque catégorie et chaque niveau est marqué **positif** ou **négatif**, ce qui décide
+s'il ajoute ou retire des points.
 
 <Callout title="Pour qui">
-Les administrateurs qui configurent le système de comportement pour l'année.
+Les administrateurs qui configurent le système de comportement.
 </Callout>
 
 ## Les éléments
@@ -30,36 +30,43 @@ Lorsque vous enregistrez un incident, vous choisissez une **catégorie**, évent
 <Step>
 ### Ouvrir la configuration du comportement
 
-Allez dans **Comportement → Configuration**, où sont gérés les catégories et les niveaux.
+Allez dans **Comportement → Configuration**. Les catégories et les niveaux se gèrent sur cette même
+page, chacun dans sa carte.
 </Step>
 
 <Step>
 ### Ajouter une catégorie
 
+Dans la carte **Catégories**, choisissez **Créer** et renseignez :
+
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
 | **Nom** | Oui | ex. *Respect* ou *Perturbation*. |
-| **Type** | Oui | **Positif** ou **Négatif**. |
+| **Sentiment** | Oui | **Positif** ou **Négatif**. |
 | **Couleur** | Non | Une couleur pour la reconnaître d'un coup d'œil. |
 </Step>
 
 <Step>
 ### Ajouter des sous-catégories (facultatif)
 
-Sous une catégorie, ajoutez des libellés plus fins si vous le souhaitez, chacun avec un **nom** et une
-**couleur** facultative — par exemple *Bavardage* et *Téléphone* sous *Perturbation*.
+Sur la ligne de la catégorie, choisissez **Ajouter une sous-catégorie** et donnez-lui un **Nom** et une
+**Couleur** facultative — par exemple *Bavardage* et *Téléphone* sous *Perturbation*. Touchez une
+catégorie pour afficher ou masquer ses sous-catégories.
 </Step>
 
 </Steps>
 
 ## Créer un niveau
 
+Dans la carte **Niveaux**, choisissez **Créer**. Les niveaux sont rangés sous **Niveaux positifs** et
+**Niveaux négatifs**.
+
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
 | **Nom** | Oui | ex. *Mineur*, *Majeur*, *Or*. |
-| **Type** | Oui | **Positif** ou **Négatif**. |
-| **Points par défaut** | Oui | Les points que vaut un incident à ce niveau. Ils se pré-remplissent à l'enregistrement et sont ajustables. |
-| **Ordre** | Oui | La place du niveau parmi les niveaux du même type. |
+| **Sentiment** | Oui | **Positif** ou **Négatif**. |
+| **Ordre d'affichage** | Oui | La place du niveau dans sa liste. |
+| **Points par défaut** | Oui | Les points que vaut un incident à ce niveau : un nombre entier de **0 à 100** pour un niveau positif, ou de **−100 à 0** pour un niveau négatif. Ils se pré-remplissent quand vous enregistrez un incident. |
 | **Couleur** | Non | Une couleur pour le niveau. |
 
 <Callout title="Positif ou négatif détermine les points">
@@ -67,6 +74,15 @@ Un niveau marqué **positif** ajoute aux points d'un élève ; un niveau **néga
 Prévoyez des positifs généreux pour récompenser le bon comportement, et des négatifs proportionnés
 pour les problèmes.
 </Callout>
+
+## Archiver et réactiver
+
+Utilisez **Modifier** sur une ligne pour changer une catégorie, une sous-catégorie ou un niveau, et
+**Supprimer** pour l'enlever. S'il est déjà utilisé, il est **archivé** au lieu d'être supprimé, et
+les incidents passés le conservent.
+
+Pour voir les éléments archivés, cochez **Afficher les archivés** dans la carte. Une ligne archivée
+porte l'étiquette **Archivé** ; choisissez **Réactiver** pour la remettre en service.
 
 ## Articles liés
 

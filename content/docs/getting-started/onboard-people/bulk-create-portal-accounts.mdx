@@ -1,11 +1,11 @@
 ---
 title: Bulk create portal accounts
-description: Create logins for everyone in a role in one background job.
+description: Create logins for everyone in a role in one action.
 ---
 
 When a school is first set up, dozens or hundreds of people need a login at once.
-**Bulk create** makes portal accounts for an entire role in a single action — it runs
-as a background job so you can keep working while it processes.
+**Create all** makes portal accounts for everyone still waiting in a role, in a single
+action.
 
 <Callout title="Who this is for">
 Administrators creating logins in bulk during onboarding.
@@ -18,42 +18,48 @@ Administrators creating logins in bulk during onboarding.
 <Step>
 ### Open the Pending portal accounts list
 
-Go to **Users** (under Settings in the sidebar), then the **Pending portal** tab, and pick the **role**
-to process — teacher, student, parent, or staff.
+From the admin sidebar, go to **Access → Users**, then open the **Pending portal
+accounts** tab. Use the role list at the top to pick **Teacher**, **Student**,
+**Parent**, or one of your staff roles. If you type a search, only the matching people
+are included.
 </Step>
 
 <Step>
-### Start "Create all pending portal accounts"
+### Click "Create all"
 
-Choose **Create all pending portal accounts**. A dialog lets you set two options:
+Click **Create all**. A dialog lets you set two options:
 
 | Option | Notes |
 | --- | --- |
-| **Only eligible** | When on, people who cannot receive an account yet are skipped instead of failing. Recommended. |
-| **Max items** | Optional cap on how many accounts to create in this run. Leave empty for no limit. |
-</Step>
+| **Only eligible rows** | When ticked, people who cannot receive an account yet are skipped instead of failing. Recommended. |
+| **Max accounts** | Optional cap on how many accounts to create this time. Leave empty for no limit. |
 
-<Step>
-### Let the job run
-
-The job processes in the background. A progress card shows how many of the total have
-been handled, with a status of *Queued*, *Running*, *Completed*, *Failed*, or
-*Cancelled*.
+Click **Create all** in the dialog to start.
 </Step>
 
 <Step>
 ### Review the result
 
-When the job finishes, a banner reports how many accounts **succeeded**, **failed**,
-and were **skipped**. If any failed, use **Retry failed** to attempt those again.
+When it finishes, a message shows how many accounts were **created**, how many
+**failed**, and how many were **skipped**. People who got an account leave the list.
+</Step>
+
+<Step>
+### Hand over the login details
+
+Login details are emailed to people who have an email address (for a student, also to
+guardians who have one). They are not shown on screen. For anyone without an email
+address, create their account one at a time from the list or their profile, so you can
+copy the temporary password — see [Create portal accounts](./create-portal-accounts).
 </Step>
 
 </Steps>
 
 <Callout title="Skipped vs failed">
-**Skipped** usually means the person already has an account — that is expected and
-safe. **Failed** means something went wrong for that person; retry or create their
-account individually.
+**Skipped** means the person already has an account — that is expected and safe.
+**Failed** means the account could not be created for that person, for example because
+they are not eligible yet. They stay in the list; fix what is missing and create their
+account again.
 </Callout>
 
 ## Related articles

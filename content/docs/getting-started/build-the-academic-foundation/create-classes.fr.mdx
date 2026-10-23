@@ -13,9 +13,9 @@ Les administrateurs qui construisent la structure des classes d'une année scola
 
 ## Avant de commencer
 
-- Une **année scolaire** doit être sélectionnée dans le sélecteur d'année.
 - Les **niveaux** doivent déjà exister — chaque classe est rattachée à un niveau. Voir
   [Créer des niveaux](./create-levels).
+- Si un niveau a des **filières**, décidez quelle filière suit chaque classe.
 
 <Screenshot
   label="Page des classes avec le bouton Ajouter une classe"
@@ -46,15 +46,17 @@ Complétez les champs ci-dessous, puis cliquez sur **Créer la classe**.
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
 | **Nom de la classe** | Oui | Le nom affiché, ex. *1re année — A*. |
-| **Code** | Oui | Un identifiant court, 15 caractères maximum, ex. `1A-A`. |
+| **Code** | Oui | Un identifiant court, ex. `1A-A`. |
 | **Niveau** | Oui | Le niveau auquel appartient cette classe. À choisir parmi les niveaux créés. |
+| **Filière** | Oui, pour les niveaux avec filières | N'apparaît que si le niveau choisi a des filières. Choisissez la filière suivie par cette classe. |
 </Step>
 
 <Step>
 ### Vérifier que la classe apparaît
 
 La nouvelle classe est ajoutée immédiatement à la liste. Répétez pour chaque classe de
-chaque niveau.
+chaque niveau. Vous pouvez aussi créer les classes à l'étape **Classes** de la
+[Configuration de l'année scolaire](./academic-year-setup).
 </Step>
 
 </Steps>

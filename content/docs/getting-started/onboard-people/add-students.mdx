@@ -1,6 +1,6 @@
 ---
 title: Add students
-description: Create student records, link their guardians, and optionally start a pre-inscription.
+description: Create student records, link their guardians, and enroll them right after saving.
 ---
 
 A **student** record holds a child's personal, medical, and family details. Adding a
@@ -14,8 +14,9 @@ Administrators onboarding students and their families.
 ## Before you start
 
 - Have the student's name and gender ready — these are required.
-- Have at least one **guardian** to link. You can pick an existing guardian or add a
-  new one inline from this form.
+- Have at least one **guardian** to link. You can pick an existing guardian or staff
+  member, or add a new guardian from this form.
+- Adding many students at once? Use **Import** on the Students page (see below).
 
 <Screenshot
   label="Students list with the Add Student button"
@@ -40,61 +41,73 @@ From the admin sidebar, go to **Academic → Students**, then click **Add Studen
 <Step>
 ### Fill in the student information
 
-Complete the fields below. First name, last name, and gender are required.
+Click the avatar to **upload a profile image** if you have one, then complete the
+fields below. First name, last name, and gender are required.
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **First name** | Yes | The student's given name. |
-| **Last name** | Yes | The student's family name. |
+| **First Name** | Yes | The student's given name. |
+| **Last Name** | Yes | The student's family name. |
 | **Gender** | Yes | Used across profiles and reports. |
-| **Given / family name (native)** | No | The name in the local script, e.g. Arabic. |
-| **Date of birth** | No | The student's birth date. |
+| **Given Name (Native)**, **Family Name (Native)** | No | The name in the local script, e.g. Arabic. |
 | **Email** | No | Used for the portal account if one is created later. |
-| **Nationality**, **City**, **Address** | No | Identity and contact details. |
-| **PAN number** | No | An identity / registration number, if your school uses one. |
-| **Previous school**, **Previous school address** | No | The student's prior school. |
+| **Date of Birth**, **Birth Place** | No | Personal details. |
+| **Nationality**, **Country**, **City**, **Address** | No | Identity and contact details. |
+| **Previous School**, **Previous School Address** | No | The student's prior school. |
+
+If your school has defined **custom fields** for students, they appear below these
+fields. Fill them in the same way; some may be required.
 </Step>
 
 <Step>
 ### Add medical details (optional)
 
-In the medical section you can record **allergies**, **medications**, and
-**medical history**. Type a value and press Enter to add each allergy or medication as
-a tag.
+In the **Medical History** section you can record **Allergies** and **Medications**.
+Type a value and press Enter to add each one as a tag.
 </Step>
 
 <Step>
 ### Link guardians
 
-In the **Guardians** section, link at least one guardian. You can:
+In the **Guardians Info** section, link at least one guardian:
 
-- **Select an existing guardian** already in the system, or
-- **Add a new guardian** inline by entering their first name, last name, email, phone
-  number, and guardian type.
-
-A student can have up to **three** guardians.
+- **Select guardians & staff** lets you pick guardians already in the system. You can
+  also pick a **staff member** — useful when a parent works at the school.
+- **Add Guardian** adds a new guardian here: enter their first name, last name,
+  email, and type (e.g. father, mother). The phone number, address, and photo are
+  optional. You can add up to three new guardians this way.
 </Step>
 
 <Step>
 ### Start a pre-inscription (optional)
 
-Turn on **Enable pre-inscription** to register the student against a **level** before
+Turn on **Enable Pre-Inscription** to register the student against a **Level** before
 a full enrollment is created. When enabled, choosing a level is required.
 </Step>
 
 <Step>
-### Save the student
+### Save and enroll
 
-Click **Submit**. You are taken to the new student's profile, where you can continue
-with enrollment.
+Click **Submit**. You are taken to the new student's profile, and the **Enroll** dialog
+opens so you can enroll the student for the year straight away — the class and payment
+plan are optional. Close it if you prefer to enroll later. The dialog does not open
+when you started a pre-inscription.
 </Step>
 
 </Steps>
 
 <Callout type="warn" title="At least one guardian">
-A student cannot be saved without a guardian. If you see *"At least one guardian
-required"*, link or add a guardian before submitting.
+A student cannot be saved without a guardian. If you see *"At least one guardian is
+required."*, link or add a guardian before submitting.
 </Callout>
+
+## Import many students at once
+
+On the Students page, click **Import**. Download the **Template**, fill in one student
+per line, then upload the file. Review the preview and any errors it shows, then click
+**Start import**. You can keep working while the import runs; a banner on the Students
+page shows its progress and lets you view the results, including an error report for
+lines that could not be imported.
 
 ## Related articles
 

@@ -1,15 +1,16 @@
 ---
 title: Événements
-description: Ajoutez des événements au calendrier scolaire, organisez-les par type, et marquez les fériés et fermetures qui ferment l'école.
+description: Ajoutez des événements au calendrier scolaire, organisez-les par type, et marquez les vacances et fermetures qui ferment l'école.
 ---
 
 Un **événement** est une entrée datée du calendrier scolaire — une activité, une réunion, un
-examen, un jour férié ou une fermeture. Les événements apparaissent dans le calendrier pour les
-personnes que vous choisissez, et certains (fériés et fermetures) indiquent aussi au reste de la
+examen, des vacances ou une fermeture. Les événements apparaissent dans le calendrier pour les
+personnes que vous choisissez, et certains (vacances et fermetures) indiquent aussi au reste de la
 plateforme que l'école est fermée ce jour-là.
 
 <Callout title="Pour qui">
-Les administrateurs et enseignants qui gèrent le calendrier scolaire.
+Les administrateurs, qui gèrent le calendrier scolaire. Les enseignants, élèves et parents voient
+les événements partagés avec eux, en lecture seule.
 </Callout>
 
 ## Créer un événement
@@ -19,7 +20,8 @@ Les administrateurs et enseignants qui gèrent le calendrier scolaire.
 <Step>
 ### Ouvrir Événements
 
-Allez dans **Communication → Événements**, puis choisissez **Ajouter un événement**.
+Allez dans **Communication → Événements**, puis choisissez **Ajouter un événement** (ou
+sélectionnez un jour dans le calendrier).
 
 <Screenshot
   label="Calendrier des événements avec le bouton Ajouter un événement"
@@ -32,63 +34,72 @@ Allez dans **Communication → Événements**, puis choisissez **Ajouter un év�
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Titre** | Oui | Le nom de l'événement. |
-| **Type** | Oui | Une catégorie définie par l'école avec sa couleur — ex. *Activité*, *Réunion*, *Examen*. Voir [Types d'événements](#types-dévénements). |
-| **Nature** | Non | Comment le système traite le jour — *Normal*, *Férié*, *Fermeture*, *Jour d'examen* ou *Sortie anticipée*. Par défaut *Normal* (voir ci-dessous). |
-| **Début / Fin** | Oui | La date et l'heure. Un événement peut durer un jour ou plusieurs. |
+| **Titre de l'événement** | Oui | Le nom de l'événement. |
+| **Type d'événement** | Oui | Une catégorie définie par l'école avec sa couleur — ex. *Activité*, *Réunion*, *Examen*. Voir [Types d'événements](#types-dévénements). |
+| **Localisation** | Non | Où il a lieu. |
+| **Type** | Non | Comment le jour est traité — *Normal*, *Vacances*, *Fermeture*, *Jour d'examen* ou *Sortie anticipée*. Par défaut *Normal* (voir ci-dessous). |
+| **Date de début / Date de fin** | Oui | La date et l'heure. Un événement peut durer un jour ou plusieurs. |
 | **Description** | Non | Plus de détails sur l'événement. |
-| **Lieu** | Non | Où il a lieu. |
-| **Couleur** | Non | Remplace la couleur du type pour ce seul événement. |
-| **Public** | — | Activé, tout le monde voit l'événement. Désactivé, seule l'audience choisie le voit. |
-| **Audience** | Non | Qui voit l'événement quand il n'est pas public. Voir [Audiences](./audiences). |
-| **Notifier les participants** | — | Activé, l'audience est notifiée de l'événement. |
-| **Vignette** | Non | Une image de couverture pour l'événement. |
+| **Couleur personnalisée** | Non | Remplace la couleur du type pour ce seul événement. Laissez vide pour garder la couleur du type. |
+| **Événement public** | — | Activez-le pour montrer l'événement aux audiences choisies. Laissez-le désactivé pour le réserver aux administrateurs. |
+| **Audiences** | Oui, si public | Qui voit l'événement. Apparaît quand **Événement public** est activé. Voir [Audiences](./audiences). |
+| **Notifier les participants** | — | Apparaît quand **Événement public** est activé. |
+| **Miniature** | Non | Une image de couverture pour l'événement. |
 </Step>
 
 <Step>
 ### Enregistrer
 
-L'événement apparaît dans le calendrier pour toutes les personnes qui peuvent le voir.
+Choisissez **Créer un événement**. L'événement apparaît dans le calendrier pour toutes les
+personnes qui peuvent le voir.
 </Step>
 
 </Steps>
 
 ## Natures d'événement
 
-La **nature** indique au système comment traiter le jour. La plupart des événements sont *Normaux* ;
-deux natures changent réellement ce que fait le reste de la plateforme :
+Le champ **Type** (à ne pas confondre avec le **Type d'événement**) indique à la plateforme comment
+traiter le jour. La plupart des événements sont *Normaux* ; deux valeurs changent ce que fait le
+reste de la plateforme :
 
-| Nature | Signification |
+| Type | Signification |
 | --- | --- |
 | **Normal** | Un événement ordinaire — activité, réunion, sortie. La valeur par défaut. |
-| **Férié** | Un jour non travaillé. **Ferme l'école** — aucun trajet de bus n'est généré et le jour est considéré comme fermé sur toute la plateforme. |
-| **Fermeture** | Une fermeture imprévue (par exemple intempéries). **Ferme l'école**, comme un férié. |
-| **Jour d'examen** | Marque un jour d'examen. Informatif. |
-| **Sortie anticipée** | Marque une journée raccourcie. Informatif. |
+| **Vacances** | Un jour sans cours. **Ferme l'école** — l'emploi du temps et le transport sautent ces jours. |
+| **Fermeture** | Une fermeture imprévue (par exemple intempéries). **Ferme l'école**, comme des vacances. |
+| **Jour d'examen** | Marque un jour d'examen dans le calendrier. |
+| **Sortie anticipée** | Marque une journée raccourcie dans le calendrier. |
 
-<Callout title="Fériés et fermetures ferment l'école">
-Seuls **Férié** et **Fermeture** changent actuellement le fonctionnement de l'école — ils marquent
-le jour comme fermé, de sorte qu'(par exemple) aucun trajet de transport n'est créé. **Jour
-d'examen** et **Sortie anticipée** sont pour l'instant des étiquettes du calendrier.
+<Callout title="Vacances et fermetures ferment l'école">
+Seuls **Vacances** et **Fermeture** changent le fonctionnement de l'école : aucune séance de
+l'emploi du temps et aucun trajet de bus n'ont lieu à ces dates. **Jour d'examen** et **Sortie
+anticipée** sont des étiquettes du calendrier.
 </Callout>
 
 ## Types d'événements
 
 Un **type d'événement** est une catégorie réutilisable avec un nom et une couleur — par exemple
 *Activité*, *Réunion*, *Examen*, *Réunion parents*. Les types gardent le calendrier lisible : tous
-les événements d'un même type partagent une couleur. Gérez les types de votre école depuis l'espace
-des événements, puis choisissez-en un à chaque ajout d'événement.
+les événements d'un même type partagent une couleur. Ouvrez **Types d'événements** sur la page
+Événements pour ajouter, modifier ou supprimer des types, puis choisissez-en un à chaque ajout
+d'événement.
 
 ## Qui voit un événement
 
-- **Public** — activez Public et tout le monde voit l'événement.
-- **Par audience** — laissez Public désactivé et choisissez une [audience](./audiences) pour
-  limiter qui le voit (par exemple *les parents de 6e* pour une sortie de 6e).
+- **Événement public activé** — l'événement est montré aux personnes des **Audiences** choisies
+  (par exemple *les tuteurs de 6e* pour une sortie de 6e).
+- **Événement public désactivé** — seuls les administrateurs voient l'événement. Utile pour la
+  préparation interne.
 
-## Notifier les participants
+Les personnes des audiences reçoivent une [notification](./notifications) quand un événement
+public est ajouté, et un rappel la veille de son début.
 
-- **Notifier les participants** — activez ceci pour alerter l'audience de l'événement. Les
-  personnes reçoivent une [notification](./notifications).
+## Consulter, modifier ou supprimer
+
+- Passez le calendrier en **Mois**, **Semaine**, **Jour** ou **Liste**, et filtrez par type
+  d'événement.
+- Sélectionnez un événement pour voir ses détails. Les administrateurs peuvent le **Modifier** ou le
+  **Supprimer** depuis là.
 
 <Callout title="Les événements ne se répètent pas">
 Chaque événement est une entrée unique. Il n'y a pas de répétition hebdomadaire/mensuelle
@@ -97,11 +108,11 @@ automatique — pour un événement récurrent, ajoutez une entrée par occurren
 
 ## Cas d'usage courants
 
-- **Vacances scolaires** — ajoutez un événement de nature *Férié* pour que le jour soit fermé
+- **Vacances scolaires** — ajoutez un événement de type *Vacances* pour que le jour soit fermé
   partout.
 - **Jour de neige** — ajoutez une *Fermeture* pour la date concernée.
-- **Sortie de classe** — ajoutez un événement *Normal*, gardez-le privé et choisissez l'audience
-  de la classe.
+- **Sortie de classe** — ajoutez un événement *Normal*, activez **Événement public** et choisissez
+  l'audience de cette classe ou de ce niveau.
 - **Semaine d'examens** — ajoutez des événements marqués *Jour d'examen* pour chaque examen.
 
 ## Articles liés

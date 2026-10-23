@@ -1,22 +1,29 @@
 ---
 title: Créer des comptes portail
-description: Donnez à une personne un identifiant pour qu'elle puisse accéder à la plateforme.
+description: Donnez un identifiant à une personne pour qu'elle puisse accéder à la plateforme.
 ---
 
-Une fiche de personne — un enseignant, un élève, un tuteur ou un membre du personnel —
-n'inclut pas d'identifiant de connexion. Un **compte portail** est l'identifiant qui
-lui permet de se connecter et d'utiliser la plateforme. Créer des fiches et créer des
-comptes sont deux étapes distinctes.
+La fiche d'une personne — enseignant, élève, tuteur ou membre du personnel — ne comprend
+pas d'identifiant de connexion. Un **compte portail** est l'identifiant qui lui permet de
+se connecter et d'utiliser la plateforme. Les enseignants peuvent en recevoir un dès leur
+ajout (voir [Ajouter des enseignants](./add-teachers)) ; pour les autres, créer la fiche
+et créer le compte sont deux étapes distinctes.
 
 <Callout title="Pour qui">
-Les administrateurs qui donnent aux personnes l'accès à la plateforme.
+Les administrateurs qui donnent accès à la plateforme.
 </Callout>
 
 ## Avant de commencer
 
-- La **fiche de la personne** doit déjà exister (ex. l'enseignant ou l'élève est créé).
-- Une personne ne peut obtenir un compte qu'une seule fois — quelqu'un qui en a déjà un
-  est ignoré.
+Une personne peut recevoir un compte portail lorsque :
+
+- Elle **n'en a pas encore**.
+- Sa fiche comporte une **adresse e-mail ou un code**.
+- Pour un **élève** : il est **inscrit** pour l'année.
+- Pour un **tuteur** : au moins **un de ses enfants est inscrit**.
+
+Si une personne n'est pas encore éligible, le bouton **Créer un compte portail** est
+grisé sur son profil.
 
 ## Créer un compte pour une personne
 
@@ -25,29 +32,41 @@ Les administrateurs qui donnent aux personnes l'accès à la plateforme.
 <Step>
 ### Ouvrir le profil de la personne
 
-Allez au profil de l'enseignant, de l'élève, du tuteur ou du membre du personnel.
+Allez sur le profil de l'enseignant, de l'élève, du tuteur ou du membre du personnel.
 </Step>
 
 <Step>
 ### Créer le compte portail
 
-Utilisez l'action **Créer un compte portail** sur le profil. Le compte est créé avec le
-rôle correspondant à la personne — enseignant, élève, parent ou personnel.
+Cliquez sur **Créer un compte portail**. Pour un élève ou un tuteur, confirmez dans la
+fenêtre **Créer un compte portail ?**. Pour un membre du personnel, choisissez son
+**Rôle portail**, puis cliquez sur **Créer le compte**.
+</Step>
+
+<Step>
+### Remettre les identifiants
+
+La fenêtre **Compte portail créé** affiche le **Nom d'utilisateur** et un **Mot de passe
+temporaire**, chacun avec un bouton de copie. Le mot de passe temporaire n'est affiché
+qu'une seule fois : copiez-le ou remettez-le avant de cliquer sur **Fermer**. Si la
+personne a une adresse e-mail, ses identifiants lui sont aussi envoyés par e-mail (pour
+un élève, également aux tuteurs qui ont une adresse e-mail).
 </Step>
 
 </Steps>
 
 ## Créer des comptes pour plusieurs personnes
 
-Les personnes qui ont encore besoin d'un identifiant apparaissent dans la liste des
-**comptes portail en attente**.
+Les personnes qui n'ont pas encore d'identifiant apparaissent dans la liste **Comptes
+portail en attente**.
 
 <Steps>
 
 <Step>
 ### Ouvrir la liste des comptes portail en attente
 
-Allez dans **Utilisateurs** (sous Paramètres dans la barre latérale), puis l'onglet **Portail en attente**.
+Dans la barre latérale d'administration, allez dans **Accès → Utilisateurs**, puis
+ouvrez l'onglet **Comptes portail en attente**.
 
 <Screenshot
   label="Onglet des comptes portail en attente"
@@ -56,21 +75,32 @@ Allez dans **Utilisateurs** (sous Paramètres dans la barre latérale), puis l'o
 </Step>
 
 <Step>
-### Filtrer par rôle
+### Choisir un rôle
 
-Choisissez un rôle — enseignant, élève, parent ou personnel — pour réduire la liste.
+Utilisez la liste des rôles en haut pour afficher **Enseignant**, **Élève**, **Parent**
+ou l'un de vos rôles du personnel. Chaque personne est marquée **Éligible** ou **Non
+éligible**, et vous pouvez rechercher par nom.
 </Step>
 
 <Step>
-### Sélectionner des personnes et créer les comptes
+### Créer les comptes
 
-Cochez les personnes voulues, puis choisissez **Créer les comptes portail
-sélectionnés**. Les personnes non éligibles à un compte sont ignorées automatiquement.
+- Pour une personne, cliquez sur **Créer un compte portail** sur sa ligne. La fenêtre
+  des identifiants s'ouvre, comme ci-dessus.
+- Pour plusieurs, cochez les personnes voulues, puis cliquez sur **Créer les comptes
+  (sélection)**. Seules les personnes éligibles peuvent être cochées. Une carte de
+  progression indique combien ont été traitées, et vous pouvez continuer à travailler
+  entre-temps. Si certains comptes échouent, un récapitulatif apparaît avec
+  **Réessayer les comptes en échec**.
+
+Les comptes créés depuis une sélection ne s'affichent pas à l'écran : les identifiants
+sont envoyés par e-mail aux personnes qui ont une adresse e-mail. Pour les autres,
+créez leur compte un par un afin de copier le mot de passe temporaire.
 </Step>
 
 </Steps>
 
-<Callout title="Traiter tout un rôle d'un coup">
+<Callout title="Tout un rôle d'un coup">
 Pour créer des comptes pour **tout le monde** dans un rôle en une seule action, voir
 [Créer des comptes portail en masse](./bulk-create-portal-accounts).
 </Callout>

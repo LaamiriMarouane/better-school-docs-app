@@ -1,43 +1,45 @@
 ---
-title: Cours
-description: Construisez le programme d'une matière — chapitres et leçons — et réutilisez-le entre classes et d'une année à l'autre.
+title: Modèles de cours
+description: Construisez le plan d'une matière à un niveau — chapitres et leçons — que suivent toutes les classes de ce niveau.
 ---
 
-Un **cours** est le programme d'une **matière à un niveau**, pour une période. Il est organisé en
-**chapitres**, et chaque chapitre contient des **leçons**. Vous construisez un cours une fois, et
-chaque classe de ce niveau le suit — la structure reste cohérente, et vous pouvez le réutiliser
-l'année suivante.
+Un **modèle de cours** est le plan d'une **matière à un niveau** (et, pour les niveaux à filières,
+d'une filière). Il est organisé en **chapitres**, et chaque chapitre contient des **leçons**. Toutes
+les classes du niveau suivent le même modèle, ce qui garde une structure cohérente ; les enseignants
+ajoutent ensuite leur propre [contenu de leçon](./lessons) par-dessus.
 
 <Callout title="Pour qui">
 Les administrateurs et enseignants qui planifient ce qui est enseigné dans chaque matière.
 </Callout>
 
-## Comment un cours est organisé
+## Comment un modèle est organisé
 
 ```
-Cours  (une matière, à un niveau, pour une période)
+Modèle de cours  (une matière, à un niveau — ou une filière)
 └─ Chapitre
    └─ Leçon
       └─ Contenu de la leçon  (rédigé par l'enseignant — voir Leçons)
 ```
 
-Un cours appartient à un **matière + niveau + période** précis, et il y a un seul cours par
-combinaison. Les chapitres et leçons donnent à chaque classe la même ossature ; les enseignants
-ajoutent ensuite leur propre [contenu de leçon](./lessons) par-dessus.
+Pour un niveau à filières, une matière peut avoir un modèle par filière, ou un seul modèle marqué
+**Commune (toutes les filières)** que toutes les filières suivent.
 
 ## Avant de commencer
 
-- La matière doit être **affectée au niveau** (une matière de niveau), et les **périodes** doivent
-  exister. Voir [Construire la base pédagogique](../getting-started/build-the-academic-foundation).
+- La matière doit être **affectée au niveau**. Voir
+  [Construire la base pédagogique](../getting-started/build-the-academic-foundation).
 
-## Créer un cours
+## Construire un modèle
 
 <Steps>
 
 <Step>
-### Ouvrir le programme
+### Ouvrir les modèles de cours
 
-Allez dans **Cours** (ou **Programme**) et créez un nouveau cours.
+Allez dans **Académique** → **Modèles de cours**, puis cliquez sur **Choisir une matière**. Choisissez
+un trimestre pour filtrer la liste, cherchez par niveau ou par matière, et sélectionnez la matière de
+niveau voulue. Son plan s'ouvre. Vous pouvez changer de matière à tout moment avec **Changer de
+matière** dans l'en-tête.
 
 <Screenshot
   label="Liste des cours"
@@ -46,68 +48,68 @@ Allez dans **Cours** (ou **Programme**) et créez un nouveau cours.
 </Step>
 
 <Step>
-### Renseigner les détails du cours
+### Ajouter des chapitres
+
+Cliquez sur **Ajouter un chapitre**, donnez-lui un titre et enregistrez. Ajoutez les chapitres dans
+l'ordre où ils sont enseignés.
+</Step>
+
+<Step>
+### Ajouter des leçons
+
+Cliquez sur **Ajouter une leçon** dans un chapitre et renseignez :
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Titre** | Oui | Le nom du cours. |
-| **Description** | Non | Un bref résumé de ce que couvre le cours. |
-| **Matière, niveau et période** | Oui | Quelle matière, à quel niveau, pour quelle période ce cours appartient. |
+| **Chapitre** | Oui | Le chapitre où placer la leçon. |
+| **Titre** | Oui | Le nom de la leçon. |
+| **Type de leçon** | Oui | Théorie, pratique, laboratoire, exercice, révision, projet, etc. |
+| **Durée (semaines)** | Non | Le nombre de semaines que dure la leçon — un nombre entier, au moins 1. |
 </Step>
 
 <Step>
-### Ajouter chapitres et leçons
+### Réordonner et affiner
 
-Ajoutez les **chapitres** dans l'ordre d'enseignement, puis ajoutez les **leçons** dans chaque
-chapitre. Vous pouvez réordonner les deux à tout moment. Chaque leçon a ses propres détails — type,
-durée, objectifs — traités dans [Leçons](./lessons).
-</Step>
-
-<Step>
-### Publier le cours
-
-Un cours commence en **brouillon**. **Publiez-le** quand la structure est prête, pour qu'il devienne
-disponible aux classes de ce niveau.
+Faites glisser chapitres et leçons pour les mettre dans l'ordre. Cliquez sur une leçon pour ouvrir son
+panneau de détails : vous pouvez y changer le titre, le type et la durée, et ajouter une
+**Description**, des **Prérequis**, des **Objectifs** et des **Activités**. Cliquez sur
+**Enregistrer** pour garder vos modifications.
 </Step>
 
 </Steps>
 
-## Qui gère le programme d'un cours
+Il n'y a pas d'étape de publication : ce que vous enregistrez est ce que voient les classes.
 
-Le **programme** — les chapitres et leçons du cours, et sa publication — est géré par les enseignants
-à qui est accordée la **propriété du programme** de cette matière, ce niveau et cette période. Un
-administrateur accorde la propriété, et peut **affecter plusieurs enseignants à plusieurs matières en
-une fois**. Il existe deux rôles :
+## Quand le plan est figé
 
-| Rôle | Ce qu'il peut faire sur le programme |
+Dès qu'une classe a enregistré une progression sur un modèle, un avis **Plan figé** s'affiche.
+L'ordre des chapitres et des leçons reste alors fixe et vous ne pouvez plus en ajouter ni en
+supprimer, mais les titres, les descriptions et les détails des leçons restent modifiables.
+
+## Qui peut modifier un modèle
+
+Les administrateurs peuvent modifier tous les modèles. Un enseignant peut modifier un modèle lorsqu'un
+administrateur lui a donné une **supervision** qui couvre la matière (dans le profil de l'enseignant,
+onglet **Supervisions**) :
+
+| Autorisation de supervision | Ce que l'enseignant peut faire |
 | --- | --- |
-| **Principal** | Contrôle total — façonner les chapitres et leçons, **publier** et supprimer le cours. |
-| **Contributeur** | Façonner les chapitres et leçons, mais **pas** publier ni supprimer. |
+| **Modifier le programme** | Ajouter et modifier chapitres, leçons et détails des leçons. |
+| **Gérer le programme** | Tout ce qui précède, plus supprimer des chapitres. |
 
-<Callout title="La propriété du programme n'est pas le contenu des leçons">
-Ces rôles contrôlent la **structure du programme** et sa publication. Ils sont **distincts** du
-**contenu des leçons** qu'un enseignant rédige pour sa propre classe — lequel dépend du fait
-d'*enseigner* la matière, et non de posséder le programme. Voir [Leçons](./lessons).
+Les autres utilisateurs peuvent parcourir le modèle sans le modifier — la page affiche un avis de
+lecture seule.
+
+<Callout title="Le modèle n'est pas le contenu de la leçon">
+La supervision porte sur le **plan**. Le **contenu de leçon** qu'un enseignant rédige pour sa classe
+est distinct, et découle du fait d'enseigner la matière. Voir [Leçons](./lessons).
 </Callout>
-
-## Partager un cours entre classes
-
-Un cours est partagé par **toutes les classes de son niveau**. Une fois publié, ses leçons sont
-disponibles à ces classes. L'enseignant de chaque classe rédige ensuite le [contenu des
-leçons](./lessons) et décide ce que ses élèves peuvent voir — ainsi deux classes peuvent suivre le
-même cours tout en gardant chacune ses propres supports.
-
-## Réutiliser d'une année à l'autre
-
-Au début d'une nouvelle année scolaire, un cours peut être **reporté** pour ne pas reconstruire le
-programme de zéro — les chapitres et leçons sont repris, prêts à ajuster. Cela fait partie de la
-copie d'une année scolaire vers la suivante.
 
 ## Cas d'usage courants
 
-- **Programme d'une nouvelle matière** — créez le cours, disposez chapitres et leçons, et publiez.
-- **Même cours, plusieurs classes** — construisez-le une fois au niveau ; chaque classe le suit.
-- **L'année suivante** — reportez le cours et ajustez plutôt que de tout recommencer.
+- **Plan d'une nouvelle matière** — choisissez la matière, ajoutez les chapitres, puis les leçons.
+- **Même plan, plusieurs classes** — construisez-le une fois pour le niveau ; chaque classe le suit.
+- **Filières au programme commun** — utilisez **Commune (toutes les filières)** au lieu de répéter le plan.
 
 ## Articles liés
 

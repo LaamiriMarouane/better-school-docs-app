@@ -1,111 +1,122 @@
 ---
 title: Configuration des notes
-description: Configurez la politique de notation annuelle, les catégories, les schémas par niveau, les examens par matière et les compétences en un parcours guidé.
+description: Réglez la politique annuelle, les catégories de notes, les niveaux, les matières, les compétences et la banque de commentaires depuis un seul écran.
 ---
 
-La **Configuration des notes** est l'endroit unique pour définir comment fonctionne la notation
-pour l'année scolaire sélectionnée. Elle parcourt la politique annuelle, les catégories de notes
-partagées, les schémas et périodes de notation par niveau, les poids de catégories et modèles
-d'examens par matière, puis les compétences.
+La **Configuration des notes** est l'endroit où vous décidez du fonctionnement de la notation. Elle
+compte six onglets, présentés dans l'ordre où on les remplit habituellement.
 
 <Callout title="Pour qui">
-Les administrateurs qui configurent la notation avant que les enseignants saisissent les notes.
+Les administrateurs qui configurent la notation avant la saisie des notes, et les enseignants qui
+supervisent un niveau ou une matière.
 </Callout>
 
 ## Ouvrir la Configuration des notes
 
-Allez dans **Évaluations → Configuration des notes**. Tout ici utilise l'année scolaire du
-sélecteur d'année (ou une année brouillon lorsque vous ouvrez la configuration depuis un
-assistant d'année scolaire).
+Allez dans **Évaluations** → **Configuration des notes**. Les onglets sont listés sur le côté de
+l'écran (en haut sur un téléphone) :
 
-Travaillez les étapes **dans l'ordre** — les étapes suivantes dépendent des précédentes :
-
-| Étape | Ce que vous réglez |
+| Onglet | Ce que vous réglez |
 | --- | --- |
-| **Politique annuelle** | Défauts de l'année scolaire — échelle d'affichage, arrondi, méthode de calcul, formats d'affichage, codes d'exception, bandes du barème. |
-| **Catégories de notes** | Vocabulaire de catégories partagé pour l'année (Examen vs Continu). Les poids se définissent plus tard par matière. |
-| **Niveaux** | Par niveau : périodes de notation, schéma de notation, examens externes et substitutions facultatives. |
-| **Matières** | Par matière : poids des catégories et modèles d'examens pour la période. |
-| **Compétences** | Échelles de maîtrise, bibliothèque de compétences, et quelles matières utilisent la notation par compétences. |
+| **Politique annuelle** | Échelle d'affichage, arrondi, méthode de calcul, formats d'affichage, codes d'exception et barème de notation. |
+| **Catégories de notes** | Les noms de catégories utilisables par toutes les matières, comme Devoirs ou Contrôle. |
+| **Niveaux** | Pour chaque niveau ou filière : périodes de notation, schéma de notation, examens externes, et réglages du niveau ou d'une période. |
+| **Matières** | Pour chaque matière et trimestre : les catégories comptées et leurs poids, et les modèles d'examen. |
+| **Compétences** | Les échelles de maîtrise, la bibliothèque de compétences et les matières notées par compétences. |
+| **Banque de commentaires** | Des phrases toutes prêtes pour rédiger les appréciations. |
 
-Changer d'étape vous avertit si un brouillon n'est pas enregistré.
+Si vous quittez un onglet sans enregistrer, l'application vous demande de confirmer.
+
+### Ce que peuvent faire les enseignants
+
+Les enseignants peuvent aussi ouvrir la **Configuration des notes**. Un cadenas à côté d'un onglet
+signifie qu'il est en lecture seule pour vous :
+
+- **Politique annuelle** et **Catégories de notes** sont toujours en lecture seule pour les enseignants.
+- **Niveaux** n'est modifiable que pour les niveaux dont vous supervisez la politique de notation.
+- **Matières** et **Compétences** ne sont modifiables que pour ce dont vous supervisez la configuration
+  des évaluations. Les échelles de maîtrise restent en lecture seule.
+- **Banque de commentaires** : chaque enseignant gère ses propres phrases personnelles.
 
 ## Politique annuelle
 
-Définissez comment les moyennes de matière sont calculées et affichées pour toute l'année, puis
-**Enregistrer**.
+Réglez les valeurs par défaut de toute l'année, puis cliquez sur **Enregistrer**.
 
-Contrôles typiques :
-
-| Zone | Exemples |
+| Section | Ce que vous réglez |
 | --- | --- |
-| **Échelle et arrondi** | Échelle d'affichage (ex. /20), précision et mode d'arrondi, substitution manuelle facultative de moyenne. |
-| **Méthode de calcul** | Pondéré par catégorie ou Total des points ; traitement des éléments non catégorisés et des rattrapages. |
-| **Formats d'affichage** | Format principal (numérique, lettre, mention, GPA…), seuil de réussite, classement de classe. |
-| **Codes d'exception** | Comportement d'Absent et Exempt dans les moyennes. |
-| **Barème de notation** | Bandes qui associent scores numériques à lettre / mention / GPA. Voir aussi [Barème de notation](./grading-scale). |
+| **Échelle de notes et arrondi** | **Échelle d'affichage** (par exemple 20 ou 100), **Précision d'arrondi**, **Mode d'arrondi** et **Autoriser la saisie manuelle des moyennes**. |
+| **Méthode de calcul** | **Pondération par catégorie** ou **Total des points** et le sort des **Éléments sans catégorie**. |
+| **Formats d'affichage** | **Format principal**, **Seuil de réussite** et **Classement de la classe**. |
+| **Codes d'exception** | Le code et le libellé affichés pour Absent et Dispensé, et si chacun est exclu de la moyenne ou compte comme zéro. |
+| **Barème de notation** | Les tranches qui convertissent les moyennes en lettre, mention et GPA. Voir [Barème de notation](./grading-scale). |
 
 ## Catégories de notes
 
-Définissez les **noms partagés** utilisés entre les matières — par exemple Devoirs (Continu) et
-Contrôle (Examen). Ajoutez des lignes avec un nom, une finalité, une description et une couleur
-facultatives, puis **Enregistrer**.
+Les catégories sont les noms que les matières utilisent pour regrouper leurs notes. Cliquez sur
+**Ajouter une catégorie de note**, puis indiquez un **Nom**, un **Type** (**Examen** ou **Continu**),
+et si vous le souhaitez une description et une couleur. Cliquez sur **Enregistrer**.
 
-Les catégories à finalité Examen sont remplies par les modèles d'examens ; les continues par les
-évaluations libres. Les **poids** ne se règlent pas à cette étape — ils se définissent par matière
-sous Matières.
+Les catégories d'examen regroupent les examens définis pour chaque matière. Les catégories continues
+regroupent les devoirs, les quiz et les autres notes du quotidien. Les poids ne se règlent pas ici :
+chaque matière fixe les siens dans **Matières**.
 
 ## Niveaux
 
-Choisissez un **niveau**, puis utilisez les sous-onglets (ordre recommandé) :
-
-| Sous-onglet | Ce que vous ferez |
-| --- | --- |
-| **Périodes de notation** | Divisez chaque période en sous-périodes (les poids dans une période doivent totaliser 100 %). Voir [Périodes de notation](./marking-periods). |
-| **Schéma de notation** | Pondérez périodes et examens externes dans la note annuelle (doit totaliser 100 %). |
-| **Examens externes** | Définissez les examens régionaux/nationaux, les matières couvertes, et saisissez les scores. |
-| **Configuration du niveau** | Remplacez les défauts annuels pour ce niveau seulement (échelle, format, calcul…). |
-| **Configuration de la période** | Remplacez les réglages pour une période de notation. |
-
-**Copier de l'année précédente** peut importer le schéma et la configuration des examens externes
-dans les niveaux pas encore configurés.
-
-## Matières
-
-Choisissez une **période**, puis une matière dans l'arbre. Utilisez :
+Utilisez **Sélectionner un niveau ou une filière**, puis parcourez les onglets :
 
 | Onglet | Ce que vous ferez |
 | --- | --- |
-| **Catégories** | Choisissez quelles catégories de notes s'appliquent et fixez leurs poids (les poids comptabilisés doivent totaliser 100 %). |
-| **Examens** | Ajoutez des modèles d'examens sous chaque catégorie à finalité Examen pondérée. |
+| **Périodes de notation** | Découper chaque trimestre en périodes de notation. Voir [Périodes de notation](./marking-periods). |
+| **Schéma de notation** | Décider du poids de chaque trimestre et de chaque examen externe dans la note annuelle. |
+| **Examens externes** | Ajouter des examens régionaux ou nationaux, choisir les matières concernées et saisir les notes. |
+| **Configuration du niveau** | Modifier des réglages de la politique annuelle pour ce niveau uniquement. |
+| **Configuration de la période** | Modifier des réglages pour une seule période de notation. |
 
-Vous pouvez régler le **coefficient** de la matière, copier les réglages vers d'autres matières,
-et **Copier de l'année précédente**. Les modèles d'examens nécessitent d'abord des catégories
-Examen avec poids — voir [Examens](./exams).
+**Copier de l'an dernier** reprend la configuration de l'an dernier dans les niveaux pas encore
+configurés.
+
+## Matières
+
+Choisissez un **Trimestre**, puis une matière dans la liste.
+
+- **Catégories** : ajoutez les catégories de la matière avec **Ajouter une catégorie**. Pour chacune,
+  réglez le **Poids**, indiquez si elle est **Comptée** dans la moyenne, et éventuellement combien de
+  notes faibles retirer (**Retirer faibles**). Les catégories comptées doivent totaliser 100 %.
+- **Examens** : ajoutez les modèles d'examen de chaque catégorie d'examen. Une catégorie d'examen doit
+  d'abord avoir un poids dans l'onglet **Catégories**. Voir [Examens](./exams).
+
+Vous pouvez aussi régler le coefficient de la matière, utiliser **Copier vers d'autres matières** pour
+réutiliser la configuration, et **Copier de l'an dernier** pour reprendre les catégories et modèles
+d'examen de toutes les matières.
 
 ## Compétences
 
-Parcours parallèle facultatif aux côtés des notes numériques. Sous-onglets :
+Un suivi facultatif de la maîtrise, en parallèle des notes chiffrées, avec trois onglets :
+**Échelles**, **Bibliothèque** et **Matières**. Voir [Notation par compétences](./competencies).
 
-| Sous-onglet | Ce que vous ferez |
-| --- | --- |
-| **Échelles** | Définissez les niveaux de maîtrise (libellé, points, atteint le standard). |
-| **Bibliothèque** | Construisez les arbres de compétences (généraux et par matière). |
-| **Matières** | Activez **Numérique + compétences** (ou gardez Numérique seul) et choisissez l'échelle. |
+## Banque de commentaires
 
-Voir [Notation par compétences](./competencies) pour la façon dont les enseignants enregistrent
-la maîtrise.
+La banque de commentaires contient des phrases que les enseignants insèrent en rédigeant une
+appréciation de matière ou une appréciation générale.
+
+- Basculez entre les phrases de l'**Établissement**, partagées avec tous les enseignants et gérées par
+  les administrateurs, et vos phrases **Personnel**, que vous seul voyez.
+- Cliquez sur **Ajouter une phrase**, puis renseignez la **Catégorie** (par exemple « Excellent » ou
+  « À améliorer »), la **Phrase** et l'**Usage** : **Appréciation matière**, **Appréciation générale**
+  ou **Matière et général**.
+- Filtrez la liste par usage ou par catégorie. Supprimer une phrase la retire du sélecteur sans
+  modifier les appréciations déjà rédigées.
 
 ## Conseils et bonnes pratiques
 
-- Terminez la **Politique annuelle** et les **Catégories de notes** avant Niveaux et Matières.
-- Sur Matières, configurez les **Catégories** avant les **Examens**.
-- Gardez les substitutions année, niveau et période intentionnelles — les champs de substitution
-  vides héritent du niveau supérieur (ou de l'année).
+- Terminez **Politique annuelle** et **Catégories de notes** avant **Niveaux** et **Matières**.
+- Dans **Matières**, configurez les **Catégories** avant les **Examens**.
+- **Configuration du niveau** et **Configuration de la période** partent de la politique annuelle.
+  Ne modifiez que les champs qui doivent vraiment être différents.
 
 ## Articles liés
 
-- [Périodes de notation et schéma de notation](./marking-periods)
+- [Périodes de notation](./marking-periods)
 - [Barème de notation](./grading-scale)
 - [Examens](./exams)
 - [Carnet de notes](./gradebook)

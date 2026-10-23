@@ -1,100 +1,114 @@
 ---
 title: Grading setup
-description: Configure year-wide grading policy, categories, per-level schemes, subject exams, and competencies in one guided flow.
+description: Configure the year policy, grade categories, levels, subjects, competencies, and the comment bank from one screen.
 ---
 
-**Grading setup** is the single place to configure how grades work for the selected academic year.
-It walks through year policy, shared grade categories, per-level schemes and marking periods,
-subject category weights and exam templates, then competencies.
+**Grading setup** is where you decide how grades work. It has six tabs, listed in the order you
+usually work through them.
 
 <Callout title="Who this is for">
-Administrators configuring grading before teachers enter marks.
+Administrators who configure grading before teachers enter marks, and teachers who supervise a level
+or subject.
 </Callout>
 
 ## Open Grading setup
 
-Go to **Assessments → Grading setup**. Everything here uses the academic year in the year
-switcher (or a draft year when you open setup from an academic year wizard).
+Go to **Assessments** → **Grading setup**. The tabs run down the side of the screen (across the top on
+a phone):
 
-Work the steps **in order** — later steps depend on earlier ones:
-
-| Step | What you set |
+| Tab | What you set |
 | --- | --- |
-| **Year policy** | School-year defaults — display scale, rounding, calculation method, display formats, exception codes, grading scale bands. |
-| **Grade categories** | Shared category vocabulary for the year (Exam vs Continuous). Weights are set later per subject. |
-| **Levels** | Per level: marking periods, grading scheme, external exams, and optional overrides. |
-| **Subjects** | Per subject: category weights and exam templates for the term. |
-| **Competencies** | Proficiency scales, competency library, and which subjects use competency grading. |
+| **Year policy** | Display scale, rounding, calculation method, display formats, exception codes, and the grading scale. |
+| **Grade categories** | The category names every subject can use, such as Homework or Mid-term. |
+| **Levels** | For each level or track: marking periods, grading scheme, external exams, and level or period settings. |
+| **Subjects** | For each subject and term: which categories count and their weights, and the exam templates. |
+| **Competencies** | Proficiency scales, the competency library, and which subjects use competency grading. |
+| **Comment bank** | Ready-made phrases for writing remarks. |
 
-Switching steps warns you if a draft is unsaved.
+If you leave a tab with unsaved changes, the app asks you to confirm first.
+
+### What teachers can do
+
+Teachers can open **Grading setup** too. A lock next to a tab means it is view only for you:
+
+- **Year policy** and **Grade categories** are always view only for teachers.
+- **Levels** can be edited only for the levels you supervise for grading policy.
+- **Subjects** and **Competencies** can be edited only for what you supervise for assessment setup.
+  Proficiency scales stay view only.
+- **Comment bank**: every teacher can manage their own personal phrases.
 
 ## Year policy
 
-Set how subject averages are computed and shown for the whole year, then **Save**.
+Set the defaults for the whole year, then click **Save**.
 
-Typical controls:
-
-| Area | Examples |
+| Section | What you set |
 | --- | --- |
-| **Grade scale & rounding** | Display scale (e.g. /20), rounding precision and mode, optional manual average override. |
-| **Calculation method** | Category weighted or Total points; how uncategorized items and makeups are handled. |
-| **Display formats** | Primary format (numeric, letter, mention, GPA…), pass threshold, class ranking. |
-| **Exception codes** | How Absent and Exempt behave in averages. |
-| **Grading scale** | Bands that map numeric scores to letter / mention / GPA. See also [Grading scale](./grading-scale). |
+| **Grade scale & rounding** | **Display scale** (for example 20 or 100), **Rounding precision**, **Rounding mode**, and **Allow manual average override**. |
+| **Calculation Method** | **Category weighted** or **Total points** and what happens to **Uncategorized items**. |
+| **Display formats** | **Primary format**, **Pass threshold**, and **Class ranking**. |
+| **Exception codes** | The code and label shown for Absent and Exempt, and whether each one is dropped from the average or counts as zero. |
+| **Grading scale** | The bands that turn averages into a letter, mention, and GPA. See [Grading scale](./grading-scale). |
 
 ## Grade categories
 
-Define the **shared names** used across subjects — for example Homework (Continuous) and Mid-term
-(Exam). Add rows with a name, purpose, optional description and colour, then **Save**.
+Categories are the names subjects use to group their marks. Click **Add Grade Category**, then give it
+a **Name**, a **Purpose** (**Exam** or **Continuous**), and optionally a description and a colour.
+Click **Save**.
 
-Exam-purpose categories are filled by exam templates; continuous ones by free assessments.
-**Weights** are not set on this step — they are set per subject under Subjects.
+Exam categories hold the exams you define for each subject. Continuous categories hold assignments,
+quizzes, and other day-to-day marks. Weights are not set here: each subject sets its own under
+**Subjects**.
 
 ## Levels
 
-Pick a **level**, then use the sub-tabs (recommended order):
-
-| Sub-tab | What you'll do |
-| --- | --- |
-| **Marking periods** | Split each term into periods (weights within a term must total 100%). See [Marking periods](./marking-periods). |
-| **Grading scheme** | Weight terms and external exams into the year grade (must total 100%). |
-| **External exams** | Define regional/national exams, covered subjects, and enter scores. |
-| **Level config** | Override year defaults for this level only (scale, format, calculation…). |
-| **Period configuration** | Override settings for one marking period. |
-
-**Copy from last year** can bring prior-year scheme and external-exam setup into levels that are
-not already configured.
-
-## Subjects
-
-Pick a **term**, then a subject from the tree. Use:
+Use **Select a level or track**, then work through the tabs:
 
 | Tab | What you'll do |
 | --- | --- |
-| **Categories** | Choose which grade categories apply and set their weights (counting weights should total 100%). |
-| **Exams** | Add exam templates under each weighted Exam-purpose category. |
+| **Marking Periods** | Split each term into marking periods. See [Marking periods](./marking-periods). |
+| **Grading Scheme** | Decide how much each term and external exam counts in the year grade. |
+| **External Exams** | Add regional or national exams, choose the subjects they cover, and enter scores. |
+| **Level config** | Change year policy settings for this level only. |
+| **Period Configuration** | Change settings for a single marking period. |
 
-You can set the subject's **coefficient**, copy settings to other subjects, and **Copy from last
-year**. Exam templates need Exam categories with weights first — see [Exams](./exams).
+**Copy from last year** brings last year's setup into levels you haven't configured yet.
+
+## Subjects
+
+Pick a **Term**, then a subject from the list.
+
+- **Categories**: add the categories that apply to this subject with **Add Category**. For each one,
+  set the **Weight**, choose whether it **Counts** toward the average, and optionally how many low
+  marks to drop (**Drop low**). Counting categories must total 100%.
+- **Exams**: add the exam templates for each exam category. An exam category needs a weight on the
+  **Categories** tab first. See [Exams](./exams).
+
+You can also set the subject's coefficient, use **Copy to other subjects** to reuse the setup, and use
+**Copy from last year** to bring back every subject's categories and exam templates.
 
 ## Competencies
 
-Optional parallel track alongside numeric grades. Sub-tabs:
+An optional proficiency track alongside numeric grades, with three tabs: **Scales**, **Library**, and
+**Subjects**. See [Competency-based grading](./competencies).
 
-| Sub-tab | What you'll do |
-| --- | --- |
-| **Scales** | Define proficiency levels (label, points, meets standard). |
-| **Library** | Build the competency trees (general and per subject). |
-| **Subjects** | Enable **Numeric + competency** (or keep Numeric only) and pick the scale. |
+## Comment bank
 
-See [Competency-based grading](./competencies) for how teachers record proficiency.
+The comment bank holds phrases teachers can insert when writing a subject remark or an overall remark.
+
+- Switch between **School** phrases, shared with every teacher and managed by administrators, and
+  **Personal** phrases, which only you see.
+- Click **Add phrase**, then fill in the **Category** (for example "Excellent" or "Needs
+  improvement"), the **Phrase**, and the **Usage**: **Subject remark**, **Overall remark**, or
+  **Subject & overall**.
+- Filter the list by usage or category. Deleting a phrase removes it from the picker but doesn't
+  change remarks already written.
 
 ## Tips and best practices
 
-- Finish **Year policy** and **Grade categories** before Levels and Subjects.
-- On Subjects, configure **Categories** before **Exams**.
-- Keep year, level, and period overrides intentional — blank override fields inherit from the
-  level above (or the year).
+- Finish **Year policy** and **Grade categories** before **Levels** and **Subjects**.
+- On **Subjects**, set up **Categories** before **Exams**.
+- **Level config** and **Period Configuration** start from the year policy. Change only the fields
+  that really need to be different.
 
 ## Related articles
 

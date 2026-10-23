@@ -1,6 +1,6 @@
 ---
 title: Périodes d'emploi
-description: Enregistrez les contrats de chaque membre du personnel — dates et type de contrat.
+description: Enregistrez les contrats de chaque membre du personnel — dates, type de contrat et rémunération.
 ---
 
 Une **période d'emploi** est une tranche d'emploi pour un membre du personnel : quand elle a
@@ -20,13 +20,16 @@ ouvrir le membre du personnel → onglet **Emploi**.
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Date de début** | Oui | Premier jour de cette période. Verrouillée une fois la période enregistrée. |
+| **Date de début** | Oui | Premier jour de cette période. Vous pouvez la modifier plus tard. |
 | **Date de fin** | Non | Laissez vide tant que la personne est encore employée (**Présent**). Définissez une date de fin pour clôturer la période. |
 | **Type de contrat** | Non | Temps plein, Temps partiel, Contrat, Temporaire, Stage — ou non précisé. |
 | **Fréquence de paie** | Non | Mensuel ou Horaire. |
-| **Salaire de base** | Non | Le montant mensuel, à titre indicatif. Seuls les administrateurs le voient. |
-| **Taux horaire** | Non | Pour le personnel payé à l'heure, à titre indicatif. Seuls les administrateurs le voient. |
+| **Salaire de base** | Si mensuel | Le montant mensuel. Obligatoire quand la fréquence de paie est **Mensuel**. |
+| **Taux horaire** | Si horaire | Le taux du personnel payé à l’heure. Obligatoire quand la fréquence de paie est **Horaire**. |
 | **Notes** | Non | Texte libre. |
+
+Les champs de paie (**Fréquence de paie**, **Salaire de base**, **Taux horaire**) ne s’affichent
+qu’aux personnes autorisées à gérer le **Mois du personnel**, qui les utilise.
 
 Un badge **Actif** s'affiche sur la période qui couvre aujourd'hui (commencée au plus tard
 aujourd'hui, et sans date de fin ou avec une date de fin encore dans le futur).

@@ -1,42 +1,44 @@
 ---
-title: Courses
-description: Build the curriculum for a subject — chapters and lessons — and reuse it across classes and from year to year.
+title: Course templates
+description: Build the outline for a subject at a level — chapters and lessons — that every class at that level follows.
 ---
 
-A **course** is the curriculum for one **subject at one level**, for a term. It's organised into
-**chapters**, and each chapter holds **lessons**. You build a course once, and every class at that
-level follows it — so the structure stays consistent, and you can reuse it next year.
+A **course template** is the outline for one **subject at one level** (and, for levels with tracks,
+one track). It's organised into **chapters**, and each chapter holds **lessons**. Every class at that
+level follows the same template, so the structure stays consistent; teachers then add their own
+[lesson content](./lessons) on top.
 
 <Callout title="Who this is for">
 Administrators and teachers who plan what's taught in each subject.
 </Callout>
 
-## How a course is organised
+## How a template is organised
 
 ```
-Course  (a subject, at a level, for a term)
+Course template  (a subject, at a level — or a track)
 └─ Chapter
    └─ Lesson
       └─ Lesson content  (written by the teacher — see Lessons)
 ```
 
-A course belongs to a specific **subject + level + term**, and there's one course per that
-combination. The chapters and lessons give every class the same backbone; teachers then add their
-own [lesson content](./lessons) on top.
+For a level with tracks, a subject can have one template per track, or a single template marked
+**Common (all tracks)** that every track follows.
 
 ## Before you start
 
-- The subject must be **assigned to the level** (a level subject), and **terms** must exist. See
+- The subject must be **assigned to the level**. See
   [Build the academic foundation](../getting-started/build-the-academic-foundation).
 
-## Create a course
+## Build a template
 
 <Steps>
 
 <Step>
-### Open the curriculum
+### Open Course Templates
 
-Go to **Courses** (or **Curriculum**) and create a new course.
+Go to **Academic** → **Course Templates**, then click **Choose a subject**. Pick a term to filter
+the list, search by level or subject, and select the level subject you want. Its outline opens. You
+can change subject at any time with **Switch subject** in the header.
 
 <Screenshot
   label="Courses list"
@@ -45,67 +47,64 @@ Go to **Courses** (or **Curriculum**) and create a new course.
 </Step>
 
 <Step>
-### Fill in the course details
+### Add chapters
+
+Click **Add chapter**, give it a title, and save. Add chapters in the order they're taught.
+</Step>
+
+<Step>
+### Add lessons
+
+Click **Add lesson** on a chapter and fill in:
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Title** | Yes | The course name. |
-| **Description** | No | A short summary of what the course covers. |
-| **Subject, level, and term** | Yes | Which subject, at which level, for which term this course belongs to. |
+| **Chapter** | Yes | The chapter the lesson goes in. |
+| **Title** | Yes | The lesson name. |
+| **Lesson Type** | Yes | Theory, practical, lab, exercise, review, project, and so on. |
+| **Duration (Weeks)** | No | How many weeks the lesson takes — a whole number, at least 1. |
 </Step>
 
 <Step>
-### Add chapters and lessons
+### Reorder and refine
 
-Add **chapters** in the order they're taught, then add **lessons** within each chapter. You can
-reorder both at any time. Each lesson has its own details — type, duration, objectives — covered in
-[Lessons](./lessons).
-</Step>
-
-<Step>
-### Publish the course
-
-A course starts as a **draft**. **Publish** it when the structure is ready, so it becomes available
-to the classes at that level.
+Drag chapters and lessons to put them in order. Click a lesson to open its details panel, where you
+can change the title, type, and duration, and add a **Description**, **Prerequisites**,
+**Objectives**, and **Activities**. Click **Save** to keep your changes.
 </Step>
 
 </Steps>
 
-## Who manages a course's curriculum
+There's no publish step: what you save is what the classes see.
 
-The **curriculum** — the course's chapters and lessons, and publishing it — is managed by teachers
-given **curriculum ownership** of that subject, level, and term. An administrator grants ownership,
-and can **assign many teachers across many subjects at once**. There are two roles:
+## When the outline is frozen
 
-| Role | What they can do with the curriculum |
+Once a class has recorded progress on a template, you'll see an **Outline frozen** notice. From then
+on the order of chapters and lessons stays fixed and you can't add or remove them, but titles,
+descriptions, and lesson details can still be edited.
+
+## Who can edit a template
+
+Administrators can edit every template. A teacher can edit a template when an administrator has given
+them a **supervision** that covers the subject (in the teacher's profile, **Supervisions** tab):
+
+| Supervision permission | What the teacher can do |
 | --- | --- |
-| **Primary** | Full control — shape the chapters and lessons, **publish**, and delete the course. |
-| **Contributor** | Shape the chapters and lessons, but **can't** publish or delete. |
+| **Edit curriculum** | Add and edit chapters, lessons, and lesson details. |
+| **Manage curriculum** | Everything above, plus delete chapters. |
 
-<Callout title="Curriculum ownership is not the same as lesson content">
-These roles control the **curriculum structure** and publishing. They're **separate** from the
-**lesson content** a teacher writes for their own class — which is governed by *teaching* the
-subject, not by owning the curriculum. See [Lessons](./lessons).
+Everyone else can browse the template but not change it — the page shows a read-only notice.
+
+<Callout title="The template is not the lesson content">
+Supervision controls the **outline**. The **lesson content** a teacher writes for their own class is
+separate, and comes from teaching the subject. See [Lessons](./lessons).
 </Callout>
-
-## Sharing a course across classes
-
-A course is shared by **all the classes at its level**. Once published, its lessons are available to
-those classes. Each class's teacher then writes the [lesson content](./lessons) and decides what
-their students can see — so two classes can follow the same course while each teacher keeps their
-own materials.
-
-## Reuse from year to year
-
-When you start a new academic year, a course can be **carried over** so you don't rebuild the
-curriculum from scratch — the chapters and lessons come across, ready to adjust. This is part of
-copying an academic year forward.
 
 ## Common use cases
 
-- **New subject curriculum** — create the course, lay out chapters and lessons, and publish.
-- **Same course, several classes** — build it once at the level; every class follows it.
-- **Next year** — carry the course forward and tweak rather than starting over.
+- **New subject outline** — choose the subject, add chapters, then lessons.
+- **Same outline, several classes** — build it once for the level; every class follows it.
+- **Tracks with a shared programme** — use **Common (all tracks)** instead of repeating the outline.
 
 ## Related articles
 

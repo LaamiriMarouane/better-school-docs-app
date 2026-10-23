@@ -1,25 +1,37 @@
 ---
 title: Ajouter du personnel
-description: Créez une fiche pour un membre du personnel non enseignant, y compris les chauffeurs.
+description: Créez la fiche d'un membre du personnel non enseignant, y compris les chauffeurs.
 ---
 
-Une fiche **personnel** couvre les personnes qui font fonctionner l'école sans
-enseigner — administrateurs, comptables, chauffeurs, etc. Les enseignants ont leur
-propre type de fiche ; voir [Ajouter des enseignants](./add-teachers).
+Une fiche **personnel** concerne les personnes qui font tourner l'école sans enseigner —
+secrétaires, comptables, chauffeurs, etc. Les enseignants ont leur propre type de fiche ;
+voir [Ajouter des enseignants](./add-teachers). Les administrateurs ne sont pas ajoutés
+comme personnel : seul le propriétaire de l'école peut ajouter un administrateur, depuis
+**Accès → Utilisateurs** avec **Ajouter un administrateur**.
 
 <Callout title="Pour qui">
 Les administrateurs qui enregistrent le personnel non enseignant.
 </Callout>
+
+## Avant de commencer
+
+- Le module **Gestion du personnel** doit être activé (**Paramètres → Modules**). Sans
+  lui, le menu **RH → Personnel** est masqué.
+- Chaque membre du personnel reçoit un **Rôle**. Les rôles viennent de
+  **Accès → Rôles et permissions** ; créez-y d'abord ceux dont vous avez besoin.
+- Beaucoup de personnes à ajouter ? Utilisez **Importer** sur la page Personnel :
+  téléchargez le **Modèle**, remplissez une personne par ligne, téléversez-le, puis
+  cliquez sur **Lancer l'import**.
 
 ## Étapes
 
 <Steps>
 
 <Step>
-### Ouvrir le formulaire d'ajout de personnel
+### Ouvrir le formulaire d'ajout
 
-Dans la barre latérale d'administration, allez dans **RH → Personnel**, puis
-démarrez un nouveau membre du personnel.
+Dans la barre latérale d'administration, allez dans **RH → Personnel**, puis cliquez
+sur **Ajouter Personnel**.
 
 <Screenshot
   label="Formulaire d'ajout de personnel"
@@ -28,7 +40,7 @@ démarrez un nouveau membre du personnel.
 </Step>
 
 <Step>
-### Renseigner les détails du personnel
+### Renseigner les informations
 
 Complétez les champs ci-dessous. Seuls les champs obligatoires sont nécessaires pour
 enregistrer.
@@ -36,45 +48,46 @@ enregistrer.
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
 | **Prénom** | Oui | Le prénom du membre du personnel. |
-| **Nom** | Oui | Le nom du membre du personnel. |
-| **Numéro de téléphone** | Oui | Un numéro valide avec indicatif pays. |
-| **Genre** | Oui | Masculin ou féminin. |
-| **Date d'embauche** | Oui | La date d'embauche du membre du personnel. |
-| **Type de personnel** | Oui | Le type de personnel — ex. administratif, comptable, chauffeur. |
-| **E-mail** | Non | Utilisé plus tard s'il obtient un compte portail. |
-| **Autres détails** | Non | Nom natif, nationalité, date et lieu de naissance, adresse, école précédente. |
+| **Nom de Famille** | Oui | Le nom de famille du membre du personnel. |
+| **Numéro de téléphone** | Oui | Incluez l'indicatif pays. |
+| **Genre** | Oui | Homme ou femme. |
+| **Date d'embauche** | Oui | La date d'embauche. |
+| **Rôle** | Oui | Choisi parmi les rôles du personnel de votre école, ex. comptable, chauffeur. |
+| **Email** | Non | Utilisé plus tard s'il obtient un compte portail. |
+| **Autres informations** | Non | Nom natif, nationalité, pays, ville, date et lieu de naissance, adresse, école précédente. |
 
 Vous pouvez aussi téléverser une **photo de profil** et remplir les **champs
 personnalisés** que votre école a définis pour le personnel.
 </Step>
 
 <Step>
-### Ajouter les détails du chauffeur (chauffeurs uniquement)
+### Ajouter les informations du chauffeur (chauffeurs uniquement)
 
-Si vous définissez le type de personnel sur **Chauffeur**, une section
-supplémentaire apparaît. Le **numéro de permis de conduire** et la **date d'expiration
-du permis** deviennent alors obligatoires.
+Si vous choisissez le rôle **Chauffeur**, une section **Informations du chauffeur**
+apparaît. La **Date d'expiration du permis** est alors obligatoire ; le **Numéro de
+permis de conduire** est facultatif.
 </Step>
 
 <Step>
 ### Téléverser des documents (facultatif)
 
-Lors de la création d'un membre du personnel, vous pouvez joindre un **contrat**, une
-**pièce d'identité** et un **CV**. Les formats acceptés et la limite de taille sont
-indiqués au-dessus des champs de téléversement.
+Lors de la création, vous pouvez joindre un **contrat**, une **pièce d'identité** et un
+**CV**. Les formats acceptés et la limite de taille sont indiqués au-dessus des champs
+de téléversement.
 </Step>
 
 <Step>
 ### Enregistrer le membre du personnel
 
-Validez le formulaire. Vous êtes dirigé vers le profil du nouveau membre du personnel.
+Cliquez sur **Soumettre**. Vous êtes redirigé vers le profil du nouveau membre du
+personnel.
 </Step>
 
 </Steps>
 
 <Callout title="La connexion est une étape distincte">
-Créer une fiche personnel ne crée **pas** d'identifiant de connexion. Pour permettre
-au membre du personnel de se connecter, créez-lui un compte portail — voir
+Créer une fiche personnel ne crée **pas** d'identifiant de connexion. Pour permettre à
+la personne de se connecter, utilisez **Créer un compte portail** sur son profil — voir
 [Créer des comptes portail](./create-portal-accounts).
 </Callout>
 

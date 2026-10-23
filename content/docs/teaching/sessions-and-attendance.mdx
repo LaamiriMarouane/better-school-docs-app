@@ -1,27 +1,25 @@
 ---
 title: Class sessions & attendance
-description: Run each class meeting from the timetable — log what was taught and homework, and take student attendance.
+description: Run each class meeting from the timetable — log what was taught and homework, take student attendance, and close the session.
 ---
 
 A **class session** is one real meeting of a class. Sessions are created when you
 **[activate a timetable group](../timetable/activate-and-sessions)** — the weekly template in a
-[timetable group](../timetable/timetable-groups) becomes dated meetings. Teachers **log what was
-covered** in the **Activity Journal**, and **take attendance** from the session on the
-**timetable** or on the dedicated **Student Attendance** page.
+[timetable group](../timetable/timetable-groups) becomes dated meetings. Teachers **take attendance**
+and **log what was covered** from the session on the **Timetable**, and review their teaching record
+in the **Activity journal**.
 
 <Callout title="Who this is for">
-Teachers running their classes day to day, and administrators overseeing attendance.
+Teachers running their classes day to day, and administrators overseeing sessions and attendance.
 </Callout>
 
 ## Where to find your sessions
 
-The same sessions appear in two places:
-
-- **Activity Journal** — your running list of sessions and the daily teaching record. Administrators
-  see every class's sessions; teachers see their own. This is where you **log what was taught**; it
-  shows whether attendance has been taken, but you don't take it here.
-- **Timetable** — the same sessions on the weekly schedule. Open a session's slot to **mark its
-  attendance** (you can't mark one that's still in the future).
+- **Timetable** — your sessions on the weekly schedule. Open a session's menu to **Mark Attendance**,
+  **Add Activity**, or record how the session went.
+- **Activity journal** — choose a term, a class and a date range to see its sessions and what was
+  recorded in each. Switch between **List view** (sessions on one side, details on the other) and
+  **Kanban view** (sessions grouped by subject). You can also add or edit a session's activity here.
 
 ## Session statuses
 
@@ -29,65 +27,92 @@ The same sessions appear in two places:
 | --- | --- |
 | **Scheduled** | An upcoming session from the timetable. |
 | **In progress** | The session is happening now. |
-| **Completed** | The session is finished and the teacher has logged it. |
-| **Auto-completed** | A past session the system closed automatically because it wasn't logged in time. |
+| **Completed** | The session took place. |
+| **Auto-completed** | A past session closed automatically because nobody marked it. |
 | **Cancelled** | The session was called off. |
-| **No-show** | The class didn't take place. |
+| **No show** | The class didn't take place. |
 
-If the usual teacher is replaced for one session, a **substitute teacher** can be recorded on it.
+## Session actions
+
+From a session's menu on the **Timetable**:
+
+- **Mark as completed** or **Mark as no-show** — the session's teacher or an administrator records
+  how a session went, on the day of the session or later.
+- **Cancel Session** — administrators can call off a session from today onwards, with an optional
+  **Cancellation Reason**. A cancelled session can be restored with **Uncancel Session**.
+- **Edit Session** and **Add Session** — administrators can change a session's details or add a
+  one-off session.
 
 ## Log what was taught
 
-Open a session and record what happened:
+Choose **Add Activity** on a session (from the timetable or the journal) and record:
 
-- The **lesson** that was taught.
-- The **topics** covered.
-- Any **homework** set.
-- **Notes** and **attachments** — observations or files for the record.
+- **Topics** covered — use **Link lesson** to tie a topic to a lesson from the course template.
+- Any **Homework** set.
+- **Notes** and **Attachments** — observations or files for the record.
 
-This builds a clear history of what each class has covered.
+Add at least one item, then save. You can record activity once the session has started; cancelled
+sessions can't have activity.
 
 ## Take attendance
 
-You take attendance in one of two places — **not** from the Activity Journal:
-
-- **From a session** — open the session on the **timetable** and choose **Mark attendance**.
-- **From the Student Attendance page** — a dedicated page to record and review student attendance
-  **by day** or **by session**, where the school's attendance settings also live.
-
-How attendance is taken depends on your school's **attendance mode**, set once for the school:
+How attendance is taken depends on the **Student Attendance Mode** of the class's **level**, set in
+the level's settings:
 
 | Mode | How it works |
 | --- | --- |
-| **Per day** | Attendance is taken **once a day** for the whole class — usually by an administrator. |
-| **Per period** | Attendance is taken **in each session**, by the teacher. |
+| **Per Period** | The teacher takes attendance **in each session**, from the timetable. |
+| **Per Day** | Attendance is taken **once a day** by administrators, on the **Student Attendance** page. |
 
-See [Configure attendance modes](../getting-started/configure-core-operations/configure-attendance-modes).
+See [Create levels](../getting-started/build-the-academic-foundation/create-levels).
+
+### Mark attendance for a session
+
+For levels in **Per Period** mode:
+
+1. On the **Timetable**, open the session's menu and choose **Mark Attendance**. You can't mark a
+   session that's still in the future or one that was cancelled.
+2. Every student starts as **Present** — change only the exceptions. If the session is for one
+   group of the class, only that group's students are listed.
+3. Add **Remarks** for a student who isn't present, if needed.
+4. Choose **Save Attendance**.
+
+Attendance can be entered for today and recent days, within a window your school sets — so a missed
+session can still be recorded shortly after.
 
 ### Attendance statuses
-
-For each student, mark:
 
 | Status | Meaning |
 | --- | --- |
 | **Present** | The student attended. |
 | **Absent** | The student didn't attend. |
 | **Late** | The student arrived late. |
-| **Half day** | The student attended part of the day. |
+| **Half Day** | The student attended part of the day. |
 
-You can mark a whole class at once and add a **remark** to any student. Attendance can be entered
-for today and a few recent days, within a window your school sets — so a missed session can still be
-recorded shortly after.
+### Attendance sheets (PDF)
+
+From the **Mark Attendance** panel you can download:
+
+- **Download attendance marking sheet (PDF)** — a blank register to fill in on paper.
+- **Download attendance taken sheet (PDF)** — the recorded attendance, once it's been taken.
+
+You choose the document language before the download.
+
+## Student Attendance page (administrators)
+
+Administrators find **Attendance → Student Attendance** in the menu. It's where attendance is taken
+for **Per Day** levels, where attendance across classes is reviewed, and where the school's
+attendance settings live.
 
 ## Common use cases
 
-- **Daily teaching log** — after class, record the topic and homework so families can follow along.
-- **Mark the register** — take attendance each period (or once a day, depending on your mode).
-- **Cover lesson** — record the substitute teacher on the session.
+- **Daily teaching log** — after class, record the topics and homework so families can follow along.
+- **Mark the register** — take attendance in each session, or once a day for per-day levels.
+- **Lesson didn't happen** — mark the session as no-show, or have an administrator cancel it.
 - **Backfill** — enter yesterday's attendance within the allowed window.
 
 ## Related articles
 
 - [Lessons](./lessons)
-- [Configure attendance modes](../getting-started/configure-core-operations/configure-attendance-modes)
+- [Create levels](../getting-started/build-the-academic-foundation/create-levels)
 - [Timetable](../timetable)

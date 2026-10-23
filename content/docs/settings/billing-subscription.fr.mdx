@@ -1,22 +1,23 @@
 ---
 title: Facturation et abonnement
-description: Gérez le forfait BetterSchool de votre école — essai, limites d'utilisation, mises à niveau et annulation.
+description: Gérez l'abonnement de votre école — essai, forfait, utilisation, factures, moyen de paiement et annulation.
 ---
 
-**Facturation et abonnement** est l'endroit où vous gérez le **forfait SaaS** de l'école avec
-BetterSchool — statut d'essai, utilisation des inscriptions, mises à niveau, rétrogradations et
-annulation. Ce n'est **pas** la même chose que la facturation des frais scolaires (échéanciers pour
+**Facturation et abonnement** est l'endroit où vous gérez l'**abonnement** de votre école —
+statut d'essai, utilisation des inscriptions, mises à niveau, rétrogradations, factures et
+annulation. Ce n'est **pas** la même chose que la facturation des frais scolaires (échéances pour
 les familles).
 
 <Callout title="Deux facturations différentes">
 | Emplacement | Ce qu'il contrôle |
 | --- | --- |
-| Barre latérale → **Facturation et abonnement** | Le forfait BetterSchool de votre école et son utilisation. |
+| Barre latérale → **Facturation et abonnement** | L'abonnement de votre école et son utilisation. |
 | **Paramètres → Finance → Facturation** | Comment les échéances des frais élèves sont cadencées. Voir [Configuration de la facturation](./billing-configuration). |
 </Callout>
 
 <Callout title="Pour qui">
-Les administrateurs qui gèrent l'abonnement de l'école.
+Les administrateurs qui gèrent l'abonnement de l'école. Les membres du personnel qui en ont reçu
+l'accès peuvent aussi l'ouvrir.
 </Callout>
 
 ## Ouvrir Facturation et abonnement
@@ -28,29 +29,28 @@ abonnement**.
 
 ### Forfait actuel
 
-Le côté gauche affiche :
-
 | Élément | Remarques |
 | --- | --- |
-| **Forfait** | Essai gratuit, ou un niveau payant (Starter, Growth, Standard, Enterprise). |
-| **Statut** | Essai, Actif, Impayé, En pause ou Annulé. |
+| **Forfait** | **Essai gratuit**, ou un forfait payant (**Starter**, **Growth**, **Standard**, **Enterprise**). |
+| **Statut** | **Essai**, **Actif**, **Impayé**, **En pause** ou **Annulé**. |
 | **Fin de l'essai** / **Prochaine facturation** | Selon que vous êtes en essai ou sur un forfait payant. |
-| **Cycle de facturation** | Mensuel ou Annuel (lorsque vous êtes sur un forfait payant). |
-| **Utilisation** | Inscriptions actives par rapport à la limite du forfait (illimité pendant l'essai ou sur les forfaits illimités). |
+| **Facturation** | **Mensuel** ou **Annuel** (lorsque vous êtes sur un forfait payant). |
+| **Inscriptions** | Inscriptions actives par rapport à la limite du forfait (illimité pendant l'essai ou sur les forfaits illimités). |
 
-Si un changement est déjà programmé (annulation, pause ou reprise), un avis indique la date.
+Si un changement est déjà programmé (une annulation ou une rétrogradation), un avis indique la date.
 
 ### Choisir un forfait
 
-À droite, choisissez **Mensuel** ou **Annuel**, puis un forfait :
+Dans la liste des forfaits, choisissez **Mensuel** ou **Annuel**, puis un forfait :
 
 | Action | Quand elle apparaît |
 | --- | --- |
 | **S'abonner** / **Choisir un forfait** | Pas encore de forfait payant, ou toujours en essai. |
-| **Passer à** | Passage à un niveau supérieur pendant que le statut est Actif ou Impayé. |
-| **Rétrograder** | Passage à un niveau inférieur (désactivé si vos inscriptions dépassent la limite de ce forfait). |
-| **Contacter les ventes** | Besoins Enterprise / personnalisés. |
+| **Passer à** | Passage à un forfait supérieur pendant que le statut est Actif ou Impayé. |
+| **Rétrograder** | Passage à un forfait inférieur (indisponible si vos inscriptions dépassent la limite de ce forfait). |
+| **Contacter les ventes** | Besoins Enterprise ou sur mesure. |
 | **Actuel** | Libellé sur le forfait que vous avez déjà. |
+| **Programmé** | Libellé sur une rétrogradation qui attend la prochaine date de facturation. |
 
 ## Mise à niveau, rétrogradation ou abonnement
 
@@ -66,19 +66,33 @@ Sélectionnez **Mensuel** ou **Annuel**, puis l'action du forfait (**Passer à**
 <Step>
 ### Confirmer ou payer
 
-- Si vous avez déjà un abonnement **Actif** ou **Impayé**, confirmez le changement dans la boîte
-  de dialogue.
-- Sinon vous allez au **paiement** pour régler le forfait et le cycle choisis (Paddle). Lorsque le
-  paiement réussit, vous revenez dans l'application avec l'abonnement mis à jour.
+- **Passer à** prend effet immédiatement. Vous êtes facturé maintenant pour le reste de la période
+  en cours.
+- **Rétrograder** prend effet à la prochaine date de facturation. Vous conservez votre forfait
+  actuel jusque-là.
+- Sans forfait payant, vous allez sur la page de paiement pour régler le forfait et le cycle choisis via
+  Paddle, notre prestataire de paiement. Lorsque le paiement réussit, vous revenez dans
+  l'application avec l'abonnement mis à jour.
 </Step>
 
 </Steps>
 
+## Factures
+
+La liste **Factures** affiche chaque facture avec son montant et son statut. Utilisez
+**Télécharger** pour en obtenir une copie.
+
+## Mettre à jour le moyen de paiement
+
+Utilisez **Mettre à jour le moyen de paiement** pour changer la carte avec laquelle vous payez. Si
+un paiement échoue, un avis **Échec du paiement** apparaît avec le même bouton : mettez à jour
+votre moyen de paiement et le paiement en retard est relancé automatiquement.
+
 ## Annuler un abonnement
 
 Lorsque le statut est **Actif** ou **Impayé** et qu'aucun changement n'est déjà programmé, utilisez
-**Annuler l'abonnement** et confirmez. L'interface peut ensuite afficher une date d'annulation
-programmée si elle est définie.
+**Annuler l'abonnement** et confirmez. La page affiche ensuite la date à laquelle l'annulation
+prend effet.
 
 ## Articles liés
 

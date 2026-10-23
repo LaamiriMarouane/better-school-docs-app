@@ -4,17 +4,18 @@ description: Concevoir les sections et les champs du formulaire dans le construc
 ---
 
 Le **constructeur** est l'endroit où vous concevez ce que voient les candidats.
-Vous glissez des champs sur un canevas, vous les organisez en sections et vous
-réglez le comportement de chaque champ.
+Vous glissez des champs sur un canevas, les organisez en sections et réglez le
+comportement de chaque champ. Toutes les sections s'affichent les unes après les
+autres sur une seule page.
 
 ## La disposition du constructeur
 
-| Zone | Contenu |
+| Zone | Ce qu'elle contient |
 | --- | --- |
-| **Barre latérale gauche** | Les composants de champ que vous pouvez glisser sur le formulaire. |
-| **Canevas** | Le formulaire lui-même — des **sections**, chacune contenant des **lignes** et des **colonnes** de champs. |
-| **Panneau de droite** | Les propriétés du champ sélectionné, ou le panneau **Champs d'admission**. |
-| **En-tête** | Annuler / rétablir, aperçu, paramètres et enregistrement. |
+| Liste **Composants** | Les champs que vous pouvez glisser sur le formulaire : saisies, choix, dates et heures, fichiers, éléments de mise en page et champs personnalisés de votre école. |
+| **Canevas** | Le formulaire lui-même — des **sections**, chacune contenant des lignes de champs. |
+| Panneau **Propriétés** | Les réglages du champ sélectionné, ou le panneau des champs d'admission. |
+| **En-tête** | Le nom et le statut du formulaire, **Publier**, annuler / rétablir, **Aperçu**, **Niveaux** (formulaires d'admission), **Paramètres** et **Enregistrer**. |
 
 <Screenshot
   label="Constructeur de formulaire avec la barre latérale de champs, le canevas et le panneau de propriétés"
@@ -26,75 +27,97 @@ réglez le comportement de chaque champ.
 <Steps>
 
 <Step>
-### Glisser les champs sur le canevas
+### Ajouter des sections
 
-Glissez un composant de champ depuis la barre latérale gauche sur une section.
-Déposez-le sur un en-tête de section pour démarrer une nouvelle ligne, ou à côté
-d'un champ existant pour partager sa ligne.
+Un formulaire doit avoir au moins une section avant de pouvoir être enregistré.
+Utilisez **Ajouter une section** sous le canevas et saisissez un titre pour
+chaque section.
+</Step>
+
+<Step>
+### Glisser des champs sur le canevas
+
+Glissez un champ depuis la liste **Composants** sur une section. Déposez-le dans
+la zone vide de la section pour commencer une nouvelle ligne, ou à côté d'un champ
+existant pour partager sa ligne. Glissez les lignes et les sections pour les
+réordonner.
 </Step>
 
 <Step>
 ### Régler les propriétés du champ
 
-Sélectionnez un champ pour ouvrir le panneau de propriétés à droite. Vous y
-définissez le **libellé**, vous le marquez **obligatoire**, vous ajoutez une
-**validation**, vous définissez les **options** des champs à choix et vous
-contrôlez sa **visibilité**.
+Sélectionnez un champ pour ouvrir ses **Propriétés**. Vous y réglez le
+**Libellé**, le **Texte d'aide** affiché dans la case et un texte d'aide
+facultatif sous le champ, les **Options** d'un champ à choix, et les règles de
+**Validation** — **Champ requis**, longueurs, limites de nombre ou de date, taille
+et types de fichiers.
 </Step>
 
 <Step>
-### Organiser en sections
+### Afficher un champ seulement si nécessaire
 
-Regroupez les champs liés en sections et réorganisez les lignes et les sections par
-glisser-déposer. Une section peut être rendue **répétable** pour que les candidats
-ajoutent plusieurs entrées — par exemple plusieurs enfants sur une même
-candidature.
+Dans **Propriétés**, utilisez **Afficher seulement si…** pour n'afficher un champ
+que lorsqu'un autre champ remplit une condition — par exemple, afficher « Détails
+des allergies » seulement si « A des allergies » vaut Oui. Choisissez le champ dans
+**Lorsque ce champ**, puis une **Condition** et une **Valeur**.
 </Step>
 
 </Steps>
 
+Chaque champ du canevas a ses propres boutons pour le dupliquer, le copier ou le
+supprimer.
+
 ## Champs d'admission
 
-Les formulaires d'admission sont livrés avec les sections **Élève** et
-**Responsable** déjà construites. Pour ajouter d'autres champs reconnus, ouvrez le
-panneau **Champs d'admission** à droite.
+Les formulaires d'admission arrivent avec les sections **Informations du tuteur**
+et **Informations de l’élève** déjà construites, y compris le niveau de l'élève.
+Ces champs intégrés portent la mention **Champ verrouillé** et ne peuvent pas être
+supprimés.
 
-Il comporte deux onglets — **Élève** et **Responsable** — chacun listant :
+Pour ajouter d'autres champs reconnus, choisissez **Admission Fields** en bas de
+la liste **Composants**. Le panneau a un onglet **Student** et un onglet
+**Guardian**, chacun listant :
 
-- **Champs système** — des champs reconnus tels que la date de naissance ou
-  l'adresse. Les ajouter permet de rattacher une soumission à une vraie personne.
-- **Champs personnalisés** — des champs supplémentaires définis par votre école.
-  Voir [Champs personnalisés](../../settings/custom-fields).
+- **System fields** — les champs que la plateforme reconnaît, comme la date de
+  naissance. Quand vous acceptez une candidature, leurs réponses remplissent les
+  nouvelles fiches à votre place.
+- **Custom fields** — les champs supplémentaires définis par votre école. Voir
+  [Champs personnalisés](../../settings/custom-fields).
 
-Glissez un champ du panneau dans la section correspondante, ou utilisez son bouton
-**+**. Un champ déjà présent sur le formulaire est marqué **Ajouté**.
+Glissez un champ du panneau dans la section correspondante. Un champ déjà présent
+sur le formulaire porte la mention **Added**.
 
-<Callout title="Pourquoi les champs système comptent">
-Les champs système portent une correspondance cachée (par exemple
-`student.firstName`). C'est cette correspondance qui permet à la plateforme de
-transformer une soumission acceptée en fiche élève sans rien ressaisir.
-</Callout>
+## Choisir les niveaux (formulaires d'admission)
 
-## Aperçu et paramètres
+Un formulaire d'Admission ne peut pas être publié tant que vous n'avez pas choisi
+qui peut postuler.
 
-- **Aperçu** — basculez l'en-tête en mode aperçu pour voir le formulaire tel qu'un
-  candidat le verrait, en largeur ordinateur, tablette ou mobile.
-- **Paramètres** — ouvrez la boîte de dialogue des paramètres pour définir le
-  **mode de présentation** (une seule page ou un assistant étape par étape), les
-  **langues**, le **thème**, l'**image de marque** (messages d'introduction et de
-  remerciement, logo, conditions et politique de confidentialité) et le
-  **calendrier** du formulaire.
+1. Dans l'en-tête du constructeur, choisissez **Niveaux**. Tant qu'aucun niveau
+   n'est choisi, le bouton affiche **Non défini**.
+2. Sélectionnez les niveaux auxquels les candidats peuvent postuler. Lorsqu'un
+   niveau a des filières, ouvrez aussi au moins une de ses filières.
+3. Choisissez **Enregistrer**. Le bouton affiche alors le nombre de niveaux (et de
+   filières) ouverts.
+
+Les candidats choisissent ensuite l'un de ces niveaux pour chaque enfant du
+formulaire.
+
+## Aperçu et planification
+
+- **Aperçu** — voyez le formulaire comme un candidat, en largeur ordinateur,
+  tablette ou mobile. Choisissez **Modifier** pour revenir au canevas.
+- **Paramètres** — réglez la planification du formulaire : **Ouverture** et
+  **Fermeture**. Voir [Publier et partager un formulaire](./publish-and-share-a-form).
 
 ## Enregistrer votre travail
 
-L'en-tête affiche un indicateur **Modifications non enregistrées** pendant que vous
-travaillez. Utilisez **Enregistrer** pour conserver vos changements. Annuler et
-rétablir sont disponibles, ainsi que des raccourcis clavier — copier, coller et
-dupliquer un champ sélectionné.
+L'en-tête affiche **Modifications non enregistrées** pendant que vous modifiez.
+Choisissez **Enregistrer** pour conserver vos changements. Annuler et rétablir se
+trouvent dans l'en-tête.
 
 <Callout title="Enregistrer n'est pas publier">
-Enregistrer conserve votre conception. Le formulaire reste un **brouillon** et
-n'est pas encore ouvert aux candidats — voir
+Enregistrer conserve votre conception. Un brouillon reste fermé aux candidats
+tant que vous ne l'avez pas publié — voir
 [Publier et partager un formulaire](./publish-and-share-a-form).
 </Callout>
 

@@ -23,48 +23,51 @@ structure — it is **not** a field on the enrollment form.
 - The **level** (and any tracks) must be set up for the year.
 - Optional: a **class** and a **payment plan** for that level.
 
-## How enrollment is created today
+## Enroll a student
 
-There is no separate **Add Enrollment** button on the Enrollments page. In the admin UI,
-enrollments are created from **Applications** (pre-inscriptions), then managed on
-**Enrollments**.
+You can enroll a student straight from the student screens. When you save a new student, the
+profile opens with the **Enroll** form ready, unless you saved them as a pre-inscription.
 
 <Steps>
 
 <Step>
-### Open Applications
+### Open Enroll
 
-Go to **Admissions & Enrollment → Applications**, stay on the Direct / Admin tab
-([pre-inscriptions](./pre-inscriptions)).
+Go to **Academic → Students** and open the student's actions menu, or open the student's profile.
+Choose **Enroll**. It is offered only while the student has no active enrollment for the year.
 </Step>
 
 <Step>
-### Select pending rows and Enroll
-
-Select one or more **Pending** pre-inscriptions of the **same level**, then choose **Enroll**.
-</Step>
-
-<Step>
-### Confirm placement
+### Fill in the placement
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Level** | Yes | Locked to the pre-inscription's level. |
-| **Track** | When the level offers tracks | Must match the pre-inscription's track when one was set. |
+| **Level** | Yes | The level the student joins. |
+| **Track** | When the level offers tracks | Required if that level has offered tracks for the year. |
 | **Class** | No | Assign now or later from Enrollments. |
-| **Payment plan** | No | Assign now or later; drives fees when attached. |
-| **Enrollment date** | No | Can default to today. This is the first day the student can be billed. |
+| **Payment Plan** | No | Assign now or later; fees are billed once a plan is attached. |
+| **Enrollment Date** | No | Defaults to today. Billing starts from this date. |
 | **Notes** | No | Optional. |
 </Step>
 
 <Step>
-### Finish on the Enrollments hub
+### Confirm
 
-Go to **Admissions & Enrollment → Enrollments** to review the list. Use **Assign Class** or
-**Assign Plan** in bulk when students were enrolled without a class or plan.
+Choose **Enroll students**. The student now appears on **Admissions & Enrollment → Enrollments**.
 </Step>
 
 </Steps>
+
+<Callout title="Pending pre-inscription">
+If the student has a pending pre-inscription, enroll them at that pre-inscription's level. You can
+also enroll from **Admissions & Enrollment → Applications** — see
+[Pre-inscriptions](./pre-inscriptions) and [Bulk enroll students](./bulk-enroll-students).
+</Callout>
+
+## Finish on the Enrollments hub
+
+Go to **Admissions & Enrollment → Enrollments** to review the list. Use **Assign class** or
+**Assign plan** in bulk when students were enrolled without a class or plan.
 
 <Callout title="One active placement per year">
 A student has one active enrollment placement for the year. To change class or level later, use
@@ -72,10 +75,9 @@ A student has one active enrollment placement for the year. To change class or l
 </Callout>
 
 <Callout title="Enrollment date and fees">
-Months before today are not billed. A student who joins on 3 October is not billed for
-September. With the default billing configuration (due on the 1st, in advance), October
-is still due on 1 October, so those rows are already overdue. Later months are due on
-the 1st. See
+Months before the enrollment date are not billed: a student who joins on 3 October is not billed
+for September. When the joining month is billed, its first installment is due on the enrollment
+date rather than on a due day that has already passed. Later months follow the usual due day. See
 [Installments and schedules](../../finance/fees-and-payments/installments-and-schedules).
 </Callout>
 
@@ -83,6 +85,6 @@ the 1st. See
 
 - [Pre-inscriptions](./pre-inscriptions)
 - [Bulk enroll students](./bulk-enroll-students)
-- [Transfer a student between classes](./transfer-a-student-between-classes)
-- [Withdraw an enrollment](./suspend-or-withdraw-an-enrollment)
+- [Change a student's class](./transfer-a-student-between-classes)
+- [Suspend or withdraw an enrollment](./suspend-or-withdraw-an-enrollment)
 - [Installments and schedules](../../finance/fees-and-payments/installments-and-schedules)

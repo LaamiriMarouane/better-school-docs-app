@@ -4,11 +4,11 @@ description: Define the categories, sub-categories, and levels that behaviour in
 ---
 
 Before you record any behaviour, you set up the **vocabulary** your school uses: the **categories**
-of behaviour, optional **sub-categories**, and the **levels** of significance. Each is marked
-**positive** or **negative**, so the system knows whether it adds or removes points.
+of behaviour, optional **sub-categories**, and the **levels** of significance. Each category and
+level is marked **positive** or **negative**, which decides whether it adds or removes points.
 
 <Callout title="Who this is for">
-Administrators setting up the behaviour system for the year.
+Administrators setting up the behaviour system.
 </Callout>
 
 ## The pieces
@@ -29,42 +29,56 @@ together they describe what happened and how much it's worth.
 <Step>
 ### Open the behaviour setup
 
-Go to **Behaviour → Setup**, where categories and levels are managed.
+Go to **Behaviour → Config**. Categories and levels are managed on this one page, each in its own card.
 </Step>
 
 <Step>
 ### Add a category
 
+In the **Categories** card, choose **Create new** and fill in:
+
 | Field | Required | Notes |
 | --- | --- | --- |
 | **Name** | Yes | e.g. *Respect* or *Disruption*. |
-| **Type** | Yes | **Positive** or **Negative**. |
-| **Colour** | No | A colour to recognise it at a glance. |
+| **Sentiment** | Yes | **Positive** or **Negative**. |
+| **Color** | No | A colour to recognise it at a glance. |
 </Step>
 
 <Step>
 ### Add sub-categories (optional)
 
-Under a category, add finer labels if you want them, each with a **name** and an optional **colour** —
-for example *Talking* and *Phone use* under *Disruption*.
+On the category's row, choose **Add subcategory** and give it a **Name** and an optional **Color** —
+for example *Talking* and *Phone use* under *Disruption*. Tap a category to show or hide its
+sub-categories.
 </Step>
 
 </Steps>
 
 ## Create a level
 
+In the **Levels** card, choose **Create new**. Levels are listed under **Positive levels** and
+**Negative levels**.
+
 | Field | Required | Notes |
 | --- | --- | --- |
 | **Name** | Yes | e.g. *Minor*, *Major*, *Gold*. |
-| **Type** | Yes | **Positive** or **Negative**. |
-| **Default points** | Yes | The points an incident at this level is worth. They pre-fill when recording, and can be adjusted. |
-| **Order** | Yes | Where the level sits among the levels of the same type. |
-| **Colour** | No | A colour for the level. |
+| **Sentiment** | Yes | **Positive** or **Negative**. |
+| **Display Order** | Yes | Where the level sits in its list. |
+| **Default points** | Yes | The points an incident at this level is worth: a whole number from **0 to 100** for a positive level, or from **−100 to 0** for a negative one. They pre-fill when recording an incident. |
+| **Color** | No | A colour for the level. |
 
 <Callout title="Positive vs negative drives the points">
 A level marked **positive** adds to a student's points; a **negative** level subtracts. Set generous
 positives to reward good behaviour, and proportionate negatives for problems.
 </Callout>
+
+## Archive and reactivate
+
+Use **Edit** on a row to change a category, sub-category, or level, and **Delete** to remove it. If it's
+already in use, it's **archived** instead of deleted, so past incidents keep it.
+
+To see archived items, tick **Show archived** in the card. An archived row carries the **Archived**
+tag; choose **Reactivate** to bring it back.
 
 ## Related articles
 

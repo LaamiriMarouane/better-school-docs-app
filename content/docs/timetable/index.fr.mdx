@@ -1,13 +1,14 @@
 ---
 title: Emploi du temps
-description: Construisez des emplois du temps sans conflit — réglez la semaine scolaire, décrivez la réalité, créez des groupes, générez, puis activez pour que de vraies séances apparaissent.
+description: Construisez vos emplois du temps — réglez la semaine scolaire, décrivez la réalité, créez des groupes, générez, puis activez pour que de vraies séances apparaissent.
 ---
 
 Les outils d'**emploi du temps** construisent l'horaire hebdomadaire de votre école à votre
 place. Vous décrivez ce qui est vrai dans votre école — qui enseigne quoi, quand les enseignants
 et les salles sont disponibles, et combien de séances chaque classe a besoin — et le
-**générateur** trouve un emploi du temps complet et sans conflit qui respecte vos règles. Vous le
-vérifiez ensuite, ajustez ce que vous voulez à la main, et **activez** un
+**générateur** construit un emploi du temps qui respecte vos règles. Il place toutes les séances
+qu'il peut et vous explique pourquoi une séance restante n'a pas pu être placée. Vous le vérifiez
+ensuite, ajustez ce que vous voulez à la main, et **activez** un
 [groupe d'emploi du temps](./timetable-groups) pour que enseignants, élèves et parents suivent la
 semaine en vigueur et que des **séances de classe** apparaissent avec de vraies dates.
 
@@ -20,11 +21,11 @@ Les planificateurs pédagogiques et les administrateurs qui construisent l'horai
 Construire un emploi du temps comporte trois types de travail :
 
 1. **Préparer les entrées** — les matières, classes, enseignants et salles à partir desquels
-   l'horaire est construit, plus les [horaires de l'école](../settings/school-schedule) pour
-   l'année, la [configuration de l'emploi du temps](./timetable-config) de chaque groupe, et la
-   charge d'enseignement de chaque matière.
-2. **Décrire la réalité et fixer les règles** — quand les enseignants et les salles sont
-   disponibles, combien d'heures un enseignant peut travailler, et les préférences que le
+   l'horaire est construit, plus les [horaires de l'école](../settings/school-schedule), la
+   [configuration de l'emploi du temps](./timetable-config) de chaque groupe, et la charge
+   d'enseignement de chaque matière.
+2. **Décrire la réalité et fixer les règles** — quand les enseignants, les salles et les classes
+   sont disponibles, combien d'heures un enseignant peut travailler, et les préférences que le
    générateur doit chercher à satisfaire.
 3. **Générer, vérifier et activer** — lancez le générateur sur un groupe, vérifiez le résultat,
    corrigez ce qu'il faut à la main, et activez pour créer des séances datées.
@@ -33,14 +34,14 @@ Construire un emploi du temps comporte trois types de travail :
 
 Il est utile de distinguer deux idées, car elles se trouvent à deux endroits différents :
 
-- **Réalité (onglets Configuration)** — les faits incontournables que l'horaire *doit* respecter :
-  un enseignant n'est disponible que le matin, le laboratoire de sciences ne peut accueillir que
-  des sciences, un enseignant travaille au plus six heures par jour, les Maths ont besoin de quatre
-  séances par semaine. Enfreindre l'un d'eux rend l'horaire tout simplement erroné.
+- **Réalité (onglets Configuration)** — les faits que l'horaire doit respecter : un enseignant
+  n'est disponible que le matin, un enseignant travaille au plus six heures par jour, une classe ne
+  vient que le matin, les Maths ont besoin de quatre séances par semaine.
 - **Règles (Politique du solveur)** — les préférences qui rendent un horaire *bon* plutôt que
   seulement valide : éviter les trous dans la journée d'un enseignant, garder une classe dans la
-  même salle, ne pas enchaîner deux matières exigeantes. Vous décidez de l'importance de chacune.
-  La politique du solveur s'ouvre depuis un **groupe d'emploi du temps**, pas depuis Configuration.
+  même salle, séparer deux matières exigeantes. Vous activez ou désactivez chacune et décidez de
+  son importance. La **Politique du solveur** s'ouvre depuis un **groupe d'emploi du temps**, pas
+  depuis Configuration.
 
 ## L'ordre à suivre
 
@@ -49,21 +50,21 @@ Il est utile de distinguer deux idées, car elles se trouvent à deux endroits d
 <Step>
 ### Vérifier les prérequis
 
-Assurez-vous que matières, classes, périodes, enseignants, salles et affectations existent toutes.
-Voir [Prérequis](./prerequisites).
+Assurez-vous que matières, classes, trimestres, enseignants, salles et affectations des enseignants
+existent tous. Voir [Prérequis](./prerequisites).
 </Step>
 
 <Step>
 ### Régler les horaires de l'école
 
-Définissez la semaine par défaut de l'année dans les Paramètres. Voir
+Définissez la semaine par défaut de l'école dans les Paramètres. Voir
 [Horaires de l'école](../settings/school-schedule).
 </Step>
 
 <Step>
 ### Régler la configuration de l'emploi du temps
 
-Définissez (ou resserrez) la grille hebdomadaire des jours, créneaux et pauses pour les niveaux que
+Définissez (ou resserrez) la grille hebdomadaire des jours, heures et pauses pour les niveaux que
 vous allez planifier. Voir [Configuration de l'emploi du temps](./timetable-config).
 </Step>
 
@@ -84,15 +85,16 @@ sache quoi placer. Voir [Séances et affectations](./lessons-and-assignments).
 <Step>
 ### Décrire la réalité
 
-Réglez l'indisponibilité des enseignants et des salles, les limites de charge des enseignants, les
-salles attitrées et les horaires des classes. Voir [Réglages de planification](./scheduling-setup).
+Réglez quand les enseignants et les salles sont indisponibles, les limites de charge des
+enseignants, les salles attitrées et les horaires des classes. Voir
+[Réglages de planification](./scheduling-setup).
 </Step>
 
 <Step>
 ### Créer un groupe et choisir vos règles
 
-Créez un [groupe d'emploi du temps](./timetable-groups) et ajustez les préférences souples
-(contraintes). Voir [Contraintes](./constraints).
+Créez un [groupe d'emploi du temps](./timetable-groups) et ajustez sa **Politique du solveur**.
+Voir [Contraintes](./constraints).
 </Step>
 
 <Step>
@@ -111,24 +113,24 @@ activez. Voir [Générer et activer](./generate-and-publish) et
 | --- | --- |
 | [Prérequis](./prerequisites) | La liste de ce qui doit exister avant de générer. |
 | [Configuration de l'emploi du temps](./timetable-config) | Définir une grille hebdomadaire à l'intérieur des horaires de l'école. |
-| [Groupes d'emploi du temps](./timetable-groups) | Créer des modèles hebdomadaires pour une période et des niveaux ; connaître les actions. |
+| [Groupes d'emploi du temps](./timetable-groups) | Créer des modèles hebdomadaires pour un trimestre et des niveaux ; connaître les statuts et les actions. |
 | [Charge d'enseignement](./teaching-load) | Définir combien de séances chaque matière nécessite par semaine. |
 | [Séances et affectations](./lessons-and-assignments) | Comprendre ce qui est placé et affecter les enseignants aux classes. |
 | [Affectations des enseignants](./teacher-assignments) | Régler l'éligibilité aux matières et affecter les enseignants à chaque couple classe–matière. |
-| [Réglages de planification](./scheduling-setup) | Régler l'indisponibilité, les limites et les règles de salles. |
-| [Contraintes](./constraints) | Ajuster les préférences que le générateur cherche à satisfaire. |
+| [Réglages de planification](./scheduling-setup) | Régler la disponibilité des enseignants, des salles et des classes, les limites des enseignants et les salles attitrées. |
+| [Contraintes](./constraints) | Voir les règles toujours respectées et ajuster les préférences dans la Politique du solveur. |
 | [Générer et activer](./generate-and-publish) | Lancer le générateur, vérifier, modifier et activer. |
 | [Activer et séances de classe](./activate-and-sessions) | Transformer le modèle hebdomadaire en réunions de classe datées. |
 
 ## Avant de commencer
 
 - Une **année scolaire** doit être créée et sélectionnée.
-- La **base pédagogique** doit déjà être en place — niveaux, classes, matières, périodes, salles
+- La **base pédagogique** doit déjà être en place — niveaux, classes, matières, trimestres, salles
   et enseignants. Voir
   [Construire la base pédagogique](../getting-started/build-the-academic-foundation).
-- Réglez tôt les **[horaires de l'école](../settings/school-schedule)** pour l'année.
+- Réglez tôt les **[horaires de l'école](../settings/school-schedule)**.
 
-<Callout title="Un emploi du temps appartient à une année scolaire">
-Tout ici — la configuration, les affectations, les règles et l'horaire généré — est rattaché à
-l'année scolaire sélectionnée. Choisissez la bonne année avant de commencer.
+<Callout title="Choisissez d'abord la bonne année">
+Les pages de l'emploi du temps affichent l'année scolaire choisie dans le sélecteur d'année.
+Sélectionnez l'année pour laquelle vous construisez l'horaire avant de commencer.
 </Callout>

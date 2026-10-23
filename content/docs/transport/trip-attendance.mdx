@@ -5,48 +5,47 @@ description: Mark who boarded and who was dropped off on each trip, handle absen
 
 **Trip attendance** is the record of which students actually travelled on a trip. Every student
 assigned to the route starts on the trip as **Expected**, and the crew updates each one as the
-bus visits their stop. This gives the school an accurate record of who travelled, who was
-absent, and at what time.
+bus visits their stop. This gives the school an accurate record of who travelled, who did not,
+and at what time.
 
 <Callout title="Who this is for">
-Drivers, assistants, and bus monitors marking attendance, and administrators reviewing it.
+Drivers and bus monitors marking students, and administrators reviewing or correcting
+attendance.
 </Callout>
-
-## How attendance works
-
-- When a trip is created, every assigned student is added to it with the status **Expected**.
-- The crew marks each student as the bus reaches their stop.
-- What you mark depends on the route's direction:
-  - On a **pickup** trip (home → school), you mark students **Boarded** as they get on.
-  - On a **dropoff** trip (school → home), you mark students **Dropped off** as they leave the bus.
-- When everyone has been accounted for and every stop has been visited, the trip **completes
-  automatically**.
 
 ## Attendance statuses
 
 | Status | Meaning |
 | --- | --- |
 | **Expected** | The student is on the trip but hasn't been marked yet. This is the starting point. |
-| **Boarded** | The student got on the bus (pickup trips). |
-| **Dropped off** | The student left the bus at their stop (dropoff trips). |
-| **Absent** | The student is known in advance not to be riding — a planned absence. You can mark it before the bus reaches the stop (for example, the family told you the child won't take the bus that day). |
-| **No-show** | The student was expected but didn't show up at their stop. The crew can mark this at the stop, and it's also applied automatically to anyone left unmarked when the trip finishes. |
+| **On board** | The student got on the bus. |
+| **Dropped off** | The student left the bus at their stop. |
+| **No show** | The student was expected but did not board. Also applied to anyone still unmarked when the trip finishes. |
+| **Absent** | The school knows in advance the student won't ride today (for example, the family called). Only administrators set this. |
 
-## Mark attendance
+## Mark students during a trip (crew)
+
+Drivers and bus monitors open **Trips** in their menu (**Today's trips** in the mobile app),
+start their trip, and follow it stop by stop.
 
 <Steps>
 
 <Step>
-### Open the trip
+### Start the trip
 
-Go to **Transport → Trips** and open today's trip. You'll see the list of stops and the
-students expected at each one.
+Tap **Start trip**. The phone's location must be allowed, so the school and parents can see
+where the bus is.
 </Step>
 
 <Step>
-### Mark each student
+### Mark each student at the stop
 
-As the bus reaches a stop, mark each student **Boarded**, **Dropped off**, or **Absent**.
+The current stop lists the students to handle there:
+
+- **Pickup trip** — tap **Board** for each student who gets on, or **Not board** if they don't
+  come.
+- **Drop-off trip** — at the school, tap **Board** or **Not board** as students get on. At each
+  home stop, tap **Drop off** as students get off.
 
 <Screenshot
   label="Trip attendance list with status buttons per student"
@@ -55,37 +54,47 @@ As the bus reaches a stop, mark each student **Boarded**, **Dropped off**, or **
 </Step>
 
 <Step>
-### Mark the stop visited
+### Move to the next stop
 
-When the bus has finished at a stop, mark the stop as **arrived**. This records the actual time the bus was there.
+When every student at the stop is marked, tap **Mark stop & next**. The stop is recorded as
+arrived, with the time, and the next stop comes up.
+</Step>
+
+<Step>
+### Finish the trip
+
+At the end, tap **Finish trip**. Students not marked yet are recorded as **No show** and their
+parents are notified. A drop-off trip can't finish while a student is still on the bus — drop
+everyone off first.
 </Step>
 
 </Steps>
 
-<Callout title="The trip finishes itself">
-Once every student has a final status and every stop has been visited, the trip completes on its
-own — no need to tap complete. Any student still unmarked at that point is recorded as a
-**no-show**.
+<Callout title="The trip often finishes itself">
+Once every student has a final status and every stop is done, the trip completes on its own.
+If the bus can't complete the route, use **End trip (emergency)** in the trip's menu.
 </Callout>
 
 ## Who can mark attendance
 
-The **driver** and the **assistant** on a trip can both mark attendance — they have the same
-abilities. Administrators can also mark or correct attendance from the trip's page.
+The **driver** and the **assistant** on a trip can both mark students — they have the same
+abilities. Administrators can also correct any student's status from the trip's details in
+**Operations → Trips**, and only administrators can mark a student **Absent**.
 
 ## Review past trips
 
-Open any past trip to see exactly who travelled, who was absent, and the times recorded. Because
-each trip keeps its own snapshot, this record stays accurate even if the route or roster changes
-later.
+Open a trip under **Completed** to see exactly who travelled, who did not, and the times
+recorded. This record stays accurate even if the route or roster changes later.
 
 ## Common use cases
 
-- **Normal run** — mark students boarded/dropped off stop by stop; the trip completes itself.
-- **Child won't be riding** — when the family tells you in advance, mark them absent.
+- **Normal run** — mark students stop by stop; the trip completes itself.
+- **Child won't be riding** — when the family tells the school in advance, an administrator marks
+  them **Absent**.
 - **Follow up on a no-show** — review the trip and contact the family.
 
 ## Related articles
 
 - [Create trips](./create-trips)
+- [Live tracking](./live-tracking)
 - [Assign students](./assign-students)

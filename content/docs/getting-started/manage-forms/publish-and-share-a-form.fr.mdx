@@ -4,42 +4,50 @@ description: Ouvrir un formulaire aux candidats, partager son lien et le fermer 
 ---
 
 Un formulaire doit être **publié** avant que quiconque puisse le soumettre. La
-publication ouvre aussi la liste des **soumissions** où arrivent les réponses.
+publication ouvre aussi la liste des **soumissions**, où arrivent les réponses.
 
-## Statuts du formulaire
+## Statuts d'un formulaire
 
 | Statut | Signification |
 | --- | --- |
-| **Brouillon** | En cours de conception. Non visible par les candidats. |
-| **Publié** | Ouvert et accepte les soumissions sur son lien. |
-| **Fermé** | N'accepte plus de soumissions. Les réponses passées sont conservées. |
-| **Archivé** | Retiré et masqué de la liste active. |
+| **Brouillon** | En cours de conception. Invisible pour les candidats. |
+| **Programmé** | Publié, mais son heure d'ouverture n'est pas encore arrivée. |
+| **Publié** | Ouvert et acceptant des soumissions jusqu'à son heure de fermeture. |
+| **Fermé** | N'accepte plus de soumissions. Les réponses déjà reçues sont conservées. |
 
 ## Publier le formulaire
 
 <Steps>
 
 <Step>
-### Définir le calendrier
+### Vérifier les niveaux (formulaires d'admission)
 
-La publication nécessite un **calendrier** valide — une date d'ouverture et une
-date de fermeture, toutes deux dans le futur. Si aucun n'est défini, la boîte de
-dialogue des paramètres s'ouvre pour que vous en ajoutiez un.
+Un formulaire d'Admission doit avoir ses niveaux avant d'être publié. S'il n'en a
+aucun, choisir **Publier** ouvre d'abord la fenêtre des niveaux — voir
+[Construire un formulaire](./build-a-form).
 </Step>
 
 <Step>
-### Publier
+### Publier et régler la planification
 
-Choisissez **Publier** dans l'en-tête du constructeur. Le statut passe à **Publié**
-et le formulaire est en ligne pour la période planifiée.
+Choisissez **Publier** dans l'en-tête du constructeur. Si le formulaire n'a pas
+encore de planification, la fenêtre **Paramètres du formulaire** s'ouvre :
+
+- **Fermeture** — obligatoire, et doit être dans le futur.
+- **Ouverture** — facultative. Laissez-la vide (ou utilisez **Ouvrir
+  maintenant**) pour ouvrir le formulaire dès sa publication, ou choisissez une
+  heure plus tardive pour le programmer.
+
+Choisissez **Enregistrer et publier**. Le formulaire affiche **Publié**, ou
+**Programmé** jusqu'à son heure d'ouverture.
 </Step>
 
 <Step>
-### Partager le lien
+### Partager le lien (formulaires publics)
 
-Depuis la liste des **Formulaires**, utilisez **Copier le lien** sur la ligne du
-formulaire. Envoyez ce lien aux candidats — pour un formulaire **Public**, toute
-personne qui en dispose peut soumettre.
+Dans la liste **Formulaires**, utilisez le bouton **Copier le lien** sur la ligne
+du formulaire et envoyez le lien aux candidats. Toute personne qui l'a peut
+soumettre tant que le formulaire est ouvert.
 </Step>
 
 </Steps>
@@ -49,17 +57,24 @@ personne qui en dispose peut soumettre.
   caption="Chaque formulaire publié dispose d'un lien partageable."
 />
 
-<Callout title="Les formulaires privés ciblent des audiences">
-Un formulaire **Privé** n'est disponible que pour les audiences qui lui sont
-attribuées. Le lien existe toujours, mais les personnes hors de ces audiences ne
-peuvent pas soumettre.
+<Callout title="Les formulaires privés n'ont pas de lien">
+Un formulaire **Privé** n'a pas de **Copier le lien**. Les membres de ses
+audiences le trouvent dans **Mes formulaires**, dans leur propre espace, et le
+remplissent là.
 </Callout>
+
+Vous pouvez modifier les dates à tout moment depuis **Paramètres** dans l'en-tête
+du constructeur.
 
 ## Fermer un formulaire
 
-Lorsqu'une campagne se termine, ouvrez le formulaire et choisissez **Fermer aux
-soumissions**. Le formulaire passe à **Fermé** : le lien n'accepte plus de
-nouvelles réponses, et chaque soumission déjà reçue reste disponible pour examen.
+Le formulaire cesse d'accepter des réponses à son heure de **Fermeture**. Pour
+l'arrêter plus tôt, ouvrez le formulaire et choisissez **Fermer aux
+soumissions**. Le formulaire passe à **Fermé**, et chaque soumission déjà reçue
+reste disponible pour examen.
+
+Pour rouvrir un formulaire fermé, choisissez **Publier** et réglez une nouvelle
+heure de fermeture.
 
 ## Articles connexes
 

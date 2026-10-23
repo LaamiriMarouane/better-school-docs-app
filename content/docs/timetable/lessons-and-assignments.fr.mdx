@@ -1,11 +1,11 @@
 ---
 title: Séances et affectations
-description: "Comprenez ce que le générateur place — des séances — et réglez les entrées qui les définissent : séances hebdomadaires, affectations, groupes et liens."
+description: "Comprenez ce que le générateur place — des séances — et réglez les entrées qui les définissent : séances hebdomadaires, affectations des enseignants, groupes de classe et liens de séances."
 ---
 
 Le générateur place des **séances**. Cet article explique ce qu'est une séance, d'où vient le
-nombre de séances, et comment vous indiquez au système qui enseigne chacune. Bien régler cela est
-ce qui rend un emploi du temps généré correct.
+nombre de séances, et comment vous indiquez à l'application qui enseigne chacune. Bien régler cela
+est ce qui rend un emploi du temps généré correct.
 
 <Callout title="Pour qui">
 Les administrateurs et planificateurs pédagogiques qui préparent ce que l'emploi du temps placera.
@@ -13,10 +13,10 @@ Les administrateurs et planificateurs pédagogiques qui préparent ce que l'empl
 
 ## Ce qui est placé
 
-Une **séance** est une session hebdomadaire d'une matière pour une classe — par exemple *Classe
+Une **séance** est une réunion hebdomadaire d'une matière pour une classe — par exemple *Classe
 6A, Mathématiques*. Lors de la génération, le générateur donne à chaque séance :
 
-- un **jour** et un **créneau horaire**,
+- un **jour** et un **créneau**,
 - une **salle**, et
 - l'**enseignant** qui lui est affecté.
 
@@ -25,18 +25,17 @@ place toutes sans conflit.
 
 ## Combien de séances par matière
 
-Le nombre de séances hebdomadaires vient de la **[Charge d'enseignement](./teaching-load)** pour
-chaque matière à un niveau (pour l'année scolaire). Vous y indiquez combien de **réunions** la
-matière a par semaine, et si certaines sont **doubles** (ou plus longues) — plusieurs **créneaux**
-d'affilée.
+Le nombre de séances hebdomadaires vient de la **[Charge d'enseignement](./teaching-load)** de
+chaque matière à un niveau. Vous y indiquez combien de **réunions** la matière a par semaine, et si
+certaines sont **doubles** (ou plus longues) — plusieurs **créneaux** d'affilée.
 
 Un **créneau** est une case de la grille du jour. Une **séance** est une réunion à placer. Par
 exemple, la *Physique* peut être **deux simples et une double** : trois séances, mais quatre
 créneaux d'enseignement. Le générateur place trois réunions de physique pour chaque classe du
 niveau et garde la double sur deux créneaux consécutifs.
 
-Voir [Charge d'enseignement](./teaching-load) pour le glossaire complet (créneau, séance, bloc,
-Scindé, type de salle) et comment remplir l'éditeur.
+Voir [Charge d'enseignement](./teaching-load) pour le glossaire complet (créneau, séance, bloc de
+séances, Division, type de salle) et comment remplir l'éditeur.
 
 <Callout title="Où régler cela">
 Réglez la charge d'enseignement sous **Académique → Emploi du temps → Configuration → Charge
@@ -47,18 +46,24 @@ matière.
 ## Affecter les enseignants aux classes
 
 C'est l'entrée clé. Pour chaque classe et chaque matière, vous affectez l'**enseignant
-responsable**. Le générateur place exactement ces affectations — une matière de classe non affectée
-ne peut donc tout simplement pas être placée.
+responsable**. Le générateur place exactement ces affectations — un couple classe–matière sans
+enseignant ne peut pas être placé.
+
+Vous pouvez affecter les enseignants à deux endroits :
+
+- **Académique → Affectations des enseignants → Affectations de Classes** — cliquez sur une case et
+  choisissez l'enseignant. Idéal pour remplir rapidement tout un trimestre. Voir
+  [Affectations des enseignants](./teacher-assignments).
+- **Le profil d'un enseignant → Classes** — ajoutez des affectations pour cet enseignant seul,
+  comme ci-dessous.
 
 <Steps>
 
 <Step>
-### Ouvrir les affectations
+### Ouvrir l'enseignant
 
-Ouvrez les **affectations** enseignant–classe. Depuis la barre latérale admin, allez dans
-**Académique → Affectations des enseignants** (voir
-[Affectations des enseignants](./teacher-assignments)), ou ouvrez un **enseignant** et allez
-dans ses **Classes** (affectations). Puis ajoutez une affectation.
+Ouvrez le profil de l'enseignant, allez dans l'onglet **Classes** et cliquez sur **Ajouter une
+Affectation de Classe**.
 </Step>
 
 <Step>
@@ -66,17 +71,20 @@ dans ses **Classes** (affectations). Puis ajoutez une affectation.
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Enseignant** | Oui | L'enseignant responsable des séances. |
+| **Niveau** | Oui | Le niveau de la classe. |
 | **Classe** | Oui | La classe qu'il enseigne. |
-| **Matière** | Oui | La matière qu'il enseigne à cette classe. |
-| **Groupe** | Non | Uniquement quand la classe est divisée — affectez un enseignant par groupe (voir ci-dessous). |
+| **Trimestre** | Non | Un trimestre, ou **Tous les trimestres**. |
+| **Matières - Affectations d'enseignants actives** | Oui | Une ou plusieurs matières qu'il enseigne à cette classe. Seules les matières pour lesquelles l'enseignant est éligible à ce niveau sont proposées — réglez-les d'abord dans **Éligibilité aux Matières**. |
+
+Cliquez sur **Soumettre**.
 </Step>
 
 <Step>
-### Répéter jusqu'à couvrir chaque matière de classe
+### Répéter jusqu'à couvrir chaque couple classe–matière
 
-Le moyen le plus rapide de repérer les manques est de lancer le générateur : il liste chaque
-matière de classe sans enseignant. Voir [Générer et activer](./generate-and-publish).
+La grille **Affectations de Classes** montre ce qui est encore **Non affecté**. La génération liste
+aussi chaque couple classe–matière qui n'a toujours pas d'enseignant. Voir
+[Générer et activer](./generate-and-publish).
 </Step>
 
 </Steps>
@@ -84,37 +92,39 @@ matière de classe sans enseignant. Voir [Générer et activer](./generate-and-p
 ## Diviser une classe en groupes (facultatif)
 
 Certaines matières sont enseignées à **une partie de la classe à la fois** — par exemple la moitié
-fait le labo de sciences pendant que l'autre fait autre chose, ou une langue est répartie par
-niveau. Pour gérer cela :
+fait le labo de sciences pendant que l'autre fait autre chose. Pour gérer cela :
 
-1. Créez les **groupes** dans la classe (ex. *Groupe A*, *Groupe B*).
-2. Affectez un **enseignant par groupe** pour la matière divisée.
+1. Ouvrez la classe (**Académique → Classes**) et créez ses groupes dans l'onglet **Groupes de
+   classe**.
+2. Dans la [Charge d'enseignement](./teaching-load), activez **Division** pour les blocs de séances
+   enseignés en groupes.
+3. Si deux groupes doivent avoir leurs séances en même temps, liez-les en **Même créneau**
+   (ci-dessous), ou utilisez **Faire deux matières en parallèle** dans la Politique du solveur pour
+   le faire pour plusieurs classes à la fois.
 
-Le générateur place alors la séance de chaque groupe séparément, et peut faire tourner les séances
-de deux groupes en même temps lorsque vous le souhaitez (voir les liens ci-dessous).
+## Lier des séances
 
-## Lier des séances (associations de séances)
-
-Parfois deux séances doivent être placées l'une par rapport à l'autre. Vous pouvez **lier** des
-séances pour que le générateur les garde ensemble ou en séquence :
+Parfois deux séances doivent être placées l'une par rapport à l'autre. Ouvrez la **Politique du
+solveur** du groupe → onglet **Cours** et cliquez sur **Ajouter un lien de leçon** :
 
 | Lien | Signification | Usage typique |
 | --- | --- | --- |
-| **Même créneau** | Deux séances tournent exactement en même temps, pour des groupes différents d'une classe. | Les deux moitiés d'une classe divisée ont leurs séances parallèles ensemble. |
-| **À la suite** | Deux séances tournent sur des créneaux consécutifs. | Un labo juste après le cours, ou une séance double. |
-| **Même jour** | Deux séances tombent le même jour. | Garder une théorie et une pratique appariées le même jour. |
-| **Même demi-journée** | Deux séances tombent dans le même matin ou après-midi. | Regrouper des séances liées. |
+| **Même créneau** | Deux séances ont lieu exactement en même temps, pour des groupes différents d'une classe. | Les deux moitiés d'une classe divisée ont leurs séances parallèles ensemble. |
+| **Consécutifs** | Deux séances ont lieu sur des créneaux consécutifs. | Un labo juste après le cours. |
+| **Même journée** | Deux séances tombent le même jour. | Garder une théorie et une pratique appariées le même jour. |
+| **Même demi-journée** | Deux séances tombent dans la même matinée ou le même après-midi. | Regrouper des séances liées. |
 
-Vous décidez de la fermeté avec laquelle le générateur respecte chaque lien sur la page
-[Contraintes](./constraints) — un lien peut être une exigence stricte ou une simple préférence.
+Les liens **Même créneau** sont toujours respectés. Les trois autres suivent la règle **Séquence
+des cours** : vous l'activez ou la désactivez et réglez son importance une seule fois, pour tous.
+Voir [Contraintes](./constraints).
 
 ## Cas d'usage courants
 
 - **Classe standard** — affectez un enseignant par matière ; le générateur fait le reste.
 - **Matière de labo** — réglez la séance de labo comme double pour qu'elle obtienne deux créneaux
   ensemble.
-- **Groupes de langue divisés** — créez les groupes, affectez un enseignant à chacun, et liez-les
-  pour qu'ils tournent en même temps.
+- **Groupes de langue divisés** — créez les groupes de classe, activez **Division** dans la charge
+  d'enseignement, et liez les séances des groupes en **Même créneau**.
 
 ## Articles liés
 

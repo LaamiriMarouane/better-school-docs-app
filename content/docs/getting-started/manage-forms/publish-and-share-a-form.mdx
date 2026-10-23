@@ -11,33 +11,41 @@ the **submissions** list where responses arrive.
 | Status | What it means |
 | --- | --- |
 | **Draft** | Still being designed. Not visible to applicants. |
-| **Published** | Open and accepting submissions on its link. |
-| **Closed** | No longer accepting submissions. Past responses are kept. |
-| **Archived** | Retired and hidden from the active list. |
+| **Scheduled** | Published, but its opening time hasn't come yet. |
+| **Published** | Open and accepting submissions until its closing time. |
+| **Closed** | No longer accepting submissions. Responses already received are kept. |
 
 ## Publish the form
 
 <Steps>
 
 <Step>
-### Set the schedule
+### Check the levels (Admission forms)
 
-Publishing needs a valid **schedule** — an opening date and a closing date, both
-in the future. If none is set, the settings dialog opens so you can add one.
+An Admission form needs its levels before it can be published. If none are set,
+choosing **Publish** opens the levels dialog first — see
+[Build a form](./build-a-form).
 </Step>
 
 <Step>
-### Publish
+### Publish and set the schedule
 
-Choose **Publish** in the builder header. The status changes to **Published** and
-the form goes live for the period you scheduled.
+Choose **Publish** in the builder header. If the form has no schedule yet, the
+**Form Settings** dialog opens:
+
+- **Closes at** — required, and must be in the future.
+- **Opens at** — optional. Leave it empty (or use **Open now**) to open the form
+  as soon as it is published, or pick a later time to schedule it.
+
+Choose **Save & publish**. The form shows **Published**, or **Scheduled** until
+its opening time.
 </Step>
 
 <Step>
-### Share the link
+### Share the link (Public forms)
 
-From the **Forms** list, use **Copy link** on the form's row. Send that link to
-applicants — for a **Public** form, anyone with it can submit.
+In the **Forms** list, use the **Copy link** button on the form's row and send the
+link to applicants. Anyone with it can submit while the form is open.
 </Step>
 
 </Steps>
@@ -47,16 +55,20 @@ applicants — for a **Public** form, anyone with it can submit.
   caption="Each published form has a shareable link."
 />
 
-<Callout title="Private forms target audiences">
-A **Private** form is only available to the audiences assigned to it. The link
-still exists, but people outside those audiences cannot submit.
+<Callout title="Private forms have no link">
+A **Private** form has no **Copy link**. Members of its audiences find it under
+**My forms** in their own space and fill it in there.
 </Callout>
+
+You can change the dates at any time from **Settings** in the builder header.
 
 ## Close a form
 
-When a campaign ends, open the form and choose **Close to submissions**. The form
-moves to **Closed**: the link no longer accepts new responses, and every
-submission already received stays available for review.
+The form stops accepting responses at its **Closes at** time. To stop it earlier,
+open the form and choose **Close to submissions**. The form moves to **Closed**,
+and every submission already received stays available for review.
+
+To open a closed form again, choose **Publish** and set a new closing time.
 
 ## Related articles
 

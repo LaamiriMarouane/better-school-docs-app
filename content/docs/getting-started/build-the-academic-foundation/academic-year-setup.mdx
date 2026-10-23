@@ -1,11 +1,12 @@
 ---
 title: Academic year setup
-description: Walk through the guided setup hub — finish the definition gate, then readiness steps, complete setup, and activate the year.
+description: Walk through the guided year setup — confirm each step for the year, complete setup, and activate the year.
 ---
 
-**Academic year setup** is a guided workspace for a single year. You finish a short **definition
-gate** (required before activation), then optional **readiness** steps (classes, teachers,
-grading, and so on). When the gate is done, you **Complete setup** and **Activate** the year.
+**Year setup** is a guided workspace for a single year. You work through a short **definition
+gate** (required before activation), then **readiness** steps (classes, teachers, enrollments,
+and so on). A step counts as ready only after you click **Confirm for this year** on it. When
+every gate step is confirmed, you **Complete setup** and **Activate year**.
 
 <Callout title="Who this is for">
 Administrators preparing a new academic year before day-to-day operations.
@@ -14,45 +15,67 @@ Administrators preparing a new academic year before day-to-day operations.
 ## Open year setup
 
 1. Go to **Settings → Academic** and open the **Academic Year** tab.
-2. Open the year → **Year details**.
+2. Open the year with **View Details**.
 3. Click **Year setup** (or **Open setup hub** / **Start setup** when offered after creating a
    year).
 
-Setup opens full screen. Use **Exit to year** to return to year details.
+Setup opens full screen. Everything you need is done inside it, step by step. Use **Exit to year**
+to return to the year page.
 
-## Definition vs readiness
+## Confirm each step for the year
 
-| Track | Steps | Blocks activation? |
-| --- | --- | --- |
-| **Definition** (gate) | Terms, Levels, Subjects, Subject associations | **Yes** — all must be satisfied. |
-| **Readiness** | Grading, Classes, Teachers, Supervisions, Admissions / intake, Enrollments | **No** — you can skip or finish later. |
+Every step card shows a status chip:
 
-Finish the definition steps first. Readiness navigation stays locked until the gate is satisfied.
+| Chip | Meaning |
+| --- | --- |
+| **Confirmed** | You confirmed the step for this year. It counts as ready. |
+| **Not confirmed** | Data may already be there, but you have not confirmed it yet. |
+| **Skipped** | You chose **Skip for now** on a readiness step. |
 
-## Definition steps (gate)
+- Click **Confirm for this year** on the step card or at the top of the step page once you have
+  checked its content.
+- A definition step can only be confirmed once it has data for the year.
+- A readiness step can be confirmed even when empty (for example, no transport routes this
+  year). The app asks you to confirm that choice first.
+- Click **Unconfirm** to take a confirmation back. Click **Skipped — undo** to reverse a skip.
+
+## Definition gate
+
+You must confirm all of these before you can complete setup. They cannot be skipped.
 
 | Step | What you do |
 | --- | --- |
-| **Terms** | Add at least one term with dates for this year. |
-| **Levels** | Activate which school levels run this year. |
-| **Subjects** | Make sure the subjects your school teaches are created. |
+| **Terms** | Date the year's terms. |
+| **Levels** | Switch on the levels that run this year. For a level with tracks, use the switch on each track to say whether it is offered this year. |
+| **Subjects** | Make sure the subjects your school teaches exist. |
 | **Subject associations** | Say which subjects each level teaches this year (per term as needed). |
-
-You cannot skip a gate step. Counts and checkmarks update as you work.
 
 ## Readiness steps (never block activation)
 
+The readiness cards stay locked until the definition gate is confirmed.
+
 | Step | What you do |
 | --- | --- |
-| **Grading** | Year grading policy, categories, schemes, and related setup (same tools as [Grading setup](../../teaching/grading-setup)). |
-| **Classes** | Create class sections for active levels. |
-| **Teachers** | Associate teachers with this year (often from the previous year). |
-| **Supervisions** | Copy or set supervision / homeroom-style responsibilities. |
-| **Admissions / intake** | Promote or decide returning students from the previous year (first year: use admissions/manual intake instead). |
-| **Enrollments** | Place students (level, optional class and payment plan) — fills in over time. |
+| **Grading** | Review the year's grading setup (same tools as [Grading setup](../../teaching/grading-setup)). |
+| **Classes** | Create classes for the levels and tracks running this year. |
+| **Teachers** | Select teachers from the previous year and assign them to this year. |
+| **Supervisions** | Copy or set supervision responsibilities. |
+| **Admissions / intake** | Decide each returning student's place this year: **Promote**, **Retain**, **Graduate** or **Leaving**. You can decide now or send the decision to the parent to confirm, and open or close re-enrollment with **Open re-enrollment** / **Close re-enrollment**. |
+| **Enrollments** | Enroll students at a level, then assign a class and payment plan (both optional). Returning students you promoted or retained appear under **Waiting to be enrolled**: pick a class (optional) and click **Enroll**. |
+| **Transport** | Shown when transport is used. Copy last year's zones and routes, check where riders live, and confirm returning riders' stops. |
 
-Use **Skip for now** on a readiness step if you will finish it after activation. You can undo a skip
-later.
+Promoted and retained students are re-enrolled for the new year but are not yet in a class. The
+**Admissions / intake** step shows how many are waiting, with **Enroll them** to jump to the
+**Enrollments** step.
+
+### Fees & payment plans
+
+The **Fees & payment plans** card (shown to users who can create fees and payment plans) lets you
+**Copy fees and payment plans from last year**: services, fees with their per-level prices, and
+payment plans. Adjust the amounts afterwards on the finance pages. This card is not a step and
+does not need confirming.
+
+Use **Skip for now** on a readiness step you will finish after activation.
 
 ## Complete setup and activate
 
@@ -61,22 +84,23 @@ later.
 <Step>
 ### Complete setup
 
-When every definition step is satisfied, click **Complete setup**. That marks the year's setup as
-completed — it does **not** activate the year by itself.
+When every definition step is confirmed, click **Complete setup**. If a step is missing, the
+button stays disabled and the missing steps are listed under it. Completing setup does **not**
+activate the year by itself.
 </Step>
 
 <Step>
 ### Activate year
 
-When setup is completed and the year is still a draft, click **Activate year**. Only then does the
-year become the active operating year (per your school's year rules).
+When setup is completed and the year is still a draft, click **Activate year**. The year then
+becomes the active year.
 </Step>
 
 </Steps>
 
 <Callout title="Readiness is optional for activation">
-You can activate with empty classes or unfinished enrollments. Operational steps are there to get
-you ready to teach and bill — they do not block **Activate year**.
+You can activate with empty classes or unfinished enrollments. Readiness steps help you get
+ready to teach and bill — they do not block **Activate year**.
 </Callout>
 
 ## Related articles

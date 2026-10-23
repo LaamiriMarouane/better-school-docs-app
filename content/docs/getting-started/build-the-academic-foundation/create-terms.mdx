@@ -5,7 +5,7 @@ description: Divide the academic year into terms or semesters used for grading a
 
 A **term** is a period within the academic year — for example *Term 1*, *Semester 2*,
 or *Trimester 3*. Terms organise grading, reporting, and many academic workflows, so
-they are created right after the academic year itself.
+they are dated right after the academic year itself.
 
 <Callout title="Who this is for">
 Administrators structuring the calendar of an academic year.
@@ -13,7 +13,10 @@ Administrators structuring the calendar of an academic year.
 
 ## Before you start
 
-- The **academic year** must already exist — terms are created inside it.
+- The **academic year** must already exist.
+- Your school's term names (for example *Semester 1* and *Semester 2*) are defined once under
+  **Settings → Academic → Term Structure**. If none exist yet, the terms table shows a hint with
+  **Open Term Structure**.
 - Plan the term dates so they sit **within** the academic year and **do not overlap**
   each other.
 
@@ -27,10 +30,12 @@ Administrators structuring the calendar of an academic year.
 <Steps>
 
 <Step>
-### Open the Terms section
+### Open the year's terms
 
-Go to **Settings → Academic**, open the academic year you are building, and find
-its **Terms** section. Click **Add**.
+Go to **Settings → Academic**, open the **Academic Year** tab, and open the year with
+**View Details**. The year page shows its terms as a table. The **Terms** step of
+[Academic year setup](./academic-year-setup) shows the same table, already filled with one row
+per term of your term structure.
 
 <Screenshot
   label="Create term form"
@@ -39,36 +44,39 @@ its **Terms** section. Click **Add**.
 </Step>
 
 <Step>
-### Fill in the term details
+### Add and date the terms
 
-Complete the fields below, then click **Submit**.
+Click **Add Term** to add a row, then fill it in directly in the table.
 
-| Field | Required | Notes |
+| Column | Required | Notes |
 | --- | --- | --- |
-| **Label** | Yes | The display name, e.g. *Term 1*. |
-| **Start date** | Yes | Must fall within the academic year's date range. |
-| **End date** | Yes | Must be on or after the start date, and within the academic year. |
-| **Active** | No | Marks this as the current term. |
+| **Term** | Yes | Pick the term from your term structure. It cannot be changed once saved. |
+| **Start Date** | Yes | Must fall within the academic year. |
+| **End Date** | Yes | Must be on or after the start date, and within the academic year. |
+
+The **Duration** column shows the number of days as you pick the dates.
 </Step>
 
 <Step>
-### Resolve any overlap warning
+### Save
 
-If the dates overlap an existing term, the form shows a warning and blocks saving.
-Adjust the start or end date until the term no longer overlaps, then submit.
+Click **Save** to save every row at once. If two terms overlap, or a row is missing its term or
+dates, a message names the problem — fix the dates and save again.
 </Step>
 
 <Step>
-### Repeat for every term
+### Activate the current term
 
-Add each term of the year. The new term appears in the list immediately.
+Use the **Activate Term** row action on the term in progress, and confirm. Use **Deactivate Term**
+to switch it off. Other row actions let you **Update Grading Settings** for the term or
+**Delete** it.
 </Step>
 
 </Steps>
 
 <Callout title="Tip">
-Mark the current term as **Active** so grading and reporting default to the right
-period. Update it as the year progresses.
+Keep the current term active so grading and reporting default to the right period. Update it as
+the year progresses.
 </Callout>
 
 ## Related articles

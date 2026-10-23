@@ -1,10 +1,10 @@
 ---
 title: Refund a payment
-description: Reverse a recorded payment, in full or in part, with a reason.
+description: Give money back on a recorded payment, in full or in part, with a reason.
 ---
 
-A **refund** reverses a payment that was already recorded — for example after an
-overpayment or a cancelled service. You can refund the full amount or part of it.
+A **refund** gives back money on a payment that was already recorded — for example after
+an overpayment or a cancelled service. You can refund the full amount or part of it.
 
 <Callout title="Who this is for">
 Finance staff correcting or reversing a collected payment.
@@ -12,17 +12,19 @@ Finance staff correcting or reversing a collected payment.
 
 ## Before you start
 
-- Find the **payment** to reverse in the payments list.
-- A refund cannot exceed the amount that was paid.
+- Find the **payment** in **Finance → Payments**.
+- You can refund up to what is left on the payment. If part of it was already refunded,
+  only the rest can be refunded.
 
 ## Steps
 
 <Steps>
 
 <Step>
-### Open the payment and choose Refund
+### Choose Refund on the payment
 
-Find the payment in **Finance → Payments**, open it, and choose **Refund**.
+In the **Finance → Payments** list, open the actions on the payment's row and choose
+**Refund**.
 
 <Screenshot
   label="Refund form with the payment summary"
@@ -33,27 +35,39 @@ Find the payment in **Finance → Payments**, open it, and choose **Refund**.
 <Step>
 ### Enter the refund details
 
-Complete the fields below.
+The form shows the payment's details and the **Maximum refund amount**.
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Refund amount** | Yes | How much to refund. Cannot exceed the original amount paid. |
-| **Reason** | Yes | Why the refund is being made (3–500 characters). |
-| **Cancelled by** | Yes | The guardian the refund is attributed to. |
+| **Refund Amount** | Yes | How much to refund. It can't be more than the maximum refund amount. |
+| **Refund Reason** | Yes | Why the refund is being made. |
+| **Cancelled by** | No | The guardian the refund is attributed to. |
+</Step>
+
+<Step>
+### Decide what happens to the charge
+
+- **Item returned: also reduce the charge** — tick it when the family gave the item back
+  (for example a uniform). The refunded amount also comes off what the family owes, so
+  the installment stays settled. Leave it unticked for a goodwill refund: the installment
+  reopens as money owed.
+- **This refund cancels the charge** — shown only for months closed by a plan change.
+  Tick it and those months are billed again on the student's current plan. Leave it
+  unticked for a goodwill refund.
 </Step>
 
 <Step>
 ### Process the refund
 
-Confirm. The payment's status reflects the refund, and the student's installment
-balances are adjusted accordingly.
+Click **Process Refund**. The payment shows the refund, and the student's installment
+balances are adjusted.
 </Step>
 
 </Steps>
 
 <Callout type="warn" title="Refunds are traceable">
-The refund amount, reason, and who it was attributed to are stored with the payment.
-Enter an accurate reason — it is part of the financial record.
+The refund amount, reason, and who it was attributed to stay visible on the payment. Enter
+an accurate reason — it is part of the financial record.
 </Callout>
 
 ## Related articles

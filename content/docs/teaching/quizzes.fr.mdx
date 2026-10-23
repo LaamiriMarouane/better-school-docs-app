@@ -5,63 +5,86 @@ description: Construisez un quiz à partir d'une banque de questions réutilisab
 
 Un **quiz** est un test en ligne construit à partir de questions. Vous créez des questions dans une
 **banque de questions** réutilisable, vous les assemblez en un quiz, vous décidez de son
-fonctionnement, et vous l'attribuez à une classe. Les élèves le passent à l'écran, et la plupart des
-types de questions sont **corrigés automatiquement**.
+fonctionnement, et vous l'attribuez à une classe. Les élèves le passent à l'écran, et leurs réponses
+sont **corrigées automatiquement**.
 
 <Callout title="Pour qui">
 Les enseignants qui construisent et attribuent des quiz, et les élèves qui les passent.
 </Callout>
 
+## Où le trouver
+
+Tout se trouve dans **Évaluations** : **Quiz** pour vos quiz et **Banque de questions** pour vos
+questions (les enseignants la voient sous le nom **Questions de Quiz**).
+
 ## Les briques de base
 
 | Élément | Ce que c'est |
 | --- | --- |
-| **Banque de questions** | Vos questions réutilisables. Chacune peut être **étiquetée** (ex. *algèbre*, *chapitre 3*) et reste un brouillon jusqu'à publication. |
-| **Quiz** | Un ensemble de questions et de réglages. Un quiz est un brouillon jusqu'à publication, après quoi vous pouvez l'attribuer. |
-| **Attribution de quiz** | Un quiz publié donné à une classe, avec une date de diffusion et d'échéance. |
+| **Banque de questions** | Vos questions réutilisables. Chacune peut être **étiquetée** (ex. *algèbre*, *chapitre 3*) et reste en **Brouillon** jusqu'à publication. |
+| **Quiz** | Un ensemble de questions et de réglages. Un quiz reste en **Brouillon** jusqu'à publication, après quoi vous pouvez l'attribuer. |
+| **Attribution de quiz** | Un quiz publié donné à une classe, avec une date de publication et d'échéance. |
 | **Tentative** | Le passage d'un élève. |
+
+Publier une question ou un quiz le rend visible aux administrateurs et aux enseignants de l'école,
+pour que les collègues puissent le réutiliser.
 
 ## Types de questions
 
-Les questions peuvent être :
+Choisissez **Ajouter une Question**, puis un type :
 
-- **Vrai / faux**
-- **Choix multiple** — une ou plusieurs bonnes réponses
-- **Ordonnancement** — remettre des éléments dans le bon ordre
-- **Texte à trous** — taper la réponse, choisir dans une liste, ou glisser des mots
-- **Étiquetage** — glisser des étiquettes sur une image
-- **Catégorisation** — trier des éléments en groupes
+- **Vrai/Faux**
+- **Choix multiples**
+- **Ordre** — remettre des éléments dans le bon ordre
+- **Saisissez vos réponses** — compléter les trous en tapant
+- **Choisissez vos réponses** — compléter les trous avec des listes déroulantes
+- **Glisser-déposer** — glisser des mots dans les trous
+- **Étiquettes** — placer des étiquettes sur une image
+- **Catégoriser** — trier des éléments en groupes
+- **Hotspot image** — toucher la bonne zone d'une image
+- **Surlignage texte** — surligner les bons mots d'un passage
 
-Chaque question peut inclure un **indice**, une **explication** (affichée dans le retour), et des
-**pièces jointes** comme une image ou un schéma.
+Chaque question peut inclure un **Indice**, une **Explication** (affichée dans le retour), et des
+images.
 
 ## Construire un quiz
+
+Dans **Quiz**, choisissez **Ajouter un quiz**. L'éditeur vous guide en cinq étapes.
 
 <Steps>
 
 <Step>
-### Créer le quiz
+### Informations de base
 
-Donnez-lui un titre et une description. Il commence en **brouillon**.
+Donnez au quiz un **Titre du quiz**, une **Description** facultative, des **Étiquettes** et une
+**Miniature**.
 </Step>
 
 <Step>
-### Ajouter des questions
+### Ajouter des Questions
 
-Tirez des questions de la banque (ou créez-en), et définissez pour chacune l'**ordre**, les
-**points**, et si elle est obligatoire.
+Choisissez des questions dans la banque. Seules les questions publiées peuvent entrer dans un quiz.
 </Step>
 
 <Step>
-### Régler le fonctionnement
+### Gérer les Questions
 
-Choisissez le comportement du quiz (voir ci-dessous).
+Glissez les questions dans l'ordre voulu, et définissez pour chacune les **Points** et si elle est
+obligatoire (**Requis**) ou optionnelle. Quand le quiz utilise une durée par question, vous réglez aussi le temps
+de chaque question ici.
 </Step>
 
 <Step>
-### Publier
+### Configuration
 
-Publiez le quiz pour pouvoir l'attribuer. Ses questions doivent aussi être publiées.
+Choisissez le fonctionnement du quiz (voir ci-dessous).
+</Step>
+
+<Step>
+### Réviser
+
+Vérifiez le tout et choisissez **Créer un Quiz**. Le quiz commence en **Brouillon** : utilisez
+**Publier** sur sa carte pour pouvoir l'attribuer.
 </Step>
 
 </Steps>
@@ -70,46 +93,55 @@ Publiez le quiz pour pouvoir l'attribuer. Ses questions doivent aussi être publ
 
 | Réglage | Ce qu'il contrôle |
 | --- | --- |
-| **Limite de temps** | Aucune limite, une limite par question, ou un temps total (15 minutes à 3 heures). |
-| **Tentatives** | Combien de fois un élève peut le passer — ou illimité. |
-| **Réserve de questions** | Montrer toutes les questions, ou tirer un sous-ensemble aléatoire à chaque tentative. |
-| **Mélange** | Aléatoiriser l'ordre des questions et/ou des options de réponse. |
-| **Retour** | Montrer les explications jamais, après chaque question, ou après tout le quiz. |
-| **Afficher le score** | Si les élèves voient leur score à la fin. |
-| **Note de passage** | Un pourcentage facultatif requis pour réussir. |
-| **Navigation** | Laisser les élèves se déplacer librement, ou une question à la fois. |
-| **Barème** | Comment les points sont attribués — standard, ou avec points négatifs pour les mauvaises réponses. |
+| **Tentatives Max** | Combien de fois un élève peut le passer. Laissez vide pour **Sans limite**. |
+| **Score de Réussite (%)** | Le pourcentage requis pour réussir. |
+| **Durée** | **Sans limite**, **Par question** (un temps pour chaque question), ou un temps total de 15 minutes à 3 heures. |
+| **Stratégie de Notation** | **Standard** (points complets pour les bonnes réponses ; les mauvais choix réduisent le score en sélection multiple), **Canadienne** (crédit pour chaque bon choix, sans pénalité) ou **Points Négatifs** (une mauvaise réponse retire un quart des points de la question). |
+| **Mode de Rétroaction** | Afficher les corrections **Jamais**, **Après le Quiz** ou **Après Chaque Question**. |
+| **Mode de Navigation** | **Libre** (aller et venir), **Séquentiel** (vers l'avant uniquement) ou **Verrouiller après Réponse** (une réponse donnée ne peut plus changer). Avec des temps par question, utilisez Séquentiel ou Verrouiller après Réponse. |
+| **Mélanger les Questions** / **Mélanger les Options** | Rendre aléatoire l'ordre des questions et des choix de réponse. |
+| **Réponse Requise pour Continuer** | Les élèves doivent répondre avant de passer à la suite. |
+| **Afficher les Scores** | Si les élèves voient leur score à la fin. |
+| **Choisir des Questions au Hasard dans le Pool** | Donner à chaque tentative un ensemble aléatoire de **Questions par Tentative**. Les questions requises sont toujours incluses. |
 
 ## Attribuer le quiz à une classe
 
-Attribuez un quiz publié à une **classe ou un groupe**, avec une date de **diffusion** et
-d'**échéance**. Vous pouvez ajuster les réglages juste pour cette attribution si vous le souhaitez.
+Ouvrez **Évaluations → Devoirs**, choisissez **Ajouter un devoir**, puis **Quiz** : vous arrivez
+sur **Quiz**, où vous choisissez un quiz publié puis **Assigner**. Vous pouvez aussi choisir
+**Assigner** directement depuis un quiz.
+
+Renseignez ensuite le **Trimestre**, la **Classe** (et la **Section de classe** si la classe est
+divisée), la **Matière**, la **Période de notation**, la **Date de publication** et la **Date
+d'échéance**. Vous pouvez ajuster les réglages du quiz juste pour cette attribution.
 
 ## Comment les élèves le passent
 
-Un élève **démarre** le quiz, répond dans la limite de temps éventuelle, et **soumet**. La plupart
-des questions sont **corrigées automatiquement**, le score est donc prêt immédiatement (affiché si
-vous l'avez autorisé). Selon votre réglage de retour, ils voient les explications après chaque
-question ou à la fin.
+L'élève ouvre le quiz dans **Devoirs** et choisit **Commencer le quiz**. Il répond dans la limite de
+temps éventuelle et soumet. Les réponses sont corrigées tout de suite, le score est donc prêt
+immédiatement (affiché si vous avez activé **Afficher les Scores**). Selon le mode de rétroaction,
+il voit les corrections après chaque question ou à la fin. S'il lui reste des tentatives, il peut
+le repasser.
 
 ## Voir comment la classe a réussi
 
-Pour chaque quiz, vous pouvez voir les **tentatives par élève** et des **analyses par question** —
-quelles questions ont été bien réussies et lesquelles ont posé problème — pour guider votre
-enseignement.
+Ouvrez l'attribution du quiz pour voir les **Participants** (les tentatives de chaque élève et son
+**Meilleur score**) et l'onglet **Analyses** : taux de réussite, **Distribution des scores** et
+**Performance par question** — quelles questions ont été bien réussies et lesquelles ont posé
+problème.
 
 ## Compte dans le carnet de notes
 
-Comme les devoirs, un quiz peut être placé dans une **catégorie de note** avec un **poids**, afin que
-les scores alimentent le [carnet de notes](./gradebook).
+Un quiz n'a pas de poids propre. Comme pour les [devoirs](./assignments), activez **Compte dans la
+moyenne finale** lors de l'attribution et choisissez une **Catégorie** : la meilleure tentative de
+l'élève compte alors dans le [carnet de notes](./gradebook), dans le poids de cette catégorie. Vous
+pouvez saisir une autre note dans le carnet ; effacez-la pour revenir à la meilleure tentative.
 
 ## Cas d'usage courants
 
-- **Vérification rapide** — un court quiz à choix multiple avec retour instantané après chaque
-  question.
-- **Test chronométré** — fixez un temps total et une seule tentative.
-- **Entraînement** — autorisez des tentatives illimitées et affichez les explications pour aider les
-  élèves à apprendre.
+- **Vérification rapide** — un court quiz à choix multiples avec un retour après chaque question.
+- **Test chronométré** — fixez une durée totale et une seule tentative.
+- **Entraînement** — laissez les tentatives illimitées, affichez le retour, et ne le comptez pas
+  dans la moyenne finale.
 
 ## Articles liés
 

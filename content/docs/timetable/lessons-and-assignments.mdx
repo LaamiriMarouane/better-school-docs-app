@@ -1,10 +1,10 @@
 ---
 title: Lessons and assignments
-description: "Understand what the generator schedules — lessons — and set the inputs that define them: weekly lessons, teacher assignments, groups, and lesson links."
+description: "Understand what the generator schedules — lessons — and set the inputs that define them: weekly lessons, teacher assignments, class groups, and lesson links."
 ---
 
 The generator places **lessons**. This article explains what a lesson is, where the number of
-lessons comes from, and how you tell the system who teaches each one. Getting this right is what
+lessons comes from, and how you tell the app who teaches each one. Getting this right is what
 makes a generated timetable correct.
 
 <Callout title="Who this is for">
@@ -13,10 +13,10 @@ Administrators and academic planners preparing what the timetable will schedule.
 
 ## What gets scheduled
 
-A **lesson** is one weekly session of a subject for a class — for example *Class 6A, Mathematics*.
+A **lesson** is one weekly meeting of a subject for a class — for example *Class 6A, Mathematics*.
 When the generator runs, it gives each lesson:
 
-- a **day** and a **time slot**,
+- a **day** and a **period**,
 - a **room**, and
 - the **teacher** assigned to it.
 
@@ -26,8 +26,8 @@ without clashes.
 ## How many lessons each subject has
 
 The number of weekly lessons comes from **[Teaching load](./teaching-load)** for each subject at a
-level (for the academic year). There you say how many **meetings** the subject has per week, and
-whether any are **double** (or longer) — several **periods** in a row.
+level. There you say how many **meetings** the subject has per week, and whether any are
+**double** (or longer) — several **periods** in a row.
 
 A **period** is one slot on the day grid. A **lesson** is one meeting to place. For example,
 *Physics* might be **two singles and one double**: three lessons, but four periods of teaching
@@ -45,17 +45,21 @@ generate so the generator knows how much of each subject to place.
 ## Assign teachers to classes
 
 This is the key input. For each class and each subject, you assign the **teacher responsible**
-for it. The generator schedules exactly these assignments — so an unassigned class–subject simply
-can't be placed.
+for it. The generator schedules exactly these assignments — a class–subject with no teacher can't
+be placed.
+
+You can assign teachers in two places:
+
+- **Academic → Teacher Assignments → Class Assignments** — click a cell and pick the teacher. Best
+  for filling a whole term quickly. See [Teacher Assignments](./teacher-assignments).
+- **A teacher's profile → Classes** — add assignments for that one teacher, as below.
 
 <Steps>
 
 <Step>
-### Open the assignments
+### Open the teacher
 
-Open the teacher–class **assignments**. From the admin sidebar go to
-**Academic → Teacher Assignments** (see [Teacher Assignments](./teacher-assignments)), or open a
-**teacher** and go to their **Classes** (assignments). Then add an assignment.
+Open the teacher's profile, go to the **Classes** tab, and click **Add Class Assignment**.
 </Step>
 
 <Step>
@@ -63,17 +67,19 @@ Open the teacher–class **assignments**. From the admin sidebar go to
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Teacher** | Yes | The teacher responsible for the lessons. |
+| **Level** | Yes | The level of the class. |
 | **Class** | Yes | The class they teach. |
-| **Subject** | Yes | The subject they teach to that class. |
-| **Group** | No | Only when the class is split — assign a teacher per group (see below). |
+| **Term** | No | One term, or **All Terms**. |
+| **Subjects - Active Teacher Assignments** | Yes | One or more subjects they teach to that class. Only subjects the teacher is eligible for at this level are offered — set them in **Subject Eligibility** first. |
+
+Click **Submit**.
 </Step>
 
 <Step>
 ### Repeat until every class–subject is covered
 
-The fastest way to find gaps is to start the generator: it lists every class–subject that still
-has no teacher. See [Generate and activate](./generate-and-publish).
+The **Class Assignments** grid shows what is still **Unassigned**. Generating also lists every
+class–subject that still has no teacher. See [Generate and activate](./generate-and-publish).
 </Step>
 
 </Steps>
@@ -81,36 +87,34 @@ has no teacher. See [Generate and activate](./generate-and-publish).
 ## Split a class into groups (optional)
 
 Some subjects are taught to **part of a class at a time** — for example half the class does the
-science lab while the other half does something else, or a language is split by ability. To handle
-this:
+science lab while the other half does something else. To handle this:
 
-1. Create the **groups** within the class (e.g. *Group A*, *Group B*).
-2. Assign a **teacher per group** for the split subject.
+1. Open the class (**Academic → Classes**) and create its groups on the **Class groups** tab.
+2. In [Teaching load](./teaching-load), turn on **Split** for the lesson blocks taught in groups.
+3. If two groups should have their lessons at the same time, link them with **Same slot** (below),
+   or use **Run two subjects in parallel** in Solver policy to do it for many classes at once.
 
-The generator then schedules each group's lesson separately, and can run two groups' lessons at
-the same time when you want them to (see lesson links below).
+## Link related lessons
 
-## Link related lessons (lesson associations)
-
-Sometimes two lessons need to be placed in relation to each other. You can **link** lessons so the
-generator keeps them together or in sequence:
+Sometimes two lessons need to be placed in relation to each other. Open the group's **Solver
+policy** → **Lessons** tab and click **Add lesson link**:
 
 | Link | What it means | Typical use |
 | --- | --- | --- |
 | **Same slot** | Two lessons run at the exact same time, for different groups of a class. | The two halves of a divided class have their parallel lessons together. |
-| **Back to back** | Two lessons run in consecutive periods. | A lab right after the lecture, or a double session. |
+| **Back-to-back** | Two lessons run in consecutive periods. | A lab right after the lecture. |
 | **Same day** | Two lessons fall on the same day. | Keeping a paired theory and practical on one day. |
 | **Same half-day** | Two lessons fall in the same morning or afternoon. | Grouping related lessons close together. |
 
-You decide how strongly the generator should honour each link on the
-[Constraints](./constraints) page — a link can be a firm requirement or a gentle preference.
+**Same slot** links are always kept. The other three follow the **Lesson sequence** rule: you
+switch it on or off and set its importance once, for all of them. See [Constraints](./constraints).
 
 ## Common use cases
 
 - **Standard class** — assign one teacher per subject; the generator does the rest.
 - **Lab subject** — set the lab lesson as a double so it gets two periods together.
-- **Split language groups** — create groups, assign a teacher to each, and link them to run at the
-  same time.
+- **Split language groups** — create class groups, turn on **Split** in the teaching load, and
+  link the groups' lessons with **Same slot**.
 
 ## Related articles
 

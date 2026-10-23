@@ -1,6 +1,6 @@
 ---
 title: Ajouter des élèves
-description: Créez les fiches des élèves, reliez leurs tuteurs et lancez éventuellement une pré-inscription.
+description: Créez les fiches des élèves, reliez leurs tuteurs et inscrivez-les dès l'enregistrement.
 ---
 
 Une fiche **élève** contient les informations personnelles, médicales et familiales
@@ -13,9 +13,10 @@ Les administrateurs qui intègrent les élèves et leurs familles.
 
 ## Avant de commencer
 
-- Préparez le nom et le sexe de l'élève — ces champs sont obligatoires.
-- Disposez d'au moins un **tuteur** à relier. Vous pouvez choisir un tuteur existant ou
-  en ajouter un nouveau directement depuis ce formulaire.
+- Préparez le nom et le genre de l'élève — ces champs sont obligatoires.
+- Disposez d'au moins un **tuteur** à relier. Vous pouvez choisir un tuteur ou un membre
+  du personnel existant, ou ajouter un nouveau tuteur depuis ce formulaire.
+- Beaucoup d'élèves à ajouter ? Utilisez **Importer** sur la page Élèves (voir plus bas).
 
 <Screenshot
   label="Liste des élèves avec le bouton Ajouter un élève"
@@ -30,7 +31,7 @@ Les administrateurs qui intègrent les élèves et leurs familles.
 ### Ouvrir la page Élèves
 
 Dans la barre latérale d'administration, allez dans **Académique → Élèves**, puis
-cliquez sur **Ajouter un élève**.
+cliquez sur **Ajouter Étudiant**.
 
 <Screenshot
   label="Formulaire d'ajout d'un élève"
@@ -41,62 +42,76 @@ cliquez sur **Ajouter un élève**.
 <Step>
 ### Renseigner les informations de l'élève
 
-Complétez les champs ci-dessous. Le prénom, le nom et le sexe sont obligatoires.
+Cliquez sur l'avatar pour **télécharger l'image de profil** si vous en avez une, puis
+complétez les champs ci-dessous. Le prénom, le nom et le genre sont obligatoires.
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
 | **Prénom** | Oui | Le prénom de l'élève. |
-| **Nom** | Oui | Le nom de famille de l'élève. |
-| **Sexe** | Oui | Utilisé dans les profils et les rapports. |
-| **Prénom / nom (langue locale)** | Non | Le nom dans l'écriture locale, ex. l'arabe. |
-| **Date de naissance** | Non | La date de naissance de l'élève. |
-| **E-mail** | Non | Utilisé pour le compte portail s'il est créé ultérieurement. |
-| **Nationalité**, **Ville**, **Adresse** | Non | Identité et coordonnées. |
-| **Numéro PAN** | Non | Un numéro d'identité / d'enregistrement, si votre école en utilise un. |
-| **École précédente**, **Adresse de l'école précédente** | Non | L'école antérieure de l'élève. |
+| **Nom de Famille** | Oui | Le nom de famille de l'élève. |
+| **Genre** | Oui | Utilisé dans les profils et les rapports. |
+| **Prénom (Natif)**, **Nom de Famille (Natif)** | Non | Le nom dans l'écriture locale, ex. l'arabe. |
+| **Email** | Non | Utilisé pour le compte portail s'il est créé ultérieurement. |
+| **Date de Naissance**, **Lieu de Naissance** | Non | Informations personnelles. |
+| **Nationalité**, **Pays**, **Ville**, **Adresse** | Non | Identité et coordonnées. |
+| **École Précédente**, **Adresse de l'École Précédente** | Non | L'école antérieure de l'élève. |
+
+Si votre école a défini des **champs personnalisés** pour les élèves, ils apparaissent
+sous ces champs. Remplissez-les de la même façon ; certains peuvent être obligatoires.
 </Step>
 
 <Step>
 ### Ajouter des détails médicaux (facultatif)
 
-Dans la section médicale, vous pouvez enregistrer les **allergies**, les
-**médicaments** et les **antécédents médicaux**. Saisissez une valeur et appuyez sur
-Entrée pour ajouter chaque allergie ou médicament sous forme d'étiquette.
+Dans la section **Antécédents Médicaux**, vous pouvez enregistrer les **Allergies** et
+les **Médicaments**. Saisissez une valeur et appuyez sur Entrée pour l'ajouter sous forme
+d'étiquette.
 </Step>
 
 <Step>
 ### Relier les tuteurs
 
-Dans la section **Tuteurs**, reliez au moins un tuteur. Vous pouvez :
+Dans la section **Informations Tuteurs**, reliez au moins un tuteur :
 
-- **Sélectionner un tuteur existant** déjà présent dans le système, ou
-- **Ajouter un nouveau tuteur** directement en saisissant son prénom, son nom, son
-  e-mail, son numéro de téléphone et son type de tuteur.
-
-Un élève peut avoir jusqu'à **trois** tuteurs.
+- **Sélectionner tuteurs et personnel** permet de choisir des tuteurs déjà présents.
+  Vous pouvez aussi choisir un **membre du personnel** — pratique lorsqu'un parent
+  travaille à l'école.
+- **Ajouter un tuteur** ajoute un nouveau tuteur ici : saisissez son prénom, son nom,
+  son e-mail et son type (ex. père, mère). Le téléphone, l'adresse et la photo sont
+  facultatifs. Vous pouvez ajouter jusqu'à trois nouveaux tuteurs de cette façon.
 </Step>
 
 <Step>
 ### Lancer une pré-inscription (facultatif)
 
-Activez **Activer la pré-inscription** pour enregistrer l'élève sur un **niveau** avant
+Activez **Activer la Pré-Inscription** pour enregistrer l'élève sur un **Niveau** avant
 la création d'une inscription complète. Lorsqu'elle est activée, le choix d'un niveau
 est obligatoire.
 </Step>
 
 <Step>
-### Enregistrer l'élève
+### Enregistrer et inscrire
 
-Cliquez sur **Valider**. Vous êtes redirigé vers le profil du nouvel élève, où vous
-pouvez poursuivre avec l'inscription.
+Cliquez sur **Soumettre**. Vous arrivez sur le profil du nouvel élève et la fenêtre
+**Inscrire** s'ouvre pour inscrire l'élève pour l'année tout de suite — la classe et le
+plan de paiement sont facultatifs. Fermez-la si vous préférez inscrire plus tard. Elle
+ne s'ouvre pas si vous avez lancé une pré-inscription.
 </Step>
 
 </Steps>
 
 <Callout type="warn" title="Au moins un tuteur">
 Un élève ne peut pas être enregistré sans tuteur. Si le message *« Au moins un tuteur
-requis »* s'affiche, reliez ou ajoutez un tuteur avant de valider.
+est requis. »* s'affiche, reliez ou ajoutez un tuteur avant de valider.
 </Callout>
+
+## Importer plusieurs élèves à la fois
+
+Sur la page Élèves, cliquez sur **Importer**. Téléchargez le **Modèle**, remplissez un
+élève par ligne, puis téléversez le fichier. Vérifiez l'aperçu et les éventuelles
+erreurs, puis cliquez sur **Lancer l'import**. Vous pouvez continuer à travailler
+pendant l'import ; un bandeau sur la page Élèves affiche sa progression et permet de
+consulter les résultats, avec un rapport d'erreurs pour les lignes non importées.
 
 ## Articles liés
 

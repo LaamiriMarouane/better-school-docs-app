@@ -4,12 +4,22 @@ description: Create a record for a non-teaching staff member, including drivers.
 ---
 
 A **staff** record covers the people who run the school but do not teach a class —
-administrators, accountants, drivers, and so on. Teachers have their own record type;
-see [Add teachers](./add-teachers).
+secretaries, accountants, drivers, and so on. Teachers have their own record type;
+see [Add teachers](./add-teachers). Administrators are not added as staff: only the
+school owner can add an admin, from **Access → Users** with **Add Admin**.
 
 <Callout title="Who this is for">
 Administrators registering non-teaching staff.
 </Callout>
+
+## Before you start
+
+- The **Staff Management** module must be turned on (**Settings → Modules**). Without
+  it, the **HR → Staff** menu is hidden.
+- Each staff member gets a **Role**. Roles come from **Access → Roles & permissions**;
+  create the ones you need there first.
+- Adding many staff at once? Use **Import** on the Staff page: download the
+  **Template**, fill in one person per line, upload it, then click **Start import**.
 
 ## Steps
 
@@ -18,7 +28,7 @@ Administrators registering non-teaching staff.
 <Step>
 ### Open the Add Staff form
 
-From the admin sidebar, go to **HR → Staff**, then start a new staff member.
+From the admin sidebar, go to **HR → Staff**, then click **Add Staff**.
 
 <Screenshot
   label="Add staff form"
@@ -33,14 +43,14 @@ Complete the fields below. Only the required ones are needed to save.
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **First name** | Yes | The staff member's first name. |
-| **Last name** | Yes | The staff member's last name. |
-| **Phone number** | Yes | A valid phone number with country code. |
+| **First Name** | Yes | The staff member's first name. |
+| **Last Name** | Yes | The staff member's last name. |
+| **Phone Number** | Yes | Include the country code. |
 | **Gender** | Yes | Male or female. |
-| **Hiring date** | Yes | The date the staff member was hired. |
-| **Staff type** | Yes | The kind of staff — e.g. administrative, accountant, driver. |
+| **Hiring Date** | Yes | The date the staff member was hired. |
+| **Role** | Yes | Picked from your school's staff roles, e.g. accountant, driver. |
 | **Email** | No | Used later if they get a portal account. |
-| **Other details** | No | Native name, nationality, date and place of birth, address, previous school. |
+| **Other details** | No | Native name, nationality, country, city, date and place of birth, address, previous school. |
 
 You can also upload a **profile photo** and fill any **custom fields** your school has
 defined for staff.
@@ -49,8 +59,8 @@ defined for staff.
 <Step>
 ### Add driver details (drivers only)
 
-If you set the staff type to **Driver**, an extra section appears. The
-**driving license number** and **license expiry date** are then required.
+If you pick the **Driver** role, a **Driver Information** section appears. The
+**License Expiry Date** is then required; the **Driving License Number** is optional.
 </Step>
 
 <Step>
@@ -63,14 +73,15 @@ When creating a staff member you can attach a **contract**, **identity document*
 <Step>
 ### Save the staff member
 
-Submit the form. You are taken to the new staff member's profile.
+Click **Submit**. You are taken to the new staff member's profile.
 </Step>
 
 </Steps>
 
 <Callout title="Logging in is a separate step">
 Creating a staff record does **not** create a login. To let the staff member sign in,
-create a portal account for them — see [Create portal accounts](./create-portal-accounts).
+use **Create Portal Account** on their profile — see
+[Create portal accounts](./create-portal-accounts).
 </Callout>
 
 ## Related articles

@@ -1,21 +1,22 @@
 ---
 title: Billing & Subscription
-description: Manage your school's BetterSchool plan — trial, usage limits, upgrades, and cancellation.
+description: Manage your school's subscription — trial, plan, usage, invoices, payment method, and cancellation.
 ---
 
-**Billing & Subscription** is where you manage the school's **SaaS plan** with BetterSchool —
-trial status, enrollment usage, upgrades, downgrades, and cancellation. It is **not** the same
-as school fee billing (installment schedules for families).
+**Billing & Subscription** is where you manage your school's **subscription** — trial status,
+enrollment usage, upgrades, downgrades, invoices, and cancellation. It is **not** the same as
+school fee billing (installment schedules for families).
 
 <Callout title="Two different Billings">
 | Place | What it controls |
 | --- | --- |
-| Sidebar → **Billing & Subscription** | Your school's BetterSchool plan and usage. |
+| Sidebar → **Billing & Subscription** | Your school's subscription and usage. |
 | **Settings → Finance → Billing** | How student fee installments are timed. See [Billing configuration](./billing-configuration). |
 </Callout>
 
 <Callout title="Who this is for">
-Administrators who manage the school's subscription.
+Administrators who manage the school's subscription. Staff members who have been given access can
+open it too.
 </Callout>
 
 ## Open Billing & Subscription
@@ -26,29 +27,28 @@ From the admin sidebar (Settings group), go to **Billing & Subscription**.
 
 ### Current plan
 
-The left side shows:
-
 | Item | Notes |
 | --- | --- |
-| **Plan** | Free Trial, or a paid tier (Starter, Growth, Standard, Enterprise). |
-| **Status** | Trialing, Active, Past due, Paused, or Cancelled. |
+| **Plan** | **Free Trial**, or a paid plan (**Starter**, **Growth**, **Standard**, **Enterprise**). |
+| **Status** | **Trialing**, **Active**, **Past due**, **Paused**, or **Cancelled**. |
 | **Trial Ends** / **Next Billing** | Depending on whether you are on trial or paid. |
-| **Billing cycle** | Monthly or Yearly (when on a paid plan). |
-| **Usage** | Active enrollments vs the plan limit (unlimited during trial or on unlimited plans). |
+| **Billing cycle** | **Monthly** or **Yearly** (when on a paid plan). |
+| **Enrollments** | Active enrollments against the plan limit (unlimited during the trial or on unlimited plans). |
 
-If a change is already scheduled (cancel, pause, or resume), a notice shows the date.
+If a change is already scheduled (a cancellation or a downgrade), a notice shows the date.
 
 ### Choose a plan
 
-On the right, pick **Monthly** or **Yearly**, then choose a plan:
+In the plans list, pick **Monthly** or **Yearly**, then choose a plan:
 
 | Action | When it appears |
 | --- | --- |
 | **Subscribe** / **Choose a Plan** | No paid plan yet, or still on trial. |
-| **Upgrade** | Moving to a higher tier while Active or Past due. |
-| **Downgrade** | Moving to a lower tier (disabled if your enrollments exceed that plan's limit). |
-| **Contact Sales** | Enterprise / custom needs. |
+| **Upgrade** | Moving to a higher plan while Active or Past due. |
+| **Downgrade** | Moving to a lower plan (not available if your enrollments exceed that plan's limit). |
+| **Contact Sales** | Enterprise or custom needs. |
 | **Current** | Label on the plan you already have. |
+| **Scheduled** | Label on a downgrade waiting for the next billing date. |
 
 ## Upgrade, downgrade, or subscribe
 
@@ -64,17 +64,29 @@ or **Choose a Plan**).
 <Step>
 ### Confirm or check out
 
-- If you already have an **Active** or **Past due** subscription, confirm the change in the dialog.
-- Otherwise you go to **Checkout** to pay for the selected plan and cycle (Paddle). When payment
-  succeeds, you return to the app with the updated subscription.
+- **Upgrade** takes effect immediately. You are billed now for the rest of the current period.
+- **Downgrade** takes effect at the next billing date. You keep your current plan until then.
+- With no paid plan yet, you go to the checkout page to pay for the selected plan and cycle through
+  Paddle, our payment provider. When payment succeeds, you return to the app with the updated
+  subscription.
 </Step>
 
 </Steps>
 
+## Invoices
+
+The **Invoices** list shows each invoice with its amount and status. Use **Download** to get a copy.
+
+## Update your payment method
+
+Use **Update payment method** to change the card you pay with. If a payment fails, a **Payment
+failed** notice appears with the same button: update your payment method and the overdue payment is
+retried automatically.
+
 ## Cancel a subscription
 
 When the status is **Active** or **Past due** and no change is already scheduled, use
-**Cancel subscription** and confirm. The UI may then show a scheduled cancel date if one is set.
+**Cancel subscription** and confirm. The page then shows the date the cancellation takes effect.
 
 ## Related articles
 

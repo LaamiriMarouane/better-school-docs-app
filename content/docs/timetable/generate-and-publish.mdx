@@ -1,6 +1,6 @@
 ---
 title: Generate and activate
-description: Run the timetable generator, review the result, adjust it by hand, then activate the group so real class sessions are created.
+description: Run the timetable generator, see why any lesson stayed unscheduled, adjust the result by hand, then activate the group so real class sessions are created.
 ---
 
 When your setup is complete, you're ready to build the schedule. You create a **timetable
@@ -17,150 +17,141 @@ Make sure the earlier steps are done:
 
 - [Prerequisites](./prerequisites) — subjects, classes, terms, teachers, rooms, and teacher
   assignments all exist.
-- [School schedule](../settings/school-schedule) — the year-wide default week is set.
+- [School schedule](../settings/school-schedule) — the school's default week is set.
 - [Timetable config](./timetable-config) — the group's weekly grid is set.
 - [Teaching load](./teaching-load) — each subject's weekly lessons are set.
 - [Scheduling setup](./scheduling-setup) — availability and limits are in.
-- [Constraints](./constraints) — preferences are tuned (or left at defaults).
+- [Constraints](./constraints) — the Solver policy is adjusted (or left at its defaults).
 
 ## Step 1 — Create a timetable group
 
 A **[timetable group](./timetable-groups)** is a weekly template for a **term** and a chosen set of
 **levels**, using one config.
 
-<Steps>
-
-<Step>
-### Start a new group
-
-Go to **Academic → Timetable → Groups**, then create a new group (or open an existing one). Give
-it a name, choose the **term** and the **levels** it covers, and pick the **config** to use.
-</Step>
-
-<Step>
-### Reuse last year's rules (optional)
-
-If you've run timetables before, you can start from your previous **constraint settings** instead
-of the defaults, then adjust. You can also **clone as new draft** to try a variant with an empty
-grid.
-</Step>
-
-</Steps>
+Go to **Academic → Timetable → Groups**, click **Add Timetable Group**, fill in the **Name**,
+**Term**, **Levels and tracks**, and **Timetable Configuration**, then click **Create Timetable
+Group**. To try a variant of an existing group, use **Clone as new draft** from its row menu
+instead.
 
 ## Step 2 — Generate
 
+You can generate a **Draft** group that is not locked.
+
 <Steps>
+
+<Step>
+### Choose how long to search
+
+Open the group. Next to **Generate**, click the arrow to pick the **Search time**: **Quick**,
+**Standard**, **Thorough**, or **Maximum**. A longer search usually places more lessons and gives
+a better week.
+</Step>
 
 <Step>
 ### Run the generator
 
-Open the group and click **Generate**. The generator first runs a quick **feasibility check**,
-then starts solving.
-</Step>
-
-<Step>
-### Fix anything the check flags
-
-The feasibility check looks for problems that would make a timetable impossible — most often a
-class–subject with **no teacher assigned**, or far more lessons than the available hours and rooms
-can hold. It lists these as **blocking errors** (you must fix them) and **warnings** (worth a look).
-Fix the blocking errors and run again.
+Click **Generate**. The app first checks your setup for problems that would make a timetable
+impossible — most often a class–subject with **no teacher assigned**, or more lessons than the
+available periods and rooms can hold. If it finds any, a window lists them as
+**Validation Errors** (fix these, then generate again) and **Validation Warnings** (worth a look).
 </Step>
 
 <Step>
 ### Watch the progress
 
-Generating runs in the background and shows live progress. You can leave the page and come back.
-If you need to, you can **stop** a run that's taking too long.
+The header shows how many lessons are placed and how much time is left. You can leave the page and
+come back.
+</Step>
 
-| Status | Meaning |
-| --- | --- |
-| **Pending** | Queued, about to start. |
-| **Running** | The generator is building the timetable. |
-| **Completed** | Finished — ready to review. |
-| **Failed** | No timetable could satisfy every hard rule (see below). |
-| **Cancelled** | You stopped the run. |
+<Step>
+### Stop early (optional)
+
+Click **Stop generation**, then choose:
+
+- **Stop & keep current result** — keep the best week found so far and carry on editing it.
+- **Stop & discard** — throw the partial result away and keep what you had before.
+
+If the current result is worse than the timetable already saved, the window warns you and the keep
+button reads **Stop & keep anyway**.
 </Step>
 
 </Steps>
 
-<Callout title="If it can't find a timetable">
-The generator only produces a schedule that breaks **no hard rule**. If that's impossible, it
-reports the conflicts instead of guessing. The fix is almost always to loosen reality or a strict
-preference — remove some teacher unavailability, raise an over-tight hour limit, free up a room, or
-relax a preference you made strict. Then generate again.
-</Callout>
+## Step 3 — See what couldn't be placed
 
-## Step 3 — Review the result
+The generator places every lesson it can. When it finishes, a message tells you either that all
+lessons were scheduled, or how many were scheduled and how many are still unscheduled.
 
-Once it completes, look over the timetable in whichever view suits you:
+If some lessons are unscheduled, click the **unscheduled** badge in the group header. The panel
+**Why are these lessons unscheduled?** lists each lesson with the reason and a suggestion. Use
+**Open class** to jump to that class's timetable.
 
-- **By class** — what each class's week looks like.
-- **By teacher** — each teacher's personal schedule.
-- **By room** — how each room is used through the week.
-
-Each view comes in two layouts: a **grid** that shows everything at once, and a **master view** that
-lets you step through one class, teacher, or room at a time — or show them all. Use the **search**
-box to highlight a class, teacher, subject, or room wherever it appears.
-
-An **issues** view highlights anything worth attention, such as soft preferences that couldn't be
-fully met.
-
-## Step 4 — Adjust by hand
-
-You can fine-tune the result directly:
-
-- **Move a lesson** — drag it to a different day or time. The editor warns you if the move would
-  clash with a hard rule.
-- **Change a room** — pick a different suitable room for a lesson.
-- **Pin a lesson** — lock a lesson in place. Pinned lessons stay exactly where they are if you
-  generate again, so you can fix the parts you like and let the generator redo the rest.
-
-## Step 5 — Activate
-
-A group starts as a **draft** — only you and other planners can see it. When you're happy,
-**activate** it. Activating makes the week live and creates dated **class sessions**. Full detail:
-[Activate and class sessions](./activate-and-sessions).
-
-<Steps>
-
-<Step>
-### Activate the group
-
-Open the finished group and choose **Activate**. Confirm if a preview lists overlapping groups that
-will be retired.
-</Step>
-
-<Step>
-### What happens
-
-- The group becomes **Active** and visible as the live plan for its levels.
-- **Class sessions** are created from the weekly template with real dates and times.
-- Any previously active group for the same overlapping levels is **retired** (kept for reference,
-  no longer live).
-</Step>
-
-</Steps>
-
-| State | Who can see it / what it does |
+| Reason | What usually helps |
 | --- | --- |
-| **Draft** | Planners and administrators only. |
-| **Active** | Live week; sessions created for teachers, students, and parents. |
-| **Inactive / Archived** | Not live; kept for history or further edits after deactivate. |
+| **Teacher has no hours left** | Raise the teacher's hour limits, or give some classes to another teacher. |
+| **Class timetable is full** | Reduce the class's weekly load, or add periods to the timetable config. |
+| **Teacher and class are never free together** | Relax availability or daily limits so their free times overlap. |
+| **Blocked by a subject rule** | Allow the subject at more times. |
+| **No room available** | Add a room of the right type, or free one up. |
+| **Not found in the time allowed** | Generate again with a longer **Search time**. |
+| **Lesson too long for the day** | Split it into shorter lessons, or change the breaks. |
+
+Fix what the panel points to and generate again, or place the remaining lessons by hand.
+
+## Step 4 — Review the result
+
+Look over the timetable in the view that suits you:
+
+- **By Classes** — what each class's week looks like.
+- **By Teachers** — each teacher's personal schedule.
+- **By Rooms** — how each room is used through the week.
+
+Switch between **Grid** (one timetable at a time) and **Master grid** (everything side by side).
+Use **Search** (subject, teacher, or room) to highlight where something appears. **Insights** gives
+a summary such as teacher workload, and **Print Timetable** prints the week.
+
+## Step 5 — Adjust by hand
+
+You can edit a Draft or Archived group that is not locked:
+
+- **Move a lesson** — drag it to another cell, or drag a lesson from the class's lesson list onto
+  the grid. It lands where you let go.
+- **On a touch screen** — tap a lesson, then tap the cell where it should go.
+- **Conflicts are allowed** — if the move clashes with a teacher, a room, or someone's
+  availability, the lesson is still placed. A **Placed with a conflict** message explains the
+  clash, the lesson is highlighted, and the header counts the conflicts (click it to jump to them).
+  A move is refused only when the lesson physically can't sit there — over a break, past the end of
+  the day, or on a slot it can't share.
+- **Change a room** — open the lesson and choose **Change room**.
+- **Pin a lesson** — use **Pin assignment** to keep a lesson exactly where it is when you generate
+  again.
+- **Undo / Redo** — step back and forward through your changes.
+
+Changes save automatically; click **Save** to save at once. The Solver policy rules only guide
+**Generate** — they never block a move you make by hand.
+
+## Step 6 — Activate
+
+When you're happy, go back to the **Groups** list, open the group's row menu (**⋯**), and choose
+**Activate**. A window shows when sessions will start and which group (if any) it replaces.
+Confirm with **Activate**. Full detail: [Activate and class sessions](./activate-and-sessions).
 
 ## Changing an active timetable
 
-If you need to change a live week: **deactivate** (or unlock as allowed), edit or re-generate,
-then **activate** again so sessions follow the updated template. For big experiments, **clone as
-new draft**, refine the clone, and activate the winner.
+An active group is read-only. To change the live week, either:
+
+- **Deactivate** it from the Groups list. It becomes **Archived**: edit it by hand, then
+  **Activate** it again. You can't run the generator on an archived group.
+- Or use **Clone as new draft**, generate and refine the clone, then **Activate** it. It replaces
+  the old group, which becomes **Archived**.
 
 ## Tips and best practices
 
-- **Generate early, even if setup isn't perfect.** The feasibility check is the fastest way to
-  find missing assignments and tight limits.
-- **Pin the parts you're sure about** before re-generating, so improvements don't disturb them.
+- **Generate early, even if setup isn't perfect.** The setup check and the unscheduled panel are the
+  fastest way to find missing assignments and tight limits.
+- **Pin the parts you're sure about** before generating again, so they stay where they are.
 - **Review by teacher** before activating — it's the quickest way to spot an unbalanced workload.
-- Keep trial variants as **draft** groups until you are ready to go live.
+- Keep trial variants as **Draft** groups until you are ready to go live.
 
 ## Related articles
 

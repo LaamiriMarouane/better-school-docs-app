@@ -1,97 +1,112 @@
 ---
 title: Examiner et traiter les soumissions
-description: Examiner les réponses et transformer les candidatures d'admission en fiches élèves.
+description: Examiner les réponses et transformer les candidatures d'admission en élèves et pré-inscriptions.
 ---
 
 Chaque réponse à un formulaire publié devient une **soumission**. C'est ici que
 vous examinez ce qui a été envoyé et, pour les formulaires d'**Admission**, que
-vous décidez du sort de chaque candidat.
+vous décidez pour chaque enfant.
 
 ## Ouvrir la liste des soumissions
 
-Depuis la liste des **Formulaires**, utilisez **Voir les soumissions** sur la ligne
-d'un formulaire. C'est disponible une fois le formulaire **Publié**.
+Dans la liste **Formulaires**, ouvrez les actions de la ligne d'un formulaire et
+choisissez **Voir les soumissions**. C'est disponible dès que le formulaire a été
+publié.
 
-Chaque soumission affiche son **code**, l'**émetteur**, un **statut** et la date de
-soumission.
+Chaque soumission affiche son **Code de soumission**, le **Nom du soumetteur**, un
+**Statut** et sa date d'envoi. Utilisez la recherche et les filtres pour retrouver
+une soumission par statut ou par date.
 
 <Screenshot
   label="Liste des soumissions d'un formulaire d'admission"
   caption="Ouvrez n'importe quelle ligne pour voir la réponse complète."
 />
 
-## Statuts de soumission
+<Callout title="Doublons possibles">
+Lorsque la même adresse e-mail a déjà répondu au formulaire, la nouvelle
+soumission porte l'étiquette **Doublon possible de** suivie du code de la
+soumission précédente. Comparez les deux avant de décider.
+</Callout>
+
+## Statuts des soumissions
 
 | Statut | Signification |
 | --- | --- |
-| **Nouvelle** | Reçue à l'instant, pas encore examinée. |
-| **En cours d'examen** | En cours d'analyse. |
-| **Partiellement traitée** | Certains candidats décidés, d'autres encore en attente. |
-| **Terminée** | Tous les candidats ont une décision finale. |
-| **Acceptée** / **Refusée** / **Liste d'attente** | Le résultat d'une soumission à candidat unique. |
+| **Nouveau** | Vient d'être reçue. |
+| **En cours de révision** | Une candidature dont tous les enfants attendent encore une décision. |
+| **Partiellement traite** | Certains enfants ont une décision, d'autres attendent encore. |
+| **Liste d'attente** | Chaque enfant a une décision, et au moins un est en liste d'attente. |
+| **Terminé** | Chaque enfant est accepté ou refusé. |
+
+Le statut d'une candidature suit les décisions que vous prenez pour ses enfants —
+vous ne le réglez pas à la main.
 
 ## Examiner une soumission
 
-Ouvrez une soumission pour voir les **données soumises**, regroupées selon les
-mêmes sections que le candidat a remplies. Les sections répétables affichent un
-bloc par entrée — par exemple un bloc par enfant sur une candidature familiale.
+Ouvrez une soumission pour voir les données soumises, regroupées selon les
+sections remplies par le candidat. Lorsqu'une famille a postulé pour plusieurs
+enfants, chaque enfant apparaît dans son propre bloc.
 
 ## Traiter une admission
 
-Sur un formulaire d'**Admission**, chaque section **Élève** porte sa propre
-décision. Une soumission avec plusieurs enfants produit une décision par enfant.
+Sur un formulaire d'**Admission**, chaque enfant de la section **Informations de
+l’élève** reçoit sa propre décision. Une candidature avec trois enfants signifie
+trois décisions.
 
 <Steps>
 
 <Step>
 ### Choisir une décision
 
-Sur la section d'un élève, choisissez l'une des trois actions :
+Sur le bloc d'un enfant, choisissez l'une des trois actions :
 
 | Action | Effet |
 | --- | --- |
-| **Accepter** | Approuve le candidat et crée sa fiche élève. |
-| **Refuser** | Rejette le candidat. |
-| **Liste d'attente** | Met le candidat en attente d'une décision ultérieure. |
+| **Accepter** | Crée l'élève, le relie à ses tuteurs et crée une pré-inscription pour le niveau demandé. |
+| **Rejeter** | Refuse l'enfant. Vous pourrez encore le mettre en liste d'attente ou l'accepter plus tard. |
+| **Mettre en liste d'attente** | Met l'enfant en attente d'une décision. Vous pourrez l'accepter ou le refuser plus tard. |
 </Step>
 
 <Step>
 ### Résoudre les correspondances
 
-Lorsque vous **Acceptez**, la plateforme vérifie si l'élève ou un responsable
-existe déjà — généralement par correspondance d'e-mail. Si des correspondances sont
-trouvées, une boîte de dialogue vous demande de choisir, pour chaque personne :
+Lorsque vous choisissez **Accepter**, la plateforme vérifie si l'élève ou un
+tuteur existe déjà dans votre école. Si elle trouve une correspondance, une
+fenêtre affiche chacune d'elles et ce sur quoi elle porte, et vous choisissez :
 
-- **Associer l'existant** — relier la candidature à la fiche déjà présente dans
-  l'école.
-- **Créer un nouveau** — ajouter une nouvelle fiche malgré tout.
+- **Associer l'existant** — relier la candidature à la personne déjà présente
+  dans votre école.
+- **Creer un nouveau quand meme** — ajouter une nouvelle personne.
 
-Si un e-mail existe déjà dans votre école, vous **devez** associer la fiche
-existante. Un e-mail qui appartient à une autre école ne peut pas être réutilisé.
+Si une adresse e-mail existe déjà dans votre école, vous devez associer la
+personne existante. Une adresse e-mail utilisée dans une autre école ne peut pas
+être utilisée ici.
 </Step>
 
 <Step>
 ### Confirmer
 
-Confirmez la décision. Un candidat accepté obtient une fiche élève, et un lien
-**Voir l'élève** apparaît pour que vous puissiez l'ouvrir.
+Confirmez la décision. Le bouton de confirmation s'active après quelques secondes,
+pour vous laisser le temps de lire ce qui va se passer. Une fois un enfant accepté,
+un lien **Voir l'étudiant** apparaît pour ouvrir son profil.
 </Step>
 
 </Steps>
 
 <Callout title="Accepter est définitif">
-Un candidat **Refusé** ou en **Liste d'attente** peut encore être déplacé vers une
-autre décision plus tard. **Accepter** est irréversible — une fois accepté, la
-fiche élève existe.
+Un enfant refusé ou en liste d'attente peut encore changer de décision plus tard.
+**Accepter** ne peut pas être annulé.
 </Callout>
 
 ## Après l'acceptation
 
-L'acceptation crée la fiche élève mais ne place pas l'élève dans une classe. Pour
-finaliser, inscrivez le nouvel élève — voir
+L'acceptation crée l'élève et sa pré-inscription, mais ne le place pas dans une
+classe. Pour terminer, inscrivez l'élève depuis sa pré-inscription — voir
+[Pré-inscriptions](../enroll-students/pre-inscriptions) et
 [Créer une inscription](../enroll-students/create-an-enrollment).
 
 ## Articles connexes
 
+- [Pré-inscriptions](../enroll-students/pre-inscriptions)
 - [Créer une inscription](../enroll-students/create-an-enrollment)
 - [Publier et partager un formulaire](./publish-and-share-a-form)

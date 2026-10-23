@@ -5,7 +5,8 @@ description: Give a person a login so they can access the platform.
 
 A person record — a teacher, student, guardian, or staff member — does not include a
 login. A **portal account** is the login that lets them sign in and use the platform.
-Creating records and creating accounts are two separate steps.
+Teachers can get one while you add them (see [Add teachers](./add-teachers)); for
+everyone else, creating the record and creating the account are two separate steps.
 
 <Callout title="Who this is for">
 Administrators granting people access to the platform.
@@ -13,8 +14,15 @@ Administrators granting people access to the platform.
 
 ## Before you start
 
-- The **person record** must already exist (e.g. the teacher or student is created).
-- A person can only get an account once — someone who already has one is skipped.
+A person can get a portal account when:
+
+- They **don't have one yet**.
+- Their record has an **email address or a code**.
+- For a **student**: they are **enrolled** for the year.
+- For a **guardian**: at least **one of their children is enrolled**.
+
+If someone isn't eligible yet, the **Create Portal Account** button is greyed out on
+their profile.
 
 ## Create an account for one person
 
@@ -29,8 +37,19 @@ Go to the teacher, student, guardian, or staff member's profile.
 <Step>
 ### Create the portal account
 
-Use the **Create portal account** action on the profile. The account is created with
-the role that matches the person — teacher, student, parent, or staff.
+Click **Create Portal Account**. For a student or guardian, confirm in the **Create a
+portal account?** dialog. For a staff member, choose their **Portal role**, then click
+**Create account**.
+</Step>
+
+<Step>
+### Hand over the login details
+
+The **Portal account created** dialog shows the **Username** and a **Temporary
+password**, each with a copy button. The temporary password is shown only once, so copy
+it or hand it over before you click **Close**. If the person has an email address,
+their login details are also emailed to them (for a student, also to guardians who
+have an email address).
 </Step>
 
 </Steps>
@@ -44,7 +63,8 @@ People who still need a login appear in the **Pending portal accounts** list.
 <Step>
 ### Open the Pending portal accounts list
 
-Go to **Users** (under Settings in the sidebar), then the **Pending portal** tab.
+From the admin sidebar, go to **Access → Users**, then open the **Pending portal
+accounts** tab.
 
 <Screenshot
   label="Pending portal accounts tab"
@@ -53,16 +73,26 @@ Go to **Users** (under Settings in the sidebar), then the **Pending portal** tab
 </Step>
 
 <Step>
-### Filter by role
+### Choose a role
 
-Choose a role — teacher, student, parent, or staff — to narrow the list.
+Use the role list at the top to show **Teacher**, **Student**, **Parent**, or one of
+your staff roles. Each person is marked **Eligible** or **Not eligible**, and you can
+search by name.
 </Step>
 
 <Step>
-### Select people and create accounts
+### Create accounts
 
-Tick the people you want, then choose **Create selected portal accounts**. People who
-are not eligible for an account are skipped automatically.
+- For one person, click **Create Portal Account** on their row. The login details
+  dialog opens, as above.
+- For several, tick the people you want, then click **Create accounts (selected)**.
+  Only eligible people can be ticked. A progress card shows how many have been
+  processed, and you can keep working meanwhile. If some accounts fail, a summary
+  appears with **Retry failed accounts**.
+
+Accounts created from a selection are not shown on screen: login details are emailed to
+people who have an email address. For anyone without one, create their account one at a
+time so you can copy the temporary password.
 </Step>
 
 </Steps>

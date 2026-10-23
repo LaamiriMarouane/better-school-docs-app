@@ -11,120 +11,152 @@ date, in a room. You build the template once, then schedule it for each class.
 Administrators and teachers who set, schedule, and grade exams.
 </Callout>
 
-## Step 1 — Create an exam template
+## Step 1 — Create exam templates
 
 <Steps>
 
 <Step>
-### Open exam templates
+### Open the subject's exams
 
-Go to **Assessments → Grading setup**, open the **Subjects** step, and add a template for a subject (at a level, for a term).
+Go to **Assessments → Grading setup** and open the **Subjects** step. Choose the **Term**, pick a
+subject in the list, choose the **Marking period**, then open the **Exams** tab.
 </Step>
 
 <Step>
-### Fill in the template
+### Add the exams
 
-<Callout title="Grade categories must exist first">
-A template cannot be created until at least one exam grade category has been configured for the
-subject at this level. Set up categories in **Assessments → Grading setup → Grade categories**
-before continuing.
+<Callout title="Exam categories come first">
+Exams are grouped by exam category. If the subject has none yet, add an exam category with its
+weight in the **Categories** tab first.
 </Callout>
 
-| Field | Required | Notes |
-| --- | --- | --- |
-| **Name** | Yes | The exam's name, e.g. *Mid-term*. |
-| **Description** | No | Optional notes. |
-| **Duration** | Yes | How long the exam lasts — 30 min, 45 min, 1 h, 1 h 30, 2 h, 2 h 30, or 3 h. |
-| **Max score** | No | The score the exam is marked out of. |
-| **Weight (%)** | No | How much this exam counts toward the term grade. A subject's exam weights should add up to 100%. |
-| **Category** | Yes | The grade category this exam belongs to. Must be configured in advance. |
+For each exam category, choose **Add Exam** and fill in one row per exam:
+
+| Field | Notes |
+| --- | --- |
+| **Name** | The exam's name, e.g. *Mid-term*. |
+| **Duration** | 30 min, 45 min, 1 h, 1 h 30, 2 h, 2 h 30, or 3 h. |
+| **Max Score** | The score the exam is marked out of. |
+| **Weight** | How much this exam counts within its category. |
+
+The weights in a category must total 100% before you can **Save exams**. The **Total** at the
+bottom shows where you are, and each row shows roughly what share of the term that exam is worth.
+
+For example, if the *Exams* category is worth 60% of the subject and holds a *Mid-term* at 40% and
+a *Final* at 60%, the mid-term is worth about 24% of the term (40% of 60%).
+</Step>
+
+<Step>
+### Reuse the set (optional)
+
+Use **Copy to other subjects** to give other subjects the same exams instead of typing them again,
+or **Copy from last year** to bring back last year's categories and exams for subjects not set up yet.
 </Step>
 
 </Steps>
 
 ## Step 2 — Schedule the exam
 
-Go to **Assessments → Scheduled exams** and schedule the template for a class.
+Go to **Scheduled Exams** — under **Assessments** for administrators, under **Academic** for
+teachers — and choose **Schedule Exam**.
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Template** | Yes | Which exam to sit. |
-| **Class** *(and group)* | Yes | Who sits it. Pick a group if only part of a divided class takes it. |
-| **Date and time** | Yes | When the exam takes place. |
-| **Room** | No | Where it's held. |
-| **Supervisors** | No | The teachers overseeing the exam. |
+| **Term** | Yes | The term of the exam. |
+| **Level** | Yes | Narrows the class list. |
+| **Class** | Yes | Who sits it. |
+| **Subject** | Yes | The subject being examined. |
+| **Marking period** | — | Narrows the templates to one marking period. |
+| **Exam Template** | Yes | Which exam to sit. |
+| **Scheduled Date** | Yes | When the exam takes place. |
+| **Room** | No | Where it's held. The list shows each room's capacity. |
 
-## Step 3 — Grade and publish results
+## Step 3 — Mark the exam as completed
 
-When the exam is done, enter results in a grid — each student's **score** and optional
-**notes** — then **publish** the results to make them visible to students and families.
+Once the exam date has passed, choose **Mark as Completed** on the exam in the list. Grading opens
+only after that.
+
+## Step 4 — Grade the exam
+
+Choose **Grade Exam** on the exam. The page has two tabs:
+
+- **Grade entry** — enter each student's score and an optional note, then **Save Results**.
+- **Attendance** — record who sat the exam, then **Save Attendance**.
+
+**Export PDF** produces a printable sheet of the grades. You choose the **Display Order** (**By
+Name**, **By Rank** or **By Student Number**), the **Language**, and whether to **Include Teacher
+Remarks**.
+
+## Step 5 — Publish the results
+
+When marking is done, choose **Publish grades** on the grading page, or **Publish Results** on the
+exam in the list. The list shows each exam as **Published** or **Not published**. Use **Unpublish
+Results** to hide them again.
 
 <Callout title="Results stay private until you publish">
-Scores you enter are not visible to students or families until you **publish** the results. This
-lets you finish marking before anyone sees a grade.
+Scores you enter are not visible to students or families until you publish the results. This lets
+you finish marking before anyone sees a grade.
 </Callout>
 
-## Step 4 — Record exam attendance
+## Exam attendance
 
-Exam attendance is recorded separately from grades. For each student, mark:
+You can record attendance from the **Attendance** tab, or with **Mark Attendance** on the exam in
+the list. For each student, choose:
 
 | Status | Meaning |
 | --- | --- |
 | **Present** | The student sat the exam. |
-| **Absent** | The student didn't attend. |
-| **Excused** | An approved absence — add the reason. |
+| **Absent** | The student didn't attend — add the reason. |
 | **Late** | The student arrived late. |
+| **Excused** | An approved absence — add the reason. |
+
+A reason is required for every **Absent** and **Excused** student.
 
 ## Exam statuses
 
 | Status | Meaning |
 | --- | --- |
 | **Scheduled** | Set up, not yet taken. |
-| **Completed** | The exam has taken place. |
-| **Graded** | Results have been entered. |
-| **Cancelled** | The exam won't take place. |
+| **Completed** | The exam has taken place and can be graded. |
 
 ## Common use cases
 
-- **Termly exams** — create a template per exam with weights that add up to 100%, then schedule each
+- **Termly exams** — add the term's exams with weights that add up to 100%, then schedule each one
   per class.
-- **Split class** — schedule the same template separately for each group.
-- **Absent student** — mark them absent (or excused) in the exam attendance.
+- **Same exams across subjects** — build the set once and use **Copy to other subjects**.
+- **Absent student** — mark them **Absent** (or **Excused**) with a reason in the exam attendance.
 
 ## Frequently asked questions
 
 ### What is the difference between an exam template and a scheduled exam?
 
-An **exam template** is the blueprint — its name, duration, maximum score, weight, and category.
-A **scheduled exam** is one actual sitting of that template: a specific class, date, time, and
-room. You create the template once and can schedule it for multiple classes without redefining it
-each time.
+An **exam template** is the blueprint — its name, duration, maximum score, and weight within its
+category. A **scheduled exam** is one actual sitting of that template: a specific class, date, and
+room. You create the template once and can schedule it for many classes without redefining it.
 
 ### Can the same template be used for multiple classes?
 
-Yes. Schedule the template once per class. Each scheduled exam has its own grade grid, attendance
+Yes. Schedule the template once per class. Each scheduled exam has its own grades, attendance
 record, and publication state, independently of the others.
 
-### How do I handle a student who was absent?
+### Why can't I enter grades yet?
 
-Mark the student **Absent** (or **Excused** with a reason) in the exam attendance record. Their
-grade cell shows the Absent status.
+The exam must be marked as completed first, and that is only possible once its date has passed.
+Choose **Mark as Completed**, then **Grade Exam**.
 
 ### When should I publish results?
 
-Publish once you have finished marking and are confident in the grades. Scores you enter are not
-visible to students or parents until you publish. There is no time limit — you can publish
-immediately after marking or wait until results for all classes are ready.
+Publish once you have finished marking and are confident in the grades. There is no time limit —
+you can publish right after marking or wait until results for all classes are ready.
 
 ### Do exam scores feed into the gradebook automatically?
 
-Yes. Once a score is entered (and the exam's results are published), it feeds directly into the
-gradebook under the subject's marking period, category, and weight you set on the template. No
-manual transfer is needed.
+Yes. Once the results are published, they count in the [gradebook](./gradebook) under the
+template's marking period, category, and weight. No manual transfer is needed.
 
 ## Related articles
 
 - [Grading setup](./grading-setup)
 - [Class sessions & attendance](./sessions-and-attendance)
 - [Gradebook](./gradebook)
-- [Courses](./courses)
+- [Course templates](./courses)

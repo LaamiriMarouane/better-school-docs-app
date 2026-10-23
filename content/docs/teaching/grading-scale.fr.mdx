@@ -1,143 +1,141 @@
 ---
 title: Barème de notation
-description: Configurez les barèmes de notation et les tranches de notes pour convertir les scores numériques en lettres, mentions et valeurs GPA dans le carnet de notes et sur les bulletins.
+description: Configurez le barème de notation de l'école et ses tranches pour afficher les notes numériques sous forme de lettres, de mentions et de valeurs GPA dans le carnet de notes et sur les bulletins.
 ---
 
-Un **barème de notation** est un ensemble de **tranches de notes** qui convertissent un score
-numérique en une lettre, une mention (ex. *Bien*, *Très bien*) ou une valeur GPA. Les barèmes
-sont utilisés partout où une note numérique est affichée — le carnet de notes, la vue élève et
-le bulletin.
+Le **barème de notation** est un ensemble de **tranches** qui transforment une note numérique en
+lettre, en mention (ex. *Bien*, *Très bien*) ou en valeur GPA, et qui indiquent quelles notes
+valent une réussite. L'école a un seul barème de notation. Il est utilisé partout où une note est
+affichée — le carnet de notes, la vue élève et le bulletin.
 
 <Callout title="Pour qui">
-Les administrateurs qui configurent l'affichage des notes pour une année scolaire ou un niveau.
+Les administrateurs qui configurent l'affichage des notes.
 </Callout>
 
-## Comment fonctionnent les barèmes de notation
+## Comment fonctionne le barème de notation
 
-Le barème est appliqué une fois que la note numérique est calculée. La note tombe dans une
-tranche selon sa valeur, et la lettre, la mention et le GPA de la tranche sont affichés à côté
-(ou à la place) du nombre, selon le format d'affichage choisi.
+Chaque tranche couvre une plage de notes. Une note tombe dans la tranche qui la contient, et la
+lettre, la mention et le GPA de cette tranche peuvent être affichés à côté du nombre (ou à sa
+place), selon le format d'affichage choisi.
 
 **Exemple — un barème sur 20 :**
 
-| Tranche | Min | Max | Lettre | Mention | GPA |
-| --- | --- | --- | --- | --- | --- |
-| Excellent | 18 | 20 | A+ | Excellent | 4.0 |
-| Très bien | 16 | 17,99 | A | Très bien | 4.0 |
-| Bien | 14 | 15,99 | B | Bien | 3.0 |
-| Assez bien | 12 | 13,99 | C | Assez bien | 2.0 |
-| Passable | 10 | 11,99 | D | Passable | 1.0 |
-| Insuffisant | 0 | 9,99 | F | Insuffisant | 0.0 |
+| Plage | Lettre | Mention | GPA | Réussite |
+| --- | --- | --- | --- | --- |
+| 18 – 20 | A+ | Excellent | 4.0 | Oui |
+| 16 – 18 | A | Très bien | 4.0 | Oui |
+| 14 – 16 | B | Bien | 3.0 | Oui |
+| 12 – 14 | C | Assez bien | 2.0 | Oui |
+| 10 – 12 | D | Passable | 1.0 | Oui |
+| 0 – 10 | F | Insuffisant | 0.0 | Non |
 
 Il n'est pas nécessaire de remplir toutes les colonnes — par exemple, vous pouvez utiliser des
 mentions sans valeurs GPA, ou des lettres sans mentions.
 
-## Niveaux du barème
+## Modifier le barème de notation
 
-Les barèmes peuvent être définis à deux niveaux :
-
-| Niveau | Où il s'applique |
-| --- | --- |
-| **Valeur par défaut de l'année scolaire** | Tous les niveaux et périodes, sauf substitution en dessous. |
-| **Substitution par niveau** | Remplace le défaut de l'année pour un niveau spécifique. |
-| **Substitution par période** | Remplace le défaut du niveau pour une période de notation spécifique (ex. un examen national sur 100). Voir [Périodes de notation](./marking-periods). |
-
-## Configurer un barème de notation
-
-Allez dans **Évaluations → Configuration des notes → Politique annuelle** (barème / paramètres du carnet).
+Allez dans **Évaluations → Configuration des notes → Politique annuelle**. La carte
+**Barème de notation** se modifie directement sur la page, et sa plage va de 0 à
+l'**Échelle d'affichage** définie dans la carte **Échelle de notes et arrondi** (ex. 20 ou 100).
 
 <Steps>
 
 <Step>
-### Ouvrir l'éditeur de barème
-
-Cliquez sur **Modifier le barème**. Si aucun barème n'existe encore, l'éditeur s'ouvre vide.
-</Step>
-
-<Step>
 ### Ajouter des tranches
 
-Cliquez sur **Ajouter une tranche** pour chaque tranche. Remplissez :
-
-| Champ | Obligatoire | Remarques |
-| --- | --- | --- |
-| **Nom** | Oui | Un libellé descriptif, ex. *Très bien*. |
-| **Score min** | Oui | Le score le plus bas couvert par cette tranche (inclus). |
-| **Score max** | Oui | Le score le plus haut couvert par cette tranche (inclus). |
-| **Lettre** | Non | Un code lettre affiché dans le carnet, ex. *A*. |
-| **Mention** | Non | Un libellé descriptif affiché sur les bulletins, ex. *Très bien*. |
-| **GPA** | Non | La valeur GPA associée à cette tranche. |
+Cliquez sur **Ajouter une tranche**. La nouvelle tranche est prise sur la tranche la plus basse :
+le barème couvre donc toujours toute la plage. La première tranche commence toujours à 0 et la
+dernière se termine toujours au maximum.
 </Step>
 
 <Step>
-### Couvrir toute la plage
+### Ajuster les plages
 
-Les tranches doivent couvrir toute la plage de scores possible sans écarts ni chevauchements.
-Un avertissement s'affiche si des scores entre 0 et le maximum ne sont pas couverts.
+Dans **Plage**, modifiez le début ou la fin d'une tranche. La tranche voisine suit
+automatiquement, pour que les tranches restent bout à bout. Supprimer une tranche donne sa plage à
+la tranche voisine.
+</Step>
+
+<Step>
+### Remplir chaque tranche
+
+| Colonne | Remarques |
+| --- | --- |
+| **Lettre** | Optionnelle. Un code lettre, ex. *A*. |
+| **Mention** | Optionnelle. Un libellé descriptif, ex. *Très bien*. |
+| **GPA** | Optionnel. La valeur GPA de cette tranche. |
+| **Réussite** | À activer pour les tranches qui valent une réussite. |
+
+Chaque tranche a aussi une couleur, utilisée pour ses pastilles de note.
 </Step>
 
 <Step>
 ### Enregistrer
 
-Sauvegardez le barème. Il prend effet immédiatement pour toute note affichée à ce niveau.
+Cliquez sur **Enregistrer** en haut de la page. Le barème s'applique immédiatement partout où les
+notes sont affichées.
 </Step>
 
 </Steps>
 
+<Callout title="Ni trou ni chevauchement">
+Le barème ne peut pas être enregistré tant qu'il reste un trou ou un chevauchement entre deux
+tranches, ou tant que les tranches ne vont pas de 0 au maximum.
+</Callout>
+
+## Tester une note
+
+Sous les tranches, saisissez une valeur dans **Tester une note** pour la prévisualiser. Vous voyez
+**Réussite** ou **Échec**, ainsi que la lettre, la mention et le GPA de la tranche — ou
+**Aucune tranche correspondante**. Utilisez-le pour vérifier le barème avant d'enregistrer.
+
 ## Format d'affichage
 
-Le barème de notation contrôle ce qui est *disponible* à l'affichage. Le **format d'affichage**
-contrôle ce qui est *réellement affiché* dans chaque contexte. Allez dans
-**Évaluations → Configuration des notes → Politique annuelle**, ouvrez l'affichage pour choisir :
+Le barème de notation définit ce qui *peut* être affiché. Le **Format principal** définit ce qui
+est affiché par défaut aux élèves et sur les bulletins. Dans
+**Évaluations → Configuration des notes → Politique annuelle**, ouvrez la carte
+**Formats d'affichage** et choisissez :
 
-| Format | Affiche |
+| Format principal | Affiche |
 | --- | --- |
-| **Numérique uniquement** | Le score brut (ex. 14,5). |
-| **Lettre** | Le code lettre de la tranche (ex. B). |
+| **Numérique** | La note (ex. 14,5). |
+| **Pourcentage** | La note en pourcentage (ex. 72,5 %). |
+| **Lettre** | La lettre de la tranche (ex. B). |
 | **Mention** | La mention de la tranche (ex. Bien). |
-| **Numérique + mention** | Score et mention ensemble (ex. 14,5 — Bien). |
+| **GPA** | La valeur GPA de la tranche (ex. 3.0). |
 
-Le format d'affichage principal est utilisé dans la grille du carnet de notes. Des formats
-supplémentaires peuvent être affichés dans les vues détaillées et sur les bulletins.
-
-## Substitutions par niveau
-
-Pour donner un barème différent à un niveau — par exemple si un niveau utilise le /20 et un
-autre le /100 — ouvrez **Évaluations → Configuration des notes → Niveaux**, choisissez le niveau,
-et définissez une **substitution de barème de notation** pour ce niveau. Le barème spécifique au
-niveau s'applique partout où les notes de ce niveau sont affichées.
+Un niveau ou une période de notation peut utiliser un autre format principal. Voir
+[Périodes de notation et schéma de notation](./marking-periods).
 
 ## Questions fréquentes
 
-### Ai-je besoin d'un barème de notation pour utiliser le carnet de notes ?
+### Dois-je remplir des lettres ou des mentions pour utiliser le carnet de notes ?
 
-Non. Le carnet de notes fonctionne avec des scores numériques bruts même sans barème. Un barème
-ajoute uniquement la couche d'affichage (lettre, mention, GPA). Vous pouvez ajouter ou modifier
-un barème à tout moment sans affecter les scores enregistrés.
+Non. Le barème a toujours au moins une tranche qui couvre de 0 au maximum. Les lettres, mentions
+et valeurs GPA sont optionnelles ; sans elles, les notes s'affichent sous forme de nombres.
 
-### Puis-je utiliser uniquement des lettres, sans scores numériques ?
+### Puis-je utiliser uniquement des lettres, sans notes numériques ?
 
-Le carnet de notes stocke et calcule les notes numériquement. Un barème qui associe chaque
-valeur numérique à une lettre est la meilleure façon d'afficher les notes sous forme de lettres
-— mais le calcul sous-jacent utilise toujours des chiffres.
+Les enseignants saisissent toujours les notes sous forme de nombres. Réglez le
+**Format principal** sur **Lettre** et donnez une lettre à chaque tranche pour afficher les notes
+en lettres.
 
-### Que se passe-t-il si deux tranches se chevauchent ou laissent un écart ?
+### Qu'est-ce qui détermine si une note est une réussite ?
 
-L'éditeur de barème affiche un avertissement. Les chevauchements ne sont pas autorisés. Les
-écarts signifient que certains scores ne correspondraient à aucune tranche et s'afficheraient
-sans lettre ni mention — couvrez toute la plage pour éviter cela.
+La tranche dans laquelle tombe la note : les tranches où **Réussite** est activé valent une
+réussite. Le **Seuil de réussite** de la carte **Formats d'affichage** ne sert que lorsqu'aucune
+tranche ne s'applique.
 
 ### Les élèves peuvent-ils voir le barème de notation ?
 
-Les élèves et les parents voient la lettre ou la mention appliquée à leur note dans la vue
-élève, conformément au format d'affichage configuré. Le tableau complet des tranches n'est pas
-visible par les élèves.
+Les élèves et les parents voient leur note dans le format principal configuré. Le tableau complet
+des tranches ne leur est pas affiché.
 
-### Puis-je définir un barème différent pour les examens externes notés sur 100 ?
+### Un niveau peut-il utiliser un autre barème de notation ?
 
-Oui. Utilisez la substitution de configuration par période sur l'entrée de période de notation
-de l'examen externe. Définissez le barème de notation sur celui conçu pour le /100 — il ne
-s'applique qu'aux scores de cet examen tandis que le reste du niveau utilise son propre barème.
+Non — l'école a un seul barème de notation. Un niveau ou une période de notation peut toutefois
+avoir son propre format principal et son propre seuil de réussite. Voir
+[Périodes de notation et schéma de notation](./marking-periods).
 
 ## Articles liés
 

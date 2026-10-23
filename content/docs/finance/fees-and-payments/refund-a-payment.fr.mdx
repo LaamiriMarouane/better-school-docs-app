@@ -1,10 +1,10 @@
 ---
 title: Rembourser un paiement
-description: Annulez un paiement enregistré, en totalité ou en partie, avec un motif.
+description: Rendez de l'argent sur un paiement enregistré, en totalité ou en partie, avec un motif.
 ---
 
-Un **remboursement** annule un paiement déjà enregistré — par exemple après un
-trop-perçu ou un service annulé. Vous pouvez rembourser le montant total ou une partie.
+Un **remboursement** rend de l'argent sur un paiement déjà enregistré — par exemple après
+un trop-perçu ou un service annulé. Vous pouvez rembourser le montant total ou une partie.
 
 <Callout title="Pour qui">
 Le personnel de finance qui corrige ou annule un paiement encaissé.
@@ -12,18 +12,19 @@ Le personnel de finance qui corrige ou annule un paiement encaissé.
 
 ## Avant de commencer
 
-- Trouvez le **paiement** à annuler dans la liste des paiements.
-- Un remboursement ne peut pas dépasser le montant payé.
+- Trouvez le **paiement** dans **Finances → Paiements**.
+- Vous pouvez rembourser jusqu'à ce qui reste sur le paiement. Si une partie a déjà été
+  remboursée, seul le reste peut l'être.
 
 ## Étapes
 
 <Steps>
 
 <Step>
-### Ouvrir le paiement et choisir Rembourser
+### Choisir Rembourser sur le paiement
 
-Trouvez le paiement dans **Finance → Paiements**, ouvrez-le, et choisissez
-**Rembourser**.
+Dans la liste **Finances → Paiements**, ouvrez les actions de la ligne du paiement et
+choisissez **Rembourser**.
 
 <Screenshot
   label="Formulaire de remboursement avec le récapitulatif du paiement"
@@ -34,28 +35,39 @@ Trouvez le paiement dans **Finance → Paiements**, ouvrez-le, et choisissez
 <Step>
 ### Saisir les détails du remboursement
 
-Complétez les champs ci-dessous.
+Le formulaire affiche les détails du paiement et le **Montant maximal du remboursement**.
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Montant du remboursement** | Oui | Le montant à rembourser. Ne peut pas dépasser le montant payé d'origine. |
-| **Motif** | Oui | La raison du remboursement (3 à 500 caractères). |
-| **Annulé par** | Oui | Le tuteur auquel le remboursement est attribué. |
+| **Montant du remboursement** | Oui | Le montant à rembourser. Il ne peut pas dépasser le montant maximal. |
+| **Raison du remboursement** | Oui | Pourquoi le remboursement est effectué. |
+| **Annulé par** | Non | Le tuteur auquel le remboursement est attribué. |
+</Step>
+
+<Step>
+### Décider ce que devient la facturation
+
+- **Article rendu : réduire aussi le montant dû** — cochez-la quand la famille a rendu
+  l'article (par exemple un uniforme). Le montant remboursé est aussi retiré de ce que
+  doit la famille : l'échéance reste soldée. Laissez décoché pour un geste commercial :
+  l'échéance redevient due.
+- **Ce remboursement annule la facturation** — affichée seulement pour les mois clôturés
+  par un changement de plan. Cochez-la et ces mois sont refacturés sur le plan actuel de
+  l'élève. Laissez décoché pour un geste commercial.
 </Step>
 
 <Step>
 ### Traiter le remboursement
 
-Confirmez. Le statut du paiement reflète le remboursement, et les soldes des échéances
-de l'élève sont ajustés en conséquence.
+Cliquez sur **Traiter le remboursement**. Le paiement affiche le remboursement, et les
+soldes des échéances de l'élève sont ajustés.
 </Step>
 
 </Steps>
 
 <Callout type="warn" title="Les remboursements sont traçables">
-Le montant du remboursement, le motif et la personne à qui il est attribué sont
-conservés avec le paiement. Saisissez un motif exact — il fait partie du registre
-financier.
+Le montant, le motif et la personne à qui le remboursement est attribué restent visibles
+sur le paiement. Saisissez un motif exact — il fait partie de l'historique financier.
 </Callout>
 
 ## Articles liés

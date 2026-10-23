@@ -4,8 +4,9 @@ description: Donnez un devoir à une classe, laissez les élèves rendre leur tr
 ---
 
 Un **devoir** est un travail que vous donnez à une classe — devoir maison, projet, dissertation. Les
-élèves peuvent rendre leur travail en ligne, vous le notez avec un retour, et la note remonte dans le
-[carnet de notes](./gradebook).
+élèves rendent leur travail en ligne ou en classe, vous le notez avec un retour, et la note peut
+compter dans le [carnet de notes](./gradebook). Un devoir est soit un devoir **Fichier** (décrit
+ici), soit un **Quiz** (voir [Quiz](./quizzes)).
 
 <Callout title="Pour qui">
 Les enseignants qui donnent et notent du travail, et les élèves qui le rendent.
@@ -18,7 +19,7 @@ Les enseignants qui donnent et notent du travail, et les élèves qui le rendent
 <Step>
 ### Ouvrir les devoirs
 
-Allez dans **Devoirs** et choisissez **Ajouter un devoir**.
+Allez dans **Évaluations → Devoirs**, choisissez **Ajouter un devoir**, puis **Fichier**.
 </Step>
 
 <Step>
@@ -28,67 +29,104 @@ Allez dans **Devoirs** et choisissez **Ajouter un devoir**.
 | --- | --- | --- |
 | **Titre** | Oui | Le nom du devoir. |
 | **Description** | Non | Les consignes pour les élèves. |
-| **Classe** *(et groupe)* | Oui | Pour qui il est. Choisissez un groupe pour une partie d'une classe divisée. |
-| **Date de diffusion** | Non | Quand les élèves le voient pour la première fois. Laissez vide pour diffuser maintenant. |
-| **Date d'échéance** | Oui | La date limite. |
-| **Note maximale** | Oui | Le barème (ex. 20). |
+| **Trimestre** | Oui | Le trimestre du travail. |
+| **Classe** | Oui | Pour qui il est. Les administrateurs choisissent d'abord le **Niveau**. |
+| **Section de classe** | Selon le cas | Affiché quand la classe est divisée en groupes. Choisissez un groupe, ou **Classe entière** quand c'est proposé. |
+| **Matière** | Oui | La matière qui reçoit la note. |
+| **Période de notation** | Oui | La partie du trimestre où la note compte. |
+| **Date de publication** | Oui | Quand les élèves le voient pour la première fois. Elle est réglée sur maintenant ; choisissez une date ultérieure pour le publier plus tard. |
+| **Date d'échéance** | Oui | La date limite. Elle doit suivre la date de publication. |
 | **Pièces jointes** | Non | Des fichiers que vous fournissez — fiche, énoncé, grille. |
 </Step>
 
 <Step>
-### Définir les règles de remise
-
-Décidez comment les élèves rendent leur travail :
+### Régler la remise et la notation
 
 | Option | Ce qu'elle fait |
 | --- | --- |
-| **Type de remise** | **En ligne** (les élèves téléversent des fichiers) ou **En classe** (remis sur papier — vous enregistrez juste la note). |
-| **Autoriser les remises tardives** | Permettre de rendre après l'échéance, éventuellement jusqu'à une limite ultérieure. |
-| **Fichiers par remise** | Combien de fichiers un élève peut joindre. |
-| **Types de fichiers acceptés** | Restreindre les téléversements (par exemple *pdf, docx*). |
-| **Autoriser la re-remise** | Permettre aux élèves de remplacer leur travail avant l'échéance. |
+| **Mode de soumission** | **En ligne** (les élèves téléversent des fichiers) ou **En classe** (remis sur papier — vous enregistrez juste la note). |
+| **Fichiers maximum** | Combien de fichiers un élève peut joindre (en ligne uniquement). |
+| **Types de fichiers de soumission acceptés** | Restreindre les téléversements, par exemple aux fichiers PDF ou Word (en ligne uniquement). |
+| **Note maximale** | Le barème (ex. 20). |
+| **Compte dans la moyenne finale** | Activez-le pour que la note compte dans la moyenne de la matière, puis choisissez sa **Catégorie**. Désactivé par défaut — laissez-le ainsi pour un travail d'entraînement. |
+| **Autoriser les soumissions tardives** | Permettre de rendre après l'échéance, éventuellement jusqu'à une **Échéance finale de soumission**. |
+| **Autoriser la soumission multiple** | Permettre aux élèves de mettre à jour leur travail tant qu'il n'est pas noté. |
+| **Suivre les vues** | Voir quels élèves ont ouvert le devoir. |
+| **Autoriser les commentaires** | Permettre aux élèves de laisser des commentaires sur le devoir. |
 </Step>
 
 <Step>
 ### Enregistrer
 
-Le devoir apparaît pour la classe, et les élèves peuvent le rendre dans la fenêtre prévue.
+Choisissez **Créer un devoir**. Les élèves le voient à partir de la date de publication.
 </Step>
 
 </Steps>
 
+<Callout title="Une fois que des élèves ont rendu">
+Après la première remise, la classe, la matière et la période de notation ne peuvent plus être
+modifiées. Les autres détails restent modifiables.
+</Callout>
+
 ## Comment les élèves rendent
 
-Pour un devoir **en ligne**, l'élève l'ouvre et **téléverse** ses fichiers, avec une note
-facultative. Si vous avez autorisé la re-remise, il peut remplacer son travail jusqu'à l'échéance (ou
-la limite tardive).
+Les élèves trouvent leur travail dans **Devoirs**. Chaque carte indique où il en est :
 
-Le devoir d'un élève est **En attente** jusqu'à la remise, puis **Fait** — ou **Non fait** si
-l'échéance passe sans rien de rendu.
+| Statut | Signification |
+| --- | --- |
+| **À venir** | Pas encore publié. |
+| **Ouvert** | Publié et avant l'échéance. |
+| **En retard** | L'échéance est passée et rien n'a été rendu. |
+| **Soumis** | L'élève a rendu son travail. |
+| **Noté** | Vous avez noté le travail. |
+
+Pour un devoir **en ligne**, l'élève l'ouvre, téléverse ses fichiers avec une note facultative, et
+choisit **Soumettre un devoir**. Si vous avez autorisé la soumission multiple, il peut mettre à jour
+son travail jusqu'à ce que vous le notiez. Si vous avez autorisé les soumissions tardives, il peut
+encore rendre après l'échéance, jusqu'à l'échéance finale si vous en avez fixé une. Un devoir **En
+classe** indique simplement aux élèves qu'il se rend en classe.
+
+Une fois le travail noté, l'élève voit sa note et votre retour.
 
 ## Noter et donner un retour
 
-Ouvrez la vue de notation du devoir pour voir toutes les remises au même endroit. Pour chaque élève,
-saisissez une **note** et un **retour** facultatif. Quand vous êtes prêt, **publiez les notes** pour
-les rendre visibles aux élèves et aux familles.
+Ouvrez le devoir : ses onglets sont **Aperçu**, **Soumissions** et, si les vues sont suivies,
+**Suivi des vues**. Allez dans l'onglet **Soumissions**. Choisissez la remise d'un élève, saisissez
+une **Note** (jusqu'à la note maximale) et des **Commentaires** facultatifs, puis choisissez
+**Soumettre la note**.
 
-<Callout title="Les notes restent privées jusqu'à publication">
-Les notes et retours que vous saisissez ne sont pas visibles par les élèves tant que vous ne les avez
-pas **publiés** — vous pouvez donc finir la correction d'abord.
+Pour un travail **En classe**, il n'y a rien à ouvrir : saisissez les notes dans la colonne du
+devoir dans le [carnet de notes](./gradebook).
+
+## Publier les notes
+
+Pour un travail qui **compte dans la moyenne finale**, les notes restent masquées jusqu'à ce que
+vous choisissiez **Publier les notes** sur le devoir. En attendant, les élèves voient *Noté — en
+attente de publication*. Utilisez **Dépublier les notes** pour les masquer à nouveau.
+
+Un travail d'entraînement (non compté) n'a pas d'étape de publication : les élèves voient chaque
+note dès que vous la donnez.
+
+<Callout title="Finissez la correction d'abord">
+Comme les notes comptées restent privées jusqu'à publication, vous pouvez corriger toute la classe
+avant que quiconque voie un résultat.
 </Callout>
 
 ## Compte dans le carnet de notes
 
-Un devoir peut être placé dans une **catégorie de note** (ex. *Devoirs*) et recevoir un **poids**,
-afin que ses notes alimentent la note de matière de chaque élève. Voir
-[Carnet de notes](./gradebook).
+Un devoir n'a pas de poids propre. Quand **Compte dans la moyenne finale** est activé, sa note
+rejoint la **Catégorie** choisie, et le poids de cette catégorie (défini dans la
+[configuration des notes](./grading-setup)) détermine combien il compte. Par exemple, si *Devoirs*
+vaut 20 % de la matière, l'ensemble des devoirs comptés représente ces 20 %.
 
 ## Cas d'usage courants
 
 - **Devoir avec fichier** — créez un devoir en ligne ; les élèves téléversent un PDF.
-- **Remise sur papier** — créez un devoir *en classe* et enregistrez simplement les notes.
-- **Seconde chance** — autorisez la re-remise pour que les élèves corrigent et rendent à nouveau avant
-  l'échéance.
+- **Remise sur papier** — créez un devoir *En classe* et saisissez les notes dans le carnet de notes.
+- **Seconde chance** — autorisez la soumission multiple pour que les élèves améliorent leur travail
+  jusqu'à ce que vous le notiez.
+- **Entraînement** — laissez **Compte dans la moyenne finale** désactivé ; les élèves voient les
+  notes tout de suite.
 
 ## Articles liés
 

@@ -1,48 +1,42 @@
 ---
 title: Affecter les élèves
-description: Placez chaque élève sur un itinéraire et l'arrêt où il monte, pour qu'il apparaisse sur les trajets quotidiens et soit facturé correctement.
+description: Placez chaque élève sur l'arrêt qu'il utilise, pour qu'il apparaisse sur les trajets quotidiens et que son transport soit facturé correctement.
 ---
 
-Affecter un élève à un itinéraire indique au système **quel arrêt l'élève utilise** et **quel
-itinéraire le transporte**. Une fois affecté, l'élève apparaît automatiquement sur chaque trajet
-de cet itinéraire, et ses frais de transport sont ajoutés à son échéancier.
+Affecter un élève à un arrêt indique **quel arrêt l'élève utilise** et **quel itinéraire le
+transporte**. Une fois affecté, l'élève apparaît automatiquement sur chaque trajet de cet
+itinéraire.
 
 <Callout title="Pour qui">
-Les administrateurs et coordinateurs de transport qui constituent les listes de bus.
+Les administrateurs et les coordinateurs de transport qui constituent les listes du bus.
 </Callout>
 
-## Comment fonctionnent les listes
+## Fonctionnement des listes
 
-- Un élève peut prendre **un itinéraire aller** (domicile → école) et **un itinéraire retour**
-  (école → domicile) par année scolaire.
-- Vous affectez l'élève à l'**arrêt** où il monte ; l'itinéraire est celui auquel cet arrêt
-  appartient.
+- Un élève peut emprunter **un itinéraire de ramassage** (domicile → école) et **un itinéraire de
+  dépose** (école → domicile) à la fois.
+- Vous affectez l'élève à l'**arrêt** qu'il utilise ; l'itinéraire est celui auquel appartient
+  cet arrêt.
 
 ## Avant de commencer
 
-- L'**itinéraire et ses arrêts** doivent déjà exister. Voir
+- L'**itinéraire et ses arrêts** doivent déjà exister, et l'itinéraire doit être actif. Voir
   [Construire itinéraires et arrêts](./build-routes-and-stops).
 - L'élève doit être **inscrit** pour l'année scolaire sélectionnée.
-- L'élève doit avoir des **frais de transport actifs** — c'est-à-dire un échéancier incluant le
-  service Transport. Seuls les élèves éligibles au transport apparaissent dans le sélecteur. Voir
+- *(Pour la facturation)* Les élèves qui paient le bus doivent avoir les frais de **Transport**
+  dans leur plan de paiement. Voir
   [Configurer les frais](../finance/fees-and-payments/set-up-fees) et
-  [Créer des échéanciers](../finance/fees-and-payments/create-payment-plans).
-
-<Callout title="Pourquoi un élève peut être absent de la liste">
-Si un élève manque dans la liste des élèves que vous pouvez affecter, c'est presque toujours
-parce qu'il n'a pas encore de frais de transport sur un échéancier actif. Ajoutez d'abord les
-frais de transport, et il apparaîtra.
-</Callout>
+  [Créer des plans de paiement](../finance/fees-and-payments/create-payment-plans).
 
 ## Affecter des élèves à un arrêt
 
 <Steps>
 
 <Step>
-### Ouvrir la liste de l'itinéraire
+### Ouvrir l'arrêt
 
-Allez dans **Transport → Itinéraires**, ouvrez un itinéraire et passez à la vue **Liste**. Vous
-verrez les arrêts de l'itinéraire avec les élèves actuellement affectés à chacun.
+Allez dans **Opérations → Itinéraires** et ouvrez un itinéraire. Sur l'arrêt voulu, ouvrez son
+menu **⋯** et choisissez **Gérer les élèves**.
 
 <Screenshot
   label="Liste de l'itinéraire avec arrêts et élèves affectés"
@@ -51,43 +45,50 @@ verrez les arrêts de l'itinéraire avec les élèves actuellement affectés à 
 </Step>
 
 <Step>
-### Ajouter des élèves à un arrêt
+### Choisir les élèves
 
-Cliquez sur **Affecter des élèves**, recherchez les élèves souhaités et ajoutez-les à l'arrêt
-choisi. Seuls les élèves éligibles (facturés pour le transport) sont affichés.
+La fenêtre présente deux listes : les élèves **Disponibles** d'un côté et ceux **À cet arrêt** de
+l'autre.
 
-| Champ | Obligatoire | Remarques |
-| --- | --- | --- |
-| **Élève** | Oui | L'élève à ajouter. Le sélecteur n'affiche que les élèves éligibles. |
-| **Arrêt** | Oui | L'arrêt où l'élève monte (ou est déposé). |
+- Par défaut, **Disponibles** affiche les **Abonnés** — les élèves dont le plan de paiement
+  contient les frais de transport. Passez à **Tous les élèves** pour voir tous les élèves inscrits.
+- Recherchez un élève et cliquez sur **Assigner**. Les élèves sans frais de transport portent
+  l'étiquette **Non facturable** : ils peuvent prendre le bus, mais le transport ne leur est pas
+  facturé.
 </Step>
 
 <Step>
-### Enregistrer
+### Terminer
 
-L'élève apparaît désormais sur l'itinéraire et sera inclus dans chaque trajet généré pour
-celui-ci.
+Cliquez sur **Terminé**. Les élèves apparaissent maintenant sur l'itinéraire et sont inclus dans
+chaque trajet créé pour lui.
 </Step>
 
 </Steps>
 
-## Retirer un élève
+## Retirer un élève d'un arrêt
 
-- **Arrêter de voyager** — retirez l'élève de l'itinéraire.
-  Ses frais de transport sont ajustés en conséquence sur ses futures échéances.
+Rouvrez la fenêtre **Gérer les élèves** de l'arrêt et cliquez sur **Désaffecter** à côté de
+l'élève dans la liste **À cet arrêt**. L'élève n'apparaît plus sur les trajets de l'itinéraire.
 
-<Callout title="La facturation suit la liste">
-Lorsque vous ajoutez ou retirez un élève, ses futures échéances de transport sont
-mises à jour selon la zone tarifaire de l'arrêt (ou les frais par défaut du niveau). Vous n'avez
-pas à modifier les factures à la main.
+<Callout title="Comment la facturation suit la liste">
+Affecter ou désaffecter un élève n'ajoute ni ne retire les frais de transport eux-mêmes — cela se
+fait dans le plan de paiement de l'élève, dans **Finance**. Pour un élève qui a déjà les frais de
+transport, ses prochaines échéances de transport non payées sont recalculées selon le tarif de la
+zone de l'arrêt (ou le tarif par défaut du niveau). Vous n'avez pas à modifier les factures à la
+main.
 </Callout>
 
 ## Cas d'usage courants
 
-- **Nouveau passager** — ajoutez l'élève à l'arrêt le plus proche de son domicile sur les
-  itinéraires aller et retour.
+- **Nouvel élève transporté** — affectez-le à l'arrêt le plus proche de chez lui sur l'itinéraire
+  de ramassage et sur celui de dépose.
+- **La famille déménage** — désaffectez l'élève de l'ancien arrêt et affectez-le au nouveau. Ses
+  prochaines échéances de transport suivent le tarif du nouvel arrêt.
+- **L'enfant ne prend plus le bus** — désaffectez-le des deux itinéraires, puis mettez à jour son
+  plan de paiement dans **Finance**.
 
-## Articles liés
+## Articles associés
 
 - [Construire itinéraires et arrêts](./build-routes-and-stops)
 - [Créer des trajets](./create-trips)

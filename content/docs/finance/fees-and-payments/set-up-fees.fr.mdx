@@ -1,11 +1,11 @@
 ---
 title: Configurer les frais
-description: Donnez à un service un prix pour un niveau, avec une périodicité qui détermine le calendrier des échéances.
+description: Tarifez un service — un montant unique ou un montant par niveau — avec une périodicité qui détermine le calendrier des échéances.
 ---
 
-Un **frais** est une règle tarifée. Il indique : *ce service*, à *ce niveau*, coûte
-*ce montant*, facturé selon *cette périodicité*. Les frais sont la base des
-échéanciers de paiement.
+Un **frais** tarifie un service. Il indique : *ce service* coûte *ce montant* pour
+*ces niveaux*, facturé selon *cette périodicité*. Les frais sont la base des plans de
+paiement.
 
 <Callout title="Pour qui">
 Les administrateurs qui tarifient les services de l'école.
@@ -14,7 +14,7 @@ Les administrateurs qui tarifient les services de l'école.
 ## Avant de commencer
 
 - Le **service** doit déjà exister — voir [Créer des services](./create-services).
-- Les **niveaux** doivent exister — un frais est tarifé par niveau.
+- Les **niveaux** doivent exister.
 
 <Screenshot
   label="Page des frais avec le bouton Ajouter un frais"
@@ -28,7 +28,7 @@ Les administrateurs qui tarifient les services de l'école.
 <Step>
 ### Ouvrir la page Frais
 
-Allez dans **Finance → Frais**, puis démarrez un nouveau frais.
+Allez dans **Finances → Frais**, puis cliquez sur **Ajouter une redevance**.
 
 <Screenshot
   label="Formulaire de création d'un frais"
@@ -37,37 +37,68 @@ Allez dans **Finance → Frais**, puis démarrez un nouveau frais.
 </Step>
 
 <Step>
-### Renseigner les détails du frais
-
-Complétez les champs ci-dessous, puis enregistrez.
+### Nommer le frais et choisir le service
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Nom** | Oui | Le nom affiché, ex. *Scolarité 1re année*. |
+| **Nom** | Oui | Le nom affiché, ex. *Scolarité primaire*. |
 | **Service** | Oui | Le service que ce frais tarifie. |
-| **Niveau** | Oui | Le niveau auquel le frais s'applique. |
-| **Périodicité** | Oui | À quelle fréquence il est facturé — par exemple mensuelle ou unique. Elle façonne le calendrier des échéances. |
-| **Montant** | Oui | Le prix. Doit être supérieur à zéro. |
+| **Description** | Non | Notes facultatives. |
 </Step>
 
 <Step>
-### Répéter par niveau
+### Choisir la tarification
 
-Créez un frais pour chaque combinaison service-niveau que votre école facture.
+Sous **Tarification**, choisissez :
+
+| Tarification | Ce que vous renseignez |
+| --- | --- |
+| **Forfait** | Les **Niveaux** concernés, et un seul **Montant** pour tous. |
+| **Par niveau** | Les niveaux à tarifer, puis un montant pour chacun. **Tout définir à** remplit tous les niveaux avec le même montant, que vous pouvez ensuite ajuster. |
+</Step>
+
+<Step>
+### Choisir la périodicité
+
+| Périodicité | Ce qui est facturé à l'élève |
+| --- | --- |
+| **Mensuel** | Une échéance par mois. |
+| **Trimestriel** | Une échéance tous les trois mois. |
+| **Par période** | Une échéance par période, due le premier jour de la période. |
+| **Annuel** ou **Unique** | Une seule échéance. |
+
+Pour les frais **Annuel** et **Unique**, vous pouvez aussi indiquer une date **À payer
+avant le** (pratique pour les uniformes, les livres ou une sortie). Laissez-la vide : le
+frais est dû le jour où l'élève est facturé.
+</Step>
+
+<Step>
+### Enregistrer
+
+Cliquez sur **Créer une redevance**. Ajoutez un frais pour chaque service que votre école
+facture.
 </Step>
 
 </Steps>
 
+## Modifier un frais déjà utilisé
+
+- Dès qu'un frais figure sur un plan de paiement ou a été facturé, vous ne pouvez plus
+  changer sa **Périodicité** ni passer de **Forfait** à **Par niveau**. Vous pouvez
+  toujours modifier les montants et ajouter des niveaux, mais pas retirer les niveaux déjà
+  tarifés.
+- Quand vous changez le montant, l'application demande **Appliquer le nouveau prix ?** Les
+  échéances impayées pas encore dues prennent le nouveau prix. Les échéances payées, ou
+  déjà dues, gardent leur prix.
+
 <Callout title="La périodicité détermine les échéances">
-La **périodicité** détermine le nombre d'échéances qu'un élève obtient pour ce frais —
-un frais mensuel produit une échéance par mois facturé, un frais unique une seule
-échéance. Les mois inclus, et les dates exactes, suivent la date d'inscription et la
-configuration de facturation — voir
-[Échéances et calendriers](./installments-and-schedules).
+La **périodicité** détermine le nombre d'échéances qu'un élève obtient pour ce frais. Les
+mois inclus, et les dates exactes, suivent la date d'inscription et les réglages de
+facturation — voir [Échéances et calendriers](./installments-and-schedules).
 </Callout>
 
 ## Articles liés
 
 - [Créer des services](./create-services)
-- [Créer des échéanciers](./create-payment-plans)
+- [Créer des plans de paiement](./create-payment-plans)
 - [Échéances et calendriers](./installments-and-schedules)

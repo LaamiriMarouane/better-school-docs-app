@@ -1,96 +1,113 @@
 ---
 title: Competency-based grading
-description: Run a competency grading track alongside numeric grades — build a subject competency library, attach competencies to assessments, and let teachers set proficiency levels per student.
+description: Record competency levels alongside numeric grades — create proficiency scales, build a competency library per subject, enable competencies per subject, attach them to assessments and grade students' proficiency.
 ---
 
-**Competency grading** is a parallel track that records a student's proficiency against named
-learning outcomes alongside their numeric grades. Numeric grades and competency levels coexist
-— neither replaces the other. Teachers can record competency evidence on assessments.
+**Competency grading** records a student's proficiency against named learning outcomes alongside
+their numeric grades. Numeric grades and competency levels coexist — neither replaces the other.
+Teachers record competency evidence on assessments.
 
 <Callout title="Who this is for">
 Administrators setting up competency frameworks, and teachers recording student competency
 progress.
 </Callout>
 
-<Callout title="Subject-gated">
-Competencies only appear for subjects that have a competency library defined. Subjects
-configured as Numeric only do not show the competency track.
+<Callout title="Enabled per subject">
+Competencies only appear for subjects whose grading mode is **Numeric + competency**. Subjects set
+to **Numeric only** do not show competencies.
 </Callout>
 
-## Set up competencies for a subject
+Everything is set up in **Assessments → Grading setup → Competencies**, which has three tabs:
+**Scales**, **Library** and **Subjects**.
 
-### 1 — Define the competency scale
+## Set up competencies
 
-Before adding competencies, define the **proficiency levels** students can be awarded. Go to
-**Assessments → Grading setup → Competencies** and add levels:
+### 1 — Create a proficiency scale
 
-| Field | Notes |
-| --- | --- |
-| **Name** | e.g. *Beginning*, *Developing*, *Proficient*, *Exemplary*. |
-| **Points** | A numeric value used to order and aggregate levels (e.g. 1, 2, 3, 4). |
-| **Color** | An optional colour shown on the gradebook chip. |
-
-### 2 — Build the competency library for a subject
-
-Open **Assessments → Grading setup → Competencies** (subject competency library) and add the
-competencies students will be assessed on:
+A proficiency scale lists the levels a student can be awarded. You can create several scales —
+for example one for primary and one for secondary. Open the **Scales** tab, click **Add scale**,
+give it a **Name**, then click **Add Level** for each level:
 
 | Field | Notes |
 | --- | --- |
-| **Name** | The learning outcome, e.g. *Can apply the Pythagorean theorem*. |
-| **Code** | Optional short code, e.g. *M-G-1*. |
-| **Description** | Optional detail or success criteria. |
+| **Label** | e.g. *Beginning*, *Developing*, *Proficient*, *Exemplary*. |
+| **Points** | A number that orders the levels (e.g. 1, 2, 3, 4). |
+| **Meets standard** | Mark the lowest level at which a student meets the expected standard. |
 
-Competencies are defined per subject at a level — the same subject at different levels has its
-own separate library.
+Each level also has a colour, shown on its chip. Use the arrows to reorder levels, and turn on
+**Default scale** for the scale you use most. Click **Save**.
+
+### 2 — Build the competency library
+
+Open the **Library** tab and pick a subject in the list. The library is a tree:
+
+- **Strands** group related competencies (e.g. *Geometry*). A strand applies to **All grades**
+  or only to the grades you choose in **Applies to**.
+- **Competencies** sit under a strand, and can have **sub-competencies**. Each line can have an
+  optional **Code** (e.g. *M-G-1*).
+
+Only competencies with no sub-competencies are graded; they are marked **Gradable**. You can work in the **Outline** view or the
+**Mind map** view; both show the same library. Use **Copy to grade** to duplicate a strand and its
+competencies for another grade.
+
+Competencies already used in assessments or grades can't be deleted.
+
+### 3 — Enable competencies for a subject
+
+Open the **Subjects** tab and pick a level. For each subject, click **Enable competency**, then
+choose the **Proficiency scale** its competencies are graded with. To enable several subjects at
+once, select them and use the bulk action. To turn competencies off, switch the subject back to
+**Numeric only**.
 
 ## Attach competencies to an assessment
 
-When creating or editing an **exam template**, **quiz**, or **free assessment**, open the
-**Competencies** tab and select which competencies that assessment covers. For exam templates,
-the competency list is set once on the template and is shared across all class sittings of
-that exam.
+Each assessment lists the competencies it covers under **Targeted competencies**. Only these
+competencies can be graded for that assessment.
 
-When grading the assessment, the teacher can set a proficiency level against each attached
-competency for each student — in addition to (or instead of) recording a numeric score.
+- **Exam templates**: in **Grading setup → Subjects**, click **Attach competencies** on an exam.
+  Save the exam set first. The competencies apply to every class that sits the exam.
+- **Free assessments, quizzes and assignments**: use the **Targeted competencies** section of the
+  form when you create or edit them.
 
-## How competencies appear on the report card
+The list only shows competencies from the subject's library that apply to the assessment's grade.
 
-When a level has competencies enabled for a subject, the report card shows a competency section
-below the numeric grades for that subject. Each competency is listed with its term-level
-proficiency, shown as the band name and optional colour chip.
+## Grade competencies
 
-The overall numeric grade (*moyenne générale*) is not affected by competency levels — they
-are displayed as a separate, additive section.
+When grading, teachers set a proficiency level for each targeted competency and each student,
+alongside the numeric score:
+
+- for an exam, click **Grade competencies** on the grading page;
+- in the gradebook, choose **Grade competencies** in the assessment's column menu;
+- for a quiz or an assignment, click **Enter evidence** on its page.
+
+A competency can be targeted by several assessments, so a student can collect evidence for it over
+the year.
 
 ## Frequently asked questions
 
 ### Do competency grades affect the student's average?
 
-No. Competency levels are a parallel display track. The numeric average (*moyenne générale*) is
-always computed from numeric grades only. Competency levels do not add to or subtract from the
-numeric average.
+No. The numeric average (*moyenne générale*) is always computed from numeric grades only.
+Competency levels do not add to or subtract from it.
 
 ### Can I use competencies without numeric grades?
 
-The gradebook always stores numeric grades. If a subject only uses competencies, you can enter
-numeric grades as 0 or exempt students — but a fully competency-only mode without any numeric
-column is not available in the current version.
+No. A subject with competencies uses **Numeric + competency**: students still receive numeric
+scores, and competency levels are recorded alongside them.
 
 ### Can multiple assessments cover the same competency?
 
-Yes. Multiple assessments can be linked to the same competency. Assessment evidence
-records one proficiency per (student, assessment, competency).
+Yes. Link the same competency to as many assessments as you need. Each assessment records its own
+proficiency level per student.
 
-### Can parents see competency results?
+### Can students and parents see competency results?
 
-Yes. Competency levels appear in the student view and on the report card, using the same
-proficiency level names the school defined.
+No. Competency levels are recorded by teachers and are not shown in the student or parent view.
 
 ### Are competencies available for all subjects?
 
-Only for subjects where the administrator has built a competency library. Subjects with no
-competencies defined show only numeric grades.
+Only for subjects switched to **Numeric + competency** on the **Subjects** tab, and only if the
+subject's library has competencies for that grade. Other subjects show numeric grades only.
 
 ## Related articles
 

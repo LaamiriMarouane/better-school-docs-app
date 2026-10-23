@@ -1,6 +1,6 @@
 ---
 title: Timetable groups
-description: Understand the weekly template that groups levels for a term — why you create more than one, and which actions you can take.
+description: Understand the weekly template that groups levels for a term — why you create more than one, its statuses, and the actions you can take.
 ---
 
 A **timetable group** is a **weekly template** for a **term** and a chosen set of **levels**. It
@@ -17,13 +17,39 @@ Academic planners and administrators who organise and compare school schedules.
 | Piece | Meaning |
 | --- | --- |
 | **Name** | A label you choose, e.g. *Term 1 — Primary* or *Option B — shorter Friday*. |
-| **Term** | The term this weekly plan belongs to. |
-| **Levels** | Which levels are covered by this group. |
-| **Timetable config** | The days, hours, and breaks this group's week uses. See [Timetable config](./timetable-config). |
-| **Weekly grid** | The filled (or draft) schedule for each class in those levels. |
+| **Term** | The term this weekly plan is for. |
+| **Levels and tracks** | Which levels (and tracks) this group covers. |
+| **Timetable Configuration** | The days, hours, and breaks this group's week uses. See [Timetable config](./timetable-config). |
+| **Weekly grid** | The filled (or partly filled) schedule for each class in those levels. |
 
-When you later **activate** the group, the weekly template is turned into real **class sessions**
-with dates and times. See [Activate and class sessions](./activate-and-sessions).
+When you **activate** the group, the weekly template is turned into real **class sessions** with
+dates and times. See [Activate and class sessions](./activate-and-sessions).
+
+## Create a group
+
+<Steps>
+
+<Step>
+### Open the Groups page
+
+Go to **Academic → Timetable → Groups** and click **Add Timetable Group**.
+</Step>
+
+<Step>
+### Fill in the form
+
+Enter the **Name**, choose the **Term**, the **Levels and tracks**, and the **Timetable
+Configuration**. Add a **Description** if you like.
+</Step>
+
+<Step>
+### Create
+
+Click **Create Timetable Group**. The group starts as a **Draft**. Open it to generate or build the
+week.
+</Step>
+
+</Steps>
 
 ## Why create more than one group
 
@@ -36,39 +62,77 @@ Common reasons:
 - **Special weeks** — A different pattern for an exam week or a shortened week, while keeping the
   normal week as another group.
 
-You can also **clone** a group as a new draft so you keep the same rules but start with an empty
-grid to try a new arrangement.
-
-## Where groups live
-
-Go to **Academic → Timetable → Groups**. Open a group to edit its grid, run the generator, tune
-constraints, or change its status.
-
 ## Group statuses
 
 | Status | Meaning |
 | --- | --- |
-| **Draft** | Only planners can see and edit it. Not live for the school. |
-| **Active** | The live weekly plan for its levels. Creates [class sessions](./activate-and-sessions). |
-| **Inactive** | No longer generating sessions; editing is allowed again after deactivate. |
-| **Archived** | Kept for history; no longer the live plan. |
+| **Draft** | Not live. Planners can generate it and edit it by hand. |
+| **Active** | The live weekly plan for its levels. Creates [class sessions](./activate-and-sessions). Read-only while active. |
+| **Archived** | Was active and has been replaced or deactivated. You can still edit it by hand and activate it again, but you can't run the generator on it. |
 
-**Locked** can apply on top of a status: while locked, you cannot drag lessons or save grid edits
-until you unlock (or deactivate, if it was active).
+**Locked** can apply on top of a status. While a group is locked, nobody can generate, move
+lessons, or save grid edits until it is unlocked.
 
-## Actions you can take
+<Callout title="Need to regenerate an archived group?">
+Use **Clone as new draft** on it. The clone keeps the rules and setup with an empty grid, so you
+can generate again and activate the result.
+</Callout>
+
+## Actions on the Groups list
+
+Open the row menu (**⋯**) on the **Groups** list:
 
 | Action | When you'd use it |
 | --- | --- |
-| **Create** | Start a new weekly template for a term, levels, and config. |
-| **Clone as new draft** | Copy the group's policy and setup into a new draft with an **empty** grid — good for a fresh variant. |
-| **Generate** | Let the generator fill the week. See [Generate and activate](./generate-and-publish). |
-| **Edit by hand** | Move lessons, change rooms, pin lessons you want to keep. |
-| **Lock / Unlock** | Protect a finished draft, or freeze an active group from accidental edits. |
-| **Activate** | Make this the live week for its levels and create dated class sessions. |
-| **Deactivate** | Stop live use, allow edits again, then re-activate when ready. |
-| **Archive** | Keep the group for reference when it is no longer live. |
-| **Print / views** | Review or print by class, teacher, or room. |
+| **View** | Open the group to review, generate, or edit its week. |
+| **Clone as new draft** | Create a new draft with the same Solver policy and configuration, but an **empty** grid — good for a fresh variant. |
+| **Copy to another term** | Copy this group's weekly grid into another term as a new draft (see below). |
+| **Lock / Unlock** | Protect a finished group from accidental changes, or allow changes again. |
+| **Activate** | Make this the live week for its levels and create dated class sessions. See [Activate and class sessions](./activate-and-sessions). |
+| **Deactivate** | Shown on an active group. Stops it being live; it becomes **Archived**. |
+| **Delete** | Remove a group you no longer need. Not available while the group is active or locked. You can also tick several groups and delete them together. |
+
+**Activate** and **Deactivate** are only on this list, not inside the group.
+
+## Actions inside a group
+
+Open a group to work on its week. The header has **Generate** (see
+[Generate and activate](./generate-and-publish)), the views, **Search**, **Insights**, and
+**Print Timetable**. The **⋯** menu (**More actions**) holds:
+
+- **Solver policy** — the rules the generator follows for this group. See [Constraints](./constraints).
+- **Lock Timetable / Unlock Timetable**.
+- **Clear all assignments** — empty the grid of this group.
+
+## Copy a group to another term
+
+Use this when the next term should start from the same week.
+
+<Steps>
+
+<Step>
+### Open the copy dialog
+
+On the **Groups** list, open the row menu (**⋯**) and choose **Copy to another term**.
+</Step>
+
+<Step>
+### Choose the target and what to include
+
+Pick the **Target term** and give the new group a **Name**. Under **Include**, choose what comes
+with the weekly grid: **Solver policy (rules and lesson links)**, **Per-lesson teachers where
+compatible**, and **Sync class assignments to the target term**. If you sync class assignments,
+choose what happens **When the target already has a teacher**: **Keep existing** or **Override**.
+</Step>
+
+<Step>
+### Check the preview and apply
+
+The preview shows how many weekly slots will be copied and anything that will be skipped. Click
+**Apply copy**. The new draft group opens so you can review it.
+</Step>
+
+</Steps>
 
 ## Related articles
 

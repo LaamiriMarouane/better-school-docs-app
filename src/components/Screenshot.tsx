@@ -21,10 +21,10 @@ export interface ScreenshotProps {
  * A documentation screenshot with rounded borders.
  *
  * - When `src` is provided it renders the image.
- * - When `src` is omitted it renders a styled placeholder so the article
- *   structure is complete before real screenshots are captured.
+ * - When `src` is omitted it renders nothing, so articles keep their
+ *   `<Screenshot>` slots without showing placeholders to readers.
  *
- * In both cases the figure is zoomable: clicking it opens a full-screen
+ * The figure is zoomable: clicking it opens a full-screen
  * lightbox. Press Escape or click the backdrop to close.
  */
 export function Screenshot({
@@ -50,6 +50,9 @@ export function Screenshot({
   }, [zoomed]);
 
   const placeholderLabel = label ?? alt ?? caption ?? 'Screenshot';
+
+  // Placeholders stay hidden until a real screenshot is captured.
+  if (!src) return null;
 
   return (
     <>

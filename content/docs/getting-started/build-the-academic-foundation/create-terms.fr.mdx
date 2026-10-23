@@ -5,7 +5,7 @@ description: Divisez l'année scolaire en périodes ou semestres utilisés pour 
 
 Une **période** est un intervalle de l'année scolaire — par exemple *Trimestre 1*,
 *Semestre 2*. Les périodes organisent la notation, les bulletins et de nombreux flux
-académiques ; elles se créent donc juste après l'année scolaire elle-même.
+académiques ; elles se datent donc juste après la création de l'année scolaire.
 
 <Callout title="Pour qui">
 Les administrateurs qui structurent le calendrier d'une année scolaire.
@@ -13,7 +13,10 @@ Les administrateurs qui structurent le calendrier d'une année scolaire.
 
 ## Avant de commencer
 
-- L'**année scolaire** doit déjà exister — les périodes sont créées à l'intérieur.
+- L'**année scolaire** doit déjà exister.
+- Les noms des périodes de votre école (par exemple *Semestre 1* et *Semestre 2*) se définissent
+  une fois dans **Paramètres → Académique → Structure des périodes**. S'il n'y en a pas encore, le
+  tableau des périodes affiche un message avec **Ouvrir la structure des périodes**.
 - Planifiez les dates des périodes pour qu'elles se situent **dans** l'année scolaire
   et **ne se chevauchent pas** entre elles.
 
@@ -27,10 +30,12 @@ Les administrateurs qui structurent le calendrier d'une année scolaire.
 <Steps>
 
 <Step>
-### Ouvrir la section Périodes
+### Ouvrir les périodes de l'année
 
-Allez dans **Paramètres → Pédagogique**, ouvrez l'année scolaire que vous
-construisez, et trouvez sa section **Périodes**. Cliquez sur **Ajouter**.
+Allez dans **Paramètres → Académique**, ouvrez l'onglet **Année académique**, puis ouvrez l'année
+avec **Voir les détails**. La page de l'année affiche ses périodes sous forme de tableau. L'étape
+**Périodes** de la [Configuration de l'année scolaire](./academic-year-setup) affiche le même
+tableau, déjà rempli avec une ligne par période de votre structure.
 
 <Screenshot
   label="Formulaire de création d'une période"
@@ -39,38 +44,41 @@ construisez, et trouvez sa section **Périodes**. Cliquez sur **Ajouter**.
 </Step>
 
 <Step>
-### Renseigner les détails de la période
+### Ajouter et dater les périodes
 
-Complétez les champs ci-dessous, puis cliquez sur **Valider**.
+Cliquez sur **Ajouter un trimestre** pour ajouter une ligne, puis remplissez-la directement dans le
+tableau.
 
-| Champ | Obligatoire | Remarques |
+| Colonne | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Libellé** | Oui | Le nom affiché, ex. *Trimestre 1*. |
-| **Date de début** | Oui | Doit se situer dans la plage de dates de l'année scolaire. |
+| **Trimestre** | Oui | Choisissez la période dans votre structure. Elle ne peut plus être changée après l'enregistrement. |
+| **Date de début** | Oui | Doit se situer dans l'année scolaire. |
 | **Date de fin** | Oui | Doit être égale ou postérieure à la date de début, et dans l'année scolaire. |
-| **Active** | Non | Marque cette période comme la période en cours. |
+
+La colonne **Durée** affiche le nombre de jours dès que vous choisissez les dates.
 </Step>
 
 <Step>
-### Résoudre un avertissement de chevauchement
+### Enregistrer
 
-Si les dates chevauchent une période existante, le formulaire affiche un avertissement
-et bloque l'enregistrement. Ajustez la date de début ou de fin jusqu'à ce que la
-période ne se chevauche plus, puis validez.
+Cliquez sur **Enregistrer** pour enregistrer toutes les lignes d'un coup. Si deux périodes se
+chevauchent, ou si une ligne n'a pas sa période ou ses dates, un message indique le problème —
+corrigez les dates et enregistrez à nouveau.
 </Step>
 
 <Step>
-### Répéter pour chaque période
+### Activer la période en cours
 
-Ajoutez chaque période de l'année. La nouvelle période apparaît immédiatement dans la
-liste.
+Utilisez l'action de ligne **Activer le trimestre** sur la période en cours, puis confirmez.
+Utilisez **Désactiver le trimestre** pour la désactiver. Les autres actions de ligne permettent de
+**Mettre à jour les paramètres de notation** de la période ou de la **Supprimer**.
 </Step>
 
 </Steps>
 
 <Callout title="Astuce">
-Marquez la période en cours comme **Active** afin que la notation et les rapports
-ciblent la bonne période par défaut. Mettez-la à jour au fil de l'année.
+Gardez la période en cours active afin que la notation et les rapports ciblent la bonne période
+par défaut. Mettez-la à jour au fil de l'année.
 </Callout>
 
 ## Articles liés

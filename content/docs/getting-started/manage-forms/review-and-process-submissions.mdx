@@ -1,95 +1,108 @@
 ---
 title: Review and process submissions
-description: Review responses and turn admission applications into student records.
+description: Review responses and turn admission applications into students and pre-inscriptions.
 ---
 
 Every response to a published form becomes a **submission**. This is where you
-review what was sent and, for **Admission** forms, decide on each applicant.
+review what was sent and, for **Admission** forms, decide on each child.
 
 ## Open the submissions list
 
-From the **Forms** list, use **View submissions** on a form's row. This is
-available once the form is **Published**.
+In the **Forms** list, open a form's row actions and choose **View Submissions**.
+This is available once the form has been published.
 
-Each submission shows its **code**, the **submitter**, a **status**, and when it
-was submitted.
+Each submission shows its **Submission Code**, the **Submitter Name**, a
+**Status** and when it was submitted. Use the search and filters to find a
+submission by status or date.
 
 <Screenshot
   label="Submissions list for an admission form"
   caption="Open any row to see the full response."
 />
 
+<Callout title="Possible duplicates">
+When the same email has already answered the form, the new submission is tagged
+**Possible duplicate of** followed by the earlier submission's code. Compare the
+two before you decide.
+</Callout>
+
 ## Submission statuses
 
 | Status | What it means |
 | --- | --- |
-| **New** | Just received, not yet reviewed. |
-| **Under review** | Being looked at. |
-| **Partially processed** | Some applicants decided, others still pending. |
-| **Completed** | All applicants have a final decision. |
-| **Accepted** / **Rejected** / **Waitlisted** | The outcome of a single-applicant submission. |
+| **New** | Just received. |
+| **Under Review** | An application whose children are all still waiting for a decision. |
+| **Partially processed** | Some children have a decision, others are still waiting. |
+| **Waitlisted** | Every child has a decision, and at least one is on the waitlist. |
+| **Completed** | Every child is accepted or rejected. |
+
+The status of an application follows the decisions you take on its children —
+you don't set it by hand.
 
 ## Review a submission
 
-Open a submission to see the **submitted data**, grouped by the same sections the
-applicant filled in. Repeatable sections show one block per entry — for example
-one block per child on a family application.
+Open a submission to see the **Submitted data**, grouped by the same sections the
+applicant filled in. When a family applied for several children, each child
+appears as its own block.
 
 ## Process an admission
 
-On an **Admission** form, each **Student** section carries its own decision. One
-submission with several children produces one decision per child.
+On an **Admission** form, each child in the **Student Information** section gets
+its own decision. One application with three children means three decisions.
 
 <Steps>
 
 <Step>
 ### Choose a decision
 
-On a student's section, pick one of three actions:
+On a child's block, pick one of three actions:
 
 | Action | Effect |
 | --- | --- |
-| **Accept** | Approves the applicant and creates their student record. |
-| **Reject** | Declines the applicant. |
-| **Waitlist** | Holds the applicant for a later decision. |
+| **Accept** | Creates the student, links their guardians, and creates a pre-inscription for the level they applied to. |
+| **Reject** | Declines the child. You can still waitlist or accept them later. |
+| **Waitlist** | Holds the child for a later decision. You can accept or reject them later. |
 </Step>
 
 <Step>
 ### Resolve any matches
 
-When you **Accept**, the platform checks whether the student or a guardian already
-exists — usually matched by email. If matches are found, a dialog asks you to
-choose, for each person:
+When you **Accept**, the platform checks whether the student or a guardian is
+already in your school. If it finds a match, a dialog shows each one and what it
+was matched by, and you choose:
 
-- **Associate existing** — link the application to the record already in the
-  school.
-- **Create new** — add a new record anyway.
+- **Associate with existing** — link the application to the person already in
+  your school.
+- **Create new anyway** — add a new person.
 
-If an email already exists in your school, you **must** associate the existing
-record. An email that belongs to another school cannot be reused.
+If an email already exists in your school, you must associate the existing
+person. An email used in another school can't be used here.
 </Step>
 
 <Step>
 ### Confirm
 
-Confirm the decision. An accepted applicant gets a student record, and a
-**View student** link appears so you can open it.
+Confirm the decision. The confirm button becomes active after a few seconds, so
+you have time to read what will happen. Once a child is accepted, a **View
+Student** link appears so you can open their profile.
 </Step>
 
 </Steps>
 
 <Callout title="Accept is final">
-A **Rejected** or **Waitlisted** applicant can still be moved to another decision
-later. **Accept** cannot be undone — once accepted, the student record exists.
+A rejected or waitlisted child can still be moved to another decision later.
+**Accept** can't be undone.
 </Callout>
 
 ## After accepting
 
-Accepting creates the student record but does not place the student in a class.
-To finish, enroll the new student — see
+Accepting creates the student and their pre-inscription, but does not place the
+student in a class. To finish, enroll the student from their pre-inscription — see
+[Pre-inscriptions](../enroll-students/pre-inscriptions) and
 [Create an enrollment](../enroll-students/create-an-enrollment).
 
 ## Related articles
 
+- [Pre-inscriptions](../enroll-students/pre-inscriptions)
 - [Create an enrollment](../enroll-students/create-an-enrollment)
 - [Publish and share a form](./publish-and-share-a-form)

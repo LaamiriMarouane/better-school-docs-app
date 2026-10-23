@@ -1,101 +1,123 @@
 ---
 title: Notation par compétences
-description: Exécutez un suivi des compétences en parallèle des notes numériques — créez une bibliothèque de compétences par matière, attachez des compétences aux évaluations et laissez les enseignants définir les niveaux de maîtrise par élève.
+description: Enregistrez des niveaux de compétence en complément des notes numériques — créez des échelles de maîtrise, construisez une bibliothèque de compétences par matière, activez les compétences par matière, associez-les aux évaluations et évaluez la maîtrise des élèves.
 ---
 
-La **notation par compétences** est un suivi parallèle qui enregistre le niveau de maîtrise d'un
-élève par rapport à des objectifs d'apprentissage nommés, en complément de ses notes numériques.
-Les notes numériques et les niveaux de compétences coexistent — ni l'un ni l'autre ne remplace
-l'autre. Les enseignants peuvent enregistrer des preuves de compétences sur les évaluations.
+La **notation par compétences** enregistre le niveau de maîtrise d'un élève par rapport à des
+objectifs d'apprentissage nommés, en complément de ses notes numériques. Les notes numériques et
+les niveaux de compétences coexistent — ni l'un ni l'autre ne remplace l'autre. Les enseignants
+enregistrent des preuves de compétences sur les évaluations.
 
 <Callout title="Pour qui">
 Les administrateurs qui configurent les référentiels de compétences, et les enseignants qui
 enregistrent les progrès en compétences des élèves.
 </Callout>
 
-<Callout title="Lié à la matière">
-Les compétences n'apparaissent que pour les matières dotées d'une bibliothèque de compétences.
-Les matières configurées en mode Numérique uniquement n'affichent pas le suivi des compétences.
+<Callout title="Activé par matière">
+Les compétences n'apparaissent que pour les matières dont le mode de notation est
+**Numérique + compétences**. Les matières en **Numérique uniquement** n'affichent pas de
+compétences.
 </Callout>
 
-## Configurer les compétences pour une matière
+Tout se configure dans **Évaluations → Configuration des notes → Compétences**, qui comporte trois
+onglets : **Échelles**, **Bibliothèque** et **Matières**.
 
-### 1 — Définir le référentiel de compétences
+## Configurer les compétences
 
-Avant d'ajouter des compétences, définissez les **niveaux de maîtrise** qui peuvent être attribués
-aux élèves. Allez dans **Évaluations → Configuration des notes → Compétences** et ajoutez
-des niveaux :
+### 1 — Créer une échelle de maîtrise
 
-| Champ | Remarques |
-| --- | --- |
-| **Nom** | ex. *Débutant*, *En développement*, *Maîtrisé*, *Exemplaire*. |
-| **Points** | Une valeur numérique utilisée pour ordonner et agréger les niveaux (ex. 1, 2, 3, 4). |
-| **Couleur** | Une couleur optionnelle affichée sur la puce dans le carnet. |
-
-### 2 — Construire la bibliothèque de compétences pour une matière
-
-Ouvrez **Évaluations → Configuration des notes → Compétences** (bibliothèque de compétences par matière) et ajoutez les compétences
-sur lesquelles les élèves seront évalués :
+Une échelle de maîtrise liste les niveaux qui peuvent être attribués à un élève. Vous pouvez créer
+plusieurs échelles — par exemple une pour le primaire et une pour le secondaire. Ouvrez l'onglet
+**Échelles**, cliquez sur **Ajouter une échelle**, donnez-lui un **Nom**, puis cliquez sur
+**Ajouter un niveau** pour chaque niveau :
 
 | Champ | Remarques |
 | --- | --- |
-| **Nom** | L'objectif d'apprentissage, ex. *Peut appliquer le théorème de Pythagore*. |
-| **Code** | Code court optionnel, ex. *M-G-1*. |
-| **Description** | Détail ou critères de réussite optionnels. |
+| **Label** | ex. *Débutant*, *En développement*, *Maîtrisé*, *Exemplaire*. |
+| **Points** | Un nombre qui ordonne les niveaux (ex. 1, 2, 3, 4). |
+| **Niveau attendu** | Marquez le niveau le plus bas à partir duquel l'élève atteint le niveau attendu. |
 
-Les compétences sont définies par matière à un niveau — la même matière à des niveaux différents
-a sa propre bibliothèque distincte.
+Chaque niveau a aussi une couleur, affichée sur sa pastille. Utilisez les flèches pour réordonner
+les niveaux, et activez **Barème par défaut** pour l'échelle que vous utilisez le plus. Cliquez sur
+**Enregistrer**.
 
-## Attacher des compétences à une évaluation
+### 2 — Construire la bibliothèque de compétences
 
-Lors de la création ou de la modification d'un **modèle d'examen**, d'un **quiz** ou d'une
-**évaluation libre**, ouvrez l'onglet **Compétences** et sélectionnez les compétences couvertes
-par l'évaluation. Pour les modèles d'examen, la liste des compétences est définie une fois sur
-le modèle et est partagée entre tous les groupes qui passent cet examen.
+Ouvrez l'onglet **Bibliothèque** et choisissez une matière dans la liste. La bibliothèque est une
+arborescence :
 
-Lors de la correction de l'évaluation, l'enseignant peut attribuer un niveau de maîtrise pour
-chaque compétence attachée et chaque élève — en plus de (ou à la place de) saisir un score
-numérique.
+- Les **domaines** regroupent des compétences liées (ex. *Géométrie*). Un domaine s'applique à
+  **Tous les niveaux** ou seulement aux niveaux choisis dans **S'applique à**.
+- Les **compétences** se placent sous un domaine et peuvent avoir des **sous-compétences**. Chaque
+  ligne peut avoir un **Code** optionnel (ex. *M-G-1*).
 
-## Comment les compétences apparaissent sur le bulletin
+Seules les compétences sans sous-compétences sont évaluées ; elles portent la mention **Évaluable**. Vous pouvez travailler dans la vue
+**Plan** ou dans la vue **Carte mentale** ; les deux affichent la même bibliothèque. Utilisez
+**Copier vers un niveau** pour dupliquer un domaine et ses compétences pour un autre niveau.
 
-Quand un niveau a des compétences activées pour une matière, le bulletin affiche une section de
-compétences sous les notes numériques de cette matière. Chaque compétence est listée avec son
-niveau de maîtrise semestriel, affiché sous forme du nom de la tranche et d'une puce de couleur
-optionnelle.
+Les compétences déjà utilisées dans des évaluations ou des notes ne peuvent pas être supprimées.
 
-La note globale (*moyenne générale*) n'est pas affectée par les niveaux de compétences — ils
-sont affichés comme une section distincte et additive.
+### 3 — Activer les compétences pour une matière
+
+Ouvrez l'onglet **Matières** et choisissez un niveau. Pour chaque matière, cliquez sur
+**Activer les compétences**, puis choisissez l'**Échelle de maîtrise** utilisée pour évaluer ses
+compétences. Pour activer plusieurs matières à la fois, sélectionnez-les et utilisez l'action
+groupée. Pour désactiver les compétences, repassez la matière en **Numérique uniquement**.
+
+## Associer des compétences à une évaluation
+
+Chaque évaluation liste les compétences qu'elle couvre dans **Compétences ciblées**. Seules ces
+compétences peuvent être évaluées pour cette évaluation.
+
+- **Modèles d'examen** : dans **Configuration des notes → Matières**, cliquez sur
+  **Associer des compétences** sur un examen. Enregistrez d'abord le jeu d'examens. Les compétences
+  s'appliquent à toutes les classes qui passent l'examen.
+- **Évaluations libres, quiz et devoirs** : utilisez la section **Compétences ciblées** du
+  formulaire lorsque vous les créez ou les modifiez.
+
+La liste n'affiche que les compétences de la bibliothèque de la matière qui s'appliquent au niveau
+de l'évaluation.
+
+## Évaluer les compétences
+
+Lors de la correction, les enseignants attribuent un niveau de maîtrise pour chaque compétence
+ciblée et chaque élève, en complément de la note numérique :
+
+- pour un examen, cliquez sur **Noter les compétences** sur la page de correction ;
+- dans le carnet de notes, choisissez **Noter les compétences** dans le menu de la colonne de
+  l'évaluation ;
+- pour un quiz ou un devoir, cliquez sur **Saisir les preuves** sur sa page.
+
+Une compétence peut être ciblée par plusieurs évaluations : un élève peut ainsi accumuler des
+preuves tout au long de l'année.
 
 ## Questions fréquentes
 
 ### Les notes de compétences affectent-elles la moyenne de l'élève ?
 
-Non. Les niveaux de compétences sont un suivi d'affichage parallèle. La moyenne numérique
-(*moyenne générale*) est toujours calculée à partir des notes numériques uniquement. Les niveaux
-de compétences n'ajoutent ni ne retirent rien à la moyenne numérique.
+Non. La moyenne numérique (*moyenne générale*) est toujours calculée à partir des notes numériques
+uniquement. Les niveaux de compétences n'y ajoutent ni n'y retirent rien.
 
 ### Puis-je utiliser les compétences sans notes numériques ?
 
-Le carnet de notes stocke toujours des notes numériques. Si une matière n'utilise que les
-compétences, vous pouvez saisir des notes numériques à 0 ou exempter les élèves — mais un mode
-entièrement basé sur les compétences, sans colonne numérique, n'est pas disponible dans la
-version actuelle.
+Non. Une matière avec compétences utilise **Numérique + compétences** : les élèves reçoivent
+toujours des notes numériques, et les niveaux de compétences sont enregistrés en complément.
 
 ### Plusieurs évaluations peuvent-elles couvrir la même compétence ?
 
-Oui. Plusieurs évaluations peuvent être liées à la même compétence. Les preuves d'évaluation
-enregistrent un niveau de maîtrise par (élève, évaluation, compétence).
+Oui. Associez la même compétence à autant d'évaluations que nécessaire. Chaque évaluation
+enregistre son propre niveau de maîtrise pour chaque élève.
 
-### Les parents peuvent-ils voir les résultats des compétences ?
+### Les élèves et les parents peuvent-ils voir les résultats des compétences ?
 
-Oui. Les niveaux de compétences apparaissent dans la vue élève et sur le bulletin, en utilisant
-les mêmes noms de niveaux de maîtrise définis par l'école.
+Non. Les niveaux de compétences sont enregistrés par les enseignants et ne sont pas affichés dans
+la vue élève ou parent.
 
 ### Les compétences sont-elles disponibles pour toutes les matières ?
 
-Seulement pour les matières pour lesquelles l'administrateur a construit une bibliothèque de
-compétences. Les matières sans compétences définies n'affichent que des notes numériques.
+Seulement pour les matières passées en **Numérique + compétences** dans l'onglet **Matières**, et
+seulement si la bibliothèque de la matière contient des compétences pour ce niveau. Les autres
+matières n'affichent que des notes numériques.
 
 ## Articles liés
 

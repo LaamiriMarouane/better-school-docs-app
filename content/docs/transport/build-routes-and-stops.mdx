@@ -1,11 +1,11 @@
 ---
 title: Build routes and stops
-description: Set up school bus routes — draw the pickup and dropoff paths, place stops on the map with planned times, and optionally group stops into pricing zones for distance-based fees.
+description: Set up school bus routes — create pickup and drop-off routes, place stops on the map with planned times, and optionally group stops into transport zones for area-based fees.
 ---
 
 A **route** is the path a bus follows, made up of an ordered list of **stops**. A **stop** is a
 place where the bus picks up or drops off students. Optionally, you can group stops into
-**pricing zones** so families in the same area pay the same transport fee.
+**transport zones** so families in the same area pay the same transport fee.
 
 <Callout title="Who this is for">
 Administrators and transport coordinators planning bus routes.
@@ -13,23 +13,24 @@ Administrators and transport coordinators planning bus routes.
 
 ## How routes work
 
-- A route has one **direction**: **Pickup** (home → school, in the morning) or **Dropoff**
-  (school → home, at the end of the day).
-- Most schools create a **pickup** route and a matching **dropoff** route for each area.
+- A route has one **direction**: **Pickup (home → school)**, the morning run, or
+  **Drop-off (school → home)**, the afternoon run.
+- Most schools create a **pickup** route and a matching **drop-off** route for each area.
 - The **school is added as a stop automatically** — at the *end* of a pickup route (the bus
-  finishes at school) and at the *start* of a dropoff route (the bus starts at school).
+  finishes at school) and at the *start* of a drop-off route (the bus starts at school).
 - Stops are kept in order by their **planned time**, so the route always reads in sequence.
 
 ## Before you start
 
 - Drop a **map pin** for the school in **Settings → School → School Info** and save it
   **before** you create routes. The pin is copied onto the school stop (the end of a pickup
-  route, the start of a dropoff route). Typing the address is not enough. Without the pin,
+  route, the start of a drop-off route). Typing the address is not enough. Without the pin,
   the road line does not run to or from the school, and **Suggest times** and **Optimize
   order** leave the school out. If a route was created before the pin existed, open that
   route's school stop and save it so the location is copied onto the route.
-- Your **vehicles** and **drivers** should already exist if you want to set a default crew for
-  the route. See [Manage vehicles](./manage-vehicles) and [Manage drivers](./manage-drivers).
+- Your **vehicles**, **drivers**, and **bus monitors** should already exist if you want to set a
+  default crew for the route. See [Manage vehicles](./manage-vehicles) and
+  [Manage drivers](./manage-drivers).
 
 ## Step 1 — Create a route
 
@@ -38,7 +39,7 @@ Administrators and transport coordinators planning bus routes.
 <Step>
 ### Open Routes
 
-Go to **Transport → Routes**, then click **Add route**.
+Go to **Operations → Routes**, then click **New route**.
 
 <Screenshot
   label="Routes list with the Add route button"
@@ -49,19 +50,19 @@ Go to **Transport → Routes**, then click **Add route**.
 <Step>
 ### Fill in the route details
 
-Complete the fields below, then save.
+Complete the fields below, then click **Create**.
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Name** | Yes | A clear name, e.g. *North Line — Morning*. |
-| **Direction** | Yes | **Pickup** (home → school) or **Dropoff** (school → home). |
-| **Code** | No | A short code shown on rosters, e.g. *RT-A*. |
+| **Route name** | Yes | A clear name, e.g. *North Line — Morning*. |
+| **Direction** | Yes | **Pickup (home → school)** or **Drop-off (school → home)**. |
+| **Code** | No | A short code, e.g. *RT-A*. |
 | **Description** | No | Optional notes about the route. |
 | **Color** | No | A colour used to show the route on the map and on badges. |
 | **Default vehicle** | No | The bus normally used. It pre-fills every trip created for this route. |
 | **Default driver** | No | The driver normally assigned. It pre-fills every trip. |
-| **Default assistant** | No | The assistant normally assigned. It pre-fills every trip. |
-| **Active** | — | Leave on for routes in service. Turn off to retire a route. |
+| **Default assistant** | No | The bus monitor normally assigned. It pre-fills every trip. |
+| **Active** | — | Leave on for routes in service. Inactive routes get no daily trips. |
 </Step>
 
 </Steps>
@@ -73,21 +74,22 @@ Complete the fields below, then save.
 <Step>
 ### Open the route and add a stop
 
-Open the route you just created and click **Add stop**.
+Select the route in the list to open it, then click **Add stop**.
 </Step>
 
 <Step>
 ### Place the stop and fill in its details
 
-Click the map to drop a pin at the stop's location, then complete the fields.
+Click the map to drop a pin at the stop's location (drag the pin to refine it), then complete
+the fields.
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Name** | Yes | The stop's name, e.g. *Main Square*. |
+| **Stop name** | Yes | The stop's name, e.g. *Main Square*. |
 | **Address** | Yes | The street address of the stop. |
-| **Location on map** | Yes | Click the map to set the pin. The location is used to show the stop and to detect its pricing zone. |
+| **Location on map** | Yes | Click the map to set the pin. |
 | **Planned time** | No | When the bus is due at this stop. It also sets the stop's order in the route. |
-| **Zone** | No | The pricing zone this stop belongs to (see Step 3). |
+| **Zone** | Yes | The transport zone of this stop (see Step 3), or **No zone — use level default fee**. |
 
 <Screenshot
   label="Add stop dialog with the map picker"
@@ -98,7 +100,8 @@ Click the map to drop a pin at the stop's location, then complete the fields.
 <Step>
 ### Repeat for every stop
 
-Add each stop in the order the bus visits it. The school stop is added for you automatically.
+Add each stop the bus visits. The school stop is added for you; use **Set time** on it to give
+it a planned time.
 </Step>
 
 </Steps>
@@ -108,31 +111,47 @@ You don't drag stops to reorder them. Set each stop's **planned time** and the r
 in time order automatically. Stops without a planned time are placed at the end.
 </Callout>
 
-## Step 3 (optional) — Set up pricing zones
+### Work with a route
 
-A **zone** is an area with its own transport fee. Group your stops into zones so that everyone
-boarding in the same area is charged the same amount.
+Once a route has stops, its page gives you a few more tools:
+
+- **Suggest times** — proposes a planned time for every stop along the road. Review the
+  proposed times, then click **Apply**.
+- **Optimize order** — proposes a better stop order with matching times. Review it, then click
+  **Apply**.
+- **Route line** — choose which road line the map shows: **Recommended**, **Fastest**, or
+  **Shortest**.
+- **Stop menu (⋯)** — **Manage students** at this stop, **Edit stop**, or **Delete stop**.
+- **Assigned crew** — shows the route's default driver, assistant, and vehicle, with its seat
+  count.
+- **Export PDF** — downloads the route's boarding list: each stop and the students who use it.
+
+## Step 3 (optional) — Set up transport zones
+
+A **zone** is an area with its own monthly transport fee. Group your stops into zones so that
+everyone boarding in the same area is charged the same amount.
 
 <Steps>
 
 <Step>
 ### Create a zone
 
-Go to **Transport → Zones**, then click **Add zone** and complete the fields.
+Go to **Operations → Transport zones**, then click **New zone** and complete the fields.
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Name** | Yes | The zone's name, e.g. *Inner city*. |
-| **Code** | No | A short code, unique within the year, e.g. *Z1*. |
-| **Color** | No | A colour for the zone's stop markers on the map and roster badges. |
-| **Fee amount** | Yes | The monthly transport fee charged to students whose stop is in this zone. |
+| **Zone name** | Yes | The zone's name, e.g. *Inner city*. |
+| **Code** | No | A short code, e.g. *Z1*. |
+| **Color** | No | A colour for the zone's stop markers on the map. |
+| **Fee (per month)** | Yes | The monthly transport fee for students whose stop is in this zone. |
 </Step>
 
 <Step>
-### Assign stops to the zone
+### Put stops in the zone
 
-Open a stop and choose its **Zone**, or use the **Stops by zone** view to assign several at
-once. When you place a pin on the map, the matching zone can also be detected automatically.
+You choose each stop's zone yourself — it is not detected from the map. Either pick the
+**Zone** when you add or edit a stop, or use the **Stops by zone** table on the Transport zones
+page, where you change the zone of one stop at a time.
 </Step>
 
 </Steps>
@@ -147,10 +166,10 @@ once. When you place a pin on the map, the matching zone can also be detected au
 
 ## Tips and best practices
 
-- Create a **pickup** and a **dropoff** route per area, and give the pair the same colour so
+- Create a **pickup** and a **drop-off** route per area, and give the pair the same colour so
   they're easy to recognise.
-- Fill in **planned times** even if they're approximate — they drive the stop order and help
-  drivers stay on schedule.
+- Fill in **planned times** even if they're approximate, or use **Suggest times** — they drive
+  the stop order and help drivers stay on schedule.
 - Set a **default vehicle and crew** on the route so daily trips need no extra setup.
 
 ## Common use cases
@@ -159,26 +178,27 @@ once. When you place a pin on the map, the matching zone can also be detected au
 - **Same-area pricing** — create a zone and put the area's stops in it so families pay the same
   fee.
 - **Seasonal change** — turn a route inactive instead of deleting it to keep its history.
+- **Paper list for the bus** — use **Export PDF** to print the boarding list.
 
 ## Frequently asked questions
 
 ### How do I set up a school bus route for the first time?
 
-Create a route (Transport → Routes → Add route), choose its direction (Pickup or Dropoff), then
-add stops one by one by dropping a pin on the map for each location. Set a planned time for each
-stop — this sets the stop order and gives drivers a schedule to follow. Once stops are in place,
-assign students to their stops and create trips to run the route.
+Go to **Operations → Routes → New route**, choose its direction, then add stops one by one by
+dropping a pin on the map for each location. Set a planned time for each stop, or use
+**Suggest times**. Then put students on their stops. Trips are created automatically on every
+school day.
 
-### Do I need separate routes for morning pickup and afternoon dropoff?
+### Do I need separate routes for morning pickup and afternoon drop-off?
 
-Yes. A route has a single direction — Pickup (home → school) or Dropoff (school → home). Create
-one Pickup route and one matching Dropoff route per area. Giving them the same colour makes the
-pair easy to recognise on the map.
+Yes. A route has a single direction — **Pickup (home → school)** or **Drop-off (school → home)**.
+Create one pickup route and one matching drop-off route per area. Giving them the same colour
+makes the pair easy to recognise on the map.
 
 ### How many stops can I add to a route?
 
 There is no fixed limit. Add as many stops as your route needs. The school stop is always added
-automatically — at the end of a Pickup route and at the start of a Dropoff route.
+automatically — at the end of a pickup route and at the start of a drop-off route.
 
 ### Why doesn't the road line include the school?
 
@@ -189,24 +209,24 @@ suggested times and optimized order also leave the school out.
 
 ### How do I reorder stops?
 
-Set each stop's **planned time**. The route lists stops in time order automatically. You don't
-drag stops to reorder them — update the planned times instead.
+Set each stop's **planned time** — the route lists stops in time order. Or click
+**Optimize order**, review the proposed order, and click **Apply**.
 
-### What is a pricing zone and do I need one?
+### What is a transport zone and do I need one?
 
-A pricing zone is optional. It groups stops in an area so that every student boarding at a stop
-in that zone is charged the same monthly transport fee. If all students pay the same fee
-regardless of distance, you don't need zones — use the level's default transport fee instead.
+A zone is optional. It groups stops in an area so that every student boarding at a stop in that
+zone is charged the same monthly transport fee. If all students pay the same fee regardless of
+distance, you don't need zones — use the level's default transport fee instead.
 
-### Can the same route be used across multiple academic years?
+### Do I have to rebuild routes every academic year?
 
-Routes are scoped to an academic year. When you set up a new year, carry over routes by
-duplicating or recreating them. Trip history from previous years is preserved under the old year.
+No. The **Set up transport** step of the new year's setup copies last year's routes and zones,
+and suggests stops for returning riders. Past trips stay available in the previous year.
 
 ### How do parents know which stop to use?
 
-When a student is assigned to a stop on a route, parents can see the stop name and location in
-the School Bus section of the app. The stop also appears on the live tracking view during a trip.
+While their child's bus is running, parents see their stop (**Your stop**) on the map in
+**My child's bus** on the web, or **School bus** in the mobile app.
 
 ## Related articles
 

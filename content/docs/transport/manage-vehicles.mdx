@@ -14,9 +14,9 @@ Administrators and transport coordinators managing the school fleet.
 
 ## Before you start
 
-- The **Transport module** must be enabled.
-- Have each vehicle's details handy: registration (plate) number, make and model, and seat
-  count.
+- The **Transport** module must be turned on.
+- Have each vehicle's details handy: registration (plate) number, brand and model, fuel type,
+  seat count, and odometer reading.
 
 ## Add a vehicle
 
@@ -25,7 +25,7 @@ Administrators and transport coordinators managing the school fleet.
 <Step>
 ### Open the fleet
 
-Go to **Transport** and open the **Vehicles** (Fleet) list, then click **Add vehicle**.
+Go to **Operations → Vehicles**, then click **Add Vehicle**.
 
 <Screenshot
   label="Vehicles list with the Add vehicle button"
@@ -36,41 +36,45 @@ Go to **Transport** and open the **Vehicles** (Fleet) list, then click **Add veh
 <Step>
 ### Fill in the vehicle details
 
-Complete the fields below, then save.
+All fields are required. Complete them, then click **Submit**.
 
-| Field | Required | Notes |
-| --- | --- | --- |
-| **Type** | Yes | The kind of vehicle, e.g. *Bus*, *Minibus*, or *Car*. |
-| **Brand** | No | The manufacturer, e.g. *Mercedes*, *Toyota*. |
-| **Model** | No | The model name. |
-| **Registration number** | Yes | The license-plate number that identifies the vehicle. |
-| **Fuel type** | No | The kind of fuel the vehicle runs on. |
-| **Seats** | Yes | How many passengers the vehicle holds. Used as a capacity reference. |
-| **Initial mileage** | No | The odometer reading when you start tracking the vehicle. |
-| **Current mileage** | No | The latest odometer reading. |
-| **Active** | — | Leave on for vehicles in service. Turn off to retire a vehicle without deleting it. |
+| Field | Notes |
+| --- | --- |
+| **Registration Number** | The license-plate number that identifies the vehicle. |
+| **Type** | The kind of vehicle, e.g. *Bus*, *Minibus*, or *Car*. |
+| **Brand** | The manufacturer, e.g. *Mercedes*, *Toyota*. |
+| **Model** | The model name. |
+| **Fuel Type** | The kind of fuel the vehicle runs on. |
+| **Initial Mileage** | The odometer reading when you start tracking the vehicle. |
+| **Current Mileage** | The latest odometer reading. |
+| **Seats** | How many passengers the vehicle holds. Shown next to the vehicle on routes as a capacity reference. |
 </Step>
 
 <Step>
 ### Repeat for every vehicle
 
 Add each bus and car in your fleet. They become available to pick when you build routes and
-when trips are created.
+when you change the crew on a trip.
 </Step>
 
 </Steps>
 
+<Callout title="Adding many vehicles at once">
+Click **Import** to add several vehicles from a spreadsheet file instead of one by one.
+</Callout>
+
 ## Track a vehicle's costs
 
-Open a vehicle to see tabs for the running costs you can log against it:
+Open a vehicle (**View Details** in its row menu) to see tabs for the running costs you can log
+against it:
 
-| Cost record | What it tracks |
+| Tab | What it tracks |
 | --- | --- |
 | **Fuel** | Each refuel and its cost. |
 | **Maintenance** | Service and repair records. |
 | **Insurance** | Insurance policies and their expiry dates. |
 | **Vignette** | Road tax / vignette and its renewal. |
-| **Technical inspection** | Roadworthiness inspections and when they expire. |
+| **Technical Inspection** | Roadworthiness inspections and when they expire. |
 
 <Callout title="Tip">
 Recording insurance, vignette, and inspection dates lets the school be reminded before a
@@ -79,14 +83,15 @@ vehicle's documents expire, so a bus is never on the road without valid papers.
 
 ## Retire a vehicle
 
-To take a vehicle out of service, edit it and turn **Active** off. The vehicle stays in your
-records and on past trips, but it no longer appears when you assign vehicles to new routes or
-trips. This is safer than deleting, which would remove its cost history.
+To take a vehicle out of service, open its row menu and choose **Deactivate**. The vehicle stays
+in your records and on past trips, but it no longer appears when you pick a vehicle for a route
+or a trip. Choose **Activate** to bring it back. This is safer than deleting, which would remove
+its cost history.
 
 ## Common use cases
 
 - **New bus arrives** — add it to the fleet so it can be assigned to a route.
-- **Bus sold or scrapped** — turn it inactive to keep its history but hide it from new
+- **Bus sold or scrapped** — deactivate it to keep its history but hide it from new
   assignments.
 - **Cost reporting** — log every refuel and service so you can see what each vehicle costs to
   run.

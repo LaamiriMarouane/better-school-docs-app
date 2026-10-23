@@ -1,14 +1,19 @@
 ---
 title: Billing configuration
-description: Control when billing cycles start and when charges are applied.
+description: Control when installments fall due and what a student who joins mid-month pays.
 ---
 
 **Billing configuration** sets the rules behind how a student's fees turn into
-installments — when each billing cycle begins and when charges are applied. It is set
-once and affects how schedules are generated from then on.
+installments — which day installments fall on, when charges apply, and what a student who
+joins mid-month pays. It applies to the schedules created from then on.
 
 <Callout title="Who this is for">
-Administrators — only administrators can change billing configuration.
+Administrators — only administrators can change billing settings.
+</Callout>
+
+<Callout title="Not your subscription">
+This page is about **when student fee installments fall due**. Your school's own
+subscription is managed under [Billing & Subscription](./billing-subscription).
 </Callout>
 
 ## Settings
@@ -17,33 +22,38 @@ Go to **Settings → Finance** and open the **Billing** tab to set the options b
 
 | Setting | What it controls |
 | --- | --- |
-| **Billing cycle anchor** | The day installments fall on. **1st of each month**, **Student enrollment date** (that day every month), or a **custom day** from 1 to 28. |
-| **Custom anchor day** | Used only when the anchor is a custom day. |
-| **Charge timing** | **In advance** charges at the start of the period. **In arrears** charges at the end, and skips a period whose anchor already passed before the student joined. |
+| **Billing Cycle Anchor** | The day installments fall on. **1st of each month**, **Student enrollment date** (that day every month), or **Custom day of month**. |
+| **Custom Anchor Day** | The day (1 to 28) used when the anchor is a custom day. |
+| **Charge Timing** | **In advance** charges at the start of the period. **In arrears** charges at the end, and skips a period whose due day already passed before the student joined. |
+| **Student joining mid-month** | What a student who joins after the month's due day pays for that first month (monthly fees): **Full month** (the default), **Only the days left (prorated)**, or **Start next month**. |
 
 Adjust the settings, then click **Save**.
 
-<Callout type="warn" title="Set this before generating fees">
-Billing configuration shapes how installments are generated. Set it before creating
-payment plans and enrolling students so every schedule follows the same rules.
+<Callout type="warn" title="Set this before enrolling students">
+These settings shape how installments are created. Set them before creating payment plans
+and enrolling students so every schedule follows the same rules.
 </Callout>
 
 ## How a due date is chosen
 
-The anchor is the due day, including for the month the student joins.
+Billing starts at the student's **enrollment date**. After that, installments fall on the
+anchor day.
 
-With **1st of each month** and **in advance**, a student who enrolls on 3 October is
-not billed for September. October is due on **1 October**, and that row is already
-overdue. November through the end of the year are also due on the 1st.
+With **1st of each month**, **In advance**, and **Full month**, a student who enrolls on
+3 October is not billed for September. October is due on **3 October**, the joining day,
+so nothing is overdue on day one. November through the end of the year are due on the 1st.
+
+With **Start next month**, October is not billed and the first installment is due on
+1 November. With **Only the days left (prorated)**, October is reduced to the days left and
+due on 3 October.
 
 **In arrears** with the same anchor skips October. The first due date is 1 November.
 
-A plan change uses these same rules, but the new schedule starts from **today**. Unpaid
-rows of the old plan, including overdue ones, are removed. The worked examples are in
+The worked examples, including what happens when you change a student's plan, are in
 [Installments and schedules](../finance/fees-and-payments/installments-and-schedules).
 
 ## Related articles
 
 - [Fiscal years](./fiscal-year)
-- [Billing & Subscription](./billing-subscription) — your school's BetterSchool SaaS plan
+- [Billing & Subscription](./billing-subscription) — your school's own subscription
 - [Installments and schedules](../finance/fees-and-payments/installments-and-schedules)

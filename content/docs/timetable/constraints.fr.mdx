@@ -1,83 +1,111 @@
 ---
 title: Contraintes
-description: Comprenez les règles que le générateur respecte toujours, et ajustez les préférences qui rendent un emploi du temps bon — trous, stabilité des salles, espacement des matières, et plus.
+description: Voyez les règles que le générateur respecte toujours, et ajustez dans la Politique du solveur les préférences qui rendent un emploi du temps bon — trous, stabilité des salles, espacement des matières, et plus.
 ---
 
-Une **contrainte** est une règle que le générateur prend en compte lorsqu'il construit l'emploi du
-temps. Il en existe deux types, et comprendre la différence est la clé pour obtenir l'horaire que
-vous souhaitez.
+Le générateur suit deux types de règles. Certaines sont **toujours respectées** et ne peuvent pas
+être désactivées. Les autres sont des **préférences** que vous ajustez pour chaque groupe d'emploi
+du temps dans la **Politique du solveur** : vous activez ou désactivez chacune et décidez de son
+importance.
 
 <Callout title="Pour qui">
 Les administrateurs qui ajustent le comportement du générateur d'emploi du temps.
 </Callout>
 
-## Règles fermes et préférences souples
-
-- Les **règles fermes** sont ce que l'emploi du temps ne doit *jamais* enfreindre. Le générateur
-  ne produira pas d'horaire qui en viole une. La plupart viennent de la réalité (voir
-  [Réglages de planification](./scheduling-setup)) et de la structure (pas de double réservation).
-- Les **préférences souples** rendent un emploi du temps *bon* plutôt que seulement valide — éviter
-  les trous, garder une classe dans une salle, espacer les matières exigeantes. Le générateur en
-  satisfait autant qu'il peut, et vous décidez de **l'importance de chacune**.
-
-Le générateur satisfait toujours d'abord chaque règle ferme, puis rend les préférences souples
-aussi satisfaites que possible.
-
 ## Les règles toujours respectées
 
-Vous ne les configurez pas — elles sont toujours actives, de sorte qu'un emploi du temps activé est
-toujours cohérent :
+Vous ne les configurez pas dans la Politique du solveur — le générateur les suit toujours :
 
-- Aucune **classe**, aucun **enseignant**, aucune **salle** n'est jamais à deux endroits à la fois.
-- Aucune séance n'est placée à un moment où vous avez marqué un **enseignant ou une salle indisponible**.
+- Aucune **classe**, aucun **enseignant**, aucune **salle** n'est à deux endroits à la fois.
+- Aucune séance n'est placée quand son **enseignant**, sa **salle** ou sa **classe** est marqué
+  indisponible (voir [Réglages de planification](./scheduling-setup)).
+- Chaque enseignant reste dans ses **Heures max. par jour** et **Heures max. par semaine**.
 - Une salle n'est jamais utilisée **au-delà de sa capacité**, et une matière n'utilise que des
   salles du **bon type**.
-- Aucune séance n'est placée par-dessus une **pause**.
-- Les restrictions de **salles autorisées** (salles d'enseignant, salles de matière) sont
-  respectées.
+- Aucune séance n'est placée par-dessus une **pause**, et une séance longue occupe toujours un seul
+  bloc de créneaux sans interruption.
+- Une classe n'a jamais deux séances distinctes de la même matière le même jour (une séance double
+  compte pour une).
+- Une matière n'est jamais placée sur ses **heures interdites**.
+- Les enseignants n'utilisent que les salles de leurs **Salles autorisées**, et les classes
+  utilisent les salles que vous réglez dans **Salles attitrées**.
+- Les séances liées en **Même créneau** ont lieu en même temps.
 - Les séances **épinglées** restent exactement là où vous les avez placées.
 
-## Préférences ajustables
+Si le générateur ne peut pas placer une séance sans enfreindre l'une de ces règles, il la laisse
+non placée et vous explique pourquoi. Voir [Générer et activer](./generate-and-publish).
+
+## Ouvrir la Politique du solveur
 
 Ouvrez un **groupe d'emploi du temps** (**Académique → Emploi du temps → Groupes** → ouvrir le
-groupe), puis utilisez **Actions → Politique du solveur**. Les préférences sont regroupées en onglets. Pour
-chacune, vous pouvez :
+groupe), cliquez sur le menu **⋯** dans l'en-tête du groupe et choisissez **Politique du solveur**.
+Les règles sont regroupées en onglets : **Enseignants**, **Classes**, **Matières** et **Cours**.
 
-- **L'activer ou la désactiver.**
-- **Régler son importance** (son poids) — plus elle est élevée, plus le générateur s'efforce de la
-  satisfaire, même au détriment de préférences moins prioritaires.
+Chaque préférence comporte :
+
+- un **interrupteur** marche/arrêt,
+- une valeur à régler quand la règle en a besoin (par exemple **Trou max**),
+- un sélecteur d'**importance** — plus elle est élevée, plus le générateur s'efforce de satisfaire
+  cette préférence par rapport aux autres,
+- **Réinitialiser au baseline** pour ramener cette ligne à sa valeur par défaut.
+
+Cliquez sur **Enregistrer** dans la barre en bas de l'onglet pour garder vos modifications, ou sur
+**Annuler** pour les abandonner.
 
 ### Enseignants
 
 | Préférence | Ce qu'elle fait |
 | --- | --- |
-| **Trous des enseignants** | Évite les créneaux libres entre les séances d'un enseignant le même jour. Vous pouvez régler le nombre de trous tolérés, globalement ou par enseignant. |
-| **Limite quotidienne / hebdomadaire** | Maintient chaque enseignant dans ses heures max. par jour et par semaine. |
-| **Séances min. par jour** | Si un enseignant est présent un jour, garantit un nombre minimal de séances. |
-| **Séances min. par demi-journée** | La même chose, par matin ou après-midi (nécessite le séparateur de demi-journée). |
-| **Stabilité de salle (enseignant)** | Tente de garder un enseignant dans la même salle au fil de la journée. |
+| **Réduire les trous des enseignants** | Évite les créneaux libres entre les séances d'un enseignant le même jour. Réglez le nombre de trous tolérés avec **Trou max**. |
+| **Minimum de périodes par jour (enseignant)** | Si un enseignant vient un jour, il a au moins ce nombre de créneaux ce jour-là. |
+| **Minimum de périodes par demi-journée (enseignant)** | La même chose, par matin ou après-midi (nécessite la séparation demi-journée). |
+| **Stabilité de salle (enseignant)** | Tente de garder un enseignant dans la même salle sur des séances consécutives. |
 
 ### Classes
 
+L'onglet **Classes** comporte deux sous-onglets :
+
+- **Périodes min** — le minimum de créneaux par jour et par demi-journée pour chaque niveau, avec
+  des exceptions facultatives par classe (**Revenir au niveau** retire une exception). Cochez
+  plusieurs niveaux ou classes pour les régler ensemble.
+- **Règles de contrainte** — les préférences de classe ci-dessous.
+
 | Préférence | Ce qu'elle fait |
 | --- | --- |
-| **Trous des classes** | Garde la journée d'une classe compacte, en évitant les créneaux libres entre les séances. |
-| **Stabilité de salle (classe)** | Tente de garder une classe dans sa propre salle pour la plupart des séances, pour que les élèves ne se déplacent pas sans cesse. |
-| **Séances min. par jour / demi-journée** | Évite qu'une classe ait une journée ou demi-journée presque vide. |
+| **Réduire les trous des classes** | Garde la journée d'une classe compacte, en évitant les créneaux libres entre les séances. |
+| **Stabilité de salle (classe)** | Tente de garder une classe dans la même salle sur des séances consécutives. |
+| **Minimum de périodes par jour (classe)** | Évite qu'une classe ait une journée presque vide. |
+| **Minimum de périodes par demi-journée (classe)** | Évite une matinée ou un après-midi presque vide. |
 
 ### Matières
 
-| Préférence | Ce qu'elle fait |
+| Sous-onglet | Ce que vous réglez |
 | --- | --- |
-| **Incompatibilité de matières** | Éloigne deux matières — par exemple, pas le même jour ou la même demi-journée. |
-| **Ordre des matières (chaînes)** | Encourage une relation entre deux matières, comme l'une juste après l'autre, ou les deux le même jour. |
-| **Horaires interdits par matière** | Empêche une matière d'être placée sur certains créneaux — par exemple, pas d'EPS en première heure. |
+| **Heures interdites** | Choisissez une matière et marquez les créneaux qu'elle ne doit jamais utiliser — par exemple pas d'EPS en première heure. Toujours respecté. |
+| **Incompatibilités** | Choisissez une matière et les matières avec lesquelles elle ne doit pas partager le même jour ou la même demi-journée. La ligne **Incompatibilité de matières** règle si cette préférence est active et son importance. |
+| **Chaînes** | Ajoutez des paires de matières qui doivent se suivre ou partager un jour (**Ajouter un lien**). La ligne **Chaînes de matières** règle si cette préférence est active et son importance. |
 
-### Séances
+### Cours
 
-| Préférence | Ce qu'elle fait |
+Liez des séances précises avec **Ajouter un lien de leçon**, ou utilisez **Faire deux matières en
+parallèle** pour associer les groupes d'une classe divisée dans plusieurs classes à la fois. Les
+liens ont quatre modes :
+
+| Mode | Signification |
 | --- | --- |
-| **Liens de séances** | Respecte les liens que vous avez définis entre des séances précises — même créneau, à la suite, même jour ou même demi-journée. Voir [Séances et affectations](./lessons-and-assignments). |
+| **Même créneau** | Deux séances ont lieu en même temps, pour des groupes différents d'une classe. Toujours respecté. |
+| **Consécutifs** | Deux séances ont lieu sur des créneaux consécutifs. |
+| **Même journée** | Deux séances tombent le même jour. |
+| **Même demi-journée** | Deux séances tombent dans la même matinée ou le même après-midi. |
+
+Les liens **Consécutifs**, **Même journée** et **Même demi-journée** suivent tous la ligne
+**Séquence des cours** : son interrupteur et son importance s'appliquent à tous ensemble. Voir
+[Séances et affectations](./lessons-and-assignments).
+
+<Callout title="Les règles guident le générateur, pas vos mains">
+La Politique du solveur n'agit que sur **Générer**. Quand vous déplacez des séances à la main, les
+liens et les préférences ne bloquent jamais le déplacement.
+</Callout>
 
 ## Bien régler l'importance
 
@@ -86,23 +114,24 @@ chacune, vous pouvez :
 - **Ne mettez pas tout au maximum.** Les préférences se concurrencent — si tout est « le plus
   important », rien ne l'est. N'augmentez que les quelques préférences essentielles pour votre
   école.
-- **Soyez prudent en rendant une préférence stricte.** Certaines peuvent devenir des règles fermes.
-  Si une préférence stricte entre en conflit avec la réalité (disponibilité, salles), le générateur
-  peut être incapable de construire un emploi du temps — il vous le signalera.
+- **Des règles serrées laissent des séances non placées.** Beaucoup d'heures interdites ou
+  d'incompatibilités peuvent ne plus laisser de place à certaines séances. Le panneau des séances
+  non placées vous indique quand une règle de matière en est la cause.
 
 <Callout title="Réglages par enseignant">
-Quelques préférences peuvent être réglées par enseignant en plus du global — par exemple un
-enseignant qui ne peut vraiment pas avoir de trous. Le réglage par enseignant l'emporte pour lui.
-Définissez-les dans [Réglages de planification](./scheduling-setup).
+**Périodes de pause max**, **Périodes min par jour** et **Périodes min par demi-journée** peuvent
+aussi être réglées pour un enseignant dans [Réglages de planification](./scheduling-setup) →
+**Enseignants** → **Limites**. La valeur propre à l'enseignant l'emporte pour lui.
 </Callout>
 
 ## Cas d'usage courants
 
-- **Journées compactes** — augmentez *Trous des classes* pour que les élèves n'aient pas de
-  créneaux vides.
-- **Espacer les matières exigeantes** — utilisez *Incompatibilité de matières* pour éviter deux
-  matières difficiles le même jour.
-- **Labo après le cours** — liez les deux séances et gardez le lien comme préférence forte.
+- **Journées compactes** — augmentez *Réduire les trous des classes* pour que les élèves n'aient
+  pas de créneaux vides.
+- **Espacer les matières exigeantes** — utilisez *Incompatibilités* pour éviter deux matières
+  difficiles le même jour.
+- **Labo après le cours** — liez les deux séances en **Consécutifs** et augmentez *Séquence des
+  cours*.
 
 ## Articles liés
 

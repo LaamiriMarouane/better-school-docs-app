@@ -1,10 +1,10 @@
 ---
 title: Set up fees
-description: Give a service a price for a level, with a periodicity that drives the installment schedule.
+description: Price a service — one amount or an amount per level — with a periodicity that drives the installment schedule.
 ---
 
-A **fee** is a priced rule. It says: *this service*, at *this level*, costs *this
-amount*, charged at *this periodicity*. Fees are what payment plans are built from.
+A **fee** prices a service. It says: *this service* costs *this amount* for *these
+levels*, charged at *this periodicity*. Fees are what payment plans are built from.
 
 <Callout title="Who this is for">
 Administrators pricing the school's services.
@@ -13,7 +13,7 @@ Administrators pricing the school's services.
 ## Before you start
 
 - The **service** must already exist — see [Create services](./create-services).
-- The **levels** must exist — a fee is priced per level.
+- The **levels** must exist.
 
 <Screenshot
   label="Fees page with the Add Fee button"
@@ -27,7 +27,7 @@ Administrators pricing the school's services.
 <Step>
 ### Open the Fees page
 
-Go to **Finance → Fees**, then start a new fee.
+Go to **Finance → Fees**, then click **Add Fee**.
 
 <Screenshot
   label="Create fee form"
@@ -36,33 +36,62 @@ Go to **Finance → Fees**, then start a new fee.
 </Step>
 
 <Step>
-### Fill in the fee details
-
-Complete the fields below, then save.
+### Name the fee and pick the service
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Name** | Yes | The display name, e.g. *Grade 1 Tuition*. |
+| **Name** | Yes | The display name, e.g. *Primary tuition*. |
 | **Service** | Yes | The service this fee prices. |
-| **Level** | Yes | The level the fee applies to. |
-| **Periodicity** | Yes | How often it is charged — for example monthly or one-time. This shapes the installment schedule. |
-| **Amount** | Yes | The price. Must be greater than zero. |
+| **Description** | No | Optional notes. |
 </Step>
 
 <Step>
-### Repeat per level
+### Choose the pricing
 
-Create a fee for each service-and-level combination your school charges.
+Under **Pricing**, pick one:
+
+| Pricing | What you fill in |
+| --- | --- |
+| **Flat** | The **Levels** the fee applies to, and one **Amount** for all of them. |
+| **Per level** | The levels to price, then an amount for each one. **Set all to** fills every level with the same amount, which you can then adjust. |
+</Step>
+
+<Step>
+### Choose the periodicity
+
+| Periodicity | What the student is charged |
+| --- | --- |
+| **Monthly** | One installment per month. |
+| **Quarterly** | One installment every three months. |
+| **Termly** | One installment per term, due on the term's first day. |
+| **Yearly** or **One Time** | A single installment. |
+
+For **Yearly** and **One Time** fees you can also set a **Pay by** date (useful for
+uniforms, books, or a trip). Leave it empty and the fee is due the day the student is
+billed.
+</Step>
+
+<Step>
+### Save
+
+Click **Create Fee**. Add a fee for each service your school charges.
 </Step>
 
 </Steps>
 
+## Editing a fee that is in use
+
+- Once a fee is on a payment plan or has been billed, you can no longer change its
+  **Periodicity** or switch between **Flat** and **Per level**. You can still change the
+  amounts and add levels, but not remove levels that are already priced.
+- When you change the amount, the app asks **Apply the new price?** Unpaid installments
+  that are not yet due take the new price. Paid installments, and those already due, keep
+  their price.
+
 <Callout title="Periodicity drives installments">
-The **periodicity** determines how many installments a student gets for that fee — a
-monthly fee produces one installment per billed month, a one-time fee a single
-installment. Which months are included, and the exact due dates, follow the enrollment
-date and the billing configuration — see
-[Installments and schedules](./installments-and-schedules).
+The **periodicity** decides how many installments a student gets for that fee. Which
+months are included, and the exact due dates, follow the enrollment date and the billing
+settings — see [Installments and schedules](./installments-and-schedules).
 </Callout>
 
 ## Related articles

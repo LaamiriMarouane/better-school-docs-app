@@ -1,29 +1,57 @@
 ---
 title: Groupes d'emploi du temps
-description: Comprenez le modèle hebdomadaire qui regroupe des niveaux pour une période — pourquoi en créer plusieurs, et quelles actions sont disponibles.
+description: Comprenez le modèle hebdomadaire qui regroupe des niveaux pour un trimestre — pourquoi en créer plusieurs, ses statuts, et les actions disponibles.
 ---
 
-Un **groupe d'emploi du temps** est un **modèle hebdomadaire** pour une **période** et un ensemble
+Un **groupe d'emploi du temps** est un **modèle hebdomadaire** pour un **trimestre** et un ensemble
 choisi de **niveaux**. Il contient le plan de semaine qui se répète (quelle classe a quelle
 matière, enseignant, salle et créneau) et les règles utilisées pour le construire. C'est le
 *motif* de la semaine — pas encore une séance datée un jour précis du calendrier.
 
 <Callout title="Pour qui">
-Les planificateurs pédagogiques et administrateurs qui organisent et comparent les horaires.
+Les planificateurs pédagogiques et administrateurs qui organisent et comparent les horaires de
+l'école.
 </Callout>
 
 ## Qu'est-ce qu'un groupe
 
 | Élément | Signification |
 | --- | --- |
-| **Nom** | Un libellé de votre choix, ex. *Période 1 — Primaire* ou *Option B — vendredi court*. |
-| **Période** | La période à laquelle appartient ce plan hebdomadaire. |
-| **Niveaux** | Les niveaux couverts par ce groupe. |
-| **Configuration** | Les jours, heures et pauses de la semaine de ce groupe. Voir [Configuration de l'emploi du temps](./timetable-config). |
-| **Grille hebdomadaire** | L'horaire rempli (ou brouillon) de chaque classe de ces niveaux. |
+| **Nom** | Un libellé de votre choix, ex. *Trimestre 1 — Primaire* ou *Option B — vendredi court*. |
+| **Trimestre** | Le trimestre pour lequel ce plan hebdomadaire est fait. |
+| **Niveaux et filières** | Les niveaux (et filières) couverts par ce groupe. |
+| **Configuration de l'emploi du temps** | Les jours, heures et pauses de la semaine de ce groupe. Voir [Configuration de l'emploi du temps](./timetable-config). |
+| **Grille hebdomadaire** | L'horaire rempli (ou partiellement rempli) de chaque classe de ces niveaux. |
 
-Lorsque vous **activez** le groupe plus tard, le modèle hebdomadaire devient de vraies
-**séances de classe** avec dates et heures. Voir [Activer et séances de classe](./activate-and-sessions).
+Lorsque vous **activez** le groupe, le modèle hebdomadaire devient de vraies **séances de classe**
+avec dates et heures. Voir [Activer et séances de classe](./activate-and-sessions).
+
+## Créer un groupe
+
+<Steps>
+
+<Step>
+### Ouvrir la page Groupes
+
+Allez dans **Académique → Emploi du temps → Groupes** et cliquez sur **Ajouter un groupe d'emploi
+du temps**.
+</Step>
+
+<Step>
+### Remplir le formulaire
+
+Saisissez le **Nom**, choisissez le **Trimestre**, les **Niveaux et filières** et la
+**Configuration de l'emploi du temps**. Ajoutez une **Description** si vous le souhaitez.
+</Step>
+
+<Step>
+### Créer
+
+Cliquez sur **Créer un groupe d'emploi du temps**. Le groupe démarre en **Brouillon**. Ouvrez-le
+pour générer ou construire la semaine.
+</Step>
+
+</Steps>
 
 ## Pourquoi créer plusieurs groupes
 
@@ -31,45 +59,86 @@ Raisons courantes :
 
 - **Séparer les niveaux** — le niveau 1 a une forme de journée (heures et pauses) ; les niveaux
   2–3 en ont une autre. Chaque groupe pointe vers la [configuration](./timetable-config) adaptée.
-- **Variantes et essais** — construisez *Option A* et *Option B*, comparez, et n'activez que
-  celle choisie. Les brouillons restent invisibles pour les enseignants et les familles.
+- **Variantes et essais** — construisez *Option A* et *Option B*, comparez-les, et n'activez que
+  celle choisie. Les groupes en brouillon restent invisibles pour les enseignants et les familles.
 - **Semaines spéciales** — un motif différent pour une semaine d'examens ou une semaine courte,
   tout en gardant la semaine normale dans un autre groupe.
-
-Vous pouvez aussi **cloner** un groupe en nouveau brouillon pour garder les mêmes règles avec une
-grille vide et tester un nouvel arrangement.
-
-## Où vivent les groupes
-
-Allez dans **Académique → Emploi du temps → Groupes**. Ouvrez un groupe pour éditer sa grille,
-lancer le générateur, régler les contraintes, ou changer son statut.
 
 ## Statuts d'un groupe
 
 | Statut | Signification |
 | --- | --- |
-| **Brouillon** | Visibles et modifiables seulement par les planificateurs. Pas en production. |
-| **Actif** | Le plan hebdomadaire en vigueur pour ses niveaux. Crée des [séances de classe](./activate-and-sessions). |
-| **Inactif** | Ne génère plus de séances ; l'édition redevient possible après désactivation. |
-| **Archivé** | Conservé pour l'historique ; plus le plan en vigueur. |
+| **Brouillon** | Pas en vigueur. Les planificateurs peuvent le générer et le modifier à la main. |
+| **Actif** | Le plan hebdomadaire en vigueur pour ses niveaux. Crée des [séances de classe](./activate-and-sessions). En lecture seule tant qu'il est actif. |
+| **Archivé** | A été actif puis a été remplacé ou désactivé. Vous pouvez encore le modifier à la main et l'activer de nouveau, mais vous ne pouvez pas lancer le générateur dessus. |
 
-**Verrouillé** peut s'ajouter à un statut : tant que c'est verrouillé, vous ne pouvez pas glisser
-des séances ni enregistrer la grille tant que vous n'avez pas déverrouillé (ou désactivé, s'il
-était actif).
+**Verrouillé** peut s'ajouter à un statut. Tant qu'un groupe est verrouillé, personne ne peut
+générer, déplacer des séances ou enregistrer des modifications de la grille avant qu'il soit
+déverrouillé.
 
-## Actions disponibles
+<Callout title="Besoin de régénérer un groupe archivé ?">
+Utilisez **Cloner en nouveau brouillon** sur ce groupe. Le clone garde les règles et les réglages
+avec une grille vide, pour que vous puissiez générer de nouveau et activer le résultat.
+</Callout>
+
+## Actions dans la liste des groupes
+
+Ouvrez le menu de la ligne (**⋯**) dans la liste **Groupes** :
 
 | Action | Quand l'utiliser |
 | --- | --- |
-| **Créer** | Démarrer un nouveau modèle hebdomadaire pour une période, des niveaux et une configuration. |
-| **Cloner en nouveau brouillon** | Copier la politique et la configuration du groupe dans un nouveau brouillon avec une grille **vide** — idéal pour une variante. |
-| **Générer** | Laisser le générateur remplir la semaine. Voir [Générer et activer](./generate-and-publish). |
-| **Modifier à la main** | Déplacer des séances, changer de salle, épingler ce que vous voulez garder. |
-| **Verrouiller / Déverrouiller** | Protéger un brouillon terminé, ou figer un groupe actif contre des modifications accidentelles. |
-| **Activer** | En faire la semaine en vigueur pour ses niveaux et créer des séances datées. |
-| **Désactiver** | Arrêter l'usage en direct, permettre de nouveau l'édition, puis réactiver. |
-| **Archiver** | Garder le groupe pour référence lorsqu'il n'est plus en vigueur. |
-| **Imprimer / vues** | Consulter ou imprimer par classe, enseignant ou salle. |
+| **Voir** | Ouvrir le groupe pour vérifier, générer ou modifier sa semaine. |
+| **Cloner en nouveau brouillon** | Créer un nouveau brouillon avec la même Politique du solveur et la même configuration, mais une grille **vide** — idéal pour une nouvelle variante. |
+| **Copier vers une autre période** | Copier la grille hebdomadaire de ce groupe vers un autre trimestre comme nouveau brouillon (voir plus bas). |
+| **Verrouiller / Déverrouiller** | Protéger un groupe terminé contre les modifications accidentelles, ou autoriser de nouveau les modifications. |
+| **Activer** | En faire la semaine en vigueur pour ses niveaux et créer des séances de classe datées. Voir [Activer et séances de classe](./activate-and-sessions). |
+| **Désactiver** | Affiché sur un groupe actif. Il n'est plus en vigueur ; il devient **Archivé**. |
+| **Supprimer** | Retirer un groupe dont vous n'avez plus besoin. Indisponible tant que le groupe est actif ou verrouillé. Vous pouvez aussi cocher plusieurs groupes et les supprimer ensemble. |
+
+**Activer** et **Désactiver** se trouvent uniquement dans cette liste, pas à l'intérieur du groupe.
+
+## Actions à l'intérieur d'un groupe
+
+Ouvrez un groupe pour travailler sur sa semaine. L'en-tête propose **Générer** (voir
+[Générer et activer](./generate-and-publish)), les vues, **Rechercher**, **Aperçus** et
+**Imprimer l'emploi du temps**. Le menu **⋯** (**Plus d'actions**) contient :
+
+- **Politique du solveur** — les règles que le générateur suit pour ce groupe. Voir
+  [Contraintes](./constraints).
+- **Verrouiller l'emploi du temps / Déverrouiller l'emploi du temps**.
+- **Effacer toutes les affectations** — vider la grille de ce groupe.
+
+## Copier un groupe vers un autre trimestre
+
+Utilisez cette action quand le trimestre suivant doit partir de la même semaine.
+
+<Steps>
+
+<Step>
+### Ouvrir la fenêtre de copie
+
+Dans la liste **Groupes**, ouvrez le menu de la ligne (**⋯**) et choisissez **Copier vers une
+autre période**.
+</Step>
+
+<Step>
+### Choisir la cible et ce qu'il faut inclure
+
+Choisissez la **Période cible** et donnez un **Nom** au nouveau groupe. Sous **Inclure**,
+choisissez ce qui accompagne la grille hebdomadaire : **Politique du solveur (règles et liens de
+cours)**, **Enseignants par leçon lorsque compatible** et **Synchroniser les affectations de
+classes vers la période cible**. Si vous synchronisez les affectations de classes, choisissez ce
+qui se passe **Lorsque la cible a déjà un enseignant** : **Conserver l'existant** ou **Remplacer**.
+</Step>
+
+<Step>
+### Vérifier l'aperçu et appliquer
+
+L'aperçu montre combien de créneaux hebdomadaires seront copiés et ce qui sera ignoré. Cliquez sur
+**Appliquer la copie**. Le nouveau groupe en brouillon s'ouvre pour que vous le vérifiiez.
+</Step>
+
+</Steps>
 
 ## Articles liés
 

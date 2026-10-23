@@ -12,123 +12,161 @@ chaque classe.
 Les administrateurs et enseignants qui conçoivent, planifient et notent les examens.
 </Callout>
 
-## Étape 1 — Créer un modèle d'examen
+## Étape 1 — Créer les modèles d'examens
 
 <Steps>
 
 <Step>
-### Ouvrir les modèles d'examens
+### Ouvrir les examens de la matière
 
-Allez dans **Évaluations → Configuration des notes**, ouvrez l'étape **Matières** et ajoutez un modèle pour une matière (à un niveau, pour une
-période).
+Allez dans **Évaluations → Configuration des notes** et ouvrez l'étape **Matières**. Choisissez le
+**Trimestre**, une matière dans la liste, la **Période de notation**, puis ouvrez l'onglet
+**Examens**.
 </Step>
 
 <Step>
-### Renseigner le modèle
+### Ajouter les examens
 
-<Callout title="Les catégories de notes doivent exister au préalable">
-Un modèle ne peut pas être créé tant qu'au moins une catégorie de notes d'examen n'a pas été
-configurée pour la matière à ce niveau. Configurez les catégories dans
-**Évaluations → Configuration des notes → Catégories de notes** avant de continuer.
+<Callout title="Les catégories d'examen d'abord">
+Les examens sont regroupés par catégorie d'examen. Si la matière n'en a pas encore, ajoutez d'abord
+une catégorie d'examen avec son poids dans l'onglet **Catégories**.
 </Callout>
 
-| Champ | Obligatoire | Remarques |
-| --- | --- | --- |
-| **Nom** | Oui | Le nom de l'examen, ex. *Partiel*. |
-| **Description** | Non | Notes facultatives. |
-| **Durée** | Oui | La durée de l'examen — 30 min, 45 min, 1 h, 1 h 30, 2 h, 2 h 30 ou 3 h. |
-| **Note maximale** | Non | La note sur laquelle l'examen est évalué. |
-| **Poids (%)** | Non | Combien cet examen compte dans la note de période. Les poids des examens d'une matière devraient totaliser 100 %. |
-| **Catégorie** | Oui | La catégorie de note à laquelle appartient cet examen. Doit être configurée au préalable. |
+Pour chaque catégorie d'examen, choisissez **Ajouter un examen** et remplissez une ligne par examen :
+
+| Champ | Remarques |
+| --- | --- |
+| **Nom** | Le nom de l'examen, ex. *Partiel*. |
+| **Durée** | 30 min, 45 min, 1 h, 1 h 30, 2 h, 2 h 30 ou 3 h. |
+| **Score maximum** | La note sur laquelle l'examen est évalué. |
+| **Poids** | Combien cet examen compte dans sa catégorie. |
+
+Les poids d'une catégorie doivent totaliser 100 % avant de pouvoir **Enregistrer les examens**. Le
+**Total** en bas indique où vous en êtes, et chaque ligne montre la part approximative du trimestre
+que représente l'examen.
+
+Par exemple, si la catégorie *Examens* vaut 60 % de la matière et contient un *Partiel* à 40 % et un
+*Examen final* à 60 %, le partiel vaut environ 24 % du trimestre (40 % de 60 %).
+</Step>
+
+<Step>
+### Réutiliser l'ensemble (facultatif)
+
+Utilisez **Copier vers d'autres matières** pour donner les mêmes examens à d'autres matières sans
+les ressaisir, ou **Copier de l'an dernier** pour reprendre les catégories et examens de l'an dernier
+pour les matières pas encore configurées.
 </Step>
 
 </Steps>
 
 ## Étape 2 — Planifier l'examen
 
-Allez dans **Évaluations → Examens planifiés** et planifiez le modèle pour une classe.
+Allez dans **Examens planifiés** — sous **Évaluations** pour les administrateurs, sous
+**Académique** pour les enseignants — et choisissez **Planifier un examen**.
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Modèle** | Oui | Quel examen passer. |
-| **Classe** *(et groupe)* | Oui | Qui le passe. Choisissez un groupe si seule une partie d'une classe divisée le passe. |
-| **Date et heure** | Oui | Quand l'examen a lieu. |
-| **Salle** | Non | Où il se déroule. |
-| **Surveillants** | Non | Les enseignants qui surveillent l'examen. |
+| **Trimestre** | Oui | Le trimestre de l'examen. |
+| **Niveau** | Oui | Réduit la liste des classes. |
+| **Classe** | Oui | Qui le passe. |
+| **Matière** | Oui | La matière examinée. |
+| **Période de notation** | — | Réduit les modèles à une période de notation. |
+| **Modèle d'examen** | Oui | Quel examen passer. |
+| **Date prévue** | Oui | Quand l'examen a lieu. |
+| **Salle** | Non | Où il se déroule. La liste indique la capacité de chaque salle. |
 
-## Étape 3 — Noter et publier les résultats
+## Étape 3 — Marquer l'examen comme terminé
 
-Une fois l'examen terminé, saisissez les résultats dans une grille — la **note** de chaque élève et
-des **remarques** facultatives — puis **publiez** les résultats pour les rendre visibles aux élèves
-et aux familles.
+Une fois la date de l'examen passée, choisissez **Marquer comme terminé** sur l'examen dans la
+liste. La notation ne s'ouvre qu'ensuite.
+
+## Étape 4 — Noter l'examen
+
+Choisissez **Noter l'examen** sur l'examen. La page a deux onglets :
+
+- **Saisie des notes** — saisissez la note de chaque élève et une remarque facultative, puis
+  **Enregistrer les résultats**.
+- **Présence** — indiquez qui a passé l'examen, puis **Enregistrer la présence**.
+
+**Exporter PDF** produit une feuille de notes imprimable. Vous choisissez l'**Ordre d'affichage**
+(**Par nom**, **Par rang** ou **Par numéro d'étudiant**), la **Langue**, et s'il faut **Inclure les
+remarques de l'enseignant**.
+
+## Étape 5 — Publier les résultats
+
+Une fois la correction terminée, choisissez **Publier les notes** sur la page de notation, ou
+**Publier les résultats** sur l'examen dans la liste. La liste indique chaque examen comme
+**Publié** ou **Non publié**. Utilisez **Dépublier les résultats** pour les masquer à nouveau.
 
 <Callout title="Les résultats restent privés jusqu'à publication">
-Les notes que vous saisissez ne sont pas visibles par les élèves ou les familles tant que vous n'avez
-pas **publié** les résultats. Cela vous laisse finir la correction avant que quiconque voie une note.
+Les notes que vous saisissez ne sont pas visibles par les élèves ou les familles tant que vous
+n'avez pas publié les résultats. Cela vous laisse finir la correction avant que quiconque voie une
+note.
 </Callout>
 
-## Étape 4 — Enregistrer la présence à l'examen
+## Présence à l'examen
 
-La présence à l'examen est enregistrée séparément des notes. Pour chaque élève, marquez :
+Vous pouvez enregistrer la présence depuis l'onglet **Présence**, ou avec **Marquer la présence**
+sur l'examen dans la liste. Pour chaque élève, choisissez :
 
 | Statut | Signification |
 | --- | --- |
 | **Présent** | L'élève a passé l'examen. |
-| **Absent** | L'élève n'est pas venu. |
-| **Excusé** | Une absence justifiée — ajoutez le motif. |
+| **Absent** | L'élève n'est pas venu — ajoutez le motif. |
 | **En retard** | L'élève est arrivé en retard. |
+| **Excusé** | Une absence justifiée — ajoutez le motif. |
+
+Un motif est obligatoire pour chaque élève **Absent** ou **Excusé**.
 
 ## Statuts d'examen
 
 | Statut | Signification |
 | --- | --- |
-| **Planifié** | Préparé, pas encore passé. |
-| **Terminé** | L'examen a eu lieu. |
-| **Noté** | Les résultats ont été saisis. |
-| **Annulé** | L'examen n'aura pas lieu. |
+| **Programmé** | Préparé, pas encore passé. |
+| **Terminé** | L'examen a eu lieu et peut être noté. |
 
 ## Cas d'usage courants
 
-- **Examens de période** — créez un modèle par examen avec des poids totalisant 100 %, puis
+- **Examens du trimestre** — ajoutez les examens du trimestre avec des poids totalisant 100 %, puis
   planifiez chacun par classe.
-- **Classe divisée** — planifiez le même modèle séparément pour chaque groupe.
-- **Élève absent** — marquez-le absent (ou excusé) dans le suivi de présence à l'examen.
+- **Mêmes examens pour plusieurs matières** — construisez l'ensemble une fois et utilisez **Copier
+  vers d'autres matières**.
+- **Élève absent** — marquez-le **Absent** (ou **Excusé**) avec un motif dans la présence à
+  l'examen.
 
 ## Questions fréquentes
 
 ### Quelle est la différence entre un modèle d'examen et un examen planifié ?
 
-Un **modèle d'examen** est le plan — son nom, sa durée, sa note maximale, son poids et sa
-catégorie. Un **examen planifié** est une passation réelle de ce modèle : une classe spécifique,
-une date, une heure et une salle. Vous créez le modèle une fois et pouvez le planifier pour
-plusieurs classes sans avoir à le redéfinir à chaque fois.
+Un **modèle d'examen** est le plan — son nom, sa durée, sa note maximale et son poids dans sa
+catégorie. Un **examen planifié** est une passation réelle de ce modèle : une classe, une date et
+une salle précises. Vous créez le modèle une fois et pouvez le planifier pour plusieurs classes sans
+le redéfinir.
 
 ### Le même modèle peut-il être utilisé pour plusieurs classes ?
 
-Oui. Planifiez le modèle une fois par classe. Chaque examen planifié a sa propre grille de notes,
-son propre suivi de présence et son propre état de publication, indépendamment des autres.
+Oui. Planifiez le modèle une fois par classe. Chaque examen planifié a ses propres notes, son propre
+suivi de présence et son propre état de publication, indépendamment des autres.
 
-### Comment gérer un élève absent ?
+### Pourquoi ne puis-je pas encore saisir les notes ?
 
-Marquez l'élève **Absent** (ou **Excusé** avec un motif) dans le suivi de présence à l'examen.
-Sa cellule de note affiche le statut Absent.
+L'examen doit d'abord être marqué comme terminé, ce qui n'est possible qu'une fois sa date passée.
+Choisissez **Marquer comme terminé**, puis **Noter l'examen**.
 
 ### Quand dois-je publier les résultats ?
 
-Publiez une fois que vous avez terminé la notation et que vous êtes sûr des notes. Les scores
-saisis ne sont pas visibles par les élèves ou les parents avant la publication. Il n'y a pas de
-délai — vous pouvez publier immédiatement après la correction ou attendre que les résultats de
-toutes les classes soient prêts.
+Publiez une fois que vous avez terminé la correction et que vous êtes sûr des notes. Il n'y a pas
+de délai — vous pouvez publier juste après la correction ou attendre que les résultats de toutes
+les classes soient prêts.
 
 ### Les notes d'examen sont-elles automatiquement intégrées au carnet de notes ?
 
-Oui. Une fois une note saisie (et les résultats de l'examen publiés), elle s'intègre directement
-dans le carnet de notes sous la période de notation, la catégorie et le poids définis dans le
-modèle. Aucun transfert manuel n'est nécessaire.
+Oui. Une fois les résultats publiés, ils comptent dans le [carnet de notes](./gradebook) sous la
+période de notation, la catégorie et le poids du modèle. Aucun transfert manuel n'est nécessaire.
 
 ## Articles liés
 
 - [Configuration des notes](./grading-setup)
 - [Séances de classe et présence](./sessions-and-attendance)
 - [Carnet de notes](./gradebook)
-- [Cours](./courses)
+- [Modèles de cours](./courses)

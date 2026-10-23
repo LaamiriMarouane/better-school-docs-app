@@ -3,47 +3,42 @@ title: Types et catégories de formulaires
 description: Comprendre les catégories Admission et Général, et les types Public et Privé.
 ---
 
-Chaque formulaire a deux réglages qui déterminent son rôle et qui peut le
-soumettre : une **catégorie** et un **type**. Vous choisissez les deux lors de la
-création du formulaire.
+Chaque formulaire a deux réglages qui décident de ce qu'il fait et de qui peut le
+soumettre : une **catégorie** et un **type**. Vous les choisissez en même temps à
+la création du formulaire, et la liste **Formulaires** les affiche dans les
+colonnes **Catégorie** et **Type de formulaire**.
 
 ## Catégorie — à quoi sert le formulaire
 
-| Catégorie | Rôle |
+| Catégorie | Ce qu'elle fait |
 | --- | --- |
-| **Admission** | Un formulaire de candidature pour les nouveaux élèves. Il est pré-construit avec une section **Élève** et une section **Responsable**, et chaque réponse peut être examinée puis transformée en fiche élève. |
-| **Général** | Un formulaire de collecte de données libre — sondages, demandes, inscriptions de toute nature. Les réponses sont stockées et examinées, mais ne sont pas liées aux fiches élèves. |
+| **Admission** | Un formulaire de candidature pour de nouveaux élèves. Chaque enfant d'une candidature peut être accepté, refusé ou mis en liste d'attente, et l'acceptation crée l'élève et sa pré-inscription. |
+| **Général** | Un formulaire de collecte de données — enquêtes, demandes, inscriptions de toute sorte. Vous lisez les réponses, mais elles ne deviennent pas des fiches élèves. |
 
-### Ce qui rend l'Admission différente
+### Ce qui distingue l'Admission
 
-Lorsque vous créez un formulaire d'Admission, deux choses se produisent
-automatiquement :
+- Le formulaire démarre avec une section **Informations du tuteur** et une section
+  **Informations de l’élève** déjà en place. Les familles peuvent ajouter plusieurs
+  tuteurs et plusieurs enfants dans la même candidature.
+- Avant de le publier, vous choisissez les **niveaux** (et, lorsqu'un niveau a des
+  filières, les filières) auxquels les candidats peuvent postuler. Cela se fait
+  depuis le constructeur — voir [Construire un formulaire](./build-a-form).
+- Chaque candidature dispose des actions de décision — **Accepter**, **Rejeter**
+  et **Mettre en liste d'attente** — décrites dans
+  [Examiner et traiter les soumissions](./review-and-process-submissions).
 
-- Le formulaire démarre avec les sections **Élève** et **Responsable** déjà en
-  place, afin que la réponse puisse être rattachée à de vraies personnes.
-- Vous devez choisir les **niveaux** auxquels les candidats peuvent postuler. Cela
-  rattache les candidatures aux niveaux que votre école admet réellement.
-
-Les réponses d'admission débloquent aussi les **actions de décision** — Accepter,
-Refuser et Liste d'attente — décrites dans
-[Examiner et traiter les soumissions](./review-and-process-submissions).
-
-<Callout title="Les formulaires généraux n'ont pas de lien élève">
+<Callout title="Les formulaires généraux ne sont pas liés aux élèves">
 Un formulaire Général collecte des réponses, rien de plus. Il n'y a pas d'action
-Accepter et aucune fiche élève n'est créée. Utilisez l'Admission chaque fois que
-l'objectif est d'inscrire quelqu'un.
+Accepter et aucun élève n'est créé. Utilisez Admission dès que l'objectif est
+d'inscrire quelqu'un.
 </Callout>
 
 ## Type — qui peut soumettre
 
 | Type | Qui peut soumettre |
 | --- | --- |
-| **Public** | Toute personne disposant du lien de partage. À utiliser pour les campagnes d'admission ouvertes et les inscriptions publiques. |
-| **Privé** | Uniquement les **audiences** que vous attribuez au formulaire. À utiliser lorsque le formulaire s'adresse à un groupe connu — par exemple les familles déjà inscrites. |
-
-Un formulaire **Public** n'a besoin que de son lien de partage. Un formulaire
-**Privé** exige que vous choisissiez une ou plusieurs audiences à la création ;
-seules les personnes de ces audiences le voient et le soumettent.
+| **Public** | Toute personne disposant du lien de partage. Pour les campagnes d'admission ouvertes et les inscriptions publiques. |
+| **Privé** | Uniquement les **audiences** choisies à la création du formulaire. Elles le trouvent dans **Mes formulaires**, dans leur propre espace. Il n'y a pas de lien de partage. |
 
 <Screenshot
   label="Boîte de dialogue de création montrant les cartes de mode Admission, Public et Privé"
@@ -52,14 +47,17 @@ seules les personnes de ces audiences le voient et le soumettent.
 
 ## Comment ils se combinent
 
-Lors de la création d'un formulaire, vous choisissez l'un des trois modes — chacun
-réunit une catégorie et un type :
+À la création d'un formulaire, vous choisissez l'une des trois cartes — chacune
+associe une catégorie et un type :
 
-| Mode | Catégorie | Type |
+| Carte | Catégorie | Type |
 | --- | --- | --- |
 | **Admission** | Admission | Public |
 | **Public** | Général | Public |
 | **Privé** | Général | Privé |
+
+Un formulaire d'Admission est toujours Public : toute personne disposant de son
+lien peut postuler.
 
 ## Articles connexes
 

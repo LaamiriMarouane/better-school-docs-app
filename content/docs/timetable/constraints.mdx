@@ -1,101 +1,130 @@
 ---
 title: Constraints
-description: Understand the rules the generator always keeps, and tune the preferences that make a timetable good — gaps, room stability, subject spacing, and more.
+description: See the rules the generator always keeps, and tune the preferences in Solver policy that make a timetable good — gaps, room stability, subject spacing, and more.
 ---
 
-A **constraint** is a rule the generator weighs when it builds the timetable. There are two kinds,
-and understanding the difference is the key to getting the schedule you want.
+The generator follows two kinds of rules. Some are **always kept** and can't be switched off.
+Others are **preferences** you tune per timetable group in **Solver policy**: you turn each one on
+or off and decide how much it matters.
 
 <Callout title="Who this is for">
 Administrators tuning how the timetable generator behaves.
 </Callout>
 
-## Hard rules vs. soft preferences
+## Rules always kept
 
-- **Hard rules** are things the timetable must *never* break. The generator will not produce a
-  schedule that violates one. Most hard rules come from reality (see
-  [Scheduling setup](./scheduling-setup)) and structure (no double-booking).
-- **Soft preferences** are things that make a timetable *good* rather than just valid — avoiding
-  gaps, keeping a class in one room, spacing out hard subjects. The generator satisfies as many as
-  it can, and you decide **how much each one matters**.
+You don't configure these in Solver policy — the generator always follows them:
 
-The generator always satisfies every hard rule first, then makes the soft preferences as happy as
-possible.
-
-## Rules the timetable always keeps
-
-You don't configure these — they're always on, so an activated timetable is always sound:
-
-- No **class**, **teacher**, or **room** is ever in two places at once.
-- Lessons are never placed in a time you've marked a **teacher or room unavailable**.
+- No **class**, **teacher**, or **room** is in two places at once.
+- No lesson is placed when its **teacher**, **room**, or **class** is marked unavailable (see
+  [Scheduling setup](./scheduling-setup)).
+- Each teacher stays within their **Max hours per day** and **Max hours per week**.
 - A room is never used **beyond its capacity**, and a subject only uses rooms of the **right type**.
-- No lesson is placed over a **break**.
-- **Allowed-room** restrictions (teacher rooms, subject rooms) are respected.
+- No lesson is placed over a **break**, and a long lesson always sits in one unbroken block of
+  periods.
+- A class never has two separate lessons of the same subject on the same day (a double lesson
+  counts as one).
+- A subject is never placed at its **forbidden times**.
+- Teachers only use rooms on their **Room whitelist**, and classes use the homerooms you set on
+  **Homerooms**.
+- Lessons linked with **Same slot** run at the same time.
 - **Pinned** lessons stay exactly where you placed them.
 
-## Preferences you can tune
+If the generator can't place a lesson without breaking one of these, it leaves the lesson
+unscheduled and tells you why. See [Generate and activate](./generate-and-publish).
 
-Open a **timetable group** (**Academic → Timetable → Groups** → open the group), then use
-**Actions → Solver policy**. Preferences are grouped into tabs. For each one you can:
+## Open Solver policy
 
-- **Turn it on or off.**
-- **Set how much it matters** (its importance, or weight) — higher means the generator tries
-  harder to satisfy it, even at the cost of lower-priority preferences.
+Open a **timetable group** (**Academic → Timetable → Groups** → open the group), click the **⋯**
+menu in the group header, and choose **Solver policy**. The rules are grouped into tabs:
+**Teachers**, **Classes**, **Subjects**, and **Lessons**.
+
+Each preference has:
+
+- an **on/off switch**,
+- a value to set when the rule needs one (for example **Max gap**),
+- an **importance** stepper — the higher it is, the harder the generator tries to satisfy this
+  preference compared with the others,
+- **Reset to baseline** to return that row to its default.
+
+Click **Save** in the bar at the bottom of the tab to keep your changes, or **Discard** to drop
+them.
 
 ### Teachers
 
 | Preference | What it does |
 | --- | --- |
-| **Teacher gaps** | Avoids free periods between a teacher's lessons on the same day. You can set how many gaps are tolerated, school-wide or per teacher. |
-| **Teacher daily / weekly limit** | Keeps each teacher within their maximum hours per day and per week. |
-| **Minimum lessons per day** | If a teacher is in on a day, ensures they have at least a set number of lessons. |
-| **Minimum lessons per half-day** | The same, per morning or afternoon (needs the half-day divider). |
-| **Teacher room stability** | Tries to keep a teacher in the same room across the day. |
+| **Minimise teacher gaps** | Avoids free periods between a teacher's lessons on the same day. Set how many gaps are tolerated with **Max gap**. |
+| **Teacher minimum periods per day** | If a teacher comes in on a day, they get at least this many periods that day. |
+| **Teacher minimum periods per half-day** | The same, per morning or afternoon (needs the half-day divider). |
+| **Teacher room stability** | Tries to keep a teacher in the same room across consecutive lessons. |
 
 ### Classes
 
+The **Classes** tab has two sub-tabs:
+
+- **Min periods** — the minimum periods per day and per half-day for each level, with optional
+  overrides per class (**Revert to level** removes an override). Tick several levels or classes to
+  set them together.
+- **Constraint rules** — the class preferences below.
+
 | Preference | What it does |
 | --- | --- |
-| **Class gaps** | Keeps a class's day compact, avoiding free periods between lessons. |
-| **Class room stability** | Tries to keep a class in its own room for most lessons, so students don't move around constantly. |
-| **Minimum lessons per day / half-day** | Avoids a class having a near-empty day or half-day. |
+| **Minimise class gaps** | Keeps a class's day compact, avoiding free periods between lessons. |
+| **Class room stability** | Tries to keep a class in the same room across consecutive lessons. |
+| **Class minimum periods per day** | Avoids a class having a near-empty day. |
+| **Class minimum periods per half-day** | Avoids a near-empty morning or afternoon. |
 
 ### Subjects
 
-| Preference | What it does |
+| Sub-tab | What you set |
 | --- | --- |
-| **Subject incompatibility** | Keeps two subjects apart — for example, not on the same day or in the same half-day. |
-| **Subject order (chains)** | Encourages a relationship between two subjects, such as one running right after the other, or both on the same day. |
-| **Subject forbidden times** | Keeps a subject out of chosen time slots — for example, no PE in the first period of the day. |
+| **Forbidden times** | Pick a subject and mark the periods it must never use — for example no PE in the first period. Always kept. |
+| **Incompatibilities** | Pick a subject and the subjects it should not share the same day or half-day with. The **Subject incompatibility** row sets whether this preference is on and how much it matters. |
+| **Chains** | Add pairs of subjects that should follow each other or share a day (**Add chain edge**). The **Subject chains** row sets whether this preference is on and how much it matters. |
 
 ### Lessons
 
-| Preference | What it does |
+Link specific lessons with **Add lesson link**, or use **Run two subjects in parallel** to pair the
+groups of a split class across many classes at once. Links have four modes:
+
+| Mode | Meaning |
 | --- | --- |
-| **Lesson links** | Honours the links you set between specific lessons — same slot, back to back, same day, or same half-day. See [Lessons and assignments](./lessons-and-assignments). |
+| **Same slot** | Two lessons run at the same time, for different groups of a class. Always kept. |
+| **Back-to-back** | Two lessons run in consecutive periods. |
+| **Same day** | Two lessons fall on the same day. |
+| **Same half-day** | Two lessons fall in the same morning or afternoon. |
+
+**Back-to-back**, **Same day**, and **Same half-day** links all follow the **Lesson sequence** row:
+its switch and importance apply to all of them together. See
+[Lessons and assignments](./lessons-and-assignments).
+
+<Callout title="Rules guide the generator, not your hands">
+Solver policy only affects **Generate**. When you move lessons by hand, links and preferences never
+block the move.
+</Callout>
 
 ## Setting importance well
 
 - **Start from the defaults.** They produce a sensible timetable for most schools. Only change
   what you specifically care about.
-- **Don't set everything to maximum.** Preferences compete — if everything is "most important",
+- **Don't push everything to the top.** Preferences compete — if everything is "most important",
   nothing is. Raise only the few that matter most to your school.
-- **Be careful making a preference strict.** Some preferences can be made into firm rules. If a
-  strict preference conflicts with reality (availability, rooms), the generator may be unable to
-  build any timetable — it will tell you when that happens.
+- **Tight rules leave lessons unscheduled.** Many forbidden times or incompatibilities can leave
+  no room for some lessons. The unscheduled panel tells you when a subject rule is the cause.
 
 <Callout title="Per-teacher overrides">
-A few preferences can be set per teacher as well as school-wide — for example one teacher who
-truly can't have gaps. The per-teacher setting wins for that teacher. Set these in
-[Scheduling setup](./scheduling-setup).
+**Max gap periods**, **Min periods per day**, and **Min periods per half-day** can also be set for
+one teacher in [Scheduling setup](./scheduling-setup) → **Teachers** → **Limits**. The teacher's own
+value wins for that teacher.
 </Callout>
 
 ## Common use cases
 
-- **Compact days** — raise *Class gaps* so students don't have idle periods.
-- **Spread hard subjects** — use *Subject incompatibility* to avoid two demanding subjects on the
-  same day.
-- **Lab after lecture** — link the two lessons and keep the link as a strong preference.
+- **Compact days** — raise *Minimise class gaps* so students don't have idle periods.
+- **Spread hard subjects** — use *Incompatibilities* to keep two demanding subjects off the same
+  day.
+- **Lab after lecture** — link the two lessons as **Back-to-back** and raise *Lesson sequence*.
 
 ## Related articles
 

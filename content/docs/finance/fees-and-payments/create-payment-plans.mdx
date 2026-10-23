@@ -1,11 +1,11 @@
 ---
 title: Create payment plans
-description: Bundle fees into a payment plan that can be attached to a student's enrollment.
+description: Bundle fees into a payment plan for one or more levels, then put students on it.
 ---
 
-A **payment plan** bundles one or more **fees** for a **level**. It is the thing you
-attach to an enrollment — once attached, the student's installments are generated from
-the plan's fees.
+A **payment plan** bundles one or more **fees** for one or more **levels**. It is what
+you attach to an enrollment — once a student is on a plan, their installments are created
+from the plan's fees.
 
 <Callout title="Who this is for">
 Administrators packaging fees into the plans students are billed under.
@@ -13,22 +13,22 @@ Administrators packaging fees into the plans students are billed under.
 
 ## Before you start
 
-- The **fees** must already exist for the level — see [Set up fees](./set-up-fees).
-- An **academic year** must be selected.
+- The **fees** must already exist — see [Set up fees](./set-up-fees).
+- Pick the right **academic year** at the top of the screen.
 
 <Screenshot
   label="Payment plans page with the Add Plan button"
   caption="Payment plans group fees for a level."
 />
 
-## Steps
+## Create a plan
 
 <Steps>
 
 <Step>
 ### Open the Payment Plans page
 
-Go to **Finance → Payment Plans**, then start a new plan.
+Go to **Finance → Payment Plans**, then click **Add Payment Plan**.
 
 <Screenshot
   label="Create payment plan form"
@@ -37,36 +37,60 @@ Go to **Finance → Payment Plans**, then start a new plan.
 </Step>
 
 <Step>
-### Choose the level
-
-Pick the **level** first. The list of fees you can add is filtered to that level.
-</Step>
-
-<Step>
 ### Fill in the plan details
-
-Complete the fields below, then click **Create Payment Plan**.
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Name** | Yes | The display name, e.g. *Grade 1 — Full plan*. |
-| **Level** | Yes | The level the plan is for. Determines which fees are available. |
-| **Plan type** | Yes | The category of plan (for example academic). |
+| **Name** | Yes | The display name, e.g. *Primary — Full plan*. |
+| **Plan Type** | Yes | **Academic** (the main plan students are enrolled with), **Service**, or **Event**. |
+| **Levels** | Yes | One or more levels the plan is for. |
 | **Conditions** | No | Optional notes or terms shown with the plan. |
-| **Fees** | Yes | One or more fees to include. Select a level first to populate this list. |
+| **Fees** | Yes | One or more fees to include. |
+</Step>
+
+<Step>
+### Mark each fee required or optional
+
+Each fee you add appears in a list under **Fees**. For each one choose:
+
+- **Required** — every student on the plan is billed for it.
+- **Optional** — an add-on the family can take or not (for example canteen or
+  transport). Tick **Pre-selected** if it should be ticked by default when a student
+  joins the plan.
 </Step>
 
 <Step>
 ### Save the plan
 
-The plan is now available to attach when you create an enrollment or enroll students
-in bulk.
+Click **Create Payment Plan**. The plan is now available when you create an enrollment
+or enroll students in bulk.
 </Step>
 
 </Steps>
 
+## Put students on a plan
+
+From the plans list, use **View Students** on a plan:
+
+- **Associate enrolled student** — search for an enrolled student and add them, choosing
+  their **Optional services**. A **Quantity** lets you bill each fee several times (for
+  example two uniforms).
+- **Add a class / level** — pick classes or levels and click **Add students**. Students
+  already on the plan, or not eligible, are skipped and listed with the reason.
+- **Manage add-ons** — on a student's row, tick or untick their optional services.
+- **Remove from plan** — the student is no longer billed for this plan. If money was
+  already paid on it, refund or cancel those payments first.
+
+## Change or retire a plan
+
+- While students are on a plan you can still add fees, but not remove fees or change its
+  levels or type. Students already on the plan are billed for a new required fee from
+  today.
+- Use **Archive** to retire a plan you no longer offer, and **Unarchive** to bring it
+  back.
+
 <Callout title="What comes next">
-Attaching a plan to an enrollment generates the student's installments — see
+Putting a student on a plan creates their installments — see
 [Installments and schedules](./installments-and-schedules).
 </Callout>
 

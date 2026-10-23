@@ -5,62 +5,82 @@ description: Build a quiz from a reusable question bank, set how it runs, assign
 
 A **quiz** is an online test built from questions. You create questions in a reusable **question
 bank**, assemble them into a quiz, decide how it runs, and assign it to a class. Students take it on
-screen, and most question types are **marked automatically**.
+screen, and their answers are **marked automatically**.
 
 <Callout title="Who this is for">
 Teachers building and assigning quizzes, and the students who take them.
 </Callout>
 
+## Where to find it
+
+Everything is under **Assessments**: **Quizzes** for your quizzes and **Question Bank** for your
+questions (teachers see it as **Quiz Questions**).
+
 ## The building blocks
 
 | Piece | What it is |
 | --- | --- |
-| **Question bank** | Your reusable questions. Each can be **tagged** (e.g. *algebra*, *chapter 3*) and is a draft until you publish it. |
-| **Quiz** | A set of questions plus settings. A quiz is a draft until you publish it, after which you can assign it. |
+| **Question Bank** | Your reusable questions. Each can be **tagged** (e.g. *algebra*, *chapter 3*) and is a **Draft** until you publish it. |
+| **Quiz** | A set of questions plus settings. A quiz is a **Draft** until you publish it, after which you can assign it. |
 | **Quiz assignment** | A published quiz given to a class, with a release and due date. |
 | **Attempt** | A student's go at the quiz. |
 
+Publishing a question or a quiz makes it visible to the school's administrators and teachers, so
+colleagues can reuse it.
+
 ## Question types
 
-Questions can be:
+Choose **Add Question**, then pick a type:
 
-- **True / false**
-- **Multiple choice** — one or several correct answers
+- **True/False**
+- **Multiple Choice**
 - **Ordering** — put items in the right sequence
-- **Fill in the blank** — type the answer, pick from a dropdown, or drag words in
-- **Labelling** — drag labels onto an image
-- **Categorise** — sort items into groups
+- **Type Your Answers** — fill in the blanks by typing
+- **Select Your Answers** — fill in the blanks from dropdowns
+- **Drag & Drop** — drag words into the blanks
+- **Labeling Tags** — place labels on an image
+- **Categorize** — sort items into groups
+- **Image Hotspot** — tap the correct area on an image
+- **Text Highlight** — highlight the correct words in a passage
 
-Each question can include a **hint**, an **explanation** (shown in feedback), and **attachments** such
-as an image or diagram.
+Each question can include a **Hint**, an **Explanation** (shown in feedback), and images.
 
 ## Build a quiz
+
+On **Quizzes**, choose **Add Quiz**. The editor walks you through five steps.
 
 <Steps>
 
 <Step>
-### Create the quiz
+### Basic Information
 
-Give it a title and description. It starts as a **draft**.
+Give the quiz a **Quiz Title**, an optional **Description**, **Tags** and a **Thumbnail**.
 </Step>
 
 <Step>
-### Add questions
+### Add Questions
 
-Pull questions from the bank (or create new ones), and set each one's **order**, **points**, and
-whether it's required.
+Pick questions from the bank. Only published questions can go into a quiz.
 </Step>
 
 <Step>
-### Set how it runs
+### Manage Questions
 
-Choose the quiz's behaviour (see below).
+Drag questions into order, and set each one's **Points** and whether it is mandatory (**Required**)
+or optional. When the quiz uses a time limit per question, you set each question's time here too.
 </Step>
 
 <Step>
-### Publish
+### Configuration
 
-Publish the quiz so it can be assigned. Its questions need to be published too.
+Choose how the quiz runs (see below).
+</Step>
+
+<Step>
+### Review
+
+Check everything and choose **Create Quiz**. The quiz starts as a **Draft**: use **Publish** on
+its card so it can be assigned.
 </Step>
 
 </Steps>
@@ -69,42 +89,52 @@ Publish the quiz so it can be assigned. Its questions need to be published too.
 
 | Setting | What it controls |
 | --- | --- |
-| **Time limit** | No limit, a per-question limit, or a total time (15 minutes to 3 hours). |
-| **Attempts** | How many times a student may take it — or unlimited. |
-| **Question pool** | Show all questions, or draw a random subset each attempt. |
-| **Shuffle** | Randomise the order of questions and/or answer options. |
-| **Feedback** | Show explanations never, after each question, or after the whole quiz. |
-| **Show score** | Whether students see their score when they finish. |
-| **Pass mark** | An optional percentage needed to pass. |
-| **Navigation** | Let students move freely, or one question at a time. |
-| **Scoring** | How marks are awarded — standard, or with negative marking for wrong answers. |
+| **Max Attempts** | How many times a student may take it. Leave empty for **No Limit**. |
+| **Passing Score (%)** | The percentage needed to pass. |
+| **Duration** | **No Limit**, **Per Question** (a time for each question), or a total time from 15 minutes to 3 hours. |
+| **Scoring Strategy** | **Standard** (full points for correct answers; wrong choices reduce a multiple-select score), **Canadian** (credit for each correct choice, no penalty) or **Negative Marking** (a wrong answer takes off a quarter of the question's points). |
+| **Feedback Mode** | Show corrections **Never**, **After Quiz** or **After Question**. |
+| **Navigation Mode** | **Free** (move back and forth), **Sequential** (forward only) or **Lock on Answer** (an answer can't be changed once given). With per-question times, use Sequential or Lock on Answer. |
+| **Shuffle Questions** / **Shuffle Options** | Randomise the order of questions and of answer choices. |
+| **Require Answer to Progress** | Students must answer before moving on. |
+| **Show Scores** | Whether students see their score when they finish. |
+| **Choose Questions Randomly From Pool** | Give each attempt a random set of **Questions Per Attempt**. Required questions are always included. |
 
 ## Assign the quiz to a class
 
-Assign a published quiz to a **class or group**, with a **release** and **due** date. You can tweak
-the settings just for this assignment if you want.
+Open **Assessments → Assignments**, choose **Add Assignment**, then **Quiz**: you land on
+**Quizzes**, where you pick a published quiz and choose **Assign**. You can also choose **Assign**
+straight from a quiz.
+
+Then fill in the **Term**, **Class** (and **Class group** if the class is split), **Subject**,
+**Marking period**, **Release Date** and **Due Date**. You can adjust the quiz settings just for
+this assignment.
 
 ## How students take it
 
-A student **starts** the quiz, answers within any time limit, and **submits**. Most questions are
-**marked automatically**, so the score is ready immediately (shown if you allowed it). Depending on
-your feedback setting, they see explanations after each question or at the end.
+The student opens the quiz under **Assignments** and chooses **Start Quiz**. They answer within
+any time limit and submit. Answers are marked straight away, so the score is ready immediately
+(shown if you turned on **Show Scores**). Depending on the feedback mode, they see corrections
+after each question or at the end. If attempts remain, they can take it again.
 
 ## See how the class did
 
-For each quiz you can see **attempts per student** and **question-level analytics** — which questions
-were answered well and which tripped students up — to guide your teaching.
+Open the quiz assignment to see the **Participants** (each student's attempts and **Best Score**)
+and the **Analytics** tab: pass rate, **Score Distribution** and **Question Performance** — which
+questions were answered well and which tripped students up.
 
 ## Counts toward the gradebook
 
-Like assignments, a quiz can sit in a **grade category** with a **weight**, so scores feed into the
-[gradebook](./gradebook).
+A quiz has no weight of its own. As with [assignments](./assignments), turn on **Counts in the
+final average** when you assign it and choose a **Category**: the student's best attempt then
+counts in the [gradebook](./gradebook), within that category's weight. You can type a different
+mark in the gradebook; clear it to go back to the best attempt.
 
 ## Common use cases
 
-- **Quick check** — a short multiple-choice quiz with instant feedback after each question.
-- **Timed test** — set a total time limit and one attempt.
-- **Practice** — allow unlimited attempts and show explanations to help students learn.
+- **Quick check** — a short multiple-choice quiz with feedback after each question.
+- **Timed test** — set a total duration and one attempt.
+- **Practice** — leave attempts unlimited, show feedback, and don't count it in the final average.
 
 ## Related articles
 

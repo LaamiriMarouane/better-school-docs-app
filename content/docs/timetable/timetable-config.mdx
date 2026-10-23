@@ -5,12 +5,12 @@ description: Define a weekly grid for a timetable group — working days, daily 
 
 A **timetable config** describes the shape of a school week for one or more [timetable
 groups](./timetable-groups): which days you teach, the hours of the day, how long a period lasts,
-and when breaks fall. The generator divides this into a grid of time slots and places every lesson
+and when breaks fall. The generator divides this into a grid of periods and places every lesson
 into it.
 
-It sits **inside** the year-wide [School schedule](../settings/school-schedule). The school
-schedule is the outer default; a timetable config may match it or use a **narrower** day (fewer
-days, shorter hours, or different extra breaks).
+It sits **inside** the [School schedule](../settings/school-schedule). The school schedule is the
+outer default; a timetable config may match it or use a **narrower** day (fewer days, shorter
+hours, or extra breaks).
 
 <Callout title="Who this is for">
 Administrators defining the weekly grid used by timetable groups.
@@ -20,17 +20,16 @@ Administrators defining the weekly grid used by timetable groups.
 
 | Layer | Where | Purpose |
 | --- | --- | --- |
-| **School schedule** | **Settings → Academic → School schedule** | Global default for the year — working days, open hours, default period length, shared breaks. |
-| **Timetable config** | **Academic → Timetable → Config → Time Grid** | Grid attached to a group (e.g. primary vs secondary). Must fit inside the school schedule. |
+| **School schedule** | **Settings → Academic → School schedule** | The school's default week — working days, open hours, default period length, shared breaks. |
+| **Timetable config** | **Academic → Timetable → Config → Time Grid** | A grid used by a group (e.g. primary vs secondary). Must fit inside the school schedule. |
 
 When you create a **new** timetable config, the form is **pre-filled** from the school schedule.
 You can then tighten it for specific levels — for example Grade 1 finishes earlier and has two
 short breaks, while Grades 2–3 keep a longer day.
 
-<Callout title="Validation">
-A timetable config cannot teach on a weekday the school schedule marks closed, cannot start before
-or end after school hours, and must not clash with school-wide breaks. Fix the school schedule
-first if the outer window is wrong.
+<Callout title="It must fit the school week">
+The form only offers the school's working days and keeps the hours inside school hours. If the
+outer window is wrong, fix the school schedule first.
 </Callout>
 
 ## Where this lives
@@ -41,13 +40,13 @@ Go to **Academic → Timetable → Config**. The page has several tabs:
 | --- | --- |
 | **Time Grid** | The configs themselves — days, hours, period length, breaks (this article). |
 | **Teaching load** | How many lessons each subject needs per week. See [Teaching load](./teaching-load). |
-| **Teachers / Rooms / Homerooms / Class Hours** | Availability, limits, and room policies. See [Scheduling setup](./scheduling-setup). |
+| **Teachers / Room Availability / Homerooms / Class Hours** | Availability, limits, and rooms. See [Scheduling setup](./scheduling-setup). |
 
 ## Before you start
 
 - An **academic year** must be selected.
-- The **[School schedule](../settings/school-schedule)** for that year should be set — new configs
-  inherit from it, and saves are checked against it.
+- The **[School schedule](../settings/school-schedule)** should be set — new configs start from
+  it.
 
 ## Create a timetable config
 
@@ -56,8 +55,8 @@ Go to **Academic → Timetable → Config**. The page has several tabs:
 <Step>
 ### Open the Time Grid tab
 
-Go to **Academic → Timetable → Config**, stay on **Time Grid**, and click **Add config** (or open
-the existing one to edit it).
+Go to **Academic → Timetable → Config**, stay on **Time Grid**, and click **Add Configuration**
+(or open an existing config to edit it).
 
 <Screenshot
   label="Timetable config form"
@@ -70,19 +69,36 @@ the existing one to edit it).
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Name** | Yes | A label for this config, e.g. *Primary 2025–26*. |
-| **Working days** | Yes | The days this config teaches (e.g. Monday–Friday). Must be among the **school schedule** working days. |
-| **Daily hours** | Yes | Start and end of the teaching day for this config, e.g. *08:00–17:00*. Must fit inside school hours. |
-| **Period length** | Yes | How many minutes a period lasts, e.g. *45*. |
-| **Max periods per day** | Yes | The most periods a class can have in a single day. |
-| **Half-day divider** | No | The time that splits morning from afternoon, e.g. *12:00*. |
-| **Breaks** | No | Times when no lessons are placed. School-wide breaks are included as a starting point; you can add more that do not clash with them. |
+| **Config Title** | Yes | A label for this config, e.g. *Primary*. |
+| **Work Days Configuration** | Yes | Pick the days this config teaches. Only the school's working days are offered. |
+| **Start Time** / **End Time** | Yes | The teaching day for this config, e.g. *08:00–17:00*. Must stay within school hours. |
+| **Period duration (min)** | Yes | How many minutes a period lasts, e.g. *45*. |
+| **Maximum Periods Per Day** | Yes | The most periods a class can have in a single day. |
+
+The day must hold a whole number of periods. If the end time cuts a period short, the form says
+so and offers a button such as **Set end to 16:45** to fix it in one click.
+</Step>
+
+<Step>
+### Mark the breaks
+
+Under **Break Time Selection**, click or drag on the grid to mark break periods (orange = break,
+blue = teaching). Use **Set as break (all days)** to make the same period a break on every day,
+and **Clear All Breaks** to start again. School breaks from the school schedule are already shown.
+</Step>
+
+<Step>
+### Set the half-day divider (optional)
+
+Click the thin line between two periods to mark where the morning ends and the afternoon begins.
+Click it again (**Clear half-day divider**) to remove it.
 </Step>
 
 <Step>
 ### Save
 
-The config is saved for the selected academic year. Attach it when you create or edit a
+Click **Save Configuration** (or **Update Configuration** when editing). Use **Preview Timetable**
+first if you want to check the empty grid. Then pick this config when you create or edit a
 [timetable group](./timetable-groups).
 </Step>
 
@@ -90,37 +106,49 @@ The config is saved for the selected academic year. Attach it when you create or
 
 ## How the grid is built
 
-From the config, the system works out the **time slots** a lesson can occupy. For example, an
-08:00–17:00 day with 45-minute periods and a 12:00–13:00 lunch break produces a row of morning
-slots, a protected lunch, and a row of afternoon slots. Every lesson the generator places lands
-in one of these slots.
+From the config, the app works out the **periods** a lesson can occupy. For example, an
+08:00–17:00 day with 45-minute periods and a lunch break produces a row of morning periods, a free
+lunch, and a row of afternoon periods. Every lesson the generator places lands in these periods.
 
-<Callout title="Breaks are protected">
+<Callout title="Breaks stay free">
 No lesson is ever placed over a break. Use breaks for lunch, recess, prayer, or any time those
 levels should be free.
 </Callout>
 
 ## The half-day divider
 
-The **half-day divider** is the moment your day splits into a morning and an afternoon (often
-midday). Setting it unlocks rules that work per half-day rather than per whole day — for example
-"a teacher who is in for the morning should have at least two lessons that morning". If you leave
-it empty, those half-day rules simply don't apply.
+The **half-day divider** splits the day into a morning and an afternoon. Setting it lets you use
+rules that work per half-day — for example "a teacher who comes in for the morning should have at
+least two lessons that morning". If you leave it empty, those half-day rules simply don't apply.
+
+## Edit a config that is in use
+
+A config used by a timetable group shows an **In Use** badge. You can still edit it:
+
+1. Change the days, hours, periods, or breaks and save.
+2. If the change affects the timetable, a **Check the changes before saving** window shows what it
+   touches: lessons that now fall outside the grid, pinned lessons on times that no longer exist,
+   and lessons that are no longer possible or only just fit.
+3. If you add new days or periods, choose what happens to them: **Leave open**, **Block for
+   everyone**, or **Block only for those who block the time next to it**. You can change blocked
+   times later in the availability editors.
+4. Click **Save changes**.
+
+Lessons that no longer fit the grid are flagged, never moved. Regenerate the timetable or move them
+by hand afterwards. A config can't be deleted while a timetable group uses it.
 
 ## Using more than one config
 
-You can create **several configs** for the same year — for example one grid for primary and another
-for secondary — as long as each stays inside the [school schedule](../settings/school-schedule).
-Each [timetable group](./timetable-groups) uses one config.
+You can create **several configs** — for example one grid for primary and another for secondary —
+as long as each stays inside the [school schedule](../settings/school-schedule). Each
+[timetable group](./timetable-groups) uses one config.
 
 ## Tips and best practices
 
 - Set the **school schedule** first, then create configs that match or narrow it.
-- Match the **period length** to how those levels actually teach; it's hard to change once
-  timetables are built on it.
+- Match the **period length** to how those levels actually teach.
 - Put **shared** breaks on the school schedule; put level-specific extras on the timetable config.
-- Set the **half-day divider** if you want morning/afternoon balance rules; otherwise leave it
-  empty.
+- Set the **half-day divider** if you want morning/afternoon rules; otherwise leave it empty.
 
 ## Related articles
 

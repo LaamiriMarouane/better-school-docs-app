@@ -1,11 +1,11 @@
 ---
 title: Créer des services
-description: Définissez les services facturables fournis par votre école, comme la scolarité, le transport ou la restauration.
+description: Définissez les services facturables fournis par votre école, comme la scolarité, le transport ou la cantine.
 ---
 
-Un **service** est une prestation de l'école qui peut être facturée — *Scolarité*,
-*Transport*, *Restauration*, etc. Les services sont le fondement de la finance : les
-frais sont tarifés **par service**.
+Un **service** est une prestation de l'école qui peut être facturée — scolarité,
+transport, cantine, uniformes, etc. Les services sont le fondement de la finance :
+chaque frais tarifie **un service**.
 
 <Callout title="Pour qui">
 Les administrateurs qui définissent ce que l'école facture.
@@ -13,8 +13,7 @@ Les administrateurs qui définissent ce que l'école facture.
 
 ## Avant de commencer
 
-- Une **année scolaire** doit être sélectionnée — chaque service appartient à cette
-  année.
+- Sélectionnez la bonne **année scolaire** en haut de l'écran.
 
 <Screenshot
   label="Page des services avec le bouton Ajouter un service"
@@ -28,7 +27,7 @@ Les administrateurs qui définissent ce que l'école facture.
 <Step>
 ### Ouvrir la page Services
 
-Allez dans **Finance → Services**, puis cliquez sur **Ajouter un service**.
+Allez dans **Finances → Services**, puis cliquez sur **Ajouter un service**.
 
 <Screenshot
   label="Formulaire de création d'un service"
@@ -39,12 +38,12 @@ Allez dans **Finance → Services**, puis cliquez sur **Ajouter un service**.
 <Step>
 ### Renseigner les détails du service
 
-Complétez les champs ci-dessous, puis cliquez sur **Créer le service**.
+Complétez les champs ci-dessous, puis cliquez sur **Créer un service**.
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Nom** | Oui | Le nom affiché, ex. *Transport*. |
-| **Type de service** | Oui | La catégorie du service (par exemple scolarité, transport, restauration ou autre). |
+| **Nom** | Oui | Le nom affiché, ex. *Bus scolaire*. |
+| **Type de service** | Oui | **Académique**, **Uniforme**, **Livres**, **Périscolaire**, **Événement**, **Cantine**, **Bibliothèque**, **Transport** ou **Autre**. |
 | **Description** | Non | Notes facultatives sur le service. |
 </Step>
 
@@ -57,12 +56,17 @@ configuration des frais.
 
 </Steps>
 
+<Callout title="Services de transport">
+Utilisez le type **Transport** pour les frais de bus. Quand vous affectez des élèves à un
+circuit, ceux dont le plan comprend un frais de transport sont proposés en premier.
+</Callout>
+
 <Callout title="Et ensuite">
-Un service n'a pas de prix en soi. Donnez-lui un montant par niveau en
+Un service n'a pas de prix en soi. Donnez-lui un montant en
 [configurant les frais](./set-up-fees).
 </Callout>
 
 ## Articles liés
 
 - [Configurer les frais](./set-up-fees)
-- [Créer des échéanciers](./create-payment-plans)
+- [Créer des plans de paiement](./create-payment-plans)

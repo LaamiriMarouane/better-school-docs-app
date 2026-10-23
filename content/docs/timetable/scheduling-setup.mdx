@@ -1,16 +1,15 @@
 ---
 title: Scheduling setup
-description: Describe the reality the timetable must respect — teacher and room unavailability, teacher workload limits, homerooms, and class hours.
+description: Describe the reality the timetable must respect — teacher, room, and class availability, teacher workload limits, and homerooms.
 ---
 
-**Scheduling setup** is where you record the hard facts about your school that the timetable must
+**Scheduling setup** is where you record the facts about your school that the timetable must
 respect: when each **teacher** is unavailable, how much they can teach, when each **room** can't be
-used, which room is each class's homeroom, and when a class itself is unavailable. These are the
-rules the generator will *never* break.
+used, which room is each class's homeroom, and when a class itself is unavailable.
 
 <Callout title="Reality vs. rules">
-This page is about **reality** — facts that must hold. The softer *preferences* (avoid gaps, keep
-a class in one room, and so on) live on the [Constraints](./constraints) page.
+This page is about **reality** — facts that must hold. The *preferences* (avoid gaps, keep a class
+in one room, and so on) live in **Solver policy**. See [Constraints](./constraints).
 </Callout>
 
 <Callout title="Who this is for">
@@ -18,37 +17,43 @@ Administrators preparing teacher and room information before generating a timeta
 </Callout>
 
 <Callout title="Availability follows the school week">
-Unavailability grids use the days and hours from the year-wide
-[School schedule](../settings/school-schedule). Set that first so the grids match how your school
+Availability grids use the days and periods of your timetable configs and the
+[School schedule](../settings/school-schedule). Set those first so the grids match how your school
 actually opens.
 </Callout>
 
-Open **Academic → Timetable → Config**. These facts live on the **Teachers**, **Rooms**,
-**Homerooms**, and **Class Hours** tabs (alongside **Time Grid** and [Teaching load](./teaching-load)).
+Open **Academic → Timetable → Config**. These facts live on the **Teachers**, **Room
+Availability**, **Homerooms**, and **Class Hours** tabs (alongside **Time Grid** and
+[Teaching load](./teaching-load)).
+
+<Callout title="Edit many at once">
+On the Teachers, Room Availability, and Class Hours tabs, click **Enable bulk select**, tick
+several teachers, rooms, or classes, and apply the same availability or limits to all of them.
+</Callout>
 
 ## Teachers
 
-### Unavailability
+Pick a teacher in the list on the left. The **Teachers** tab has four sub-tabs.
 
-By default, a teacher can be scheduled at **any** time the school is open. Here you enter only the
-times a teacher **can't** teach — the exceptions. The generator never places a lesson in a time you
-mark as unavailable.
+### Availability
+
+By default, a teacher can be scheduled at **any** time the school is open. Here you mark only the
+times a teacher **can't** teach — the exceptions.
 
 <Steps>
 
 <Step>
 ### Open the teacher
 
-On the **Teachers** tab, choose a teacher (or select several to set the same unavailability for all
-of them at once).
+On **Teachers** → **Availability**, choose a teacher (or use bulk select for several).
 </Step>
 
 <Step>
 ### Mark the unavailable times
 
-For each day, add the time windows when the teacher is **not** available — for example *not
-available after 12:00*, or *all day Friday*. Leave a day untouched and the teacher is available all
-day. Leave the whole teacher empty and they're available whenever the school is open.
+Tap or drag on the grid to mark the periods when the teacher is **not** available — for example
+every afternoon, or all of Friday. Leave the grid empty and the teacher is available whenever the
+school is open. Click **Save changes**.
 
 <Screenshot
   label="Teacher unavailability grid"
@@ -58,75 +63,74 @@ day. Leave the whole teacher empty and they're available whenever the school is 
 
 </Steps>
 
-<Callout title="You enter the exceptions, not the schedule">
-You don't list when a teacher *is* available — that's assumed. You only mark the times they
-**aren't**. A teacher with nothing marked is treated as available across the whole school week.
-</Callout>
+### Limits
 
-### Workload limits
-
-Still on the **Teachers** tab, set how much each teacher should teach. Leave a field empty to
-apply no limit.
+On **Limits**, set how much the teacher should teach. Leave a field empty to apply no limit.
 
 | Limit | What it does |
 | --- | --- |
 | **Max hours per day** | The most teaching hours a teacher can have in one day. |
 | **Max hours per week** | The most teaching hours across the whole week. |
-| **Min lessons per day** | If the teacher works at all on a day, they get *at least* this many lessons — so they aren't called in for a single period. |
-| **Min lessons per half-day** | The same idea per morning or afternoon. Needs the half-day divider set in [Timetable config](./timetable-config). |
-| **Max gap periods** | How many free periods are tolerated between a teacher's lessons on the same day before it counts against the schedule. |
+| **Min periods per day** | If the teacher works on a day, they get *at least* this many periods — so they aren't called in for a single period. |
+| **Min periods per half-day** | The same idea per morning or afternoon. Needs the half-day divider in [Timetable config](./timetable-config). |
+| **Max gap periods** | How many free periods between lessons are fine for this teacher on the same day. |
 
 <Callout title="Firm limits vs. preferences">
-Max hours and min-lessons-per-day are treated as firm. The **gap** tolerance and the
-half-day minimum are **preferences** — you decide how strongly they matter on the
-[Constraints](./constraints) page. Setting a teacher's *Max gap periods* here overrides the
-school-wide gap preference just for that teacher.
+**Max hours per day** and **Max hours per week** are always kept. The minimums and **Max gap
+periods** are preferences: they override the matching Solver policy rule for this teacher, and the
+rule's switch and importance still apply. See [Constraints](./constraints).
 </Callout>
 
-### Allowed rooms (optional)
+### Subject whitelist
 
-If a teacher should only ever use certain rooms, list those rooms here. When set, the generator
-places that teacher's lessons only in the listed rooms. Leave it empty to allow any room.
+Pick the subjects this teacher is eligible to teach. This is the same eligibility you manage in
+[Teacher Assignments](./teacher-assignments) → **Subject Eligibility**.
 
-## Rooms
+### Room whitelist
 
-Switch to the **Rooms** tab.
+If a teacher should only use certain rooms, pick them here. The generator then places that
+teacher's lessons only in those rooms. Use **Allow all** to remove the restriction.
 
-### Room unavailability
+## Room Availability
 
-The same idea as teachers: a room can be used at **any** time by default, and you enter only the
-times it **can't** be used — for example a room under maintenance on certain mornings. The generator
-won't schedule a lesson in a room during a time you mark as unavailable. Leave a room empty and it's
-available whenever the school is open.
+Switch to the **Room Availability** tab. It works like teacher availability: a room can be used at
+**any** time by default, and you mark only the times it **can't** be used — for example a room
+booked for exams or under maintenance. Leave the grid empty and the room is available all week.
 
 ### Capacity and type
 
 Two room facts come from the room itself (set when you create the room) and are always respected:
 
 - **Capacity** — a lesson is only placed in a room big enough for the class.
-- **Room type** — if a subject requires a particular kind of room (e.g. a lab), the generator only
+- **Room type** — if a subject needs a particular kind of room (e.g. a lab), the generator only
   uses rooms of that type for it.
 
 See [Create rooms](../getting-started/build-the-academic-foundation/create-rooms).
 
 ## Homerooms
 
-On the **Homerooms** tab, set whether classes stay in a **homeroom** or **roam**, and assign each
-class its room. You can also set per-subject room overrides; subjects that need a special room
-type still roam to a suitable room.
+On the **Homerooms** tab, set each level's room policy:
+
+- **Homeroom** — each class has its own room. Pick a room per class, or use **Auto-assign
+  distinct rooms** or **Assign shared room** to fill several at once. You can also pin a subject
+  to a fixed room for one class under **Subject rooms**.
+- **Roamed** — no homeroom; the generator chooses a room for every lesson.
+
+Subjects that need a special room (lab, PE, computer room) always move to a suitable room.
 
 ## Class Hours
 
-On the **Class Hours** tab, mark when a **class** itself is unavailable — for example a half-day
-cohort that never has afternoon lessons. You can edit one class or several at once.
+On the **Class Hours** tab, mark when a **class** itself is unavailable — for example a cohort
+that only comes in the morning. Use the quick choices **Full day**, **Morning only**,
+**Afternoon only**, or **Alternate**, or mark periods on the grid. Click **Save**.
 
 ## Tips and best practices
 
-- Enter unavailability **before** generating — over-blocking a teacher is a common reason a
-  timetable can't be built (too little time left for their lessons).
-- Use **bulk editing** (select several teachers or rooms) to apply the same unavailability quickly.
-- Keep limits realistic. Very tight limits combined with a lot of blocked time can make a valid
-  timetable impossible; the generator will tell you when that happens.
+- Enter unavailability **before** generating — over-blocking a teacher is a common reason lessons
+  stay unscheduled (too little time left for their lessons).
+- Use **bulk select** to apply the same availability or limits quickly.
+- Keep limits realistic. Very tight limits combined with a lot of blocked time leave lessons
+  unscheduled; the unscheduled panel tells you which limit is the cause.
 
 ## Related articles
 

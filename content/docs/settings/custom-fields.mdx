@@ -1,11 +1,11 @@
 ---
 title: Custom fields
-description: Add your own fields to student, teacher, and guardian records.
+description: Add your own fields to student, teacher, staff, and guardian records.
 ---
 
 **Custom fields** let your school collect information the platform does not ask for by
 default. A custom field you define appears on the record's form — for students,
-teachers, or guardians — so everyone captures the same extra details.
+teachers, staff, or guardians — so everyone captures the same extra details.
 
 <Callout title="Who this is for">
 Administrators tailoring what information the school records about people.
@@ -18,7 +18,8 @@ Administrators tailoring what information the school records about people.
 <Step>
 ### Open the Custom Fields settings
 
-Go to **Settings → School** and open the **Custom Fields** tab, then choose **Add custom field**.
+Go to **Settings → School** and open the **Custom Fields** tab. Pick the profile the field is
+for — **Students**, **Teachers**, **Staff**, or **Guardians** — then click **Add Field**.
 
 <Screenshot
   label="Custom field dialog"
@@ -29,24 +30,31 @@ Go to **Settings → School** and open the **Custom Fields** tab, then choose **
 <Step>
 ### Define the field
 
-Complete the options below, then save.
+Complete the options below. A **Live preview** shows how the field will look on the form.
 
 | Option | Notes |
 | --- | --- |
-| **Profile** | Which record the field appears on — student, teacher, or guardian. |
-| **Field type** | The kind of input — text, text area, number, date, email, phone, URL, checkbox, toggle, radio, or select. |
-| **Label** | The field's name, shown on the form. |
+| **Field Type** | **Text**, **Paragraph**, **Number**, **Date**, **Dropdown**, **Yes / No**, **Email**, **Phone**, **URL**, **Radio**, or **Checkbox**. |
+| **Field label** | The field's name, shown on the form. |
 | **Placeholder** | Optional hint text shown inside the input. |
-| **Options** | For radio and select fields, the list of choices to pick from. |
-| **Required** | When on, the field must be filled before the record can be saved. |
+| **Options** | For **Dropdown**, **Radio**, and **Checkbox** fields: the choices, separated by commas. |
+| **Required** | When on, the field must be filled in before the form can be submitted. |
 | **Active** | When off, the field is kept but no longer shown on forms. |
+| **Visible to** | Turn **Teacher**, **Guardian**, and **Student** on or off to choose who else can see the field. |
+</Step>
+
+<Step>
+### Save
+
+Click **Create**.
 </Step>
 
 </Steps>
 
 <Callout title="Where custom fields appear">
-A field defined for *students* shows in the student form; one for *teachers* shows in
-the teacher form, and so on. Existing records simply gain the new field.
+A field defined for *students* shows in the student form; one for *staff* shows in the staff
+form, and so on. Existing records simply gain the new field. Changes to a field apply to every
+form where it appears.
 </Callout>
 
 ## Related articles

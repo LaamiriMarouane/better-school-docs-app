@@ -1,11 +1,10 @@
 ---
 title: Enregistrer un paiement
-description: Encaissez un paiement sur les échéances d'un élève, avec une remise facultative.
+description: Encaissez un paiement sur les échéances d'un élève, payez pour plusieurs frères et sœurs en une fois et imprimez les reçus.
 ---
 
 Enregistrer un paiement règle une ou plusieurs **échéances** d'un élève. Un seul
-paiement peut couvrir plusieurs échéances à la fois, appliquer éventuellement une
-remise, et est attribué à un mode de paiement et à un payeur.
+paiement peut couvrir plusieurs échéances à la fois et inclure une remise ponctuelle.
 
 <Callout title="Pour qui">
 Le personnel d'accueil et de finance qui encaisse les frais.
@@ -13,7 +12,7 @@ Le personnel d'accueil et de finance qui encaisse les frais.
 
 ## Avant de commencer
 
-- L'élève doit avoir des **échéances** générées — voir
+- L'élève doit avoir des **échéances** — voir
   [Échéances et calendriers](./installments-and-schedules).
 
 <Screenshot
@@ -28,15 +27,16 @@ Le personnel d'accueil et de finance qui encaisse les frais.
 <Step>
 ### Trouver l'élève
 
-Dans le **centre de paiement**, recherchez et sélectionnez l'élève dont vous encaissez
-les frais.
+Ouvrez le **Centre de paiement** (depuis **Finances → Paiements**, ou **Enregistrer un
+paiement** sur le tableau de bord). Recherchez l’élève ou un tuteur et choisissez
+l’élève.
 </Step>
 
 <Step>
 ### Sélectionner les échéances à payer
 
-Les échéances impayées de l'élève sont listées, regroupées par frais. Cochez celles que
-ce paiement couvre. Le total se met à jour quand vous modifiez la sélection.
+Les échéances de l'élève sont listées, regroupées par frais. Utilisez **Payer maintenant**
+sur une échéance, ou cochez-en plusieurs et payez-les ensemble.
 
 <Screenshot
   label="Validation du paiement des échéances"
@@ -47,36 +47,55 @@ ce paiement couvre. Le total se met à jour quand vous modifiez la sélection.
 <Step>
 ### Appliquer une remise (facultatif)
 
-Saisissez éventuellement une **remise** — un pourcentage ou un montant fixe. Le montant
-final se met à jour automatiquement.
+Sous **Appliquer une remise**, choisissez un **Type de remise** (**Pourcentage** ou
+**Montant fixe**) et une **Valeur de remise**. Le **Montant final** se met à jour
+automatiquement.
 </Step>
 
 <Step>
 ### Saisir les détails du paiement
 
-Complétez les champs de paiement, puis validez.
-
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Payé par** | Non | Le tuteur effectuant le paiement, s'il est enregistré. |
-| **Mode de paiement** | Oui | Espèces, carte bancaire ou virement. |
-| **Montant total payé** | Oui | Pré-rempli avec le montant final ; ajustez pour un paiement partiel. |
-| **Type / valeur de remise** | Non | Pourcentage ou montant fixe retiré du total. |
+| **Payé par** | Non | Le tuteur qui effectue le paiement. |
+| **Méthode de paiement** | Oui | **Espèces**, **Carte de Crédit**, **Virement Bancaire** ou **Chèque**. |
+| **Date de paiement** | Oui | Le jour où l'argent a été reçu. Elle ne peut pas être dans le futur. |
+| **Payé par (nom)** | Non | Le nom du payeur, quand ce n'est pas un tuteur enregistré. |
+| **Référence de paiement** | Non | Un numéro de chèque ou de virement, par exemple. |
+| **Montant total payé** | Oui | Prérempli avec le montant final. Baissez-le pour un paiement partiel. Il ne peut pas dépasser ce qui reste dû. |
 </Step>
 
 <Step>
 ### Confirmer
 
-Validez le paiement. Le **montant payé** des échéances sélectionnées augmente et leur
-**restant** diminue. Un paiement partiel laisse l'échéance partiellement réglée.
+Cliquez sur le bouton de paiement. Le **Montant payé** des échéances sélectionnées
+augmente et leur **Restant** diminue. Un paiement partiel laisse l'échéance partiellement
+réglée.
 </Step>
 
 </Steps>
 
 <Callout title="Paiements partiels">
-Vous n'êtes pas obligé de payer une échéance en totalité. Saisissez un **montant total
-payé** plus faible et le reste demeure dû — encaissez-le avec un paiement ultérieur.
+Vous n'êtes pas obligé de payer une échéance en entier. Saisissez un **Montant total
+payé** plus petit et le reste demeure dû — encaissez-le lors d'un paiement ultérieur.
 </Callout>
+
+## Payer pour plusieurs enfants en une fois
+
+Quand l'élève a des frères ou sœurs inscrits, la liste des **Versements** affiche **Payer
+pour plusieurs enfants**.
+
+1. Cochez au moins deux enfants, puis les échéances à payer pour chacun. Le montant
+   correspond par défaut au reste dû des lignes cochées.
+2. Renseignez les détails du paiement comme ci-dessus.
+3. Cliquez sur **Enregistrer le paiement familial**. Chaque enfant reçoit son propre reçu,
+   et vous pouvez aussi **Télécharger le reçu familial**.
+
+## Reçus
+
+Chaque paiement a un reçu. Utilisez **Télécharger le reçu** ou **Imprimer le reçu** sur un
+paiement dans **Paiements récents** (dans le Centre de paiement) ou dans la liste
+**Finances → Paiements**. Vous choisissez la langue du reçu au moment du téléchargement.
 
 ## Articles liés
 

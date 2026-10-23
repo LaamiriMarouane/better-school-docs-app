@@ -1,30 +1,30 @@
 ---
 title: Activer et séances de classe
-description: Transformez un modèle hebdomadaire en réunions de classe datées — ce que fait Activer, et comment les séances apparaissent pour les enseignants et la présence.
+description: Transformez un modèle hebdomadaire en réunions de classe datées — ce que font Activer et Désactiver, et comment les séances apparaissent pour les enseignants et la présence.
 ---
 
 Un [groupe d'emploi du temps](./timetable-groups) est un **modèle hebdomadaire**. **L'activer** en
 fait le plan en vigueur pour ses niveaux et crée des **séances de classe** — de vraies réunions
-avec une date et une heure que les enseignants et les familles peuvent suivre.
+avec une date et une heure précises que les enseignants et les familles peuvent suivre.
 
 <Callout title="Pour qui">
-Les administrateurs qui publient un plan hebdomadaire terminé pour que l'enseignement quotidien
-puisse commencer.
+Les administrateurs qui mettent en service un plan hebdomadaire terminé pour que l'enseignement
+quotidien puisse commencer.
 </Callout>
 
 ## Modèle vs séance
 
 | Concept | Ce que c'est |
 | --- | --- |
-| **Modèle hebdomadaire** (groupe) | La semaine qui se répète : *lundi créneau 1 — Classe 6A Maths avec Mme A en salle 12*. |
+| **Modèle hebdomadaire** (groupe d'emploi du temps) | La semaine qui se répète : *lundi créneau 1 — Classe 6A Maths avec Mme A en salle 12*. |
 | **Séance de classe** | Une occurrence réelle : *lundi 10 mars, 08:00–08:45 — Classe 6A Maths…*. |
 
-La présence, le journal d'activité et les remplacements sont liés aux **séances**, pas au modèle
-vide. Voir [Séances de classe et présence](../teaching/sessions-and-attendance).
+La présence et le journal d'activité sont liés aux **séances**, pas au modèle vide. Voir
+[Séances de classe et présence](../teaching/sessions-and-attendance).
 
 ## Avant d'activer
 
-- La semaine du groupe est revue (générée et/ou ajustée à la main).
+- La semaine du groupe est revue (générée et/ou modifiée à la main).
 - Vous êtes prêt à ce que enseignants et élèves suivent ce plan pour les niveaux du groupe.
 
 ## Activer un groupe
@@ -32,53 +32,87 @@ vide. Voir [Séances de classe et présence](../teaching/sessions-and-attendance
 <Steps>
 
 <Step>
-### Ouvrir le groupe
+### Ouvrir le menu de la ligne
 
-Allez dans **Académique → Emploi du temps → Groupes** et ouvrez le groupe (ou utilisez les
-actions de la ligne dans la liste).
+Allez dans **Académique → Emploi du temps → Groupes** et ouvrez le menu de la ligne (**⋯**) du
+groupe. Choisissez **Activer**.
 </Step>
 
 <Step>
-### Choisir Activer
+### Lire la confirmation
 
-Confirmez l'aperçu si le produit en affiche un. Si un autre groupe **actif** couvre déjà les
-mêmes niveaux, activer celui-ci **retire** le groupe qui se chevauche pour qu'un seul plan en
-vigueur s'applique par ensemble de niveaux.
+La fenêtre **Activer le groupe d'emploi du temps** apparaît toujours avant tout changement :
+
+- **Premier emploi du temps pour ces niveaux** — les séances commencent à partir de ce lundi.
+- **Un autre groupe est déjà actif pour certains de ces niveaux** — la fenêtre liste le ou les
+  groupes qui seront archivés. Les séances suivent le nouvel emploi du temps à partir de lundi
+  prochain.
+- Si le trimestre n'a pas encore commencé, les séances commencent le premier jour du trimestre. Si
+  le trimestre est déjà terminé, aucune séance n'est créée.
+
+Cliquez sur **Activer** pour confirmer.
 </Step>
 
 <Step>
 ### Ce qui se passe
 
-- Le groupe devient **Actif**.
-- Des **séances de classe** sont créées à partir du modèle hebdomadaire avec des dates et heures
-  réelles pour les jours à venir.
+- Le groupe devient **Actif** et reste en lecture seule tant qu'il est actif.
+- Des **séances de classe** sont créées à partir du modèle hebdomadaire avec de vraies dates et
+  heures.
 - Enseignants, élèves et parents peuvent suivre l'horaire en vigueur.
-- Le groupe actif est protégé contre des modifications de grille accidentelles jusqu'à
-  déverrouillage ou désactivation.
+- Tout groupe remplacé devient **Archivé**.
 </Step>
 
 </Steps>
 
 ## Désactiver
 
-**Désactiver** arrête le groupe de piloter de nouvelles séances en direct et débloque à nouveau
-l'édition. Utilisez-le pour modifier la semaine, puis **Activez** de nouveau pour que les séances
-suivent le modèle mis à jour.
+Désactivez un groupe quand vous devez changer la semaine en vigueur ou cesser de l'utiliser.
+
+<Steps>
+
+<Step>
+### Choisir Désactiver
+
+Dans la liste **Groupes**, ouvrez le menu de la ligne (**⋯**) du groupe actif et choisissez
+**Désactiver**, puis confirmez.
+</Step>
+
+<Step>
+### Ce qui se passe
+
+- Les séances à partir de demain sont retirées. Les séances passées et celles d'aujourd'hui
+  restent.
+- Le groupe devient **Archivé**. Vous pouvez de nouveau le modifier à la main.
+</Step>
+
+<Step>
+### Remettre en service
+
+Quand vos modifications sont prêtes, choisissez **Activer** sur le même groupe pour que de
+nouvelles séances suivent la semaine mise à jour. Vous ne pouvez pas lancer le générateur sur un
+groupe archivé — pour régénérer, utilisez **Cloner en nouveau brouillon**, générez le clone et
+activez-le.
+</Step>
+
+</Steps>
 
 ## Après l'activation — au quotidien
 
 | Qui | Ce qu'ils font |
 | --- | --- |
 | **Enseignants** | Voient leurs séances sur l'emploi du temps, prennent la présence, et notent ce qui a été enseigné dans le journal d'activité. |
-| **Administrateurs** | Passent en revue les séances des classes, annulent ou ajustent une réunion ponctuelle si besoin. |
+| **Administrateurs** | Passent en revue les séances des classes et ajustent ou annulent une séance ponctuelle si besoin. |
 | **Élèves / parents** | Suivent l'emploi du temps de classe en vigueur. |
 
 ## Conseils
 
 - N'activez que lorsque la semaine est assez bonne pour vivre avec — les brouillons servent aux
-  essais et variantes.
-- Préférez un **clone brouillon** pour une grande expérience ; activez le gagnant quand vous êtes sûr.
-- Pour le déroulement de chaque réunion, voir [Séances de classe et présence](../teaching/sessions-and-attendance).
+  essais et aux variantes.
+- Préférez **Cloner en nouveau brouillon** pour une grande expérience ; activez le gagnant quand
+  vous êtes sûr.
+- Pour le déroulement de chaque réunion, voir
+  [Séances de classe et présence](../teaching/sessions-and-attendance).
 
 ## Articles liés
 

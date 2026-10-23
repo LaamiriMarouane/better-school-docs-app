@@ -27,7 +27,7 @@ Les administrateurs qui démarrent un nouveau cycle scolaire.
 <Step>
 ### Ouvrir la page Années scolaires
 
-Allez dans **Paramètres → Pédagogique**, ouvrez l'onglet **Année scolaire**, puis cliquez sur **Ajouter une année académique**.
+Allez dans **Paramètres → Académique**, ouvrez l'onglet **Année académique**, puis cliquez sur **Ajouter une année académique**.
 
 <Screenshot
   label="Formulaire de création d'une année scolaire"
@@ -42,7 +42,7 @@ Complétez les champs ci-dessous.
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Libellé** | Oui | Le nom affiché, ex. *2025–2026*. |
+| **Label** | Oui | Le nom affiché, ex. *2025–2026*. |
 | **Date de début** | Oui | Le premier jour du cycle. |
 | **Date de fin** | Oui | Le dernier jour du cycle. Doit être postérieure à la date de début. |
 </Step>
@@ -51,19 +51,27 @@ Complétez les champs ci-dessous.
 ### Soumettre et démarrer la configuration
 
 Cliquez sur **Soumettre**. La nouvelle année est créée en **brouillon**, et on vous demande
-quoi faire ensuite. Choisissez **Démarrer la configuration** pour ouvrir la
-[Configuration de l'année scolaire](./academic-year-setup), où vous ajoutez les périodes,
-choisissez les niveaux et les matières, reprenez les enseignants et les élèves réinscrits de
+quoi faire ensuite : **Démarrer la configuration**, **Voir les détails** ou **Retour à la liste**.
+Choisissez **Démarrer la configuration** pour ouvrir la
+[Configuration de l'année scolaire](./academic-year-setup), où vous datez les périodes,
+choisissez les niveaux et les matières, reprenez les enseignants et les élèves qui reviennent de
 l'année précédente, et enfin activez l'année.
 </Step>
 
 </Steps>
 
-<Callout title="Changer d'année active">
-L'année scolaire affichée dans le sélecteur en haut de l'écran détermine l'année que
-vous modifiez. Sélectionnez-y la nouvelle année avant de construire ses niveaux et ses
-classes.
-</Callout>
+## Gérer une année depuis la liste
+
+Chaque année de la liste possède un menu d'actions :
+
+| Action | Ce qu'elle fait |
+| --- | --- |
+| **Voir les détails** | Ouvre la page de l'année, avec ses périodes et le bouton **Configuration de l'année**. |
+| **Définir comme année académique active** | Fait d'une année en brouillon l'année active. |
+| **Fermer l'année académique** | Affichée sur l'année active. Une année fermée passe en lecture seule. |
+| **Rouvrir l'année académique** | Affichée sur une année fermée. Elle repasse en brouillon pour que vous puissiez la modifier ; aucune inscription n'est autorisée tant qu'elle est rouverte. |
+| **Modifier** | Changer le label ou les dates. |
+| **Supprimer** | Supprimer l'année. |
 
 ## Articles liés
 

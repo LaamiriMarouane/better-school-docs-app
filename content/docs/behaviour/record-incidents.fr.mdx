@@ -25,7 +25,7 @@ Les élèves et parents peuvent uniquement consulter — voir [Points & classeme
 <Step>
 ### Ouvrir les incidents
 
-Allez dans **Comportement → Incidents**, puis choisissez **Ajouter un incident**.
+Allez dans **Comportement → Incidents élèves**, puis choisissez **Ajouter un incident**.
 </Step>
 
 <Step>
@@ -33,40 +33,50 @@ Allez dans **Comportement → Incidents**, puis choisissez **Ajouter un incident
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Élève** | Oui | L'élève concerné. Les enseignants ne voient que les élèves de leurs classes. |
+| **Classe** | Non | Choisissez d'abord la classe pour réduire la liste des élèves, ou laissez **Toutes les classes**. Les enseignants ne voient que les classes où ils enseignent. |
+| **Étudiant** | Oui | Recherchez l'élève concerné. |
 | **Catégorie** | Oui | Le type de comportement (positif ou négatif). |
 | **Sous-catégorie** | Non | Un libellé plus fin, si la catégorie en a. |
 | **Niveau** | Oui | Le niveau d'importance — il fixe les points. |
-| **Points** | Oui | Pré-remplis depuis le niveau ; ajustez si besoin. Les niveaux positifs ajoutent, les négatifs retranchent. |
 | **Description** | Oui | Ce qui s'est passé. |
-| **Date** | Oui | Quand cela s'est produit. |
-| **Lieu** | Non | Où cela s'est produit, le cas échéant. |
+| **Date de l'incident** | Oui | Quand cela s'est produit. |
+| **Localisation** | Non | Où cela s'est produit, le cas échéant. |
+| **Points** | Oui | Pré-remplis depuis le niveau. |
 </Step>
 
 <Step>
 ### Enregistrer
 
-L'incident est consigné, et ses points comptent dans le total de l'élève.
+Choisissez **Ajouter un incident**. L'incident est consigné, et ses points comptent dans le total de
+l'élève.
 </Step>
 
 </Steps>
 
 <Callout title="Les points viennent du niveau">
-Lorsque vous choisissez un **niveau**, ses points par défaut se remplissent automatiquement. Vous
-pouvez changer la valeur pour un incident précis — mais le fait qu'il **ajoute ou retranche** vient
-du côté positif/négatif du niveau.
+Lorsque vous choisissez un **niveau**, ses points par défaut se remplissent. Vous pouvez les réduire
+pour un incident précis : saisissez un nombre entier entre 0 et les points du niveau (pour un niveau
+négatif, entre les points du niveau et 0). La plage autorisée s'affiche sous le champ.
 </Callout>
+
+## Retrouver un incident
+
+Utilisez la barre de recherche, ou ouvrez le filtre pour affiner la liste par **Sentiment** (positif
+ou négatif) et **Plage de dates de l'incident**.
 
 ## Modifier ou supprimer
 
-Ouvrez un incident pour modifier ses détails ou le supprimer. Les
-points de l'élève se mettent à jour en conséquence.
+Ouvrez le menu d'actions de la ligne et choisissez **Modifier** ou **Supprimer**. Les points de
+l'élève se mettent à jour en conséquence.
+
+- Les **administrateurs** peuvent modifier ou supprimer n'importe quel incident.
+- Les **enseignants** ne peuvent modifier ou supprimer que les incidents qu'ils ont enregistrés.
 
 ## Cas d'usage courants
 
 - **Récompenser le bon comportement** — enregistrez un incident positif pour qu'il s'ajoute aux
   points de l'élève.
-- **Corriger une erreur** — ouvrez l'incident et corrigez le niveau, les points ou la description.
+- **Corriger une erreur** — modifiez l'incident et corrigez le niveau, les points ou la description.
 
 ## Articles liés
 

@@ -1,12 +1,13 @@
 ---
 title: Configuration de l'année scolaire
-description: Parcourez le centre de configuration guidé — terminez le verrou de définition, puis les étapes de préparation, terminez la configuration et activez l'année.
+description: Parcourez la configuration guidée de l'année — confirmez chaque étape pour l'année, terminez la configuration et activez l'année.
 ---
 
 La **Configuration de l'année** est un espace de travail guidé pour une année donnée. Vous
-terminez un court **verrou de définition** (requis avant l'activation), puis des étapes de
-**préparation** facultatives (classes, enseignants, notation, etc.). Lorsque le verrou est
-satisfait, vous **Terminez la configuration** et **Activez** l'année.
+parcourez un court **verrou de définition** (requis avant l'activation), puis des étapes de
+**préparation** (classes, enseignants, inscriptions, etc.). Une étape ne compte comme prête
+qu'après avoir cliqué sur **Confirmer pour cette année**. Lorsque toutes les étapes du verrou sont
+confirmées, vous cliquez sur **Terminer la configuration** puis sur **Activer l'année**.
 
 <Callout title="Pour qui">
 Les administrateurs qui préparent une nouvelle année scolaire avant les opérations quotidiennes.
@@ -14,49 +15,72 @@ Les administrateurs qui préparent une nouvelle année scolaire avant les opéra
 
 ## Ouvrir la configuration de l'année
 
-1. Allez dans **Paramètres → Pédagogique** et ouvrez l'onglet **Année scolaire**.
-2. Ouvrez l'année → **Détails de l'année**.
+1. Allez dans **Paramètres → Académique** et ouvrez l'onglet **Année académique**.
+2. Ouvrez l'année avec **Voir les détails**.
 3. Cliquez sur **Configuration de l'année** (ou **Ouvrir le centre de configuration** /
    **Démarrer la configuration** lorsqu'ils sont proposés après la création d'une année).
 
-La configuration s'ouvre en plein écran. Utilisez **Revenir à l'année** pour retourner aux
-détails de l'année.
+La configuration s'ouvre en plein écran. Tout se fait à l'intérieur, étape par étape. Utilisez
+**Revenir à l'année** pour retourner à la page de l'année.
 
-## Définition vs préparation
+## Confirmer chaque étape pour l'année
 
-| Parcours | Étapes | Bloque l'activation ? |
-| --- | --- | --- |
-| **Définition** (verrou) | Périodes, Niveaux, Matières, Associations de matières | **Oui** — toutes doivent être satisfaites. |
-| **Préparation** | Notation, Classes, Enseignants, Supervisions, Admissions / inscriptions, Inscriptions | **Non** — vous pouvez ignorer ou terminer plus tard. |
+Chaque carte d'étape affiche un statut :
 
-Terminez d'abord les étapes de définition. La navigation de préparation reste verrouillée jusqu'à
-ce que le verrou soit satisfait.
+| Statut | Signification |
+| --- | --- |
+| **Confirmée** | Vous avez confirmé l'étape pour cette année. Elle compte comme prête. |
+| **Non confirmée** | Des données existent peut-être déjà, mais vous ne les avez pas encore confirmées. |
+| **Ignoré** | Vous avez choisi **Ignorer pour l'instant** sur une étape de préparation. |
 
-## Étapes de définition (verrou)
+- Cliquez sur **Confirmer pour cette année** sur la carte de l'étape ou en haut de la page de
+  l'étape, une fois son contenu vérifié.
+- Une étape de définition ne peut être confirmée que si elle contient des données pour l'année.
+- Une étape de préparation peut être confirmée même vide (par exemple, aucune ligne de transport
+  cette année). L'application vous demande d'abord de confirmer ce choix.
+- Cliquez sur **Annuler la confirmation** pour revenir sur une confirmation. Cliquez sur
+  **Ignoré — annuler** pour annuler un « ignorer ».
+
+## Verrou de définition
+
+Vous devez confirmer toutes ces étapes avant de pouvoir terminer la configuration. Elles ne
+peuvent pas être ignorées.
 
 | Étape | Ce que vous faites |
 | --- | --- |
-| **Périodes** | Ajoutez au moins une période avec des dates pour cette année. |
-| **Niveaux** | Activez les niveaux scolaires qui tournent cette année. |
-| **Matières** | Assurez-vous que les matières enseignées par votre école sont créées. |
+| **Périodes** | Datez les périodes de l'année. |
+| **Niveaux** | Activez les niveaux qui fonctionnent cette année. Pour un niveau avec filières, utilisez l'interrupteur de chaque filière pour indiquer si elle est proposée cette année. |
+| **Matières** | Vérifiez que les matières enseignées par votre école existent. |
 | **Associations de matières** | Indiquez quelles matières chaque niveau enseigne cette année (par période si besoin). |
-
-Vous ne pouvez pas ignorer une étape du verrou. Les compteurs et coches se mettent à jour au fur
-et à mesure de votre travail.
 
 ## Étapes de préparation (ne bloquent jamais l'activation)
 
+Les cartes de préparation restent verrouillées tant que le verrou de définition n'est pas
+confirmé.
+
 | Étape | Ce que vous faites |
 | --- | --- |
-| **Notation** | Politique de notation de l'année, catégories, barèmes et configuration associée (mêmes outils que [Configuration des notes](../../teaching/grading-setup)). |
-| **Classes** | Créez les sections de classe pour les niveaux actifs. |
-| **Enseignants** | Associez les enseignants à cette année (souvent depuis l'année précédente). |
-| **Supervisions** | Copiez ou définissez les responsabilités de supervision / enseignant principal. |
-| **Admissions / inscriptions** | Promouvez ou décidez des élèves qui reviennent depuis l'année précédente (première année : utilisez plutôt les admissions / l'intake manuel). |
-| **Inscriptions** | Placez les élèves (niveau, classe et plan de paiement facultatifs) — se remplit au fil du temps. |
+| **Notation** | Vérifiez la configuration de la notation de l'année (mêmes outils que [Configuration des notes](../../teaching/grading-setup)). |
+| **Classes** | Créez les classes des niveaux et filières qui fonctionnent cette année. |
+| **Enseignants** | Sélectionnez les enseignants de l'année précédente et assignez-les à cette année. |
+| **Supervisions** | Copiez ou définissez les responsabilités de supervision. |
+| **Admissions / pré-inscriptions** | Décidez de la place de chaque élève qui revient : **Promouvoir**, **Redoubler**, **Diplômer** ou **Départ**. Vous pouvez décider maintenant ou envoyer la décision au parent pour confirmation, et ouvrir ou fermer la réinscription avec **Ouvrir la réinscription** / **Fermer la réinscription**. |
+| **Inscriptions** | Inscrivez les élèves à un niveau, puis affectez une classe et un plan de paiement (tous deux facultatifs). Les élèves promus ou redoublants apparaissent sous **En attente d'inscription** : choisissez une classe (facultatif) et cliquez sur **Inscrire**. |
+| **Transport** | Affiché lorsque le transport est utilisé. Copiez les zones et itinéraires de l'an dernier, voyez où habitent les élèves et confirmez les arrêts des élèves qui reviennent. |
 
-Utilisez **Ignorer pour l'instant** sur une étape de préparation si vous la terminerez après
-l'activation. Vous pouvez annuler une ignore plus tard.
+Les élèves promus ou redoublants sont réinscrits pour la nouvelle année, mais ne sont pas encore
+dans une classe. L'étape **Admissions / pré-inscriptions** indique combien attendent, avec
+**Les inscrire** pour passer à l'étape **Inscriptions**.
+
+### Frais et plans de paiement
+
+La carte **Frais et plans de paiement** (visible pour les utilisateurs qui peuvent créer des frais
+et des plans de paiement) permet de **Copier les frais et plans de paiement de l'année dernière** :
+services, frais avec leurs prix par niveau, et plans de paiement. Ajustez ensuite les montants
+dans les pages Finances. Cette carte n'est pas une étape et n'a pas besoin d'être confirmée.
+
+Utilisez **Ignorer pour l'instant** sur une étape de préparation que vous terminerez après
+l'activation.
 
 ## Terminer la configuration et activer
 
@@ -65,23 +89,23 @@ l'activation. Vous pouvez annuler une ignore plus tard.
 <Step>
 ### Terminer la configuration
 
-Lorsque chaque étape de définition est satisfaite, cliquez sur **Terminer la configuration**. Cela
-marque la configuration de l'année comme terminée — cela n'active **pas** l'année à lui seul.
+Lorsque chaque étape de définition est confirmée, cliquez sur **Terminer la configuration**. S'il
+manque une étape, le bouton reste désactivé et les étapes manquantes sont listées dessous.
+Terminer la configuration n'active **pas** l'année à lui seul.
 </Step>
 
 <Step>
 ### Activer l'année
 
 Lorsque la configuration est terminée et que l'année est encore un brouillon, cliquez sur
-**Activer l'année**. Ce n'est qu'alors que l'année devient l'année d'exploitation active (selon
-les règles d'année de votre école).
+**Activer l'année**. L'année devient alors l'année active.
 </Step>
 
 </Steps>
 
 <Callout title="La préparation est facultative pour l'activation">
-Vous pouvez activer avec des classes vides ou des inscriptions inachevées. Les étapes
-opérationnelles sont là pour vous préparer à enseigner et facturer — elles ne bloquent pas
+Vous pouvez activer avec des classes vides ou des inscriptions inachevées. Les étapes de
+préparation vous aident à être prêt à enseigner et facturer — elles ne bloquent pas
 **Activer l'année**.
 </Callout>
 

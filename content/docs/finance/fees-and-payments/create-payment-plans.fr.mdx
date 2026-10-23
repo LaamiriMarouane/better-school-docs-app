@@ -1,35 +1,35 @@
 ---
-title: Créer des échéanciers
-description: Regroupez des frais dans un échéancier de paiement pouvant être associé à l'inscription d'un élève.
+title: Créer des plans de paiement
+description: Regroupez des frais dans un plan de paiement pour un ou plusieurs niveaux, puis placez-y des élèves.
 ---
 
-Un **échéancier de paiement** regroupe un ou plusieurs **frais** pour un **niveau**.
-C'est ce que vous associez à une inscription — une fois associé, les échéances de
-l'élève sont générées à partir des frais de l'échéancier.
+Un **plan de paiement** regroupe un ou plusieurs **frais** pour un ou plusieurs
+**niveaux**. C'est ce que vous associez à une inscription — dès qu'un élève est sur un
+plan, ses échéances sont créées à partir des frais du plan.
 
 <Callout title="Pour qui">
-Les administrateurs qui regroupent les frais dans les échéanciers de facturation des
-élèves.
+Les administrateurs qui regroupent les frais dans les plans de facturation des élèves.
 </Callout>
 
 ## Avant de commencer
 
-- Les **frais** doivent déjà exister pour le niveau — voir [Configurer les frais](./set-up-fees).
-- Une **année scolaire** doit être sélectionnée.
+- Les **frais** doivent déjà exister — voir [Configurer les frais](./set-up-fees).
+- Sélectionnez la bonne **année scolaire** en haut de l'écran.
 
 <Screenshot
   label="Page des échéanciers avec le bouton Ajouter un échéancier"
   caption="Les échéanciers regroupent les frais d'un niveau."
 />
 
-## Étapes
+## Créer un plan
 
 <Steps>
 
 <Step>
-### Ouvrir la page Échéanciers
+### Ouvrir la page Plans de paiement
 
-Allez dans **Finance → Échéanciers**, puis démarrez un nouvel échéancier.
+Allez dans **Finances → Plans de paiement**, puis cliquez sur **Ajouter un plan de
+paiement**.
 
 <Screenshot
   label="Formulaire de création d'un échéancier"
@@ -38,37 +38,62 @@ Allez dans **Finance → Échéanciers**, puis démarrez un nouvel échéancier.
 </Step>
 
 <Step>
-### Choisir le niveau
-
-Choisissez d'abord le **niveau**. La liste des frais que vous pouvez ajouter est
-filtrée sur ce niveau.
-</Step>
-
-<Step>
-### Renseigner les détails de l'échéancier
-
-Complétez les champs ci-dessous, puis cliquez sur **Créer l'échéancier**.
+### Renseigner les détails du plan
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Nom** | Oui | Le nom affiché, ex. *1re année — Échéancier complet*. |
-| **Niveau** | Oui | Le niveau concerné. Détermine les frais disponibles. |
-| **Type d'échéancier** | Oui | La catégorie d'échéancier (par exemple académique). |
-| **Conditions** | Non | Notes ou conditions facultatives affichées avec l'échéancier. |
-| **Frais** | Oui | Un ou plusieurs frais à inclure. Choisissez d'abord un niveau pour remplir cette liste. |
+| **Nom** | Oui | Le nom affiché, ex. *Primaire — Plan complet*. |
+| **Type de plan** | Oui | **Académique** (le plan principal avec lequel les élèves sont inscrits), **Service** ou **Événement**. |
+| **Niveaux** | Oui | Un ou plusieurs niveaux concernés par le plan. |
+| **Conditions** | Non | Notes ou conditions facultatives affichées avec le plan. |
+| **Frais** | Oui | Un ou plusieurs frais à inclure. |
 </Step>
 
 <Step>
-### Enregistrer l'échéancier
+### Indiquer si chaque frais est requis ou optionnel
 
-L'échéancier est désormais disponible pour être associé lors de la création d'une
-inscription ou d'une inscription en masse.
+Chaque frais ajouté apparaît dans une liste sous **Frais**. Pour chacun, choisissez :
+
+- **Requis** — chaque élève du plan le paie.
+- **Optionnel** — une option que la famille prend ou non (par exemple la cantine ou le
+  transport). Cochez **Pré-sélectionné** pour qu'elle soit cochée par défaut quand un
+  élève rejoint le plan.
+</Step>
+
+<Step>
+### Enregistrer le plan
+
+Cliquez sur **Créer un plan de paiement**. Le plan est désormais disponible lors de la
+création d'une inscription ou d'une inscription en masse.
 </Step>
 
 </Steps>
 
+## Placer des élèves sur un plan
+
+Dans la liste des plans, utilisez **Voir les élèves** sur un plan :
+
+- **Associer un élève inscrit** — recherchez un élève inscrit et ajoutez-le, en
+  choisissant ses **Services optionnels**. Une **Quantité** permet de facturer chaque
+  frais plusieurs fois (ex. deux uniformes).
+- **Ajouter une classe / un niveau** — choisissez des classes ou des niveaux puis
+  cliquez sur **Ajouter les élèves**. Les élèves déjà sur le plan, ou non éligibles, sont
+  ignorés et listés avec la raison.
+- **Gérer les options** — sur la ligne d'un élève, cochez ou décochez ses services
+  optionnels.
+- **Retirer du plan** — l'élève n'est plus facturé pour ce plan. Si de l'argent a déjà
+  été payé dessus, remboursez ou annulez d'abord ces paiements.
+
+## Modifier ou retirer un plan
+
+- Tant que des élèves sont sur un plan, vous pouvez encore ajouter des frais, mais pas en
+  retirer ni changer ses niveaux ou son type. Les élèves déjà sur le plan sont facturés
+  d'un nouveau frais requis à partir d'aujourd'hui.
+- Utilisez **Archiver** pour retirer un plan que vous ne proposez plus, et
+  **Désarchiver** pour le réactiver.
+
 <Callout title="Et ensuite">
-Associer un échéancier à une inscription génère les échéances de l'élève — voir
+Placer un élève sur un plan crée ses échéances — voir
 [Échéances et calendriers](./installments-and-schedules).
 </Callout>
 

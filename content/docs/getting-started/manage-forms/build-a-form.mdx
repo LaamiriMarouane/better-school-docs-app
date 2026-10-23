@@ -4,16 +4,17 @@ description: Design the form's sections and fields in the drag-and-drop builder.
 ---
 
 The **builder** is where you design what applicants see. You drag fields onto a
-canvas, arrange them into sections, and set each field's behaviour.
+canvas, arrange them into sections, and set each field's behaviour. All sections
+appear one after the other on a single page.
 
 ## The builder layout
 
 | Area | What it holds |
 | --- | --- |
-| **Left sidebar** | The field components you can drag onto the form. |
-| **Canvas** | The form itself — **sections**, each holding **rows** and **columns** of fields. |
-| **Right panel** | The properties of the field you select, or the **Admission Fields** panel. |
-| **Header** | Undo / redo, preview, settings, and save. |
+| **Components** list | The fields you can drag onto the form: inputs, choices, dates and times, uploads, layout elements, and your school's custom fields. |
+| **Canvas** | The form itself — **sections**, each holding rows of fields. |
+| **Properties** panel | The settings of the field you select, or the admission fields panel. |
+| **Header** | The form name and status, **Publish**, undo / redo, **Preview**, **Levels** (Admission forms), **Settings** and **Save**. |
 
 <Screenshot
   label="Form builder with the field sidebar, canvas, and properties panel"
@@ -25,69 +26,87 @@ canvas, arrange them into sections, and set each field's behaviour.
 <Steps>
 
 <Step>
+### Add sections
+
+A form needs at least one section before you can save it. Use **Add Another
+Section** under the canvas, and type a title for each section.
+</Step>
+
+<Step>
 ### Drag fields onto the canvas
 
-Drag a field component from the left sidebar onto a section. Drop it on a section
-header to start a new row, or next to an existing field to share its row.
+Drag a field from the **Components** list onto a section. Drop it on the section's
+empty area to start a new row, or next to an existing field to share its row.
+Drag rows and sections to reorder them.
 </Step>
 
 <Step>
 ### Set field properties
 
-Select a field to open the properties panel on the right. There you set the
-**label**, mark it **required**, add **validation**, define **options** for choice
-fields, and control its **visibility**.
+Select a field to open its **Properties**. There you set the **Label**, the
+**Placeholder** and an optional helper text, the **Options** of a choice field,
+and the **Validation** rules — **Required field**, lengths, number or date limits,
+file size and types.
 </Step>
 
 <Step>
-### Organise into sections
+### Show a field only when needed
 
-Group related fields into sections and reorder rows and sections by dragging.
-A section can be made **repeatable** so applicants add more than one entry — for
-example several children on one application.
+In **Properties**, use **Show only when…** to display a field only when another
+field matches a condition — for example, show "Allergy details" only when
+"Has allergies" is answered Yes. Pick the field in **When this field**, then a
+**Condition** and a **Value**.
 </Step>
 
 </Steps>
 
+Each field on the canvas has its own buttons to duplicate, copy or delete it.
+
 ## Admission fields
 
-Admission forms come with **Student** and **Guardian** sections already built in.
-To add more recognised fields, open the **Admission Fields** panel from the right.
+Admission forms come with the **Guardian Information** and **Student
+Information** sections already built in, including the student's level. These
+built-in fields are marked **Locked field** and can't be removed.
 
-It has two tabs — **Student** and **Guardian** — each listing:
+To add more recognised fields, choose **Admission Fields** at the bottom of the
+**Components** list. The panel has a **Student** tab and a **Guardian** tab, each
+listing:
 
-- **System fields** — recognised fields such as date of birth or address. Adding
-  them lets a submission be matched to a real person.
+- **System fields** — fields the platform recognises, such as a date of birth.
+  When you accept an application, their answers fill the new records for you.
 - **Custom fields** — extra fields your school defined. See
   [Custom fields](../../settings/custom-fields).
 
-Drag a field from the panel into the matching section, or use its **+** button.
-A field that is already on the form is marked **Added**.
+Drag a field from the panel into the matching section. A field that is already on
+the form is marked **Added**.
 
-<Callout title="Why system fields matter">
-System fields carry a hidden mapping (for example `student.firstName`). That
-mapping is what lets the platform turn an accepted submission into a student
-record without re-typing anything.
-</Callout>
+## Choose the levels (Admission forms)
 
-## Preview and settings
+An Admission form can't be published until you choose who can apply.
 
-- **Preview** — switch the header to preview to see the form as an applicant
-  would, at desktop, tablet, or mobile width.
-- **Settings** — open the settings dialog to set the **presentation mode**
-  (a single page or a step-by-step wizard), the **languages**, the **theme**, the
-  **branding** (introduction and thank-you messages, logo, terms and privacy
-  policy), and the form's **schedule**.
+1. In the builder header, choose **Levels**. Until you pick levels, the button
+   shows **Not set**.
+2. Select the levels applicants can apply to. When a level has tracks, open at
+   least one of its tracks too.
+3. Choose **Save**. The button now shows how many levels (and tracks) are open.
+
+Applicants then pick one of these levels for each child on the form.
+
+## Preview and schedule
+
+- **Preview** — see the form as an applicant would, at desktop, tablet or mobile
+  width. Choose **Edit** to go back to the canvas.
+- **Settings** — set the form's schedule: **Opens at** and **Closes at**. See
+  [Publish and share a form](./publish-and-share-a-form).
 
 ## Save your work
 
-The header shows an **Unsaved changes** marker while you edit. Use **Save** to
-keep your changes. Undo and redo are available, along with keyboard shortcuts —
-copy, paste, and duplicate a selected field.
+The header shows **Unsaved Changes** while you edit. Choose **Save** to keep your
+changes. Undo and redo are in the header.
 
 <Callout title="Saving is not publishing">
-Saving keeps your design. The form stays a **draft** and is not yet open to
-applicants — see [Publish and share a form](./publish-and-share-a-form).
+Saving keeps your design. A draft stays closed to applicants until you publish it
+— see [Publish and share a form](./publish-and-share-a-form).
 </Callout>
 
 ## Related articles

@@ -23,50 +23,55 @@ lui-même dans la structure pédagogique — ce n'est **pas** un champ du formul
 - Le **niveau** (et toute filière) doit être configuré pour l'année.
 - Facultatif : une **classe** et un **plan de paiement** pour ce niveau.
 
-## Comment l'inscription est créée aujourd'hui
+## Inscrire un élève
 
-Il n'y a pas de bouton séparé **Ajouter une inscription** sur la page Inscriptions. Dans l'UI
-d'administration, les inscriptions sont créées depuis **Préinscriptions**, puis gérées sur
-**Inscriptions**.
+Vous pouvez inscrire un élève directement depuis les écrans élèves. Lorsque vous enregistrez un
+nouvel élève, son profil s'ouvre avec le formulaire **Inscrire** prêt, sauf si vous l'avez
+enregistré en pré-inscription.
 
 <Steps>
 
 <Step>
-### Ouvrir Préinscriptions
+### Ouvrir Inscrire
 
-Allez dans **Admissions et inscriptions → Préinscriptions**, restez sur l'onglet Direct / Admin
-([pré-inscriptions](./pre-inscriptions)).
+Allez dans **Académique → Élèves** et ouvrez le menu d'actions de l'élève, ou ouvrez le profil de
+l'élève. Choisissez **Inscrire**. L'action n'est proposée que tant que l'élève n'a pas
+d'inscription active pour l'année.
 </Step>
 
 <Step>
-### Sélectionner les lignes en attente et Inscrire
-
-Sélectionnez une ou plusieurs pré-inscriptions **En attente** du **même niveau**, puis choisissez
-**Inscrire**.
-</Step>
-
-<Step>
-### Confirmer le placement
+### Renseigner le placement
 
 | Champ | Obligatoire | Remarques |
 | --- | --- | --- |
-| **Niveau** | Oui | Verrouillé sur le niveau de la pré-inscription. |
-| **Filière** | Lorsque le niveau propose des filières | Doit correspondre à la filière de la pré-inscription lorsqu'une a été définie. |
+| **Niveau** | Oui | Le niveau que l'élève rejoint. |
+| **Filière** | Lorsque le niveau propose des filières | Obligatoire si ce niveau propose des filières pour l'année. |
 | **Classe** | Non | Affectez maintenant ou plus tard depuis Inscriptions. |
-| **Plan de paiement** | Non | Affectez maintenant ou plus tard ; génère les frais une fois associé. |
-| **Date d'inscription** | Non | Peut être aujourd'hui par défaut. C'est le premier jour facturable pour l'élève. |
+| **Plan de paiement** | Non | Affectez maintenant ou plus tard ; les frais sont facturés dès qu'un plan est associé. |
+| **Date d'inscription** | Non | Aujourd'hui par défaut. La facturation commence à cette date. |
 | **Notes** | Non | Facultatif. |
 </Step>
 
 <Step>
-### Terminer sur le hub Inscriptions
+### Confirmer
+
+Choisissez **Inscrire les élèves**. L'élève apparaît alors dans **Admissions et inscriptions →
+Inscriptions**.
+</Step>
+
+</Steps>
+
+<Callout title="Pré-inscription en attente">
+Si l'élève a une pré-inscription en attente, inscrivez-le au niveau de cette pré-inscription. Vous
+pouvez aussi inscrire depuis **Admissions et inscriptions → Préinscriptions** — voir
+[Pré-inscriptions](./pre-inscriptions) et [Inscrire des élèves en masse](./bulk-enroll-students).
+</Callout>
+
+## Terminer sur le hub Inscriptions
 
 Allez dans **Admissions et inscriptions → Inscriptions** pour revoir la liste. Utilisez
 **Affecter une classe** ou **Affecter un plan** en masse lorsque des élèves ont été inscrits sans
 classe ni plan.
-</Step>
-
-</Steps>
 
 <Callout title="Un placement actif par année">
 Un élève a un seul placement d'inscription actif pour l'année. Pour changer de classe ou de
@@ -75,10 +80,10 @@ de créer une deuxième inscription.
 </Callout>
 
 <Callout title="Date d'inscription et frais">
-Les mois antérieurs à aujourd'hui ne sont pas facturés. Un élève qui arrive le 3 octobre
-n'est pas facturé pour septembre. Avec la configuration par défaut (exigibilité le 1er, à
-l'avance), octobre reste exigible le 1er octobre, donc ces lignes sont déjà en retard. Les
-mois suivants sont exigibles le 1er. Voir
+Les mois antérieurs à la date d'inscription ne sont pas facturés : un élève qui arrive le
+3 octobre n'est pas facturé pour septembre. Lorsque le mois d'arrivée est facturé, sa première
+échéance tombe à la date d'inscription et non à un jour d'échéance déjà passé. Les mois suivants
+suivent le jour d'échéance habituel. Voir
 [Échéances et calendriers](../../finance/fees-and-payments/installments-and-schedules).
 </Callout>
 
@@ -86,6 +91,6 @@ mois suivants sont exigibles le 1er. Voir
 
 - [Pré-inscriptions](./pre-inscriptions)
 - [Inscrire des élèves en masse](./bulk-enroll-students)
-- [Transférer un élève entre classes](./transfer-a-student-between-classes)
-- [Retirer une inscription](./suspend-or-withdraw-an-enrollment)
+- [Changer de classe](./transfer-a-student-between-classes)
+- [Suspendre ou retirer une inscription](./suspend-or-withdraw-an-enrollment)
 - [Échéances et calendriers](../../finance/fees-and-payments/installments-and-schedules)

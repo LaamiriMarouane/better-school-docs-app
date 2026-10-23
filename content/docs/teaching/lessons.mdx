@@ -1,11 +1,12 @@
 ---
 title: Lessons
-description: Set a lesson's details, write its content in the editor, and control which classes can see it.
+description: Write a lesson's content in the editor, attach files and boards, track progress, and control which classes can see it.
 ---
 
-A **lesson** is one teaching unit inside a chapter of a [course](./courses). It has two parts: its
-**details** (type, duration, objectives) and its **content** — the actual material a teacher writes
-for students. You also control **who can see** each lesson.
+A **lesson** is one teaching unit inside a chapter of a [course template](./courses). It has two
+parts: its **details** (type, duration, objectives), set in the course template, and its
+**content** — the material each teacher writes for students. You also control **who can see** your
+content in each class.
 
 <Callout title="Who this is for">
 Teachers preparing and sharing lesson material.
@@ -13,73 +14,97 @@ Teachers preparing and sharing lesson material.
 
 ## Lesson details
 
-Each lesson carries some structure, set when you build the course:
+Each lesson carries some structure, set in [Course Templates](./courses):
 
 | Detail | What it is |
 | --- | --- |
-| **Type** | The kind of lesson — *Theory, Practical, Lab, Exercise, Review, Assessment, Project, Presentation, Discussion,* or *Field trip*. |
-| **Duration** | Roughly how long the lesson takes, in minutes. |
+| **Lesson Type** | *Theory, Practical, Lab, Exercise, Review, Assessment, Project, Presentation, Discussion,* or *Field Trip*. |
+| **Duration (Weeks)** | Roughly how many weeks the lesson takes. |
 | **Objectives** | What students should learn by the end. |
 | **Prerequisites** | What students should already know first. |
-| **Activities** | What students do during the lesson — reading, exercises, a video, a quiz, homework, group work, an experiment, and so on. |
+| **Activities** | What students do during the lesson. |
+
+While writing content, open **Curriculum template** to see these details for the current lesson
+without leaving the editor.
 
 ## Write the lesson content
 
-You can add or edit a lesson's content if you're **assigned to teach that subject to a class** this
-year (administrators always can). You reach the subjects you teach from **My Courses**, then open a
-lesson. This is separate from who *manages the curriculum* — see [Courses](./courses).
+You can add or edit a lesson's content if you're **assigned to teach that subject to a class**.
+Open **My Courses**, choose a subject, then pick a lesson in the
+outline. This is separate from who *edits the course template* — see [Course templates](./courses).
 
 Each teacher writes their **own version** of a lesson's content in a rich editor:
 
 - **Format text** — headings, bold and italic, lists, quotes, and code blocks.
-- **Add media** — images, videos, and YouTube embeds.
+- **Add media** — images and YouTube videos.
 - **Insert equations** — mathematical formulas, inline or as blocks.
-- **Attach files** — worksheets, slides, or any supporting document.
 
-Your work **saves automatically** as you write.
+Your work **saves automatically** as you write; you can also choose **Save Changes**.
+
+### Assets
+
+The **Assets** panel beside the editor holds what goes with the lesson:
+
+- **Attachments** — choose **Add file** to attach worksheets, slides or any supporting document.
+- **Boards** — choose **Attach board** to link a whiteboard from your boards, or create a new one.
+
+### Import existing content
+
+To reuse material you've already written, choose **Import existing content**. Pick the academic
+year, search or filter by grade and subject, and select one of your lesson contents. It replaces the
+current content and attachments of this lesson (you're asked to confirm with **Replace and
+import**). The imported copy stays hidden from students until you make it visible.
 
 <Callout title="Each teacher keeps their own content">
 Two teachers teaching the same lesson to different classes each have their own content for it. Your
 content is yours — other teachers don't change it.
 </Callout>
 
-## Publish and control who sees a lesson
+## Control who sees a lesson
 
-Two things decide whether a student sees a lesson:
+There's no publish step. A student sees your content only when you make it **visible** for their
+class. Save your content first, then choose **Manage class visibility**.
 
 <Steps>
 
 <Step>
-### Publish your content
+### Pick a class
 
-A lesson's content stays a **draft** until you **publish** it. Drafts are visible only to you.
+The dialog lists the classes you teach this subject to. Select one.
 </Step>
 
 <Step>
-### Choose which classes can see it
+### Set the lesson's progress
 
-Set each class — or each group within a class — to **Can view** or **No access**. This is how you
-decide which of your classes see this lesson.
+For the selected class, set the lesson to **Not Started**, **In Progress**, **Completed** or
+**Skipped**, so you can follow where each class is in the outline.
+</Step>
+
+<Step>
+### Turn visibility on or off
+
+Under **Content items**, switch **Your content** to **Visible** or **Hidden** for the whole class
+(**All**). If the class is split into groups, you can switch each group separately.
 </Step>
 
 </Steps>
 
-A student sees the lesson only when **both** are true: the content is **published** *and* their
-class is set to **Can view**.
+Content written by another teacher for the same class — for example the class's previous teacher —
+also appears in the list with their name. Only its author can change its visibility.
 
-<Callout title="Publishing is immediate">
-There's no scheduled publishing. A lesson becomes visible the moment you publish it and the class is
-allowed to view it. To reveal a lesson later, publish it then.
+<Callout title="Visibility is immediate">
+There's no scheduled release. Students see the content as soon as you switch it to visible. To
+reveal a lesson later, switch it on then.
 </Callout>
 
 ## Common use cases
 
-- **Prepare ahead** — write several lessons as drafts, then publish each as you reach it.
-- **Different pace per class** — publish a lesson to one class now and another class later by
-  changing each class's view access.
-- **Reuse last year's material** — carried-over lessons keep their content, ready to update.
+- **Prepare ahead** — write several lessons and keep them hidden, then make each visible as you reach
+  it.
+- **Different pace per class** — make a lesson visible to one class now and another class later.
+- **Reuse last year's material** — use **Import existing content** and pick last year's lesson.
 
 ## Related articles
 
-- [Courses](./courses)
+- [Course templates](./courses)
 - [Class sessions & attendance](./sessions-and-attendance)

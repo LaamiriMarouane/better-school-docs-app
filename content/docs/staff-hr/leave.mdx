@@ -1,6 +1,6 @@
 ---
 title: Leave
-description: "Record staff time off, and approve, reject, or cancel leave requests."
+description: "Record staff time off, and approve or reject leave requests."
 ---
 
 **Leave** records a staff member's time off for a date range. An administrator can record leave
@@ -15,14 +15,14 @@ modules to turn it on.
 
 | Type | For… |
 | --- | --- |
-| **Sick** | Illness. |
-| **Maternity** | Maternity leave. |
-| **Unpaid** | Time off without pay. |
+| **Sick Leave** | Illness. |
+| **Maternity Leave** | Maternity leave. |
+| **Unpaid Leave** | Time off without pay. |
 | **Other** | Anything that doesn't fit the above. |
 
 <Callout title="No balances or quotas">
-Leave is recorded as **dates with a type** — the system doesn't track an allowance, accrual, or a
-paid-vs-unpaid day count. *Unpaid* is simply a type you choose, not a running balance.
+Leave is recorded as **dates with a type** — there is no allowance, accrual, or running count of
+days. *Unpaid Leave* is simply a type you choose, not a balance.
 </Callout>
 
 ## Statuses
@@ -31,56 +31,57 @@ paid-vs-unpaid day count. *Unpaid* is simply a type you choose, not a running ba
 | --- | --- |
 | **Pending** | Requested by a staff member, waiting for a decision. |
 | **Approved** | Granted. Leave an administrator records directly is approved straight away. |
-| **Rejected** | Turned down, with an optional reason. |
-| **Canceled** | Called off before it started. |
+| **Rejected** | Turned down, with a reason the requester can see. |
+| **Canceled** | Called off by the staff member before it started. |
 
 ## Record leave as an administrator
 
 <Steps>
 
 <Step>
-### Open Leave and add one
+### Open the staff member's leaves
 
-In the **HR → Leave** area, choose **Add**, then pick the staff member.
+Go to **HR → Staff**, open the staff member, then the **Leaves** tab, and click **Add Leave**.
 </Step>
 
 <Step>
 ### Set the type and dates
 
-Choose the **type** and the **start** and **end** dates.
+Choose the **Leave Type**, the **Start Date** and **End Date**, and optionally a **Reason**.
 </Step>
 
 <Step>
 ### Save
 
-The leave is saved as **Approved** right away — no separate approval step when an administrator
-records it.
+Click **Create Leave**. The leave is saved as **Approved** right away — no separate approval step
+when an administrator records it.
 </Step>
 
 </Steps>
 
 ## Request leave as a staff member
 
-Teachers and staff request their own leave from their leave page. A request is created as **Pending**
-and waits for an administrator. You can edit or **cancel** your own request while it's still pending.
+Teachers open **Leave** in their menu; other staff open **My leave**. Click **Request Leave**,
+choose the type and dates, and send it. The request is created as **Pending** and waits for an
+administrator.
+
+While the request is still **Pending** and its start date hasn't come, you can **Edit** or
+**Cancel** it.
 
 ## Approve or reject requests
 
-From the leave list, an administrator handles pending requests:
+Go to **HR → Leave**. In the list, an administrator handles pending requests:
 
 - **Approve** — grants the leave.
-- **Reject** — turns it down; you can add a reason that the requester will see.
+- **Reject** — turns it down. Enter a **Rejection Reason**; the requester will see it.
 - **Bulk approve / reject** — select several pending requests and act on them at once.
 
-## Cancel a leave
-
-A leave can be **canceled** while it is **Pending** or **Approved**, but only **before its start
-date** — you can't cancel one that has already begun. Once a leave is rejected or canceled, it stays
-that way.
+An administrator can't approve their own leave request: another administrator has to decide.
+From the same list you can also **Edit** or **Delete** a leave.
 
 <Callout title="Overlaps are blocked">
 A staff member can't have two leaves that overlap the same dates. If you try to add or edit one into
-an existing leave's range, the system stops you.
+an existing leave's range, you'll get an error.
 </Callout>
 
 ## Who can do what
@@ -89,8 +90,8 @@ an existing leave's range, the system stops you.
 | --- | --- | --- |
 | Record leave directly (approved) | ✅ | — |
 | Request leave (pending) | — | ✅ (their own) |
-| Approve / reject | ✅ | — |
-| Cancel before start date | ✅ | ✅ (their own) |
+| Approve / reject | ✅ (not their own request) | — |
+| Edit or cancel a pending request before it starts | — | ✅ (their own) |
 | See all staff's leave | ✅ | Their own only |
 
 ## Related articles

@@ -4,8 +4,8 @@ description: Create teacher records so they can be assigned to subjects, classes
 ---
 
 A **teacher** record holds the personal and professional details of a member of your
-teaching staff. Once a teacher exists, they can be assigned to subjects and classes,
-placed on the timetable, and — in a separate step — given a portal account to log in.
+teaching staff. Once a teacher exists, they can be assigned to subjects and classes and
+placed on the timetable. You can give them a login while you add them, or later.
 
 <Callout title="Who this is for">
 Administrators onboarding teaching staff.
@@ -15,7 +15,10 @@ Administrators onboarding teaching staff.
 
 - Have each teacher's basic details ready: full name, phone number, gender, and
   hiring date.
+- Have their email address if you want them to receive their login details by email.
 - Optionally collect documents to upload — contract, identity document, and résumé.
+- Adding many teachers at once? Use **Import** on the Teachers page: download the
+  **Template**, fill in one teacher per line, upload it, then click **Start import**.
 
 <Screenshot
   label="Teachers list with the Add Teacher button"
@@ -29,7 +32,7 @@ Administrators onboarding teaching staff.
 <Step>
 ### Open the Teachers page
 
-From the admin sidebar, go to **Academic → Teachers**, then click **Add New Teacher**.
+From the admin sidebar, go to **Academic → Teachers**, then click **Add Teacher**.
 
 <Screenshot
   label="Add teacher form"
@@ -44,16 +47,19 @@ Complete the fields below. Fields marked required must be filled before you can 
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **First name** | Yes | The teacher's given name. |
-| **Last name** | Yes | The teacher's family name. |
-| **Phone number** | Yes | Include the country code; the number is validated. |
+| **First Name** | Yes | The teacher's given name. |
+| **Last Name** | Yes | The teacher's family name. |
+| **Phone Number** | Yes | Include the country code. |
 | **Gender** | Yes | Used across profiles and reports. |
-| **Hiring date** | Yes | The date the teacher joined the school. |
-| **Email** | No | Used for the portal account if one is created later. |
-| **Given / family name (native)** | No | The name in the local script, e.g. Arabic. |
-| **Date of birth**, **Birth place** | No | Personal details. |
+| **Hiring Date** | Yes | The date the teacher joined the school. |
+| **Email** | No | Needed to send login details by email. |
+| **Given Name (Native)**, **Family Name (Native)** | No | The name in the local script, e.g. Arabic. |
+| **Date of Birth**, **Birth Place** | No | Personal details. |
 | **Nationality**, **Country**, **City**, **Address** | No | Contact and identity details. |
-| **Previous school**, **Previous school address** | No | Prior employment history. |
+| **Previous School**, **Previous School Address** | No | Prior employment history. |
+
+If your school has defined **custom fields** for teachers, they appear below these
+fields; some may be required.
 </Step>
 
 <Step>
@@ -70,17 +76,25 @@ In the **Documents** section you can attach a **contract**, **identity document*
 </Step>
 
 <Step>
+### Create a login (optional)
+
+In the **Account Creation** section, tick **Create user account and send credentials
+via email** to give the teacher a login right away. Their login details are sent to the
+email address you entered.
+</Step>
+
+<Step>
 ### Save the teacher
 
-Click **Create Teacher**. You are taken to the new teacher's profile, where you can
-review and continue onboarding.
+Click **Submit**. You are taken to the new teacher's profile, where you can review and
+continue onboarding.
 </Step>
 
 </Steps>
 
-<Callout title="Logging in is a separate step">
-Creating a teacher record does **not** create a login. To let the teacher sign in,
-create a portal account for them — see
+<Callout title="Creating the login later">
+If you leave **Account Creation** unticked, the teacher has no login yet. Use **Create
+Portal Account** on their profile when you are ready — see
 [Create portal accounts](./create-portal-accounts).
 </Callout>
 

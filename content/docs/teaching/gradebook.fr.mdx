@@ -1,272 +1,215 @@
 ---
 title: Carnet de notes
-description: Découvrez comment les résultats d'évaluation se combinent à travers les périodes de notation, les pondérations des semestres et le schéma de notation pour former la note de matière, la moyenne générale et le bulletin.
+description: Saisissez et consultez les notes d'une classe dans une seule grille, ajoutez des évaluations libres, rédigez des appréciations, ajustez les moyennes et voyez comment les notes forment la moyenne de chaque matière et la moyenne générale.
 ---
 
-Le **carnet de notes** est l'endroit où toutes les notes d'un élève se rejoignent. Les résultats
-de tous les types d'évaluation — [examens](./exams) programmés, [devoirs](./assignments),
-[quiz](./quizzes) et notes saisies manuellement — sont placés dans des **catégories de note**,
-moyennés au sein de **périodes de notation**, puis combinés — selon le **schéma de notation** du
-niveau — dans la note de matière et la moyenne générale annuelle de chaque élève.
+Le **carnet de notes** est l'endroit où se rejoignent toutes les notes d'un élève. Les résultats des
+[examens](./exams), des [devoirs](./assignments), des [quiz](./quizzes) et des évaluations libres
+apparaissent dans une seule grille par classe, et les moyennes se mettent à jour pendant la saisie.
 
 <Callout title="Pour qui">
 Les enseignants et administrateurs qui gèrent les notes, et les élèves et parents qui les consultent.
 </Callout>
 
-## D'où viennent les notes
+## Ouvrir le carnet de notes
 
-La note de matière d'un élève est construite à partir de tout le travail évalué sur l'année. Il
-existe trois types d'évaluation, chacun avec son propre circuit :
+Allez dans **Évaluations → Carnet de notes**, puis choisissez :
 
-**Examens** — séances programmées qui passent par un modèle, un créneau horaire, une salle, des
-surveillants et une présence aux examens distincte. Les résultats restent privés jusqu'à leur
-publication. Voir [Examens](./exams).
+- **Sélectionner une classe** : la classe à noter. Les enseignants voient les classes où ils
+  enseignent.
+- le trimestre : un trimestre, ou **Tous** pour voir tous les trimestres côte à côte. Le trimestre en
+  cours est marqué **(Actuel)**.
+- la matière : une matière, ou **Toutes les matières**.
 
-**Devoirs et quiz** — travaux donnés aux élèves à réaliser. Les devoirs basés sur des fichiers
-(devoirs maison, projets) collectent des soumissions ; les quiz sont corrigés automatiquement.
-Voir [Devoirs](./assignments) et [Quiz](./quizzes).
+## Lire la grille
 
-**Évaluations libres** — colonnes de notes saisies manuellement sans circuit de soumission.
-Utilisées pour des choses comme les exposés oraux, la participation en classe, le comportement,
-la vérification des cahiers ou les points bonus. Les enseignants ouvrent le carnet de notes de la
-matière et saisissent les scores directement.
+Chaque ligne est un élève. Les colonnes sont regroupées par trimestre, puis par matière. Dans une
+matière, les notes sont rangées dans des dossiers :
 
-Chaque évaluation appartient à une **catégorie de note** et est enregistrée dans une **période de
-notation**.
+- Examens : les examens planifiés. Voir [Examens](./exams).
+- **Devoirs** : devoirs à rendre et quiz, notés depuis leurs propres pages. Voir
+  [Devoirs](./assignments) et [Quiz](./quizzes).
+- **Évaluations libres** : les notes que vous saisissez directement, comme un oral, la participation
+  ou un contrôle du cahier.
 
-## Périodes de notation
+Quand un trimestre est divisé en périodes de notation, chaque période a ses propres colonnes et une
+colonne **Moy.**. La colonne **Moyenne du trimestre** vient toujours en dernier. La dernière ligne
+affiche la moyenne de la classe pour chaque colonne.
 
-Une **période de notation** est l'unité de notation au sein d'un semestre. Chaque semestre reçoit
-automatiquement au moins une période — quand il n'y en a qu'une, elle couvre tout le semestre à
-100% du poids. Vous pouvez diviser un semestre en plusieurs périodes selon la structure de votre
-école, par exemple Mi-semestre et Fin de semestre, ou quatre périodes trimestrielles sur deux
-semestres.
+Au-dessus de la grille, vous pouvez :
 
-<Callout title="Une période par défaut">
-La plupart des écoles démarrent avec une période par semestre. Il n'est nécessaire d'en ajouter
-que si vous souhaitez des divisions de notation infra-semestrielles comme des notes de mi-parcours.
-</Callout>
+- activer **Carte thermique** ou **Mentions** pour colorer les cellules selon le résultat ou afficher
+  la mention à la place de la note,
+- activer ou désactiver **Couleurs des notes**,
+- **Tout réduire** / **Tout développer** les matières, ou réduire une seule matière pour ne voir que
+  sa moyenne du trimestre.
 
-Les évaluations sont toujours enregistrées dans une période de notation, jamais directement au
-niveau du semestre. Avec une seule période, l'expérience est identique à un carnet classique par
-semestre.
+Une colonne marquée d'un œil barré est **non publiée** : ses notes sont visibles par l'équipe mais
+ne comptent dans aucune moyenne tant que les résultats ne sont pas publiés.
 
-## Catégories de note
+Les notes qui ne comptent pas dans la moyenne sont grisées. Les absences et dispenses s'affichent
+**ABS** et **EX** ; leur effet sur la moyenne (exclues ou comptées comme zéro) se règle dans
+[Configuration des notes → Politique annuelle](./grading-setup#politique-annuelle), section
+**Codes d'exception**.
 
-Une **catégorie de note** regroupe des évaluations d'un même type — par exemple *Examens*,
-*Devoirs*, *Quiz* — et donne à chaque groupe un **poids**. Dans une période de notation, les poids
-de toutes les catégories pour une matière doivent totaliser 100%. Vous pouvez :
+## Saisir les notes
 
-- définir combien chaque catégorie **compte** dans la note de période (son poids),
-- marquer une catégorie comme **ne comptant pas**, quand elle est informative,
-- définir des catégories pour toute l'école ou par **niveau**.
+1. Touchez l'en-tête de la colonne et choisissez **Saisir les notes**.
+2. Saisissez la note de chaque élève. La barre d'outils permet de **Remplir les vides**, de **Tout
+   remplir**, ou de marquer les élèves sélectionnés **Absent** ou **Dispensé**. **Annuler** et
+   **Rétablir** sont disponibles pendant la saisie.
+3. Touchez **Enregistrer les notes**.
 
-## Schéma de notation
+Pour un examen, le menu de l'en-tête demande d'abord de **Marquer comme terminé** avant de pouvoir
+saisir les notes. Utilisez **Publier les résultats** quand les notes sont prêtes ; d'ici là, les
+élèves ne les voient pas et elles ne comptent pas dans les moyennes. **Dépublier les résultats** les
+masque à nouveau.
 
-Chaque niveau possède un **schéma de notation** : une liste ordonnée d'entrées dont les poids
-totalisent 100% et qui forment ensemble la note annuelle de matière. Une entrée est soit :
+Les colonnes de devoirs et de quiz suivent leur source : notez-les et publiez-les depuis le devoir.
+Pour les matières notées par compétences, le menu de l'en-tête propose aussi **Noter les
+compétences**. Voir [Notation par compétences](./competencies).
 
-- un **semestre interne** — la contribution du semestre, elle-même moyenne pondérée de ses
-  périodes,
-- un **examen externe** — un examen national ou régional couvrant un sous-ensemble de matières
-  avec sa propre notation et ses coefficients.
+## Ajouter une évaluation libre
 
-| Exemple — deux semestres égaux | Poids |
-| --- | --- |
-| Semestre 1 | 50% |
-| Semestre 2 | 50% |
+1. Dans l'en-tête de la matière, touchez **Ajouter une évaluation**.
+2. Renseignez **Nom**, **Type** (participation, oral, contrôle du cahier, projet…), **Catégorie**,
+   **Score maximum** et **Date**.
+3. Laissez **Compte dans la moyenne** activé si les notes doivent compter. Une évaluation qui compte
+   a besoin d'une catégorie.
+4. Enregistrez, puis saisissez les notes avec **Saisir les notes**.
 
-| Exemple — semestres + examen régional (6e année) | Poids |
-| --- | --- |
-| Semestre 1 | 25% |
-| Semestre 2 | 25% |
-| Examen régional | 50% |
+Une nouvelle évaluation libre commence non publiée. Quand les notes sont définitives, ouvrez le menu
+de son en-tête et choisissez **Publier les résultats**. Ce n'est qu'à ce moment que les élèves voient
+les notes et qu'elles comptent dans les moyennes.
 
-Vous pouvez charger un **modèle** (deux semestres standard, 6e année, 9e année, BAC) ou créer le
-schéma de zéro. Modifier le schéma n'affecte jamais les années passées — les poids de chaque
-année sont archivés indépendamment.
+## Rédiger des appréciations
+
+Les appréciations se rédigent sur la colonne **Moyenne du trimestre** :
+
+- **Un élève** : touchez l'icône d'appréciation dans la cellule **Moyenne du trimestre** de l'élève.
+- **Toute la classe** : touchez l'en-tête **Moyenne du trimestre** et choisissez **Saisir les
+  appréciations**. Rédigez une appréciation par élève, ou utilisez **Remplir les vides** et **Tout
+  remplir**, puis **Enregistrer les appréciations**.
+
+Pendant la rédaction, vous pouvez insérer une phrase toute prête de la
+[banque de commentaires](./grading-setup#banque-de-commentaires). Les appréciations figurent sur le
+bulletin de l'élève.
+
+## Remplacer une moyenne
+
+Quand une moyenne calculée ne doit pas s'appliquer, vous pouvez la remplacer à la main :
+
+1. Touchez la cellule **Moy.** de l'élève pour la période de notation. Si le trimestre n'est pas
+   divisé, touchez la cellule **Moyenne du trimestre**.
+2. Dans **Modifier la moyenne du trimestre**, saisissez la **Valeur de remplacement** et, si vous le
+   souhaitez, un **Motif**. La valeur calculée est affichée pour comparaison.
+3. Enregistrez. Pour revenir à la valeur calculée, rouvrez la cellule et choisissez **Supprimer le
+   remplacement**.
+
+Le remplacement n'est possible que si **Autoriser la saisie manuelle des moyennes** est activé dans
+[Configuration des notes → Politique annuelle](./grading-setup#politique-annuelle).
+
+## Quand la notation est fermée
+
+Chaque trimestre a un **Statut de notation** (**Ouvert**, **Verrouillé**, **Finalisé**) et une **Date de
+verrouillage** facultative. Les administrateurs les règlent avec **Mettre à jour les paramètres de
+notation** sur le trimestre, dans la liste des trimestres de l'année scolaire.
+
+| Action | Ouvert | Verrouillé | Finalisé ou Date de verrouillage passée |
+| --- | --- | --- | --- |
+| Saisir des notes dans les colonnes qui comptent, ajouter des évaluations | Oui | Non | Non |
+| Remplacer une moyenne | Oui | Administrateurs uniquement | Non |
+| Rédiger des appréciations | Oui | Non | Non |
+
+Les colonnes qui ne comptent pas dans la moyenne restent modifiables après la fermeture d'une
+période.
 
 ## Comment une note est calculée
 
-Le calcul se déroule en trois étapes imbriquées.
+1. **Note de période** : dans une période de notation, les notes sont moyennées dans chaque catégorie,
+   puis les catégories sont combinées selon les poids définis pour cette matière dans ce trimestre.
+2. **Note de trimestre** : si un trimestre compte plusieurs périodes, leurs notes sont combinées selon
+   le poids de chaque période. Avec une seule période, la note de trimestre est la note de période.
+3. **Note annuelle** : les trimestres (et un éventuel examen externe) sont combinés selon les poids
+   du schéma de notation du niveau.
+4. **Moyenne générale** : la note annuelle de chaque matière est multipliée par son coefficient, puis
+   divisée par le total des coefficients.
 
-**Étape 1 — Note de période (la feuille)**
+Les poids et coefficients se règlent dans la [Configuration des notes](./grading-setup). Les notes
+suivent l'échelle d'affichage et l'arrondi de l'école, par exemple des notes sur 20 arrondies à une
+décimale.
 
-Dans chaque période de notation : les évaluations sont moyennées dans leur catégorie, puis les
-moyennes de catégories sont combinées par leurs poids → **note de période**. Elle utilise le
-barème, la méthode de calcul et l'arrondi du niveau.
+### Exemple : deux trimestres égaux
 
-**Étape 2 — Note de semestre**
+Schéma : Trimestre 1 = 50 %, Trimestre 2 = 50 %. Un élève a 14 au Trimestre 1 et 12 au Trimestre 2
+en mathématiques.
 
-Si un semestre comporte plusieurs périodes, leurs notes sont combinées par le poids intra-semestre
-de chaque période → **note de semestre**. Avec une seule période, la note de semestre est égale à
-la note de période.
+| Partie | Note | Poids | Contribution |
+| --- | --- | --- | --- |
+| Trimestre 1 | 14 | 50 % | 7,0 |
+| Trimestre 2 | 12 | 50 % | 6,0 |
+| **Note annuelle** | | | **13,0** |
 
-**Étape 3 — Note annuelle de matière**
+### Exemple : deux trimestres et un examen régional
 
-Les entrées du schéma (semestres internes et tout examen externe) sont combinées par leurs poids
-→ **note annuelle de matière**.
+Schéma : Trimestre 1 = 25 %, Trimestre 2 = 25 %, Examen régional = 50 %.
 
-**Moyenne générale**
+| Partie | Note | Poids | Contribution |
+| --- | --- | --- | --- |
+| Trimestre 1 | 14 | 25 % | 3,5 |
+| Trimestre 2 | 12 | 25 % | 3,0 |
+| Examen régional | 16 | 50 % | 8,0 |
+| **Note annuelle** | | | **14,5** |
 
-La note annuelle de chaque matière est multipliée par son **coefficient** (la pondération de
-l'école pour cette matière à ce niveau), additionnée sur toutes les matières, puis divisée par le
-total des coefficients → la moyenne générale annuelle de l'élève.
-
-Les notes utilisent le **barème** et l'**arrondi** de votre école, configurés par niveau dans les
-réglages du carnet.
+Une matière qui ne fait pas partie de l'examen régional est notée sur ses trimestres seulement, dans
+les mêmes proportions. Dans cet exemple, le Trimestre 1 et le Trimestre 2 comptent alors pour moitié
+chacun.
 
 ## Examens externes
 
-Un **examen externe** (régional ou national) est une entrée distincte du schéma de notation. Il
-couvre un sous-ensemble de matières avec ses propres coefficients et note maximale. Ces coefficients
-servent uniquement à calculer la **moyenne de l'examen**, qui figure sur le bulletin comme ligne
-séparée.
+Un examen externe (régional ou national) couvre certaines matières, avec ses propres coefficients.
+Ces coefficients servent uniquement à la **moyenne de l'examen**, affichée sur une ligne à part du
+bulletin. La moyenne générale de l'élève utilise toujours les coefficients de l'école sur toutes les
+matières.
 
-**La moyenne de l'examen est indépendante de la moyenne générale.** La moyenne générale de l'élève
-utilise toujours les coefficients de l'école sur toutes les matières — les coefficients de l'examen
-n'y contribuent jamais.
+## Ce que voient les élèves et les parents
 
-Quand une matière n'est pas couverte par l'examen externe, le poids de l'examen est supprimé pour
-cette matière et les entrées restantes sont renormalisées pour totaliser 100%.
-
-## Scénarios de calcul
-
-### Scénario 1 — Deux semestres égaux, sans examen externe
-
-Configuration standard pour les niveaux primaires : deux semestres égaux, une période chacun.
-
-**Schéma :** S1 = 50%, S2 = 50%
-
-Élève, Maths : S1 = 14, S2 = 12.
-
-| Composante | Note | Poids | Contribution |
-| --- | --- | --- | --- |
-| Semestre 1 | 14 | 50% | 7,0 |
-| Semestre 2 | 12 | 50% | 6,0 |
-| **Note annuelle** | | | **13,0** |
-
-### Scénario 2 — Deux semestres + examen régional (6e année)
-
-**Schéma :** S1 = 25%, S2 = 25%, Régional = 50%
-
-**Maths** — matière couverte par le régional :
-
-| Composante | Note | Poids | Contribution |
-| --- | --- | --- | --- |
-| Semestre 1 | 14 | 25% | 3,5 |
-| Semestre 2 | 12 | 25% | 3,0 |
-| Régional | 16 | 50% | 8,0 |
-| **Note annuelle** | | | **14,5** |
-
-**EPS** — non couverte par le régional. Le poids de l'examen est supprimé et S1/S2 sont
-renormalisés à 50% chacun :
-
-| Composante | Note | Poids (renormalisé) | Contribution |
-| --- | --- | --- | --- |
-| Semestre 1 | 15 | 50% | 7,5 |
-| Semestre 2 | 13 | 50% | 6,5 |
-| **Note annuelle** | | | **14,0** |
-
-### Scénario 3 — Plusieurs périodes par semestre (système trimestriel)
-
-**Schéma :** S1 = 45%, S2 = 45%, Examen final = 10%
-**Dans S1 :** T1 = 50%, T2 = 50%
-**Dans S2 :** T3 = 50%, T4 = 50%
-
-Élève, Maths :
-
-| Période | Note | Poids intra-semestre | Note semestre |
-| --- | --- | --- | --- |
-| T1 | 15 | 50% | — |
-| T2 | 13 | 50% | **14,0** (S1) |
-| T3 | 16 | 50% | — |
-| T4 | 14 | 50% | **15,0** (S2) |
-
-Note annuelle = 14,0 × 45% + 15,0 × 45% + Final (12) × 10% = 6,3 + 6,75 + 1,2 = **14,25**
-
-## Statuts de note
-
-Dans la grille du carnet, chaque cellule montre où en est un élève :
-
-| Statut | Signification |
-| --- | --- |
-| **Noté** | Une note a été enregistrée. |
-| **En attente** | Le travail n'est pas encore noté. |
-| **Absent** | L'élève était absent à l'évaluation. |
-| **Dispensé** | L'élève en est dispensé. |
-
-## Les vues du carnet
-
-- **Par semestre** — semestre → périodes de notation → évaluations ; modifier une note recalcule
-  en direct toute la chaîne.
-- **Par classe** — note finale de chaque matière, moyenne générale, rang, mention.
-- **Toutes les périodes** — chaque valeur de période et note finale par matière ; ouvrez un final
-  pour voir le détail complet : entrées comptées, entrées supprimées et renormalisées, signalements
-  de seuil de passage.
-- **Vue élève** — ce que voient l'élève (et ses parents) : note par matière, détail par catégorie
-  et par période, rang de classe.
-
-## Ajuster une note
-
-- **Forcer** — fixer la note de période d'un élève à la main, avec un motif, quand la note
-  calculée ne s'applique pas. Les notes de semestre et annuelles sont toujours calculées à partir
-  des valeurs de période et ne peuvent pas être forcées directement.
-- **Remarque** — ajouter une note sur la performance d'un élève sans changer la note.
+Les élèves et les parents ouvrent **Notes** pour voir la moyenne de chaque matière, les notes qui la
+composent et le rang de l'élève. Les résultats d'examens et les évaluations libres apparaissent une
+fois publiés. Les bulletins publiés se téléchargent depuis le même écran.
 
 ## Bulletins
 
-Vous pouvez produire le **bulletin** d'un élève — notes de période, de semestre, annuelle,
-moyenne générale, rang et mention — prêt à partager avec les familles. Quand le niveau comporte un
-examen externe, le bulletin affiche également la **moyenne de l'examen** sur une ligne séparée.
-
-Les notes figurant sur un bulletin sont archivées au moment de la génération, elles restent donc
-fixes même si des notes d'évaluation sont modifiées par la suite.
+Les administrateurs génèrent les bulletins avec le bouton **Bulletins** au-dessus de la grille. Voir
+[Bulletins](./report-cards).
 
 ## Questions fréquentes
 
 ### Qu'est-ce qu'une période de notation ?
 
-Une période de notation est l'unité de notation au sein d'un semestre. Chaque semestre démarre
-avec une période à 100% du poids du semestre — elle est visible même si vous ne la divisez jamais.
-Les évaluations sont enregistrées et moyennées dans une période de notation, pas directement au
-niveau du semestre.
-
-### Comment la note annuelle d'un élève est-elle calculée ?
-
-La note annuelle d'une matière est une somme pondérée des entrées du schéma de notation du niveau.
-Chaque semestre interne contribue sa note de semestre (elle-même moyenne pondérée de ses périodes),
-et tout examen externe contribue son score pour cette matière. Les poids sont définis dans le schéma
-et doivent totaliser 100%.
-
-### Que se passe-t-il si une matière n'est pas couverte par un examen externe ?
-
-Le poids de l'entrée examen est supprimé pour cette matière et les entrées restantes sont
-renormalisées pour totaliser 100%. La note annuelle est calculée à partir des semestres uniquement,
-avec une mention visible indiquant que l'examen ne s'appliquait pas à la matière.
+Une période de notation est une unité de notation à l'intérieur d'un trimestre. Chaque trimestre en
+a au moins une. Vous pouvez diviser un trimestre en plusieurs, par exemple deux demi-trimestres, dans
+[Configuration des notes → Niveaux](./grading-setup#niveaux).
 
 ### Des niveaux différents peuvent-ils avoir des pondérations différentes ?
 
-Oui. Chaque niveau possède son propre schéma de notation. Un niveau primaire peut utiliser deux
-semestres égaux (50%/50%), tandis qu'une 6e peut utiliser S1 (25%), S2 (25%) et un régional (50%).
-Modifier le schéma d'un niveau n'affecte pas les autres niveaux.
+Oui. Chaque niveau a son propre schéma de notation. Un niveau du primaire peut utiliser deux
+trimestres égaux, tandis qu'un autre niveau donne la moitié de la note annuelle à un examen régional.
 
-### Qu'est-ce que la moyenne générale ?
+### Pourquoi une note saisie ne change-t-elle pas la moyenne ?
 
-La **moyenne générale** est la moyenne pondérée de l'élève sur toutes les matières, en utilisant
-le coefficient de chaque matière défini par l'école. Elle utilise toujours les coefficients de
-l'école sur toutes les matières. Les coefficients propres à l'examen externe servent uniquement à
-calculer la moyenne de l'examen, qui ne contribue jamais à la moyenne générale.
+Vérifiez que la colonne est publiée. Les notes d'examens et d'évaluations libres non publiées ne
+comptent pas tant que vous n'avez pas choisi **Publier les résultats**. Vérifiez aussi que
+**Compte dans la moyenne** est activé pour l'évaluation.
 
-### Peut-on diviser un semestre en plusieurs périodes de notation ?
+### Pourquoi je ne peux pas modifier une colonne ?
 
-Oui. Dans les réglages de notation du niveau, ouvrez le semestre et ajoutez des périodes — par
-exemple Mi-semestre et Fin de semestre, ou quatre périodes trimestrielles. Définissez le poids
-intra-semestre de chaque période pour qu'ils totalisent 100%. Les enseignants enregistrent ensuite
-les évaluations dans la période spécifique.
+Le trimestre est probablement verrouillé, finalisé, ou sa **Date de verrouillage** est passée. Voir [Quand la notation est fermée](#quand-la-notation-est-fermée).
 
 ## Articles liés
 
+- [Configuration des notes](./grading-setup)
 - [Examens](./exams)
 - [Devoirs](./assignments)
 - [Quiz](./quizzes)
+- [Bulletins](./report-cards)

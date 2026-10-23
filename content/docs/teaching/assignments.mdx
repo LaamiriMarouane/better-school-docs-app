@@ -4,8 +4,9 @@ description: Set homework for a class, let students submit their work, grade it 
 ---
 
 An **assignment** is a piece of work you set for a class — homework, a project, an essay. Students
-can submit their work online, you grade it with feedback, and the grade flows into the
-[gradebook](./gradebook).
+hand in their work online or in class, you grade it with feedback, and the grade can count in the
+[gradebook](./gradebook). An assignment is either a **File** assignment (described here) or a
+**Quiz** (see [Quizzes](./quizzes)).
 
 <Callout title="Who this is for">
 Teachers setting and grading work, and the students who submit it.
@@ -18,7 +19,7 @@ Teachers setting and grading work, and the students who submit it.
 <Step>
 ### Open Assignments
 
-Go to **Assignments** and choose **Add assignment**.
+Go to **Assessments → Assignments**, choose **Add Assignment**, then pick **File**.
 </Step>
 
 <Step>
@@ -28,64 +29,100 @@ Go to **Assignments** and choose **Add assignment**.
 | --- | --- | --- |
 | **Title** | Yes | The assignment's name. |
 | **Description** | No | Instructions for students. |
-| **Class** *(and group)* | Yes | Who it's for. Pick a group to set it for part of a divided class. |
-| **Release date** | No | When students can first see it. Leave empty to release now. |
-| **Due date** | Yes | The deadline. |
-| **Max score** | Yes | What the work is marked out of (e.g. 20). |
+| **Term** | Yes | The term the work belongs to. |
+| **Class** | Yes | Who it's for. Administrators pick the **Level** first. |
+| **Class group** | Depends | Shown when the class is split into groups. Pick a group, or **Whole class** when it's offered. |
+| **Subject** | Yes | The subject the grade goes to. |
+| **Marking period** | Yes | The part of the term the grade counts in. |
+| **Release Date** | Yes | When students can first see it. It starts at now; set a later date to release it later. |
+| **Due Date** | Yes | The deadline. It must be after the release date. |
 | **Attachments** | No | Files you provide — a worksheet, a brief, a rubric. |
 </Step>
 
 <Step>
-### Set the submission rules
-
-Decide how students hand in their work:
+### Set how it's handed in and graded
 
 | Option | What it does |
 | --- | --- |
-| **Submission type** | **Online** (students upload files) or **In class** (handed in on paper — you just record the grade). |
-| **Allow late submissions** | Let students submit after the due date, optionally up to a later cut-off. |
-| **Files per submission** | How many files a student can attach. |
-| **Accepted file types** | Restrict uploads (for example *pdf, docx*). |
-| **Allow resubmission** | Let students replace their submission before the deadline. |
+| **Submission Mode** | **Online** (students upload files) or **In Class** (handed in on paper — you just record the grade). |
+| **Max Files** | How many files a student can attach (online only). |
+| **Accepted submission file types** | Restrict uploads, for example to PDF or Word files (online only). |
+| **Max Grade** | What the work is marked out of (e.g. 20). |
+| **Counts in the final average** | Turn on so the grade counts in the subject average, then choose its **Category**. Off by default — leave it off for practice work. |
+| **Allow late submission** | Let students submit after the due date, optionally until a **Final submission deadline**. |
+| **Allow resubmission** | Let students update their submission until it is graded. |
+| **Track views** | See which students have opened the assignment. |
+| **Allow comments** | Let students leave comments on the assignment. |
 </Step>
 
 <Step>
 ### Save
 
-The assignment appears for the class, and students can submit from the due window.
+Choose **Create Assignment**. Students see it from the release date.
 </Step>
 
 </Steps>
 
+<Callout title="Once students have handed in">
+After the first submission, the class, subject and marking period can no longer be changed. The
+other details stay editable.
+</Callout>
+
 ## How students submit
 
-For an **online** assignment, a student opens it and **uploads** their files, with an optional note.
-If you allowed resubmission, they can replace their work until the deadline (or the late cut-off).
+Students find their work under **Assignments**. Each card shows where it stands:
 
-A student's assignment shows as **Pending** until they submit, then **Done** — or **Not done** if
-the deadline passes with nothing submitted.
+| Status | Meaning |
+| --- | --- |
+| **Upcoming** | Not released yet. |
+| **Open** | Released and before the due date. |
+| **Overdue** | The due date has passed and nothing was handed in. |
+| **Submitted** | The student has handed in their work. |
+| **Graded** | You've graded the work. |
+
+For an **online** assignment, the student opens it, uploads their files with an optional note, and
+chooses **Submit Assignment**. If you allowed resubmission, they can update their work until you
+grade it. If you allowed late submission, they can still hand in after the due date, up to the final
+deadline if you set one. An **In Class** assignment simply tells students it is handed in during
+class.
+
+Once graded, the student sees their grade and your feedback.
 
 ## Grade and give feedback
 
-Open the assignment's grading view to see every student's submission in one place. For each student,
-enter a **score** and optional **feedback**. When you're ready, **publish the grades** to make them
-visible to students and families.
+Open the assignment: its tabs are **Overview**, **Submissions** and, when views are tracked,
+**View Tracking**. Go to the **Submissions** tab. Pick a student's submission, enter a
+**Grade** (up to the max grade) and optional **Feedback**, then choose **Submit Grade**.
 
-<Callout title="Grades stay private until you publish">
-Scores and feedback you enter aren't visible to students until you **publish** them — so you can
-finish marking first.
+For **In Class** work there's nothing to open: enter the marks in the assignment's column in the
+[gradebook](./gradebook).
+
+## Publish grades
+
+For work that **counts in the final average**, grades stay hidden until you choose
+**Publish grades** on the assignment. Until then, students see *Graded — awaiting publication*.
+Use **Unpublish grades** to hide them again.
+
+Practice work (not counted) has no publish step: students see each grade as soon as you give it.
+
+<Callout title="Finish marking first">
+Because counting grades stay private until you publish, you can mark the whole class before anyone
+sees a result.
 </Callout>
 
 ## Counts toward the gradebook
 
-An assignment can be placed in a **grade category** (e.g. *Homework*) and given a **weight**, so its
-grades feed into each student's subject grade. See [Gradebook](./gradebook).
+An assignment has no weight of its own. When **Counts in the final average** is on, its grade joins
+the **Category** you chose, and the category's weight (set in [Grading setup](./grading-setup))
+decides how much it counts. For example, if *Homework* is worth 20% of the subject, all counting
+homework together makes up that 20%.
 
 ## Common use cases
 
 - **Homework with a file** — set an online assignment; students upload a PDF.
-- **Paper hand-in** — set an *in class* assignment and just record the grades.
-- **Second chance** — allow resubmission so students can fix and resubmit before the deadline.
+- **Paper hand-in** — set an *In Class* assignment and enter the grades in the gradebook.
+- **Second chance** — allow resubmission so students can improve their work until you grade it.
+- **Practice** — leave **Counts in the final average** off; students see grades straight away.
 
 ## Related articles
 

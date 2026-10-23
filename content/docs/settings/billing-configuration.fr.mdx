@@ -1,21 +1,21 @@
 ---
 title: Configuration de la facturation
-description: Contrôlez quand les cycles de facturation commencent et quand les charges sont appliquées.
+description: Contrôlez quand les échéances sont dues et ce que paie un élève qui arrive en cours de mois.
 ---
 
-La **configuration de la facturation** définit les règles qui régissent la
-transformation des frais d'un élève en échéances — quand chaque cycle de facturation
-commence et quand les charges sont appliquées. Elle se définit une fois et influence la
-génération des calendriers par la suite.
+La **configuration de la facturation** définit les règles qui transforment les frais d'un
+élève en échéances — le jour où tombent les échéances, le moment de facturation, et ce que
+paie un élève qui arrive en cours de mois. Elle s'applique aux calendriers créés par la
+suite.
 
 <Callout title="Pour qui">
-Les administrateurs — seuls les administrateurs peuvent modifier la configuration de la
+Les administrateurs — seuls les administrateurs peuvent modifier les paramètres de
 facturation.
 </Callout>
 
-<Callout title="Pas votre forfait BetterSchool">
-Cette page concerne le **cadencement des échéances des frais élèves**. Le forfait SaaS de
-votre école se gère sous [Facturation et abonnement](./billing-subscription).
+<Callout title="Pas votre abonnement">
+Cette page concerne **les dates d'exigibilité des frais élèves**. L'abonnement de votre
+école se gère sous [Facturation et abonnement](./billing-subscription).
 </Callout>
 
 ## Paramètres
@@ -24,36 +24,41 @@ Allez dans **Paramètres → Finance** et ouvrez l'onglet **Facturation** pour r
 
 | Paramètre | Ce qu'il contrôle |
 | --- | --- |
-| **Ancrage du cycle de facturation** | Le jour où tombent les échéances. **1er de chaque mois**, **Date d'inscription de l'élève** (ce jour chaque mois), ou un **jour personnalisé** de 1 à 28. |
-| **Jour d'ancrage personnalisé** | Utilisé seulement lorsque l'ancrage est un jour personnalisé. |
-| **Moment de facturation** | **À l'avance** facture en début de période. **À terme échu** facture en fin de période, et saute une période dont l'ancrage est déjà passé avant l'arrivée de l'élève. |
+| **Ancrage du cycle de facturation** | Le jour où tombent les échéances. **1er de chaque mois**, **Date d'inscription de l'élève** (ce jour chaque mois), ou **Jour personnalisé du mois**. |
+| **Jour d'ancrage personnalisé** | Le jour (de 1 à 28) utilisé lorsque l'ancrage est un jour personnalisé. |
+| **Moment de facturation** | **À l'avance** facture en début de période. **À terme échu** facture en fin de période, et saute une période dont le jour d'échéance est déjà passé avant l'arrivée de l'élève. |
+| **Élève arrivant en cours de mois** | Ce que paie, pour son premier mois, un élève inscrit après le jour d'échéance du mois (frais mensuels) : **Mois complet** (par défaut), **Seulement les jours restants (au prorata)** ou **À partir du mois suivant**. |
 
 Ajustez les paramètres, puis cliquez sur **Enregistrer**.
 
-<Callout type="warn" title="À définir avant de générer les frais">
-La configuration de la facturation façonne la génération des échéances. Définissez-la
-avant de créer des échéanciers et d'inscrire des élèves pour que chaque calendrier
-suive les mêmes règles.
+<Callout type="warn" title="À définir avant d'inscrire les élèves">
+Ces paramètres façonnent la création des échéances. Définissez-les avant de créer des
+plans de paiement et d'inscrire des élèves pour que chaque calendrier suive les mêmes
+règles.
 </Callout>
 
 ## Comment la date d'exigibilité est choisie
 
-L'ancrage est le jour d'exigibilité, y compris pour le mois d'arrivée de l'élève.
+La facturation commence à la **date d'inscription** de l'élève. Ensuite, les échéances
+tombent le jour d'ancrage.
 
-Avec le **1er de chaque mois** et **à l'avance**, un élève inscrit le 3 octobre n'est
-pas facturé pour septembre. Octobre est exigible le **1er octobre**, et cette ligne
-est déjà en retard. De novembre à la fin de l'année, l'exigibilité est aussi le 1er.
+Avec le **1er de chaque mois**, **À l'avance** et **Mois complet**, un élève inscrit le
+3 octobre n'est pas facturé pour septembre. Octobre est dû le **3 octobre**, jour de son
+arrivée : rien n'est en retard le premier jour. De novembre à la fin de l'année,
+l'exigibilité est le 1er.
+
+Avec **À partir du mois suivant**, octobre n'est pas facturé et la première échéance est due
+le 1er novembre. Avec **Seulement les jours restants (au prorata)**, octobre est réduit aux
+jours restants et dû le 3 octobre.
 
 **À terme échu**, avec le même ancrage, saute octobre. La première date est le 1er
 novembre.
 
-Un changement d'échéancier suit les mêmes règles, mais le nouveau calendrier part
-d'**aujourd'hui**. Les échéances impayées de l'ancien échéancier, y compris celles en
-retard, sont retirées. Les cas détaillés sont dans
-[Échéances et calendriers](../finance/fees-and-payments/installments-and-schedules).
+Les cas détaillés, y compris ce qui se passe quand vous changez le plan d'un élève, sont
+dans [Échéances et calendriers](../finance/fees-and-payments/installments-and-schedules).
 
 ## Articles liés
 
 - [Années fiscales](./fiscal-year)
-- [Facturation et abonnement](./billing-subscription) — forfait SaaS BetterSchool
+- [Facturation et abonnement](./billing-subscription) — l'abonnement de votre école
 - [Échéances et calendriers](../finance/fees-and-payments/installments-and-schedules)

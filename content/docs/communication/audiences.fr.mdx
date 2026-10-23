@@ -3,28 +3,28 @@ title: Audiences
 description: Constituez des groupes de destinataires réutilisables pour cibler annonces et événements sans refaire la liste à chaque fois.
 ---
 
-Une **audience** est un groupe de destinataires réutilisable. Au lieu de choisir les personnes une
-par une à chaque fois, vous définissez une audience une fois — par exemple *Tous les parents* ou
-*les élèves de 6e* — et la réutilisez dans les [annonces](./announcements) et les
-[événements](./events).
+Une **audience** est un groupe de destinataires réutilisable. Au lieu de lister les personnes à
+chaque fois, vous définissez une audience une fois — par exemple *Tous les parents* ou *les élèves
+de 6e* — et la réutilisez dans les [annonces](./announcements) et les [événements](./events).
 
 <Callout title="Pour qui">
-Les administrateurs (et enseignants) qui décident qui reçoit les annonces et les événements.
+Les administrateurs qui décident qui reçoit les annonces et les événements.
 </Callout>
 
-## Trois façons de définir une audience
+## Trois types d'audience
 
-Vous pouvez construire une audience à partir de l'un de ces éléments, et les combiner :
+Chaque audience a un seul **Type d'audience** :
 
-| Élément | Qui il inclut |
+| Type d'audience | Qui il inclut |
 | --- | --- |
-| **Par rôle** | Tous ceux d'un rôle — tous les élèves, tous les enseignants, tous les parents, et autres rôles du personnel. Vous pouvez inclure tout le rôle ou seulement des personnes précises. |
-| **Par niveau** | Les élèves et/ou les parents de **niveaux** choisis. Vous pouvez inclure tous les niveaux ou certains. |
-| **Personnes précises** | Une liste d'individus choisis à la main. |
+| **Groupe de personnes** | Toutes les personnes d'un **Rôle** — Administrateur, Enseignant, Étudiant, Parent ou Personnel (éventuellement un seul rôle du personnel). Cochez **Tout inclure** pour tout le rôle, ou listez des personnes précises dans **Inclure les e-mails**. |
+| **Audience par niveau** | Les **Élèves**, les **Tuteurs**, ou les deux, des **Niveaux** choisis (ou **Tous les niveaux**). |
+| **Personnalisé** | Une liste de personnes saisies par e-mail dans **Emails des personnes**. |
 
-<Callout title="Inclure et exclure">
-Chaque élément accepte des **exceptions**. Par exemple, *tous les parents sauf quelques-uns*, ou
-*toutes les classes de 6e sauf une*. Cela permet de cibler largement puis d'affiner.
+<Callout title="Laisser des personnes de côté">
+Le groupe de personnes et l'audience par niveau ont tous deux **Exclure les e-mails**, et
+l'audience par niveau a aussi **Exclure les classes**. Par exemple, *tous les tuteurs de 6e sauf
+une classe*. Cela permet de cibler largement puis d'affiner.
 </Callout>
 
 ## Créer une audience
@@ -38,50 +38,50 @@ Allez dans **Communication → Audiences**, puis choisissez **Ajouter une audien
 </Step>
 
 <Step>
-### Nommez-la et choisissez qui en fait partie
+### Nommez-la et choisissez son type
 
-Donnez à l'audience un **nom** clair (vous verrez ce nom plus tard au moment de choisir une
-audience), puis ajoutez un ou plusieurs éléments :
+Donnez un **Nom de l'audience** clair (vous verrez ce nom plus tard au moment de choisir des
+audiences), puis choisissez le **Type d'audience** et remplissez ses réglages :
 
-- Choisissez des **rôles** (ex. *Parents*), et éventuellement réduisez à des personnes précises.
-- Choisissez des **niveaux**, et indiquez s'il faut inclure les **élèves**, leurs **parents**, ou
-  les deux.
-- Ajoutez des **personnes précises** par leur nom.
-- Ajoutez des **exclusions** s'il faut laisser de côté certaines classes ou personnes.
+- **Groupe de personnes** — choisissez le **Rôle**, puis cochez **Tout inclure** ou saisissez les
+  adresses e-mail dans **Inclure les e-mails**, une par ligne.
+- **Audience par niveau** — cochez **Élèves**, **Tuteurs** ou les deux, puis choisissez les
+  **Niveaux** (ou cochez **Tous les niveaux**).
+- **Personnalisé** — saisissez les adresses e-mail dans **Emails des personnes**, une par ligne.
+- Ajoutez des exclusions s'il faut laisser de côté certaines classes ou personnes.
 </Step>
 
 <Step>
 ### Enregistrer
 
-L'audience est enregistrée pour l'année scolaire et prête à l'emploi.
+Choisissez **Créer l'audience**. Si certaines adresses e-mail ne correspondent à personne, elles
+vous sont indiquées.
 </Step>
 
 </Steps>
 
 ## Utiliser une audience
 
-Lorsque vous créez une [annonce](./announcements) ou un [événement](./events), choisissez votre
-audience dans le champ **Audience**. Le système détermine exactement qui en fait partie à ce
-moment-là et lui envoie. Modifier ensuite la définition de l'audience ne change pas qui a déjà reçu
-une annonce passée.
+Lorsque vous créez une [annonce](./announcements) ou un [événement](./events), choisissez une ou
+plusieurs audiences dans le champ **Audiences**.
 
-## Modifier ou supprimer
+## Consulter, renommer ou supprimer
 
-- **Modifier** — changez à tout moment le nom d'une audience ou ses règles d'appartenance.
-- **Supprimer** — retirez une audience dont vous n'avez plus besoin. Une audience actuellement
-  utilisée par une annonce ou un événement ne peut pas être supprimée tant qu'elle est en usage.
+Sélectionnez une audience pour voir ses détails :
 
-<Callout title="Les audiences appartiennent à une année scolaire">
-Les audiences sont rattachées à l'année scolaire sélectionnée, car les personnes d'un rôle ou d'un
-niveau changent d'une année à l'autre. Construisez-les dans l'année où vous travaillez.
-</Callout>
+- **Les personnes qui en font partie** — recherchez dans la liste. Seules les personnes disposant
+  d'un compte utilisateur y apparaissent.
+- **Où elle est utilisée** — combien d'annonces et d'événements l'utilisent.
+- Renommez-la, ou excluez d'autres personnes par e-mail ou depuis la liste.
+- **Supprimer** — retirez-la quand vous n'en avez plus besoin. Une audience encore utilisée par une annonce ou
+  un événement ne peut pas être supprimée.
 
 ## Cas d'usage courants
 
-- **Toutes les familles** — une audience de rôle *Parents* pour les avis à toute l'école.
-- **Un niveau** — une audience de *niveau* incluant les élèves et leurs parents.
-- **Un comité** — une audience de *personnes précises* pour un petit groupe fixe.
-- **Tout le monde sauf une classe** — une audience de niveau avec cette classe exclue.
+- **Toutes les familles** — un *Groupe de personnes* avec le rôle *Parent* et **Tout inclure**.
+- **Un niveau** — une *Audience par niveau* incluant les élèves et leurs tuteurs.
+- **Un comité** — une audience *Personnalisé* pour un petit groupe fixe.
+- **Un niveau sauf une classe** — une *Audience par niveau* avec cette classe exclue.
 
 ## Articles liés
 

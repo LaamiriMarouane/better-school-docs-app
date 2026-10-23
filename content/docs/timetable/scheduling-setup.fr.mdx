@@ -1,58 +1,66 @@
 ---
 title: Réglages de planification
-description: Décrivez la réalité que l'emploi du temps doit respecter — indisponibilité des enseignants et des salles, limites de charge, et salles utilisables par chaque matière.
+description: Décrivez la réalité que l'emploi du temps doit respecter — disponibilité des enseignants, des salles et des classes, limites de charge des enseignants, et salles attitrées.
 ---
 
-Les **réglages de planification** sont l'endroit où vous enregistrez les faits incontournables de
-votre école que l'emploi du temps doit respecter : quand chaque **enseignant** est indisponible,
-combien il peut enseigner, quand chaque **salle** ne peut pas être utilisée, et dans quelles salles
-une matière est autorisée. Ce sont les règles que le générateur ne brisera *jamais*.
+Les **réglages de planification** sont l'endroit où vous enregistrez les faits de votre école que
+l'emploi du temps doit respecter : quand chaque **enseignant** est indisponible, combien il peut
+enseigner, quand chaque **salle** ne peut pas être utilisée, quelle salle est la salle attitrée de
+chaque classe, et quand une classe elle-même est indisponible.
 
 <Callout title="Réalité et règles">
-Cette page concerne la **réalité** — des faits qui doivent être vrais. Les *préférences* plus
-souples (éviter les trous, garder une classe dans une salle, etc.) se trouvent sur la page
-[Contraintes](./constraints).
+Cette page concerne la **réalité** — des faits qui doivent être vrais. Les *préférences* (éviter
+les trous, garder une classe dans une salle, etc.) se trouvent dans la **Politique du solveur**.
+Voir [Contraintes](./constraints).
 </Callout>
 
 <Callout title="Pour qui">
 Les administrateurs qui préparent les informations sur les enseignants et les salles avant de
-générer.
+générer un emploi du temps.
 </Callout>
 
 <Callout title="La disponibilité suit la semaine scolaire">
-Les grilles d'indisponibilité utilisent les jours et heures des
-[horaires de l'école](../settings/school-schedule) pour l'année. Réglez-les d'abord pour que les
-grilles correspondent aux vraies heures d'ouverture.
+Les grilles de disponibilité utilisent les jours et créneaux de vos configurations d'emploi du
+temps et des [horaires de l'école](../settings/school-schedule). Réglez-les d'abord pour que les
+grilles correspondent aux vraies heures d'ouverture de votre école.
 </Callout>
 
 Ouvrez **Académique → Emploi du temps → Configuration**. Ces faits se trouvent dans les onglets
-**Enseignants**, **Salles**, **Salles attitrées** et **Horaires des classes** (aux côtés de
-**Grille horaire** et [Charge d'enseignement](./teaching-load)).
+**Enseignants**, **Disponibilité de la salle**, **Salles attitrées** et **Horaires des classes**
+(aux côtés de **Grille horaire** et [Charge d'enseignement](./teaching-load)).
+
+<Callout title="Modifier plusieurs éléments à la fois">
+Dans les onglets Enseignants, Disponibilité de la salle et Horaires des classes, cliquez sur
+**Activer la sélection multiple**, cochez plusieurs enseignants, salles ou classes, et appliquez-leur
+à tous la même disponibilité ou les mêmes limites.
+</Callout>
 
 ## Enseignants
 
-### Indisponibilité
+Choisissez un enseignant dans la liste de gauche. L'onglet **Enseignants** comporte quatre
+sous-onglets.
 
-Par défaut, un enseignant peut être planifié à **n'importe quelle** heure où l'école est ouverte.
-Ici, vous saisissez uniquement les moments où il **ne peut pas** enseigner — les exceptions. Le
-générateur ne place jamais de séance à un moment marqué comme indisponible.
+### Disponibilité
+
+Par défaut, un enseignant peut être planifié à **n'importe quel** moment où l'école est ouverte.
+Ici, vous marquez uniquement les moments où il **ne peut pas** enseigner — les exceptions.
 
 <Steps>
 
 <Step>
 ### Ouvrir l'enseignant
 
-Dans l'onglet **Enseignants**, choisissez un enseignant (ou sélectionnez-en plusieurs pour leur
-régler la même indisponibilité en une fois).
+Dans **Enseignants** → **Disponibilité**, choisissez un enseignant (ou utilisez la sélection
+multiple pour en choisir plusieurs).
 </Step>
 
 <Step>
 ### Marquer les moments d'indisponibilité
 
-Pour chaque jour, ajoutez les plages où l'enseignant **n'est pas** disponible — par exemple *pas
-disponible après 12:00*, ou *toute la journée du vendredi*. Laissez un jour intact et l'enseignant
-est disponible toute la journée. Laissez l'enseignant entièrement vide et il est disponible dès que
-l'école est ouverte.
+Touchez ou faites glisser sur la grille pour marquer les créneaux où l'enseignant **n'est pas**
+disponible — par exemple tous les après-midi, ou tout le vendredi. Laissez la grille vide et
+l'enseignant est disponible dès que l'école est ouverte. Cliquez sur **Enregistrer les
+modifications**.
 
 <Screenshot
   label="Grille d'indisponibilité de l'enseignant"
@@ -62,49 +70,44 @@ l'école est ouverte.
 
 </Steps>
 
-<Callout title="Vous saisissez les exceptions, pas l'horaire">
-Vous ne listez pas quand un enseignant *est* disponible — c'est supposé. Vous marquez seulement les
-moments où il **ne l'est pas**. Un enseignant sans rien de marqué est considéré comme disponible sur
-toute la semaine scolaire.
-</Callout>
+### Limites
 
-### Limites de charge
-
-Toujours dans l'onglet **Enseignants**, réglez combien chaque enseignant doit enseigner. Laissez
-un champ vide pour n'appliquer aucune limite.
+Dans **Limites**, réglez combien l'enseignant doit enseigner. Laissez un champ vide pour
+n'appliquer aucune limite.
 
 | Limite | Ce qu'elle fait |
 | --- | --- |
-| **Heures max. par jour** | Le maximum d'heures d'enseignement en une journée. |
-| **Heures max. par semaine** | Le maximum d'heures sur toute la semaine. |
-| **Séances min. par jour** | Si l'enseignant travaille un jour, il a *au moins* ce nombre de séances — pour ne pas le faire venir pour un seul créneau. |
-| **Séances min. par demi-journée** | La même idée par matin ou après-midi. Nécessite le séparateur de demi-journée dans la [Configuration](./timetable-config). |
-| **Trous max. (créneaux)** | Le nombre de créneaux libres tolérés entre les séances d'un enseignant le même jour avant que cela ne pénalise l'horaire. |
+| **Heures max. par jour** | Le maximum d'heures d'enseignement qu'un enseignant peut avoir en une journée. |
+| **Heures max. par semaine** | Le maximum d'heures d'enseignement sur toute la semaine. |
+| **Périodes min par jour** | Si l'enseignant travaille un jour, il a *au moins* ce nombre de créneaux — pour ne pas le faire venir pour un seul créneau. |
+| **Périodes min par demi-journée** | La même idée par matin ou après-midi. Nécessite la séparation demi-journée dans la [Configuration de l'emploi du temps](./timetable-config). |
+| **Périodes de pause max** | Le nombre de créneaux libres entre les séances qui convient à cet enseignant le même jour. |
 
 <Callout title="Limites fermes et préférences">
-Les heures max. et les séances min. par jour sont traitées comme fermes. La tolérance aux
-**trous** et le minimum par demi-journée sont des **préférences** — vous décidez de leur importance
-sur la page [Contraintes](./constraints). Régler ici les *Trous max.* d'un enseignant remplace la
-préférence globale de trous pour cet enseignant uniquement.
+**Heures max. par jour** et **Heures max. par semaine** sont toujours respectées. Les minimums et
+**Périodes de pause max** sont des préférences : elles remplacent la règle correspondante de la
+Politique du solveur pour cet enseignant, et l'interrupteur et l'importance de la règle
+s'appliquent toujours. Voir [Contraintes](./constraints).
 </Callout>
 
-### Salles autorisées (facultatif)
+### Matières autorisées
 
-Si un enseignant ne doit utiliser que certaines salles, listez-les ici. Une fois réglé, le
-générateur ne place les séances de cet enseignant que dans les salles listées. Laissez vide pour
-autoriser toute salle.
+Choisissez les matières que cet enseignant est apte à enseigner. C'est la même éligibilité que
+celle que vous gérez dans [Affectations des enseignants](./teacher-assignments) → **Éligibilité
+aux Matières**.
 
-## Salles
+### Salles autorisées
 
-Passez à l'onglet **Salles**.
+Si un enseignant ne doit utiliser que certaines salles, choisissez-les ici. Le générateur place
+alors les séances de cet enseignant uniquement dans ces salles. Utilisez **Tout autoriser** pour
+retirer la restriction.
 
-### Indisponibilité des salles
+## Disponibilité de la salle
 
-Même principe que pour les enseignants : une salle est utilisable à **n'importe quelle** heure par
-défaut, et vous saisissez uniquement les moments où elle **ne peut pas** l'être — par exemple une
-salle en maintenance certains matins. Le générateur ne planifie pas de séance dans une salle pendant
-un moment marqué comme indisponible. Laissez une salle vide et elle est disponible dès que l'école
-est ouverte.
+Passez à l'onglet **Disponibilité de la salle**. Il fonctionne comme la disponibilité des
+enseignants : une salle est utilisable à **n'importe quel** moment par défaut, et vous marquez
+uniquement les moments où elle **ne peut pas** l'être — par exemple une salle réservée pour des
+examens ou en maintenance. Laissez la grille vide et la salle est disponible toute la semaine.
 
 ### Capacité et type
 
@@ -113,31 +116,39 @@ respectés :
 
 - **Capacité** — une séance n'est placée que dans une salle assez grande pour la classe.
 - **Type de salle** — si une matière exige un type de salle particulier (ex. un labo), le
-  générateur n'utilise que des salles de ce type.
+  générateur n'utilise que des salles de ce type pour elle.
 
 Voir [Créer des salles](../getting-started/build-the-academic-foundation/create-rooms).
 
 ## Salles attitrées
 
-Dans l'onglet **Salles attitrées**, définissez si les classes restent dans une **salle attitrée**
-ou **se déplacent**, et attribuez à chaque classe sa salle. Vous pouvez aussi définir des
-substitutions de salle par matière ; les matières qui exigent un type de salle particulier se
-déplacent toujours vers une salle adaptée.
+Dans l'onglet **Salles attitrées**, réglez la politique de salle de chaque niveau :
+
+- **Salle attitrée** — chaque classe a sa propre salle. Choisissez une salle par classe, ou
+  utilisez **Attribuer des salles distinctes automatiquement** ou **Attribuer une salle partagée**
+  pour en remplir plusieurs à la fois. Vous pouvez aussi fixer une matière à une salle précise pour
+  une classe sous **Salles par matière**.
+- **Itinérant** — pas de salle attitrée ; le générateur choisit une salle pour chaque séance.
+
+Les matières qui exigent une salle spéciale (labo, EPS, salle informatique) se déplacent toujours
+vers une salle adaptée.
 
 ## Horaires des classes
 
 Dans l'onglet **Horaires des classes**, marquez quand une **classe** elle-même est indisponible —
-par exemple une cohorte en demi-journée qui n'a jamais de cours l'après-midi. Vous pouvez modifier
-une classe ou plusieurs à la fois.
+par exemple une cohorte qui ne vient que le matin. Utilisez les choix rapides **Journée complète**,
+**Matin seulement**, **Après-midi seulement** ou **Alterner**, ou marquez des créneaux sur la
+grille. Cliquez sur **Enregistrer**.
 
 ## Conseils et bonnes pratiques
 
 - Saisissez les indisponibilités **avant** de générer — trop bloquer un enseignant est une cause
-  fréquente d'emploi du temps impossible (trop peu de temps restant pour ses séances).
-- Utilisez l'**édition groupée** (sélectionnez plusieurs enseignants ou salles) pour appliquer
-  rapidement la même indisponibilité.
+  fréquente de séances non placées (trop peu de temps restant pour ses séances).
+- Utilisez la **sélection multiple** pour appliquer rapidement la même disponibilité ou les mêmes
+  limites.
 - Gardez des limites réalistes. Des limites très strictes combinées à beaucoup de temps bloqué
-  peuvent rendre un emploi du temps valide impossible ; le générateur vous le signalera.
+  laissent des séances non placées ; le panneau des séances non placées vous indique quelle limite
+  en est la cause.
 
 ## Articles liés
 

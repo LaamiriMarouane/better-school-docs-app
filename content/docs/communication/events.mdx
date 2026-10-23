@@ -8,7 +8,8 @@ holiday, or a closure. Events appear on the calendar for the people you choose, 
 (holidays and closures) also tell the rest of the platform that the school is closed that day.
 
 <Callout title="Who this is for">
-Administrators and teachers who manage the school calendar.
+Administrators, who manage the school calendar. Teachers, students and parents see the events
+shared with them, read-only.
 </Callout>
 
 ## Create an event
@@ -18,7 +19,7 @@ Administrators and teachers who manage the school calendar.
 <Step>
 ### Open Events
 
-Go to **Communication → Events**, then choose **Add event**.
+Go to **Communication → Events**, then choose **Add Event** (or select a day on the calendar).
 
 <Screenshot
   label="Events calendar with the Add event button"
@@ -31,63 +32,65 @@ Go to **Communication → Events**, then choose **Add event**.
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| **Title** | Yes | The name of the event. |
-| **Type** | Yes | A school-defined category with its own colour — e.g. *Activity*, *Meeting*, *Exam*. See [Event types](#event-types). |
-| **Kind** | No | How the system treats the day — *Normal*, *Holiday*, *Closure*, *Exam day*, or *Early dismissal*. Defaults to *Normal* (see below). |
-| **Start / End** | Yes | The date and time. An event can last one day or span several. |
-| **Description** | No | More details about the event. |
+| **Event Title** | Yes | The name of the event. |
+| **Event Type** | Yes | A school-defined category with its own colour — e.g. *Activity*, *Meeting*, *Exam*. See [Event types](#event-types). |
 | **Location** | No | Where it takes place. |
-| **Colour** | No | Overrides the type's colour for this one event. |
-| **Public** | — | When on, everyone can see the event. When off, only the chosen audience sees it. |
-| **Audience** | No | Who can see the event when it isn't public. See [Audiences](./audiences). |
-| **Notify participants** | — | When on, the audience is notified about the event. |
+| **Kind** | No | How the day is treated — *Normal*, *Holiday*, *Closure*, *Exam day*, or *Early dismissal*. Defaults to *Normal* (see below). |
+| **Start Date / End Date** | Yes | The date and time. An event can last one day or span several. |
+| **Description** | No | More details about the event. |
+| **Custom Color** | No | Overrides the type's colour for this one event. Leave empty to use the type's colour. |
+| **Public Event** | — | Turn on to show the event to the audiences you choose. Leave off to keep it for administrators only. |
+| **Audiences** | Yes, when public | Who sees the event. Appears when **Public Event** is on. See [Audiences](./audiences). |
+| **Notify Participants** | — | Appears when **Public Event** is on. |
 | **Thumbnail** | No | A cover image for the event. |
 </Step>
 
 <Step>
 ### Save
 
-The event appears on the calendar for everyone who can see it.
+Choose **Create Event**. The event appears on the calendar for everyone who can see it.
 </Step>
 
 </Steps>
 
 ## Event kinds
 
-The **kind** tells the system how to treat the day. Most events are *Normal*; two kinds actually
-change what the rest of the platform does:
+The **Kind** tells the platform how to treat the day. Most events are *Normal*; two kinds change
+what the rest of the platform does:
 
 | Kind | What it means |
 | --- | --- |
 | **Normal** | A regular event — activity, meeting, trip. The default. |
-| **Holiday** | A non-teaching day. **Closes the school** — no bus trips are generated, and the day is treated as closed across the platform. |
+| **Holiday** | A non-teaching day. **Closes the school** — the timetable and transport skip those days. |
 | **Closure** | An unplanned closure (for example bad weather). **Closes the school**, the same as a holiday. |
-| **Exam day** | Marks an exam day. Informational. |
-| **Early dismissal** | Marks a shortened day. Informational. |
+| **Exam day** | Marks an exam day on the calendar. |
+| **Early dismissal** | Marks a shortened day on the calendar. |
 
 <Callout title="Holidays and closures close the school">
-Only **Holiday** and **Closure** currently change school operations — they mark the day as closed,
-so (for example) no transport trips are created. **Exam day** and **Early dismissal** are labels
-for the calendar for now.
+Only **Holiday** and **Closure** change school operations: no timetable sessions and no bus trips
+take place on those dates. **Exam day** and **Early dismissal** are calendar labels.
 </Callout>
 
 ## Event types
 
 An **event type** is a reusable category with a name and a colour — for example *Activity*,
 *Meeting*, *Exam*, *Parent meeting*. Types keep the calendar readable: every event of the same
-type shares a colour. Manage your school's types from the events area, then pick one each time you
-add an event.
+type shares a colour. Open **Event Types** on the Events page to add, edit, or delete types, then
+pick one each time you add an event.
 
 ## Who sees an event
 
-- **Public** — turn Public on and everyone can see the event.
-- **By audience** — leave Public off and choose an [audience](./audiences) to limit who sees it
-  (for example *Year 5 parents* for a Year 5 trip).
+- **Public Event on** — the event is shown to the people in the **Audiences** you pick (for
+  example *Year 5 guardians* for a Year 5 trip).
+- **Public Event off** — only administrators see the event. Use this for internal planning.
 
-## Notify participants
+People in the audiences get a [notification](./notifications) when a public event is added, and a
+reminder the day before it starts.
 
-- **Notify participants** — turn this on to alert the audience about the event. People get a
-  [notification](./notifications).
+## View, edit, or delete
+
+- Switch the calendar between **Month**, **Week**, **Day**, and **List**, and filter by event type.
+- Select an event to see its details. Administrators can **Edit** or **Delete** it from there.
 
 <Callout title="Events don't repeat">
 Each event is a single entry. There's no automatic weekly/monthly repeat — for a recurring event,
@@ -98,7 +101,8 @@ add one entry per occurrence.
 
 - **School holiday** — add an event with the kind *Holiday* so the day is closed everywhere.
 - **Snow day** — add a *Closure* for the affected date.
-- **Class trip** — add a *Normal* event, keep it private, and choose the class's audience.
+- **Class trip** — add a *Normal* event, turn **Public Event** on, and choose the audience for that
+  class or level.
 - **Exam week** — add events marked *Exam day* for each exam.
 
 ## Related articles
