@@ -122,11 +122,18 @@ les plans académiques couvrant le niveau de l'élève sont proposés.
 
 | Ce qui se passe | Résultat |
 | --- | --- |
-| **Déjà dû sur l'ancien plan** | Reste dû tel quel, au prix de l'ancien plan. |
-| **Pas encore dû et impayé** | Supprimé. |
-| **Pas encore dû et partiellement payé** | Clôturé au montant déjà payé. |
-| **Nouveau plan** | Facturé à partir d'aujourd'hui jusqu'à la fin de l'année. Un frais unique du nouveau plan est dû à partir d'aujourd'hui. |
-| **Déjà payé pour le même frais** | Pas refacturé par le nouveau plan. |
+| **Un mois déjà commencé** (le mois en cours et les précédents) | Reste sur l'ancien plan, au prix de l'ancien plan. Ce qui reste à payer est toujours dû. |
+| **Un mois pas encore commencé, impayé** | Supprimé. Le nouveau plan le facture à son propre prix. |
+| **Un mois pas encore commencé, payé d'avance** | Le nouveau plan le facture à son propre prix, et le montant déjà payé est déduit. Si le montant payé dépasse le nouveau prix, le mois reste payé sur l'ancien plan. |
+| **Nouveau plan** | Facturé pour les mois à venir, jusqu'à la fin de l'année. Un frais unique du nouveau plan est dû à partir d'aujourd'hui. |
+| **Frais unique déjà payé** (inscription...) | Pas refacturé par le nouveau plan. |
+
+Par exemple, avec une scolarité de 2 000 par mois et 1 000 payés sur novembre, un
+changement le 15 novembre vers un plan à 2 500 par mois laisse novembre à 2 000, dont
+1 000 encore dus, et facture décembre à juin à 2 500 chacun.
+
+Pour dispenser une famille du reste d'un mois déjà commencé, utilisez **Dispenser** sur
+cette échéance.
 
 <Callout title="Mois déjà payés via un autre frais">
 Si le nouveau plan facture à nouveau un mois via un autre frais que celui déjà payé, la

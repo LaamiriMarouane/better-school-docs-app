@@ -119,11 +119,18 @@ student's level are offered.
 
 | What happens | Result |
 | --- | --- |
-| **Already due on the old plan** | Stays owed as it is, at the old plan's price. |
-| **Not yet due and unpaid** | Removed. |
-| **Not yet due and partly paid** | Closed at the amount already paid. |
-| **New plan** | Billed from today through the end of the year. A one-time fee of the new plan is due from today. |
-| **Already paid for the same fee** | Not billed again by the new plan. |
+| **A month that has started** (the current month and earlier) | Stays on the old plan, at the old plan's price. Whatever is left on it is still owed. |
+| **A month not started yet, unpaid** | Removed. The new plan bills it at its own price. |
+| **A month not started yet, paid in advance** | The new plan bills it at its own price, and the amount already paid counts toward it. If more was paid than the new price, the month stays paid on the old plan. |
+| **New plan** | Billed for the months still to come, through the end of the year. A one-time fee of the new plan is due from today. |
+| **One-time fee already paid** (registration...) | Not billed again by the new plan. |
+
+For example, with tuition at 2,000 a month and 1,000 paid on November, a change on
+15 November to a plan at 2,500 a month leaves November at 2,000 with 1,000 still owed,
+and bills December to June at 2,500 each.
+
+To let a family off the rest of a month that has started, use **Waive** on that
+installment.
 
 <Callout title="Months already paid through a different fee">
 If the new plan bills a month again through a different fee than the one already paid,
