@@ -4,9 +4,9 @@ description: Set up the school's grading scale and its grade bands so numeric sc
 ---
 
 The **grading scale** is a set of **grade bands** that turn a numeric score into a letter grade,
-a mention (e.g. *Bien*, *Très bien*) or a GPA value, and say which scores count as a pass. The
-school has one grading scale. It is used everywhere a grade is displayed — the gradebook, the
-student view and the report card.
+a mention (e.g. *Bien*, *Très bien*) or a GPA value, and say which scores count as a pass. Each
+school year uses one grading scale, and a level can use a different one if it needs to. The scale
+is used everywhere a grade is displayed — the gradebook, the student view and the report card.
 
 <Callout title="Who this is for">
 Administrators configuring how grades are displayed.
@@ -86,6 +86,49 @@ Under the bands, type a value in **Test a grade** to preview it. You see **Pass*
 the band's letter, mention and GPA — or **No matching band**. Use it to check the scale before
 saving.
 
+## Once grades are entered
+
+As soon as teachers have entered grades with a scale, its bands are protected, so that grades
+already given don't suddenly change mention or switch between pass and fail. You can no longer
+add or remove bands, change their ranges, or turn **Passing** on or off.
+
+You can still rename the scale, change its letters and mentions, and change the colours.
+
+To change the bands themselves, make a copy of the scale:
+
+<Steps>
+
+<Step>
+### Duplicate the scale
+
+In the **Grading scale** card, click **Duplicate scale**. The copy is named after the original
+with "(copy)" at the end, and you can edit everything in it.
+</Step>
+
+<Step>
+### Name and adjust the copy
+
+Give it a clear name in **Scale name** (e.g. *Scale 2027*), then change its bands.
+</Step>
+
+<Step>
+### Choose where to use it
+
+If the year has no grades yet, the copy becomes the year's scale: click **Save** to keep it. You
+can switch back at any time in **Scale used this year**. If the year already has grades, it keeps
+its current scale: use the copy next year, or for a level that has no grades yet (see below).
+</Step>
+
+</Steps>
+
+## Use a different scale for a level
+
+A level can use another scale than the rest of the school — for example a kindergarten level with
+mentions only. Go to **Assessments → Grading setup → Levels**, pick the level, open the
+**Level config** tab and choose the scale under **Grading scale**.
+
+Once a level has grades, it keeps its scale for the rest of the year.
+
 ## Display format
 
 The grading scale sets what *can* be shown. The **Primary format** sets what is shown by default
@@ -127,8 +170,16 @@ not shown to them.
 
 ### Can a level use a different grading scale?
 
-No — the school has one grading scale. A level or a marking period can still use its own primary
-format and pass threshold. See [Marking periods and grading scheme](./marking-periods).
+Yes. Choose it in the level's **Level config** tab, under **Grading scale**. See
+[Use a different scale for a level](#use-a-different-scale-for-a-level). A marking period can't
+have its own scale, but it can use its own primary format and pass threshold. See
+[Marking periods and grading scheme](./marking-periods).
+
+### Why can't I change the bands any more?
+
+Grades have already been entered with this scale. Changing the bands would change the mention or
+the pass/fail result of grades already given. Use **Duplicate scale** and edit the copy instead.
+See [Once grades are entered](#once-grades-are-entered).
 
 ## Related articles
 

@@ -3,6 +3,9 @@
   "pages": [
     "index",
     "role-dashboards",
-    "reports-and-statistics"
+    "reports-and-statistics",
+    "school-reports",
+    "analytics",
+    "curriculum-progress"
   ]
 }

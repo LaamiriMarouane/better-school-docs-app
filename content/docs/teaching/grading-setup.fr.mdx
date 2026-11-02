@@ -48,7 +48,7 @@ Réglez les valeurs par défaut de toute l'année, puis cliquez sur **Enregistre
 | **Méthode de calcul** | **Pondération par catégorie** ou **Total des points** et le sort des **Éléments sans catégorie**. |
 | **Formats d'affichage** | **Format principal**, **Seuil de réussite** et **Classement de la classe**. |
 | **Codes d'exception** | Le code et le libellé affichés pour Absent et Dispensé, et si chacun est exclu de la moyenne ou compte comme zéro. |
-| **Barème de notation** | Les tranches qui convertissent les moyennes en lettre, mention et GPA. Voir [Barème de notation](./grading-scale). |
+| **Barème de notation** | Les tranches qui convertissent les moyennes en lettre, mention et GPA, et le barème utilisé par l'année. Vous pouvez aussi dupliquer un barème pour en créer un nouveau. Voir [Barème de notation](./grading-scale). |
 
 ## Catégories de notes
 
@@ -106,6 +106,20 @@ appréciation de matière ou une appréciation générale.
   ou **Matière et général**.
 - Filtrez la liste par usage ou par catégorie. Supprimer une phrase la retire du sélecteur sans
   modifier les appréciations déjà rédigées.
+
+### Ajouter le nom de l'élève dans une phrase
+
+Une phrase peut contenir le nom de l'élève, pour qu'une seule phrase serve à tous les élèves. En
+rédigeant la phrase, cliquez sur **+ Prénom** ou **+ Nom complet** (ou tapez `{` et choisissez dans
+les suggestions). Cela ajoute `{first_name}` ou `{full_name}` au texte.
+
+Quand un enseignant insère la phrase dans une appréciation, elle est remplacée par le nom de
+l'élève — par exemple *« {first_name} a fait de beaux progrès ce trimestre »* devient
+*« Sara a fait de beaux progrès ce trimestre »*. Quand la phrase est ajoutée à plusieurs élèves à la
+fois, chacun reçoit son propre nom.
+
+Seuls `{first_name}` et `{full_name}` sont reconnus. Si la phrase contient autre chose entre
+accolades, elle ne peut pas être enregistrée tant que vous ne l'avez pas corrigée.
 
 ## Conseils et bonnes pratiques
 

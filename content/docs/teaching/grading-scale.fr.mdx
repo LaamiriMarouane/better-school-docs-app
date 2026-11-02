@@ -5,8 +5,9 @@ description: Configurez le barème de notation de l'école et ses tranches pour 
 
 Le **barème de notation** est un ensemble de **tranches** qui transforment une note numérique en
 lettre, en mention (ex. *Bien*, *Très bien*) ou en valeur GPA, et qui indiquent quelles notes
-valent une réussite. L'école a un seul barème de notation. Il est utilisé partout où une note est
-affichée — le carnet de notes, la vue élève et le bulletin.
+valent une réussite. Chaque année scolaire utilise un barème, et un niveau peut en utiliser un
+autre si besoin. Le barème est utilisé partout où une note est affichée — le carnet de notes, la
+vue élève et le bulletin.
 
 <Callout title="Pour qui">
 Les administrateurs qui configurent l'affichage des notes.
@@ -89,6 +90,52 @@ Sous les tranches, saisissez une valeur dans **Tester une note** pour la prévis
 **Réussite** ou **Échec**, ainsi que la lettre, la mention et le GPA de la tranche — ou
 **Aucune tranche correspondante**. Utilisez-le pour vérifier le barème avant d'enregistrer.
 
+## Une fois des notes saisies
+
+Dès que des enseignants ont saisi des notes avec un barème, ses tranches sont protégées : les notes
+déjà données ne peuvent pas changer de mention ni passer de réussite à échec. Vous ne pouvez plus
+ajouter ou supprimer de tranche, modifier leurs plages, ni activer ou désactiver **Réussite**.
+
+Vous pouvez toujours renommer le barème, modifier ses lettres et mentions, et changer les couleurs.
+
+Pour modifier les tranches elles-mêmes, faites une copie du barème :
+
+<Steps>
+
+<Step>
+### Dupliquer le barème
+
+Dans la carte **Barème de notation**, cliquez sur **Dupliquer l'échelle**. La copie porte le nom de
+l'original suivi de « (copie) », et tout y est modifiable.
+</Step>
+
+<Step>
+### Nommer et ajuster la copie
+
+Donnez-lui un nom clair dans **Nom de l'échelle** (ex. *Barème 2027*), puis modifiez ses tranches.
+</Step>
+
+<Step>
+### Choisir où l'utiliser
+
+Si l'année n'a pas encore de notes, la copie devient le barème de l'année : cliquez sur
+**Enregistrer** pour la garder. Vous pouvez revenir en arrière à tout moment dans
+**Échelle utilisée cette année**. Si l'année a déjà des notes, elle garde son barème actuel :
+utilisez la copie l'année prochaine, ou pour un niveau qui n'a pas encore de notes (voir
+ci-dessous).
+</Step>
+
+</Steps>
+
+## Utiliser un autre barème pour un niveau
+
+Un niveau peut utiliser un autre barème que le reste de l'école — par exemple un niveau de
+maternelle noté uniquement avec des mentions. Allez dans
+**Évaluations → Configuration des notes → Niveaux**, choisissez le niveau, ouvrez l'onglet
+**Configuration du niveau** et choisissez le barème sous **Barème de notation**.
+
+Dès qu'un niveau a des notes, il garde son barème pour le reste de l'année.
+
 ## Format d'affichage
 
 Le barème de notation définit ce qui *peut* être affiché. Le **Format principal** définit ce qui
@@ -133,9 +180,17 @@ des tranches ne leur est pas affiché.
 
 ### Un niveau peut-il utiliser un autre barème de notation ?
 
-Non — l'école a un seul barème de notation. Un niveau ou une période de notation peut toutefois
-avoir son propre format principal et son propre seuil de réussite. Voir
+Oui. Choisissez-le dans l'onglet **Configuration du niveau**, sous **Barème de notation**. Voir
+[Utiliser un autre barème pour un niveau](#utiliser-un-autre-barème-pour-un-niveau). Une période
+de notation ne peut pas avoir son propre barème, mais elle peut avoir son propre format principal
+et son propre seuil de réussite. Voir
 [Périodes de notation et schéma de notation](./marking-periods).
+
+### Pourquoi je ne peux plus modifier les tranches ?
+
+Des notes ont déjà été saisies avec ce barème. Modifier les tranches changerait la mention ou le
+résultat (réussite ou échec) de notes déjà données. Utilisez plutôt **Dupliquer l'échelle** et
+modifiez la copie. Voir [Une fois des notes saisies](#une-fois-des-notes-saisies).
 
 ## Articles liés
 
