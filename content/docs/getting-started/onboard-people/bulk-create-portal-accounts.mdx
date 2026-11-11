@@ -27,21 +27,23 @@ are included.
 <Step>
 ### Click "Create all"
 
-Click **Create all**. A dialog lets you set two options:
+Click **Create all**. Accounts are created only for people who can have one; the others
+are left out and listed as not eligible.
 
 | Option | Notes |
 | --- | --- |
-| **Only eligible rows** | When ticked, people who cannot receive an account yet are skipped instead of failing. Recommended. |
-| **Max accounts** | Optional cap on how many accounts to create this time. Leave empty for no limit. |
+| **Max accounts** | Optional cap on how many accounts to create this time. People who are not eligible do not count. Leave empty for no limit. |
 
-Click **Create all** in the dialog to start.
+Click **Create all** in the dialog to start. If the action cannot run, the reason shows
+in the dialog.
 </Step>
 
 <Step>
 ### Review the result
 
 When it finishes, a message shows how many accounts were **created**, how many
-**failed**, and how many were **skipped**. People who got an account leave the list.
+**failed**, how many were **skipped**, and how many people were **not eligible**. People
+who got an account leave the list.
 </Step>
 
 <Step>
@@ -55,10 +57,11 @@ copy the temporary password — see [Create portal accounts](./create-portal-acc
 
 </Steps>
 
-<Callout title="Skipped vs failed">
+<Callout title="Skipped, not eligible, failed">
 **Skipped** means the person already has an account — that is expected and safe.
-**Failed** means the account could not be created for that person, for example because
-they are not eligible yet. They stay in the list; fix what is missing and create their
+**Not eligible** means the person cannot have an account yet (missing information, no
+active enrollment, or no enrolled child). **Failed** means the account could not be
+created for another reason. Both stay in the list; fix what is missing and create their
 account again.
 </Callout>
 
