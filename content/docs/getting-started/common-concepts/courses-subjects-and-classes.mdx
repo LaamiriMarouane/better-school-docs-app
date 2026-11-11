@@ -3,25 +3,62 @@ title: Courses, subjects, and classes
 description: How courses, subjects, levels, and classes relate to each other, and how content and grades are organised around them.
 ---
 
-This scaffold explains how core academic grouping concepts differ and work together.
+Your school's structure is built from a few pieces: levels, classes, subjects, and the course
+outline for each subject. This page explains each one and how they fit together.
 
-## Outline
+<Callout title="Who this is for">
+Anyone who needs a shared picture of how teaching is organised in the app.
+</Callout>
 
-### Who This Is For
+## The words
 
-- Readers who need a shared mental model of the curriculum structure.
+| Concept | What it is |
+| --- | --- |
+| **Education level** | A group of levels, for example *Primary* or *Middle school*. |
+| **Level** | A grade or year of study, for example *Grade 1* or *Year 7*. Every level sits under an education level. |
+| **Track** | A stream inside a level, for example *Sciences* and *Literature*. Only some levels have tracks. |
+| **Class** | A group of students taught together at one level (and one track, when the level has tracks), for example *Grade 1 — A*. Students are enrolled into a class. |
+| **Class group** | A part of a class, when a class is split for some lessons. Assignments and sessions can target one group. |
+| **Subject** | Something taught at your school, for example *Mathematics* or *Arabic*. |
+| **Room** | A place where lessons and exams happen. A subject can be limited to some room types, such as a laboratory. |
+| **Course template** | The outline of one subject at one level (or track): chapters, then lessons. Every class at that level follows it. |
+| **Lesson** | One teaching unit inside a chapter. Each teacher writes their own lesson content and chooses which classes see it. |
 
-### Prerequisites
+## How they fit together
 
-- Familiarity with your school's teaching structure.
+An education level holds levels. A level can be split into tracks. Each class sits in one level
+(or one track), and students are enrolled into a class.
 
-### Key Sections
+- **Levels and subjects** are created once. In
+  [Academic year setup](../build-the-academic-foundation/academic-year-setup), you switch on the
+  levels that run in the year and say which subjects each level teaches (the **Subject
+  associations** step).
+- **Classes** are created for the year, inside a level (or a track).
+- A **course** is a subject taught at a level. Its outline is the **course template**, found
+  under **Academic → Course Templates**. Teachers find their own subjects under **My Courses**.
+- **Teachers** are given a class and a subject in **Teacher Assignments**. That is what lets them
+  write lessons, take attendance and grade that class in that subject.
+- The **timetable** places each class's subjects in the week, with a teacher and a room.
 
-- What each concept represents.
-- How the concepts relate to one another.
-- Which setup tasks create each record type.
+## Where each piece is created
 
-### Related Articles
+| Piece | Where |
+| --- | --- |
+| Education levels, levels, tracks | **Academic → Levels**. See [Create levels](../build-the-academic-foundation/create-levels). |
+| Subjects | **Academic → Subjects**. See [Create subjects](../build-the-academic-foundation/create-subjects). |
+| Classes | **Academic → Classes**, or the **Classes** step of year setup. See [Create classes](../build-the-academic-foundation/create-classes). |
+| Rooms | See [Create rooms](../build-the-academic-foundation/create-rooms). |
+| Course templates and lessons | **Academic → Course Templates**. See [Course templates](../../teaching/courses) and [Lessons](../../teaching/lessons). |
+| Who teaches what | **Academic → Teacher Assignments**. See [Teacher Assignments](../../timetable/teacher-assignments). |
 
-- [`Create levels`](../build-the-academic-foundation/create-levels)
-- [`Create subjects`](../build-the-academic-foundation/create-subjects)
+<Callout title="Grades follow the same structure">
+Grades are entered per class and per subject, and each subject's grades build the student's
+overall average. See [Assignments, quizzes, exams, and grades](./assignments-quizzes-exams-and-grades).
+</Callout>
+
+## Related articles
+
+- [Create levels](../build-the-academic-foundation/create-levels)
+- [Create subjects](../build-the-academic-foundation/create-subjects)
+- [Create classes](../build-the-academic-foundation/create-classes)
+- [Course templates](../../teaching/courses)

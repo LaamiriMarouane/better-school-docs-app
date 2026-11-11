@@ -1,0 +1,99 @@
+---
+title: Gérer la sortie à la porte
+description: "Suivez la file de récupération en direct, enregistrez les familles par code élève, libérez les élèves et remettez-les à la porte."
+---
+
+La page **Sortie** est la file de récupération en direct pour le secrétariat et le personnel de la
+porte. Elle se met à jour toute seule quand les familles arrivent, que les enseignants libèrent les
+élèves et que le personnel les remet. Affichez-la sur un écran de classe ou une tablette à la porte.
+
+<Callout title="Où la trouver">
+Administrateurs : **Opérations → Sortie**. Personnel : **Sortie** dans leur menu, si leur rôle le
+permet. Nécessite le module **Sortie**.
+</Callout>
+
+## Lire la page
+
+En haut, trois compteurs affichent **À libérer** (en attente de libération), **En route** et
+**Remis** (pour toute la journée).
+
+Chaque ligne affiche l'élève, sa classe, la porte, le numéro d'arrivée (par exemple **n°12**) et le
+nombre d'enfants arrivés ensemble. Le personnel voit aussi l'adulte qui a signalé l'arrivée et les
+personnes autorisées de l'élève avec leurs numéros de téléphone — servez-vous-en pour vérifier
+l'adulte à la porte.
+
+| Contrôle | Ce qu'il fait |
+| --- | --- |
+| **Zones** / **Liste** | Afficher une colonne par porte, ou une seule liste. |
+| **Toutes les portes** | N'afficher que les portes choisies (quand l'école en a plusieurs). |
+| Recherche | Filtrer par élève, classe ou code. |
+| Bouton son | Jouer un son quand un élève est libéré, ou le couper. |
+| **Plein écran** | Masquer les menus — pour un écran TV ou une tablette à la porte. **Quitter le plein écran** les réaffiche. |
+
+Après une remise, le nom reste sur le tableau pendant la durée définie dans **Retrait automatique
+du tableau**, puis disparaît. Le compteur **Remis** continue de compter.
+
+Quand la récupération est fermée, un message en donne la raison — l'école est fermée aujourd'hui,
+aucune plage n'est définie pour aujourd'hui, ou la plage du jour est à une autre heure. Les
+administrateurs ont un lien **Définir les plages**.
+
+## Enregistrer une famille à la porte
+
+Utilisez ceci quand une famille arrive sans l'application.
+
+<Steps>
+
+<Step>
+### Saisir le code élève
+
+Saisissez le code de l'élève (ou seulement son numéro) dans la zone de recherche. L'élève apparaît
+au-dessus de la file.
+</Step>
+
+<Step>
+### Choisir la porte
+
+Choisissez la porte dans **Choisir une porte**. S'il n'y a qu'une porte, elle est choisie pour vous.
+</Step>
+
+<Step>
+### Enregistrer
+
+Cliquez sur **Enregistrer**. L'élève entre dans la file en **En attente de libération**, et ses
+enseignants sont prévenus.
+</Step>
+
+</Steps>
+
+Si l'élève est déjà dans la file du jour, la page l'indique. Un élève qui prend le bus aujourd'hui
+ne peut être enregistré à la porte que par un membre du personnel autorisé à déroger, avec
+l'interrupteur de dérogation activé (voir ci-dessous).
+
+### Dérogation
+
+Le personnel dont le rôle le permet voit l'interrupteur **Dérogation (bus, hors plage, ou adulte
+non listé)**. Activez-le pour enregistrer un enfant en dehors de la plage de récupération, un
+élève du bus, ou pour un adulte qui n'est pas dans la liste. Les dérogations sont notées dans
+l'[historique](./dismissal-history). Un adulte marqué **Ne peut pas récupérer** ne peut jamais
+récupérer l'enfant, même avec une dérogation.
+
+## Libérer, remettre ou annuler
+
+Chaque ligne affiche les boutons qui la concernent :
+
+| Bouton | Quand | Ce qui se passe |
+| --- | --- | --- |
+| **Libérer** | **En attente de libération**, quand la libération en classe est exigée | L'enfant quitte la classe. Le statut passe à **En route** et le parent est prévenu. |
+| **Remise** | **En route** — ou directement depuis **En attente de libération** quand la libération en classe n'est pas exigée | L'enfant est avec l'adulte. Le statut passe à **Remis** et le parent est prévenu. |
+| **Annuler** | **En attente de libération** | L'arrivée est retirée de la file. |
+
+<Callout title="À la fin de la plage">
+Les enfants encore en attente ou en route à la fin de la plage de récupération sont marqués
+**Absent** et quittent la file.
+</Callout>
+
+## Articles liés
+
+- [Configurer la sortie](./set-up-dismissal)
+- [Libérer les élèves (enseignant)](./teacher-release)
+- [Historique des sorties](./dismissal-history)

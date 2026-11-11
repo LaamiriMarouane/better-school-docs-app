@@ -64,10 +64,10 @@ défini dans les réglages du niveau :
 
 | Mode | Fonctionnement |
 | --- | --- |
-| **Par période** | L'enseignant fait l'appel **à chaque séance**, depuis l'emploi du temps. |
+| **Par période** | La présence est prise **pour chaque séance** — par l'enseignant depuis l'**Emploi du temps**, ou par un administrateur depuis celui-ci ou sur la page **Présence des étudiants**. |
 | **Par jour** | La présence est prise **une fois par jour** par les administrateurs, sur la page **Présence des étudiants**. |
 
-Voir [Créer des niveaux](../getting-started/build-the-academic-foundation/create-levels).
+Voir [Configurer les modes de présence](../getting-started/configure-core-operations/configure-attendance-modes).
 
 ### Faire l'appel pour une séance
 
@@ -80,8 +80,12 @@ Pour les niveaux en mode **Par période** :
 3. Ajoutez des **Remarques** pour un élève qui n'est pas présent, si besoin.
 4. Choisissez **Enregistrer la présence**.
 
-La présence peut être saisie pour aujourd'hui et les jours récents, dans une fenêtre définie par
-votre école — une séance manquée peut donc être consignée peu après.
+La présence peut être prise ou modifiée pour aujourd'hui et un nombre défini de jours passés — une
+séance manquée peut donc être consignée peu après. Un administrateur règle ce nombre dans
+**Présence → Présence des étudiants → Configurer l'assiduité** — voir
+[Configurer les modes de présence](../getting-started/configure-core-operations/configure-attendance-modes).
+Passé ce délai, la présence de la séance est verrouillée pour les enseignants ; les administrateurs
+peuvent toujours la modifier.
 
 ### Statuts de présence
 
@@ -103,9 +107,20 @@ Vous choisissez la langue du document avant le téléchargement.
 
 ## Page Présence des étudiants (administrateurs)
 
-Les administrateurs trouvent **Présence → Présence des étudiants** dans le menu. C'est là que la
-présence est prise pour les niveaux **Par jour**, que la présence de toutes les classes est consultée,
-et que se trouvent les réglages de présence de l'école.
+Les administrateurs trouvent **Présence → Présence des étudiants** dans le menu. Choisissez une
+classe et une vue **Semaine** ou **Mois** pour voir sa présence sous forme de grille, une ligne par
+élève :
+
+- Pour un niveau **Par jour**, il y a **une colonne par jour**.
+- Pour un niveau **Par période**, il y a **une colonne par séance**, avec le jour et la matière.
+
+Pour prendre ou modifier la présence, sélectionnez l'en-tête d'une colonne (**Modifier cette
+colonne**), réglez le statut de chaque élève — ou utilisez **Tout définir à** — puis choisissez
+**Enregistrer la présence**. Les jours à venir ne peuvent pas être saisis.
+
+Le bouton **réglages** en haut de la page (**Configurer l'assiduité**) contient la fenêtre de jours
+passés de l'école — voir
+[Configurer les modes de présence](../getting-started/configure-core-operations/configure-attendance-modes).
 
 ## Cas d'usage courants
 
@@ -120,4 +135,5 @@ et que se trouvent les réglages de présence de l'école.
 
 - [Leçons](./lessons)
 - [Créer des niveaux](../getting-started/build-the-academic-foundation/create-levels)
+- [Configurer les modes de présence](../getting-started/configure-core-operations/configure-attendance-modes)
 - [Emploi du temps](../timetable)

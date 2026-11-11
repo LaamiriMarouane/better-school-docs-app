@@ -4,6 +4,7 @@
     "index",
     "employment-periods",
     "leave",
-    "staff-attendance"
+    "staff-attendance",
+    "staff-month"
   ]
 }

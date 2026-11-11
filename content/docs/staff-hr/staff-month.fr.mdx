@@ -1,0 +1,134 @@
+---
+title: Mois du personnel
+description: Chaque mois, voyez les heures enseignées, absences, congés, primes et avances de chaque membre du personnel, notez qui a été payé et exportez le tout pour votre comptable.
+---
+
+Le **Mois du personnel** rassemble, pour un mois, ce dont votre comptable a besoin de la part de
+l'école : **heures enseignées**, **absences**, **congés**, une éventuelle **prime** ou **avance**, et
+si chaque personne **a été payée**. La plateforme ne calcule pas la paie — vous clôturez le mois et
+envoyez le fichier à votre comptable, qui calcule la paie dans son propre logiciel.
+
+<Callout title="Pour qui">
+Les administrateurs, sur l'application web. Nécessite le module **Gestion du personnel**.
+</Callout>
+
+## Ouvrir le Mois du personnel
+
+Dans la barre latérale d'administration, allez dans **RH → Mois du personnel**.
+
+La page s'ouvre sur le mois en cours. Utilisez les flèches **Mois précédent** et **Mois suivant**, à
+côté du nom du mois, pour changer de mois.
+
+Un membre du personnel apparaît dans la liste quand une période d'emploi couvre le mois, ou quand il a
+enseigné des heures ce mois-là (par exemple comme remplaçant). Si personne n'apparaît, vérifiez ses
+[périodes d'emploi](./employment-periods).
+
+Tant que le mois n'est pas terminé, une note indique : *Ce mois n'est pas terminé : les heures et
+absences sont comptées jusqu'à aujourd'hui.*
+
+## Cartes de synthèse
+
+| Carte | Ce qu'elle affiche |
+| --- | --- |
+| **Payés** | Combien de personnes sont marquées payées, sur l'ensemble de la liste. |
+| **Heures enseignées** | Total des heures enseignées par les enseignants ce mois-ci. |
+| **Primes** | Total des primes saisies. |
+| **Avances** | Total des avances saisies. |
+
+## La liste
+
+| Colonne | Ce qu'elle affiche |
+| --- | --- |
+| **Membre du personnel** | Nom, rôle, type de contrat et conditions de rémunération de sa période d'emploi. Un avertissement comme **Taux horaire manquant** apparaît quand un type de paie n'a pas de montant — corrigez-le sur la [période d'emploi](./employment-periods). |
+| **Heures enseignées** | Pour les enseignants : heures, nombre de séances et remplacements. *Non confirmée par l'enseignant* compte les séances que l'enseignant n'a pas marquées comme faites. Cliquez sur les heures pour voir les séances. |
+| **Absences** | Jours d'absence, demi-journées et retards, issus de la [présence du personnel](./staff-attendance). |
+| **Congés** | Jours de congé approuvés par type — maladie, maternité, sans solde, autre — issus des [congés](./leave). |
+| **Prime, avance, note** | Ce que vous avez saisi pour ce mois. |
+| **Paiement** | **Payé** (avec date, méthode et référence) ou **Non payé**. |
+
+### Voir les séances derrière les heures
+
+Cliquez sur les heures d'un enseignant. Une fenêtre liste chaque séance du mois — date, heure, classe
+et matière — et la façon dont elle a été comptée : **Enseignée**, **Non confirmée**,
+**Remplacement** ou **Non comptée (absent)**.
+
+## Ajouter une prime, une avance ou une note
+
+<Steps>
+
+<Step>
+### Ouvrir la ligne
+
+Cliquez sur le bouton **Prime, avance et note** (crayon) sur la ligne du membre du personnel.
+</Step>
+
+<Step>
+### Saisir les montants
+
+Remplissez **Prime**, **Avance** et **Note pour le comptable** selon le besoin. Ces informations sont
+transmises au comptable — rien n'est calculé ici.
+</Step>
+
+<Step>
+### Enregistrer
+
+Cliquez sur **Enregistrer**.
+</Step>
+
+</Steps>
+
+## Marquer des personnes comme payées
+
+Une fois la paie remise, enregistrez-le :
+
+- Pour une personne, cliquez sur **Marquer payé** sur sa ligne.
+- Pour toutes les personnes pas encore payées, cliquez sur **Marquer les … payés** au-dessus de la
+  liste.
+
+Dans la fenêtre, choisissez **Payé le**, la **Méthode de paiement** (Espèces, Carte de Crédit,
+Virement Bancaire ou Chèque) et une **Référence** facultative, puis cliquez sur **Marquer payé**.
+
+Pour annuler, cliquez sur le bouton **Marquer non payé** (annuler) à côté du badge **Payé**. Sur un
+mois clôturé, rouvrez d'abord le mois.
+
+## Clôturer le mois
+
+Quand le mois est terminé et que tout est saisi, clôturez-le pour que les chiffres ne changent plus.
+
+<Steps>
+
+<Step>
+### Clôturer
+
+Cliquez sur **Clôturer le mois**, puis confirmez. Le bouton ne fonctionne qu'une fois le mois
+terminé.
+</Step>
+
+<Step>
+### Exporter pour votre comptable
+
+Cliquez sur **Exporter pour le comptable** pour télécharger un fichier Excel dans votre langue. Il
+contient une ligne par membre du personnel avec tous les chiffres ci-dessus, et une seconde feuille
+qui liste les séances.
+</Step>
+
+</Steps>
+
+Un mois clôturé affiche *Clôturé le … par …*. Ses heures, absences et congés sont figés tels qu'ils
+étaient à la clôture, et les primes, avances et notes ne peuvent plus être modifiées. Vous pouvez
+toujours **marquer des personnes payées** — la paie a souvent lieu après l'envoi du fichier.
+
+Pour modifier quelque chose, cliquez sur **Rouvrir le mois** et confirmez. Les chiffres sont
+recalculés depuis l'emploi du temps, les présences et les congés ; les primes, avances, notes et
+paiements sont conservés. Si vous avez déjà envoyé le fichier, envoyez aussi le nouveau.
+
+<Callout title="Exporter sans clôturer">
+Vous pouvez exporter à tout moment, même avant la clôture. Clôturer d'abord garantit que le fichier
+correspond à ce qui reste affiché.
+</Callout>
+
+## Articles liés
+
+- [Périodes d'emploi](./employment-periods)
+- [Congés](./leave)
+- [Présence du personnel](./staff-attendance)

@@ -1,11 +1,13 @@
 {
   "pages": [
     "getting-started",
+    "role-guides",
     "dashboards",
     "finance",
     "staff-hr",
     "settings",
     "transport",
+    "dismissal",
     "equipment",
     "timetable",
     "teaching",

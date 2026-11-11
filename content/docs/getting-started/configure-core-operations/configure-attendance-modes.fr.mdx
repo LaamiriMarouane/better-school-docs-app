@@ -1,26 +1,115 @@
 ---
 title: Configurer les modes de présence
+description: Choisissez comment chaque niveau prend la présence des élèves — par séance ou par jour — et combien de jours passés le personnel peut encore la saisir ou la corriger.
 ---
 
-Ce plan explique comment une école définit les approches de présence qu'elle souhaite suivre.
+Avant le premier jour de cours, décidez comment chaque niveau prend la présence des élèves et
+jusqu'à quand un appel oublié peut encore être rempli. Il y a deux réglages : le **mode de
+présence** de chaque niveau, et la **fenêtre de jours passés** de l'école. L'appel au quotidien est
+expliqué dans [Séances de classe et présence](../../teaching/sessions-and-attendance).
 
-## Plan
+<Callout title="Pour qui">
+Les administrateurs qui préparent l'année scolaire.
+</Callout>
 
-### Pour qui
+## Avant de commencer
 
-- Les administrateurs et les équipes des opérations pédagogiques.
+- Vos niveaux existent. Voir [Créer des niveaux](../build-the-academic-foundation/create-levels).
+- Vous savez comment chaque niveau fait l'appel : par les enseignants à chaque cours, ou une fois
+  par jour.
 
-### Prérequis
+## 1. Choisir le mode de présence de chaque niveau
 
-- Un accord sur le processus de présence utilisé par l'école.
+<Steps>
 
-### Sections clés
+<Step>
+### Ouvrir le niveau
 
-- Les modes de présence et quand les utiliser.
-- Les options de statut ou les modalités d'enregistrement.
-- Comment la configuration de la présence influe sur les opérations quotidiennes.
+Allez dans **Académique → Niveaux** et modifiez le niveau (ou choisissez le mode en le créant).
+</Step>
 
-### Articles liés
+<Step>
+### Choisir le Mode de présence des étudiants
 
-- [`Configurer le suivi du comportement`](./configure-behaviour-tracking)
-- [`Présence, comportement et paiements`](../common-concepts/attendance-behaviour-and-payments)
+| Mode | Choisissez-le quand… |
+| --- | --- |
+| **Par période** | La présence est prise **à chaque séance** — par exemple au collège et au lycée, où chaque enseignant de matière fait l'appel. |
+| **Par jour** | La présence est prise **une fois par jour** pour toute la classe — par exemple en primaire. |
+
+Si vous laissez le champ vide, le niveau utilise **Par période**.
+</Step>
+
+<Step>
+### Enregistrer
+
+Cliquez sur **Mettre à jour le niveau** (ou **Créer un niveau** pour un nouveau niveau).
+</Step>
+
+</Steps>
+
+<Callout type="warn" title="Choisissez avant le premier appel">
+Dès qu'une présence a été enregistrée pour un niveau, son mode est verrouillé et le champ
+n'apparaît plus quand vous modifiez le niveau. Réglez le bon mode pour chaque niveau avant le
+premier appel.
+</Callout>
+
+## 2. Régler la fenêtre de jours passés
+
+La fenêtre de jours passés indique combien de jours en arrière la présence peut encore être prise
+ou corrigée. Elle s'applique aux enseignants et aux autres membres du personnel. **Les
+administrateurs peuvent toujours saisir ou corriger une présence passée.**
+
+<Steps>
+
+<Step>
+### Ouvrir les réglages de présence
+
+Allez dans **Présence → Présence des étudiants** et cliquez sur le bouton **réglages** en haut de la
+page (son libellé est **Configurer l'assiduité**). La fenêtre **Configuration de l'assiduité des
+étudiants** s'ouvre pour l'année académique choisie en haut de l'écran.
+</Step>
+
+<Step>
+### Régler les deux fenêtres
+
+| Réglage | Ce qu'il contrôle |
+| --- | --- |
+| **Jours passés autorisés (mode par période)** | Pour les niveaux **Par période** : combien de jours après une séance les enseignants peuvent encore prendre ou modifier sa présence. |
+| **Jours passés autorisés (mode par jour)** | Pour les niveaux **Par jour** : combien de jours en arrière le personnel peut encore modifier la présence d'une journée. |
+
+Saisissez un nombre entier de jours. **0** signifie que la présence ne peut être prise que le jour
+même.
+</Step>
+
+<Step>
+### Enregistrer
+
+Cliquez sur **Enregistrer**.
+</Step>
+
+</Steps>
+
+<Callout title="Enregistrez la fenêtre une fois">
+Tant que la fenêtre n'a pas été enregistrée pour l'année, le personnel peut remonter de **7 jours**
+dans les deux modes — même si la fenêtre affiche un autre nombre pour le mode par jour. Ouvrez
+**Configurer l'assiduité**, vérifiez les deux nombres et cliquez sur **Enregistrer** pour que la
+fenêtre affichée soit celle qui s'applique.
+</Callout>
+
+Quand une date est hors de la fenêtre, sa présence apparaît verrouillée pour les enseignants et le
+personnel, avec le message *« La présence est verrouillée … jours après la séance. Demandez à un
+administrateur de la modifier. »* Un administrateur peut alors faire la modification.
+
+## 3. Vérifier que tout fonctionne
+
+- Sur l'**Emploi du temps**, une séance d'un niveau **Par période** propose **Marquer la présence**
+  dans son menu. Les séances des niveaux **Par jour**, non.
+- Dans **Présence → Présence des étudiants**, choisissez une classe : une classe **Par jour** affiche
+  une colonne par jour, et une classe **Par période** une colonne par séance.
+
+## Articles liés
+
+- [Séances de classe et présence](../../teaching/sessions-and-attendance)
+- [Créer des niveaux](../build-the-academic-foundation/create-levels)
+- [Configurer l'emploi du temps](./configure-the-timetable)
+- [Présence, comportement et paiements](../common-concepts/attendance-behaviour-and-payments)

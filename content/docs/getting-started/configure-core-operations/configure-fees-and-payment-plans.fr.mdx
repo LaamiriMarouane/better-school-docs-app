@@ -1,26 +1,94 @@
 ---
 title: Configurer les frais et les échéanciers
+description: L'ordre pour mettre en place le volet financier de l'école — devise, règles de facturation, services, frais, plans de paiement et réductions — avant d'inscrire les élèves.
 ---
 
-Ce plan décrit comment une école prépare les structures de frais et les modalités de paiement.
+Avant de facturer les familles, l'école définit ce qu'elle facture et comment c'est payé. Suivez
+l'ordre ci-dessous, **avant d'inscrire les élèves** : les échéances d'un élève sont créées à partir
+du plan de paiement associé à son inscription. Chaque étape renvoie à son guide complet dans
+[Frais et paiements](../../finance/fees-and-payments).
 
-## Plan
+<Callout title="Pour qui">
+Les administrateurs et le personnel financier qui préparent l'année scolaire.
+</Callout>
 
-### Pour qui
+## Avant de commencer
 
-- Les équipes financières et les administrateurs de l'école.
+- Vos niveaux existent. Voir [Créer des niveaux](../build-the-academic-foundation/create-levels).
+- Choisissez l'année académique en haut de l'écran. Les services, frais et plans sont définis pour
+  l'année sélectionnée.
 
-### Prérequis
+## Ordre de mise en place
 
-- La structure académique et le modèle d'inscription des élèves sont définis.
+<Steps>
 
-### Sections clés
+<Step>
+### Vérifier la devise
 
-- La configuration des éléments de frais et des échéanciers.
-- Les décisions de calendrier, d'échéances ou de catégories.
-- Les vérifications opérationnelles avant le déploiement.
+Allez dans **Paramètres → Établissement** et ouvrez l'onglet **Régional**. Choisissez votre **Code
+devise**. Il ne peut plus être changé dès qu'un paiement ou une dépense a été enregistré. Voir
+[Définir les préférences régionales](../first-time-school-setup/set-regional-preferences).
+</Step>
 
-### Articles liés
+<Step>
+### Régler les règles de facturation
 
-- [`Créer une inscription`](../enroll-students/create-an-enrollment)
-- [`Présence, comportement et paiements`](../common-concepts/attendance-behaviour-and-payments)
+Allez dans **Paramètres → Finances** et ouvrez l'onglet **Facturation**. Choisissez le jour
+d'échéance des versements, la facturation à l'avance ou à terme échu, et ce que paie un élève qui
+arrive en cours de mois. Faites-le avant de créer les plans, pour que tous les échéanciers suivent
+les mêmes règles. Voir [Configuration de la facturation](../../settings/billing-configuration).
+</Step>
+
+<Step>
+### Créer les services
+
+Allez dans **Finances → Services** et ajoutez ce que l'école propose — scolarité, transport,
+cantine, uniformes. Voir [Créer des services](../../finance/fees-and-payments/create-services).
+</Step>
+
+<Step>
+### Les chiffrer avec des frais
+
+Allez dans **Finances → Frais**. Chaque frais donne un montant à un service — un seul montant pour
+les niveaux choisis, ou un montant par niveau — et sa fréquence. Voir
+[Configurer les frais](../../finance/fees-and-payments/set-up-fees).
+</Step>
+
+<Step>
+### Regrouper les frais en plans de paiement
+
+Allez dans **Finances → Plans de paiement**. Un plan regroupe les frais d'un ou plusieurs niveaux ;
+chaque frais est obligatoire ou optionnel. Voir
+[Créer des plans de paiement](../../finance/fees-and-payments/create-payment-plans).
+</Step>
+
+<Step>
+### Ajouter des règles de réduction (facultatif)
+
+Allez dans **Finances → Règles de réduction** pour créer des remises réutilisables — par exemple
+une réduction fratrie ou enfant du personnel — et les attribuer aux élèves. Voir
+[Règles de réduction](../../finance/fees-and-payments/reduction-rules).
+</Step>
+
+</Steps>
+
+## Et ensuite
+
+- **À l'inscription**, choisissez un **Plan de paiement** pour l'élève (ou attribuez-le plus tard).
+  Ses échéances sont créées à partir de ce plan. Voir
+  [Créer une inscription](../enroll-students/create-an-enrollment) et
+  [Échéances et calendriers](../../finance/fees-and-payments/installments-and-schedules).
+- **Pour encaisser**, ouvrez le **Centre de paiement** depuis **Finances → Paiements**. Voir
+  [Enregistrer un paiement](../../finance/fees-and-payments/record-a-payment).
+
+<Callout title="Vérifiez la première inscription">
+Après avoir inscrit le premier élève avec un plan, ouvrez ses échéances. Si les dates ou les
+montants semblent faux, corrigez les règles de facturation ou le plan avant d'inscrire les autres.
+</Callout>
+
+## Articles liés
+
+- [Frais et paiements](../../finance/fees-and-payments)
+- [Années fiscales](../../settings/fiscal-year) — la période utilisée pour les montants du tableau
+  de bord administrateur
+- [Présence, comportement et paiements](../common-concepts/attendance-behaviour-and-payments)

@@ -1,27 +1,94 @@
 ---
 title: Academic years, terms, and statuses
-description: Understand how academic years and terms are structured, and how statuses control what can be edited or published.
+description: What an academic year and a term are, the statuses a year goes through, and what each status lets you do.
 ---
 
-This scaffold defines the time-based concepts that organize academic work in the platform.
+Almost everything in the school is organised around time: a school year, split into terms, and
+sometimes into smaller grading periods. This page explains these words and the statuses you see
+on them.
 
-## Outline
+<Callout title="Who this is for">
+Anyone learning how the school calendar is organised in the app, especially administrators.
+</Callout>
 
-### Who This Is For
+## The words
 
-- Readers learning the core academic structure vocabulary.
+| Concept | What it is |
+| --- | --- |
+| **Academic year** | One school cycle, for example *2025–2026*. Classes, enrollments, fees and timetables are prepared for a year. |
+| **Term** | A part of the year, for example *Semester 1* or *Trimester 2*. Your term names are set once in **Term Structure**, then each year's terms are dated. |
+| **Active term** | The term in progress. Grading and reporting start on it by default. You switch it with **Activate Term**. |
+| **Marking period** | A grading unit inside a term, for example *Midterm* and *End of term*. A term has one marking period unless you split it. |
+| **Year setup** | The guided steps that prepare a year: terms, levels, subjects, then classes, teachers and enrollments. |
 
-### Prerequisites
+## How they fit together
 
-- A basic understanding of how the school calendar is organized.
+<Steps>
 
-### Key Sections
+<Step>
+### Create the year
 
-- What each term means in the platform.
-- How statuses affect visibility and actions.
-- Where these concepts appear in workflows.
+You create the year with a label and dates. It starts as a **Draft**. See
+[Create an academic year](../build-the-academic-foundation/create-an-academic-year).
+</Step>
 
-### Related Articles
+<Step>
+### Prepare it in year setup
 
-- [`Create an academic year`](../build-the-academic-foundation/create-an-academic-year)
-- [`Create terms`](../build-the-academic-foundation/create-terms)
+You date the terms, choose the levels and subjects for the year, then prepare classes, teachers
+and enrollments. See [Academic year setup](../build-the-academic-foundation/academic-year-setup).
+</Step>
+
+<Step>
+### Activate it
+
+When setup is complete, **Activate year** makes it the **Active** year.
+</Step>
+
+<Step>
+### Close it at the end
+
+When the year is over, **Close Academic Year** makes it **Closed**.
+</Step>
+
+</Steps>
+
+## Academic year statuses
+
+| Status | What it means for you |
+| --- | --- |
+| **Draft** | The year is being prepared. You can edit its setup and enroll students. It is not the current year yet. |
+| **Active** | The current school year. Day-to-day work happens here. |
+| **Closed** | The year is over and read-only. Students can no longer be enrolled in it. You can still record late payments on its unpaid installments. |
+
+### Reopening a year
+
+**Reopen Academic Year** is offered on a closed year. There is no separate "Reopened" status: the
+year goes back to **Draft**. You can edit its setup again and still enroll students in it, but it
+is not the active year. Only a **Closed** year refuses new enrollments.
+
+## Grading status of a term
+
+Each term also has a **Grading Status**, set with **Update Grading Settings** on the term:
+
+| Status | What it means |
+| --- | --- |
+| **Open** | Teachers can enter marks and write remarks. |
+| **Locked** | Counting marks and remarks can no longer be entered. Administrators can still override an average. |
+| **Finalized** | The term's grades are final. Counting marks, remarks and averages can no longer be changed. |
+
+A term or marking-period report card can be published only when that period is **Locked** or
+**Finalized**. See [Gradebook](../../teaching/gradebook) and
+[Report cards](../../teaching/report-cards).
+
+## The year you are looking at
+
+Many pages (classes, enrollments, fees, payment plans, payments and expenses) show the data of the
+academic year selected at the top of the screen. Check the selected year before you start working.
+
+## Related articles
+
+- [Create an academic year](../build-the-academic-foundation/create-an-academic-year)
+- [Create terms](../build-the-academic-foundation/create-terms)
+- [Academic year setup](../build-the-academic-foundation/academic-year-setup)
+- [Marking periods and grading scheme](../../teaching/marking-periods)

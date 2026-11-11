@@ -1,26 +1,95 @@
 ---
 title: Revoir la liste de configuration de l'école
+description: Repassez sur chaque partie de la configuration avant que l'école ne travaille chaque jour dans la plateforme.
 ---
 
-Ce plan définit la revue de préparation finale avant que l'école ne commence à fonctionner sur la plateforme.
+Avant que les enseignants, les familles et les élèves utilisent la plateforme au quotidien, faites
+un dernier passage sur la configuration. L'essentiel est déjà sous vos yeux : la **Configuration
+de l'année** montre les étapes que vous avez confirmées pour l'année, et celles que vous avez
+ignorées.
 
-## Plan
+<Callout title="Pour qui">
+Les administrateurs qui ont préparé l'école et qui valident son lancement.
+</Callout>
 
-### Pour qui
+## Avant de commencer
 
-- Les responsables de déploiement et les administrateurs de l'école.
+- Vous avez créé le compte d'école et choisi comment commencer. Voir
+  [Choisir comment commencer](../first-time-school-setup/choose-how-to-start).
+- Vous avez suivi la **Configuration de l'année**. Voir
+  [Configuration de l'année scolaire](../build-the-academic-foundation/academic-year-setup).
 
-### Prérequis
+## Revoir la configuration
 
-- La configuration de base, l'intégration et la configuration des opérations sont terminées.
+<Steps>
 
-### Sections clés
+<Step>
+### Vérifier les informations de l'école
 
-- Domaines à confirmer avant le lancement.
-- Éléments de configuration manquants à résoudre en priorité.
-- Flux de validation suggéré pour la préparation.
+| Vérification | Où |
+| --- | --- |
+| Le nom, les coordonnées et le logo sont corrects. | **Paramètres → Établissement**, onglet **Informations de l'école**. Voir [Configurer le profil de l'école](../first-time-school-setup/set-up-the-school-profile). |
+| Les modules utilisés sont activés, les autres désactivés. | **Paramètres → Modules**. Voir [Configurer les modules de l'école](../first-time-school-setup/configure-school-modules). |
+| Le pays, la devise et le fuseau horaire sont justes. | **Paramètres → Établissement**, onglet **Régional**. Voir [Définir les préférences régionales](../first-time-school-setup/set-regional-preferences). |
+| Si vous avez chargé des données d'exemple, elles sont supprimées. | L'encadré **Données d'exemple** de l'onglet **Informations de l'école** disparaît une fois les données supprimées. Voir [Choisir comment commencer](../first-time-school-setup/choose-how-to-start). |
+</Step>
 
-### Articles liés
+<Step>
+### Vérifier l'année
 
-- [`Valider l'accès par rôle`](./validate-role-access)
-- [`Comprendre les principaux flux de l'école`](../welcome/understand-the-main-school-workflows)
+Allez dans **Paramètres → Pédagogique**, ouvrez l'onglet **Année académique**, ouvrez l'année avec
+**Voir les détails**, puis cliquez sur **Configuration de l'année**. Lisez le statut de chaque
+carte d'étape :
+
+- **Périodes**, **Niveaux**, **Matières** et **Associations de matières** affichent
+  **Confirmée**.
+- La configuration est terminée et l'année est active. Sinon, cliquez sur **Terminer la
+  configuration**, puis sur **Activer l'année**.
+- Chaque étape de préparation — **Notation**, **Classes**, **Enseignants**, **Supervisions**,
+  **Admissions / pré-inscriptions**, **Inscriptions**, et **Transport** lorsqu'elle s'affiche —
+  est **Confirmée**, ou **Ignoré** volontairement. Une étape encore **Non confirmée** est un
+  travail à terminer, ou à ignorer en connaissance de cause.
+</Step>
+
+<Step>
+### Vérifier les personnes et les accès
+
+- Les enseignants, élèves, tuteurs et membres du personnel sont ajoutés, et les élèves sont
+  inscrits dans une classe. Voir [Intégrer les personnes](../onboard-people) et
+  [Inscrire les élèves](../enroll-students).
+- Toute personne qui doit se connecter a un compte portail. Allez dans **Accès → Utilisateurs** et
+  ouvrez l'onglet **Comptes portail en attente** : il liste les personnes qui n'ont pas encore
+  d'identifiant. Voir [Créer des comptes portail](../onboard-people/create-portal-accounts).
+</Step>
+
+<Step>
+### Vérifier les opérations quotidiennes
+
+| Vérification | Voir |
+| --- | --- |
+| Chaque niveau utilise le bon mode de présence (par période ou par jour). | [Configurer les modes de présence](../configure-core-operations/configure-attendance-modes) |
+| Les frais et les plans de paiement sont prêts, si vous facturez via la plateforme. | [Configurer les frais et les échéanciers](../configure-core-operations/configure-fees-and-payment-plans) |
+| L'emploi du temps est généré et vérifié. | [Configurer l'emploi du temps](../configure-core-operations/configure-the-timetable) |
+</Step>
+
+<Step>
+### Corriger et valider
+
+Corrigez chaque manque depuis l'étape ou la page de paramètres concernée, puis vérifiez-le à
+nouveau. Quand tout est en place, [validez l'accès par rôle](./validate-role-access) et
+[activez le premier emploi du temps](./publish-the-first-timetable).
+</Step>
+
+</Steps>
+
+<Callout title="La préparation ne bloque jamais l'activation">
+Vous pouvez activer l'année avec des étapes de préparation inachevées. Utilisez cette revue pour
+décider ce qui doit être prêt le premier jour et ce qui peut attendre.
+</Callout>
+
+## Articles liés
+
+- [Configuration de l'année scolaire](../build-the-academic-foundation/academic-year-setup)
+- [Valider l'accès par rôle](./validate-role-access)
+- [Activer le premier emploi du temps](./publish-the-first-timetable)
+- [Comprendre les principaux flux de l'école](../welcome/understand-the-main-school-workflows)

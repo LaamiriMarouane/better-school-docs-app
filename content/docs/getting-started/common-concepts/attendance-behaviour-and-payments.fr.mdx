@@ -1,26 +1,98 @@
 ---
 title: Présence, comportement et paiements
+description: Les enregistrements quotidiens d'une école après la mise en service — présence, incidents de comportement, ce que les familles doivent et paient — et les statuts que vous y voyez.
 ---
 
-Ce plan résume trois concepts opérationnels que les écoles suivent en continu après la mise en service.
+Dès que l'enseignement commence, trois types d'enregistrements s'accumulent chaque jour : qui était
+là, comment les élèves se sont comportés, et ce que les familles doivent et paient. Cette page
+explique les termes utilisés pour chacun.
 
-## Plan
+<Callout title="Pour qui">
+Les administrateurs et le personnel qui apprennent le vocabulaire des opérations quotidiennes de
+l'école.
+</Callout>
 
-### Pour qui
+## Présence
 
-- Les administrateurs et le personnel qui apprennent le vocabulaire opérationnel récurrent.
+| Concept | Ce que c'est |
+| --- | --- |
+| **Mode de présence des étudiants** | Réglé sur chaque niveau. **Par période** : l'enseignant fait l'appel à chaque séance, depuis l'emploi du temps. **Par jour** : les administrateurs la prennent une fois par jour sur la page **Présence des étudiants**. |
+| **Séance de classe** | Une rencontre réelle d'une classe, créée à partir de l'emploi du temps. Les enseignants l'ouvrent pour **Marquer la présence**. |
+| **Présence à l'examen** | Qui a passé un examen planifié, enregistré sur l'examen lui-même. |
+| **Présence du personnel** | Un statut par membre du personnel et par jour, sous **Présence → Présence des enseignants** et **Présence → Présence du personnel**. |
 
-### Prérequis
+### Statuts de présence
 
-- Une vue de base des flux opérationnels quotidiens de l'école.
+| Statut | Signification |
+| --- | --- |
+| **Présent** | Était là. Chaque élève démarre présent quand vous faites l'appel d'une séance. |
+| **Absent** | N'était pas là. |
+| **En retard** | Est arrivé en retard. |
+| **Demi-journée** | A assisté à une partie de la journée. |
+| **Excusé** | Présence à l'examen uniquement : une absence justifiée, avec un motif. |
+| **En congé** | Présence du personnel uniquement : absent pour congé ce jour-là. |
 
-### Sections clés
+Voir [Séances de classe et présence](../../teaching/sessions-and-attendance) et
+[Présence du personnel](../../staff-hr/staff-attendance).
 
-- Ce que couvre chaque domaine opérationnel.
-- Pourquoi ces enregistrements comptent pour le suivi de l'école.
-- Quelles étapes de configuration préparent ces flux.
+## Comportement
 
-### Articles liés
+| Concept | Ce que c'est |
+| --- | --- |
+| **Catégorie** | Un type de comportement, par exemple *Respect* ou *Perturbation*. Une catégorie peut avoir des sous-catégories. |
+| **Niveau** | L'importance du comportement. Chaque niveau est **positif** ou **négatif** et a des points par défaut. |
+| **Incident** | Un événement de comportement enregistré pour un élève, avec sa catégorie, son niveau, sa date et ses points. |
+| **Points** | Les incidents positifs ajoutent des points, les négatifs en retirent. |
+| **Classement** | Les élèves classés selon leurs points sur une période choisie. |
 
-- [`Configurer les modes de présence`](../configure-core-operations/configure-attendance-modes)
-- [`Configurer les frais et les échéanciers`](../configure-core-operations/configure-fees-and-payment-plans)
+Les administrateurs enregistrent des incidents pour n'importe quel élève. Les enseignants les
+enregistrent pour les classes où ils enseignent. Les élèves et les parents ne voient que les leurs.
+Les écrans Comportement n'apparaissent que si votre école a activé le module Comportement. Voir
+[Enregistrer des incidents](../../behaviour/record-incidents) et
+[Points & classement](../../behaviour/leaderboard).
+
+## Paiements
+
+| Concept | Ce que c'est |
+| --- | --- |
+| **Service** | Une prestation de l'école, comme la scolarité, le transport ou la cantine. |
+| **Frais** | Le prix d'un service, avec sa fréquence de facturation (mensuelle, par trimestre, une fois…). |
+| **Plan de paiement** | Un ensemble de frais pour un ou plusieurs niveaux. Un élève reçoit un plan à son inscription. |
+| **Échéance** | Un montant dû par un élève, avec une date d'exigibilité. Les échéances sont créées pour vous à partir du plan de l'élève. |
+| **Paiement** | L'argent encaissé sur une ou plusieurs échéances, enregistré dans le **Centre de paiement**. |
+| **Règle de réduction** | Une remise réutilisable attribuée aux élèves. |
+
+### Statuts d'une échéance
+
+| Statut | Signification |
+| --- | --- |
+| **Non payé** | Rien n'a encore été payé. |
+| **Partiellement payé** | Une partie du montant a été payée. Le reste est encore dû. |
+| **Payé** | Entièrement réglé. |
+| **Dispensé** | L'école a accepté que l'élève ne la doive pas. |
+| **Annulé** | N'est plus facturé. |
+
+Une échéance impayée dont la date est passée est en retard : sa date s'affiche en rouge avec le
+nombre de jours de retard. Elle peut toujours être payée.
+
+### Statuts d'un paiement
+
+Un paiement enregistré apparaît comme **Réussi**. Après un remboursement, il apparaît comme
+**Partiellement remboursé** ou **Remboursé**.
+
+Voir [Frais et paiements](../../finance/fees-and-payments),
+[Échéances et calendriers](../../finance/fees-and-payments/installments-and-schedules) et
+[Rembourser un paiement](../../finance/fees-and-payments/refund-a-payment).
+
+<Callout title="Travaillez dans la bonne année">
+Les frais, plans de paiement, paiements et échéances suivent l'année académique choisie en haut de
+l'écran. Dans une année fermée, vous pouvez encore enregistrer des paiements en retard sur les
+échéances impayées.
+</Callout>
+
+## Articles liés
+
+- [Configurer les modes de présence](../configure-core-operations/configure-attendance-modes)
+- [Configurer les frais et les échéanciers](../configure-core-operations/configure-fees-and-payment-plans)
+- [Configurer le suivi du comportement](../configure-core-operations/configure-behaviour-tracking)
+- [Années scolaires, périodes et statuts](./academic-years-terms-and-statuses)

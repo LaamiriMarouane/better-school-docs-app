@@ -1,26 +1,99 @@
 ---
 title: Années scolaires, périodes et statuts
+description: Ce que sont une année scolaire et une période, les statuts par lesquels passe une année, et ce que chaque statut permet de faire.
 ---
 
-Ce plan définit les concepts temporels qui organisent le travail académique dans la plateforme.
+Presque tout, dans l'école, s'organise autour du temps : une année scolaire, divisée en périodes,
+et parfois en périodes de notation plus courtes. Cette page explique ces termes et les statuts que
+vous voyez sur eux.
 
-## Plan
+<Callout title="Pour qui">
+Toute personne qui découvre l'organisation du calendrier scolaire dans l'application, en
+particulier les administrateurs.
+</Callout>
 
-### Pour qui
+## Les termes
 
-- Les lecteurs qui apprennent le vocabulaire de base de la structure académique.
+| Concept | Ce que c'est |
+| --- | --- |
+| **Année académique** | Un cycle scolaire, par exemple *2025–2026*. Les classes, les inscriptions, les frais et les emplois du temps se préparent pour une année. |
+| **Période** | Une partie de l'année, par exemple *Semestre 1* ou *Trimestre 2*. Les noms de vos périodes se définissent une fois dans la **Structure des périodes**, puis les périodes de chaque année sont datées. |
+| **Période active** | La période en cours. La notation et les bilans se placent dessus par défaut. Vous la changez avec **Activer le trimestre**. |
+| **Période de notation** | Une unité de notation à l'intérieur d'une période, par exemple *Mi-période* et *Fin de période*. Une période en compte une seule, sauf si vous la divisez. |
+| **Configuration de l'année** | Les étapes guidées qui préparent une année : périodes, niveaux, matières, puis classes, enseignants et inscriptions. |
 
-### Prérequis
+## Comment tout s'articule
 
-- Une compréhension de base de l'organisation du calendrier scolaire.
+<Steps>
 
-### Sections clés
+<Step>
+### Créer l'année
 
-- Ce que signifie chaque terme dans la plateforme.
-- Comment les statuts influent sur la visibilité et les actions.
-- Où ces concepts apparaissent dans les flux de travail.
+Vous créez l'année avec un libellé et des dates. Elle démarre en **Brouillon**. Voir
+[Créer une année scolaire](../build-the-academic-foundation/create-an-academic-year).
+</Step>
 
-### Articles liés
+<Step>
+### La préparer dans la configuration de l'année
 
-- [`Créer une année scolaire`](../build-the-academic-foundation/create-an-academic-year)
-- [`Créer des périodes`](../build-the-academic-foundation/create-terms)
+Vous datez les périodes, choisissez les niveaux et les matières de l'année, puis préparez les
+classes, les enseignants et les inscriptions. Voir
+[Configuration de l'année scolaire](../build-the-academic-foundation/academic-year-setup).
+</Step>
+
+<Step>
+### L'activer
+
+Une fois la configuration terminée, **Activer l'année** en fait l'année **Actif**.
+</Step>
+
+<Step>
+### La fermer à la fin
+
+Quand l'année est terminée, **Fermer l'année académique** la passe en **Fermé**.
+</Step>
+
+</Steps>
+
+## Statuts de l'année académique
+
+| Statut | Ce que cela signifie pour vous |
+| --- | --- |
+| **Brouillon** | L'année est en préparation. Vous pouvez modifier sa configuration et y inscrire des élèves. Ce n'est pas encore l'année en cours. |
+| **Actif** | L'année scolaire en cours. Le travail au quotidien se fait ici. |
+| **Fermé** | L'année est terminée et en lecture seule. On ne peut plus y inscrire d'élèves. Vous pouvez encore enregistrer des paiements en retard sur ses échéances impayées. |
+
+### Rouvrir une année
+
+**Rouvrir l'année académique** est proposé sur une année fermée. Il n'existe pas de statut
+« Rouverte » : l'année repasse en **Brouillon**. Vous pouvez de nouveau modifier sa configuration
+et y inscrire des élèves, mais ce n'est pas l'année active. Seule une année **Fermé** refuse les
+nouvelles inscriptions.
+
+## Statut de notation d'une période
+
+Chaque période a aussi un **Statut de notation**, réglé avec **Mettre à jour les paramètres de
+notation** sur la période :
+
+| Statut | Ce que cela signifie |
+| --- | --- |
+| **Ouvert** | Les enseignants peuvent saisir des notes et écrire des appréciations. |
+| **Verrouillé** | Les notes qui comptent et les appréciations ne peuvent plus être saisies. Les administrateurs peuvent encore ajuster une moyenne. |
+| **Finalisé** | Les notes de la période sont définitives. Les notes qui comptent, les appréciations et les moyennes ne peuvent plus être modifiées. |
+
+Un bulletin de période ou de période de notation ne peut être publié que lorsque cette période est
+**Verrouillé** ou **Finalisé**. Voir [Carnet de notes](../../teaching/gradebook) et
+[Bulletins](../../teaching/report-cards).
+
+## L'année que vous consultez
+
+Beaucoup de pages (classes, inscriptions, frais, plans de paiement, paiements et dépenses)
+affichent les données de l'année académique choisie en haut de l'écran. Vérifiez l'année choisie
+avant de commencer.
+
+## Articles liés
+
+- [Créer une année scolaire](../build-the-academic-foundation/create-an-academic-year)
+- [Créer des périodes](../build-the-academic-foundation/create-terms)
+- [Configuration de l'année scolaire](../build-the-academic-foundation/academic-year-setup)
+- [Périodes de notation et schéma de notation](../../teaching/marking-periods)

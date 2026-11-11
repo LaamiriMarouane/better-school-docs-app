@@ -1,26 +1,89 @@
 ---
 title: Validate role access
+description: Before launch, check that each role sees what it needs — and nothing more — then fix any gap.
 ---
 
-This scaffold explains how to confirm each role sees the right areas before launch.
+Each person signs in with one or more roles: **Admin**, **Teacher**, **Guardian**, **Student** or
+**Staff**, plus any staff roles your school created. Before launch, check that every role opens
+the right areas, and that each person holds the right roles.
 
-## Outline
+<Callout title="Who this is for">
+Administrators preparing the school for launch.
+</Callout>
 
-### Who This Is For
+## Before you start
 
-- Administrators and implementation teams reviewing permissions.
+- People are added and have their portal accounts. See
+  [Create portal accounts](../onboard-people/create-portal-accounts).
+- If you use your own staff roles, they are created. See
+  [Roles and permissions](../../settings/roles-and-permissions).
 
-### Prerequisites
+## Steps
 
-- User accounts and role assignments already exist.
+<Steps>
 
-### Key Sections
+<Step>
+### Review the roles
 
-- Roles that should be tested before go-live.
-- Access checks for key workflows.
-- How to record and fix access gaps.
+Go to **Access → Roles & permissions**. Choose a role from the list to see its permissions.
 
-### Related Articles
+- Built-in roles show a lock icon. They are defined by the product. Their name and permissions cannot be
+  changed.
+- For your own staff roles, check that each one has only the permissions that job needs. Saving
+  a role updates the permissions of every user who holds it straight away.
+</Step>
 
-- [`Switch between available roles`](../access-and-authentication/switch-between-available-roles)
-- [`Review the school setup checklist`](./review-the-school-setup-checklist)
+<Step>
+### Check who holds which role
+
+Go to **Access → Users**. Use the **Role** filter to list the users of one role, and the
+**Status** filter to find **Enabled** or **Disabled** accounts. From a user's row menu:
+
+- **Assign roles** — add or remove roles. Only the school owner can give the **Admin** role, and a
+  student account keeps the **Student** role only.
+- **Reset password** — when someone cannot sign in.
+- **Disable** or **Enable** — stop or restore a person's access.
+</Step>
+
+<Step>
+### Test each role with a real sign-in
+
+For every role your school uses, sign in with an account that holds it and look at the menu and
+the home page. Use the table below as a guide.
+
+| Role | What to check |
+| --- | --- |
+| **Teacher** | Their own timetable and classes, taking attendance, assignments and grades. |
+| **Guardian** | Only their own children, with their timetable, attendance and results. |
+| **Student** | Their own timetable, assignments and results. |
+| **Staff** | Only the areas their staff role allows. |
+| **Admin** | All the areas the administrators need. |
+
+If your own account holds several roles, switch between them from the profile menu instead of
+signing out. See [Switch between available roles](../access-and-authentication/switch-between-available-roles).
+
+Teachers, guardians, students and staff can also use the mobile app. Check it with the same
+accounts. Administration is web only.
+</Step>
+
+<Step>
+### Fix the gaps
+
+- **A menu or action is missing** — add the permission to the person's staff role, or assign the
+  missing role.
+- **A person sees too much** — remove the permission from their staff role, or remove the extra
+  role.
+- **A person cannot sign in** — check that the account is **Enabled**, or reset the password.
+
+Then check again with the same account.
+</Step>
+
+</Steps>
+
+## Related articles
+
+- [Roles and permissions](../../settings/roles-and-permissions)
+- [Switch between available roles](../access-and-authentication/switch-between-available-roles)
+- [Create portal accounts](../onboard-people/create-portal-accounts)
+- [Review the school setup checklist](./review-the-school-setup-checklist)
+- [Supported platforms: web and mobile](../welcome/supported-platforms-web-and-mobile)

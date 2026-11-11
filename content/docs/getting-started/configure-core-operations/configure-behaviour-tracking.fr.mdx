@@ -1,26 +1,71 @@
 ---
 title: Configurer le suivi du comportement
+description: Activez le module Comportement et créez les catégories et niveaux sur lesquels les enseignants enregistreront les incidents.
 ---
 
-Ce plan couvre les choix de configuration pour enregistrer les événements de comportement et les interventions.
+Le suivi du comportement permet aux enseignants et aux administrateurs d'enregistrer les
+comportements positifs et négatifs, qui se traduisent en points et en classement. Mettez-le en
+place avant que les enseignants commencent : ils ne peuvent choisir que parmi les catégories et
+niveaux que vous créez. Les guides complets sont dans [Comportement](../../behaviour).
 
-## Plan
+<Callout title="Pour qui">
+Les administrateurs qui préparent l'année scolaire.
+</Callout>
 
-### Pour qui
+## Ordre de mise en place
 
-- Les équipes de la vie scolaire et les administrateurs de l'école.
+<Steps>
 
-### Prérequis
+<Step>
+### Activer le module Comportement
 
-- Une politique de comportement ou un cadre d'incidents partagés.
+Allez dans **Paramètres → Modules**, activez **Comportement**, puis cliquez sur **Enregistrer**. Le
+menu **Comportement** apparaît pour les administrateurs, et les enseignants obtiennent **Incidents
+élèves** et **Classement**. Voir
+[Configurer les modules de l'école](../first-time-school-setup/configure-school-modules).
+</Step>
 
-### Sections clés
+<Step>
+### Créer les catégories
 
-- Les catégories de comportement et les règles de suivi.
-- Les modalités d'escalade ou de suivi.
-- Comment les enregistrements de comportement se rapportent au suivi quotidien.
+Allez dans **Comportement → Configuration**. Dans la carte **Catégories**, ajoutez les types de
+comportement que l'école suit — par exemple *Respect* et *Entraide* (positifs), *Perturbation* et
+*Retard* (négatifs). Ajoutez des sous-catégories si vous avez besoin de libellés plus fins. Voir
+[Configurer catégories & niveaux](../../behaviour/setup).
+</Step>
 
-### Articles liés
+<Step>
+### Créer les niveaux et leurs points
 
-- [`Configurer les modes de présence`](./configure-attendance-modes)
-- [`Présence, comportement et paiements`](../common-concepts/attendance-behaviour-and-payments)
+Sur la même page, dans la carte **Niveaux**, ajoutez les degrés d'importance — par exemple
+*Mineur* et *Majeur* pour le négatif, *Bronze*, *Argent* et *Or* pour le positif. Chaque niveau a
+des **points par défaut** : les niveaux positifs ajoutent des points, les négatifs en retirent.
+</Step>
+
+<Step>
+### Prévenir les enseignants
+
+Les enseignants enregistrent les incidents des classes où ils enseignent depuis **Incidents
+élèves**. Voir [Enregistrer des incidents](../../behaviour/record-incidents).
+</Step>
+
+</Steps>
+
+<Callout title="Mettez-vous d'accord sur le barème">
+Convenez avec les enseignants des catégories et des points de chaque niveau avant la rentrée, pour
+qu'un même comportement vaille les mêmes points dans toutes les classes. Vous pourrez archiver un
+élément plus tard sans perdre les incidents passés.
+</Callout>
+
+## Ce que voient les familles
+
+Les élèves et les parents ne voient que leurs propres incidents et leur classement dans la classe.
+Le classement de toute l'école est réservé au personnel. Voir
+[Points & classement](../../behaviour/leaderboard).
+
+## Articles liés
+
+- [Comportement](../../behaviour)
+- [Configurer catégories & niveaux](../../behaviour/setup)
+- [Enregistrer des incidents](../../behaviour/record-incidents)
+- [Présence, comportement et paiements](../common-concepts/attendance-behaviour-and-payments)

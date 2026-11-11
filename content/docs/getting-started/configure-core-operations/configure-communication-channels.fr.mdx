@@ -1,26 +1,88 @@
 ---
 title: Configurer les canaux de communication
+description: Activez les outils de communication que votre école utilise, créez vos audiences et sachez quels canaux fonctionnent tout seuls.
 ---
 
-Ce plan décrit les voies de communication qu'une école devrait préparer avant la mise en service.
+Votre école informe les familles et le personnel par les **annonces**, les **événements**, les
+**messages** et les **notifications**, plus les **réclamations** si vous les utilisez. L'essentiel
+de la mise en place consiste à activer les bons modules et à créer vos **audiences**. Les guides
+complets sont dans [Communication](../../communication).
 
-## Plan
+<Callout title="Pour qui">
+Les administrateurs qui préparent l'année scolaire.
+</Callout>
 
-### Pour qui
+## Les canaux
 
-- Les administrateurs qui coordonnent la communication avec les familles et le personnel.
+| Canal | À quoi il sert | Ce que vous configurez |
+| --- | --- | --- |
+| **Annonces** | Des nouvelles à sens unique pour des audiences choisies. | Activer le module **Annonces** et créer des audiences. |
+| **Événements** | Les dates du calendrier scolaire — vacances, examens, activités, fermetures. | Créer des audiences. Aucun module n'est nécessaire. |
+| **Messages** | Des conversations à double sens : canaux de classe et messages directs. | Activer le module **Messagerie**. Les canaux de classe se créent tout seuls. |
+| **Notifications** | Des alertes sur ce qui concerne chaque personne. | Rien — elles fonctionnent toutes seules. |
+| **Réclamations** | Les réclamations des parents (et des élèves si vous l'autorisez) sur les notes, les frais et d'autres sujets. | Activer le module **Réclamations** et choisir si les élèves peuvent en envoyer. |
 
-### Prérequis
+## Ordre de mise en place
 
-- Les enregistrements utilisateurs et les coordonnées des tuteurs sont prêts.
+<Steps>
 
-### Sections clés
+<Step>
+### Activer les modules nécessaires
 
-- Les canaux de communication disponibles pour l'école.
-- Le ciblage des publics et les modalités d'utilisation.
-- Les vérifications de préparation et de cohérence du déploiement.
+Allez dans **Paramètres → Modules**, activez **Annonces**, **Messagerie** et **Réclamations** selon
+vos besoins, puis cliquez sur **Enregistrer**. Leurs pages apparaissent sous **Communication** dans
+le menu. Voir [Configurer les modules de l'école](../first-time-school-setup/configure-school-modules).
+</Step>
 
-### Articles liés
+<Step>
+### Créer vos audiences
 
-- [`Ajouter des tuteurs`](../onboard-people/add-guardians)
-- [`Annonces, notifications et messagerie`](../common-concepts/announcements-notifications-and-messaging)
+Allez dans **Communication → Publics** et créez les groupes auxquels vous écrirez le plus — par
+exemple *Tous les parents*, *Tous les enseignants* ou *Élèves et parents de 5e année*. Les annonces
+et les événements sont envoyés à des audiences : créez-les d'abord. Voir
+[Audiences](../../communication/audiences).
+</Step>
+
+<Step>
+### Placer les premières dates au calendrier
+
+Allez dans **Communication → Événements** et ajoutez les vacances et fermetures de l'année, ainsi
+que les dates clés comme les examens. Des **Vacances** ou une **Fermeture** indiquent à l'emploi du
+temps et au transport que l'école est fermée ce jour-là. Voir
+[Événements](../../communication/events).
+</Step>
+
+<Step>
+### Décider qui peut envoyer des réclamations (facultatif)
+
+Si vous avez activé **Réclamations**, allez dans **Paramètres → Établissement** et ouvrez l'onglet
+**Réclamations**. Activez **Les élèves peuvent créer des réclamations** si les élèves peuvent les
+envoyer eux-mêmes, puis cliquez sur **Enregistrer**. Les parents peuvent toujours envoyer des
+réclamations tant que le module est activé.
+</Step>
+
+<Step>
+### Envoyer une première annonce
+
+Allez dans **Communication → Annonces** et publiez un message de bienvenue pour une petite audience,
+afin de vérifier qui le reçoit. Voir [Annonces](../../communication/announcements).
+</Step>
+
+</Steps>
+
+## Les canaux qui fonctionnent tout seuls
+
+- Les **canaux de classe** de **Messages** se créent automatiquement quand un enseignant est
+  affecté à une classe. Qui peut écrire à qui est fixé — voir [Messages](../../communication/messaging).
+- Les **notifications** apparaissent dans la cloche et sur la page **Notifications** pour toutes
+  les personnes concernées. Voir [Notifications](../../communication/notifications).
+- **Notifications mobiles** : chacun reçoit des alertes sur son téléphone dès qu'il se connecte à
+  l'application mobile et autorise les notifications.
+- **E-mail** : les administrateurs, enseignants, élèves et parents qui ont une adresse e-mail sur
+  leur profil reçoivent aussi la plupart de leurs notifications par e-mail.
+
+## Articles liés
+
+- [Communication](../../communication)
+- [Configurer les modules de l'école](../first-time-school-setup/configure-school-modules)
+- [Annonces, notifications et messagerie](../common-concepts/announcements-notifications-and-messaging)

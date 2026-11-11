@@ -1,26 +1,110 @@
 ---
 title: Configure attendance modes
+description: Choose how each level takes student attendance — per session or per day — and how many past days staff can still mark or correct it.
 ---
 
-This scaffold explains how a school defines the attendance approaches it wants to track.
+Before the first day of classes, decide how each level takes student attendance and how late a
+missed register can still be filled in. There are two settings: the **attendance mode** of each
+level, and the school's **past-days window**. Day-to-day attendance is covered in
+[Class sessions & attendance](../../teaching/sessions-and-attendance).
 
-## Outline
+<Callout title="Who this is for">
+Administrators preparing the school year.
+</Callout>
 
-### Who This Is For
+## Before you start
 
-- Administrators and academic operations teams.
+- Your levels exist. See [Create levels](../build-the-academic-foundation/create-levels).
+- You know how each level takes its register: by subject teachers in every class, or once a day.
 
-### Prerequisites
+## 1. Choose each level's attendance mode
 
-- Agreement on the attendance process used by the school.
+<Steps>
 
-### Key Sections
+<Step>
+### Open the level
 
-- Attendance modes and when to use them.
-- Status options or recording expectations.
-- How attendance setup affects daily operations.
+Go to **Academic → Levels** and edit the level (or set the mode while you create it).
+</Step>
 
-### Related Articles
+<Step>
+### Pick the Student Attendance Mode
 
-- [`Configure behaviour tracking`](./configure-behaviour-tracking)
-- [`Attendance, behaviour, and payments`](../common-concepts/attendance-behaviour-and-payments)
+| Mode | Choose it when… |
+| --- | --- |
+| **Per Period** | Attendance is taken **in each class session** — for example in middle and high school, where each subject teacher calls the register. |
+| **Per Day** | Attendance is taken **once a day** for the whole class — for example in primary school. |
+
+If you leave the field empty, the level uses **Per Period**.
+</Step>
+
+<Step>
+### Save
+
+Click **Update Level** (or **Create Level** for a new level).
+</Step>
+
+</Steps>
+
+<Callout type="warn" title="Choose before attendance starts">
+Once attendance has been recorded for a level, its mode is locked and the field no longer appears
+when you edit the level. Set the right mode for every level before the first register is taken.
+</Callout>
+
+## 2. Set the past-days window
+
+The past-days window says how many days back attendance can still be taken or corrected. It applies
+to teachers and other staff. **Administrators can always record or correct past attendance.**
+
+<Steps>
+
+<Step>
+### Open the attendance settings
+
+Go to **Attendance → Student Attendance** and click the **settings** button at the top of the page
+(its label is **Configure Attendance**). The **Student Attendance Configuration** window opens for
+the academic year selected at the top of the screen.
+</Step>
+
+<Step>
+### Set the two windows
+
+| Setting | What it controls |
+| --- | --- |
+| **Allowed past days (period mode)** | For **Per Period** levels: how many days after a session teachers can still take or edit its attendance. |
+| **Allowed past days (day mode)** | For **Per Day** levels: how many days back staff can still edit a day's attendance. |
+
+Enter a whole number of days. **0** means attendance can only be taken on the day itself.
+</Step>
+
+<Step>
+### Save
+
+Click **Save**.
+</Step>
+
+</Steps>
+
+<Callout title="Save the window once">
+Until the window has been saved for the year, staff can go back **7 days** in both modes — even if
+the window shows another number for day mode. Open **Configure Attendance**, check both numbers
+and click **Save** so the window you see is the one that applies.
+</Callout>
+
+When a date is outside the window, its attendance shows as locked for teachers and staff, with the
+message *"Attendance is locked … days after the session. Ask an administrator to change it."* An
+administrator can then make the change.
+
+## 3. Check it works
+
+- On the **Timetable**, a session of a **Per Period** level offers **Mark Attendance** in its menu.
+  Sessions of **Per Day** levels don't.
+- On **Attendance → Student Attendance**, choose a class: a **Per Day** class shows one column per
+  day, and a **Per Period** class shows one column per session.
+
+## Related articles
+
+- [Class sessions & attendance](../../teaching/sessions-and-attendance)
+- [Create levels](../build-the-academic-foundation/create-levels)
+- [Configure the timetable](./configure-the-timetable)
+- [Attendance, behaviour, and payments](../common-concepts/attendance-behaviour-and-payments)

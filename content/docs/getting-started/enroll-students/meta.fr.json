@@ -3,6 +3,7 @@
   "pages": [
     "index",
     "pre-inscriptions",
+    "re-enrollment",
     "create-an-enrollment",
     "bulk-enroll-students",
     "transfer-a-student-between-classes",

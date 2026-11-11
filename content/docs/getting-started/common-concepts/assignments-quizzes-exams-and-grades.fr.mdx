@@ -1,26 +1,97 @@
 ---
 title: Devoirs, quiz, examens et notes
+description: Les types de travaux notés dans l'application, comment ils deviennent des notes, et les statuts que vous voyez en chemin.
 ---
 
-Ce plan définit les termes d'évaluation courants que les utilisateurs rencontreront dans les flux d'enseignement.
+Les enseignants évaluent les élèves à travers quelques types de travaux. Tous se retrouvent dans le
+carnet de notes, qui construit les notes de chaque matière et la moyenne générale de l'élève. Cette
+page explique chaque type de travail et comment une note entre dans une moyenne.
 
-## Plan
+<Callout title="Pour qui">
+Les enseignants, administrateurs et équipes de support qui apprennent le vocabulaire de
+l'évaluation.
+</Callout>
 
-### Pour qui
+## Les types de travaux notés
 
-- Les enseignants, administrateurs et équipes de support qui apprennent le vocabulaire de l'évaluation.
+| Concept | Ce que c'est |
+| --- | --- |
+| **Devoir** | Un travail donné à une classe, comme un exercice à la maison ou un projet. Les élèves le rendent en ligne ou en classe, et l'enseignant le note avec un retour. |
+| **Quiz** | Un test en ligne construit à partir d'une banque de questions. Les élèves le passent à l'écran et leurs réponses sont corrigées automatiquement. Un quiz est donné à une classe sous forme d'attribution de quiz. |
+| **Modèle d'examen** | Le modèle d'un examen pour une matière : son nom, sa durée, sa note maximale et son poids. |
+| **Examen planifié** | Une session d'un modèle d'examen pour une classe, à une date, dans une salle. |
+| **Évaluation libre** | Une note que l'enseignant saisit directement dans le carnet de notes, comme un oral, la participation ou un contrôle du cahier. |
+| **Examen externe** | Un examen régional ou national qui compte dans la note annuelle, à côté des périodes. |
 
-### Prérequis
+## Comment les notes deviennent des moyennes
 
-- Une compréhension générale de l'approche d'évaluation de l'école.
+<Steps>
 
-### Sections clés
+<Step>
+### Chaque note entre dans une catégorie
 
-- La différence entre chaque type d'évaluation.
-- Où les notes sont produites ou consultées.
-- Comment ces concepts soutiennent les cycles d'enseignement.
+Chaque note qui compte appartient à une **catégorie**, comme *Examens* ou *Devoirs*. Chaque
+catégorie a un poids dans la matière. Un devoir ou un quiz ne compte que si **Compte dans la
+moyenne finale** est activé.
+</Step>
 
-### Articles liés
+<Step>
+### Les catégories font la note de la période de notation
 
-- [`Démarrer le premier cycle d'enseignement`](../go-live-checklist/start-the-first-teaching-cycle)
-- [`Cours, matières et classes`](./courses-subjects-and-classes)
+Dans chaque période de notation, les notes sont moyennées par catégorie, puis combinées selon les
+poids des catégories.
+</Step>
+
+<Step>
+### Les périodes de notation font la note de la période, les périodes font la note annuelle
+
+Une période divisée en plusieurs périodes de notation les combine selon leurs poids. La note
+annuelle combine les périodes et l'éventuel examen externe, selon le schéma de notation du niveau.
+</Step>
+
+<Step>
+### Les matières font la moyenne générale
+
+La note de chaque matière est pondérée par son coefficient pour donner la moyenne générale de
+l'élève. Le barème peut aussi afficher une lettre ou une **Mention**.
+</Step>
+
+</Steps>
+
+Le [Carnet de notes](../../teaching/gradebook) montre tout cela dans une grille par classe, et les
+moyennes se mettent à jour à mesure que les notes sont saisies.
+
+## Rien n'est visible avant publication
+
+Les élèves et les familles ne voient pas une note qui compte avant sa publication :
+
+- **Examens** : l'examen est marqué comme terminé, noté, puis ses résultats sont publiés.
+- **Devoirs et quiz qui comptent** : les notes restent masquées jusqu'à ce que l'enseignant
+  choisisse **Publier les notes**. Un travail d'entraînement qui ne compte pas affiche chaque note
+  tout de suite.
+- **Évaluations libres** : elles démarrent non publiées. Leurs notes ne comptent qu'après **Publier
+  les résultats**.
+- **Bulletins** : un bulletin reste en **Brouillon** jusqu'à sa publication.
+
+## Les statuts que vous verrez
+
+| Sur | Statuts |
+| --- | --- |
+| Un devoir (vue élève) | **À venir**, **Ouvert**, **En retard**, **Soumis**, **Noté** |
+| Un quiz ou une question | **Brouillon** jusqu'à publication, puis il peut être attribué |
+| Un examen planifié | **Programmé**, puis **Terminé** une fois passé. Ses résultats sont **Publié** ou **Non publié**. |
+| La notation d'une période | **Ouvert**, **Verrouillé**, **Finalisé** |
+| Un bulletin | **Brouillon**, **Émis**, **Publié**, **À mettre à jour**, **Remplacé** |
+
+Consultez chaque page détaillée pour le sens de chaque statut.
+
+## Articles liés
+
+- [Devoirs](../../teaching/assignments)
+- [Quiz](../../teaching/quizzes)
+- [Examens](../../teaching/exams)
+- [Carnet de notes](../../teaching/gradebook)
+- [Périodes de notation et schéma de notation](../../teaching/marking-periods)
+- [Bulletins](../../teaching/report-cards)
+- [Démarrer le premier cycle d'enseignement](../go-live-checklist/start-the-first-teaching-cycle)
+- [Cours, matières et classes](./courses-subjects-and-classes)

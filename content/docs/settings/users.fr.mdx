@@ -1,0 +1,128 @@
+---
+title: Utilisateurs
+description: Consultez tous les comptes de votre école, filtrez la liste, attribuez des rôles, réinitialisez les mots de passe et activez ou désactivez des comptes.
+---
+
+La page **Utilisateurs** liste tous les **comptes portail** (identifiants de connexion) de votre
+école — administrateurs, enseignants, élèves, tuteurs et personnel. Depuis cette page, vous attribuez
+des rôles, réinitialisez un mot de passe ou désactivez un compte.
+
+<Callout title="Pour qui">
+Les administrateurs.
+</Callout>
+
+## Ouvrir Utilisateurs
+
+Dans la barre latérale d'administration, allez dans **Accès → Utilisateurs**.
+
+La page a deux onglets :
+
+| Onglet | Ce qu'il affiche |
+| --- | --- |
+| **Utilisateurs** | Toutes les personnes qui ont déjà un compte. |
+| **Comptes portail en attente** | Les personnes qui n'ont pas encore de compte. Voir [Créer des comptes portail](../getting-started/onboard-people/create-portal-accounts). |
+
+## La liste des utilisateurs
+
+| Colonne | Ce qu'elle affiche |
+| --- | --- |
+| **Nom complet** | La photo et le nom de la personne. Cliquez sur le nom pour ouvrir son profil. |
+| **Nom d'utilisateur** | Le nom avec lequel elle se connecte. Vous pouvez le copier. |
+| **Email** | Son adresse e-mail. Vous pouvez la copier. |
+| **Rôle** | Tous les rôles de la personne — une personne peut en avoir plusieurs. |
+| **Statut** | **Activé** (elle peut se connecter) ou **Désactivé** (elle ne peut pas). |
+| **Actions** | Ce que vous pouvez faire avec le compte — voir ci-dessous. |
+
+### Rechercher et filtrer
+
+- Saisissez du texte dans la zone de recherche pour trouver quelqu'un.
+- Ouvrez le filtre pour affiner la liste par **Rôle** (**Administrateur**, **Enseignant**,
+  **Élève**, **Tuteur** ou **Personnel**) et par **Statut** (**Activé** ou **Désactivé**), puis
+  cliquez sur **Appliquer**. **Réinitialiser** efface les filtres.
+
+## Ce que vous pouvez faire avec un compte
+
+Ouvrez le menu **Actions** d'une ligne.
+
+### Attribuer des rôles
+
+Cliquez sur **Attribuer des rôles** pour changer les rôles de la personne.
+
+- **Rôles attribuables** liste **Admin** et vos rôles du personnel. Cochez tous les rôles du
+  personnel que la personne doit avoir — un membre du personnel peut en avoir plusieurs, par exemple
+  **Comptable** et **Bibliothécaire**. Un administrateur garde ici **Admin**.
+- **Conservés sur le compte** montre les rôles qui viennent du profil de la personne, comme
+  **Teacher** ou **Parent**. Ils restent sur le compte et ne se modifient pas ici. **Parent** est
+  ajouté quand la personne devient tuteur d'un élève, et retiré quand ce profil de tuteur est
+  supprimé.
+- Une personne ne peut combiner que deux types de rôles : **personnel + parent**, ou **enseignant +
+  parent**. Un administrateur ne peut pas aussi enseigner ni avoir un rôle du personnel, et un
+  enseignant ne peut pas avoir de rôle du personnel.
+- Un compte élève ne peut pas avoir d'autres rôles. Son rôle est toujours **Student**.
+- La personne doit garder au moins un rôle.
+
+Cliquez sur **Enregistrer**. Les rôles attribués s'appliquent à l'école dans laquelle vous
+travaillez.
+
+<Callout title="Le rôle Administrateur">
+Seul le **propriétaire de l'organisation** peut attribuer le rôle **Admin**. Pour tous les autres,
+**Admin** est grisé avec la note *Seul le propriétaire de l'organisation peut attribuer le rôle
+Administrateur*.
+</Callout>
+
+Pour décider de ce que chaque rôle du personnel peut faire, voir
+[Rôles et permissions](./roles-and-permissions).
+
+### Réinitialiser le mot de passe
+
+Cliquez sur **Réinitialiser le mot de passe**, puis sur **Confirmer**. La fenêtre **Mot de passe
+temporaire défini** affiche le **Nom d'utilisateur** et un nouveau **Mot de passe temporaire**.
+Copiez-les tout de suite — le mot de passe temporaire n'est affiché qu'une seule fois. La personne
+devra le changer à sa prochaine connexion.
+
+### Désactiver ou activer un compte
+
+Cliquez sur **Désactiver** et confirmez pour empêcher quelqu'un de se connecter. Ses données restent
+sur la plateforme. Cliquez sur **Activer** sur un compte désactivé pour lui permettre de se
+connecter à nouveau.
+
+<Callout title="Personnes d'un autre campus">
+Si votre organisation a plusieurs campus, un compte appartient à un campus d'origine. Pour une
+personne dont le campus d'origine est un autre campus, **Réinitialiser le mot de passe** et
+**Désactiver** / **Activer** sont grisés avec la note *Géré par le campus d'origine*. Adressez-vous
+à un administrateur de ce campus ou au propriétaire de l'organisation.
+</Callout>
+
+## Ajouter un administrateur
+
+Seul le **propriétaire de l'organisation** voit le bouton **Ajouter un administrateur**.
+
+<Steps>
+
+<Step>
+### Ouvrir le formulaire
+
+Cliquez sur **Ajouter un administrateur**.
+</Step>
+
+<Step>
+### Remplir les informations
+
+Saisissez le **Prénom**, le **Nom de Famille** et l'**Email**. Le **Numéro de téléphone** est
+facultatif. Le nom d'utilisateur et le mot de passe sont créés pour vous.
+</Step>
+
+<Step>
+### Créer le compte
+
+Cliquez sur **Créer**. Une fenêtre affiche une seule fois le **Nom d'utilisateur** et le **Mot de
+passe temporaire** — copiez-les. Ils sont aussi envoyés par e-mail.
+</Step>
+
+</Steps>
+
+## Articles liés
+
+- [Rôles et permissions](./roles-and-permissions)
+- [Créer des comptes portail](../getting-started/onboard-people/create-portal-accounts)
+- [Campus](./campuses)

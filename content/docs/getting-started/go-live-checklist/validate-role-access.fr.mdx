@@ -1,26 +1,95 @@
 ---
 title: Valider l'accès par rôle
+description: Avant le lancement, vérifiez que chaque rôle voit ce dont il a besoin — et rien de plus — puis corrigez les écarts.
 ---
 
-Ce plan explique comment confirmer que chaque rôle voit les bonnes zones avant le lancement.
+Chaque personne se connecte avec un ou plusieurs rôles : **Administrateur**, **Enseignant**,
+**Tuteur**, **Étudiant** ou **Personnel**, ainsi que les rôles du personnel créés par votre école.
+Avant le lancement, vérifiez que chaque rôle ouvre les bons espaces, et que chaque personne a les
+bons rôles.
 
-## Plan
+<Callout title="Pour qui">
+Les administrateurs qui préparent le lancement de l'école.
+</Callout>
 
-### Pour qui
+## Avant de commencer
 
-- Les administrateurs et équipes de déploiement qui vérifient les permissions.
+- Les personnes sont ajoutées et ont leur compte portail. Voir
+  [Créer des comptes portail](../onboard-people/create-portal-accounts).
+- Si vous utilisez vos propres rôles du personnel, ils sont créés. Voir
+  [Rôles et permissions](../../settings/roles-and-permissions).
 
-### Prérequis
+## Étapes
 
-- Les comptes utilisateurs et les attributions de rôles existent déjà.
+<Steps>
 
-### Sections clés
+<Step>
+### Revoir les rôles
 
-- Rôles à tester avant la mise en service.
-- Vérifications d'accès pour les flux clés.
-- Comment consigner et corriger les écarts d'accès.
+Allez dans **Accès → Rôles et permissions**. Choisissez un rôle dans la liste pour voir ses
+permissions.
 
-### Articles liés
+- Les rôles intégrés affichent une icône de cadenas. Ils sont définis par le produit. Leur nom et leurs permissions ne
+  peuvent pas être modifiés.
+- Pour vos propres rôles du personnel, vérifiez que chacun n'a que les permissions utiles à ce
+  poste. L'enregistrement d'un rôle met à jour immédiatement les permissions de tous les
+  utilisateurs qui l'ont.
+</Step>
 
-- [`Basculer entre les rôles disponibles`](../access-and-authentication/switch-between-available-roles)
-- [`Revoir la liste de configuration de l'école`](./review-the-school-setup-checklist)
+<Step>
+### Vérifier qui a quel rôle
+
+Allez dans **Accès → Utilisateurs**. Utilisez le filtre **Rôle** pour lister les utilisateurs d'un
+rôle, et le filtre **Statut** pour trouver les comptes **Activé** ou **Désactivé**. Depuis le menu
+de la ligne d'un utilisateur :
+
+- **Attribuer des rôles** — ajouter ou retirer des rôles. Seul le propriétaire de l'école peut
+  donner le rôle **Administrateur**, et un compte élève garde uniquement le rôle **Étudiant**.
+- **Réinitialiser le mot de passe** — quand une personne ne peut pas se connecter.
+- **Désactiver** ou **Activer** — couper ou rétablir l'accès d'une personne.
+</Step>
+
+<Step>
+### Tester chaque rôle avec une vraie connexion
+
+Pour chaque rôle utilisé par votre école, connectez-vous avec un compte qui a ce rôle et regardez
+le menu et la page d'accueil. Servez-vous du tableau ci-dessous.
+
+| Rôle | Ce qu'il faut vérifier |
+| --- | --- |
+| **Enseignant** | Son emploi du temps et ses classes, l'appel, les devoirs et les notes. |
+| **Tuteur** | Uniquement ses propres enfants, avec leur emploi du temps, leur présence et leurs résultats. |
+| **Étudiant** | Son emploi du temps, ses devoirs et ses résultats. |
+| **Personnel** | Uniquement les espaces permis par son rôle du personnel. |
+| **Administrateur** | Tous les espaces dont les administrateurs ont besoin. |
+
+Si votre propre compte a plusieurs rôles, basculez de l'un à l'autre depuis le menu du profil au
+lieu de vous déconnecter. Voir
+[Basculer entre les rôles disponibles](../access-and-authentication/switch-between-available-roles).
+
+Les enseignants, tuteurs, élèves et membres du personnel peuvent aussi utiliser l'application
+mobile. Vérifiez-la avec les mêmes comptes. L'administration se fait uniquement sur le web.
+</Step>
+
+<Step>
+### Corriger les écarts
+
+- **Un menu ou une action manque** — ajoutez la permission au rôle du personnel de la personne, ou
+  attribuez-lui le rôle manquant.
+- **Une personne voit trop de choses** — retirez la permission de son rôle du personnel, ou
+  retirez le rôle en trop.
+- **Une personne ne peut pas se connecter** — vérifiez que le compte est **Activé**, ou
+  réinitialisez le mot de passe.
+
+Vérifiez ensuite à nouveau avec le même compte.
+</Step>
+
+</Steps>
+
+## Articles liés
+
+- [Rôles et permissions](../../settings/roles-and-permissions)
+- [Basculer entre les rôles disponibles](../access-and-authentication/switch-between-available-roles)
+- [Créer des comptes portail](../onboard-people/create-portal-accounts)
+- [Revoir la liste de configuration de l'école](./review-the-school-setup-checklist)
+- [Plateformes prises en charge : web et mobile](../welcome/supported-platforms-web-and-mobile)

@@ -1,26 +1,67 @@
 ---
 title: Cours, matières et classes
+description: Comment les cours, les matières, les niveaux et les classes s'articulent, et comment le contenu et les notes s'organisent autour d'eux.
 ---
 
-Ce plan explique en quoi les concepts de regroupement académique diffèrent et fonctionnent ensemble.
+La structure de votre école repose sur quelques éléments : les niveaux, les classes, les matières
+et le plan de cours de chaque matière. Cette page explique chacun d'eux et leur articulation.
 
-## Plan
+<Callout title="Pour qui">
+Toute personne qui a besoin d'une vision commune de l'organisation de l'enseignement dans
+l'application.
+</Callout>
 
-### Pour qui
+## Les termes
 
-- Les lecteurs qui ont besoin d'un modèle mental commun de la structure du programme.
+| Concept | Ce que c'est |
+| --- | --- |
+| **Niveau d'éducation** | Un groupe de niveaux, par exemple *Primaire* ou *Collège*. |
+| **Niveau** | Une année d'études, par exemple *CP* ou *6e*. Chaque niveau se range sous un niveau d'éducation. |
+| **Filière** | Une voie à l'intérieur d'un niveau, par exemple *Sciences* et *Lettres*. Seuls certains niveaux ont des filières. |
+| **Classe** | Un groupe d'élèves qui suivent les cours ensemble, dans un niveau (et une filière, si le niveau en a), par exemple *CP — A*. Les élèves sont inscrits dans une classe. |
+| **Section de classe** | Une partie d'une classe, quand la classe est divisée pour certains cours. Devoirs et séances peuvent viser une seule section. |
+| **Matière** | Ce qui est enseigné dans votre école, par exemple *Mathématiques* ou *Arabe*. |
+| **Salle** | Un lieu où se déroulent cours et examens. Une matière peut être limitée à certains types de salles, comme un laboratoire. |
+| **Modèle de cours** | Le plan d'une matière à un niveau (ou une filière) : des chapitres, puis des leçons. Toutes les classes du niveau le suivent. |
+| **Leçon** | Une unité d'enseignement dans un chapitre. Chaque enseignant rédige son propre contenu de leçon et choisit les classes qui le voient. |
 
-### Prérequis
+## Comment tout s'articule
 
-- Une connaissance de la structure d'enseignement de votre école.
+Un niveau d'éducation regroupe des niveaux. Un niveau peut être divisé en filières. Chaque classe
+appartient à un niveau (ou à une filière), et les élèves sont inscrits dans une classe.
 
-### Sections clés
+- **Les niveaux et les matières** se créent une seule fois. Dans la
+  [Configuration de l'année scolaire](../build-the-academic-foundation/academic-year-setup), vous
+  activez les niveaux de l'année et indiquez les matières de chaque niveau (étape **Associations de
+  matières**).
+- **Les classes** se créent pour l'année, dans un niveau (ou une filière).
+- Un **cours** est une matière enseignée à un niveau. Son plan est le **modèle de cours**, sous
+  **Académique → Modèles de cours**. Les enseignants retrouvent leurs matières sous **Mes cours**.
+- **Les enseignants** reçoivent une classe et une matière dans les **Affectations des
+  enseignants**. C'est ce qui leur permet de rédiger des leçons, de faire l'appel et de noter cette
+  classe dans cette matière.
+- **L'emploi du temps** place les matières de chaque classe dans la semaine, avec un enseignant et
+  une salle.
 
-- Ce que représente chaque concept.
-- Comment les concepts se rapportent les uns aux autres.
-- Quelles tâches de configuration créent chaque type d'enregistrement.
+## Où chaque élément se crée
 
-### Articles liés
+| Élément | Où |
+| --- | --- |
+| Niveaux d'éducation, niveaux, filières | **Académique → Niveaux**. Voir [Créer des niveaux](../build-the-academic-foundation/create-levels). |
+| Matières | **Académique → Matières**. Voir [Créer des matières](../build-the-academic-foundation/create-subjects). |
+| Classes | **Académique → Classes**, ou l'étape **Classes** de la configuration de l'année. Voir [Créer des classes](../build-the-academic-foundation/create-classes). |
+| Salles | Voir [Créer des salles](../build-the-academic-foundation/create-rooms). |
+| Modèles de cours et leçons | **Académique → Modèles de cours**. Voir [Modèles de cours](../../teaching/courses) et [Leçons](../../teaching/lessons). |
+| Qui enseigne quoi | **Académique → Affectations des enseignants**. Voir [Affectations des enseignants](../../timetable/teacher-assignments). |
 
-- [`Créer des niveaux`](../build-the-academic-foundation/create-levels)
-- [`Créer des matières`](../build-the-academic-foundation/create-subjects)
+<Callout title="Les notes suivent la même structure">
+Les notes se saisissent par classe et par matière, et les notes de chaque matière construisent la
+moyenne générale de l'élève. Voir [Devoirs, quiz, examens et notes](./assignments-quizzes-exams-and-grades).
+</Callout>
+
+## Articles liés
+
+- [Créer des niveaux](../build-the-academic-foundation/create-levels)
+- [Créer des matières](../build-the-academic-foundation/create-subjects)
+- [Créer des classes](../build-the-academic-foundation/create-classes)
+- [Modèles de cours](../../teaching/courses)

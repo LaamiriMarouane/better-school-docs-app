@@ -1,26 +1,94 @@
 ---
 title: Attendance, behaviour, and payments
+description: The day-to-day records a school keeps after go-live — attendance, behaviour incidents, and what families owe and pay — and the statuses you see on them.
 ---
 
-This scaffold summarizes three operational concepts that schools track continuously after go-live.
+Once teaching starts, three kinds of records build up every day: who was there, how students
+behaved, and what families owe and pay. This page explains the words used for each.
 
-## Outline
+<Callout title="Who this is for">
+Administrators and staff learning the vocabulary of daily school operations.
+</Callout>
 
-### Who This Is For
+## Attendance
 
-- Administrators and staff learning recurring operational language.
+| Concept | What it is |
+| --- | --- |
+| **Student Attendance Mode** | Set on each level. **Per Period**: the teacher takes attendance in each session, from the timetable. **Per Day**: administrators take it once a day on the **Student Attendance** page. |
+| **Class session** | One real meeting of a class, created from the timetable. Teachers open it to **Mark Attendance**. |
+| **Exam attendance** | Who sat a scheduled exam, recorded on the exam itself. |
+| **Staff attendance** | One status per staff member per day, under **Attendance → Teacher Attendance** and **Attendance → Staff Attendance**. |
 
-### Prerequisites
+### Attendance statuses
 
-- A basic view of the school's daily operational workflows.
+| Status | Meaning |
+| --- | --- |
+| **Present** | Attended. Every student starts as present when you mark a session. |
+| **Absent** | Did not attend. |
+| **Late** | Arrived late. |
+| **Half Day** | Attended part of the day. |
+| **Excused** | Exam attendance only: an approved absence, with a reason. |
+| **On Leave** | Staff attendance only: off on leave that day. |
 
-### Key Sections
+See [Class sessions & attendance](../../teaching/sessions-and-attendance) and
+[Staff attendance](../../staff-hr/staff-attendance).
 
-- What each operational area covers.
-- Why these records matter for school follow-up.
-- Which setup steps prepare these workflows.
+## Behaviour
 
-### Related Articles
+| Concept | What it is |
+| --- | --- |
+| **Category** | A kind of behaviour, for example *Respect* or *Disruption*. A category can have subcategories. |
+| **Level** | How significant the behaviour is. Each level is **positive** or **negative** and has default points. |
+| **Incident** | One behaviour event recorded for a student, with its category, level, date and points. |
+| **Points** | Positive incidents add points, negative ones take points away. |
+| **Leaderboard** | Students ranked by their points over a chosen period. |
 
-- [`Configure attendance modes`](../configure-core-operations/configure-attendance-modes)
-- [`Configure fees and payment plans`](../configure-core-operations/configure-fees-and-payment-plans)
+Administrators record incidents for any student. Teachers record them for the classes they teach.
+Students and parents see only their own. The Behaviour screens appear only when your school has
+turned on the Behaviour module. See [Record incidents](../../behaviour/record-incidents) and
+[Points & leaderboard](../../behaviour/leaderboard).
+
+## Payments
+
+| Concept | What it is |
+| --- | --- |
+| **Service** | Something the school provides, such as tuition, transport or canteen. |
+| **Fee** | The price of a service, with how often it is charged (monthly, termly, once…). |
+| **Payment plan** | A bundle of fees for one or more levels. A student gets a plan when enrolled. |
+| **Installment** | One amount a student owes, with a due date. Installments are created for you from the student's plan. |
+| **Payment** | Money collected against one or more installments, recorded in the **Payment center**. |
+| **Reduction rule** | A reusable discount given to students. |
+
+### Installment statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Not Paid** | Nothing has been paid yet. |
+| **Partially Paid** | Part of the amount has been paid. The rest is still owed. |
+| **Paid** | Fully settled. |
+| **Waived** | The school agreed the student doesn't owe it. |
+| **Cancelled** | No longer billed. |
+
+An unpaid installment whose due date has passed is overdue: its due date shows in red with the
+number of days overdue. It can still be paid.
+
+### Payment statuses
+
+A recorded payment shows as **Successful**. After a refund it shows as **Partially refunded** or
+**Refunded**.
+
+See [Fees & Payments](../../finance/fees-and-payments),
+[Installments and schedules](../../finance/fees-and-payments/installments-and-schedules) and
+[Refund a payment](../../finance/fees-and-payments/refund-a-payment).
+
+<Callout title="Work in the right year">
+Fees, payment plans, payments and installments follow the academic year selected at the top of the
+screen. In a closed year, you can still record late payments on unpaid installments.
+</Callout>
+
+## Related articles
+
+- [Configure attendance modes](../configure-core-operations/configure-attendance-modes)
+- [Configure fees and payment plans](../configure-core-operations/configure-fees-and-payment-plans)
+- [Configure behaviour tracking](../configure-core-operations/configure-behaviour-tracking)
+- [Academic years, terms, and statuses](./academic-years-terms-and-statuses)

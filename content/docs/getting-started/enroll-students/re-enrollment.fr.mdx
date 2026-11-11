@@ -1,0 +1,158 @@
+---
+title: Réinscription
+description: "Faites passer les élèves qui reviennent dans la nouvelle année : vérifiez l'enchaînement des niveaux, décidez du parcours de chaque élève, laissez les familles confirmer, puis inscrivez-les en classe."
+---
+
+La **réinscription** fait passer vos élèves actuels dans l'année suivante. Niveau par niveau, vous
+décidez si chaque élève est promu, redouble, est diplômé ou part. Vous pouvez rendre la décision
+définitive vous-même, ou l'envoyer à la famille pour confirmation. Les élèves qui reviennent
+attendent ensuite d'être inscrits dans une classe de la nouvelle année.
+
+<Callout title="Pour qui">
+Les administrateurs qui préparent une nouvelle année scolaire. Les parents répondent aux invitations
+de réinscription depuis leur tableau de bord (web) ou leur écran d'accueil (application mobile).
+</Callout>
+
+## Avant de commencer
+
+- **Créez la nouvelle année** et ouvrez sa configuration — voir
+  [Configuration de l'année scolaire](../build-the-academic-foundation/academic-year-setup). Les
+  décisions se prennent depuis la nouvelle année, pour les élèves de l'année précédente.
+- **Activez les niveaux de l'année suivante** à l'étape **Niveaux** de la configuration. Vous ne
+  pouvez promouvoir un élève que vers un niveau ouvert dans la nouvelle année.
+
+## 1. Vérifier l'enchaînement des niveaux
+
+Chaque niveau a un niveau **Promu vers** : celui où ses élèves passent l'année suivante. C'est là
+que **Promouvoir** envoie l'élève.
+
+Si votre école a été créée à partir d'un programme ou de données d'exemple, l'enchaînement est
+déjà défini pour vous. Vérifiez-le, surtout pour les niveaux que vous avez ajoutés vous-même :
+
+1. Allez dans **Académique → Niveaux** (ou à l'étape **Niveaux** de la configuration de l'année).
+2. Modifiez le niveau pour ouvrir **Modifier le niveau**.
+3. Choisissez le niveau suivant dans **Promu vers**, puis enregistrez.
+
+Un niveau sans **Promu vers** est un niveau final : ses élèves apparaissent comme **Diplômé (pas de
+niveau suivant)**, et vous ne pouvez pas les promouvoir. Si un tel niveau n'est pas vraiment le
+dernier, l'étape **Admissions / pré-inscriptions** vous prévient, avec un bouton **Aller à l'étape
+Niveaux**.
+
+## 2. Décider du parcours de chaque élève
+
+Ouvrez la configuration de la nouvelle année et allez à l'étape **Admissions / pré-inscriptions**.
+Le haut affiche **De** (l'année précédente) et **Vers** (l'année que vous configurez).
+
+1. **Choisir le niveau** pour charger ses élèves. Affinez la liste par classe ou recherchez par nom
+   ou par code.
+2. La colonne **Actuel → Suivant** indique où irait chaque élève.
+3. Choisissez un parcours sur la ligne de l'élève :
+
+| Parcours | Ce qu'il fait |
+| --- | --- |
+| **Promouvoir** | L'élève passe au niveau suivant l'année prochaine. |
+| **Redoubler** | L'élève refait le même niveau l'année prochaine. |
+| **Diplômer** | Seulement pour un niveau final : l'élève termine sa scolarité. |
+| **Départ** | L'élève ne reviendra pas l'année prochaine. |
+
+**Diplômer** et **Départ** s'appliquent immédiatement. L'élève reste dans sa classe jusqu'à la fin
+de l'année en cours.
+
+Pour **Promouvoir** et **Redoubler**, une fenêtre demande **Comment est-ce finalisé ?**
+
+- **Décider maintenant (définitif)** — l'élève est réinscrit tout de suite.
+- **Envoyer au parent pour confirmation** — la famille reçoit une invitation à confirmer ou à
+  refuser.
+
+Si le niveau propose des filières, choisissez aussi la **Filière**. Cliquez ensuite sur
+**Confirmer**.
+
+### Décider pour plusieurs élèves à la fois
+
+Cochez les élèves (ou la case de l'en-tête pour tous les sélectionner). Dans la barre qui apparaît,
+choisissez comment les décisions sont finalisées, puis cliquez sur **Promouvoir**, **Redoubler**,
+**Diplômer** (niveaux finaux uniquement) ou **Départ**. Si certains élèves ne peuvent pas être mis à
+jour, une fenêtre de résultat les liste.
+
+### Changer une décision
+
+Une ligne décidée affiche son parcours et, pour les élèves réinscrits, leur statut (**Invité**,
+**Confirmé** ou **Refusé**, ou **Inscription en attente**). Cliquez sur **Annuler** pour effacer la
+décision et choisir à nouveau. C'est possible tant que l'élève n'a pas été inscrit dans la nouvelle
+année.
+
+<Callout title="Notes pas encore finalisées ?">
+Si les trimestres de l'année précédente ne sont pas tous finalisés, l'étape rappelle que les
+décisions prises maintenant peuvent ne pas refléter les notes finales. Cela ne vous bloque pas.
+</Callout>
+
+## 3. Ouvrir la réinscription aux familles
+
+Les familles ne peuvent répondre aux invitations que tant que la réinscription est ouverte. En haut
+de l'étape **Admissions / pré-inscriptions**, le statut affiche **Ouverte** ou **Fermée**.
+
+- Cliquez sur **Ouvrir la réinscription** quand les familles peuvent répondre.
+- Cliquez sur **Fermer la réinscription** pour arrêter les réponses.
+
+Vous pouvez envoyer des invitations pendant que la réinscription est fermée ; les familles pourront
+répondre dès que vous l'ouvrirez.
+
+## 4. Les familles confirment
+
+Quand vous envoyez une décision à la famille, les parents reçoivent une notification. Tant que la
+réinscription est ouverte, ils voient une carte *Réinscription de (enfant) pour (année)* — sur le tableau de
+bord du portail parent et sur l'écran d'accueil de l'application mobile — avec l'année et, si
+défini, le niveau suivant.
+
+Le parent appuie sur **Confirmer** ou **Refuser**, puis confirme. La réponse est définitive. Vous
+recevez une notification pour chaque réponse.
+
+- **Confirmé** — l'élève est réinscrit et attend d'être inscrit dans une classe.
+- **Refusé** — l'élève n'est pas réinscrit. Pour noter qu'il part, cliquez sur **Annuler** sur sa
+  ligne et choisissez **Départ**.
+
+## 5. Suivre les réponses
+
+Allez dans **Admissions et inscriptions → Préinscriptions** et ouvrez l'onglet **Confirmations de
+réinscription**. Il affiche les invitations de l'année sélectionnée en haut de la page, avec le
+nombre d'**Invité**, **Confirmé** et **Refusé**.
+
+Filtrez par niveau ou par statut, ou recherchez un élève. Chaque ligne affiche l'**Étudiant**, le
+**Niveau**, la **Décision** et le **Statut**.
+
+## 6. Inscrire en classe les élèves qui reviennent
+
+Les élèves promus ou redoublants décidés avec **Décider maintenant (définitif)**, et ceux dont la
+famille a confirmé, sont réinscrits pour la nouvelle année mais ne sont pas encore dans une classe.
+L'étape **Admissions / pré-inscriptions** indique combien attendent, avec **Les inscrire**.
+
+<Steps>
+
+<Step>
+### Ouvrir l'étape Inscriptions
+
+Dans la configuration de l'année, ouvrez l'étape **Inscriptions** (ou cliquez sur **Les
+inscrire**). Les élèves qui reviennent sont listés sous **En attente d'inscription**.
+</Step>
+
+<Step>
+### Choisir une classe
+
+Pour chaque élève, **Choisir une classe** parmi les classes de son niveau. Si vous ne savez pas
+encore, choisissez **Sans classe (à affecter plus tard)**.
+</Step>
+
+<Step>
+### Inscrire
+
+Cliquez sur **Inscrire**. L'élève est inscrit pour la nouvelle année et quitte la liste.
+</Step>
+
+</Steps>
+
+## Articles liés
+
+- [Configuration de l'année scolaire](../build-the-academic-foundation/academic-year-setup)
+- [Créer des niveaux](../build-the-academic-foundation/create-levels)
+- [Pré-inscriptions](./pre-inscriptions)
+- [Créer une inscription](./create-an-enrollment)

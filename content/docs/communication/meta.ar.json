@@ -6,6 +6,7 @@
     "events",
     "messaging",
     "audiences",
-    "notifications"
+    "notifications",
+    "reclamations"
   ]
 }

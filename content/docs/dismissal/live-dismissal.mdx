@@ -1,0 +1,96 @@
+---
+title: Run dismissal at the gate
+description: "Follow the pickup queue live, check families in by student code, release students and hand them off at the gate."
+---
+
+The **Dismissal** page is the live pickup queue for office and gate staff. It updates on its own
+as families check in, teachers release students, and staff hand them off. Show it on a classroom
+TV or a tablet at the gate.
+
+<Callout title="Where to find it">
+Administrators: **Operations → Dismissal**. Staff: **Dismissal** in their menu, when their role
+allows it. Needs the **Dismissal** module.
+</Callout>
+
+## Read the page
+
+At the top, three counters show **To dismiss** (waiting for release), **On the way** and
+**Handed off** (for the whole day).
+
+Each row shows the student, their class, the gate, the arrival number (for example **#12**), and
+how many children came in the same arrival. Staff also see the adult who checked in and the
+student's authorized pickups with their phone numbers — use them to check the adult at the gate.
+
+| Control | What it does |
+| --- | --- |
+| **Zones** / **List** | Show one column per gate, or a single list. |
+| **All gates** | Show only the gates you pick (when the school has more than one). |
+| Search | Filter by student, class or code. |
+| Sound button | Play a sound when a student is released, or mute it. |
+| **Full screen** | Hide the menus — for a TV or a gate tablet. **Exit full screen** brings them back. |
+
+After a handoff, the name stays on the board for the time set in **Board auto-remove**, then
+leaves. The **Handed off** counter keeps counting.
+
+When pickup is closed, a notice says why — the school is closed today, no window is set for today,
+or today's window is at another time. Administrators get a **Set pickup windows** link.
+
+## Check a family in at the gate
+
+Use this when a family arrives without the app.
+
+<Steps>
+
+<Step>
+### Type the student code
+
+Type the student's code (or just its number) in the search box. The student appears above the
+queue.
+</Step>
+
+<Step>
+### Choose the gate
+
+Pick the gate in **Choose a gate**. With only one gate, it is chosen for you.
+</Step>
+
+<Step>
+### Check in
+
+Click **Check in**. The student joins the queue as **Waiting for release**, and the student's
+teachers are notified.
+</Step>
+
+</Steps>
+
+If the student is already in today's queue, the page says so. A student who takes the bus today
+can only be checked in at the gate by staff allowed to override, with the override switch on (see
+below).
+
+### Override
+
+Staff whose role allows it see the **Override (bus rider, outside window, or unlisted adult)**
+switch. Turn it on to check a child in outside the pickup window, a bus rider, or for an adult who
+is not on the list. Overrides are recorded in the [history](./dismissal-history). An adult marked
+**May not collect** can never collect the child, even with an override.
+
+## Release, hand off or cancel
+
+Each row shows the buttons that apply to it:
+
+| Button | When | What happens |
+| --- | --- | --- |
+| **Release** | **Waiting for release**, when classroom release is required | The child leaves class. Status becomes **On the way** and the parent is notified. |
+| **Handoff** | **On the way** — or straight from **Waiting for release** when classroom release isn't required | The child is with the adult. Status becomes **Handed off** and the parent is notified. |
+| **Cancel** | **Waiting for release** | The check-in is removed from the queue. |
+
+<Callout title="When the window ends">
+Children still waiting or on the way when the pickup window ends are marked **No-show** and
+leave the queue.
+</Callout>
+
+## Related articles
+
+- [Set up dismissal](./set-up-dismissal)
+- [Release students as a teacher](./teacher-release)
+- [Dismissal history](./dismissal-history)

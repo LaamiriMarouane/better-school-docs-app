@@ -3,6 +3,10 @@
   "pages": [
     "index",
     "school-schedule",
+    "campuses",
+    "users",
+    "roles-and-permissions",
+    "audit-log",
     "fiscal-year",
     "billing-configuration",
     "billing-subscription",
