@@ -15,7 +15,8 @@ Les parents qui suivent le bus de leur enfant, et les administrateurs qui survei
 ## Ce que voient les parents
 
 Les parents ouvrent **Le bus de mon enfant** sur le web, ou **Bus scolaire** dans l'application
-mobile. Chaque enfant dont le bus est sur la route a sa carte.
+mobile. Chaque enfant qui a un bus aujourd'hui a sa carte. Avant le départ, la carte indique
+**Le bus n'a pas encore démarré** ; ensuite, elle affiche le statut en direct.
 
 Chaque carte affiche :
 
@@ -28,9 +29,12 @@ Chaque carte affiche :
 Dans l'application mobile, la carte indique aussi si le bus est loin, en approche, à votre arrêt
 ou déjà passé.
 
-Quand aucun bus n'est sur la route, la page affiche **Aucun bus en circulation pour le moment**.
-Les parents reçoivent aussi une notification quand leur enfant monte, est déposé ou n'est pas
-monté.
+Quand l'enfant n'a pas de bus aujourd'hui, la page affiche **Aucun bus en circulation pour le
+moment**. Les parents reçoivent aussi une notification quand leur enfant monte, est déposé ou
+n'est pas monté.
+
+Après le trajet, la carte reste jusqu'à la fin de la journée avec **Trajet terminé**, le statut et
+les heures de chaque enfant. La carte du trajet et le bus ne sont plus affichés.
 
 <Callout title="Plusieurs enfants">
 Si un parent a plusieurs enfants qui prennent le bus, tous leurs trajets en cours apparaissent
@@ -69,9 +73,10 @@ temps. Voir [Présence aux trajets](./trip-attendance).
 <Step>
 ### Le trajet se termine
 
-Le trajet se termine de lui-même quand chaque élève est marqué et chaque arrêt validé, ou quand
-l'équipage appuie sur **Terminer le voyage**. Le suivi s'arrête et le trajet passe sous
-**Terminés**.
+Le trajet se termine de lui-même quand l'équipage appuie sur **Valider l'arrêt et suivant** au
+dernier arrêt. **Terminer le voyage** n'apparaît que si le trajet ne s'est pas terminé seul. Le
+suivi s'arrête et le trajet passe sous **Terminés**. Les parents gardent une carte **Trajet
+terminé** jusqu'à la fin de la journée.
 </Step>
 
 </Steps>
@@ -115,8 +120,9 @@ ou **Trajets du jour** dans l'application mobile — pour démarrer les trajets 
 
 ### Et si le trajet est annulé ?
 
-Les parents sont prévenus que le bus ne circule pas aujourd'hui, et le trajet n'apparaît plus comme
-en cours.
+Les parents des enfants qui attendent ce bus reçoivent une notification avec le motif. Leur carte
+reste jusqu'à la fin de la journée avec **Annulé** et le motif, pour qu'ils sachent que le bus ne
+passera pas.
 
 ## Articles associés
 
